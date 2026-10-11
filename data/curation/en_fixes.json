@@ -17,5 +17,34 @@
    }
   ],
   "reason": "Umbreon（Neo Discovery 13）の Feint Attack はデータ上効果文が空だが、実際のカードには効果文がある。文面は Bulbapedia「Umbreon (Neo Discovery 13)」による（TCGdex の英語データとも読点の有無を除き一致）。日本版のだましうちの効果文（なぞのばしょ）とも内容が一致"
+ },
+ "base6-14": {
+  "attacks": [
+   {
+    "name": "Pin Missle",
+    "rename": "Pin Missile"
+   }
+  ],
+  "reason": "Jolteon（Legendary Collection 14）のワザ名がデータ上「Pin Missle」。Bulbapedia では Legendary Collection 14 は Jolteon（Jungle 4）と同じカードとして扱われ、ワザ名は Pin Missile"
+ },
+ "base6-76": {
+  "attacks": [
+   {
+    "name": "Lick",
+    "cost": [
+     "Psychic"
+    ]
+   }
+  ],
+  "reason": "Gastly（Legendary Collection 76）の Lick のコストがデータ上「無色 1」。Bulbapedia では Legendary Collection 76 は Gastly（Fossil 33）と同じカードとして扱われ、コストは超 1"
+ },
+ "base6-78": {
+  "attacks": [
+   {
+    "name": "Minimized",
+    "rename": "Minimize"
+   }
+  ],
+  "reason": "Grimer（Legendary Collection 78）のワザ名がデータ上「Minimized」。Bulbapedia では Legendary Collection 78 は Grimer（Fossil 48）と同じカードとして扱われ、ワザ名は Minimize"
  }
 }

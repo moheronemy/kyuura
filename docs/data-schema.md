@@ -25,7 +25,7 @@
 | `name_ja_confidence` | 文字列 | 日本語名の確度。`確実`／`有力`／`未確認`。日本語名がなければ `null` |
 | `rarity_jp` | オブジェクト | 日本版のレアリティ（下記） |
 | `en_print` | オブジェクト／null | 対応する英語版カード（下記）。英語版がないカードは `null`（そのカードの `pokemon` の値は日本語の出典から埋め、英語の欄は `null`） |
-| `en_reprints` | 配列 | 英語版の別セットへの再録 `[{"set_id", "set_name", "number"}]` |
+| `en_reprints` | 配列 | 英語版の別セットへの再録 `[{"set_id", "set_name", "number", "differences"}]`。ポケモンは英語名・HP・ワザ名・ポケモンパワー名が同じもの、トレーナー・特殊エネルギーは英語名が同じもの。`differences` は英語版データの上で元のカードと違う欄（`cost`・`damage`・`text`・`weakness`・`resistance`・`retreat`）。判定と点検の結果は [再録カードの対応付け](cards/reprints.md) |
 | `pokemon` | オブジェクト／null | ポケモンのデータ（下記）。ポケモン以外は `null` |
 | `trainer` | オブジェクト／null | トレーナーのデータ（下記） |
 | `energy` | オブジェクト／null | エネルギーのデータ（下記） |
@@ -191,12 +191,13 @@
 
 日米のルールの違いのデータです。`items` の各要素が 1 項目で、`jp`・`en` にそれぞれ時期ごとのルール、`status` に判定（`違う`／`時期により違う`／`違う可能性あり`／`同じ`／`不明`）があります。[日米のルールの違い](rules/differences.md) はこのファイルから生成しています。
 
-## `data/ja_text_pcgsearch.json`（拡張シート・サザンアイランド）
+## `data/ja_text_pcgsearch.json`（拡張パック以外の商品）
 
 拡張パック以外の商品のカードです。`data/cards.json` とは別のファイルで、pcg-search.com の記載をそのまま持っています（[拡張パック以外の商品](cards/other-products.md)）。
 
 - `products` の各キーが商品名（サイトの見出し）、値がカードの配列です。
-- カードの主な欄: `list_number`（サイトの並び順。印刷された番号ではない）、`url`、`kind`（たねポケモン／トレーナー／EXTRA RULE など）、`name`、`type`、`hp`、`weakness`、`resistance`、`retreat`、`powers`、`attacks`、`text`、`illustrator`、`rarity`、`remarks`。
+- カードの主な欄: `list_number`（サイトの並び順。印刷された番号ではない。イントロパックのデッキだけは印刷された丸数字と一致）、`url`、`kind`（たねポケモン／トレーナー／EXTRA RULE など）、`name`、`type`、`hp`、`weakness`、`resistance`、`retreat`、`powers`、`attacks`、`text`、`note`、`illustrator`、`rarity`、`remarks`。
+- `text` と `note` はサイトのカードページの 2 つの欄（本文と補足）です。ポケモンのどうぐ・悪エネルギーなどでは、効果が `note` の側にあります。
 - エネルギーは記号（草・炎・水・雷・超・闘・無）の文字列です。`retreat` はにげるのエネルギーを並べたもので、`null` はにげるコストなし。
 - 商品についての補足は `data/curation/other_products.json` にあります。
 
@@ -207,5 +208,8 @@
 | `differences` | 日英の違い（`data/curation/card_differences.json` と同じ形） |
 | `sheets` | 拡張シートの各シートの場所とカード |
 | `decks` | ジムデッキの構成（カードページ名と枚数、基本エネルギーの枚数） |
+| `intro_packs` | イントロパック・イントロパック★neo のカードの Bulbapedia のページと、その転送先（Bulbapedia が同じカードとしているカード） |
 | `quick_starter_gift` | クイックスターターギフトの赤デッキ・緑デッキの構成 |
-| `promos` | プロモの配布（pcg-search の備考）、配布日と Bulbapedia の記載 |
+| `promos` | プロモの配布（pcg-search の備考）、配布日と Bulbapedia の記載、補足（`note`） |
+| `reprint_text` | 同じカードの再録で日本語の文面が違うものの、違いの説明と区分（`wording` 書き方だけ／`clarify` 補足・対象の明記／`meaning` 意味が変わる） |
+| `reprint_checks` | 同じカードの組の中で数値が食い違ったものの判定 |

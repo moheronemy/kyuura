@@ -104,6 +104,9 @@
 | X46 | Bulbapedia「Original TCG Era merchandise」、ジムデッキ 6 種のページ（Nivi City Gym など）、「Quick Starter Gift Set (TCG)」、ジムデッキのカードのページ（英語版のカードへの転送） | https://bulbapedia.bulbagarden.net/wiki/Original_TCG_Era_merchandise ほか |
 | X47 | Bulbapedia「Neo TCG Era merchandise」（プレミアムファイル 1〜3） | https://bulbapedia.bulbagarden.net/wiki/Neo_TCG_Era_merchandise |
 | X48 | Bulbapedia「Unnumbered Promotional cards (TCG)/1996-2005」（日本の番号なしプロモの一覧） | https://bulbapedia.bulbagarden.net/wiki/Unnumbered_Promotional_cards_(TCG)/1996-2005 |
+| X49 | Bulbapedia「Intro Pack (TCG)」「Original TCG Era merchandise」と、イントロパックの各カードのページ（発売日・内容・デッキリスト・カードの番号・同じカードへの転送） | https://bulbapedia.bulbagarden.net/wiki/Intro_Pack_(TCG) ほか |
+| X50 | Bulbapedia「Intro Pack Neo (TCG)」「Neo TCG Era merchandise」と、イントロパック★neo の各カードのページ | https://bulbapedia.bulbagarden.net/wiki/Intro_Pack_Neo_(TCG) ほか |
+| X51 | Bulbapedia の再録の点検に使ったカードのページ（「Flying Pikachu (Wizards Promo 25)」「Flying Pikachu (ANA promo 99)」「Sabrina's Abra (Gym Challenge 93)」「Jolteon (Jungle 4)」「Grimer (Fossil 48)」「Gastly (Fossil 33)」） | https://bulbapedia.bulbagarden.net/wiki/Flying_Pikachu_(ANA_promo_99) ほか |
 
 ## カードテキストの出典
 
@@ -111,7 +114,7 @@
 |---|---|---|
 | N1 | なぞのばしょ（旧裏カードの個別ページ。カード名・レベル・ワザ・特殊能力・効果文・収録商品・印刷上の備考を掲載） | https://nazonobasho.com/ （カードごとの URL は `data/cards.json` の `ja_text_source`） |
 | N2 | ポケモンWiki（旧裏カードの個別ページ。ユーザーがブラウザで保存し、カード名・レベル・ワザ・特殊能力・説明文・レアリティ・収録シリーズを抜き出したもの。版 id 付き） | https://wiki.pokemonwiki.com/ （保存データは `data/raw/`、カードごとの URL は `data/cards.json` の `ja_text_source`） |
-| N3 | ポケモンカード 旧シリーズ検索（pcg-search.com。旧裏の商品ごとのカードリストとカード個別ページ。拡張シートとサザンアイランドの取り込みに使用） | https://pcg-search.com/card/card_list.php （カードごとの URL は `data/ja_text_pcgsearch.json` の `url`） |
+| N3 | ポケモンカード 旧シリーズ検索（pcg-search.com。旧裏の商品ごとのカードリストとカード個別ページ。拡張パック以外の商品の取り込みに使用。一部はカードの画像で確認） | https://pcg-search.com/card/card_list.php （カードごとの URL は `data/ja_text_pcgsearch.json` の `url`） |
 | S1 | Scrydex 由来の日本版カードデータ（第三者のリポジトリにある写し。カード名・コスト・ダメージ・HP・にげる） | https://github.com/MarkHughes88/bindlr-prototype （`data/pokemon/raw/ja/expansions`） |
 
 ## カードリストのデータ
@@ -172,9 +175,15 @@
   - エリカのピッピ: つきのちからで、自分自身も進化させられるか。
   - エネルギーサーキュレート: 手札にもどせるのが基本エネルギーだけか。
   - お上品攻撃: 手札にもどすのが自分の番の終わりか、相手の番の終わりか。
-- 拡張パック以外の商品（拡張シート第1〜3弾、映画公開記念パック「サザンアイランド」、ポケモンジムの構築済みデッキ 6 種、クイックスターターギフト、neo プレミアムファイル 1〜3、プロモ）の 519 枚は、pcg-search [N3] から取り込みました（`data/ja_text_pcgsearch.json`、[拡張パック以外の商品](cards/other-products.md)）。
+- 拡張パック以外の商品（拡張シート第1〜3弾、映画公開記念パック「サザンアイランド」、ポケモンジムの構築済みデッキ 6 種、クイックスターターギフト、イントロパック・イントロパック★neo、neo プレミアムファイル 1〜3、プロモ）の 681 枚は、pcg-search [N3] から取り込みました（`data/ja_text_pcgsearch.json`、[拡張パック以外の商品](cards/other-products.md)）。
   - サザンアイランドの 18 枚はなぞのばしょ [N1] の転記とも照合し、食い違いは 3 件（転記の誤り）でした。
   - 拡張パック 10 弾のデータ（`data/cards.json`）には入れていません。
+- 商品をまたいだ同じカード（再録）の判定を点検しました（[再録カードの対応付け](cards/reprints.md)）。
+  - 同じカードとした組の中の数値の食い違いは 1 件で、pcg-search の転記の誤り（ナツメのスリーパーの「20×」の「×」が落ちている。カードの画像で確認）。
+  - イントロパックの 92 枚を Bulbapedia の同じカードへの転送 [X49][X50] と照合し、なぞのばしょのプリン（ポケモンジャングル）のワザ名の誤記を見つけて直しました（`data/curation/ja_text.json`）。
+  - 全日空のそらをとぶピカチュウ 2 枚の配布時期の取り違えを直しました [X51]。
+  - 再録の文面の比較から、エネルギー回収（第1弾）と超エネルギー回収（1997年のプロモ）の日英の違いが見つかりました（カードの画像で確認）。
+  - 英語版の再録は、トレーナー・特殊エネルギーにも広げ、英語版データの誤記で見落としていた Legendary Collection の 2 枚を補いました（`en_fixes.json`）。
 - 取得方法:
   - 旧裏 wiki（wikiwiki.jp）とポケモンWiki は、Cloudflare の自動アクセス防止で作成環境から取得できませんでした。回避はしていません。
   - ポケモンWiki のページは、ユーザーがブラウザで保存したもの（`data/raw/`）を使っています。
@@ -190,10 +199,9 @@
 - 両方の版での、どくのダメージ量・弱点抵抗力の計算順・進化の制限の明文
 - 「イマクニ？のドードー」「_____のラッキー」が拡張パックに封入されていたか
 - 遺跡の石版が絵柄違い 2 種だったか（TCGdex となぞのばしょは 2 種、Scrydex 由来のデータは 1 種として掲載）
-- 英語版のみのカード（[english-only.md](cards/english-only.md)）の、日本での初出商品
 - 無色2個エネルギーの効果文と、neo 第1〜2弾のベイビィ・アンノーンのルール文の日本版の文面
 - タケシのキュウコンの日本でのエラッタの時期と文面
 - リーダーズスタジアムのエリカのピッピ・エネルギーサーキュレート・お上品攻撃の日英の違い（日本版の文面はポケモンWiki の転記 1 系統だけで確認）
-- なぞのばしょ・ポケモンWiki から取り込んだ効果文の誤字（数値以外は英語版と突き合わせていない）
+- なぞのばしょ・ポケモンWiki から取り込んだ効果文の誤字（数値以外は英語版と突き合わせていない。別の商品に再録のあるカードは、pcg-search の転記とワザ名が一致することを確かめた）
 - 拡張パック以外の商品について未確認のこと（[一覧](cards/other-products.md#まだ確認できていないこと)）
 - 英語版の区分 Goldenrod Game Corner（カードめくりゲーム、スロットゲーム）の日本語の区分名。なぞのばしょの分類は「トレーナーカード」だけ

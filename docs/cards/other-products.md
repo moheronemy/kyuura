@@ -15,10 +15,12 @@
 | 映画公開記念パック「サザンアイランド」（1 種）| 1999-07-17 | 18 種 | Southern Islands（2001）の 18 枚 | [southern-islands.md](products/southern-islands.md) |
 | ポケモンジム（構築済みデッキ）（6 種）| 1998-04〜1999-02 | 153 種 | デッキにしかなかったカードは Gym Heroes・Gym Challenge へ | [gym-decks.md](products/gym-decks.md) |
 | クイックスターターギフト（1 種）| 1998-12-04 | 58 種 | 再録だけ | [quick-starter-gift.md](products/quick-starter-gift.md) |
+| イントロパック・イントロパック★neo（7 種）| 1999-07-30・2001-04-06 | 162 種 | このパックだけのカードは英語版なし | [intro-packs.md](products/intro-packs.md) |
 | neo プレミアムファイル（3 種）| 1999-12〜2000-11 | 27 種 | Neo Genesis・Discovery・Revelation へ | [premium-files.md](products/premium-files.md) |
 | プロモーションカード（旧裏期・neo 期）| 1996〜2001 | 138 種 | 一部が Wizards Black Star Promos など | [promos.md](products/promos.md) |
 
 英語版にあって日本の拡張パックにないカードの、日本での初出は [英語版のみに見られるカード](english-only.md) にあります。
+商品をまたいだ同じカード（再録）の判定のしかたと点検の結果は [再録カードの対応付け](reprints.md) にあります。
 
 ## まだ確認できていないこと
 

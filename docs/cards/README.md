@@ -26,7 +26,8 @@
 - [カードの日英の違い](card-differences.md) — 文面の意味・エラッタ・表記・イラストが違うカード
 - [収録内容・製品の違い](set-differences.md) — 弾の対応、印刷、裏面
 - [英語版のみに見られるカード](english-only.md) — 英語版にはあるが日本の拡張パックには入っていないカード
-- [拡張パック以外の商品](other-products.md) — 拡張シート第1〜3弾、映画公開記念パック「サザンアイランド」、ポケモンジムの構築済みデッキ 6 種、クイックスターターギフト、neo プレミアムファイル 1〜3、プロモのカードリスト
+- [再録カードの対応付け](reprints.md) — 商品をまたいだ同じカードと英語版の再録の判定のしかた、点検の結果
+- [拡張パック以外の商品](other-products.md) — 拡張シート第1〜3弾、映画公開記念パック「サザンアイランド」、ポケモンジムの構築済みデッキ 6 種、クイックスターターギフト、イントロパック・イントロパック★neo、neo プレミアムファイル 1〜3、プロモのカードリスト
 
 ## 列の意味
 
@@ -102,7 +103,7 @@
 - 日本版の収録構成とレアリティ: [TCGdex cards-database](https://github.com/tcgdex/cards-database)（MIT ライセンス）の `data-asia/PMCG`・`data-asia/neo`。
   - このデータの日本語テキスト（ワザ名・効果文・一部のカード名）は英語からの機械翻訳と見られ、公式の日本語テキストではありません。このリストでは使っていません。
   - 出典データでは、「闇からの挑戦」に「イマクニ？のドードー」「_____のラッキー」の 2 枚が入っています。どちらも通常のレアリティ構成から外れるカード（ポケモンWiki の記載では「☆」「◇」）で、拡張パックへの封入のされ方は未確認です。
-- 英語版のカード情報: [PokemonTCG/pokemon-tcg-data](https://github.com/PokemonTCG/pokemon-tcg-data)。データの誤り・欠落（Neo Genesis のレディバのダメージ欄、Neo Discovery のブラッキーのだましうちの効果文）は `data/curation/en_fixes.json` で補正しています。英語版データのレベル（LV.）には誤りが多いため使っていません。
+- 英語版のカード情報: [PokemonTCG/pokemon-tcg-data](https://github.com/PokemonTCG/pokemon-tcg-data)。データの誤り・欠落（Neo Genesis のレディバのダメージ欄、Neo Discovery のブラッキーのだましうちの効果文、Legendary Collection のサンダース・ベトベター・ゴースのワザ名・コスト）は `data/curation/en_fixes.json` で補正しています。英語版データのレベル（LV.）には誤りが多いため使っていません。
 - 日本版のテキスト・レベル・収録商品・印刷上の備考: なぞのばしょとポケモンWiki（上記）。
 - 日本語カード名・レアリティ・数値の照合: Scrydex 由来の日本版データ（第三者のリポジトリにある写し）。照合に使っただけで、データ自体は収録していません。
 - 日本語のポケモン名: [PokeAPI](https://github.com/PokeAPI/pokeapi) の `pokemon_species_names.csv`。

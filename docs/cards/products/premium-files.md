@@ -27,13 +27,13 @@
 |---|---|---|---|---|---|---|---|
 | 001/009 | [チコリータ](https://pcg-search.com/card/neo/neopf1001.php) | たね | 草 | 50 |  | Neo Genesis 54（Chikorita） |  |
 | 002/009 | [ベイリーフ](https://pcg-search.com/card/neo/neopf1002.php) | 1進化 | 草 | 70 |  | Neo Genesis 28（Bayleef） |  |
-| 003/009 | [メガニウム](https://pcg-search.com/card/neo/neopf1003.php) | 2進化 | 草 | 100 | -(キラ) | Neo Genesis 10（Meganium） |  |
+| 003/009 | [メガニウム](https://pcg-search.com/card/neo/neopf1003.php) | 2進化 | 草 | 100 | -(キラ) | Neo Genesis 10（Meganium） | イントロパック★neo（チコリータデッキの拡張カード）（2001-04-06） |
 | 004/009 | [ヒノアラシ](https://pcg-search.com/card/neo/neopf1004.php) | たね | 炎 | 40 |  | Neo Genesis 56（Cyndaquil） |  |
 | 005/009 | [マグマラシ](https://pcg-search.com/card/neo/neopf1005.php) | 1進化 | 炎 | 60 |  | Neo Genesis 46（Quilava） |  |
 | 006/009 | [バクフーン](https://pcg-search.com/card/neo/neopf1006.php) | 2進化 | 炎 | 100 | -(キラ) | Neo Genesis 18（Typhlosion） |  |
 | 007/009 | [ワニノコ](https://pcg-search.com/card/neo/neopf1007.php) | たね | 水 | 40 |  | Neo Genesis 80（Totodile） |  |
 | 008/009 | [アリゲイツ](https://pcg-search.com/card/neo/neopf1008.php) | 1進化 | 水 | 80 |  | Neo Genesis 32（Croconaw） |  |
-| 009/009 | [オーダイル](https://pcg-search.com/card/neo/neopf1009.php) | 2進化 | 水 | 120 | -(キラ) | Neo Genesis 5（Feraligatr） |  |
+| 009/009 | [オーダイル](https://pcg-search.com/card/neo/neopf1009.php) | 2進化 | 水 | 120 | -(キラ) | Neo Genesis 5（Feraligatr） | イントロパック★neo（ワニノコデッキの拡張カード）（2001-04-06） |
 
 ## プレミアムファイル2
 

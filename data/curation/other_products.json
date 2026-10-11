@@ -112,6 +112,69 @@
    ]
   },
   {
+   "pcg_title": "イントロパック(フシギダネデッキ)",
+   "name": "イントロパック（フシギダネデッキ）",
+   "group": "intro_pack",
+   "release_date": "1999-07-30",
+   "sources": [
+    "X49"
+   ]
+  },
+  {
+   "pcg_title": "イントロパック(ゼニガメデッキ)",
+   "name": "イントロパック（ゼニガメデッキ）",
+   "group": "intro_pack",
+   "release_date": "1999-07-30",
+   "sources": [
+    "X49"
+   ]
+  },
+  {
+   "pcg_title": "イントロパック(おまけカード)",
+   "name": "イントロパック（キラカード）",
+   "group": "intro_pack",
+   "release_date": "1999-07-30",
+   "sources": [
+    "X49"
+   ]
+  },
+  {
+   "pcg_title": "イントロパック★neo(チコリータデッキ)",
+   "name": "イントロパック★neo（チコリータデッキ）",
+   "group": "intro_pack",
+   "release_date": "2001-04-06",
+   "sources": [
+    "X50"
+   ]
+  },
+  {
+   "pcg_title": "イントロパック★neo(チコリータデッキ：拡張カード)",
+   "name": "イントロパック★neo（チコリータデッキの拡張カード）",
+   "group": "intro_pack",
+   "release_date": "2001-04-06",
+   "sources": [
+    "X50"
+   ]
+  },
+  {
+   "pcg_title": "イントロパック★neo(ワニノコデッキ)",
+   "name": "イントロパック★neo（ワニノコデッキ）",
+   "group": "intro_pack",
+   "release_date": "2001-04-06",
+   "sources": [
+    "X50"
+   ]
+  },
+  {
+   "pcg_title": "イントロパック★neo(ワニノコデッキ：拡張カード)",
+   "name": "イントロパック★neo（ワニノコデッキの拡張カード）",
+   "group": "intro_pack",
+   "release_date": "2001-04-06",
+   "sources": [
+    "X50"
+   ]
+  },
+  {
    "pcg_title": "プレミアムファイル",
    "name": "プレミアムファイル",
    "group": "premium_file",
@@ -1405,6 +1468,12 @@
    "set_name": "Wizards Black Star Promos",
    "number": "16",
    "name": "Computer Error"
+  },
+  "1stp009": {
+   "set_id": "neo1",
+   "set_name": "Neo Genesis",
+   "number": "89",
+   "name": "Super Energy Retrieval"
   }
  },
  "differences": {
@@ -1455,6 +1524,18 @@
     "ja": "「このカードが『ねむり・マヒ・こんらん』状態の時、この力は消える」（pcg-search の転記は「このカは消える」）",
     "en": "「This power stops working when Snorlax is affected by a Special Condition.」と、どく・やけども含む特殊状態すべて",
     "confidence": "有力",
+    "sources": [
+     "N3"
+    ]
+   }
+  ],
+  "1stp009": [
+   {
+    "kind": "text",
+    "summary": "拾えるエネルギーカードの種類",
+    "ja": "「自分のトラッシュから最大4枚のエネルギーカードを選び」と、基本エネルギーに限っていない（カードの画像で確認）。neo 第1弾の再録では「「基本エネルギーカード」を最大4枚」",
+    "en": "「4 basic Energy cards」と、基本エネルギーだけ",
+    "confidence": "確実",
     "sources": [
      "N3"
     ]
@@ -3255,10 +3336,11 @@
    "distribution_en": "Blastoise Mega Battle participation prize"
   },
   "1stp042": {
-   "date": "1998-11",
+   "date": "1999-06",
    "distribution": "",
    "bulbapedia": "Flying Pikachu [ANA promo]",
-   "distribution_en": "All Nippon Airlines \"Get in a Jet! Double Chance Campaign\" (November 1-31, 1998)"
+   "distribution_en": "All Nippon Airlines \"Everyone's Happy Campaign\" phase 1 (June 1-July 31, 1999)",
+   "note": "LV.11・でんげきの版。Bulbapedia「Flying Pikachu (ANA promo 99)」で、1999年の全日空のキャンペーン（フリーザーとの2枚組）のカード。pcg-search ではカイリュー（1998年）の隣に並んでいるが、配布時期は1999年"
   },
   "1stp043": {
    "date": "1998-11",
@@ -3381,10 +3463,11 @@
    "distribution_en": "Pokémon Card Trainers Vol. 1 insert (May 28, 1999)"
   },
   "1stp063": {
-   "date": "1999-06",
+   "date": "1998-11",
    "distribution": "",
    "bulbapedia": "Flying Pikachu [ANA promo]",
-   "distribution_en": "All Nippon Airlines \"Everyone's Happy Campaign\" phase 1 (June 1-July 31, 1999)"
+   "distribution_en": "All Nippon Airlines \"Get in a Jet! Double Chance Campaign\" (November 1-31, 1998)",
+   "note": "LV.12・でんきショックの版（1997年のコロコロコミックの付録の再録。イラストに飛行機が加わり、文面はのちの書き方）。Bulbapedia「Flying Pikachu (Wizards Promo 25)」で、1998年の全日空のキャンペーン（カイリューとの2枚組）のカード"
   },
   "1stp064": {
    "date": "1999-06",
@@ -3836,5 +3919,509 @@
    "bulbapedia": null,
    "distribution_en": null
   }
+ },
+ "reprint_text": {
+  "_comment": "同じカード（名前・HP・ワザ名が同じ）の再録で、日本語の文面が違うもの。キーはカード名（同名のカードが複数の組にあるときは「名前/HP」）。kind: wording（書き方だけ）、clarify（補足の追加・対象の明記）、meaning（意味が変わる）。",
+  "フシギバナ": {
+   "kind": "wording",
+   "summary": "エナジートランスを「この力は、自分の番の中で何度でも使える」で始まる書き方に"
+  },
+  "リザードン": {
+   "kind": "meaning",
+   "summary": "エナジーバーンが使えない状態を「こんらん」だけから「ねむり・マヒ・こんらん」に（英語版と同じに）。ほのおのうずに「トラッシュできない時、このワザのダメージは0になる」を追加"
+  },
+  "カメックス": {
+   "kind": "wording",
+   "summary": "あまごい・ハイドロポンプを、のちの書き方（「ワザに必要なエネルギーよりも多く…」など）に"
+  },
+  "カモネギ": {
+   "kind": "wording",
+   "summary": "ネギでたたくを、のちの書き方（「このワザのダメージは0になる」）に"
+  },
+  "そらをとぶピカチュウ": {
+   "kind": "wording",
+   "summary": "そらをとぶを、のちの書き方（「ワザによるダメージや効果を受けない」）に"
+  },
+  "きずぐすり": {
+   "kind": "clarify",
+   "summary": "「ダメージカウンターを2個まで」から「ポケモン1匹を選び、…最大2個」に（対象が1匹であることを明記。英語版と同じ）"
+  },
+  "突風": {
+   "kind": "wording",
+   "summary": "「相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える」に"
+  },
+  "ポケモンいれかえ": {
+   "kind": "wording",
+   "summary": "「あなたのベンチから控えポケモンを1匹選び、…入れ替える」に（にげるコストの記述はなくなる）"
+  },
+  "いいきずぐすり": {
+   "kind": "wording",
+   "summary": "「エネルギーカードのついているものを1匹選ぶ」から始まる書き方に"
+  },
+  "エネルギー回収": {
+   "kind": "meaning",
+   "summary": "拾えるカードを「2枚の好きなエネルギーカード」から「基本エネルギーカードを最大2枚」に（英語版と同じに）"
+  },
+  "元気のかけら": {
+   "kind": "wording",
+   "summary": "「ポケモンカード（進化カードは不可）」から「たねポケモンカード」に。トラッシュにたねポケモンがない時・ベンチに空きがない時は使えないことを追加"
+  },
+  "ディフェンダー": {
+   "kind": "wording",
+   "summary": "トラッシュする時を「次の自分の番の最初」から「次の相手の番の終わり」に（効果のある期間は同じ）"
+  },
+  "なんでもなおし": {
+   "kind": "clarify",
+   "summary": "「特殊状態にあるポケモン」から「あなたの対戦ポケモン」に（対象を明記。英語版と同じ）"
+  },
+  "プラスパワー": {
+   "kind": "clarify",
+   "summary": "のちの書き方に。「控えポケモンへのダメージは、そのまま」を追加"
+  },
+  "ポケモン図鑑HANDY505": {
+   "kind": "wording",
+   "summary": "「あなたの山札の上から最大5枚のカードを見て…」に"
+  },
+  "ポケモンセンター": {
+   "kind": "wording",
+   "summary": "「エネルギーカードはトラッシュする」を括弧書きに"
+  },
+  "ポケモン交換おじさん": {
+   "kind": "wording",
+   "summary": "手札のカードを先に山札にもどし、それから山札のカードを手札に加える書き方に"
+  },
+  "モンスターボール": {
+   "kind": "wording",
+   "summary": "「たねポケモンカードまたは進化カード」に"
+  },
+  "エネルギー転送": {
+   "kind": "wording",
+   "summary": "「特殊なエネルギーカードは選べない」から「基本エネルギーカード」に（意味は同じ）"
+  },
+  "ギャンブラー": {
+   "kind": "wording",
+   "summary": "「あなたの手札」などの書き方に"
+  },
+  "リサイクル": {
+   "kind": "wording",
+   "summary": "「好きなカード」から「カード」に"
+  },
+  "タケシ": {
+   "kind": "clarify",
+   "summary": "「ダメージカウンターののっていないポケモンには、何もおこらない」を追加"
+  },
+  "元気のかたまり": {
+   "kind": "clarify",
+   "summary": "拡張シート第2弾の版だけに「あなたのベンチに空きがない時、このカードは使えない」がある"
+  },
+  "超エネルギー回収": {
+   "kind": "meaning",
+   "summary": "『ポケットモンスター ファンブック』の付録（1997年）は「最大4枚のエネルギーカード」、neo 第1弾は「「基本エネルギーカード」を最大4枚」（英語版と同じ）"
+  },
+  "ラッキースタジアム": {
+   "kind": "wording",
+   "summary": "トロピカルメガバトルの参加賞は英語の文面つきで、日本語も英語版の訳の書き方（「その番のプレイヤーはコインを投げてもよい」）"
+  },
+  "ピカチュウ/60": {
+   "kind": "clarify",
+   "summary": "なきごえを「次の相手の番でうけるダメージを10へらす」から「このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される」に（減るのはワザを受けた相手からのダメージと明記）"
+  },
+  "エネルギーリムーブ": {
+   "kind": "wording",
+   "summary": "「相手の場のポケモンを1匹選ぶ。そのポケモンについているエネルギーカードを1枚選び、トラッシュさせる」に"
+  },
+  "ドードー": {
+   "kind": "wording",
+   "summary": "「〜の数×10のダメージをあたえる」から「〜の数×10のダメージ」に"
+  },
+  "ニョロモ": {
+   "kind": "wording",
+   "summary": "みずでっぽうを、のちの書き方（「ワザに必要なエネルギーよりも多く…」）に（カメックスのハイドロポンプと同じ書き換え）"
+  },
+  "オーダイル": {
+   "kind": "clarify",
+   "summary": "どしゃぶりを「手札にある「水」エネルギーカードを1枚選び、トラッシュする」に。ぎゃくりゅうに「山札にカードをもどすことができないとき、ダメージは追加されない」を追加"
+  },
+  "メガニウム": {
+   "kind": "clarify",
+   "summary": "ハーブのかおりを使える時を「このカードを手札から場に出したとき」から「手札から場に出してポケモンを進化させたとき」に（英語版と同じ）"
+  }
+ },
+ "intro_packs": {
+  "_comment": "イントロパック・イントロパック★neo のカードと Bulbapedia のカードのページ（title）。same_as は、そのページが転送される先（Bulbapedia が同じカードとして扱っているカードのページ）。転送されないものは null（このパックで初めて出たカード）。",
+  "bulbapedia": {
+   "1stintro1001": {
+    "title": "Bulbasaur (Bulbasaur Deck 1)",
+    "same_as": null
+   },
+   "1stintro1002": {
+    "title": "Drowzee (Bulbasaur Deck 2)",
+    "same_as": "Drowzee (Base Set 49)"
+   },
+   "1stintro1003": {
+    "title": "Raichu (Bulbasaur Deck 3)",
+    "same_as": null
+   },
+   "1stintro1007": {
+    "title": "Potion (Bulbasaur Deck 7)",
+    "same_as": "Potion (Base Set 94)"
+   },
+   "1stintro1009": {
+    "title": "Super Scoop Up (Bulbasaur Deck 9)",
+    "same_as": "Super Scoop Up (Neo Genesis 98)"
+   },
+   "1stintro1013": {
+    "title": "Pikachu (Bulbasaur Deck 13)",
+    "same_as": "Pikachu (Base Set 58)"
+   },
+   "1stintro1016": {
+    "title": "Meowth (Bulbasaur Deck 16)",
+    "same_as": null
+   },
+   "1stintro1018": {
+    "title": "Bulbasaur (Bulbasaur Deck 18)",
+    "same_as": "Bulbasaur (Vending S1)"
+   },
+   "1stintro1019": {
+    "title": "Switch (Bulbasaur Deck 19)",
+    "same_as": "Switch (Base Set 95)"
+   },
+   "1stintro1020": {
+    "title": "Bill's Teleporter (Bulbasaur Deck 20)",
+    "same_as": "Bill's Teleporter (Neo Genesis 91)"
+   },
+   "1stintro1022": {
+    "title": "Ivysaur (Bulbasaur Deck 22)",
+    "same_as": null
+   },
+   "1stintro1023": {
+    "title": "Double Colorless Energy (Bulbasaur Deck 23)",
+    "same_as": "Double Colorless Energy (Base Set 96)"
+   },
+   "1stintro1026": {
+    "title": "Electabuzz (Bulbasaur Deck 26)",
+    "same_as": null
+   },
+   "1stintro1028": {
+    "title": "Gust of Wind (Bulbasaur Deck 28)",
+    "same_as": "Gust of Wind (Base Set 93)"
+   },
+   "1stintro1029": {
+    "title": "Bulbasaur (Bulbasaur Deck 29)",
+    "same_as": "Bulbasaur (Vending S1)"
+   },
+   "1stintro1030": {
+    "title": "Doduo (Bulbasaur Deck 30)",
+    "same_as": "Doduo (Base Set 48)"
+   },
+   "1stintro1032": {
+    "title": "Ivysaur (Bulbasaur Deck 32)",
+    "same_as": "Ivysaur (Bulbasaur Deck 22)"
+   },
+   "1stintro1035": {
+    "title": "Bulbasaur (Bulbasaur Deck 35)",
+    "same_as": "Bulbasaur (Bulbasaur Deck 1)"
+   },
+   "1stintro1037": {
+    "title": "Jynx (Bulbasaur Deck 37)",
+    "same_as": null
+   },
+   "1stintro1039": {
+    "title": "Koffing (Bulbasaur Deck 39)",
+    "same_as": null
+   },
+   "1stintro1040": {
+    "title": "Pikachu (Bulbasaur Deck 40)",
+    "same_as": "Pikachu (Wizards Promo 1)"
+   },
+   "1stintro2001": {
+    "title": "Growlithe (Squirtle Deck 1)",
+    "same_as": "Growlithe (Base Set 28)"
+   },
+   "1stintro2002": {
+    "title": "Diglett (Squirtle Deck 2)",
+    "same_as": "Diglett (Base Set 47)"
+   },
+   "1stintro2003": {
+    "title": "Wartortle (Squirtle Deck 3)",
+    "same_as": null
+   },
+   "1stintro2007": {
+    "title": "Full Heal (Squirtle Deck 7)",
+    "same_as": "Full Heal (Base Set 82)"
+   },
+   "1stintro2009": {
+    "title": "Poliwag (Squirtle Deck 9)",
+    "same_as": "Poliwag (Base Set 59)"
+   },
+   "1stintro2010": {
+    "title": "Wartortle (Squirtle Deck 10)",
+    "same_as": "Wartortle (Squirtle Deck 3)"
+   },
+   "1stintro2013": {
+    "title": "Spearow (Squirtle Deck 13)",
+    "same_as": null
+   },
+   "1stintro2014": {
+    "title": "Jigglypuff (Squirtle Deck 14)",
+    "same_as": "Jigglypuff (Jungle 54)"
+   },
+   "1stintro2016": {
+    "title": "Squirtle (Squirtle Deck 16)",
+    "same_as": null
+   },
+   "1stintro2018": {
+    "title": "Squirtle (Squirtle Deck 18)",
+    "same_as": "Squirtle (Vending S1)"
+   },
+   "1stintro2019": {
+    "title": "Energy Removal (Squirtle Deck 19)",
+    "same_as": "Energy Removal (Base Set 92)"
+   },
+   "1stintro2021": {
+    "title": "Bill's Teleporter (Squirtle Deck 21)",
+    "same_as": "Bill's Teleporter (Neo Genesis 91)"
+   },
+   "1stintro2024": {
+    "title": "Potion (Squirtle Deck 24)",
+    "same_as": "Potion (Base Set 94)"
+   },
+   "1stintro2025": {
+    "title": "Double Colorless Energy (Squirtle Deck 25)",
+    "same_as": "Double Colorless Energy (Base Set 96)"
+   },
+   "1stintro2026": {
+    "title": "Growlithe (Squirtle Deck 26)",
+    "same_as": null
+   },
+   "1stintro2029": {
+    "title": "Super Scoop Up (Squirtle Deck 29)",
+    "same_as": "Super Scoop Up (Neo Genesis 98)"
+   },
+   "1stintro2032": {
+    "title": "Arcanine (Squirtle Deck 32)",
+    "same_as": null
+   },
+   "1stintro2035": {
+    "title": "Machop (Squirtle Deck 35)",
+    "same_as": "Machop (Base Set 52)"
+   },
+   "1stintro2037": {
+    "title": "Squirtle (Squirtle Deck 37)",
+    "same_as": "Squirtle (Squirtle Deck 16)"
+   },
+   "1stintro2039": {
+    "title": "Magmar (Squirtle Deck 39)",
+    "same_as": null
+   },
+   "1stintro2040": {
+    "title": "Squirtle (Squirtle Deck 40)",
+    "same_as": "Squirtle (Vending S1)"
+   },
+   "1stintro001": {
+    "title": "Venusaur (Bulbasaur Deck)",
+    "same_as": "Venusaur (Base Set 15)"
+   },
+   "1stintro002": {
+    "title": "Blastoise (Squirtle Deck)",
+    "same_as": "Blastoise (Base Set 2)"
+   },
+   "neointro1001": {
+    "title": "Chikorita (Chikorita Half Deck 1)",
+    "same_as": null
+   },
+   "neointro1002": {
+    "title": "Sunkern (Chikorita Half Deck 2)",
+    "same_as": null
+   },
+   "neointro1007": {
+    "title": "Full Heal (Chikorita Half Deck 7)",
+    "same_as": "Full Heal (Base Set 82)"
+   },
+   "neointro1008": {
+    "title": "Teddiursa (Chikorita Half Deck 8)",
+    "same_as": null
+   },
+   "neointro1010": {
+    "title": "Koffing (Chikorita Half Deck 10)",
+    "same_as": "Koffing (Team Rocket 58)"
+   },
+   "neointro1012": {
+    "title": "Growlithe (Chikorita Half Deck 12)",
+    "same_as": "Growlithe (Base Set 28)"
+   },
+   "neointro1013": {
+    "title": "Quilava (Chikorita Half Deck 13)",
+    "same_as": null
+   },
+   "neointro1015": {
+    "title": "Potion (Chikorita Half Deck 15)",
+    "same_as": "Potion (Base Set 94)"
+   },
+   "neointro1016": {
+    "title": "Cyndaquil (Chikorita Half Deck 16)",
+    "same_as": null
+   },
+   "neointro1020": {
+    "title": "Bill (Chikorita Half Deck 20)",
+    "same_as": "Bill (Base Set 91)"
+   },
+   "neointro1021": {
+    "title": "Master Ball (Chikorita Half Deck 21)",
+    "same_as": "Master Ball (Gym Challenge 116)"
+   },
+   "neointro1022": {
+    "title": "Paras (Chikorita Half Deck 22)",
+    "same_as": "Paras (Neo Revelation 47)"
+   },
+   "neointro1023": {
+    "title": "Cyndaquil (Chikorita Half Deck 23)",
+    "same_as": "Cyndaquil (Chikorita Half Deck 16)"
+   },
+   "neointro1024": {
+    "title": "Bayleef (Chikorita Half Deck 24)",
+    "same_as": null
+   },
+   "neointro1030": {
+    "title": "Chikorita (Chikorita Half Deck 30)",
+    "same_as": "Chikorita (Chikorita Half Deck 1)"
+   },
+   "neointro1ex001": {
+    "title": "Meganium (Chikorita Side Deck)",
+    "same_as": "Meganium (Neo Genesis 10)"
+   },
+   "neointro1ex002": {
+    "title": "Magby (Chikorita Side Deck)",
+    "same_as": null
+   },
+   "neointro1ex003": {
+    "title": "Machop (Chikorita Side Deck)",
+    "same_as": "Machop (Team Rocket 59)"
+   },
+   "neointro1ex004": {
+    "title": "Geodude (Chikorita Side Deck)",
+    "same_as": null
+   },
+   "neointro1ex005": {
+    "title": "Skarmory (Chikorita Side Deck)",
+    "same_as": null
+   },
+   "neointro1ex006": {
+    "title": "PlusPower (Chikorita Side Deck)",
+    "same_as": "PlusPower (Base Set 84)"
+   },
+   "neointro1ex007": {
+    "title": "Switch (Chikorita Side Deck)",
+    "same_as": "Switch (Base Set 95)"
+   },
+   "neointro1ex008": {
+    "title": "Berry (Chikorita Side Deck)",
+    "same_as": "Berry (Neo Genesis 99)"
+   },
+   "neointro1ex009": {
+    "title": "Energy Stadium (Chikorita Side Deck)",
+    "same_as": "Energy Stadium (Neo Destiny 99)"
+   },
+   "neointro2001": {
+    "title": "Pikachu (Totodile Half Deck 1)",
+    "same_as": "Pikachu (Base Set 58)"
+   },
+   "neointro2002": {
+    "title": "Marill (Totodile Half Deck 2)",
+    "same_as": null
+   },
+   "neointro2003": {
+    "title": "Hoothoot (Totodile Half Deck 3)",
+    "same_as": null
+   },
+   "neointro2004": {
+    "title": "Croconaw (Totodile Half Deck 4)",
+    "same_as": null
+   },
+   "neointro2008": {
+    "title": "Full Heal (Totodile Half Deck 8)",
+    "same_as": "Full Heal (Base Set 82)"
+   },
+   "neointro2010": {
+    "title": "Remoraid (Totodile Half Deck 10)",
+    "same_as": null
+   },
+   "neointro2016": {
+    "title": "Totodile (Totodile Half Deck 16)",
+    "same_as": null
+   },
+   "neointro2018": {
+    "title": "Mareep (Totodile Half Deck 18)",
+    "same_as": "Mareep (Neo Discovery 58)"
+   },
+   "neointro2020": {
+    "title": "Potion (Totodile Half Deck 20)",
+    "same_as": "Potion (Base Set 94)"
+   },
+   "neointro2021": {
+    "title": "Totodile (Totodile Half Deck 21)",
+    "same_as": "Totodile (Totodile Half Deck 16)"
+   },
+   "neointro2022": {
+    "title": "Master Ball (Totodile Half Deck 22)",
+    "same_as": "Master Ball (Gym Challenge 116)"
+   },
+   "neointro2024": {
+    "title": "Qwilfish (Totodile Half Deck 24)",
+    "same_as": null
+   },
+   "neointro2025": {
+    "title": "Bill (Totodile Half Deck 25)",
+    "same_as": "Bill (Base Set 91)"
+   },
+   "neointro2026": {
+    "title": "Flaaffy (Totodile Half Deck 26)",
+    "same_as": null
+   },
+   "neointro2030": {
+    "title": "Mareep (Totodile Half Deck 30)",
+    "same_as": "Mareep (Neo Discovery 58)"
+   },
+   "neointro2ex001": {
+    "title": "Feraligatr (Totodile Side Deck)",
+    "same_as": "Feraligatr (Neo Genesis 5)"
+   },
+   "neointro2ex002": {
+    "title": "Pichu (Totodile Side Deck)",
+    "same_as": null
+   },
+   "neointro2ex003": {
+    "title": "Abra (Totodile Side Deck)",
+    "same_as": null
+   },
+   "neointro2ex004": {
+    "title": "Natu (Totodile Side Deck)",
+    "same_as": "Natu (Neo Discovery 59)"
+   },
+   "neointro2ex005": {
+    "title": "Houndour (Totodile Side Deck)",
+    "same_as": "Houndour (Neo Discovery 39)"
+   },
+   "neointro2ex006": {
+    "title": "Defender (Totodile Side Deck)",
+    "same_as": "Defender (Base Set 80)"
+   },
+   "neointro2ex007": {
+    "title": "Gust of Wind (Totodile Side Deck)",
+    "same_as": "Gust of Wind (Base Set 93)"
+   },
+   "neointro2ex008": {
+    "title": "Berry (Totodile Side Deck)",
+    "same_as": "Berry (Neo Genesis 99)"
+   },
+   "neointro2ex009": {
+    "title": "Lucky Stadium (Totodile Side Deck)",
+    "same_as": "Lucky Stadium (Neo Destiny 100)"
+   }
+  }
+ },
+ "reprint_checks": {
+  "_comment": "同じカードの組の中で数値が食い違ったものの判定。キーはカード名。",
+  "ナツメのスリーパー": "pcg-search の転記で「×」が落ちている（pcg-search のカードの画像で「20×」を確認）。**確実**"
  }
 }

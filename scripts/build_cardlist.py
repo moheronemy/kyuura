@@ -291,6 +291,42 @@ def match_pokemon(jc, key, ov, en, search):
     return best
 
 
+def plain(s):
+    return re.sub(r'[^a-z0-9]', '', (s or '').lower())
+
+
+def en_reprints(e0, en):
+    """英語版の他セットでの再録。ポケモンは同名・同 HP・同じワザ名の並び、トレーナー・エネルギーは同名。
+    英語版データの上で元のカードと違う欄を differences に入れる（cost・damage・text・weakness・resistance・retreat）。"""
+    out = []
+    for c in en.values():
+        if c['_set'] == e0['_set'] or c['supertype'] != e0['supertype'] or c['name'] != e0['name']:
+            continue
+        diff = []
+        if c['supertype'] == 'Pokémon':
+            atk0, atk1 = e0.get('attacks', []), c.get('attacks', [])
+            if c.get('hp') != e0.get('hp') or [a['name'] for a in atk1] != [a['name'] for a in atk0] \
+                    or [a['name'] for a in c.get('abilities', [])] != [a['name'] for a in e0.get('abilities', [])]:
+                continue
+            if any(sorted(a.get('cost', [])) != sorted(b.get('cost', [])) for a, b in zip(atk0, atk1)):
+                diff.append('cost')
+            if any(a.get('damage') != b.get('damage') for a, b in zip(atk0, atk1)):
+                diff.append('damage')
+            texts = [a.get('text') for a in atk0] + [a.get('text') for a in e0.get('abilities', [])]
+            texts1 = [a.get('text') for a in atk1] + [a.get('text') for a in c.get('abilities', [])]
+            if [plain(t) for t in texts] != [plain(t) for t in texts1]:
+                diff.append('text')
+            for key, label in (('weaknesses', 'weakness'), ('resistances', 'resistance'),
+                               ('convertedRetreatCost', 'retreat')):
+                if c.get(key) != e0.get(key):
+                    diff.append(label)
+        elif plain(' '.join(c.get('rules', []))) != plain(' '.join(e0.get('rules', []))):
+            diff.append('text')
+        out.append({'set_id': c['_set'], 'set_name': EN_SET_NAMES[c['_set']], 'number': c['number'],
+                    'differences': diff})
+    return sorted(out, key=lambda x: (EN_ORDER.index(x['set_id']), num_key(x['number'])))
+
+
 def bilingual(en_value, ja_value=None):
     return {'ja': ja_value or None, 'en': en_value or None}
 
@@ -343,7 +379,9 @@ def build_records(args):
             continue
         for af in fix.get('attacks', []):
             atk = next(a for a in en[cid]['attacks'] if a['name'] == af['name'])
-            atk.update({k: v for k, v in af.items() if k != 'name'})
+            atk.update({k: v for k, v in af.items() if k not in ('name', 'rename')})
+            if 'rename' in af:  # ワザ名の誤り
+                atk['name'] = af['rename']
     overrides = load_json(cur / 'pokemon_overrides.json')
     trainers = load_json(cur / 'trainers.json')
     jp_only = load_json(cur / 'jp_only.json')
@@ -373,7 +411,7 @@ def build_records(args):
                    'en_print': None, 'en_reprints': [],
                    'pokemon': None, 'trainer': None, 'energy': None,
                    'jp_en_differences': diffs.get(key, []),
-                   'notes': [ov['note']] if ov.get('note') else [],
+                   'notes': [x for x in (ov.get('note'), ja_text.get('note')) if x],
                    'source_ids': {'tcgdex': key, 'pokemontcg': []},
                    'ja_text_source': ja_text.get('source'),
                    'jp_print': None}
@@ -396,13 +434,7 @@ def build_records(args):
                 rec['pokemon'] = build_pokemon(e0, namer, ja_text)
                 if jc.get('hp') and str(jc['hp']) != e0['hp']:
                     rec['notes'].append(f"TCGdex の日本版データでは HP {jc['hp']}（英語版は {e0['hp']}）")
-                for c in en.values():  # 英語版の他セットでの再録（同名・同 HP・同ワザ）
-                    if c['_set'] != e0['_set'] and c['supertype'] == 'Pokémon' and c['name'] == e0['name'] \
-                            and c.get('hp') == e0.get('hp') \
-                            and [a['name'] for a in c.get('attacks', [])] == [a['name'] for a in e0.get('attacks', [])]:
-                        rec['en_reprints'].append({'set_id': c['_set'], 'set_name': EN_SET_NAMES[c['_set']],
-                                                   'number': c['number']})
-                rec['en_reprints'].sort(key=lambda x: (EN_ORDER.index(x['set_id']), num_key(x['number'])))
+                rec['en_reprints'] = en_reprints(e0, en)
             else:
                 t = trainers.get(key)
                 if t is None:
@@ -413,6 +445,8 @@ def build_records(args):
                 rec['name_ja_confidence'] = t['confidence'] if t['ja'] else None
                 if t.get('note'):
                     rec['notes'].append(t['note'])
+                if 'Basic' not in e0.get('subtypes', []):  # 基本エネルギーの再録は載せない
+                    rec['en_reprints'] = en_reprints(e0, en)
                 text = bilingual(' '.join(e0.get('rules', [])) or None, ja_text.get('text'))
                 if e0['supertype'] == 'Trainer':
                     rec['trainer'] = {'kinds': [TRAINER_KIND_ID[x] for x in e0.get('subtypes', [])],
@@ -653,6 +687,17 @@ def en_ref(r):
     return f"{p['set_name']} {'・'.join(p['numbers'])}" if p else ''
 
 
+REPRINT_DIFF_JA = {'cost': 'コスト', 'damage': 'ダメージ', 'text': '文面', 'weakness': '弱点', 'resistance': '抵抗力',
+                   'retreat': 'にげる'}
+
+
+def reprint_ref(x):
+    ref = f"{EN_SET_ABBR[x['set_id']]} {x['number']}"
+    if x.get('differences'):
+        ref += f"（{'・'.join(REPRINT_DIFF_JA[d] for d in x['differences'])}が違う）"
+    return ref
+
+
 def md(s):
     return str(s).replace('|', '\\|').replace('\n', ' ')
 
@@ -779,7 +824,8 @@ def card_detail(r):
             lines.append('')
     if r['ja_text_source']:
         src = r['ja_text_source']
-        site = 'なぞのばしょ' if 'nazonobasho.com' in src else 'ポケモンWiki' if 'pokemonwiki.com' in src else src
+        site = ('なぞのばしょ' if 'nazonobasho.com' in src else 'ポケモンWiki' if 'pokemonwiki.com' in src
+                else 'ポケモンカード 旧シリーズ検索' if 'pcg-search.com' in src else src)
         lines.append(f"- 日本語テキストの出典: [{site}]({src})" if src.startswith('http') else f"- 日本語テキストの出典: {src}")
     for d in r['jp_en_differences']:
         lines.append(f"- **日英の違い（{d['summary']}、確度: {d['confidence']}）** 日本版: {d['ja']} ／ 英語版: {d['en']}")
@@ -807,6 +853,9 @@ def write_set_docs(records, en_only):
                  f"- 収録枚数: {meta['count']}",
                  f"- 主に対応する英語版: {meta['en']}", '',
                  '## カード一覧', '',
+                 '備考の「再録」は英語版の別セット（Base Set 2・Legendary Collection・プロモなど）への再録です。'
+                 '「（文面が違う）」などは、英語版データの上で元のカードと欄が違うもの（多くは書き方の統一による言い換え）です。'
+                 '判定の方法と点検の結果は [再録カードの対応付け](reprints.md) にあります。', '',
                  '| No. | 日本語名 | 種類 | タイプ | 進化 | HP | レア | 英語版（WotC） | 備考 |',
                  '|---:|---|---|---|---|---:|---|---|---|']
         for r in rs:
@@ -816,7 +865,7 @@ def write_set_docs(records, en_only):
                 en_cell += ' ⚠'
             notes = [f"日英の違い: {d['summary']}" for d in r['jp_en_differences']] + list(r['notes'])
             if r['en_reprints']:
-                notes.append('再録: ' + '、'.join(f"{EN_SET_ABBR[x['set_id']]} {x['number']}" for x in r['en_reprints']))
+                notes.append('再録: ' + '、'.join(reprint_ref(x) for x in r['en_reprints']))
             lines.append('| {} | {} | {} | {} | {} | {} | {} | {} | {} |'.format(
                 r['seq'], name_cell(r), kind_ja(r), types_ja(p['types']) if p else '',
                 STAGE_JA.get(p['stage'], '') if p else '', p['hp'] if p else '',

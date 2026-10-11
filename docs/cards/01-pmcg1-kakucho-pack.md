@@ -6,6 +6,8 @@
 
 ## カード一覧
 
+備考の「再録」は英語版の別セット（Base Set 2・Legendary Collection・プロモなど）への再録です。「（文面が違う）」などは、英語版データの上で元のカードと欄が違うもの（多くは書き方の統一による言い換え）です。判定の方法と点検の結果は [再録カードの対応付け](reprints.md) にあります。
+
 | No. | 日本語名 | 種類 | タイプ | 進化 | HP | レア | 英語版（WotC） | 備考 |
 |---:|---|---|---|---|---:|---|---|---|
 | 1 | フシギダネ | ポケモン | 草 | たね | 40 | ● | Bulbasaur<br>Base Set 44 | 再録: BS2 67、LC 68 |
@@ -18,20 +20,20 @@
 | 8 | フシギソウ | ポケモン | 草 | 1進化 | 60 | ◆ | Ivysaur<br>Base Set 30 | 再録: BS2 44、LC 47 |
 | 9 | コクーン | ポケモン | 草 | 1進化 | 80 | ◆ | Kakuna<br>Base Set 33 | 再録: BS2 47、LC 50 |
 | 10 | ニドリーノ | ポケモン | 草 | 1進化 | 60 | ◆ | Nidorino<br>Base Set 37 | 再録: BS2 54、LC 56 |
-| 11 | フシギバナ | ポケモン | 草 | 2進化 | 100 | ★キラ | Venusaur<br>Base Set 15 | 再録: BS2 18、LC 18 |
+| 11 | フシギバナ | ポケモン | 草 | 2進化 | 100 | ★キラ | Venusaur<br>Base Set 15 | 再録: BS2 18、LC 18（文面が違う） |
 | 12 | スピアー | ポケモン | 草 | 2進化 | 80 | ★ | Beedrill<br>Base Set 17 | 再録: BS2 21、LC 20 |
 | 13 | ニドキング | ポケモン | 草 | 2進化 | 90 | ★キラ | Nidoking<br>Base Set 11 | 再録: BS2 11、LC 31 |
-| 14 | ヒトカゲ | ポケモン | 炎 | たね | 50 | ● | Charmander<br>Base Set 46 | 再録: BS2 69、LC 70 |
+| 14 | ヒトカゲ | ポケモン | 炎 | たね | 50 | ● | Charmander<br>Base Set 46 | 再録: BS2 69、LC 70（文面が違う） |
 | 15 | ロコン | ポケモン | 炎 | たね | 50 | ● | Vulpix<br>Base Set 68 | 再録: BS2 99、LC 98 |
 | 16 | ポニータ | ポケモン | 炎 | たね | 40 | ● | Ponyta<br>Base Set 60 | 再録: LC 87 |
-| 17 | リザード | ポケモン | 炎 | 1進化 | 80 | ◆ | Charmeleon<br>Base Set 24 | 再録: BS2 35、LC 37 |
+| 17 | リザード | ポケモン | 炎 | 1進化 | 80 | ◆ | Charmeleon<br>Base Set 24 | 再録: BS2 35、LC 37（文面が違う） |
 | 18 | ガーディ | ポケモン | 炎 | たね | 60 | ◆ | Growlithe<br>Base Set 28 | 再録: BS2 42、LC 45 |
-| 19 | ウインディ | ポケモン | 炎 | 1進化 | 100 | ◆ | Arcanine<br>Base Set 23 | 再録: BS2 33、LC 36 |
+| 19 | ウインディ | ポケモン | 炎 | 1進化 | 100 | ◆ | Arcanine<br>Base Set 23 | 再録: BS2 33、LC 36（文面が違う） |
 | 20 | ブーバー | ポケモン | 炎 | たね | 50 | ◆ | Magmar<br>Base Set 36 | 再録: BS2 51 |
-| 21 | リザードン | ポケモン | 炎 | 2進化 | 120 | ★キラ | Charizard<br>Base Set 4 | 日英の違い: ポケモンパワー エナジーバーン（Energy Burn）が使えなくなる状態<br>再録: BS2 4、LC 3 |
-| 22 | キュウコン | ポケモン | 炎 | 1進化 | 80 | ★キラ | Ninetales<br>Base Set 12 | 再録: BS2 13、LC 17 |
-| 23 | ゼニガメ | ポケモン | 水 | たね | 40 | ● | Squirtle<br>Base Set 63 | 再録: BS2 93、LC 95 |
-| 24 | ニョロモ | ポケモン | 水 | たね | 40 | ● | Poliwag<br>Base Set 59 | 再録: BS2 88 |
+| 21 | リザードン | ポケモン | 炎 | 2進化 | 120 | ★キラ | Charizard<br>Base Set 4 | 日英の違い: ポケモンパワー エナジーバーン（Energy Burn）が使えなくなる状態<br>再録: BS2 4、LC 3（文面が違う） |
+| 22 | キュウコン | ポケモン | 炎 | 1進化 | 80 | ★キラ | Ninetales<br>Base Set 12 | 再録: BS2 13（文面が違う）、LC 17（文面が違う） |
+| 23 | ゼニガメ | ポケモン | 水 | たね | 40 | ● | Squirtle<br>Base Set 63 | 再録: BS2 93（文面が違う）、LC 95 |
+| 24 | ニョロモ | ポケモン | 水 | たね | 40 | ● | Poliwag<br>Base Set 59 | 再録: BS2 88（文面が違う） |
 | 25 | ヒトデマン | ポケモン | 水 | たね | 40 | ● | Staryu<br>Base Set 65 | 再録: BS2 95 |
 | 26 | スターミー | ポケモン | 水 | 1進化 | 60 | ● | Starmie<br>Base Set 64 | 再録: BS2 94 |
 | 27 | カメール | ポケモン | 水 | 1進化 | 70 | ◆ | Wartortle<br>Base Set 42 | 再録: BS2 63 |
@@ -39,71 +41,71 @@
 | 29 | パウワウ | ポケモン | 水 | たね | 60 | ◆ | Seel<br>Base Set 41 | 再録: BS2 61、LC 92 |
 | 30 | ジュゴン | ポケモン | 水 | 1進化 | 80 | ◆ | Dewgong<br>Base Set 25 | 再録: BS2 36、LC 40 |
 | 31 | コイキング | ポケモン | 水 | たね | 30 | ◆ | Magikarp<br>Base Set 35 | 再録: BS2 50、LC 52 |
-| 32 | カメックス | ポケモン | 水 | 2進化 | 100 | ★キラ | Blastoise<br>Base Set 2 | 再録: BS2 2 |
-| 33 | ニョロボン | ポケモン | 水 | 2進化 | 90 | ★キラ | Poliwrath<br>Base Set 13 | 再録: BS2 15 |
+| 32 | カメックス | ポケモン | 水 | 2進化 | 100 | ★キラ | Blastoise<br>Base Set 2 | 再録: BS2 2（文面が違う） |
+| 33 | ニョロボン | ポケモン | 水 | 2進化 | 90 | ★キラ | Poliwrath<br>Base Set 13 | 再録: BS2 15（文面が違う） |
 | 34 | ギャラドス | ポケモン | 水 | 1進化 | 100 | ★キラ | Gyarados<br>Base Set 6 | 再録: BS2 7、LC 12 |
 | 35 | ピカチュウ | ポケモン | 雷 | たね | 40 | ● | Pikachu<br>Base Set 58 | 再録: BS2 87 |
 | 36 | コイル | ポケモン | 雷 | たね | 40 | ● | Magnemite<br>Base Set 53 | 再録: BS2 79、LC 80 |
 | 37 | ビリリダマ | ポケモン | 雷 | たね | 40 | ● | Voltorb<br>Base Set 67 | 再録: BS2 98、LC 97 |
 | 38 | ライチュウ | ポケモン | 雷 | 1進化 | 80 | ★キラ | Raichu<br>Base Set 14 | 再録: BS2 16 |
-| 39 | レアコイル | ポケモン | 雷 | 1進化 | 60 | ★キラ | Magneton<br>Base Set 9 | 再録: BS2 9 |
-| 40 | マルマイン | ポケモン | 雷 | 1進化 | 80 | ★ | Electrode<br>Base Set 21 | 再録: BS2 25 |
-| 41 | エレブー | ポケモン | 雷 | たね | 70 | ★ | Electabuzz<br>Base Set 20 | 再録: BS2 24 |
-| 42 | サンダー | ポケモン | 雷 | たね | 90 | ★キラ | Zapdos<br>Base Set 16 | 再録: BS2 20、LC 19 |
+| 39 | レアコイル | ポケモン | 雷 | 1進化 | 60 | ★キラ | Magneton<br>Base Set 9 | 再録: BS2 9（文面が違う） |
+| 40 | マルマイン | ポケモン | 雷 | 1進化 | 80 | ★ | Electrode<br>Base Set 21 | 再録: BS2 25（文面が違う） |
+| 41 | エレブー | ポケモン | 雷 | たね | 70 | ★ | Electabuzz<br>Base Set 20 | 再録: BS2 24（文面が違う） |
+| 42 | サンダー | ポケモン | 雷 | たね | 90 | ★キラ | Zapdos<br>Base Set 16 | 再録: BS2 20、LC 19（文面が違う） |
 | 43 | ケーシィ | ポケモン | 超 | たね | 30 | ● | Abra<br>Base Set 43 | 再録: BS2 65、LC 67 |
 | 44 | ゴース | ポケモン | 超 | たね | 30 | ● | Gastly<br>Base Set 50 | 再録: BS2 75 |
 | 45 | スリープ | ポケモン | 超 | たね | 50 | ● | Drowzee<br>Base Set 49 | 再録: BS2 73 |
-| 46 | ユンゲラー | ポケモン | 超 | 1進化 | 60 | ◆ | Kadabra<br>Base Set 32 | 再録: BS2 46、LC 49 |
+| 46 | ユンゲラー | ポケモン | 超 | 1進化 | 60 | ◆ | Kadabra<br>Base Set 32 | 再録: BS2 46、LC 49（文面が違う） |
 | 47 | ゴースト | ポケモン | 超 | 1進化 | 60 | ◆ | Haunter<br>Base Set 29 | 再録: BS2 43 |
 | 48 | ルージュラ | ポケモン | 超 | たね | 70 | ◆ | Jynx<br>Base Set 31 | 再録: BS2 45、LC 26 |
-| 49 | フーディン | ポケモン | 超 | 2進化 | 80 | ★キラ | Alakazam<br>Base Set 1 | 再録: BS2 1、LC 1 |
-| 50 | ミュウツー | ポケモン | 超 | たね | 60 | ★キラ | Mewtwo<br>Base Set 10 | 再録: BS2 10 |
+| 49 | フーディン | ポケモン | 超 | 2進化 | 80 | ★キラ | Alakazam<br>Base Set 1 | 再録: BS2 1、LC 1（文面が違う） |
+| 50 | ミュウツー | ポケモン | 超 | たね | 60 | ★キラ | Mewtwo<br>Base Set 10 | 再録: BS2 10（文面が違う） |
 | 51 | サンド | ポケモン | 闘 | たね | 40 | ● | Sandshrew<br>Base Set 62 | 再録: BS2 91、LC 91 |
 | 52 | ディグダ | ポケモン | 闘 | たね | 30 | ● | Diglett<br>Base Set 47 | 再録: BS2 71 |
 | 53 | ワンリキー | ポケモン | 闘 | たね | 50 | ● | Machop<br>Base Set 52 | 再録: BS2 78 |
 | 54 | イワーク | ポケモン | 闘 | たね | 90 | ● | Onix<br>Base Set 56 | 再録: BS2 84、LC 84 |
 | 55 | ゴーリキー | ポケモン | 闘 | 1進化 | 80 | ◆ | Machoke<br>Base Set 34 | 再録: BS2 49、LC 51 |
 | 56 | ダグトリオ | ポケモン | 闘 | 1進化 | 70 | ★ | Dugtrio<br>Base Set 19 | 再録: BS2 23 |
-| 57 | カイリキー | ポケモン | 闘 | 2進化 | 100 | ★キラ | Machamp<br>Base Set 8 | 再録: LC 15 |
+| 57 | カイリキー | ポケモン | 闘 | 2進化 | 100 | ★キラ | Machamp<br>Base Set 8 | 再録: LC 15（文面が違う） |
 | 58 | エビワラー | ポケモン | 闘 | たね | 70 | ★キラ | Hitmonchan<br>Base Set 7 | 再録: BS2 8 |
-| 59 | ポッポ | ポケモン | 無色 | たね | 40 | ● | Pidgey<br>Base Set 57 | 再録: BS2 86、LC 85 |
+| 59 | ポッポ | ポケモン | 無色 | たね | 40 | ● | Pidgey<br>Base Set 57 | 再録: BS2 86、LC 85（文面が違う） |
 | 60 | コラッタ | ポケモン | 無色 | たね | 30 | ● | Rattata<br>Base Set 61 | 再録: BS2 89、LC 89 |
 | 61 | ドードー | ポケモン | 無色 | たね | 50 | ● | Doduo<br>Base Set 48 | 再録: BS2 72、LC 71 |
 | 62 | ラッタ | ポケモン | 無色 | 1進化 | 60 | ◆ | Raticate<br>Base Set 40 | 再録: BS2 58、LC 61 |
 | 63 | カモネギ | ポケモン | 無色 | たね | 50 | ◆ | Farfetch'd<br>Base Set 27 | 再録: BS2 40 |
 | 64 | ポリゴン | ポケモン | 無色 | たね | 30 | ◆ | Porygon<br>Base Set 39 |  |
 | 65 | ミニリュウ | ポケモン | 無色 | たね | 40 | ◆ | Dratini<br>Base Set 26 | 再録: BS2 38、LC 72 |
-| 66 | ピジョン | ポケモン | 無色 | 1進化 | 60 | ★ | Pidgeotto<br>Base Set 22 | 再録: BS2 28、LC 34 |
+| 66 | ピジョン | ポケモン | 無色 | 1進化 | 60 | ★ | Pidgeotto<br>Base Set 22 | 再録: BS2 28、LC 34（文面が違う） |
 | 67 | ピッピ | ポケモン | 無色 | たね | 40 | ★キラ | Clefairy<br>Base Set 5 | 日英の違い: ワザ ゆびをふる（Metronome）でコピーしたワザのコストと条件<br>再録: BS2 6 |
 | 68 | ラッキー | ポケモン | 無色 | たね | 120 | ★キラ | Chansey<br>Base Set 3 | 再録: BS2 3 |
 | 69 | ハクリュー | ポケモン | 無色 | 1進化 | 80 | ★ | Dragonair<br>Base Set 18 | 再録: BS2 22 |
-| 70 | エネルギー・リムーブ | トレーナー |  |  |  | ● | Energy Removal<br>Base Set 92 |  |
-| 71 | きずぐすり | トレーナー |  |  |  | ● | Potion<br>Base Set 94 |  |
-| 72 | 突風 | トレーナー |  |  |  | ● | Gust of Wind<br>Base Set 93 |  |
-| 73 | ポケモンいれかえ | トレーナー |  |  |  | ● | Switch<br>Base Set 95 |  |
-| 74 | マサキ | トレーナー |  |  |  | ● | Bill<br>Base Set 91 |  |
-| 75 | いいきずぐすり | トレーナー |  |  |  | ◆ | Super Potion<br>Base Set 90 |  |
-| 76 | エネルギー回収 | トレーナー |  |  |  | ◆ | Energy Retrieval<br>Base Set 81 |  |
-| 77 | オーキドはかせ | トレーナー |  |  |  | ◆ | Professor Oak<br>Base Set 88 |  |
+| 70 | エネルギー・リムーブ | トレーナー |  |  |  | ● | Energy Removal<br>Base Set 92 | 再録: BS2 119 |
+| 71 | きずぐすり | トレーナー |  |  |  | ● | Potion<br>Base Set 94 | 再録: BS2 122、LC 110 |
+| 72 | 突風 | トレーナー |  |  |  | ● | Gust of Wind<br>Base Set 93 | 再録: BS2 120 |
+| 73 | ポケモンいれかえ | トレーナー |  |  |  | ● | Switch<br>Base Set 95 | 再録: BS2 123（文面が違う） |
+| 74 | マサキ | トレーナー |  |  |  | ● | Bill<br>Base Set 91 | 再録: BS2 118、LC 108 |
+| 75 | いいきずぐすり | トレーナー |  |  |  | ◆ | Super Potion<br>Base Set 90 | 再録: BS2 117（文面が違う） |
+| 76 | エネルギー回収 | トレーナー |  |  |  | ◆ | Energy Retrieval<br>Base Set 81 | 日英の違い: エネルギー回収（Energy Retrieval）で拾えるエネルギー<br>再録: BS2 110、LC 107 |
+| 77 | オーキドはかせ | トレーナー |  |  |  | ◆ | Professor Oak<br>Base Set 88 | 再録: BS2 116 |
 | 78 | 元気のかけら | トレーナー |  |  |  | ◆ | Revive<br>Base Set 89 | なぞのばしょの表記による。TCGdex の表記は「げんきのかけら」 |
-| 79 | ディフェンダー | トレーナー |  |  |  | ◆ | Defender<br>Base Set 80 |  |
-| 80 | なんでもなおし | トレーナー |  |  |  | ◆ | Full Heal<br>Base Set 82 |  |
-| 81 | プラスパワー | トレーナー |  |  |  | ◆ | PlusPower<br>Base Set 84 | 日英の違い: プラスパワーの扱い（日本の初期） |
-| 82 | ポケモン図鑑 HANDY505 | トレーナー |  |  |  | ◆ | Pokédex<br>Base Set 87 | なぞのばしょの表記による。TCGdex の表記は「ポケモン図鑑」 |
-| 83 | ポケモンセンター | トレーナー |  |  |  | ◆ | Pokémon Center<br>Base Set 85 |  |
+| 79 | ディフェンダー | トレーナー |  |  |  | ◆ | Defender<br>Base Set 80 | 再録: BS2 109 |
+| 80 | なんでもなおし | トレーナー |  |  |  | ◆ | Full Heal<br>Base Set 82 | 再録: BS2 111 |
+| 81 | プラスパワー | トレーナー |  |  |  | ◆ | PlusPower<br>Base Set 84 | 日英の違い: プラスパワーの扱い（日本の初期）<br>再録: BS2 113 |
+| 82 | ポケモン図鑑 HANDY505 | トレーナー |  |  |  | ◆ | Pokédex<br>Base Set 87 | なぞのばしょの表記による。TCGdex の表記は「ポケモン図鑑」<br>再録: BS2 115 |
+| 83 | ポケモンセンター | トレーナー |  |  |  | ◆ | Pokémon Center<br>Base Set 85 | 再録: Promo 40、BS2 114 |
 | 84 | ポケモンの笛 | トレーナー |  |  |  | ◆ | Pokémon Flute<br>Base Set 86 |  |
-| 85 | メンテナンス | トレーナー |  |  |  | ◆ | Maintenance<br>Base Set 83 |  |
+| 85 | メンテナンス | トレーナー |  |  |  | ◆ | Maintenance<br>Base Set 83 | 再録: BS2 112 |
 | 86 | 退化スプレー | トレーナー |  |  |  | ★ | Devolution Spray<br>Base Set 72 |  |
-| 87 | ダウジングマシーン | トレーナー |  |  |  | ★ | Item Finder<br>Base Set 74 |  |
-| 88 | 超エネルギーリムーブ | トレーナー |  |  |  | ★ | Super Energy Removal<br>Base Set 79 |  |
+| 87 | ダウジングマシーン | トレーナー |  |  |  | ★ | Item Finder<br>Base Set 74 | 再録: BS2 103 |
+| 88 | 超エネルギーリムーブ | トレーナー |  |  |  | ★ | Super Energy Removal<br>Base Set 79 | 再録: BS2 108（文面が違う） |
 | 89 | にせオーキドはかせ | トレーナー |  |  |  | ★ | Impostor Professor Oak<br>Base Set 73 | 日英の違い: 英語版のカード名の綴り |
-| 90 | パソコン通信 | トレーナー |  |  |  | ★ | Computer Search<br>Base Set 71 |  |
+| 90 | パソコン通信 | トレーナー |  |  |  | ★ | Computer Search<br>Base Set 71 | 再録: BS2 101 |
 | 91 | ピッピ人形 | トレーナー |  |  |  | ★ | Clefairy Doll<br>Base Set 70 |  |
-| 92 | ポケモン回収 | トレーナー |  |  |  | ★ | Scoop Up<br>Base Set 78 |  |
-| 93 | ポケモン交換おじさん | トレーナー |  |  |  | ★ | Pokémon Trader<br>Base Set 77 |  |
-| 94 | ポケモン育て屋さん | トレーナー |  |  |  | ★ | Pokémon Breeder<br>Base Set 76 | 日英の違い: サポーター扱いのエラッタ |
-| 95 | ミニスカート | トレーナー |  |  |  | ★ | Lass<br>Base Set 75 |  |
-| 96 | 無色2個エネルギー | 特殊エネルギー |  |  |  | ◆ | Double Colorless Energy<br>Base Set 96 | なぞのばしょの表記による。TCGdex の表記は「ダブル無色エネルギー」 |
+| 92 | ポケモン回収 | トレーナー |  |  |  | ★ | Scoop Up<br>Base Set 78 | 再録: BS2 107、LC 104 |
+| 93 | ポケモン交換おじさん | トレーナー |  |  |  | ★ | Pokémon Trader<br>Base Set 77 | 再録: BS2 106、LC 103 |
+| 94 | ポケモン育て屋さん | トレーナー |  |  |  | ★ | Pokémon Breeder<br>Base Set 76 | 日英の違い: サポーター扱いのエラッタ<br>再録: BS2 105、LC 102（文面が違う） |
+| 95 | ミニスカート | トレーナー |  |  |  | ★ | Lass<br>Base Set 75 | 再録: BS2 104 |
+| 96 | 無色2個エネルギー | 特殊エネルギー |  |  |  | ◆ | Double Colorless Energy<br>Base Set 96 | なぞのばしょの表記による。TCGdex の表記は「ダブル無色エネルギー」<br>再録: BS2 124 |
 | 97 | 草エネルギー | 基本エネルギー |  |  |  | ● | Grass Energy<br>Base Set 99 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
 | 98 | 炎エネルギー | 基本エネルギー |  |  |  | ● | Fire Energy<br>Base Set 98 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
 | 99 | 水エネルギー | 基本エネルギー |  |  |  | ● | Water Energy<br>Base Set 102 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
@@ -1258,6 +1260,7 @@
 - 英語: Trade 1 of the other cards in your hand for up to 2 basic Energy cards from your discard pile.
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/pmcg01-071-energykaishu/)
+- **日英の違い（エネルギー回収（Energy Retrieval）で拾えるエネルギー、確度: 確実）** 日本版: 「トラッシュから2枚の好きなエネルギーカードをひろって」と、基本エネルギーに限っていない（カードの画像で確認）。のちのジムデッキ・クイックスターターギフトの再録では「基本エネルギーカードを最大2枚」に改められた ／ 英語版: 「up to 2 basic Energy cards」と、基本エネルギーだけ
 - 日本版の収録商品: 第1弾拡張パック、スターターパック
 - 日本版の印刷について: 初版はレアリティマークなし
 

@@ -6,6 +6,8 @@
 
 ## カード一覧
 
+備考の「再録」は英語版の別セット（Base Set 2・Legendary Collection・プロモなど）への再録です。「（文面が違う）」などは、英語版データの上で元のカードと欄が違うもの（多くは書き方の統一による言い換え）です。判定の方法と点検の結果は [再録カードの対応付け](reprints.md) にあります。
+
 | No. | 日本語名 | 種類 | タイプ | 進化 | HP | レア | 英語版（WotC） | 備考 |
 |---:|---|---|---|---|---:|---|---|---|
 | 1 | コンパン | ポケモン | 草 | たね | 40 | ● | Venonat<br>Neo Destiny 90 |  |
@@ -113,7 +115,7 @@
 | 103 | はんげきのツメ | トレーナー（ポケモンのどうぐ） |  |  |  | ◆ | Counterattack Claws<br>Neo Destiny 97 |  |
 | 104 | ピントレンズ | トレーナー |  |  |  | ◆ | Magnifier<br>Neo Destiny 101 |  |
 | 105 | ポケモン性格判定 | トレーナー |  |  |  | ◆ | Pokémon Personality Test<br>Neo Destiny 102 |  |
-| 106 | ラッキースタジアム | トレーナー（スタジアム） |  |  |  | ◆ | Lucky Stadium<br>Neo Destiny 100 |  |
+| 106 | ラッキースタジアム | トレーナー（スタジアム） |  |  |  | ◆ | Lucky Stadium<br>Neo Destiny 100 | 再録: Promo 41 |
 | 107 | ロケット団の暗躍 | トレーナー |  |  |  | ◆ | Team Rocket's Evil Deeds<br>Neo Destiny 103 |  |
 | 108 | 怪電波マシーン | トレーナー（ロケット団秘密メカ） |  |  |  | ★ | Thought Wave Machine<br>Neo Destiny 96 |  |
 | 109 | 学習装置 | トレーナー（ポケモンのどうぐ） |  |  |  | ★ | EXP.ALL<br>Neo Destiny 93 |  |

@@ -6,6 +6,8 @@
 
 ## カード一覧
 
+備考の「再録」は英語版の別セット（Base Set 2・Legendary Collection・プロモなど）への再録です。「（文面が違う）」などは、英語版データの上で元のカードと欄が違うもの（多くは書き方の統一による言い換え）です。判定の方法と点検の結果は [再録カードの対応付け](reprints.md) にあります。
+
 | No. | 日本語名 | 種類 | タイプ | 進化 | HP | レア | 英語版（WotC） | 備考 |
 |---:|---|---|---|---|---:|---|---|---|
 | 1 | アーボ | ポケモン | 草 | たね | 50 | ● | Ekans<br>Team Rocket 56 |  |
@@ -26,12 +28,12 @@
 | 16 | わるいブースター | ポケモン | 炎 | 1進化 | 50 | ◆ | Dark Flareon<br>Team Rocket 35 |  |
 | 17 | わるいリザードン | ポケモン | 炎 | 2進化 | 80 | ★キラ | Dark Charizard<br>Team Rocket 4・21 |  |
 | 18 | ゼニガメ | ポケモン | 水 | たね | 50 | ● | Squirtle<br>Team Rocket 68 |  |
-| 19 | コダック | ポケモン | 水 | たね | 50 | ● | Psyduck<br>Team Rocket 65 | 再録: LC 88 |
+| 19 | コダック | ポケモン | 水 | たね | 50 | ● | Psyduck<br>Team Rocket 65 | 再録: LC 88（文面が違う） |
 | 20 | コイキング | ポケモン | 水 | たね | 30 | ● | Magikarp<br>Team Rocket 47 |  |
-| 21 | わるいカメール | ポケモン | 水 | 1進化 | 60 | ◆ | Dark Wartortle<br>Team Rocket 46 | 再録: LC 39 |
+| 21 | わるいカメール | ポケモン | 水 | 1進化 | 60 | ◆ | Dark Wartortle<br>Team Rocket 46 | 再録: LC 39（文面が違う） |
 | 22 | わるいゴルダック | ポケモン | 水 | 1進化 | 60 | ◆ | Dark Golduck<br>Team Rocket 37 |  |
 | 23 | わるいシャワーズ | ポケモン | 水 | 1進化 | 60 | ◆ | Dark Vaporeon<br>Team Rocket 45 | 再録: LC 9 |
-| 24 | わるいカメックス | ポケモン | 水 | 2進化 | 70 | ★キラ | Dark Blastoise<br>Team Rocket 3・20 | 再録: LC 4 |
+| 24 | わるいカメックス | ポケモン | 水 | 2進化 | 70 | ★キラ | Dark Blastoise<br>Team Rocket 3・20 | 再録: LC 4（文面が違う） |
 | 25 | わるいギャラドス | ポケモン | 水 | 1進化 | 70 | ★キラ | Dark Gyarados<br>Team Rocket 8・25 |  |
 | 26 | コイル | ポケモン | 雷 | たね | 40 | ● | Magnemite<br>Team Rocket 60 |  |
 | 27 | ビリリダマ | ポケモン | 雷 | たね | 40 | ● | Voltorb<br>Team Rocket 69 |  |
@@ -40,7 +42,7 @@
 | 30 | わるいレアコイル | ポケモン | 雷 | 1進化 | 60 | ★キラ | Dark Magneton<br>Team Rocket 11・28 |  |
 | 31 | ケーシィ | ポケモン | 超 | たね | 40 | ● | Abra<br>Team Rocket 49 |  |
 | 32 | ヤドン | ポケモン | 超 | たね | 50 | ● | Slowpoke<br>Team Rocket 67 |  |
-| 33 | スリープ | ポケモン | 超 | たね | 50 | ● | Drowzee<br>Team Rocket 54 | 再録: LC 73 |
+| 33 | スリープ | ポケモン | 超 | たね | 50 | ● | Drowzee<br>Team Rocket 54 | 再録: LC 73（文面が違う） |
 | 34 | わるいユンゲラー | ポケモン | 超 | 1進化 | 50 | ◆ | Dark Kadabra<br>Team Rocket 39 |  |
 | 35 | わるいフーディン | ポケモン | 超 | 2進化 | 60 | ★キラ | Dark Alakazam<br>Team Rocket 1・18 |  |
 | 36 | わるいヤドラン | ポケモン | 超 | 1進化 | 60 | ★キラ | Dark Slowbro<br>Team Rocket 12・29 | 再録: LC 8 |
@@ -59,19 +61,19 @@
 | 49 | イーブイ | ポケモン | 無色 | たね | 40 | ● | Eevee<br>Team Rocket 55 |  |
 | 50 | ポリゴン | ポケモン | 無色 | たね | 40 | ● | Porygon<br>Team Rocket 48 |  |
 | 51 | ミニリュウ | ポケモン | 無色 | たね | 40 | ● | Dratini<br>Team Rocket 53 |  |
-| 52 | わるいハクリュー | ポケモン | 無色 | 1進化 | 60 | ◆ | Dark Dragonair<br>Team Rocket 33 | 再録: LC 38 |
+| 52 | わるいハクリュー | ポケモン | 無色 | 1進化 | 60 | ◆ | Dark Dragonair<br>Team Rocket 33 | 再録: LC 38（文面が違う） |
 | 53 | わるいカイリュー | ポケモン | 無色 | 2進化 | 70 | ★キラ | Dark Dragonite<br>Team Rocket 5・22 | 再録: LC 5 |
 | 54 | ねむれ!ねむれ! | トレーナー（ロケット団秘密メカ） |  |  |  | ● | Sleep!<br>Team Rocket 79 | 「!」の後の空白の有無はデータにより異なる |
 | 55 | バトル場は穴だらけ! | トレーナー（ロケット団秘密メカ） |  |  |  | ● | Digger<br>Team Rocket 75 |  |
 | 56 | まきちらせ!ベトベトガス | トレーナー |  |  |  | ● | Goop Gas Attack<br>Team Rocket 78 | 日英の違い: ポケモンパワーを止める範囲<br>「!」の後の空白の有無はデータにより異なる |
 | 57 | 夜の廃品回収 | トレーナー（ロケット団秘密メカ） |  |  |  | ● | Nightly Garbage Run<br>Team Rocket 77 |  |
-| 58 | たたきつけろ!挑戦状 | トレーナー |  |  |  | ◆ | Challenge!<br>Team Rocket 74 | 「!」の後の空白の有無はデータにより異なる |
+| 58 | たたきつけろ!挑戦状 | トレーナー |  |  |  | ◆ | Challenge!<br>Team Rocket 74 | 「!」の後の空白の有無はデータにより異なる<br>再録: LC 106 |
 | 59 | にせオーキドの逆襲 | トレーナー |  |  |  | ◆ | Imposter Oak's Revenge<br>Team Rocket 76 |  |
-| 60 | ボスのやりかた | トレーナー |  |  |  | ◆ | The Boss's Way<br>Team Rocket 73 |  |
+| 60 | ボスのやりかた | トレーナー |  |  |  | ◆ | The Boss's Way<br>Team Rocket 73 | 再録: LC 105 |
 | 61 | ロケット団のおねーさん | トレーナー |  |  |  | ★キラ | Rocket's Sneak Attack<br>Team Rocket 16・72 | 日英の違い: サポーター扱いのエラッタ |
 | 62 | ロケット団参上! | トレーナー |  |  |  | 特殊 | Here Comes Team Rocket!<br>Team Rocket 15・71 |  |
-| 63 | きずぐすり配合エネルギー | 特殊エネルギー |  |  |  | ● | Potion Energy<br>Team Rocket 82 |  |
-| 64 | なんでもなおし配合エネルギー | 特殊エネルギー |  |  |  | ● | Full Heal Energy<br>Team Rocket 81 |  |
+| 63 | きずぐすり配合エネルギー | 特殊エネルギー |  |  |  | ● | Potion Energy<br>Team Rocket 82 | 再録: LC 101 |
+| 64 | なんでもなおし配合エネルギー | 特殊エネルギー |  |  |  | ● | Full Heal Energy<br>Team Rocket 81 | 再録: LC 100（文面が違う） |
 | 65 | レインボーエネルギー | 特殊エネルギー |  |  |  | ★キラ | Rainbow Energy<br>Team Rocket 17・80 |  |
 
 ## 英語版との対応メモ

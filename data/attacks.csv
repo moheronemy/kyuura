@@ -176,7 +176,7 @@ PMCG2-033,2,げきとつ,Ram,fighting fighting fighting fighting,4,50,,50,相手
 PMCG2-034,1,つつく,Peck,colorless,1,10,,10,,
 PMCG2-034,2,オウムがえし,Mirror Move,colorless colorless colorless,3,,,,前の相手の番に、このカードが受けたダメージと効果を【相手】に与える。「オウムがえし」の効果は1回で消える。,"If Spearow was attacked last turn, do the final result of that attack on Spearow to the Defending Pokémon."
 PMCG2-035,1,こもりうた,Lullaby,colorless,1,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
-PMCG2-035,2,こもりうた,Pound,colorless colorless,2,20,,20,,
+PMCG2-035,2,はたく,Pound,colorless colorless,2,20,,20,,
 PMCG2-036,1,ねこにこばん,Pay Day,colorless colorless,2,10,,10,コインを投げて「おもて」なら、自分の山札の上からカードを1枚ひいて、手札に加える。,"Flip a coin. If heads, draw a card."
 PMCG2-037,1,しっぽをふる,Tail Wag,colorless,1,,,,コインを投げて「おもて」なら「しっぽをふる」を受けた相手の対戦ポケモンは、次の相手の番にワザをつかえない。,"Flip a coin. If heads, the Defending Pokémon can't attack Eevee during your opponent's next turn. (Benching either Pokémon ends this effect.)"
 PMCG2-037,2,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージ追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."

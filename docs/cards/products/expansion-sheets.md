@@ -148,7 +148,7 @@ Bulbapedia [X43] によります。場所の名前はゲームの日本語名に
 
 | 番号 | カード名 | 種類 | タイプ | HP | レア | 英語版 | ほかの収録 |
 |---|---|---|---|---|---|---|---|
-| 001/036 | [フシギダネ](https://pcg-search.com/card/1st/1stex1001.php) | たね | 草 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 001/036 | [フシギダネ](https://pcg-search.com/card/1st/1stex1001.php) | たね | 草 | 50 | ◆ |  | クイックスターターギフト（1998-12-04）<br>イントロパック（フシギダネデッキ）（1999-07-30） |
 | 002/036 | [キャタピー](https://pcg-search.com/card/1st/1stex1002.php) | たね | 草 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
 | 003/036 | [トランセル](https://pcg-search.com/card/1st/1stex1003.php) | 1進化 | 草 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
 | 004/036 | [ビードル](https://pcg-search.com/card/1st/1stex1004.php) | たね | 草 | 50 | ● |  |  |
@@ -162,7 +162,7 @@ Bulbapedia [X43] によります。場所の名前はゲームの日本語名に
 | 012/036 | [カイロス](https://pcg-search.com/card/1st/1stex1012.php) | たね | 草 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
 | 013/036 | [ヒトカゲ](https://pcg-search.com/card/1st/1stex1013.php) | たね | 炎 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
 | 014/036 | [ギャロップ](https://pcg-search.com/card/1st/1stex1014.php) | 1進化 | 炎 | 60 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 015/036 | [ゼニガメ](https://pcg-search.com/card/1st/1stex1015.php) | たね | 水 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 015/036 | [ゼニガメ](https://pcg-search.com/card/1st/1stex1015.php) | たね | 水 | 50 | ◆ |  | クイックスターターギフト（1998-12-04）<br>イントロパック（ゼニガメデッキ）（1999-07-30） |
 | 016/036 | [ニョロモ](https://pcg-search.com/card/1st/1stex1016.php) | たね | 水 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
 | 017/036 | [ニョロゾ](https://pcg-search.com/card/1st/1stex1017.php) | 1進化 | 水 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
 | 018/036 | [ニョロボン](https://pcg-search.com/card/1st/1stex1018.php) | 2進化 | 水 | 80 | ◆ |  | クイックスターターギフト（1998-12-04） |
@@ -222,9 +222,9 @@ Bulbapedia [X43] によります。場所の名前はゲームの日本語名に
 | 031/036 | [オニドリル](https://pcg-search.com/card/1st/1stex2031.php) | 1進化 | 無 | 60 | ● |  |  |
 | 032/036 | [メタモン](https://pcg-search.com/card/1st/1stex2032.php) | たね | 無 | 40 | ◆ |  |  |
 | 033/036 | [エフェクトガード](https://pcg-search.com/card/1st/1stex2033.php) | トレーナー |  |  | ● |  |  |
-| 034/036 | [元気のかたまり](https://pcg-search.com/card/1st/1stex2034.php) | トレーナー |  |  | ● |  | ポケモンジム第3弾「グレンタウンジム カツラ」（1999-02-26） |
+| 034/036 | [元気のかたまり](https://pcg-search.com/card/1st/1stex2034.php) | トレーナー |  |  | ● | Gym Challenge 117（Max Revive） | ポケモンジム第3弾「グレンタウンジム カツラ」（1999-02-26） |
 | 035/036 | [フラッシュ](https://pcg-search.com/card/1st/1stex2035.php) | トレーナー |  |  | ◆ |  |  |
-| 036/036 | [マスターボール](https://pcg-search.com/card/1st/1stex2036.php) | トレーナー |  |  | ◆ |  | クイックスターターギフト（1998-12-04）<br>ポケモンジム第3弾「ヤマブキシティジム ナツメ」（1999-02-26） |
+| 036/036 | [マスターボール](https://pcg-search.com/card/1st/1stex2036.php) | トレーナー |  |  | ◆ | Gym Challenge 116（Master Ball） | クイックスターターギフト（1998-12-04）<br>ポケモンジム第3弾「ヤマブキシティジム ナツメ」（1999-02-26）<br>イントロパック★neo（チコリータデッキ）（2001-04-06）<br>イントロパック★neo（ワニノコデッキ）（2001-04-06） |
 
 ## カードリスト: 拡張シート 第3弾（緑版）
 
@@ -278,8 +278,8 @@ Bulbapedia [X43] によります。場所の名前はゲームの日本語名に
 | -/- | [ハナダ!さいごのどうくつ](https://pcg-search.com/card/1st/1stex3046.php) | デッキ |  |  |  |  |  |
 | -/- | [オーヤマのピカチュウ](https://pcg-search.com/card/1st/1stex3047.php) | たね | 雷 | 50 |  |  |  |
 | -/- | [イマクニ?のわるだくみ](https://pcg-search.com/card/1st/1stex3048.php) | その他 |  |  |  |  |  |
-| -/- | [-](https://pcg-search.com/card/1st/1stex3049.php) | その他 |  |  |  |  | 拡張シート 第3弾（緑版）（1998-11-24） |
-| -/- | [-](https://pcg-search.com/card/1st/1stex3050.php) | その他 |  |  |  |  | 拡張シート 第3弾（緑版）（1998-11-24） |
-| -/- | [-](https://pcg-search.com/card/1st/1stex3051.php) | その他 |  |  |  |  | 拡張シート 第3弾（緑版）（1998-11-24） |
+| -/- | [-](https://pcg-search.com/card/1st/1stex3049.php) | その他 |  |  |  |  |  |
+| -/- | [-](https://pcg-search.com/card/1st/1stex3050.php) | その他 |  |  |  |  |  |
+| -/- | [-](https://pcg-search.com/card/1st/1stex3051.php) | その他 |  |  |  |  |  |
 | -/- | [イマクニ?のパソコン](https://pcg-search.com/card/1st/1stex3052.php) | PASS CARD |  |  |  |  |  |
 | -/- | [マサキのパソコン](https://pcg-search.com/card/1st/1stex3053.php) | PASS CARD |  |  |  |  |  |

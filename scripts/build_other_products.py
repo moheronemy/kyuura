@@ -2,15 +2,18 @@
 """拡張パック以外の旧裏の商品のページを生成する。
 
 対象: 拡張シート第1〜3弾、映画公開記念パック「サザンアイランド」、ポケモンジムの構築済みデッキ 6 種、
-クイックスターターギフト、neo プレミアムファイル 1〜3、プロモーションカード。
+クイックスターターギフト、イントロパック・イントロパック★neo、neo プレミアムファイル 1〜3、プロモーションカード。
+あわせて、商品をまたいだ同じカード（再録）の判定のしかたと点検の結果のページ（docs/cards/reprints.md）を作る。
 
 入力: data/ja_text_pcgsearch.json（pcg-search.com から抽出）、data/ja_text_nazonobasho.json（サザンアイランドのレベル・備考）、
       data/cards.json（拡張パックと同じカードかの判定）、data/curation/other_products.json（発売日・構成・英語版の対応・日英の違い）、
       data/curation/sets.json（拡張パックの発売日）
-出力: docs/cards/other-products.md（一覧）と docs/cards/products/*.md（商品ごと）
+      data/curation/en_fixes.json（英語版データの補正。再録の点検のページに載せる）
+出力: docs/cards/other-products.md（一覧）、docs/cards/products/*.md（商品ごと）、docs/cards/reprints.md（再録の対応付け）
 
 使い方: python3 scripts/build_other_products.py
 """
+import difflib
 import json
 import re
 import unicodedata
@@ -31,6 +34,7 @@ PAGES = [
     ('southern-islands', '映画公開記念パック「サザンアイランド」', 'southern_islands'),
     ('gym-decks', 'ポケモンジム（構築済みデッキ）', 'gym_deck'),
     ('quick-starter-gift', 'クイックスターターギフト', 'quick_starter_gift'),
+    ('intro-packs', 'イントロパック・イントロパック★neo', 'intro_pack'),
     ('premium-files', 'neo プレミアムファイル', 'premium_file'),
     ('promos', 'プロモーションカード', 'promo'),
 ]
@@ -100,8 +104,10 @@ class Catalog:
             date = f'{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}'
             label = f"{sets[r['jp_set']]['label']} {sets[r['jp_set']]['ja']}"
             self.groups.setdefault(sig_record(r), []).append({'date': date, 'product': label, 'record': r})
+        self.key_of = {}
         for key, cards in self.data.items():
             for c in cards:
+                self.key_of[id(c)] = key
                 label = 'プロモ' if (self.products.get(key) or {}).get('group') == 'promo' else self.short_name(key)
                 self.groups.setdefault(sig_pcg(c), []).append(
                     {'date': self.date_of(key, c), 'product': label, 'card': c, 'key': key})
@@ -129,12 +135,29 @@ class Catalog:
         r = self.pack_record(c)
         if r and r['en_print']:
             return f"{r['en_print']['set_name']} {r['en_print']['numbers'][0]}（{r['name']['en']}）"
+        for g in sorted(self.same(c), key=lambda g: g['date'] or '9999'):  # 同じカードのほかの商品の版
+            e = 'card' in g and self.cur['en_prints'].get(page_id(g['card']))
+            if e:
+                return en_ref(e)
         return ''
 
-    def appears(self, c):
-        """同じカードの、ほかの商品での収録（発売日順）。"""
+    def products_of(self, sig):
+        """同じカードが入っている商品（発売日順、重複なし）。"""
         seen, out = set(), []
+        for g in sorted(self.groups.get(sig, []), key=lambda g: g['date'] or '9999'):
+            if g['product'] not in seen:
+                seen.add(g['product'])
+                out.append((g['date'], g['product']))
+        return out
+
+    def appears(self, c):
+        """同じカードの、ほかの商品での収録（発売日順）。同じデッキの中の同じカードは除く（プロモは配布ごとに別なので残す）。"""
+        seen, out = set(), []
+        key = self.key_of.get(id(c))
+        promo = (self.products.get(key) or {}).get('group') == 'promo'
         for g in sorted(self.same(c), key=lambda g: g['date'] or '9999'):
+            if g.get('key') == key and not promo:
+                continue
             label = g['product'] + (f"（{g['date']}）" if g['date'] else '')
             if label not in seen:
                 seen.add(label)
@@ -224,12 +247,12 @@ def diff_rows(cat, cards):
     return rows
 
 
-def header(title, depth=1):
+def header(title, depth=1, numbers='「番号」は pcg-search の並び順で、カードに印刷された番号ではありません。'):
     up = '../' * depth
     return [f'# {title}', '', GENERATED, '',
             f'[拡張パック以外の商品の一覧](../other-products.md) ／ 出典の記号: [出典と確認状況]({up}../sources.md)', '',
             '- カードの欄（名前・HP・ワザなど）は、ポケモンカード 旧シリーズ検索（pcg-search.com）[N3] の転記です。カード名から各カードのページにリンクしています。',
-            '- 「番号」は pcg-search の並び順で、カードに印刷された番号ではありません。',
+            f'- {numbers}',
             '- 「ほかの収録」は、名前（ポケモンは HP・特殊能力名・ワザ名も）が同じカードが入っているほかの商品です（拡張パック 10 弾と、このページ群の商品）。', '']
 
 
@@ -448,6 +471,70 @@ def page_quick_starter_gift(cat):
     return L
 
 
+# ---- イントロパック -------------------------------------------------------
+
+BASIC_ENERGY = {f'{t}エネルギー' for t in '草炎水雷超闘'}
+
+
+def is_basic_energy(c):
+    return c['name'] in BASIC_ENERGY and not c.get('hp')
+
+
+def bulba_cell(cat, c):
+    b = cat.cur.get('intro_packs', {}).get('bulbapedia', {}).get(page_id(c))
+    if not b:
+        return ''
+    return f"同じカード: {b['same_as']}" if b['same_as'] else 'このパックのカード'
+
+
+def page_intro_packs(cat):
+    keys = keys_of(cat, 'intro_pack')
+    L = header('イントロパック・イントロパック★neo',
+               numbers='「番号」は pcg-search の並び順です。デッキのカードでは、カードに印刷された丸数字と一致します（キラカードと拡張カードには印刷された番号がない）。') + [
+        '## 概要', '',
+        '### イントロパック（1999-07-30）', '',
+        '- 初めて遊ぶ人向けのセットで、フシギダネデッキとゼニガメデッキ（各 40 枚）、キラカードのフシギバナとカメックス、'
+        '遊びかたのビデオ（VHS。タレントのセイン・カミュが案内役）、ルールブック、ダメージカウンター 30 個、どくマーカー 2 個、コイン、プレイマットが入っていました [X49]。**確実**',
+        '- デッキのカードには丸で囲んだ番号があり（フシギダネデッキは黒丸に白字、ゼニガメデッキは白丸に黒字）、pcg-search の並びの番号と一致します。キラカードの 2 枚には番号がありません [X49]。**確実**',
+        '- 多くは拡張パック第1弾・拡張シートのカードの再録です。neo 第1弾（2000年）の「マサキの転送装置」「スーパーポケモン回収」が先に入っており、このパックで初めて出たカード（新しいイラスト）もあります [X49]。**確実**',
+        '- レアリティマークはありません [X49]。**確実**', '',
+        '### イントロパック★neo（2001-04-06）', '',
+        '- チコリータデッキとワニノコデッキ（各 30 枚）と、それぞれに加えて遊ぶ「拡張カード」10 枚のセットです。ビデオはなく、ルールブック、ダメージカウンター、状態を表すマーカー、コイン、プレイマットが入っていました [X50]。**確実**',
+        '- 30 枚のデッキのカードには丸で囲んだ番号（チコリータデッキは白丸に黒字、ワニノコデッキは黒丸に白字）があり、拡張カードには番号がありません [X50]。**確実**',
+        '- 拡張パック第1弾と neo 第1〜3弾などのカードの再録に、このパックで初めて出たカードが加わっています [X50]。**確実**', '',
+        '### 英語版', '',
+        '- このパックだけのカード（新しいイラストのカード）は、英語版にはなっていません（Bulbapedia で英語版のないカードとされている）[X49][X50]。**確実**',
+        '- イントロパックで neo 第1弾より先に出た「マサキの転送装置」「スーパーポケモン回収」は、英語版では Neo Genesis に入りました [X49]。**確実**',
+        '- 再録のカードの「英語版」の欄は、元のカードの英語版です。', '',
+        '| 商品 | 発売日 | 枚数 | 基本エネルギー以外 | このパックで初めて出たカード（種類） |', '|---|---|---|---|---|']
+    for k in keys:
+        cards = cat.data[k]
+        named = [c for c in cards if not is_basic_energy(c)]
+        new = len({sig_pcg(c) for c in named if cat.first(c, k)})  # 同じデッキの中の同じカードは 1 つと数える
+        L.append(f"| {cat.short_name(k)} | {cat.products[k]['release_date']} | {len(cards)} | {len(named)} | {new} |")
+    L += ['', '- 発売日・内容・デッキリストは Bulbapedia [X49][X50] によります。カードの欄は pcg-search [N3]。',
+          '- 「Bulbapedia」の欄は、Bulbapedia のカードのページが別のカードのページに転送されるか（同じカードとして扱われているか）です。'
+          'この欄と「ほかの収録」（名前・HP・ワザ名による判定）は、全カードで食い違いがありません（[再録カードの対応付け](../reprints.md)）。', '']
+    for k in keys:
+        cards = cat.data[k]
+        L += [f"## {cat.short_name(k)}", '',
+              '| 番号 | カード名 | 種類 | タイプ | HP | 英語版 | ほかの収録 | Bulbapedia |', '|---|---|---|---|---|---|---|---|']
+        for c in cards:
+            if is_basic_energy(c):
+                continue
+            L.append('| {} | [{}]({}) | {} | {} | {} | {} | {} | {} |'.format(
+                c['list_number'], md(c['name']), c['url'], kind_short(c), c.get('type') or '', c.get('hp') or '',
+                cat.en(c), '<br>'.join(cat.appears(c)), bulba_cell(cat, c)))
+        energy = {}
+        for c in cards:
+            if is_basic_energy(c):
+                energy.setdefault(c['name'], []).append(str(int(c['list_number'].split('/')[0])))
+        if energy:
+            L += ['', '基本エネルギー: ' + '、'.join(f"{n} {len(v)} 枚（{'・'.join(v)}）" for n, v in energy.items())]
+        L.append('')
+    return L
+
+
 # ---- プレミアムファイル -----------------------------------------------------
 
 def page_premium_files(cat):
@@ -502,10 +589,290 @@ def page_promos(cat):
             dist = md((info.get('distribution') or '').replace('\n', ' ') or dist_ja(info.get('distribution_en')))
             if info.get('date'):
                 dist = f"{info['date']} {dist}"
+            if info.get('note'):
+                dist += f"<br>（{md(info['note'])}）"
             L.append('| {} | [{}]({}) | {} | {} | {} | {} | {} |'.format(
                 c['list_number'], md(c['name']), c['url'], kind_short(c), c.get('hp') or '', dist, cat.en(c),
                 '<br>'.join(cat.appears(c))))
         L.append('')
+    return L
+
+
+# ---- 再録の対応付け ---------------------------------------------------------
+
+TYPE_SYM = {'grass': '草', 'fire': '炎', 'water': '水', 'lightning': '雷', 'psychic': '超', 'fighting': '闘',
+            'colorless': '無', 'darkness': '悪', 'metal': '鋼'}
+REPRINT_KIND_JA = {'meaning': '意味が変わる', 'clarify': '補足・対象の明記', 'wording': '書き方だけ'}
+REPRINT_DIFF_JA = {'cost': 'コスト', 'damage': 'ダメージ', 'text': '文面', 'weakness': '弱点', 'resistance': '抵抗力',
+                   'retreat': 'にげる'}
+EN_ABBR = {'base1': 'BS', 'base2': 'JU', 'base3': 'FO', 'base4': 'BS2', 'base5': 'TR', 'gym1': 'G1', 'gym2': 'G2',
+           'neo1': 'N1', 'neo2': 'N2', 'neo3': 'N3', 'neo4': 'N4', 'base6': 'LC', 'si1': 'SI', 'basep': 'Promo'}
+# Bulbapedia のカードのページ名の括弧内 → 英語版のセット id、または pcg-search の商品
+BULBA_EN = {'Base Set': 'base1', 'Jungle': 'base2', 'Fossil': 'base3', 'Team Rocket': 'base5', 'Gym Heroes': 'gym1',
+            'Gym Challenge': 'gym2', 'Neo Genesis': 'neo1', 'Neo Discovery': 'neo2', 'Neo Revelation': 'neo3',
+            'Neo Destiny': 'neo4', 'Wizards Promo': 'basep', 'Southern Islands': 'si1', 'Legendary Collection': 'base6'}
+BULBA_JP = {'Vending S1': '拡張シート 第1弾(青版)', 'Vending S2': '拡張シート 第2弾(赤版)', 'Vending S3': '拡張シート 第3弾(緑版)',
+            'Bulbasaur Deck': 'イントロパック(フシギダネデッキ)', 'Squirtle Deck': 'イントロパック(ゼニガメデッキ)',
+            'Chikorita Half Deck': 'イントロパック★neo(チコリータデッキ)', 'Totodile Half Deck': 'イントロパック★neo(ワニノコデッキ)'}
+
+
+def member_label(g):
+    return f"{g['product']}（{g['record']['id']}）" if 'record' in g else f"{g['product']}（{page_id(g['card'])}）"
+
+
+def numbers_of(g):
+    """同じカードの組の中で比べる数値の欄（タイプ・弱点・抵抗力・にげる・ワザのコストとダメージ）。"""
+    if 'record' in g:
+        p = g['record']['pokemon']
+        if not p:
+            return None
+        wr = lambda xs: ''.join(f"{TYPE_SYM[x['type']]}{x['operator']}{x['value']}" for x in xs) or None
+        return {'タイプ': ''.join(TYPE_SYM[t] for t in p['types']), '弱点': wr(p['weaknesses']),
+                '抵抗力': wr(p['resistances']), 'にげる': p['retreat_cost'] or 0,
+                'ワザ': [(''.join(sorted(TYPE_SYM[x] for x in a['cost'])), (a['damage'] or {}).get('display') or '')
+                        for a in p['attacks']]}
+    c = g['card']
+    if not c.get('hp'):
+        return None
+    return {'タイプ': c['type'], '弱点': c['weakness'], '抵抗力': c['resistance'], 'にげる': len(c['retreat'] or ''),
+            'ワザ': [(''.join(sorted(a['cost'])), a['damage'] or '') for a in c['attacks']]}
+
+
+def texts_of(g):
+    """効果文の並び（ポケモンは特殊能力・ワザの順、ほかは本文）。pcg-search は本文が 2 つの欄に分かれていることがあるのでつなぐ。"""
+    if 'record' in g:
+        r = g['record']
+        p = r['pokemon']
+        if p:
+            return [x['text']['ja'] for x in p['powers']] + [a['text']['ja'] for a in p['attacks']]
+        return [((r['trainer'] or r['energy'] or {}).get('text') or {}).get('ja')]
+    c = g['card']
+    if c.get('hp'):
+        return [x['text'] for x in c['powers']] + [a['text'] for a in c['attacks']]
+    return ['\n'.join(x for x in (c['text'], c['note']) if x) or None]
+
+
+def plain_ja(s):
+    s = unicodedata.normalize('NFKC', s or '')
+    return re.sub(r'[\s。、・「」『』()（）,.!?\[\]【】]', '', s)
+
+
+def text_differs(a, b):
+    """書き方の違いがあるか（転記の小さな揺れは無視するため、似ている度合い 0.9 未満を違いとする）。"""
+    return any(x and y and difflib.SequenceMatcher(None, plain_ja(x), plain_ja(y)).ratio() < 0.9
+               for x, y in zip(texts_of(a), texts_of(b)))
+
+
+def texts_similar(a, b):
+    """効果文がおおむね同じか（両方ないものは同じとみなす）。"""
+    return all((not x and not y) or (x and y and difflib.SequenceMatcher(None, plain_ja(x), plain_ja(y)).ratio() >= 0.9)
+               for x, y in zip(texts_of(a), texts_of(b)))
+
+
+def basic_energy_group(members):
+    g = members[0]
+    if 'record' in g:
+        return bool(g['record']['energy']) and g['record']['energy']['kind'] == 'basic'
+    return is_basic_energy(g['card'])
+
+
+def reprint_groups(cat):
+    """2 つ以上の商品に入っている同じカード（基本エネルギーを除く）。最初の収録の日付順。"""
+    out = []
+    for sig, members in cat.groups.items():
+        if len(cat.products_of(sig)) < 2 or basic_energy_group(members):
+            continue
+        out.append((sig, sorted(members, key=lambda g: g['date'] or '9999')))
+    return sorted(out, key=lambda x: (x[1][0]['date'] or '9999', x[0][0]))
+
+
+def en_ids_of(cat, members):
+    have = set()
+    for g in members:
+        if 'record' in g:
+            r = g['record']
+            if r['en_print']:
+                have |= {(r['en_print']['set_id'], n) for n in r['en_print']['numbers']}
+                have |= {(x['set_id'], x['number']) for x in r['en_reprints']}
+        else:
+            e = cat.cur['en_prints'].get(page_id(g['card']))
+            if e:
+                have.add((e['set_id'], e['number']))
+    return have
+
+
+def bulba_check(cat):
+    """イントロパックのカードの、Bulbapedia のページの転送先と、名前・HP・ワザ名による判定を比べる。"""
+    bp = cat.cur.get('intro_packs', {}).get('bulbapedia', {})
+    pages = {page_id(c): (k, c) for k in cat.data for c in cat.data[k]}
+    intro = set(keys_of(cat, 'intro_pack'))
+    bad = []
+    for pid, b in bp.items():
+        k, c = pages[pid]
+        same, t = cat.same(c), b['same_as']
+        if t is None:  # Bulbapedia ではこのパックのカード → 先に出たほかの商品の同じカードがないこと
+            mine = cat.date_of(k, c) or ''
+            ok = not [g for g in same if g.get('key') not in intro and (g['date'] or '') < mine]
+        else:
+            inside = re.search(r'\(([^()]*)\)$', t).group(1)
+            setname, num = inside.rsplit(' ', 1)
+            if inside in BULBA_JP:
+                ok = any(g.get('key') == BULBA_JP[inside] for g in same)
+            elif setname in BULBA_JP:
+                ok = any(g.get('key') == BULBA_JP[setname] and int(g['card']['list_number'].split('/')[0]) == int(num)
+                         for g in same)
+            else:
+                ok = (BULBA_EN[setname], num) in en_ids_of(cat, same)
+        if not ok:
+            bad.append((k, c, t))
+    return len(bp), bad
+
+
+def page_reprints(cat):
+    groups = reprint_groups(cat)
+    L = ['# 再録カードの対応付け', '', GENERATED.replace('data/ja_text_pcgsearch.json と data/curation/other_products.json',
+                                                     'data/cards.json・data/ja_text_pcgsearch.json・data/curation/'), '',
+         '出典の記号: [出典と確認状況](../sources.md)', '',
+         '旧裏期には、同じカードが別の商品に何度も入りました（拡張パックのカードがジムデッキ・クイックスターターギフト・イントロパックに、'
+         'プロモのカードが拡張パックに、など）。英語版でも Base Set 2・Legendary Collection などに再録があります。'
+         'このページは、このリポジトリで「同じカード」をどう判定しているかと、その判定を点検した結果です。', '',
+         '## 判定のしかた', '',
+         '### 日本版（商品をまたいだ同じカード）', '',
+         '- 拡張パック 10 弾のカード（`data/cards.json`）と、拡張パック以外の商品のカード（`data/ja_text_pcgsearch.json`）を通して、'
+         '次が同じものを同じカードとしています（`scripts/build_other_products.py`）。',
+         '  - ポケモン: カード名・HP・特殊能力（ポケモンパワー）の名前・ワザの名前の並び',
+         '  - トレーナー・エネルギー: カード名',
+         '- 名前は Unicode の NFKC で正規化し、空白・中黒・括弧などを除いて比べます。サイトの表記の揺れ（ウィンディ／ウインディ）は直してから比べます。',
+         '- レベル・イラスト・レアリティマーク・文面の書き方は比べていません。旧裏期の再録では、これらが変わることがあるためです'
+         '（例: ナツメのケーシィはジムデッキとプロモでイラストとレベルが違うが、Bulbapedia でも同じカードとして扱われている [X51]）。',
+         '- 商品のページの「ほかの収録」と「英語版」の欄（同じカードのほかの版の英語版）は、この判定によります。'
+         'イラストの違う版が英語版でも別々に出ているもの（ナツメのケーシィ: Gym Challenge 93 と Wizards Black Star Promos 19）は、イラストの合うほうに対応付けています。', '',
+         '### 英語版（別のセットへの再録）', '',
+         '- `scripts/build_cardlist.py` が、英語版のデータ（pokemon-tcg-data）の中で、次が同じカードを別のセットへの再録としています（`data/cards.json` の `en_reprints`）。',
+         '  - ポケモン: 英語名・HP・ワザ名の並び・ポケモンパワー名',
+         '  - トレーナー・特殊エネルギー: 英語名（基本エネルギーは除く）',
+         '- 再録のうち、英語版データの上でコスト・ダメージ・文面・弱点・抵抗力・にげるが元のカードと違うものは `differences` に記録し、'
+         '各弾のページの備考に「（文面が違う）」などと書いています。', '']
+
+    # ---- 点検: 日本版
+    num_bad = []
+    for sig, members in groups:
+        base = next((g for g in members if numbers_of(g)), None)
+        if not base:
+            continue
+        nb = numbers_of(base)
+        for g in members:
+            n = numbers_of(g)
+            if g is base or not n:
+                continue
+            for f in ('タイプ', '弱点', '抵抗力', 'にげる'):
+                if nb[f] != n[f]:
+                    num_bad.append((sig[0], member_label(base), member_label(g), f, nb[f], n[f]))
+            for i, (a, b) in enumerate(zip(nb['ワザ'], n['ワザ'])):
+                if a != b:
+                    num_bad.append((sig[0], member_label(base), member_label(g), f'{i + 1} つめのワザ', ' '.join(a), ' '.join(b)))
+    checked, bulba_bad = bulba_check(cat)
+    by_name = {}
+    for sig in cat.groups:
+        if len(sig) == 4:
+            by_name.setdefault((sig[0], sig[1]), []).append(sig)
+    near = [(a, b) for sigs in by_name.values() for i, a in enumerate(sigs) for b in sigs[i + 1:]]
+    near_same_numbers = [(a, b) for a, b in near if len(a[2]) == len(b[2]) and len(a[3]) == len(b[3])
+                         and numbers_of(cat.groups[a][0]) and numbers_of(cat.groups[a][0])['ワザ'] == numbers_of(cat.groups[b][0])['ワザ']]
+    suspicious = [(a, b) for a, b in near_same_numbers if texts_similar(cat.groups[a][0], cat.groups[b][0])]
+    n_cards = sum(len(m) for _, m in groups)
+    L += ['## 点検の結果', '',
+          '### 日本版', '',
+          f'- 2 つ以上の商品に入っている同じカードは {len(groups)} 組（{n_cards} 枚。基本エネルギーを除く）です。一覧はこのページの最後にあります。',
+          f'- **数値の照合**: 同じカードとした組の中で、タイプ・弱点・抵抗力・にげる・ワザのコストとダメージを比べました。食い違いは {len(num_bad)} 件です。']
+    notes = cat.cur.get('reprint_checks', {})
+    for name, a, b, f, x, y in num_bad:
+        L.append(f'  - {name}: {a} と {b} で{f}が「{x}」と「{y}」。{notes.get(name, "（未確認）")}')
+    L += [f'- **Bulbapedia との照合**: イントロパック・イントロパック★neo の {checked} 枚（基本エネルギーを除く）について、'
+          'Bulbapedia のカードのページが別のカードのページに転送されるか（同じカードとして扱われているか）[X49][X50] と、この判定を比べました。'
+          f'食い違いは {len(bulba_bad)} 件です。']
+    for k, c, t in bulba_bad:
+        L.append(f"  - {cat.short_name(k)} の {c['name']}（Bulbapedia: {t or 'このパックのカード'}）")
+    L += [f'- **名前と HP が同じでワザが違うもの**は、別のカードとして扱っています（{len(near)} 組。例: そらをとぶピカチュウの LV.12（でんきショック）と LV.11（でんげき））。'
+          f'このうち、ワザのコストとダメージまで同じで、特殊能力名・ワザ名だけが違う組は {len(near_same_numbers)} 組あり、'
+          f'効果文まで同じ組（転記の誤りの疑いがあるもの）は {len(suspicious)} 組です。']
+    for a, b in near_same_numbers:
+        mark = '（効果文も同じ。要確認）' if (a, b) in suspicious else '（効果文が違う別のカード）'
+        L.append(f"  - {a[0]} HP{a[1]}: {'・'.join(a[2] + a[3])} ／ {'・'.join(b[2] + b[3])}{mark}")
+    L += ['',
+          '### 点検で見つけて直したこと', '',
+          '- 拡張パック「ポケモンジャングル」のプリン（PMCG2-035）は、なぞのばしょの転記で 2 つめのワザ名が「こもりうた」になっていました（正しくは「はたく」）。'
+          'このため、イントロパック（ゼニガメデッキ）に再録された同じカードと別のカードと判定されていました。'
+          'Bulbapedia との照合で見つかり、`data/curation/ja_text.json` で直しました [N3][X49]。**確実**',
+          '- 全日空（ANA）のキャンペーンのそらをとぶピカチュウ 2 枚の配布時期を取り違えていました。'
+          '1998 年（カイリューとの 2 枚組）は 1997 年のコロコロコミックの付録と同じ LV.12・でんきショックのカード、'
+          '1999 年（フリーザーとの 2 枚組）は LV.11・でんげきの別のカードです（Bulbapedia の個別のページ [X51] と、pcg-search のカードの画像で確認）。'
+          'pcg-search の並びでは LV.11 の版が 1998 年のカイリューの隣にあります。**確実**',
+          '- 再録の文面を比べた結果、拡張パック第1弾の「エネルギー回収」は、日本版が「2枚の好きなエネルギーカード」で、英語版（basic Energy cards）と違うことがわかりました'
+          '（のちの再録で「基本エネルギーカード」に改められた）。[日英の違い](card-differences.md) に加えました。'
+          '1997 年のプロモの「超エネルギー回収」も同じです（[プロモーションカード](products/promos.md)）。**確実**',
+          '- 英語版: トレーナー・特殊エネルギーの別のセットへの再録を記録していなかったので、加えました。',
+          '- 英語版: 英語版データの誤記のため、Legendary Collection への再録と判定できていなかったカードがありました。`data/curation/en_fixes.json` で直しています。']
+    fixes = load('data/curation/en_fixes.json')
+    for cid, fx in fixes.items():
+        if cid.split('-')[0] in ('base4', 'base6', 'basep'):
+            L.append(f"  - {cid}: {fx['reason']}")
+    L.append('')
+
+    # ---- 日本版の文面の改訂
+    rt = cat.cur.get('reprint_text', {})
+    rows = []
+    for sig, members in groups:
+        base = next((g for g in members if any(texts_of(g))), None)
+        if not base:
+            continue
+        diff = []
+        for g in members:
+            if g is not base and text_differs(base, g) and g['product'] not in diff:
+                diff.append(g['product'])
+        if diff:
+            note = rt.get(f'{sig[0]}/{sig[1]}' if len(sig) == 4 else sig[0]) or rt.get(sig[0], {})
+            rows.append(f"| {md(sig[0])} | {base['product']}（{base['date']}） | {'<br>'.join(diff)} | "
+                        f"{md(note.get('summary', ''))} | {REPRINT_KIND_JA.get(note.get('kind'), '未分類')} |")
+    L += ['### 日本版の文面の書き換え', '',
+          '同じカードでも、のちの商品の再録では文面が書き換えられていることがあります（1998年のジムデッキのころから、'
+          '「あなたの」「〜してよい」「トラッシュする」などの書き方にそろえられた）。最初の収録と文面が違う再録を挙げます'
+          '（転記の小さな揺れを除くため、文字列がおおむね同じものは除いています）。'
+          '多くは書き方だけの違いですが、意味が変わるものもあります。文面は、拡張パックはなぞのばしょ・ポケモンWiki、ほかの商品は pcg-search の転記によります。', '',
+          '| カード | 最初の収録 | 文面が違う収録 | 違い | 区分 |', '|---|---|---|---|---|'] + rows + ['']
+
+    # ---- 英語版
+    recs = cat.records
+    n_pk = sum(1 for r in recs if r['category'] == 'pokemon' and r['en_reprints'])
+    n_tr = sum(1 for r in recs if r['category'] != 'pokemon' and r['en_reprints'])
+    diff_rows_en = []
+    for r in recs:
+        for x in r['en_reprints']:
+            if x.get('differences'):
+                diff_rows_en.append(f"| {r['id']} {md(r['name']['ja'] or '')} | {r['en_print']['set_name']} {r['en_print']['numbers'][0]}（{md(r['name']['en'])}） | "
+                                    f"{x['set_name']} {x['number']} | {'・'.join(REPRINT_DIFF_JA[d] for d in x['differences'])} |")
+    L += ['### 英語版', '',
+          f'- 別のセットへの再録があるのは、ポケモン {n_pk} 枚、トレーナー・特殊エネルギー {n_tr} 枚です（日本版の拡張パック 10 弾のカードのうち）。',
+          f'- そのうち、英語版データの上で元のカードと欄が違う再録は {len(diff_rows_en)} 件です。ほとんどは文面の書き換え（Base Set 2 の「You can\'t add more than 20 damage in this way」、'
+          'Legendary Collection の「or this attack does nothing」など、書き方の統一）で、意味が変わるものは少数です'
+          '（例: Legendary Collection のサイホーンのにらみつけるは「Rhyhorn を攻撃できない」が「攻撃できない」に）。', '',
+          '| 日本版 | 英語版（元のカード） | 再録 | 違う欄 |', '|---|---|---|---|'] + diff_rows_en + ['']
+
+    # ---- 一覧
+    L += ['## 同じカードの一覧', '',
+          '2 つ以上の商品に入っている同じカード（基本エネルギーを除く）を、最初の収録の日付順に並べます。', '',
+          '| カード | HP | 収録（発売日順） | 英語版 |', '|---|---|---|---|']
+    for sig, members in groups:
+        prods = cat.products_of(sig)
+        first = next((g['card'] for g in members if 'card' in g), None)
+        en = cat.en(first) if first else ''
+        if not en:
+            r = next((g['record'] for g in members if 'record' in g), None)
+            en = f"{r['en_print']['set_name']} {r['en_print']['numbers'][0]}（{r['name']['en']}）" if r and r['en_print'] else ''
+        hp = str(sig[1]) if len(sig) == 4 else ''
+        L.append(f"| {md(members[0]['record']['name']['ja'] if 'record' in members[0] else members[0]['card']['name'])} | {hp} | "
+                 f"{'<br>'.join(f'{p}（{d}）' if d else p for d, p in prods)} | {md(en)} |")
+    L.append('')
     return L
 
 
@@ -524,6 +891,7 @@ def page_index(cat):
         'southern_islands': ('1999-07-17', 'Southern Islands（2001）の 18 枚'),
         'gym_deck': ('1998-04〜1999-02', 'デッキにしかなかったカードは Gym Heroes・Gym Challenge へ'),
         'quick_starter_gift': ('1998-12-04', '再録だけ'),
+        'intro_pack': ('1999-07-30・2001-04-06', 'このパックだけのカードは英語版なし'),
         'premium_file': ('1999-12〜2000-11', 'Neo Genesis・Discovery・Revelation へ'),
         'promo': ('1996〜2001', '一部が Wizards Black Star Promos など'),
     }
@@ -535,7 +903,8 @@ def page_index(cat):
         date, en = rows[group]
         kinds = '旧裏期・neo 期' if group == 'promo' else f'{len(keys)} 種'
         L.append(f"| {title}（{kinds}）| {date} | {n_cards} 種 | {en} | [{slug}.md](products/{slug}.md) |")
-    L += ['', '英語版にあって日本の拡張パックにないカードの、日本での初出は [英語版のみに見られるカード](english-only.md) にあります。', '',
+    L += ['', '英語版にあって日本の拡張パックにないカードの、日本での初出は [英語版のみに見られるカード](english-only.md) にあります。',
+          '商品をまたいだ同じカード（再録）の判定のしかたと点検の結果は [再録カードの対応付け](reprints.md) にあります。', '',
           '## まだ確認できていないこと', '',
           '- 拡張シートの自動販売機の種類（バンダイの「ジャンボカードダス」とする情報があるが未確認）',
           '- 青版の「化石の発掘」「月の石」のレアリティマークの有無（pcg-search と Bulbapedia で食い違い）',
@@ -552,11 +921,12 @@ def main():
     (OUT / 'products').mkdir(exist_ok=True)
     builders = {'expansion-sheets': page_expansion_sheets, 'southern-islands': page_southern_islands,
                 'gym-decks': page_gym_decks, 'quick-starter-gift': page_quick_starter_gift,
-                'premium-files': page_premium_files, 'promos': page_promos}
+                'intro-packs': page_intro_packs, 'premium-files': page_premium_files, 'promos': page_promos}
     for slug, title, group in PAGES:
         if keys_of(cat, group):
             (OUT / 'products' / f'{slug}.md').write_text('\n'.join(builders[slug](cat)), encoding='utf-8')
     (OUT / 'other-products.md').write_text('\n'.join(page_index(cat)), encoding='utf-8')
+    (OUT / 'reprints.md').write_text('\n'.join(page_reprints(cat)), encoding='utf-8')
     print(sum(len(v) for v in cat.data.values()), 'cards')
 
 
