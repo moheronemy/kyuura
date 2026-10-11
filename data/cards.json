@@ -42638,7 +42638,19 @@
    },
    "trainer": null,
    "energy": null,
-   "jp_en_differences": [],
+   "jp_en_differences": [
+    {
+     "kind": "wording",
+     "summary": "はたく（Pound）のダメージが 30 になる条件を書いている場所",
+     "ja": "条件ははたくの効果文に「このカードに『きょだいか』の効果がはたらいているとき、このワザのダメージは『30』になる。」と書かれ、きょだいかの効果文は最大HPのことだけ",
+     "en": "Pound には効果文がなく、条件は Giant Growth の効果文に「Koga's Ditto's Pound attack's base damage is 30 instead of 10」とまとめて書かれている。効果は日本版と同じ",
+     "confidence": "有力",
+     "sources": [
+      "N2",
+      "X38"
+     ]
+    }
+   ],
    "notes": [],
    "source_ids": {
     "tcgdex": "PMCG6-072",
@@ -57090,7 +57102,7 @@
       "damage": null,
       "text": {
        "ja": "相手の場のポケモンを1匹選び、そのポケモンに、「弱点・抵抗力・特殊能力・その他の効果」に関係なく、30ダメージ。",
-       "en": null
+       "en": "Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers or any other effects on the Defending Pokémon."
       }
      }
     ]

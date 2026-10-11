@@ -91,6 +91,7 @@
 | X35 | ポケモンカードゲーム公式「20周年 クロニクル」（2001年7月に裏面デザイン変更） | https://www.pokemon-card.com/20th/chronicle/ |
 | X36 | ポケモンWiki「ポケモンカード★web」、Samurai Sword Tokyo「Japanese Pokémon card backs explained」 | https://wiki.pokemonwiki.com/wiki/ポケモンカード★web 、 https://samuraiswordtokyo.com/blogs/news/japanese-pokemon-card-backs-explained |
 | X37 | Bulbapedia「Brock's Ninetales (Gym Challenge 3)」（日本版ははじめ、のせたカードのポケモンパワーを使えたこと） | https://bulbapedia.bulbagarden.net/wiki/Brock%27s_Ninetales_(Gym_Challenge_3) |
+| X38 | Bulbapedia「Koga's Ditto (Gym Challenge 10)」 | https://bulbapedia.bulbagarden.net/wiki/Koga%27s_Ditto_(Gym_Challenge_10) |
 
 ## カードテキストの出典
 
@@ -106,6 +107,7 @@
 |---|---|---|
 | TCGdex cards-database（MIT ライセンス） | 日本版の収録構成・レアリティ | https://github.com/tcgdex/cards-database |
 | PokemonTCG/pokemon-tcg-data | 英語版のカード情報 | https://github.com/PokemonTCG/pokemon-tcg-data |
+| TCGdex cards-database の英語データ（`data/`） | 英語版データの欠落の確認と補正（ワザ・ポケモンパワー・トレーナーの効果文の有無を全件照合） | https://github.com/tcgdex/cards-database |
 | PokeAPI | 日本語のポケモン名 | https://github.com/PokeAPI/pokeapi |
 | Scrydex 由来の日本版カードデータ（第三者のリポジトリに置かれた写し） | 日本語カード名とレアリティの照合のみ。データ自体は収録していない | https://github.com/MarkHughes88/bindlr-prototype （`data/pokemon/raw/ja/expansions`） |
 
@@ -128,6 +130,8 @@
 ## カードテキスト
 
 - 英語版の名前と文面（ワザ・ポケモンパワー・トレーナー・特殊エネルギー）: PokemonTCG/pokemon-tcg-data（全件）。
+  - 効果文の有無を TCGdex の英語データと全件照合しました。pokemon-tcg-data で効果文が欠けていたのは、ブラッキー（Neo Discovery 13）のだましうち（Feint Attack）だけでした。TCGdex の文面で補っています（`en_fixes.json`）。
+  - 日本版にだけ効果文があるワザは、ほかにキョウのメタモン（Gym Challenge 10）のはたく（Pound）があります。これは欠落ではなく、英語版では同じ条件を Giant Growth の効果文に書いているためです [X38]（[カードの日英の違い](cards/card-differences.md)）。
 - 日本版の名前と文面:
   - なぞのばしょ [N1]: 第1〜4弾、neo 第1〜2弾（410 枚）。
   - ポケモンWiki [N2]: 第5弾 リーダーズスタジアム、第6弾 闇からの挑戦、neo 第3弾 めざめる伝説、neo 第4弾 闇、そして光へ...（364 枚）。

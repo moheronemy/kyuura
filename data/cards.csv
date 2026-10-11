@@ -442,7 +442,7 @@ PMCG6-068,PMCG6,68,pokemon,サカキのニャース,Giovanni's Meowth,有力,unc
 PMCG6-069,PMCG6,69,pokemon,カツラのガルーラ,Blaine's Kangaskhan,有力,uncommon,False,gym1,36,basic,,,80,colorless,fighting×2,psychic-30,3,,,,,,
 PMCG6-070,PMCG6,70,pokemon,キョウのピジョン,Koga's Pidgeotto,有力,rare,False,gym2,27,stage1,キョウのポッポ,Koga's Pidgey,60,colorless,lightning×2,fighting-30,0,,,,,,
 PMCG6-071,PMCG6,71,pokemon,サカキのペルシアン,Giovanni's Persian,有力,holo_rare,True,gym2,8,stage1,サカキのニャース,Giovanni's Meowth,60,colorless,fighting×2,psychic-30,0,,,,,,
-PMCG6-072,PMCG6,72,pokemon,キョウのメタモン,Koga's Ditto,有力,holo_rare,True,gym2,10,basic,,,40,colorless,fighting×2,psychic-30,1,,,,,,
+PMCG6-072,PMCG6,72,pokemon,キョウのメタモン,Koga's Ditto,有力,holo_rare,True,gym2,10,basic,,,40,colorless,fighting×2,psychic-30,1,,,,,[wording] はたく（Pound）のダメージが 30 になる条件を書いている場所,
 PMCG6-073,PMCG6,73,pokemon,R団のカビゴン,Rocket's Snorlax,有力,rare,False,gym1,33,basic,,,90,colorless,fighting×2,psychic-30,4,,,,,,
 PMCG6-074,PMCG6,74,pokemon,イマクニ？のドードー,,有力,special,False,,,basic,,,50,colorless,lightning×2,fighting-30,0,,,,,,英語版なし。ポケモンWiki ではシリーズ「闇からの挑戦」、レアリティ「☆」と記載。拡張パックへの封入のされ方は未確認
 PMCG6-075,PMCG6,75,pokemon,_____のラッキー,,有力,special,False,,,basic,,,90,colorless,fighting×2,psychic-30,1,,,,,,英語版なし。ポケモンWiki ではシリーズ「闇からの挑戦」、レアリティ「◇」と記載。カード名の空欄の長さと配布方法は未確認

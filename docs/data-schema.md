@@ -163,7 +163,7 @@
 }
 ```
 
-`kind` は `text`（文面の意味）／`numbers`（数値）／`errata`（後年のエラッタ）／`placement`（収録先）／`print`（英語版の表記・誤植）。`sources` の記号は [出典と確認状況](sources.md) を参照。
+`kind` は `text`（文面の意味）／`numbers`（数値）／`errata`（後年のエラッタ）／`placement`（収録先）／`print`（英語版の表記・誤植）／`wording`（書き方の違い。効果は同じだが、説明を書いている場所や分け方が違う）。`sources` の記号は [出典と確認状況](sources.md) を参照。
 
 ## タイプの列挙値
 

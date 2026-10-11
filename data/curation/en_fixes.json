@@ -1,7 +1,21 @@
 {
  "_comment": "英語版カードデータ（pokemon-tcg-data）の誤りの補正。キーは pokemon-tcg-data の id。",
  "neo1-63": {
-  "attacks": [{"name": "Comet Punch", "damage": "10×"}],
+  "attacks": [
+   {
+    "name": "Comet Punch",
+    "damage": "10×"
+   }
+  ],
   "reason": "Ledyba（Neo Genesis 63）の Comet Punch はデータ上ダメージ欄が空だが、効果文は「10 damage times the number of heads」。日本版の 2 つのデータ（なぞのばしょ、Scrydex 由来）とも 10×"
+ },
+ "neo2-13": {
+  "attacks": [
+   {
+    "name": "Feint Attack",
+    "text": "Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers or any other effects on the Defending Pokémon."
+   }
+  ],
+  "reason": "Umbreon（Neo Discovery 13）の Feint Attack はデータ上効果文が空だが、実際のカードには効果文がある。文面は TCGdex（cards-database）の英語データによる。Bulbapedia の記載、日本版のだましうちの効果文（なぞのばしょ）とも内容が一致"
  }
 }

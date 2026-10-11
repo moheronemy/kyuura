@@ -860,13 +860,14 @@ def write_set_docs(records, en_only):
     (out / 'english-only.md').write_text('\n'.join(lines), encoding='utf-8')
 
 
-DIFF_KIND_JA = {'text': '文面の意味', 'numbers': '数値', 'errata': 'エラッタ', 'placement': '収録先', 'print': '英語版の表記・誤植'}
+DIFF_KIND_JA = {'text': '文面の意味', 'numbers': '数値', 'errata': 'エラッタ', 'placement': '収録先', 'print': '英語版の表記・誤植',
+                'wording': '書き方（意味は同じ）'}
 
 
 def write_card_differences(records):
     lines = ['# カードの日英の違い', '',
              '<!-- このファイルは scripts/build_cardlist.py が data/curation/card_differences.json から生成しています。直接編集しないでください。 -->', '',
-             '日本版と英語版（WotC 版）で、文面の意味・エラッタ・収録先・表記が違うと指摘されているカードの一覧です。',
+             '日本版と英語版（WotC 版）で、文面の意味・エラッタ・収録先・表記・書き方が違うと指摘されているカードの一覧です。',
              'ルールの違いは [日米のルールの違い](../rules/differences.md)、弾ごとの収録内容の違いは [収録内容・製品の違い](set-differences.md) を参照してください。', '',
              '- 英語版の文面は英語版カードデータ（pokemon-tcg-data）で確認したもの。日本版の文面は、なぞのばしょ [N1]・ポケモンWiki [N2] の転記で確認できたものは「」で引用し、それ以外は二次資料の説明によるものです。',
              '- 日英の文面を全カードで厳密に突き合わせたわけではありません。ここに挙げたのは、二次資料で指摘されたもの、特殊能力が使えなくなる状態の書き方を機械的に比べて見つかったもの、リーダーズスタジアムのワザ・特殊能力・トレーナーと、ポケモンWiki から取り込んだほかの弾のトレーナーの文面を読み比べて見つかったものです。',

@@ -101,7 +101,7 @@
 - 日本版の収録構成とレアリティ: [TCGdex cards-database](https://github.com/tcgdex/cards-database)（MIT ライセンス）の `data-asia/PMCG`・`data-asia/neo`。
   - このデータの日本語テキスト（ワザ名・効果文・一部のカード名）は英語からの機械翻訳と見られ、公式の日本語テキストではありません。このリストでは使っていません。
   - 出典データでは、「闇からの挑戦」に「イマクニ？のドードー」「_____のラッキー」の 2 枚が入っています。どちらも通常のレアリティ構成から外れるカード（ポケモンWiki の記載では「☆」「◇」）で、拡張パックへの封入のされ方は未確認です。
-- 英語版のカード情報: [PokemonTCG/pokemon-tcg-data](https://github.com/PokemonTCG/pokemon-tcg-data)。データの誤り（Neo Genesis のレディバのダメージ欄）は `data/curation/en_fixes.json` で補正しています。英語版データのレベル（LV.）には誤りが多いため使っていません。
+- 英語版のカード情報: [PokemonTCG/pokemon-tcg-data](https://github.com/PokemonTCG/pokemon-tcg-data)。データの誤り・欠落（Neo Genesis のレディバのダメージ欄、Neo Discovery のブラッキーのだましうちの効果文）は `data/curation/en_fixes.json` で補正しています。英語版データのレベル（LV.）には誤りが多いため使っていません。
 - 日本版のテキスト・レベル・収録商品・印刷上の備考: なぞのばしょとポケモンWiki（上記）。
 - 日本語カード名・レアリティ・数値の照合: Scrydex 由来の日本版データ（第三者のリポジトリにある写し）。照合に使っただけで、データ自体は収録していません。
 - 日本語のポケモン名: [PokeAPI](https://github.com/PokeAPI/pokeapi) の `pokemon_species_names.csv`。
