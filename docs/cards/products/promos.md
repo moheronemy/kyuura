@@ -210,4 +210,4 @@
 | -/- | [わるいオニドリル](https://pcg-search.com/card/neo/neop045.php) | 1進化 | 60 | 2001-04-12 『ポケモンカードGB2 GR団参上!』公式ガイドブックの付録 |  |  |
 | -/- | [ひかるコイキング](https://pcg-search.com/card/neo/neop046.php) | たね | 30 | 2001 ポケモンカードファンクラブ 600 GET ポイントの景品 | Neo Revelation 66（Shining Magikarp） | neo 第3弾 めざめる伝説（2000-11-23） |
 | -/- | [ハネッコ](https://pcg-search.com/card/neo/neop047.php) | たね | 30 | 2001-07-23 『ポケモンカードになったワケ』5 巻の付録 | Neo Discovery 55（Hoppip） | neo 第2弾 遺跡をこえて...（2000-07-07） |
-| -/- | [タッチ世代交代！](https://pcg-search.com/card/neo/neop048.php) | トレーナー |  |  |  |  |
+| -/- | [タッチ世代交代！](https://pcg-search.com/card/neo/neop048.php) | トレーナー |  | 2002-02 新ガルーラ親子大会の参加賞<br>（新ガルーラルール専用カード（旧裏の版）。Bulbapedia は、のちにバトルロード スプリング★2002 の参加者にも配られたとする。新裏の版（P プロモ 027/P）もある [X53][X55]（docs/rules/kangaskhan-2002.md）） |  |  |

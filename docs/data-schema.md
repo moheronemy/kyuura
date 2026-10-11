@@ -191,6 +191,36 @@
 
 日米のルールの違いのデータです。`items` の各要素が 1 項目で、`jp`・`en` にそれぞれ時期ごとのルール、`status` に判定（`違う`／`時期により違う`／`違う可能性あり`／`同じ`／`不明`）があります。[日米のルールの違い](rules/differences.md) はこのファイルから生成しています。
 
+## `data/rule_history.json`
+
+2001〜2003年の旧裏から新裏への移行期を中心に、ルール・大会レギュレーション・エラッタを記録する調査データです。[カードの文面の変更とエラッタの履歴](rules/errata-history.md) はこのファイルから `scripts/build_rule_history.py` で生成し、[旧裏・新裏の混合ルール](rules/mixed-2002.md)・[新ガルーラルール](rules/kangaskhan-2002.md) は手書きでこのファイルの id を参照します（参照切れは同じスクリプトが検査）。
+
+| キー | 内容 |
+|---|---|
+| `categories` | 区分: `basic_rule`（基本ルール）、`tournament_regulation`（大会レギュレーション）、`card_ruling`（カード個別の裁定）、`official_errata`（公式エラッタ）、`printed_text_change`（印刷テキストの変更）、`product_change` |
+| `evidence_kinds` | 根拠の種類: `original`、`card_image`、`official_later`、`secondary_direct`、`search_summary` |
+| `confidence_values` | 確度（確実／有力／未確認）の基準 |
+| `events` | 商品の発売・大会・雑誌の発行などの出来事（`id`、`date`、`region`、`type`、`name`、`notes`、`evidence`） |
+| `entries` | ルール・レギュレーションの記録 |
+| `errata` | カード個別のエラッタ・印刷テキストの変更・裁定の記録 |
+| `card_lists` | 読み替えの対象カードの一覧（`supporter`: サポーターとして扱う 15 種、`poke_body`: ポケボディーとして扱うカード）。`ids` はこのリポジトリのカード id |
+
+`entries`・`errata` の各要素の主な欄:
+
+| 欄 | 内容 |
+|---|---|
+| `id` | ルールの識別 id（`MIX-`: 混合期、`KGR-`: ガルーラルール、`EN-`: 英語版、`ERR-`: エラッタ、`TXT-`: 印刷の変更、`RUL-`: 裁定） |
+| `region` | `JP`（日本版）／`EN`（英語版） |
+| `category` | 上の区分 |
+| `announced`・`effective_from`・`effective_until` | 公表日・適用（印刷）の開始・終了。わからないものは「未確認」などと文で書く |
+| `applies_to.events` | 対象の大会・商品（`events` の id） |
+| `cards`・`cards_from`・`external_cards` | 対象カード（`data/cards.json` の id か `data/ja_text_pcgsearch.json` のページ名）、`card_lists` の名前、このリポジトリにないカード |
+| `printed_text`・`play_text`・`before`・`after` | 印刷された文面、エラッタ後・読み替え後の文面、変更前・変更後のルール |
+| `notes` | 資料の記述（食い違いは両方を並べる） |
+| `evidence` | 根拠（`source`: docs/sources.md の記号、`kind`: 根拠の種類、`cites`: その資料が挙げる当時の公式資料 P1〜） |
+| `verification` | 原本との照合状況 |
+| `confidence`・`open_questions` | 確度と未解決の点 |
+
 ## `data/ja_text_pcgsearch.json`（拡張パック以外の商品）
 
 拡張パック以外の商品のカードです。`data/cards.json` とは別のファイルで、pcg-search.com の記載をそのまま持っています（[拡張パック以外の商品](cards/other-products.md)）。
@@ -213,3 +243,4 @@
 | `promos` | プロモの配布（pcg-search の備考）、配布日と Bulbapedia の記載、補足（`note`） |
 | `reprint_text` | 同じカードの再録で日本語の文面が違うものの、違いの説明と区分（`wording` 書き方だけ／`clarify` 補足・対象の明記／`meaning` 意味が変わる） |
 | `reprint_checks` | 同じカードの組の中で数値が食い違ったものの判定 |
+| `identified_cards` | pcg-search で名前が「-」のカードの、カードの画像などで確認した名前（転記データ自体は変えない） |

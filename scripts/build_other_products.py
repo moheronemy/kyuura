@@ -23,7 +23,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'docs' / 'cards'
 SI = '映画公開記念パック「サザンアイランド」'
-DIFF_KIND_JA = {'text': '文面の意味', 'numbers': '数値', 'print': '英語版の表記・誤植', 'wording': '書き方（意味は同じ）', 'art': 'イラスト'}
+DIFF_KIND_JA = {'text': '文面の意味', 'numbers': '数値', 'print': '英語版の表記・誤植', 'wording': '書き方（意味は同じ）', 'art': 'イラスト',
+                'errata': 'エラッタ'}
 GENERATED = ('<!-- このファイルは scripts/build_other_products.py が data/ja_text_pcgsearch.json と '
              'data/curation/other_products.json から生成しています。直接編集しないでください。 -->')
 # サイトの表記の揺れ（カード名の照合だけに使う）
@@ -112,6 +113,11 @@ class Catalog:
                 self.groups.setdefault(sig_pcg(c), []).append(
                     {'date': self.date_of(key, c), 'product': label, 'card': c, 'key': key})
 
+    def display_name(self, c):
+        """pcg-search で名前が「-」のカードは、data/curation/other_products.json の identified_cards の名前を使う。"""
+        ident = self.cur.get('identified_cards', {}).get(page_id(c))
+        return ident['name'] if c['name'] == '-' and ident else c['name']
+
     def short_name(self, key):
         return self.products[key]['name'] if key in self.products else key
 
@@ -186,6 +192,7 @@ DIST_JA = [  # Bulbapedia の配布の記載 → 日本語（言い回しが確�
     (r'World Hobby Fair Special Limited Expansion Sheet', lambda m: '次世代ワールドホビーフェアの限定拡張シート'),
     (r'World Hobby Fair 2000 commemoration card', lambda m: 'ワールドホビーフェア 2000 の記念カード'),
     (r'Champion Road 2000 participation prize', lambda m: 'チャンピオンロード 2000 の参加賞'),
+    (r'New Garura Parent/Child Tournament participation prize', lambda m: '新ガルーラ親子大会の参加賞'),
     (r'Tropical Mega Battle finals participation prize', lambda m: 'トロピカルメガバトル決勝大会の参加賞'),
     (r'Toyota campaign', lambda m: 'トヨタのキャンペーン'),
     (r'Nintendo 64 Double Get Campaign', lambda m: 'NINTENDO64 ダブルゲットキャンペーン'),
@@ -227,7 +234,9 @@ def card_table(cat, cards, key, qty=None, en_prints=None):
     head = '| 番号 | カード名 | 種類 | タイプ | HP | レア |' + (' 枚数 |' if qty else '') + ' 英語版 | ほかの収録 |'
     lines = [head, '|' + '---|' * (head.count('|') - 1)]
     for c in cards:
-        row = [c['list_number'], f"[{md(c['name'])}]({c['url']})", kind_short(c), c.get('type') or '', str(c.get('hp') or ''),
+        name = cat.display_name(c)
+        name = f"[{md(name)}]({c['url']})" + ('（名前はカードの画像で確認）' if name != c['name'] else '')
+        row = [c['list_number'], name, kind_short(c), c.get('type') or '', str(c.get('hp') or ''),
                c['rarity'] if c['rarity'] not in (None, '-') else '']
         if qty:
             row.append(str(qty.get(page_id(c), '')))
@@ -297,7 +306,7 @@ def page_expansion_sheets(cat):
     for p in sheets:
         L += [f"### {p['name']}", '', '| シート | 場所 | カード |', '|---|---|---|']
         for sh in cur['sheets'][p['pcg_title']]:
-            names = [x[len('name:'):] if x.startswith('name:') else by_id[x]['name'] for x in sh['cards']]
+            names = [x[len('name:'):] if x.startswith('name:') else cat.display_name(by_id[x]) for x in sh['cards']]
             L.append(f"| {sh['sheet']} | {sh['area_ja']}（{sh['area_en']}） | {'、'.join(names)} |")
         L.append('')
     L += ['## 英語版になったカード', '',
@@ -323,10 +332,10 @@ def page_expansion_sheets(cat):
     labels = {'EXTRA RULE': 'おすすめルール（EXTRA RULE）', 'デッキ': 'デッキ（デッキレシピ）', 'PASS CARD': 'パスカード',
               'たねポケモン': 'ジョークカード（ポケモン）'}
     for kind, cs in groups.items():
-        names = '、'.join(f"[{c['name']}]({c['url']})" if c['name'] != '-' else '（名前の記載なし）' for c in cs)
+        names = '、'.join(f"[{cat.display_name(c)}]({c['url']})" for c in cs)
         L.append(f"- {labels.get(kind, kind)}（{len(cs)} 種）: {names}")
     L += ['',
-          '- pcg-search で名前の記載がない 3 種は、Bulbapedia によると「イマクニ？のコーナー」「ハズレ？」「Pokémon Machine」で、どれも手描きのジョークカードです [X43]。**有力**',
+          '- pcg-search で名前の記載がない 3 種（1stex3049〜3051）は、カードの画像と Bulbapedia で「イマクニ？のコーナー」（見出しは「イマクニ？の オレにも言わせろ!! のコーナー」）、「ハズレ？」、「Pokémon Machine」と確かめました。どれも手描きのジョークカードです [N3][X43]。**確実**（pcg-search の転記データは変えずに、`data/curation/other_products.json` の `identified_cards` で名前を付けています）',
           '- 「マサキのパソコン」は「通信進化キャンペーン」（1998-11-24〜1999-04-30）の応募用カードです。ユンゲラー・ゴーリキー・ゴローン・ゴースト・オムナイトのカードと一緒に送ると、進化後（フーディン・カイリキー・ゴローニャ・ゲンガー・オムスター）のキラのプロモカードがもらえました [X30][X43]。**確実**',
           '- おすすめルールのカードのうち「サイドカード4枚戦」「『こんらん』で20ダメージルール」は、当時の公式トーナメントで採用されていたと書かれています [N3]。ルールの資料では [日本版のルール](../../rules/japanese.md) で使っています。',
           '- オーヤマのピカチュウはジョークカードで、ワザのダメージが「10ぐらい」となっています [N3]。', '',
@@ -808,9 +817,10 @@ def page_reprints(cat):
           '1998 年（カイリューとの 2 枚組）は 1997 年のコロコロコミックの付録と同じ LV.12・でんきショックのカード、'
           '1999 年（フリーザーとの 2 枚組）は LV.11・でんげきの別のカードです（Bulbapedia の個別のページ [X51] と、pcg-search のカードの画像で確認）。'
           'pcg-search の並びでは LV.11 の版が 1998 年のカイリューの隣にあります。**確実**',
-          '- 再録の文面を比べた結果、拡張パック第1弾の「エネルギー回収」は、日本版が「2枚の好きなエネルギーカード」で、英語版（basic Energy cards）と違うことがわかりました'
-          '（のちの再録で「基本エネルギーカード」に改められた）。[日英の違い](card-differences.md) に加えました。'
-          '1997 年のプロモの「超エネルギー回収」も同じです（[プロモーションカード](products/promos.md)）。**確実**',
+          '- 再録の文面を比べた結果、拡張パック第1弾の「エネルギー回収」の印刷は「2枚の好きなエネルギーカード」で、英語版（basic Energy cards）と違うことがわかりました'
+          '（のちの再録で「基本エネルギーカード」に改められた）。1997 年のプロモの「超エネルギー回収」も同じです。**確実**（印刷の文面）',
+          '  - その後の調査で、1998年に両方を基本エネルギーだけに限る公式エラッタが出ていたとわかりました（Bulbapedia がファンクラブ会報 Vol.5 p.16 を出典に挙げる）[X52]。**有力**'
+          '印刷の違いとエラッタは [エラッタの履歴](../rules/errata-history.md) に分けて記録し、[日英の違い](card-differences.md) はエラッタとして載せています。',
           '- 英語版: トレーナー・特殊エネルギーの別のセットへの再録を記録していなかったので、加えました。',
           '- 英語版: 英語版データの誤記のため、Legendary Collection への再録と判定できていなかったカードがありました。`data/curation/en_fixes.json` で直しています。']
     fixes = load('data/curation/en_fixes.json')

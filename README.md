@@ -19,6 +19,9 @@
 - [日米のルールの違い](docs/rules/differences.md) — **まずこれ**。ルールの違いだけを項目ごとに比べた専用ページ（データ: [`data/rule_differences.json`](data/rule_differences.json)）
 - [日本版のルールと変遷](docs/rules/japanese.md) — ルールブック第1版〜第5版での変更点、公式大会のルール
 - [英語版（WotC 版）のルール](docs/rules/wotc.md) — 1999〜2003年。2003年の変更も参考に記載
+- [旧裏・新裏の混合ルール（2001〜2003年）](docs/rules/mixed-2002.md) — 裏面の変更後の混合、サポーター・ポケパワー/ポケボディーへの読み替え、殿堂入りカード、バトルロード 2002
+- [新ガルーラルール（2002年）](docs/rules/kangaskhan-2002.md) — 旧裏と新裏の山札を使い分ける 2 人 1 組の対戦と「タッチ世代交代！」
+- [カードの文面の変更とエラッタの履歴](docs/rules/errata-history.md) — 印刷の変更・公式エラッタ・読み替えの区別
 - [出典と確認状況](docs/sources.md)
 
 ### カード
@@ -35,6 +38,7 @@
 - [`data/cards.json`](data/cards.json) — 構造化データ（スキーマ: [docs/data-schema.md](docs/data-schema.md)）
 - [`data/cards.csv`](data/cards.csv)、[`data/attacks.csv`](data/attacks.csv)、[`data/powers.csv`](data/powers.csv) — 表形式の写し
 - [`data/rule_differences.json`](data/rule_differences.json) — 日米のルールの違い
+- [`data/rule_history.json`](data/rule_history.json) — 2001〜2003年の移行期のルール・大会レギュレーション・エラッタの記録（日付・地域・対象カード・根拠の種類・確度）
 - 生成スクリプト: [`scripts/`](scripts/README.md)
 
 **日本語テキストについて**:

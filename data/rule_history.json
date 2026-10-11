@@ -1,0 +1,2057 @@
+{
+ "schema_version": 1,
+ "description": "2001〜2003年の旧裏から新裏への移行期を中心に、日本版（JP）と英語版（EN）の基本ルール・大会レギュレーション・カードの裁定・公式エラッタ・印刷テキストの変更を記録する調査データ。docs/rules/errata-history.md は scripts/build_rule_history.py がこのファイルから生成する。docs/rules/mixed-2002.md・kangaskhan-2002.md は手書きで、このファイルの id を参照する（参照切れは build_rule_history.py が検査する）。出典の記号は docs/sources.md を参照。",
+ "categories": {
+  "basic_rule": "基本ルール（ルールブック・公式の遊びかたの説明）",
+  "tournament_regulation": "大会レギュレーション（特定の大会・期間だけに適用）",
+  "card_ruling": "カード個別の裁定・読み替え（カードの文面は変わらない）",
+  "official_errata": "公式エラッタ（印刷された版にかかわらず、別の文面で使うよう公式に指定されたもの）",
+  "printed_text_change": "印刷テキストの変更（再録・新しい版に違う文面が印刷されたこと。それだけでは古い版へのエラッタを意味しない）",
+  "product_change": "商品・カードデザインの変更"
+ },
+ "evidence_kinds": {
+  "original": "当時の公式資料の原本を直接確認した",
+  "card_image": "カードの画像（pcg-search・なぞのばしょの掲載画像）で印刷された文面を確認した",
+  "official_later": "後年の公式資料（公式サイトの年表、2016年のクラシックレギュレーションなど）",
+  "secondary_direct": "二次資料（ファンサイト・Wiki）の本文を直接読んだ。cites はその資料が挙げている当時の公式資料（原本は未確認）",
+  "search_summary": "検索エンジンの要約・抜粋だけで確認した（本文は未確認。文言は原文と同じとは限らない）"
+ },
+ "confidence_values": {
+  "確実": "公式資料（カードの画像を含む）、または互いに独立した資料 2 件以上（本文を直接読んだもの）で一致",
+  "有力": "本文を直接読んだ二次資料 1 件、または検索結果の要約で独立した 2 件が一致",
+  "未確認": "検索結果の要約 1 件だけ、資料どうしが食い違う、または確認できていない"
+ },
+ "events": [
+  {
+   "id": "EV-1997-FANBOOK-SER",
+   "date": "1997-05-20",
+   "region": "JP",
+   "type": "product",
+   "name": "『ポケットモンスター ファンブック』（付録の超エネルギー回収）",
+   "evidence": [
+    {
+     "source": "X48",
+     "kind": "secondary_direct",
+     "detail": "Bulbapedia の番号なしプロモの一覧（Super Energy Retrieval [Fan Book]、1997-05-20）"
+    }
+   ]
+  },
+  {
+   "id": "EV-1998-GYM1",
+   "date": "1998-04-26",
+   "region": "JP",
+   "type": "product",
+   "name": "ポケモンジム第1弾（ニビシティジム・ハナダシティジム）",
+   "evidence": [
+    {
+     "source": "X46",
+     "kind": "secondary_direct",
+     "detail": "Bulbapedia のジムデッキのページ"
+    }
+   ]
+  },
+  {
+   "id": "EV-1998-GARURA",
+   "date": "1998",
+   "region": "JP",
+   "type": "tournament",
+   "name": "ガルーラ親子大会（最初のガルーラルール）",
+   "notes": [
+    "開催時期は資料で食い違う: Bulbapedia は「1998年5月」[X53]。検索結果の要約では「1998年4月26日、幕張メッセ」「配布開始は1998年7月19日」とするものもある（未確認）。",
+    "なぞのばしょは、ファンクラブ会報 Vol.5 の記事を「日本一決定戦『リザードンメガバトル』のサイドイベントで採用されたガルーラルール」と紹介している [J27]。"
+   ],
+   "evidence": [
+    {
+     "source": "X53",
+     "kind": "secondary_direct",
+     "detail": "Touch Change! と Kangaskhan (Garura Parent/Child promo) のページ"
+    },
+    {
+     "source": "J27",
+     "kind": "secondary_direct",
+     "detail": "会報 Vol.5 の内容紹介",
+     "cites": [
+      "P2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "EV-1998-FANCLUB5",
+   "date": "1998-06-10",
+   "region": "JP",
+   "type": "publication",
+   "name": "『ポケモンカード・ファンクラブ』会報 Vol.5（おまけ「タッチ交代！」、ガルーラルールの記事、エネルギー回収系のエラッタ）",
+   "evidence": [
+    {
+     "source": "J27",
+     "kind": "secondary_direct",
+     "detail": "発行日 1998年6月10日、おまけと記事の紹介",
+     "cites": [
+      "P2"
+     ]
+    },
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "エラッタの出典として Vol.5 p.16 を挙げる",
+     "cites": [
+      "P2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "EV-2001-TRAINERS10",
+   "date": "2001-03-01",
+   "region": "JP",
+   "type": "publication",
+   "name": "『ポケモンカード トレーナーズ』Vol.10（PCL の殿堂入りカードの発表）",
+   "notes": [
+    "発行日は検索結果の要約による（未確認）。殿堂入りの発表が Vol.10 p.6 にあることは、なぞのばしょが引用している [J23]。"
+   ],
+   "evidence": [
+    {
+     "source": "J23",
+     "kind": "secondary_direct",
+     "detail": "Vol.10 p.6 の文章を引用",
+     "cites": [
+      "P4"
+     ]
+    },
+    {
+     "source": "J6",
+     "kind": "search_summary",
+     "detail": "2001年3月1日発行とする"
+    }
+   ]
+  },
+  {
+   "id": "EV-2001-NEO-SPRING-ROAD",
+   "date": "2001-02-11/2001-03-31",
+   "region": "JP",
+   "type": "tournament",
+   "name": "ネオ スプリングロード（地方大会と 2001-03-31 の日本一決定戦）",
+   "evidence": [
+    {
+     "source": "X55",
+     "kind": "secondary_direct",
+     "detail": "No.1 Trainer のページの開催一覧"
+    }
+   ]
+  },
+  {
+   "id": "EV-2001-VS",
+   "date": "2001-07-19",
+   "region": "JP",
+   "type": "product",
+   "name": "ポケモンカード★VS（裏面が現在のデザインに変わる）",
+   "evidence": [
+    {
+     "source": "X54",
+     "kind": "secondary_direct",
+     "detail": "Pokémon VS (TCG) のページ"
+    },
+    {
+     "source": "X44",
+     "kind": "secondary_direct",
+     "detail": "日本の弾の一覧"
+    },
+    {
+     "source": "X35",
+     "kind": "official_later",
+     "detail": "公式 20 周年サイトの年表（2001年7月に裏面デザインを変更）。検索結果の要約で確認"
+    }
+   ]
+  },
+  {
+   "id": "EV-2001-SUMMER-ROAD",
+   "date": "2001-07-20/2001-08-25",
+   "region": "JP",
+   "type": "tournament",
+   "name": "バトル★ネオ サマーロード（地方大会と 2001-08-25 の日本一決定戦）",
+   "evidence": [
+    {
+     "source": "X55",
+     "kind": "secondary_direct",
+     "detail": "No.1 Trainer のページの開催一覧"
+    },
+    {
+     "source": "J23",
+     "kind": "secondary_direct",
+     "detail": "2001年5月発表の殿堂入りカードを採用"
+    },
+    {
+     "source": "J26",
+     "kind": "secondary_direct",
+     "detail": "サイドイベント「グループタッグマッチ」のレギュレーション"
+    }
+   ]
+  },
+  {
+   "id": "EV-2001-P-BILL",
+   "date": "2001-09",
+   "region": "JP",
+   "type": "publication",
+   "name": "『トレーナーズ』Vol.13 の付録「マサキ」（009/P。最初のサポーター）",
+   "evidence": [
+    {
+     "source": "X55",
+     "kind": "secondary_direct",
+     "detail": "P Promotional cards の一覧（Pokémon Card Trainers Vol. 13, September 2001）"
+    },
+    {
+     "source": "X54",
+     "kind": "secondary_direct",
+     "detail": "Pokémon Web のページ（前の月の P プロモのマサキに続いてサポーターを収録）"
+    }
+   ]
+  },
+  {
+   "id": "EV-2001-WEB",
+   "date": "2001-10-20",
+   "region": "JP",
+   "type": "product",
+   "name": "ポケモンカード★web（ポケパワー・ポケボディー、サポーターを収録した最初の弾）",
+   "evidence": [
+    {
+     "source": "X54",
+     "kind": "secondary_direct",
+     "detail": "Pokémon Web (TCG) のページ"
+    },
+    {
+     "source": "X44",
+     "kind": "secondary_direct",
+     "detail": "日本の弾の一覧"
+    }
+   ]
+  },
+  {
+   "id": "EV-2001-E1",
+   "date": "2001-12-01",
+   "region": "JP",
+   "type": "product",
+   "name": "ポケモンカードe 第1弾 基本拡張パック・スターターパック",
+   "evidence": [
+    {
+     "source": "X44",
+     "kind": "secondary_direct",
+     "detail": "日本の弾の一覧"
+    },
+    {
+     "source": "J25",
+     "kind": "secondary_direct",
+     "detail": "商品情報（スターターパックは 30 枚のハーフデッキ）"
+    }
+   ]
+  },
+  {
+   "id": "EV-2002-TRAINERS14",
+   "date": "2002-01-05",
+   "region": "JP",
+   "type": "publication",
+   "name": "『トレーナーズ』Vol.14（旧裏のトレーナーのサポーター化、ミックスデッキルール、殿堂 2001.12版）",
+   "notes": [
+    "発行日と「ミックスデッキルール」「2001.12版」は、旧裏 wiki を要約した検索結果による（未確認）。サポーター化の出典が Vol.14 p.25 であることは Bulbapedia が挙げている [X52]。"
+   ],
+   "evidence": [
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "Supporter errata の出典として Vol.14 p.25",
+     "cites": [
+      "P7"
+     ]
+    },
+    {
+     "source": "J6",
+     "kind": "search_summary",
+     "detail": "2002年1月5日発行の Vol.14 で新裏・旧裏混合のミックスデッキルールが告知された"
+    },
+    {
+     "source": "J1",
+     "kind": "search_summary",
+     "detail": "Vol.14 に 2001.12版（バトルロード スプリング2002 のマスタートレーナーズ用）"
+    }
+   ]
+  },
+  {
+   "id": "EV-2002-NEW-GARURA",
+   "date": "2002-02",
+   "region": "JP",
+   "type": "tournament",
+   "name": "新ガルーラ親子大会（タッチ世代交代！を配布）",
+   "notes": [
+    "日付・会場の詳細は未確認。Bulbapedia は「2002年2月」とだけ書く。"
+   ],
+   "evidence": [
+    {
+     "source": "X53",
+     "kind": "secondary_direct",
+     "detail": "Touch Generation Change! のページ"
+    },
+    {
+     "source": "X55",
+     "kind": "secondary_direct",
+     "detail": "番号なしプロモ（2002年）と P プロモ 027/P の一覧"
+    }
+   ]
+  },
+  {
+   "id": "EV-2002-E2",
+   "date": "2002-03-08",
+   "region": "JP",
+   "type": "product",
+   "name": "ポケモンカードe 第2弾「地図にない町」",
+   "evidence": [
+    {
+     "source": "X44",
+     "kind": "secondary_direct",
+     "detail": "日本の弾の一覧"
+    }
+   ]
+  },
+  {
+   "id": "EV-2002-BR-SPRING",
+   "date": "2002-03-09/2002-04-07",
+   "region": "JP",
+   "type": "tournament",
+   "name": "バトルロード スプリング★2002（地方大会 7 か所。日本一決定戦なし）",
+   "notes": [
+    "会場と日付: 東京 3/9・10、仙台 3/17、福岡 3/26、広島 3/28、大阪 3/30・31、名古屋 4/2、札幌 4/7 [X55]。公式 20 周年サイトの年表も 3月9日〜4月7日 とする（検索結果の要約）[X35]。",
+    "ジュニア・シニアに加えて、18 歳以上のマスターの部がこのシリーズから設けられた [X55]。"
+   ],
+   "evidence": [
+    {
+     "source": "X55",
+     "kind": "secondary_direct",
+     "detail": "No.1 Trainer のページ"
+    },
+    {
+     "source": "X35",
+     "kind": "official_later",
+     "detail": "公式 20 周年サイトの年表。検索結果の要約で確認"
+    }
+   ]
+  },
+  {
+   "id": "EV-2002-E3",
+   "date": "2002-05-24",
+   "region": "JP",
+   "type": "product",
+   "name": "ポケモンカードe 第3弾「海からの風」",
+   "evidence": [
+    {
+     "source": "X44",
+     "kind": "secondary_direct",
+     "detail": "日本の弾の一覧"
+    }
+   ]
+  },
+  {
+   "id": "EV-2002-QA-POWERS",
+   "date": "2002-05-24",
+   "region": "JP",
+   "type": "publication",
+   "name": "公式サイト「ポケモンカードeシリーズ以前の特殊能力 Q&A」",
+   "notes": [
+    "日付は Bulbapedia の引用による。原本（Internet Archive の 2005-10-18 の保存）は作成環境から開けず未確認。"
+   ],
+   "evidence": [
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "Pokémon Power split の出典",
+     "cites": [
+      "P10"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "EV-2002-BR-SUMMER",
+   "date": "2002-07-20/2002-08-17",
+   "region": "JP",
+   "type": "tournament",
+   "name": "バトルロード サマー★2002（地方大会 7 か所と 2002-08-17 の日本一決定戦。ポケモンフェスタ2002 と同時開催）",
+   "notes": [
+    "会場と日付: 札幌 7/20、仙台 7/24、東京 7/27・28、名古屋 7/31、大阪 8/3・4、広島 8/9、福岡 8/11、決勝 8/17 東京 [X55]。"
+   ],
+   "evidence": [
+    {
+     "source": "X55",
+     "kind": "secondary_direct",
+     "detail": "No.1 Trainer・Elite Four Trainer のページ"
+    },
+    {
+     "source": "J29",
+     "kind": "search_summary",
+     "detail": "ポケモンフェスタ2002 と同時開催"
+    }
+   ]
+  },
+  {
+   "id": "EV-2002-E4",
+   "date": "2002-08-23",
+   "region": "JP",
+   "type": "product",
+   "name": "ポケモンカードe 第4弾「裂けた大地」",
+   "evidence": [
+    {
+     "source": "X44",
+     "kind": "secondary_direct",
+     "detail": "日本の弾の一覧"
+    }
+   ]
+  },
+  {
+   "id": "EV-2002-E5",
+   "date": "2002-10-04",
+   "region": "JP",
+   "type": "product",
+   "name": "ポケモンカードe 第5弾「神秘なる山」",
+   "evidence": [
+    {
+     "source": "X44",
+     "kind": "secondary_direct",
+     "detail": "日本の弾の一覧"
+    }
+   ]
+  },
+  {
+   "id": "EV-2003-ADV1",
+   "date": "2003-01-31",
+   "region": "JP",
+   "type": "product",
+   "name": "ポケモンカードゲームADV 第1弾拡張パック",
+   "evidence": [
+    {
+     "source": "X44",
+     "kind": "secondary_direct",
+     "detail": "日本の弾の一覧"
+    },
+    {
+     "source": "J28",
+     "kind": "secondary_direct",
+     "detail": "商品情報",
+     "cites": [
+      "P9"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "EV-2003-BR-SPRING",
+   "date": "2003",
+   "region": "JP",
+   "type": "tournament",
+   "name": "バトルロード スプリング★2003（スタンダードルールの開始とされる）",
+   "notes": [
+    "開催日は未確認。"
+   ],
+   "evidence": [
+    {
+     "source": "J21",
+     "kind": "search_summary",
+     "detail": "Wikipedia「ポケモンカードゲームの公式大会一覧」の要約"
+    }
+   ]
+  },
+  {
+   "id": "EV-EN-2001-MODIFIED",
+   "date": "2001-09-01",
+   "region": "EN",
+   "type": "tournament",
+   "name": "WotC の Modified 2001–02（Team Rocket 以降）",
+   "evidence": [
+    {
+     "source": "X10",
+     "kind": "secondary_direct",
+     "detail": "Bulbapedia「2001-02 Modified format」"
+    }
+   ]
+  },
+  {
+   "id": "EV-EN-2002-MODIFIED",
+   "date": "2002-08-03",
+   "region": "EN",
+   "type": "tournament",
+   "name": "WotC の Modified 2002–03（Neo Genesis 以降。北米の期間）",
+   "evidence": [
+    {
+     "source": "X11",
+     "kind": "secondary_direct",
+     "detail": "Bulbapedia「2002-03 Modified format」"
+    }
+   ]
+  }
+ ],
+ "entries": [
+  {
+   "id": "MIX-BACK-DESIGN",
+   "category": "product_change",
+   "region": "JP",
+   "title": "カードの裏面のデザインの変更",
+   "effective_from": "2001-07-19",
+   "applies_to": {
+    "events": [
+     "EV-2001-VS"
+    ]
+   },
+   "before": "「ポケットモンスターカードゲーム」の裏面（旧裏）",
+   "after": "「Pokémon」の裏面（新裏。海外版と同じ系統のデザイン）",
+   "notes": [
+    "★VS で最初に新しい裏面になった [X54]。なぞのばしょは、ポケモンカードe 第1弾の紹介で、裏面が「世界共通ウラ面」として変わったと書く [J25]。"
+   ],
+   "evidence": [
+    {
+     "source": "X54",
+     "kind": "secondary_direct",
+     "detail": "Pokémon VS (TCG): the back of the card was changed"
+    },
+    {
+     "source": "X35",
+     "kind": "official_later",
+     "detail": "2001年7月に裏面デザインを変更（検索結果の要約）"
+    },
+    {
+     "source": "J25",
+     "kind": "secondary_direct",
+     "detail": "ウラ面の変更",
+     "cites": [
+      "P5"
+     ]
+    }
+   ],
+   "verification": "原本（カード・公式告知）とは照合していない。",
+   "confidence": "確実",
+   "open_questions": []
+  },
+  {
+   "id": "MIX-DECK-BACKS",
+   "category": "basic_rule",
+   "region": "JP",
+   "title": "旧裏と新裏のカードを同じデッキに入れるときの扱い",
+   "announced": null,
+   "effective_from": "2001（★VS 以降。正確な日付は未確認）",
+   "before": "（旧裏だけの時期には規定なし）",
+   "after": "ルールに大きな変更はないので混ぜて遊べる。裏面がわからないように、(1) 専用のデッキシールド（スリーブ）を使う、または (2) 旧裏と新裏のカードを 30 枚ずつにする",
+   "notes": [
+    "なぞのばしょは、この 2 つの方法を『トレーナーズ』Vol.12 p.5 を出典として紹介し、(2) は「公式大会のレギュレーションで実際に採用された」と書く。どの大会かは書かれていない [J25]。",
+    "旧裏 wiki「当時のルール」を要約した検索結果では、「スリーブを付けない場合は旧裏と新裏を 30 枚ずつ、付ける場合はこの制限なし」を、ポケモンカードe 発売後のルール（2001.12版）として紹介している [J1]。",
+    "これが基本ルール（遊びかたの説明）なのか、特定の大会のレギュレーションなのかは、資料からははっきりしない。"
+   ],
+   "evidence": [
+    {
+     "source": "J25",
+     "kind": "secondary_direct",
+     "detail": "①デッキシールド ②30 枚ずつ。出典『トレーナーズ』Vol.12 P5",
+     "cites": [
+      "P5"
+     ]
+    },
+    {
+     "source": "J1",
+     "kind": "search_summary",
+     "detail": "スリーブなしは 30 枚ずつ、スリーブありは制限なし"
+    }
+   ],
+   "verification": "『トレーナーズ』Vol.12 の原本は未確認。旧裏 wiki の本文は作成環境から開けず未確認。",
+   "confidence": "有力",
+   "open_questions": [
+    "Vol.12 の発行日（2001年後半とみられるが未確認）",
+    "基本ルールか大会レギュレーションか",
+    "「30 枚ずつ」が 60 枚デッキの場合だけか（ハーフデッキでは？）"
+   ]
+  },
+  {
+   "id": "MIX-OLD-TRAINER-LIMIT",
+   "category": "tournament_regulation",
+   "region": "JP",
+   "title": "旧裏のトレーナーカードの枚数制限",
+   "after": "旧裏のトレーナーズカードはデッキに 10 枚まで",
+   "notes": [
+    "旧裏 wiki「当時のルール」を要約した検索結果に一度だけ出てきた記述で、どの大会・どの版の規定かはわからない。",
+    "別の検索では「トレーナーカードの具体的な枚数制限は見つからなかった」という要約も返っている。"
+   ],
+   "evidence": [
+    {
+     "source": "J1",
+     "kind": "search_summary",
+     "detail": "旧裏のトレーナーズカードはデッキに10枚まで"
+    }
+   ],
+   "verification": "本文・原本とも未確認。",
+   "confidence": "未確認",
+   "open_questions": [
+    "適用された大会と期間",
+    "サポーターとして扱う旧裏のトレーナーも数に入るか",
+    "出典（『トレーナーズ』の号）"
+   ]
+  },
+  {
+   "id": "MIX-HALF-DECK",
+   "category": "basic_rule",
+   "region": "JP",
+   "title": "ハーフデッキ（30 枚）の対戦",
+   "effective_from": "2001",
+   "after": "デッキ 30 枚、同じ名前のカードは 2 枚まで（基本エネルギーを除く）、サイド 3 枚",
+   "notes": [
+    "★VS のハーフデッキ（2001-07）、ポケモンカードe のスターターパック（30 枚、2001-12）など、2001年から 30 枚の商品が出ている [X54][J25]。",
+    "2001年夏のグループタッグマッチ（サイドイベント）のレギュレーションは 30 枚・同名 2 枚・サイド 3 枚・殿堂ランク合計 4 [J26]。",
+    "なぞのばしょは「この時期はハーフデッキという通常の半分の枚数で対戦するルールもありました（サイドの枚数も3枚となる）」と書く [J25]。"
+   ],
+   "evidence": [
+    {
+     "source": "J26",
+     "kind": "secondary_direct",
+     "detail": "グループタッグマッチのレギュレーション"
+    },
+    {
+     "source": "J25",
+     "kind": "secondary_direct",
+     "detail": "ハーフデッキの説明"
+    },
+    {
+     "source": "X54",
+     "kind": "secondary_direct",
+     "detail": "★VS のハーフデッキ"
+    }
+   ],
+   "verification": "当時のルールブックとは照合していない。",
+   "confidence": "有力",
+   "open_questions": [
+    "ハーフデッキの基本ルール（ベンチの数、制限時間など）の原文"
+   ]
+  },
+  {
+   "id": "MIX-SPECIAL-CONDITIONS",
+   "category": "basic_rule",
+   "region": "JP",
+   "title": "「特殊状態」という区分と「やけど」の導入",
+   "effective_from": "2001-07-19",
+   "before": "旧裏期は「どく・ねむり・マヒ・こんらん」を個別に書き、やけどはない（neo 第1弾のマグマラシの「くろこげマーカー」だけ）",
+   "after": "「特殊状態」の区分ができ、「やけど」が加わる",
+   "notes": [
+    "Bulbapedia は、★VS（2001-07-19）が特殊状態の区分とやけどを導入したとする [X54]。英語版では Expedition（2002年）から [X54]。",
+    "なぞのばしょは、ポケモンカードe（2001-12）の「いくつかのルール追加」として、やけどを『トレーナーズ』Vol.13 p.5 を出典に挙げる [J25]。★VS で先に入ったこととは矛盾しない。",
+    "やけどの処理: 当時は「ポケモンチェックごとにコインを投げ、ウラのときだけダメージカウンターを 2 個のせる。コインで回復はしない」とする現代の解説がある（検索結果の要約）[J31]。"
+   ],
+   "evidence": [
+    {
+     "source": "X54",
+     "kind": "secondary_direct",
+     "detail": "Pokémon VS (TCG)・Special Condition (TCG)"
+    },
+    {
+     "source": "J25",
+     "kind": "secondary_direct",
+     "detail": "やけど",
+     "cites": [
+      "P6"
+     ]
+    },
+    {
+     "source": "J31",
+     "kind": "search_summary",
+     "detail": "やけどの処理（2003年1月時点のルールを再現した店舗ルール）"
+    }
+   ],
+   "verification": "当時のルールブックの原文は未確認。",
+   "confidence": "有力",
+   "open_questions": [
+    "★VS のルールでのやけどの処理の原文",
+    "ポケモンチェックの処理順（どく・やけど・ねむり・マヒ）の当時の規定"
+   ]
+  },
+  {
+   "id": "MIX-SUPPORTER-INTRO",
+   "category": "basic_rule",
+   "region": "JP",
+   "title": "サポーターの導入",
+   "effective_from": "2001-09（P プロモのマサキ）／2001-10-20（★web）",
+   "before": "トレーナーカードは 1 番に何枚でも使える",
+   "after": "サポーターは自分の番に 1 枚だけ。トレーナーカードの一種",
+   "notes": [
+    "日本で最初のサポーターは『トレーナーズ』Vol.13 の付録の P プロモ「マサキ」（009/P）で、★web が最初の弾 [X54][X55]。",
+    "なぞのばしょはポケモンカードe のルール追加として紹介している（出典『トレーナーズ』Vol.13 p.5）[J25]。",
+    "英語版では Expedition（2002年）から [X54]。"
+   ],
+   "evidence": [
+    {
+     "source": "X54",
+     "kind": "secondary_direct",
+     "detail": "Supporter card (TCG)・Pokémon Web (TCG)"
+    },
+    {
+     "source": "X55",
+     "kind": "secondary_direct",
+     "detail": "009/P"
+    },
+    {
+     "source": "J25",
+     "kind": "secondary_direct",
+     "detail": "サポーター",
+     "cites": [
+      "P6"
+     ]
+    }
+   ],
+   "verification": "原本は未確認。ポケモンカードe の時点でサポーターがあったことは 2 資料で一致するが、最初が 009/P と ★web だとするのは Bulbapedia だけ。",
+   "confidence": "有力",
+   "open_questions": [
+    "当時のサポーターの細則（場に置いて番の終わりにトラッシュするか）の日本語の原文"
+   ]
+  },
+  {
+   "id": "MIX-SUPPORTER-ERRATA",
+   "category": "official_errata",
+   "region": "JP",
+   "title": "旧裏のトレーナー 15 種をサポーターとして扱う",
+   "announced": "2002-01-05（『トレーナーズ』Vol.14。発行日は検索結果の要約による）",
+   "effective_from": "2002-03-09（バトルロード スプリング★2002。これより前から適用されたかは未確認）",
+   "applies_to": {
+    "events": [
+     "EV-2002-TRAINERS14",
+     "EV-2002-BR-SPRING",
+     "EV-2002-BR-SUMMER"
+    ]
+   },
+   "before": "印刷どおりトレーナーカード（1 番に何枚でも使える）",
+   "after": "サポーターとして扱う（自分の番に 1 枚だけ）",
+   "cards_from": "supporter",
+   "notes": [
+    "Bulbapedia は「日本だけ」のエラッタとして 15 種を挙げ、出典を『トレーナーズ』Vol.14 p.25 とする [X52]。",
+    "なぞのばしょの殿堂入りカードの記事は、2002年1月発表のリスト（バトルロード スプリング★2002 で採用）に「サポーターカード適用カード」として同じ 15 種を載せている [J23]。2 つの資料の 15 種は一致する。",
+    "このため、それまで殿堂入りだったミニスカート・にせオーキドの逆襲・ロケット団のワナ・カスミのいかりが殿堂入りから外れた [J23]。",
+    "Bulbapedia によると、マサキ・ロケット団のおねーさん・マサキの転送装置は、日本でポケモンカードe 期の書き方の再録が出ている [X52]（★web のロケット団のおねーさん・マサキの転送装置はサポーター [X54]）。",
+    "英語版ではこのエラッタは出ていない（旧裏期のトレーナーは英語版ではトレーナーのまま）[X52]。"
+   ],
+   "evidence": [
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "Introduction of Supporter cards（In Japan only）",
+     "cites": [
+      "P7"
+     ]
+    },
+    {
+     "source": "J23",
+     "kind": "secondary_direct",
+     "detail": "2002年1月発表の殿堂入りカード一覧の「サポーターカード適用カード」"
+    }
+   ],
+   "verification": "『トレーナーズ』Vol.14 の原本は未確認。2 つの独立した二次資料で 15 種が一致。",
+   "confidence": "確実",
+   "open_questions": [
+    "正式な適用開始日（Vol.14 の発行日か、大会からか）",
+    "大会以外のふだんの対戦でも適用されたか",
+    "ジュニア・シニアの部（新裏だけの部）にも関係するか"
+   ]
+  },
+  {
+   "id": "MIX-POWER-SPLIT",
+   "category": "basic_rule",
+   "region": "JP",
+   "title": "特殊能力（ポケモンパワー）がポケパワーとポケボディーに分かれる",
+   "effective_from": "2001-10-20（★web）",
+   "before": "「特殊能力」（英語版の Pokémon Power）",
+   "after": "使うときに宣言するもの = ポケパワー、自動的にはたらくもの = ポケボディー",
+   "notes": [
+    "Bulbapedia は ★web が最初に分けたとする [X54]。なぞのばしょはポケモンカードe のルール追加として紹介（出典『トレーナーズ』Vol.13 p.5）[J25]。",
+    "英語版では Expedition（2002年）から。英語版では、ポケパワーとポケボディーはポケモンパワーの一種とされた（WotC の裁定、2002-09-05）[X54]。"
+   ],
+   "evidence": [
+    {
+     "source": "X54",
+     "kind": "secondary_direct",
+     "detail": "Pokémon Web (TCG)・Pokémon Power (TCG)"
+    },
+    {
+     "source": "J25",
+     "kind": "secondary_direct",
+     "detail": "特殊能力",
+     "cites": [
+      "P6"
+     ]
+    }
+   ],
+   "verification": "原本は未確認。ポケモンカードe の時点でこの区分があったことは 2 資料で一致するが、★web からとするのは Bulbapedia だけ。",
+   "confidence": "有力",
+   "open_questions": []
+  },
+  {
+   "id": "MIX-POWER-ERRATA",
+   "category": "official_errata",
+   "region": "JP",
+   "title": "旧裏・neo の特殊能力を、ポケパワーかポケボディーとして扱う",
+   "announced": "2002-05-24（公式サイトの Q&A。日付は Bulbapedia の引用による）",
+   "effective_from": "未確認",
+   "applies_to": {
+    "events": [
+     "EV-2002-QA-POWERS"
+    ]
+   },
+   "before": "印刷どおり「特殊能力」",
+   "after": "ここに挙げたカードはポケボディー、それ以外のカードの特殊能力はすべてポケパワーとして扱う",
+   "cards_from": "poke_body",
+   "notes": [
+    "Bulbapedia は、日本だけのエラッタとして、ポケボディーになるカードの一覧を挙げ、それ以外はポケパワーになったとする。出典は公式サイトの「ポケモンカードeシリーズ以前の特殊能力 Q&A」（2002-05-24。Internet Archive の 2005-10-18 の保存）[X52]。",
+    "ポケボディーになったのは、宣言せずに常にはたらく効果（使うかどうかを選べない効果）のもの [X52]。",
+    "特殊能力に作用する効果（ブビィの「モクモク」など）は、ポケパワーとポケボディーの両方に作用する、という裁定も挙げられている [X52]。",
+    "英語版ではこのエラッタは出ていない。ポケパワーまたはポケボディーの片方だけに作用する効果は、古いポケモンパワーには作用しない（WotC、2003-05-22）。両方に作用する効果は作用する（TPCi、2003-10-16）[X52]。",
+    "現代の旧裏対戦の店舗ルールの解説には、「ねむり・マヒ・こんらんのとき使えない」と書かれた特殊能力は、どく・やけどを含むすべての特殊状態で使えない、とするものがある（検索結果の要約）[J31]。当時の公式の根拠は未確認（英語版では WotC が 2002-01-17 に同じ趣旨のルール変更をしている [X52]）。"
+   ],
+   "evidence": [
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "Pokémon Power split（In Japan only）",
+     "cites": [
+      "P10"
+     ]
+    },
+    {
+     "source": "J31",
+     "kind": "search_summary",
+     "detail": "店舗ルールでの読み替えの説明"
+    }
+   ],
+   "verification": "公式 Q&A の原本（アーカイブ）は作成環境から開けず未確認。カードの一覧は Bulbapedia の転記による。",
+   "confidence": "有力",
+   "open_questions": [
+    "Q&A の公表日と、大会での適用開始日",
+    "バトルロード スプリング★2002（Q&A より前）で特殊能力をどう扱ったか",
+    "「ねむり・マヒ・こんらん」の条件をどく・やけどに広げる扱いが日本の公式にあったか"
+   ]
+  },
+  {
+   "id": "MIX-HALL-OF-FAME",
+   "category": "tournament_regulation",
+   "region": "JP",
+   "title": "殿堂入りカード（殿堂ランク）による制限（2001〜2002年）",
+   "announced": "2001-03（最初の発表。『トレーナーズ』Vol.10）",
+   "effective_from": "2001-07（バトル★ネオ サマーロード）",
+   "effective_until": "2002-08（バトルロード サマー★2002 が最後）",
+   "applies_to": {
+    "events": [
+     "EV-2001-SUMMER-ROAD",
+     "EV-2002-BR-SPRING",
+     "EV-2002-BR-SUMMER"
+    ]
+   },
+   "before": "大会ごとに禁止・制限カードを決めていた",
+   "after": "殿堂入りカードに殿堂ランク（☆の数）を付け、デッキに入れる殿堂入りカードのランクの合計を 4 までにする",
+   "notes": [
+    "殿堂入りカードは、PCL（ポケモンカード研究所）が 1996〜2000年の公式大会の入賞デッキを分析して選んだ（『トレーナーズ』Vol.10 p.6 の引用）[J23]。",
+    "なぞのばしょの記事による改定: 2001年3月発表（公式大会ではこのままの内容では使われなかった）、2001年5月発表（バトル★ネオ サマーロード）、2002年1月発表（バトルロード スプリング★2002。サポーター化した 4 種が外れ、突風・パソコン通信などと「まえのウラ面のプロモーションカード」が加わる）、2002年5月発表（バトルロード サマー★2002。☆4 が登場。殿堂レギュレーションが採用された最後の大会）[J23]。",
+    "旧裏 wiki を要約した検索結果は、リストを「2001.12版」（『トレーナーズ』Vol.14）・「2002.05版」（Vol.16）と版の名前で呼んでいる [J1]。なぞのばしょの「2002年1月発表」「2002年5月発表」に当たるとみられる。",
+    "この資料の以前の版（docs/rules/japanese.md）は、改定を「2001年3月・9月・12月」、廃止を「2003年」と書いていた。なぞのばしょの記事を直接読んだ結果と合わないため、両方を並べて残す。",
+    "エネルギー・リムーブ（☆1）と超エネルギーリムーブ（☆2）は、2001年のリストにあり、2002年1月発表のリストにはない [J23]。理由は記事に書かれていない（MIX-ENERGY-REMOVAL を参照）。"
+   ],
+   "evidence": [
+    {
+     "source": "J23",
+     "kind": "secondary_direct",
+     "detail": "殿堂入りカード一覧（2001年3月・5月、2002年1月・5月）",
+     "cites": [
+      "P4"
+     ]
+    },
+    {
+     "source": "J1",
+     "kind": "search_summary",
+     "detail": "2001.12版（Vol.14）、2002.05版（Vol.16）"
+    },
+    {
+     "source": "J9",
+     "kind": "search_summary",
+     "detail": "当時の記録（以前の版で使用）"
+    }
+   ],
+   "verification": "『トレーナーズ』の原本は未確認。リストはなぞのばしょの転記による。",
+   "confidence": "有力",
+   "open_questions": [
+    "2001年9月の改定があったか（以前の版の記述）",
+    "殿堂ランクの合計がデッキ（60 枚）ごとか、ハーフデッキでも同じか",
+    "ジュニア・シニアの部での扱い"
+   ]
+  },
+  {
+   "id": "MIX-BR-SPRING-2002",
+   "category": "tournament_regulation",
+   "region": "JP",
+   "title": "バトルロード スプリング★2002 のレギュレーション",
+   "effective_from": "2002-03-09",
+   "effective_until": "2002-04-07",
+   "applies_to": {
+    "events": [
+     "EV-2002-BR-SPRING"
+    ]
+   },
+   "after": "予選は自分のハーフデッキ。決勝（マスターの部）は殿堂ランク合計 4 まで（2002年1月発表のリスト）とサポーターの扱い",
+   "notes": [
+    "ジュニア（小学生）・シニア（中学生・高校生）・マスター（18 歳以上）の 3 部（検索結果の要約）[J21]。マスターの部はこのシリーズから [X55]。",
+    "予選で初めて自分のデッキを使えるようになり、予選はハーフデッキのルール（30 枚、同名 2 枚、サイド 3 枚）だった（検索結果の要約）[J21][J30]。",
+    "予選のデッキの裏面について、Wikipedia を要約した検索結果は「全リーグ同じで新裏面のカードのみで作られたハーフデッキ」とする。ただし、これがスプリングとサマーのどちらの記述かは要約からははっきりしない [J21]。",
+    "決勝は殿堂ランク合計 4 まで、この大会からサポータールールを採用（検索結果の要約）[J21]。2002年1月発表の殿堂入りカードの一覧にはサポーターとして扱う 15 種がある [J23]。",
+    "地方大会だけで、上位者はサマーの大会の優先出場権を得た [X55][J21]。上位 3 名に No.1〜3 トレーナー（e シリーズのデザイン）[X55]。",
+    "タッチ世代交代！も参加者に配られた（Bulbapedia の個別のページ）[X53]。"
+   ],
+   "evidence": [
+    {
+     "source": "X55",
+     "kind": "secondary_direct",
+     "detail": "日程・会場・部門・賞品"
+    },
+    {
+     "source": "J23",
+     "kind": "secondary_direct",
+     "detail": "殿堂入りカード一覧（2002年1月）"
+    },
+    {
+     "source": "J21",
+     "kind": "search_summary",
+     "detail": "Wikipedia の大会一覧の要約"
+    },
+    {
+     "source": "J30",
+     "kind": "search_summary",
+     "detail": "個人の回想記事（予選はハーフデッキ）"
+    }
+   ],
+   "verification": "公式の開催要項は未確認。",
+   "confidence": "未確認",
+   "open_questions": [
+    "予選のハーフデッキの裏面（新裏だけか、混合可か）",
+    "決勝のデッキ枚数（60 枚か）と、旧裏のカードを使えたか（殿堂入りの一覧に旧裏のカードがあることからは使えたとみられる）",
+    "旧裏のトレーナーの枚数制限（MIX-OLD-TRAINER-LIMIT）が適用されたか",
+    "スリーブの規定"
+   ]
+  },
+  {
+   "id": "MIX-BR-SUMMER-2002",
+   "category": "tournament_regulation",
+   "region": "JP",
+   "title": "バトルロード サマー★2002 のレギュレーション",
+   "effective_from": "2002-07-20",
+   "effective_until": "2002-08-17",
+   "applies_to": {
+    "events": [
+     "EV-2002-BR-SUMMER"
+    ]
+   },
+   "after": "予選は新裏のハーフデッキ。ジュニア・シニアの決勝は新裏だけ。マスタートレーナーズリーグの決勝は旧裏を含む全カード（殿堂ランク合計 4 まで、2002年5月発表のリスト）",
+   "notes": [
+    "予選は全リーグ共通で新裏面のカードだけのハーフデッキ、ジュニア・シニアの決勝トーナメント以降も新裏面だけ、マスタートレーナーズリーグの決勝トーナメント以降は旧裏面を含む全カード（殿堂ランク 4 まで）（Wikipedia を要約した検索結果）[J21]。",
+    "殿堂入りカードは 2002年5月発表のリスト（なぞのばしょ）[J23]。",
+    "決勝（2002-08-17、東京）の上位 4 名に四天王トレーナーのカード [X55]。",
+    "同時開催のポケモンフェスタ2002 に、新ガルーラルールの対戦コーナーと「新ガルーラトーナメント」があった（検索結果の要約）[J29]。KGR-2002-NEW を参照。"
+   ],
+   "evidence": [
+    {
+     "source": "J21",
+     "kind": "search_summary",
+     "detail": "Wikipedia の大会一覧の要約"
+    },
+    {
+     "source": "J23",
+     "kind": "secondary_direct",
+     "detail": "2002年5月発表の殿堂入りカード"
+    },
+    {
+     "source": "X55",
+     "kind": "secondary_direct",
+     "detail": "日程・会場・四天王トレーナー"
+    },
+    {
+     "source": "J29",
+     "kind": "search_summary",
+     "detail": "ポケブーンのイベントページの要約"
+    }
+   ],
+   "verification": "公式の開催要項は未確認。",
+   "confidence": "未確認",
+   "open_questions": [
+    "「マスタートレーナーズリーグ」がマスターの部のことか",
+    "決勝のデッキ枚数・サイド・スリーブの規定"
+   ]
+  },
+  {
+   "id": "MIX-ENERGY-REMOVAL",
+   "category": "printed_text_change",
+   "region": "JP",
+   "title": "エネルギー・リムーブの再録でコイン判定が加わる",
+   "effective_from": "2001-12-01（ポケモンカードe 第1弾の印刷）",
+   "applies_to": {
+    "events": [
+     "EV-2001-E1"
+    ]
+   },
+   "cards": [
+    "PMCG1-070"
+   ],
+   "before": "相手のポケモンのエネルギーカードを 1 枚トラッシュ（コイン判定なし）",
+   "after": "コインを投げて「おもて」なら、相手のポケモンのエネルギーカードを 1 枚トラッシュ（ポケモンカードe 第1弾の版）",
+   "notes": [
+    "Bulbapedia によると、ポケモンカードe 第1弾の版は日本語では同じ名前（英語版は別の名前 Energy Removal 2）で、効果だけが変わった [X56][X52]。",
+    "日本で、それまでの版（コイン判定なし）にもコイン判定を加えるエラッタが出たかは確認できていない。2002年1月発表の殿堂入りカードの一覧からエネルギー・リムーブが外れていることは、それを示唆するが、記事には理由が書かれていない [J23]。",
+    "英語版は別の名前で印刷したため、古い Energy Removal にはエラッタが出ていない [X52]。"
+   ],
+   "evidence": [
+    {
+     "source": "X56",
+     "kind": "secondary_direct",
+     "detail": "Energy Removal 2 (Expedition 140)"
+    },
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "Reprinted cards"
+    },
+    {
+     "source": "J23",
+     "kind": "secondary_direct",
+     "detail": "殿堂入りカード一覧の変化"
+    }
+   ],
+   "verification": "ポケモンカードe 第1弾の版の日本語の印刷文面は未確認（英訳だけ確認）。",
+   "confidence": "有力",
+   "open_questions": [
+    "日本で古い版にエラッタが出たか、出たならいつか",
+    "ポケモンカードe 第1弾の版の正確な日本語名（「エネルギー・リムーブ」か「エネルギーリムーブ」か）と文面"
+   ]
+  },
+  {
+   "id": "MIX-SUPER-ENERGY-REMOVAL",
+   "category": "printed_text_change",
+   "region": "JP",
+   "title": "超エネルギーリムーブの使用禁止と、効果の違う再録",
+   "effective_from": "2002-03-08（ポケモンカードe 第2弾の印刷）",
+   "applies_to": {
+    "events": [
+     "EV-2002-E2"
+    ]
+   },
+   "cards": [
+    "PMCG1-088"
+   ],
+   "before": "自分のエネルギーを 1 枚トラッシュし、相手のポケモン 1 匹のエネルギーを 2 枚までトラッシュ（旧裏の版）",
+   "after": "コインを 2 回投げ、両方おもてなら相手のバトルポケモンのエネルギーをすべてトラッシュ、両方うらなら自分のバトルポケモンのエネルギーをすべてトラッシュ（ポケモンカードe 第2弾の版。英訳による）",
+   "notes": [
+    "Bulbapedia は、旧裏の版が「日本で使用禁止になった」とし、それに代わるものとして第2弾「地図にない町」で同じ日本語名の別の効果のカードが出たとする（英語版は Super Energy Removal 2）。禁止の時期と出典は書かれていない [X56]。",
+    "殿堂入りカードの一覧では、2001年は☆2、2002年1月発表のリストにはない [J23]。"
+   ],
+   "evidence": [
+    {
+     "source": "X56",
+     "kind": "secondary_direct",
+     "detail": "Super Energy Removal (Base Set 79)・Super Energy Removal 2 (Aquapolis 134)"
+    },
+    {
+     "source": "J23",
+     "kind": "secondary_direct",
+     "detail": "殿堂入りカード一覧の変化"
+    }
+   ],
+   "verification": "禁止の公式の告知は未確認。",
+   "confidence": "未確認",
+   "open_questions": [
+    "日本での使用禁止の時期と対象（全大会か）",
+    "第2弾の版の日本語の印刷文面"
+   ]
+  },
+  {
+   "id": "MIX-2003-STANDARD",
+   "category": "tournament_regulation",
+   "region": "JP",
+   "title": "スタンダードルールの開始と旧裏のカードの使用禁止",
+   "effective_from": "2003（バトルロード スプリング★2003）",
+   "applies_to": {
+    "events": [
+     "EV-2003-BR-SPRING"
+    ]
+   },
+   "before": "大会によって旧裏のカードを使えた",
+   "after": "★VS 以降の新裏のカードだけ（最初の「スタン落ち」）",
+   "notes": [
+    "Wikipedia「ポケモンカードゲームの公式大会一覧」を要約した検索結果による。2回目のスタン落ち（ポケモンカードe まで使用禁止）は 2005年のバトルロード スプリング★2005 [J21]。"
+   ],
+   "evidence": [
+    {
+     "source": "J21",
+     "kind": "search_summary",
+     "detail": "Wikipedia の大会一覧の要約"
+    }
+   ],
+   "verification": "公式の告知・開催要項は未確認。",
+   "confidence": "未確認",
+   "open_questions": [
+    "開始日と告知の時期・媒体",
+    "大会以外での旧裏の扱い"
+   ]
+  },
+  {
+   "id": "MIX-ADV-RULES-2003",
+   "category": "basic_rule",
+   "region": "JP",
+   "title": "ADV 期のルール変更",
+   "effective_from": "2003（ADV 第1弾は 2003-01-31。ルールの施行日は未確認）",
+   "applies_to": {
+    "events": [
+     "EV-2003-ADV1"
+    ]
+   },
+   "after": "ポケモンex（きぜつしたらサイドを 2 枚取られる）の登場。ほかに、にげるは 1 番に 1 回、こんらんの失敗は 30 ダメージ、先攻は最初の番に山札を引かない、たねポケモンがいないときの相手の補償は 1 枚、とする資料がある",
+   "notes": [
+    "ポケモンex のルールは、なぞのばしょが『トレーナーズ』Vol.20 p.5 を出典に紹介している [J28]。",
+    "にげる・こんらん・先攻・引き直しの変更は、個人の note を要約した検索結果による。ADV 第1弾の時点か、後のルールブックかは不明 [J15]。",
+    "英語版の同じ変更は EX Ruby & Sapphire（2003年）から [E7]。"
+   ],
+   "evidence": [
+    {
+     "source": "J28",
+     "kind": "secondary_direct",
+     "detail": "ポケモンex",
+     "cites": [
+      "P9"
+     ]
+    },
+    {
+     "source": "J15",
+     "kind": "search_summary",
+     "detail": "ADV 世代のルール変更"
+    },
+    {
+     "source": "E7",
+     "kind": "secondary_direct",
+     "detail": "英語版（以前の版で確認）"
+    }
+   ],
+   "verification": "ADV のルールブックの原文は未確認。",
+   "confidence": "未確認",
+   "open_questions": [
+    "日本のルール変更の施行日（ADV 第1弾か、2003年のルールブック改訂か）"
+   ]
+  },
+  {
+   "id": "EN-2002-STATUS-POWERS",
+   "category": "basic_rule",
+   "region": "EN",
+   "title": "ポケモンパワーが使えなくなる特殊状態の範囲",
+   "announced": "2002-01-17（WotC のチャット）",
+   "before": "「Asleep, Confused, or Paralyzed」のときに使えない",
+   "after": "どく・やけどを含むすべての特殊状態で使えない",
+   "notes": [
+    "Legendary Collection の再録の多くは新しい文面で印刷された [X52]。日本で同じ変更があったかは未確認（MIX-POWER-ERRATA）。"
+   ],
+   "evidence": [
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "Other wording changes"
+    }
+   ],
+   "verification": "WotC のチャットのログは未確認。",
+   "confidence": "有力",
+   "open_questions": []
+  },
+  {
+   "id": "EN-2002-NO-SUPPORTER-ERRATA",
+   "category": "card_ruling",
+   "region": "EN",
+   "title": "英語版では旧裏期のトレーナーをサポーターにしない",
+   "notes": [
+    "Expedition（2002年）でサポーターが入ったが、英語版の Bill・Professor Oak などは Trainer のまま。日本だけのエラッタ（MIX-SUPPORTER-ERRATA）とは扱いが違う [X52]。"
+   ],
+   "evidence": [
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "Introduction of Supporter cards（In Japan only）"
+    }
+   ],
+   "verification": "",
+   "confidence": "有力",
+   "open_questions": []
+  },
+  {
+   "id": "EN-2002-SLOWKING-BAN",
+   "category": "tournament_regulation",
+   "region": "EN",
+   "title": "ヤドキング（Neo Genesis 14）の Modified での禁止",
+   "effective_from": "2002年末",
+   "cards": [
+    "neo1-049"
+   ],
+   "notes": [
+    "英語版は誤訳で「ちえくらべ（Mind Games）」がベンチからも使えたため、2002年末に Modified 2002–03 で禁止された。誤訳を直すエラッタは出ていない（Chaos Gym との関係を明確にするエラッタだけ）[X56][X11][X52]。",
+    "日本版はバトル場にいるときだけ使える（カードの文面どおり）。日本では禁止されていない（殿堂入りカードの一覧にもない）[J23]。"
+   ],
+   "evidence": [
+    {
+     "source": "X56",
+     "kind": "secondary_direct",
+     "detail": "Slowking (Neo Genesis 14)"
+    },
+    {
+     "source": "X11",
+     "kind": "secondary_direct",
+     "detail": "2002-03 Modified format"
+    },
+    {
+     "source": "J23",
+     "kind": "secondary_direct",
+     "detail": "殿堂入りカード一覧"
+    }
+   ],
+   "verification": "",
+   "confidence": "確実",
+   "open_questions": []
+  },
+  {
+   "id": "KGR-1998-GARURA",
+   "category": "tournament_regulation",
+   "region": "JP",
+   "title": "ガルーラルール（1998年）",
+   "effective_from": "1998",
+   "applies_to": {
+    "events": [
+     "EV-1998-GARURA",
+     "EV-1998-FANCLUB5"
+    ]
+   },
+   "cards": [
+    "1stp038"
+   ],
+   "after": "2 人 1 組（親子）のチームで対戦し、「タッチ交代！」を使うとパートナーと交代する",
+   "notes": [
+    "「タッチ交代！」の文面: 「あなたは、あなたのパートナーとタッチ交代する。相手プレイヤーも、相手プレイヤーのパートナーとタッチ交代する。」「(ガルーラルール専用カード)」[N3]。",
+    "Bulbapedia: このカードは 60 枚のデッキの枚数には数えないが、デッキに入れて、ほかのトレーナーと同じように引いて使わないと交代できなかった [X53]。",
+    "なぞのばしょ: 会報 Vol.5 のおまけは「1つのデッキに必要な分の4枚」、記事「親子で遊ぼうポケモンカード」（p.30〜31）で紹介 [J27]。",
+    "検索結果の要約には、試合時間 15 分・サイド 4 枚、第2回大会は「親子もしくは 16 歳以上の歳がはなれたパートナー」とするものがある（未確認）。"
+   ],
+   "evidence": [
+    {
+     "source": "N3",
+     "kind": "secondary_direct",
+     "detail": "タッチ交代！のカードページの文面"
+    },
+    {
+     "source": "X53",
+     "kind": "secondary_direct",
+     "detail": "Touch Change! のページ"
+    },
+    {
+     "source": "J27",
+     "kind": "secondary_direct",
+     "detail": "会報 Vol.5 の紹介",
+     "cites": [
+      "P2"
+     ]
+    }
+   ],
+   "verification": "会報 Vol.5 の原本は未確認。",
+   "confidence": "有力",
+   "open_questions": [
+    "デッキの構成（1 チーム 1 デッキか）、サイド、時間の原文",
+    "タッチ交代！を 4 枚入れる規定の原文"
+   ]
+  },
+  {
+   "id": "KGR-2002-NEW",
+   "category": "tournament_regulation",
+   "region": "JP",
+   "title": "新ガルーラルール（2002年）",
+   "effective_from": "2002-02",
+   "applies_to": {
+    "events": [
+     "EV-2002-NEW-GARURA",
+     "EV-2002-BR-SPRING",
+     "EV-2002-BR-SUMMER"
+    ]
+   },
+   "cards": [
+    "neop048"
+   ],
+   "external_cards": [
+    {
+     "name": "タッチ世代交代!（P プロモ 027/P、新裏）",
+     "ref": "Bulbapedia「Touch Generation Change! (New Garura Parent/Child promo)」",
+     "note": "このリポジトリのデータにない。e リーダーのドットコード付き [X53]"
+    }
+   ],
+   "after": "2 人 1 組。旧裏の 30 枚と新裏の 30 枚を別々の山札として用意し、「タッチ世代交代！」でパートナーと交代して、もう一方の山札で続ける",
+   "notes": [
+    "Bulbapedia: 新ガルーラルールのデッキは、旧裏の 30 枚、新裏の 30 枚と、パートナー交代のための 2 枚のプロモ（旧裏と新裏のタッチ世代交代！）。2002年2月の新ガルーラ親子大会の参加者に配られ、のちにバトルロード スプリング★2002 の参加者にも配られた [X53]。",
+    "タッチ世代交代！（旧裏の版、neop048）の文面（カードの画像で確認）: 「おたがいのプレイヤーは、それぞれ、自分の手札をすべて、もとの山札にもどし、よく切る。その後、それぞれのパートナーは、別の山札からカードを5枚まで引き、タッチ交代して対戦を続ける。(山札にカードをもどすときは、そのカードのウラ面と同じウラ面の山札にもどす。)」「新ガルーラルール専用カード」[N3]。",
+    "バトルロード サマー★2002・ポケモンフェスタ2002 の案内（ポケブーンの転記を要約した検索結果）:「まえのウラ面の30枚ハーフデッキといまのウラ面の30枚ハーフデッキを持ってきてね！」「２人１組で、まえのウラ面の30枚ハーフデッキといまのウラ面の30枚ハーフデッキを作って、チャレンジだ！」[J29]。",
+    "ふつうの混合ルール（MIX-DECK-BACKS）は、1 人が旧裏と新裏を混ぜた 1 つのデッキを使う。新ガルーラルールは、裏面ごとに分けた 2 つの山札をチームで使い、交代のたびに使う山札も替わる。"
+   ],
+   "evidence": [
+    {
+     "source": "X53",
+     "kind": "secondary_direct",
+     "detail": "Touch Generation Change! のページ"
+    },
+    {
+     "source": "X55",
+     "kind": "secondary_direct",
+     "detail": "番号なしプロモ（2002年）・027/P の配布"
+    },
+    {
+     "source": "N3",
+     "kind": "card_image",
+     "detail": "neop048 のカードの画像と文面"
+    },
+    {
+     "source": "J29",
+     "kind": "search_summary",
+     "detail": "ポケブーンのイベントページの要約"
+    }
+   ],
+   "verification": "公式の開催要項・ルールの原文は未確認。カードの文面は画像で確認。",
+   "confidence": "有力",
+   "open_questions": [
+    "新ガルーラ親子大会の日付・会場",
+    "サイドの枚数・制限時間・勝敗の決め方",
+    "対戦開始時にどちらの山札・どちらのプレイヤーから始めるか",
+    "2 つのハーフデッキの構築の制限（同名 2 枚、殿堂など）",
+    "タッチ世代交代！をそれぞれの山札に 1 枚ずつ入れるのか（30 枚に含むか）",
+    "新裏の版（027/P）の日本語の文面が旧裏の版と同じか"
+   ]
+  }
+ ],
+ "errata": [
+  {
+   "id": "ERR-PLUSPOWER",
+   "category": "official_errata",
+   "region": "JP",
+   "title": "プラスパワー（第1弾）",
+   "cards": [
+    "PMCG1-081"
+   ],
+   "announced": "1998（『ポケモンカード・ファンクラブ』会報 Vol.4）",
+   "effective_from": "未確認",
+   "printed_text": "自分の対戦ポケモンの「ワザ」によって与えるダメージを「+10」できる。自分の対戦ポケモンにつけて使い、自分の番の終わりに、はがしてすてる。（なぞのばしょの転記）",
+   "play_text": "相手の対戦ポケモンに与えるダメージだけを +10 する（タマムシシティジムの再録の文面と同じ）",
+   "notes": [
+    "Bulbapedia: 日本の当初の版は、ワザのダメージすべて（自分自身やベンチへのダメージを含む）に +10 がかかった。エラッタで相手の対戦ポケモンへのダメージだけになり、ポケモンジム第2弾（タマムシシティジム、1998-07-25）の再録に新しい文面が印刷された。出典はファンクラブ会報 Vol.4 p.26 [X52]。",
+    "一方、旧裏 wiki と jklacz は「自分のバトルポケモンが受けるダメージにも 10 加わった」と書く [J1][X1]。どちらの意味だったかは資料で食い違う。",
+    "英語版は最初から相手の対戦ポケモンへのダメージだけ [X52]。"
+   ],
+   "evidence": [
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "PlusPower",
+     "cites": [
+      "P1"
+     ]
+    },
+    {
+     "source": "J1",
+     "kind": "search_summary",
+     "detail": "第4版の頃のエラッタ"
+    },
+    {
+     "source": "X1",
+     "kind": "search_summary",
+     "detail": "受けるダメージにも 10"
+    }
+   ],
+   "verification": "会報 Vol.4 の原本は未確認。",
+   "confidence": "有力",
+   "open_questions": [
+    "当初の版の「与えるダメージ」の解釈（自傷・ベンチを含むか、受けるダメージか）",
+    "エラッタの施行日"
+   ]
+  },
+  {
+   "id": "ERR-ENERGY-RETRIEVAL",
+   "category": "official_errata",
+   "region": "JP",
+   "title": "エネルギー回収（第1弾）",
+   "cards": [
+    "PMCG1-076"
+   ],
+   "announced": "1998-06-10（『ポケモンカード・ファンクラブ』会報 Vol.5。Bulbapedia の出典表示による）",
+   "effective_from": "未確認",
+   "printed_text": "手札から1枚のカードをすてることによって、トラッシュから2枚の好きなエネルギーカードをひろって、手札に加えることができる。（カードの画像で確認）",
+   "play_text": "基本エネルギーカードだけを拾える（ジムデッキの再録の文面「あなたのトラッシュから基本エネルギーカードを最大2枚選び、手札に加えてよい」）",
+   "notes": [
+    "Bulbapedia: 日本の当初の版は特殊エネルギーも拾えた。エラッタで基本エネルギーだけになった。出典はファンクラブ会報 Vol.5 p.16 [X52]。旧裏 wiki も、第4版（1998年1月）の頃にファンクラブ会報で「エネルギー回収系の改訂」が告知されたとする（検索結果の要約）[J1]。",
+    "新しい文面の印刷は、ポケモンジム第1弾（1998-04-26）のニビシティジムの版が最初で、会報 Vol.5（1998-06-10）より早い [N3][X46]。",
+    "英語版は最初から basic Energy cards [X52]。",
+    "以前のこの資料は、日本の印刷の文面と英語版の違いだけを書き、エラッタに触れていなかった。"
+   ],
+   "evidence": [
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "Energy Retrieval",
+     "cites": [
+      "P2"
+     ]
+    },
+    {
+     "source": "N1",
+     "kind": "card_image",
+     "detail": "第1弾の版の画像"
+    },
+    {
+     "source": "N3",
+     "kind": "secondary_direct",
+     "detail": "ジムデッキの版の文面"
+    },
+    {
+     "source": "J1",
+     "kind": "search_summary",
+     "detail": "エネルギー回収系の改訂"
+    }
+   ],
+   "verification": "会報 Vol.5 の原本は未確認。",
+   "confidence": "有力",
+   "open_questions": [
+    "エラッタの施行日（会報の発行日か）"
+   ]
+  },
+  {
+   "id": "ERR-SUPER-ENERGY-RETRIEVAL",
+   "category": "official_errata",
+   "region": "JP",
+   "title": "超エネルギー回収（1997年のプロモ）",
+   "cards": [
+    "1stp009"
+   ],
+   "announced": "1998-06-10（『ポケモンカード・ファンクラブ』会報 Vol.5。Bulbapedia の出典表示による）",
+   "effective_from": "未確認",
+   "printed_text": "このカードを使うためには、手札からカードを2枚選んで捨てなければならない。その後、自分のトラッシュから最大4枚のエネルギーカードを選び、手札に加える。ただし、いま捨てたカードは選べない。（カードの画像で確認）",
+   "play_text": "基本エネルギーカードだけを拾える（neo 第1弾の版の文面「あなたのトラッシュから「基本エネルギーカード」を最大4枚選び出し、手札に加える」）",
+   "notes": [
+    "Bulbapedia はエネルギー回収と同じエラッタとして挙げる [X52]。neo 第1弾（2000-02-04）の再録に新しい文面が印刷された [N1]。"
+   ],
+   "evidence": [
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "Super Energy Retrieval",
+     "cites": [
+      "P2"
+     ]
+    },
+    {
+     "source": "N3",
+     "kind": "card_image",
+     "detail": "プロモの画像"
+    },
+    {
+     "source": "N1",
+     "kind": "secondary_direct",
+     "detail": "neo 第1弾の版の文面"
+    }
+   ],
+   "verification": "会報 Vol.5 の原本は未確認。",
+   "confidence": "有力",
+   "open_questions": []
+  },
+  {
+   "id": "ERR-BROCK-NINETALES",
+   "category": "official_errata",
+   "region": "JP",
+   "title": "タケシのキュウコン（リーダーズスタジアム）",
+   "cards": [
+    "PMCG5-019"
+   ],
+   "announced": "『トレーナーズ』Vol.6（日付未確認）",
+   "effective_from": "未確認",
+   "play_text": "「ばける」でのせた進化カードのポケモンの特殊能力は使えない",
+   "notes": [
+    "Bulbapedia: 日本の当初の版は、のせたカードのポケモンパワーを使えた。強すぎるとしてエラッタで削除された。出典は『トレーナーズ』Vol.6 p.58 [X52]。英語版はエラッタ後の内容で印刷 [X52][X37]。"
+   ],
+   "evidence": [
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "Brock's Ninetales",
+     "cites": [
+      "P3"
+     ]
+    },
+    {
+     "source": "X37",
+     "kind": "secondary_direct",
+     "detail": "Brock's Ninetales のページ"
+    }
+   ],
+   "verification": "『トレーナーズ』Vol.6 の原本は未確認。",
+   "confidence": "有力",
+   "open_questions": [
+    "エラッタの施行日"
+   ]
+  },
+  {
+   "id": "TXT-CHARIZARD",
+   "category": "printed_text_change",
+   "region": "JP",
+   "title": "リザードン（第1弾）のエナジーバーン",
+   "cards": [
+    "PMCG1-021"
+   ],
+   "printed_text": "リザードンは、「炎」以外の自分のエネルギーを「炎」エネルギーとして扱うことができる。「こんらん」状態のときには使えない。（なぞのばしょの転記）",
+   "notes": [
+    "1998年2月の「とりかえっこプリーズ」キャンペーンのプロモ（1stp030）は、「自分の番の中で何度でも使える」「このカードについているすべてのエネルギーは「炎」エネルギーになり、自分の番の終わりに元にもどる」「「ねむり・マヒ・こんらん」状態の時、この力は消える」と書き換えられている [N3]。",
+    "Bulbapedia も、日本の第1弾の版とのちのプロモの版で文面が変わり、英語版は新しい文面にもとづく、とする [X56]。",
+    "古い版を新しい文面で使うよう指定する公式エラッタは確認できていない。",
+    "ポケモンカードe 期の読み替えでは、ポケボディーの一覧にないのでポケパワー [X52]。"
+   ],
+   "evidence": [
+    {
+     "source": "N3",
+     "kind": "secondary_direct",
+     "detail": "1stp030 の文面"
+    },
+    {
+     "source": "X56",
+     "kind": "secondary_direct",
+     "detail": "Charizard (Base Set 4)"
+    },
+    {
+     "source": "N1",
+     "kind": "secondary_direct",
+     "detail": "第1弾の版の転記"
+    }
+   ],
+   "verification": "第1弾の版の文面はなぞのばしょの転記（画像との照合はしていない）。",
+   "confidence": "有力",
+   "open_questions": [
+    "こんらんだけを挙げた第1弾の版を、公式にどう扱ったか（エラッタの有無）"
+   ]
+  },
+  {
+   "id": "RUL-SLOWKING",
+   "category": "card_ruling",
+   "region": "JP",
+   "title": "ヤドキング（neo 第1弾）のちえくらべ",
+   "cards": [
+    "neo1-049"
+   ],
+   "printed_text": "この力は、このカードがバトル場にいるとき、使える。（なぞのばしょの転記の一部）",
+   "notes": [
+    "日本版は文面どおりバトル場にいるときだけ使える。英語版の誤訳と禁止は EN-2002-SLOWKING-BAN。",
+    "ポケモンカードe 期の読み替えでは、ポケボディーの一覧にないのでポケパワー [X52]。"
+   ],
+   "evidence": [
+    {
+     "source": "N1",
+     "kind": "secondary_direct",
+     "detail": "文面"
+    },
+    {
+     "source": "X52",
+     "kind": "secondary_direct",
+     "detail": "Pokémon Power split"
+    }
+   ],
+   "verification": "",
+   "confidence": "有力",
+   "open_questions": []
+  }
+ ],
+ "card_lists": {
+  "supporter": {
+   "entry": "MIX-SUPPORTER-ERRATA",
+   "note": "Bulbapedia の Supporter errata の一覧 [X52]。id はその版のカード。同じカードのほかの版も同じ扱いとみられる（下の「同じカードの版」）。",
+   "cards": [
+    {
+     "bulbapedia": "Bill (Expansion Pack)",
+     "ids": [
+      "PMCG1-074"
+     ]
+    },
+    {
+     "bulbapedia": "Professor Oak (Expansion Pack)",
+     "ids": [
+      "PMCG1-077"
+     ]
+    },
+    {
+     "bulbapedia": "Pokémon Trader (Expansion Pack)",
+     "ids": [
+      "PMCG1-093"
+     ]
+    },
+    {
+     "bulbapedia": "Pokémon Breeder (Expansion Pack)",
+     "ids": [
+      "PMCG1-094"
+     ]
+    },
+    {
+     "bulbapedia": "Lass (Expansion Pack)",
+     "ids": [
+      "PMCG1-095"
+     ]
+    },
+    {
+     "bulbapedia": "Imposter Oak's Revenge (Rocket Gang)",
+     "ids": [
+      "PMCG4-059"
+     ]
+    },
+    {
+     "bulbapedia": "Rocket's Sneak Attack (Rocket Gang)",
+     "ids": [
+      "PMCG4-061"
+     ]
+    },
+    {
+     "bulbapedia": "Misty's Wrath (Hanada City Gym)",
+     "ids": [
+      "1stgymd2016"
+     ]
+    },
+    {
+     "bulbapedia": "Secret Mission (Kuchiba City Gym)",
+     "ids": [
+      "1stgymd3016"
+     ]
+    },
+    {
+     "bulbapedia": "Erika (Tamamushi City Gym)",
+     "ids": [
+      "1stgymd4016"
+     ]
+    },
+    {
+     "bulbapedia": "The Rocket's Trap (Leaders' Stadium)",
+     "ids": [
+      "PMCG5-096"
+     ]
+    },
+    {
+     "bulbapedia": "Sabrina's Gaze (Yamabuki City Gym)",
+     "ids": [
+      "1stgymd6019"
+     ]
+    },
+    {
+     "bulbapedia": "Bill's Teleporter (Bulbasaur Deck 20)",
+     "ids": [
+      "1stintro1020"
+     ]
+    },
+    {
+     "bulbapedia": "Professor Elm (Gold, Silver, to a New World...)",
+     "ids": [
+      "neo1-078"
+     ]
+    },
+    {
+     "bulbapedia": "Pokémon Breeder Fields (Awakening Legends)",
+     "ids": [
+      "neo3-056"
+     ]
+    }
+   ]
+  },
+  "poke_body": {
+   "entry": "MIX-POWER-ERRATA",
+   "note": "Bulbapedia の Poké-Body errata の一覧 [X52]。ここにないカードの特殊能力はポケパワー。",
+   "cards": [
+    {
+     "bulbapedia": "Erika's Ivysaur (Challenge from the Darkness)",
+     "ids": [
+      "PMCG6-010"
+     ]
+    },
+    {
+     "bulbapedia": "Dark Ivysaur (Pokémon Card Trainers promo)",
+     "ids": [
+      "neop039"
+     ]
+    },
+    {
+     "bulbapedia": "Metapod (Vending S1)",
+     "ids": [
+      "1stex1003"
+     ]
+    },
+    {
+     "bulbapedia": "Kakuna (Vending S1)",
+     "ids": [
+      "1stex1005"
+     ]
+    },
+    {
+     "bulbapedia": "Erika's Oddish (Tamamushi City Gym)",
+     "ids": [
+      "1stgymd4001"
+     ]
+    },
+    {
+     "bulbapedia": "Dark Vileplume (Rocket Gang)",
+     "ids": [
+      "PMCG4-010"
+     ]
+    },
+    {
+     "bulbapedia": "Erika's Vileplume (Tamamushi City Gym)",
+     "ids": [
+      "1stgymd4004"
+     ]
+    },
+    {
+     "bulbapedia": "Parasect (Awakening Legends)",
+     "ids": [
+      "neo3-005"
+     ]
+    },
+    {
+     "bulbapedia": "Muk (Mystery of the Fossils)",
+     "ids": [
+      "PMCG3-007"
+     ]
+    },
+    {
+     "bulbapedia": "Dark Muk (Rocket Gang)",
+     "ids": [
+      "PMCG4-007"
+     ]
+    },
+    {
+     "bulbapedia": "Koga's Muk (Challenge from the Darkness)",
+     "ids": [
+      "PMCG6-023"
+     ]
+    },
+    {
+     "bulbapedia": "Koffing (Vending S2)",
+     "ids": [
+      "1stex2003"
+     ]
+    },
+    {
+     "bulbapedia": "Meganium (Gold, Silver, to a New World...)",
+     "ids": [
+      "neo1-014"
+     ]
+    },
+    {
+     "bulbapedia": "Heracross (Gold, Silver, to a New World...)",
+     "ids": [
+      "neo1-017"
+     ]
+    },
+    {
+     "bulbapedia": "Blaine's Ninetales (Challenge from the Darkness)",
+     "ids": [
+      "PMCG6-033"
+     ]
+    },
+    {
+     "bulbapedia": "Magcargo (Awakening Legends)",
+     "ids": [
+      "neo3-009"
+     ]
+    },
+    {
+     "bulbapedia": "Dark Magcargo (Darkness, and to Light...)",
+     "ids": [
+      "neo4-023"
+     ]
+    },
+    {
+     "bulbapedia": "Entei (Premium File 2 promo)",
+     "ids": [
+      "neopf2008"
+     ]
+    },
+    {
+     "bulbapedia": "Entei (Premium File 3 promo)",
+     "ids": [
+      "neopf3005"
+     ]
+    },
+    {
+     "bulbapedia": "Misty's Gyarados (Leaders' Stadium)",
+     "ids": [
+      "PMCG5-035"
+     ]
+    },
+    {
+     "bulbapedia": "Omanyte (Mystery of the Fossils)",
+     "ids": [
+      "PMCG3-015"
+     ]
+    },
+    {
+     "bulbapedia": "Articuno (Vending S2)",
+     "ids": [
+      "1stex2012"
+     ]
+    },
+    {
+     "bulbapedia": "Feraligatr (Gold, Silver, to a New World...)",
+     "ids": [
+      "neo1-033"
+     ]
+    },
+    {
+     "bulbapedia": "Dark Feraligatr (Darkness, and to Light...)",
+     "ids": [
+      "neo4-039"
+     ]
+    },
+    {
+     "bulbapedia": "Light Piloswine (Darkness, and to Light...)",
+     "ids": [
+      "neo4-041"
+     ]
+    },
+    {
+     "bulbapedia": "Suicune (Premium File 3 promo)",
+     "ids": [
+      "neopf3006"
+     ]
+    },
+    {
+     "bulbapedia": "Suicune (Awakening Legends)",
+     "ids": [
+      "neo3-021"
+     ]
+    },
+    {
+     "bulbapedia": "Lt. Surge's Electrode (Kuchiba City Gym)",
+     "ids": [
+      "1stgymd3009"
+     ]
+    },
+    {
+     "bulbapedia": "Dark Ampharos (Darkness, and to Light...)",
+     "ids": [
+      "neo4-046"
+     ]
+    },
+    {
+     "bulbapedia": "Raikou (Premium File 3 promo)",
+     "ids": [
+      "neopf3004"
+     ]
+    },
+    {
+     "bulbapedia": "Raikou (Awakening Legends)",
+     "ids": [
+      "neo3-029"
+     ]
+    },
+    {
+     "bulbapedia": "Dugtrio (Asobikata promo)",
+     "ids": [
+      "1stp046"
+     ]
+    },
+    {
+     "bulbapedia": "Dark Dugtrio (Rocket Gang)",
+     "ids": [
+      "PMCG4-043"
+     ]
+    },
+    {
+     "bulbapedia": "Dark Primeape (Rocket Gang)",
+     "ids": [
+      "PMCG4-041"
+     ]
+    },
+    {
+     "bulbapedia": "Brock's Primeape (Leaders' Stadium)",
+     "ids": [
+      "PMCG5-051"
+     ]
+    },
+    {
+     "bulbapedia": "Machamp (Expansion Pack)",
+     "ids": [
+      "PMCG1-057"
+     ]
+    },
+    {
+     "bulbapedia": "Kabuto (Mystery of the Fossils)",
+     "ids": [
+      "PMCG3-035"
+     ]
+    },
+    {
+     "bulbapedia": "Aerodactyl (Mystery of the Fossils)",
+     "ids": [
+      "PMCG3-041"
+     ]
+    },
+    {
+     "bulbapedia": "Aerodactyl (Awakening Legends)",
+     "ids": [
+      "neo3-042"
+     ]
+    },
+    {
+     "bulbapedia": "Sudowoodo (Premium File 3 promo)",
+     "ids": [
+      "neopf3001"
+     ]
+    },
+    {
+     "bulbapedia": "Shuckle (Awakening Legends)",
+     "ids": [
+      "neo3-040"
+     ]
+    },
+    {
+     "bulbapedia": "Sabrina's Alakazam (Challenge from the Darkness)",
+     "ids": [
+      "PMCG6-053"
+     ]
+    },
+    {
+     "bulbapedia": "Sabrina's Gastly (Challenge from the Darkness)",
+     "ids": [
+      "PMCG6-049"
+     ]
+    },
+    {
+     "bulbapedia": "Haunter (Mystery of the Fossils)",
+     "ids": [
+      "PMCG3-030"
+     ]
+    },
+    {
+     "bulbapedia": "Dark Gengar (Darkness, and to Light...)",
+     "ids": [
+      "neo4-066"
+     ]
+    },
+    {
+     "bulbapedia": "Mr. Mime (Pokémon Jungle)",
+     "ids": [
+      "PMCG2-027"
+     ]
+    },
+    {
+     "bulbapedia": "Mr. Mime (Vending S1)",
+     "ids": [
+      "1stex1021"
+     ]
+    },
+    {
+     "bulbapedia": "Team GR's Mewtwo (Pokémon Card GB2 promo)",
+     "ids": [
+      "neop041"
+     ]
+    },
+    {
+     "bulbapedia": "Mew (CoroCoro promo)",
+     "ids": [
+      "1stp005",
+      "1stp012"
+     ]
+    },
+    {
+     "bulbapedia": "Unown C (Darkness, and to Light...)",
+     "ids": [
+      "neo4-057"
+     ]
+    },
+    {
+     "bulbapedia": "Unown D (Crossing the Ruins...)",
+     "ids": [
+      "neo2-025"
+     ]
+    },
+    {
+     "bulbapedia": "Unown K (Awakening Legends)",
+     "ids": [
+      "neo3-030"
+     ]
+    },
+    {
+     "bulbapedia": "Unown M (Crossing the Ruins...)",
+     "ids": [
+      "neo2-027"
+     ]
+    },
+    {
+     "bulbapedia": "Unown N (Premium File 2 promo)",
+     "ids": [
+      "neopf2001"
+     ]
+    },
+    {
+     "bulbapedia": "Unown P (Darkness, and to Light...)",
+     "ids": [
+      "neo4-058"
+     ]
+    },
+    {
+     "bulbapedia": "Unown Z (Darkness, and to Light...)",
+     "ids": [
+      "neo4-060"
+     ]
+    },
+    {
+     "bulbapedia": "Celebi (Awakening Legends)",
+     "ids": [
+      "neo3-036"
+     ]
+    },
+    {
+     "bulbapedia": "Forretress (Crossing the Ruins...)",
+     "ids": [
+      "neo2-044"
+     ]
+    },
+    {
+     "bulbapedia": "Dodrio (Pokémon Jungle)",
+     "ids": [
+      "PMCG2-040"
+     ]
+    },
+    {
+     "bulbapedia": "Ditto (Mystery of the Fossils)",
+     "ids": [
+      "PMCG3-042"
+     ]
+    },
+    {
+     "bulbapedia": "Snorlax (Pokémon Jungle)",
+     "ids": [
+      "PMCG2-047"
+     ]
+    },
+    {
+     "bulbapedia": "Snorlax (Vending S1)",
+     "ids": [
+      "1stex1034"
+     ]
+    },
+    {
+     "bulbapedia": "Rocket's Snorlax (Challenge from the Darkness)",
+     "ids": [
+      "PMCG6-073"
+     ]
+    },
+    {
+     "bulbapedia": "Erika's Dratini (Tamamushi City Gym)",
+     "ids": [
+      "1stgymd4013"
+     ]
+    },
+    {
+     "bulbapedia": "Light Dragonite (Darkness, and to Light...)",
+     "ids": [
+      "neo4-094"
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -85,7 +85,7 @@
 | 73 | ポケモンいれかえ | トレーナー |  |  |  | ● | Switch<br>Base Set 95 | 再録: BS2 123（文面が違う） |
 | 74 | マサキ | トレーナー |  |  |  | ● | Bill<br>Base Set 91 | 再録: BS2 118、LC 108 |
 | 75 | いいきずぐすり | トレーナー |  |  |  | ◆ | Super Potion<br>Base Set 90 | 再録: BS2 117（文面が違う） |
-| 76 | エネルギー回収 | トレーナー |  |  |  | ◆ | Energy Retrieval<br>Base Set 81 | 日英の違い: エネルギー回収（Energy Retrieval）で拾えるエネルギー<br>再録: BS2 110、LC 107 |
+| 76 | エネルギー回収 | トレーナー |  |  |  | ◆ | Energy Retrieval<br>Base Set 81 | 日英の違い: エネルギー回収（Energy Retrieval）で拾えるエネルギー（日本の当初の文面とエラッタ）<br>再録: BS2 110、LC 107 |
 | 77 | オーキドはかせ | トレーナー |  |  |  | ◆ | Professor Oak<br>Base Set 88 | 再録: BS2 116 |
 | 78 | 元気のかけら | トレーナー |  |  |  | ◆ | Revive<br>Base Set 89 | なぞのばしょの表記による。TCGdex の表記は「げんきのかけら」 |
 | 79 | ディフェンダー | トレーナー |  |  |  | ◆ | Defender<br>Base Set 80 | 再録: BS2 109 |
@@ -1260,7 +1260,7 @@
 - 英語: Trade 1 of the other cards in your hand for up to 2 basic Energy cards from your discard pile.
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/pmcg01-071-energykaishu/)
-- **日英の違い（エネルギー回収（Energy Retrieval）で拾えるエネルギー、確度: 確実）** 日本版: 「トラッシュから2枚の好きなエネルギーカードをひろって」と、基本エネルギーに限っていない（カードの画像で確認）。のちのジムデッキ・クイックスターターギフトの再録では「基本エネルギーカードを最大2枚」に改められた ／ 英語版: 「up to 2 basic Energy cards」と、基本エネルギーだけ
+- **日英の違い（エネルギー回収（Energy Retrieval）で拾えるエネルギー（日本の当初の文面とエラッタ）、確度: 有力）** 日本版: 第1弾の印刷は「トラッシュから2枚の好きなエネルギーカードをひろって」と、基本エネルギーに限っていない（カードの画像で確認）。1998年に基本エネルギーだけに限るエラッタが出たとされ（ファンクラブ会報 Vol.5 p.16 [P2] を出典とする Bulbapedia [X52]。旧裏 wiki も同じ頃の「エネルギー回収系の改訂」を挙げる [J1]）、ジムデッキ（1998年4月〜）・クイックスターターギフトの再録は「基本エネルギーカードを最大2枚」と印刷されている。エラッタの施行日は未確認（docs/rules/errata-history.md の ERR-ENERGY-RETRIEVAL） ／ 英語版: 「up to 2 basic Energy cards」と、最初から基本エネルギーだけ（日本のエラッタ後と同じ）
 - 日本版の収録商品: 第1弾拡張パック、スターターパック
 - 日本版の印刷について: 初版はレアリティマークなし
 
@@ -1327,7 +1327,7 @@
 - 英語: Attach PlusPower to your Active Pokémon. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon.
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/pmcg01-085-pluspower/)
-- **日英の違い（プラスパワーの扱い（日本の初期）、確度: 未確認）** 日本版: 初期は自分のバトルポケモンが受けるダメージにも 10 加わり、1998年頃にエラッタされたとする資料がある [J1][X1]。一方、なぞのばしょに載っている文面は「自分の対戦ポケモンの『ワザ』によって与えるダメージを『+10』できる」で、受けるダメージには触れていない [N1] ／ 英語版: 相手のバトルポケモンに与えるダメージだけを 10 増やす
+- **日英の違い（プラスパワーの扱い（日本の初期）、確度: 有力）** 日本版: 日本の当初の扱いは資料で食い違う。(1) Bulbapedia: ワザのダメージすべて（自分自身やベンチへのダメージを含む）に +10 がかかり、エラッタで相手の対戦ポケモンへのダメージだけになった。ポケモンジム第2弾（タマムシシティジム）の再録に新しい文面。出典はファンクラブ会報 Vol.4 p.26 [P1] [X52]。(2) 旧裏 wiki と jklacz: 自分のバトルポケモンが受けるダメージにも 10 加わり、1998年頃にエラッタされた [J1][X1]。なぞのばしょの第1弾の文面は「自分の対戦ポケモンの『ワザ』によって与えるダメージを『+10』できる」[N1]（docs/rules/errata-history.md の ERR-PLUSPOWER） ／ 英語版: 相手のバトルポケモンに与えるダメージだけを 10 増やす
 - 日本版の収録商品: 第1弾拡張パック、スターターパック
 - 日本版の印刷について: 初版はレアリティマークなし
 

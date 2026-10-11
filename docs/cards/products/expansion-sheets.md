@@ -132,10 +132,10 @@ Bulbapedia [X43] によります。場所の名前はゲームの日本語名に
 - おすすめルール（EXTRA RULE）（5 種）: [サイドカード4枚戦](https://pcg-search.com/card/1st/1stex3037.php)、[「こんらん」で20ダメージルール](https://pcg-search.com/card/1st/1stex3038.php)、[3デッキ戦](https://pcg-search.com/card/1st/1stex3039.php)、[ダグトリオチームバトル 3vs3](https://pcg-search.com/card/1st/1stex3040.php)、[デッキ交換戦](https://pcg-search.com/card/1st/1stex3041.php)
 - デッキ（デッキレシピ）（5 種）: [ポケモンタワーのなぞ?](https://pcg-search.com/card/1st/1stex3042.php)、[ポケモンやしきでアッチッチ!](https://pcg-search.com/card/1st/1stex3043.php)、[サファリゾーンでおおあばれ!](https://pcg-search.com/card/1st/1stex3044.php)、[ふたごじまのタッツー](https://pcg-search.com/card/1st/1stex3045.php)、[ハナダ!さいごのどうくつ](https://pcg-search.com/card/1st/1stex3046.php)
 - ジョークカード（ポケモン）（1 種）: [オーヤマのピカチュウ](https://pcg-search.com/card/1st/1stex3047.php)
-- その他（4 種）: [イマクニ?のわるだくみ](https://pcg-search.com/card/1st/1stex3048.php)、（名前の記載なし）、（名前の記載なし）、（名前の記載なし）
+- その他（4 種）: [イマクニ?のわるだくみ](https://pcg-search.com/card/1st/1stex3048.php)、[イマクニ？のコーナー](https://pcg-search.com/card/1st/1stex3049.php)、[ハズレ？](https://pcg-search.com/card/1st/1stex3050.php)、[Pokémon Machine](https://pcg-search.com/card/1st/1stex3051.php)
 - パスカード（2 種）: [イマクニ?のパソコン](https://pcg-search.com/card/1st/1stex3052.php)、[マサキのパソコン](https://pcg-search.com/card/1st/1stex3053.php)
 
-- pcg-search で名前の記載がない 3 種は、Bulbapedia によると「イマクニ？のコーナー」「ハズレ？」「Pokémon Machine」で、どれも手描きのジョークカードです [X43]。**有力**
+- pcg-search で名前の記載がない 3 種（1stex3049〜3051）は、カードの画像と Bulbapedia で「イマクニ？のコーナー」（見出しは「イマクニ？の オレにも言わせろ!! のコーナー」）、「ハズレ？」、「Pokémon Machine」と確かめました。どれも手描きのジョークカードです [N3][X43]。**確実**（pcg-search の転記データは変えずに、`data/curation/other_products.json` の `identified_cards` で名前を付けています）
 - 「マサキのパソコン」は「通信進化キャンペーン」（1998-11-24〜1999-04-30）の応募用カードです。ユンゲラー・ゴーリキー・ゴローン・ゴースト・オムナイトのカードと一緒に送ると、進化後（フーディン・カイリキー・ゴローニャ・ゲンガー・オムスター）のキラのプロモカードがもらえました [X30][X43]。**確実**
 - おすすめルールのカードのうち「サイドカード4枚戦」「『こんらん』で20ダメージルール」は、当時の公式トーナメントで採用されていたと書かれています [N3]。ルールの資料では [日本版のルール](../../rules/japanese.md) で使っています。
 - オーヤマのピカチュウはジョークカードで、ワザのダメージが「10ぐらい」となっています [N3]。
@@ -278,8 +278,8 @@ Bulbapedia [X43] によります。場所の名前はゲームの日本語名に
 | -/- | [ハナダ!さいごのどうくつ](https://pcg-search.com/card/1st/1stex3046.php) | デッキ |  |  |  |  |  |
 | -/- | [オーヤマのピカチュウ](https://pcg-search.com/card/1st/1stex3047.php) | たね | 雷 | 50 |  |  |  |
 | -/- | [イマクニ?のわるだくみ](https://pcg-search.com/card/1st/1stex3048.php) | その他 |  |  |  |  |  |
-| -/- | [-](https://pcg-search.com/card/1st/1stex3049.php) | その他 |  |  |  |  |  |
-| -/- | [-](https://pcg-search.com/card/1st/1stex3050.php) | その他 |  |  |  |  |  |
-| -/- | [-](https://pcg-search.com/card/1st/1stex3051.php) | その他 |  |  |  |  |  |
+| -/- | [イマクニ？のコーナー](https://pcg-search.com/card/1st/1stex3049.php)（名前はカードの画像で確認） | その他 |  |  |  |  |  |
+| -/- | [ハズレ？](https://pcg-search.com/card/1st/1stex3050.php)（名前はカードの画像で確認） | その他 |  |  |  |  |  |
+| -/- | [Pokémon Machine](https://pcg-search.com/card/1st/1stex3051.php)（名前はカードの画像で確認） | その他 |  |  |  |  |  |
 | -/- | [イマクニ?のパソコン](https://pcg-search.com/card/1st/1stex3052.php) | PASS CARD |  |  |  |  |  |
 | -/- | [マサキのパソコン](https://pcg-search.com/card/1st/1stex3053.php) | PASS CARD |  |  |  |  |  |

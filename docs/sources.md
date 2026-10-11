@@ -4,7 +4,9 @@
 
 - ルール関係の文書は、ウェブ検索の結果（検索エンジンが返す要約と抜粋）をもとに書いています。
 - 作成環境のネットワーク制限のため、下記のページの多くは直接開いて読めていません。内容は検索結果の要約で確かめたものです。
-  - 例外: Bulbapedia の X30、X31、X37、X38、X41〜X48 は、2026年10月に MediaWiki の API でページの原文（ウィキテキスト）を取得して確かめました。
+  - 例外: Bulbapedia の X10、X11、X30、X31、X37、X38、X41〜X56 は、2026年10月に MediaWiki の API でページの原文（ウィキテキスト）を取得して確かめました。
+  - なぞのばしょ（J22、J23、J25〜J28、N1）と pcg-search（N3。カードの画像を含む）も、ページを直接取得して読みました。
+  - 旧裏 wiki（wikiwiki.jp）、ポケモンWiki、公式サイト（pokemon-card.com）、Internet Archive、Wikipedia、note などは、2026年10月の作業でも作成環境のネットワーク制限で開けませんでした。これらは検索結果の要約だけで確かめています（回避はしていません）。
   - 引用の文言が原文と一字一句同じとは限りません。
   - 要約の取り違えが含まれている可能性もあります。
 - 公開・引用の前に、各ページを開いて確認してください。特に、旧裏 wiki「当時のルール」[J1] と、WotC の Advanced Rulebook [E4][E5] を優先してください。
@@ -39,6 +41,13 @@
 | J22 | nazonobasho「カメックスメガバトル 1998 レギュレーション」 | https://nazonobasho.com/regulation-kamexmegabattle1998/ |
 | J23 | nazonobasho「2001年 殿堂レギュレーション」 | https://nazonobasho.com/2001dendou-regulation/ |
 | J24 | ポケモンWiki「ポケットモンスターカードゲーム 映画公開記念パック サザンアイランド」（発売日・価格・構成） | https://wiki.xn--rckteqa2e.com/wiki/ポケットモンスターカードゲーム_映画公開記念パック_サザンアイランド |
+| J25 | なぞのばしょ「ポケモンカードe 第1弾」の商品紹介（裏面の変更、新旧の裏面を混ぜるときの方法、特殊能力・サポーター・やけど。『トレーナーズ』Vol.12・13 を出典に挙げる） | https://nazonobasho.com/product-e1/ |
+| J26 | なぞのばしょ「グループタッグマッチ｜バトル★ネオ サマーロード｜レギュレーション」（2001年のハーフデッキ・殿堂ランク） | https://nazonobasho.com/grouptagmatch/ |
+| J27 | なぞのばしょ「ポケモンカード・ファンクラブ」（会報の各号の紹介。Vol.5 のガルーラルールと「タッチ交代！」） | https://nazonobasho.com/pokemoncardfanclub/ |
+| J28 | なぞのばしょ「ポケモンカードゲームADV 第1弾」の商品紹介（ポケモンex。『トレーナーズ』Vol.20 を出典に挙げる） | https://nazonobasho.com/product-adv01/ |
+| J29 | ポケブーン「バトルロード サマー★2002 &『ポケモンフェスタ2002』」（新ガルーラルールの案内の転記。検索結果の要約だけで確認） | https://pokeboon.com/jp/promo_event/battle-road-summer-2002-and-pokemon-festa-2002/ |
+| J30 | ももち氏の note「老害、昔を振り返る その１」（バトルロード スプリング★2002 の予選。検索結果の要約だけで確認） | https://note.com/arcanine/n/nb465d938f3fb |
+| J31 | プレイジム TOKYO の note「【ポケモンカードe】シリーズ現在のルールとの相違点について」（2003年1月時点のルールを再現した店舗のルール。検索結果の要約だけで確認） | https://note.com/play_gym_tokyo/n/nd37499228118 |
 
 ## 英語版（WotC）の公式資料の転載
 
@@ -107,6 +116,30 @@
 | X49 | Bulbapedia「Intro Pack (TCG)」「Original TCG Era merchandise」と、イントロパックの各カードのページ（発売日・内容・デッキリスト・カードの番号・同じカードへの転送） | https://bulbapedia.bulbagarden.net/wiki/Intro_Pack_(TCG) ほか |
 | X50 | Bulbapedia「Intro Pack Neo (TCG)」「Neo TCG Era merchandise」と、イントロパック★neo の各カードのページ | https://bulbapedia.bulbagarden.net/wiki/Intro_Pack_Neo_(TCG) ほか |
 | X51 | Bulbapedia の再録の点検に使ったカードのページ（「Flying Pikachu (Wizards Promo 25)」「Flying Pikachu (ANA promo 99)」「Sabrina's Abra (Gym Challenge 93)」「Jolteon (Jungle 4)」「Grimer (Fossil 48)」「Gastly (Fossil 33)」） | https://bulbapedia.bulbagarden.net/wiki/Flying_Pikachu_(ANA_promo_99) ほか |
+| X52 | Bulbapedia「Errata (TCG)」（日本だけのエラッタ: プラスパワー、エネルギー回収・超エネルギー回収、タケシのキュウコン、旧裏・neo のトレーナーのサポーター化、特殊能力のポケパワー・ポケボディー化。当時の資料の号数・ページを挙げる） | https://bulbapedia.bulbagarden.net/wiki/Errata_(TCG) |
+| X53 | Bulbapedia「Touch Generation Change! (New Garura Parent/Child promo)」「Touch Change! (Garura Parent/Child promo)」「Touch Exchange! (PCG-P Promo 130)」「Kangaskhan (Garura Parent/Child promo)」 | https://bulbapedia.bulbagarden.net/wiki/Touch_Generation_Change!_(New_Garura_Parent/Child_promo) ほか |
+| X54 | Bulbapedia「Pokémon VS (TCG)」「Pokémon Web (TCG)」「Supporter card (TCG)」「Pokémon Power (TCG)」「Special Condition (TCG)」 | https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_VS_(TCG) ほか |
+| X55 | Bulbapedia「P Promotional cards (TCG)」、「Unnumbered Promotional cards (TCG)/1996-2005」の 2002年の項、「No.1 Trainer (Pokémon Card Game Official Tournament promo)」「Elite Four Trainer (Battle Road Summer 2002 finals promo)」（大会の日程・会場・部門） | https://bulbapedia.bulbagarden.net/wiki/No.1_Trainer_(Pok%C3%A9mon_Card_Game_Official_Tournament_promo) ほか |
+| X56 | Bulbapedia「Energy Removal (Base Set 92)」「Energy Removal 2 (Expedition 140)」「Super Energy Removal (Base Set 79)」「Super Energy Removal 2 (Aquapolis 134)」「Charizard (Base Set 4)」「Slowking (Neo Genesis 14)」 | https://bulbapedia.bulbagarden.net/wiki/Energy_Removal_2_(Expedition_140) ほか |
+
+## 当時の公式資料（原本は未確認）
+
+ほかの資料が号数・ページを挙げて引用している、当時の公式資料です。このリポジトリの作成では原本を確認できていません。カッコ内は、その資料を引用している資料です。
+
+| 記号 | 資料 | 内容・引用元 |
+|---|---|---|
+| P1 | 『ポケモンカード・ファンクラブ』会報 Vol.4（メディアファクトリー、1998年）p.26 | プラスパワーのエラッタ（[X52]） |
+| P2 | 『ポケモンカード・ファンクラブ』会報 Vol.5（1998年6月10日） | p.16 エネルギー回収・超エネルギー回収のエラッタ（[X52]）。p.30〜31「親子で遊ぼうポケモンカード」のガルーラルールと、おまけの「タッチ交代！」（[J27]） |
+| P3 | 『ポケモンカード トレーナーズ』Vol.6 p.58 | タケシのキュウコンのエラッタ（[X52]） |
+| P4 | 『トレーナーズ』Vol.10（2001年3月1日とされる）p.6 | PCL の殿堂入りカードの発表（[J23]） |
+| P5 | 『トレーナーズ』Vol.12 p.5 | 裏面の変更と、新旧の裏面のカードを混ぜるときの方法（[J25]） |
+| P6 | 『トレーナーズ』Vol.13（2001年9月とされる）p.5 | 特殊能力（ポケパワー・ポケボディー）、サポーター、やけど（[J25]）。付録の P プロモ「マサキ」009/P（[X55]） |
+| P7 | 『トレーナーズ』Vol.14（2002年1月5日とされる）p.25 | 旧裏・neo のトレーナー 15 種をサポーターとして扱う（[X52]）。ミックスデッキルール・殿堂 2001.12版（旧裏 wiki [J1][J6] の検索結果の要約） |
+| P8 | 『トレーナーズ』Vol.16 | 殿堂 2002.05版（旧裏 wiki [J1] の検索結果の要約） |
+| P9 | 『トレーナーズ』Vol.20 p.5、p.41〜43 | ADV への移行、ポケモンex（[J28]） |
+| P10 | 公式サイト「ポケモンカードeシリーズ以前の特殊能力 Q&A」（2002年5月24日） | 旧裏・neo の特殊能力をポケパワー・ポケボディーとして扱う（[X52]）。Internet Archive の保存: https://web.archive.org/web/20051018170017if_/http://www.pokemon-card.com/play/q_and_a/e_before_qa.html |
+| P11 | 公式 PDF「『クラシックレギュレーション2016』及び、基本ルールの詳細」（2016年9月21日。後年の公式資料） | 2001年のバトル★ネオ サマーロードと同様の基本ルールとする（検索結果の要約）。https://www.pokemon-card.com/20th/assets/docs/classic-regulation.pdf |
+| P12 | 公式サイト「詳しいレギュレーション」（2000年12月20日） | 検索結果に出たが本文は未確認。https://www.pokemon-card.com/info/2000/20001220_001586.html |
 
 ## カードテキストの出典
 
@@ -204,4 +237,5 @@
 - リーダーズスタジアムのエリカのピッピ・エネルギーサーキュレート・お上品攻撃の日英の違い（日本版の文面はポケモンWiki の転記 1 系統だけで確認）
 - なぞのばしょ・ポケモンWiki から取り込んだ効果文の誤字（数値以外は英語版と突き合わせていない。別の商品に再録のあるカードは、pcg-search の転記とワザ名が一致することを確かめた）
 - 拡張パック以外の商品について未確認のこと（[一覧](cards/other-products.md#まだ確認できていないこと)）
+- 2001〜2003年の旧裏・新裏の混合ルール、新ガルーラルール、旧裏カードの読み替え・エラッタの細部（[混合ルール](rules/mixed-2002.md#7-まだ確認できていないこと)、[新ガルーラルール](rules/kangaskhan-2002.md#26-まだ確認できていないこと)、`data/rule_history.json` の `open_questions`）
 - 英語版の区分 Goldenrod Game Corner（カードめくりゲーム、スロットゲーム）の日本語の区分名。なぞのばしょの分類は「トレーナーカード」だけ

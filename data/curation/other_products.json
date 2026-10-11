@@ -1531,13 +1531,14 @@
   ],
   "1stp009": [
    {
-    "kind": "text",
-    "summary": "拾えるエネルギーカードの種類",
-    "ja": "「自分のトラッシュから最大4枚のエネルギーカードを選び」と、基本エネルギーに限っていない（カードの画像で確認）。neo 第1弾の再録では「「基本エネルギーカード」を最大4枚」",
-    "en": "「4 basic Energy cards」と、基本エネルギーだけ",
-    "confidence": "確実",
+    "kind": "errata",
+    "summary": "拾えるエネルギーカードの種類（日本の当初の文面とエラッタ）",
+    "ja": "「自分のトラッシュから最大4枚のエネルギーカードを選び」と、基本エネルギーに限っていない（カードの画像で確認）。1998年に基本エネルギーだけに限るエラッタが出たとされる（ファンクラブ会報 Vol.5 p.16 [P2] を出典とする Bulbapedia [X52]）。neo 第1弾の再録は「「基本エネルギーカード」を最大4枚」",
+    "en": "「4 basic Energy cards」と、基本エネルギーだけ（日本のエラッタ後と同じ）",
+    "confidence": "有力",
     "sources": [
-     "N3"
+     "N3",
+     "X52"
     ]
    }
   ]
@@ -1947,7 +1948,7 @@
     "area_ja": "グレンじま",
     "cards": [
      "1stex3010",
-     "name:イマクニ？のコーナー",
+     "1stex3049",
      "1stex3011",
      "1stex3032"
     ]
@@ -2068,7 +2069,7 @@
     "area_ja": "ハナダのどうくつ",
     "cards": [
      "1stex3027",
-     "name:Pokémon Machine",
+     "1stex3051",
      "1stex3031",
      "1stex3026"
     ]
@@ -2101,7 +2102,7 @@
     "area_ja": "みさきのこや",
     "cards": [
      "1stex3029",
-     "name:ハズレ？",
+     "1stex3050",
      "1stex3023",
      "1stex3028"
     ]
@@ -3914,10 +3915,11 @@
    "distribution_en": "How I Became a Pokémon Card Vol. 5 insert (July 23, 2001)"
   },
   "neop048": {
-   "date": null,
+   "date": "2002-02",
    "distribution": "",
-   "bulbapedia": null,
-   "distribution_en": null
+   "bulbapedia": "Touch Generation Change! [New Garura Parent/Child]",
+   "distribution_en": "New Garura Parent/Child Tournament participation prize",
+   "note": "新ガルーラルール専用カード（旧裏の版）。Bulbapedia は、のちにバトルロード スプリング★2002 の参加者にも配られたとする。新裏の版（P プロモ 027/P）もある [X53][X55]（docs/rules/kangaskhan-2002.md）"
   }
  },
  "reprint_text": {
@@ -3960,7 +3962,7 @@
   },
   "エネルギー回収": {
    "kind": "meaning",
-   "summary": "拾えるカードを「2枚の好きなエネルギーカード」から「基本エネルギーカードを最大2枚」に（英語版と同じに）"
+   "summary": "拾えるカードを「2枚の好きなエネルギーカード」から「基本エネルギーカードを最大2枚」に（英語版と同じに）。この書き換えと同じ内容の公式エラッタが 1998年に出たとされる（docs/rules/errata-history.md の ERR-ENERGY-RETRIEVAL）"
   },
   "元気のかけら": {
    "kind": "wording",
@@ -4016,7 +4018,7 @@
   },
   "超エネルギー回収": {
    "kind": "meaning",
-   "summary": "『ポケットモンスター ファンブック』の付録（1997年）は「最大4枚のエネルギーカード」、neo 第1弾は「「基本エネルギーカード」を最大4枚」（英語版と同じ）"
+   "summary": "『ポケットモンスター ファンブック』の付録（1997年）は「最大4枚のエネルギーカード」、neo 第1弾は「「基本エネルギーカード」を最大4枚」（英語版と同じ）。1998年に同じ内容の公式エラッタが出たとされる（ERR-SUPER-ENERGY-RETRIEVAL）"
   },
   "ラッキースタジアム": {
    "kind": "wording",
@@ -4423,5 +4425,29 @@
  "reprint_checks": {
   "_comment": "同じカードの組の中で数値が食い違ったものの判定。キーはカード名。",
   "ナツメのスリーパー": "pcg-search の転記で「×」が落ちている（pcg-search のカードの画像で「20×」を確認）。**確実**"
+ },
+ "identified_cards": {
+  "_comment": "pcg-search で名前が「-」になっているカードの、確認した名前。pcg-search の転記データ（data/ja_text_pcgsearch.json）は変えずに、ここで名前を付ける。",
+  "1stex3049": {
+   "name": "イマクニ？のコーナー",
+   "printed_title": "イマクニ？の オレにも言わせろ!! のコーナー",
+   "bulbapedia": "Imakuni?'s Corner",
+   "evidence": "pcg-search のカードの画像（見出しの文字）と Bulbapedia の拡張シート第3弾の構成 [N3][X43]",
+   "confidence": "確実"
+  },
+  "1stex3050": {
+   "name": "ハズレ？",
+   "printed_title": "ハズレ？",
+   "bulbapedia": "Lose?",
+   "evidence": "pcg-search のカードの画像（大きく「ハズレ？」と書かれ、「え・イマクニ？」の署名）と Bulbapedia [N3][X43]",
+   "confidence": "確実"
+  },
+  "1stex3051": {
+   "name": "Pokémon Machine",
+   "printed_title": "（カード名の欄はない。絵の中に「POKEMON MACHINE」、吹き出しに「これがポケモンカードの秘密工場じゃ！」、署名 OOYAMA）",
+   "bulbapedia": "Pokémon Machine",
+   "evidence": "pcg-search のカードの画像と Bulbapedia [N3][X43]",
+   "confidence": "確実"
+  }
  }
 }
