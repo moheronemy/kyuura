@@ -1245,7 +1245,10 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Heroes 106
 
+- 日本語: あなたの山札から「タケシのポケモン」(たねポケモンカードまたは進化カード)を1枚選び出し、相手プレイヤーに見せてから、手札に加える。その後、その山札をよく切る。
 - 英語: Search your deck for a Basic Pokémon or Evolution card with Brock in its name. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward.
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E8%82%B2%E3%81%A6%E6%96%B9)
 
 ### 78. タマムシシティジム / Celadon City Gym
 
@@ -1253,7 +1256,10 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Heroes 107
 
+- 日本語: お互いのプレイヤーは、のぞむなら、自分の番の中で、自分の「エリカのポケモン」についているエネルギーカードを1枚トラッシュして、そのポケモンの「どく・ねむり・マヒ・こんらん」状態を、すべて回復させてもよい。(このスタジアムカードは、バトル場の横に出して使う。別のスタジアムカードが場に出た時、このカードをトラッシュする)
 - 英語: This card stays in play when you play it. Discard this card if another Stadium card comes into play. During each player's turn, that player may choose to discard an Energy card attached to 1 of his or her Pokémon with Erika in its name. If that player does so, that Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned.
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%83%9E%E3%83%A0%E3%82%B7%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B8%E3%83%A0)
 
 ### 79. ニビシティジム / Pewter City Gym
 
@@ -1261,7 +1267,10 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Heroes 115
 
+- 日本語: このスタジアムカードが場にあるかぎり、「タケシのポケモン」が使うワザのダメージは「抵抗力」の影響を受けない。このスタジアムカードは、バトル場の横に出して使う。新しいスタジアムカードが場に出た時、古いスタジアムカードはトラッシュされる。
 - 英語: This card stays in play when you play it. Discard this card if another Stadium card comes into play. Don't apply Resistance to any attacks made by Pokémon with Brock in their names.
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%83%8B%E3%83%93%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B8%E3%83%A0)
 
 ### 80. ハナダシティジム / Cerulean City Gym
 
@@ -1269,7 +1278,10 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Heroes 108
 
+- 日本語: このスタジアムカードが場にあるかぎり、「カスミのポケモン」の「にげる時トラッシュするエネルギーの数」は「-1」される。(0より小さくなることはない)このスタジアムカードは、バトル場の横に出して使う。新しいスタジアムカードが場に出た時、古いスタジアムカードはトラッシュされる。
 - 英語: This card stays in play when you play it. Discard this card if another Stadium card comes into play. Each player pays Colorless less to retreat his or her Pokémon if it has Misty in its name.
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%83%8F%E3%83%8A%E3%83%80%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B8%E3%83%A0)
 
 ### 81. マチスの交渉 / Lt. Surge's Treaty
 
@@ -1277,7 +1289,10 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Heroes 112
 
+- 日本語: お互いにサイドカードを1枚ずつ取るかどうか、相手プレイヤーにたずねる。オーケーなら、お互いのプレイヤーは、それぞれ自分のサイドカードから1枚を選び、取って手札に加える。オーケーでないなら、あなたは山札からカードを1枚引く。
 - 英語: Your opponent chooses 1 of the following: everyone chooses 1 of his or her own Prizes and put it into his or her hand, or you draw a card.
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E4%BA%A4%E6%B8%89)
 
 ### 82. 礼儀作法 / Good Manners
 
@@ -1285,7 +1300,10 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Heroes 111
 
+- 日本語: このカードは、あなたの手札に「たねポケモン」が1枚もない時だけ、使える。相手プレイヤーにあなたの手札を見せる。その後、あなたの山札から「たねポケモン」を1枚選び出し、相手プレイヤーに見せてから、手札に加えてよい。その後、その山札をよく切る。
 - 英語: In order to play this card, you can't have any Basic Pokémon cards in your hand. Show your hand to your opponent, then search your deck for a Basic Pokémon card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E7%A4%BC%E5%84%80%E4%BD%9C%E6%B3%95)
 
 ### 83. エリカ / Erika
 
@@ -1362,7 +1380,10 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Heroes 15・98
 
+- 日本語: 自分の場のすべてのポケモンから、それぞれ1つずつダメージカウンターをとりのぞく。
 - 英語: Remove 1 damage counter from each of your Pokémon that has any damage counters on it.
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7_(%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0))
 
 ### 90. タケシの保護 / Brock's Protection
 
@@ -1370,7 +1391,11 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Challenge 101
 
+- 日本語: このカードは、あなたの場の「タケシのポケモン」につけて使う。(そのポケモンが場をはなれるまで、このカードはついたまま)このカードをつけているポケモンのエネルギーカードは、相手の使うワザや、相手の使うトレーナーカードによっては、はがされない。
 - 英語: Attach Brock's Protection to 1 of your Pokémon with Brock in its name. Energy cards attached to that Pokémon can't be removed by your opponent's attacks or Trainer cards. (This doesn't stop the rest of the attack or Trainer card from working normally.)
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E4%BF%9D%E8%AD%B7)
+- 日本版の収録商品: リーダーズスタジアム
 
 ### 91. 抵抗力低下ジム / Resistance Gym
 
@@ -1378,7 +1403,11 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Challenge 109
 
+- 日本語: すべてのポケモンの「抵抗力」は、20へる。(「抵抗力」が「-30」なら、「-10」になる)(このスタジアムカードは、バトル場の横に出して使う。別のスタジアムカードが場に出た時、このカードをトラッシュする)
 - 英語: This card stays in play after being played. Discard this card if another Stadium card comes into play. Each Pokémon's Resistance is reduced by 20. (If a Pokémon's Resistance is -30, it becomes -10.)
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E6%8A%B5%E6%8A%97%E5%8A%9B%E4%BD%8E%E4%B8%8B%E3%82%B8%E3%83%A0)
+- 日本版の収録商品: リーダーズスタジアム
 
 ### 92. マチス / Lt. Surge
 
@@ -1386,7 +1415,10 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Heroes 17・101
 
+- 日本語: あなたのバトル場にいるポケモンをベンチにもどし、手札から「たねポケモン」を直接バトル場に出す。(あなたのベンチに空きがない時、このカードは使えない)
 - 英語: You can play this card only if you have at least 1 Basic Pokémon card in your hand. Put a Basic Pokémon card from your hand into play as your Active Pokémon. Put your old Active Pokémon onto your Bench. (You can't play this card if your Bench is full.)
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9_(%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0))
 
 ### 93. マチスの秘策 / Lt. Surge's Secret Plan
 
@@ -1394,7 +1426,11 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Challenge 107
 
+- 日本語: あなたは、手札からカードを1枚選び、うらにしてベンチに出してよい。そのカードは「たねポケモン」でなくてもよく、うらになっている限り、「たねポケモン」としてあつかわれる。のぞむなら、あなたの番の中で、あなたはいつでもそのカードをおもてにしてよい。そのカードが「ワザ・特殊能力」を使う時や、「進化・にげる」をする時、また、そのカードが「ダメージや効果」を受ける時も、そのカードをおもてにする。(「おもて」にしたカードが「たねポケモン」でなかったなら、そのカードと、それについているすべてのカードをトラッシュする)
 - 英語: Put 1 card from your hand face down onto your Bench. (You can't play this card if your Bench is full.) Treat that card as a Basic Pokémon as long as it's face down. Flip the card if either player needs to know what it is in order to use an attack, a Pokémon Power, or a Trainer card. Flip the card if it ever uses an attack or Pokémon Power, evolves, retreats, is damaged by an attack, or is otherwise affected by an attack. At any time during your turn, you may flip the card over. When you flip that card over, if it isn't a Basic Pokémon, discard it and all cards attached to it.
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E7%A7%98%E7%AD%96)
+- 日本版の収録商品: リーダーズスタジアム
 
 ### 94. リムーブ禁止ジム / No Removal Gym
 
@@ -1402,7 +1438,11 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Heroes 103
 
+- 日本語: お互いのプレイヤーは、「エネルギーリムーブ」「超エネルギーリムーブ」を使うことができない。ただし、それらを使う時に、自分の手札からカードを2枚選んでトラッシュするなら、使うことができる。(このスタジアムカードは、バトル場の横に出して使う。別のスタジアムカードが場に出た時、このカードをトラッシュする)
 - 英語: This card stays in play when you play it. Discard this card if another Stadium card comes into play. A player must discard 2 cards from his or her hand in order to play an Energy Removal or Super Energy Removal card.
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%83%AA%E3%83%A0%E3%83%BC%E3%83%96%E7%A6%81%E6%AD%A2%E3%82%B8%E3%83%A0)
+- 日本版の収録商品: リーダーズスタジアム
 
 ### 95. ロケット団の特訓ジム / The Rocket's Training Gym
 
@@ -1410,7 +1450,11 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Heroes 104
 
+- 日本語: お互いの対戦ポケモンは、「にげる」時、トラッシュするエネルギーが1つぶん多く必要になる。(このスタジアムカードは、バトル場の横に出して使う。別のスタジアムカードが場に出た時、このカードをトラッシュする)
 - 英語: This card stays in play when you play it. Discard this card if another Stadium card comes into play. Each player pays Colorless more to retreat his or her Active Pokémon.
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%83%AD%E3%82%B1%E3%83%83%E3%83%88%E5%9B%A3%E3%81%AE%E7%89%B9%E8%A8%93%E3%82%B8%E3%83%A0)
+- 日本版の収録商品: リーダーズスタジアム
 
 ### 96. ロケット団のワナ / The Rocket's Trap
 
@@ -1418,7 +1462,11 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 
 英語版: Gym Heroes 19
 
+- 日本語: コインを投げて「おもて」なら、相手の手札から、おもてを見ないで最大3枚を選び、相手の山札にもどす。その後、その山札をよく切る。
 - 英語: Flip a coin. If heads, choose up to 3 cards at random from your opponent's hand (don't look at them). Your opponent shuffles those cards into his or her deck.
+
+- 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%83%AD%E3%82%B1%E3%83%83%E3%83%88%E5%9B%A3%E3%81%AE%E3%83%AF%E3%83%8A)
+- 日本版の収録商品: リーダーズスタジアム
 
 ---
 

@@ -22,7 +22,7 @@ RAW_FILES = {
     '闇そして光へ.json': 'neo4',
 }
 # トレーナーのページに複数の版の説明文があるとき、旧裏の版を選ぶための手がかり
-ERA_HINTS = {'PMCG5': ('PMCG',), 'PMCG6': ('PMCG',), 'neo3': ('neo',), 'neo4': ('neo', '闇、そして光へ')}
+ERA_HINTS = {'PMCG5': ('PMCG', 'リーダーズスタジアム'), 'PMCG6': ('PMCG',), 'neo3': ('neo',), 'neo4': ('neo', '闇、そして光へ')}
 
 
 def pick_text(other, set_id):
