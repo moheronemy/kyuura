@@ -16,12 +16,13 @@ from pathlib import Path
 
 # data/raw のファイル名 → TCGdex の弾 id
 RAW_FILES = {
+    'リーダーズスタジアム.json': 'PMCG5',
     '闇からの挑戦.json': 'PMCG6',
     'めざめる伝説.json': 'neo3',
     '闇そして光へ.json': 'neo4',
 }
 # トレーナーのページに複数の版の説明文があるとき、旧裏の版を選ぶための手がかり
-ERA_HINTS = {'PMCG6': ('PMCG',), 'neo3': ('neo',), 'neo4': ('neo', '闇、そして光へ')}
+ERA_HINTS = {'PMCG5': ('PMCG',), 'PMCG6': ('PMCG',), 'neo3': ('neo',), 'neo4': ('neo', '闇、そして光へ')}
 
 
 def pick_text(other, set_id):

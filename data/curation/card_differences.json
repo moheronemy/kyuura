@@ -124,6 +124,55 @@
    ]
   }
  ],
+ "PMCG5-019": [
+  {
+   "kind": "text",
+   "summary": "ポケモンパワー ばける（Shapeshift）で、のせた進化カードのポケモンパワーを使えるか",
+   "ja": "「(ただし「進化・退化」はできない)」とだけ書かれ、のせた進化カードのポケモンパワーを使えないとは書かれていない。日本では当初、のせたカードのポケモンパワーを使えたため、わるいラフレシアと組み合わせて大会で広く使われ、のちにエラッタされた（時期は未確認）",
+   "en": "「It can't evolve, devolve, or use the Pokémon Power of that Pokémon.」と、ポケモンパワーも使えないと明記（日本のエラッタ後の内容）",
+   "confidence": "確実",
+   "sources": [
+    "N2",
+    "X37"
+   ]
+  }
+ ],
+ "PMCG5-060": [
+  {
+   "kind": "text",
+   "summary": "ワザ つきのちから（Lunar Power）で進化させられるポケモン",
+   "ja": "「自分または自分の控えポケモンを進化させる『進化カード』」と、ワザを使ったピッピ自身も進化させられる",
+   "en": "「a card that evolves from 1 of your Benched Pokémon」と、ベンチのポケモンだけ",
+   "confidence": "有力",
+   "sources": [
+    "N2"
+   ]
+  }
+ ],
+ "PMCG5-067": [
+  {
+   "kind": "text",
+   "summary": "手札にもどせるエネルギーの種類",
+   "ja": "「あなたの場のポケモンについている『基本エネルギーカード』を好きなだけはがし、手札に戻してよい。」と、基本エネルギーに限っている",
+   "en": "「any number of Energy cards」と、特殊エネルギー（無色2個エネルギーなど）も含む",
+   "confidence": "有力",
+   "sources": [
+    "N2"
+   ]
+  }
+ ],
+ "PMCG5-074": [
+  {
+   "kind": "text",
+   "summary": "手札にもどすタイミング",
+   "ja": "「相手の番が終わったら、手札にもどす」と、相手の番のあいだもつけたままにする",
+   "en": "「return Charity to your hand at the end of your turn」と、自分の番の終わりにもどす",
+   "confidence": "有力",
+   "sources": [
+    "N2"
+   ]
+  }
+ ],
  "PMCG6-084": [
   {
    "kind": "print",

@@ -3,7 +3,7 @@
  "description": "旧裏（1996〜2001年）の日本版拡張パック10弾の全カードと、対応する英語版（WotC）カード。スキーマは docs/data-schema.md を参照。",
  "text_availability": {
   "en": "ワザ・ポケモンパワー・トレーナー・特殊エネルギーの英語版の名前と文面は全件収録（PokemonTCG/pokemon-tcg-data）。",
-  "ja": "カード名は収録。ワザ名・ポケモンパワー名・効果文の日本語版（公式の印刷文面）は data/curation/ja_text.json に入れたものだけを収録し、未収録は null。英語からの翻訳は入れていない。"
+  "ja": "カード名は収録。ワザ名・ポケモンパワー名・効果文の日本語版は、なぞのばしょ・ポケモンWiki の転記（出典は各カードの ja_text_source）と data/curation/ja_text.json から収録し、出典にないものは null。英語からの翻訳は入れていない。"
  },
  "cards": [
   {
@@ -26590,7 +26590,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "つばさでうつ",
        "en": "Wing Attack"
       },
       "cost": [
@@ -26609,7 +26609,7 @@
      },
      {
       "name": {
-       "ja": null,
+       "ja": "どくのきば",
        "en": "Poison Fang"
       },
       "cost": [
@@ -26623,7 +26623,7 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、相手を「どく」状態にする。",
        "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned."
       }
      }
@@ -26639,8 +26639,14 @@
      "gym1-74"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%BA%E3%83%90%E3%83%83%E3%83%88LV.11_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 11,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%BA%E3%83%90%E3%83%83%E3%83%88LV.11_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-002",
@@ -26691,7 +26697,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ちょっとすいとる",
        "en": "Blot"
       },
       "cost": [
@@ -26704,13 +26710,13 @@
        "display": "10"
       },
       "text": {
-       "ja": null,
+       "ja": "自分にのっているダメージカウンターを、1つとりのぞく。",
        "en": "If there are any damage counters on Erika's Oddish, remove 1 of them."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "たまにすいとる",
        "en": "Sporadic Sponging"
       },
       "cost": [
@@ -26724,7 +26730,7 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、自分にのっているダメージカウンターを、1つとりのぞく。",
        "en": "If Erika's Oddish has any damage counters on it, flip a coin. If heads, remove 1 of those damage counters."
       }
      }
@@ -26740,8 +26746,14 @@
      "gym1-78"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%8A%E3%82%BE%E3%83%8E%E3%82%AF%E3%82%B5LV.15_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 15,
+    "rarity": "●(C)",
+    "series": "タマムシシティジム エリカ・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%8A%E3%82%BE%E3%83%8E%E3%82%AF%E3%82%B5LV.15_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-003",
@@ -26792,7 +26804,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "へんなこな",
        "en": "Strange Powder"
       },
       "cost": [
@@ -26805,7 +26817,7 @@
        "display": "10"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、相手を「こんらん」状態に、「うら」なら「ねむり」状態にする。",
        "en": "Flip a coin. If heads, the Defending Pokémon is now Confused; if tails, the Defending Pokémon is now Asleep."
       }
      }
@@ -26821,8 +26833,14 @@
      "gym2-70"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%8A%E3%82%BE%E3%83%8E%E3%82%AF%E3%82%B5LV.10_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 10,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%8A%E3%82%BE%E3%83%8E%E3%82%AF%E3%82%B5LV.10_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-004",
@@ -26873,7 +26891,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "はさむ",
        "en": "Irongrip"
       },
       "cost": [
@@ -26892,7 +26910,7 @@
      },
      {
       "name": {
-       "ja": null,
+       "ja": "きけんなほうし",
        "en": "Poison Spore"
       },
       "cost": [
@@ -26902,7 +26920,7 @@
       "cost_total": 2,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、相手を「どく」状態にして、相手の控えポケモン全員に、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。",
        "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned and this attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
       }
      }
@@ -26918,8 +26936,14 @@
      "gym2-71"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%91%E3%83%A9%E3%82%B9_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 17,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%91%E3%83%A9%E3%82%B9_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-005",
@@ -26970,7 +26994,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "へなへなタックル",
        "en": "Careless Tackle"
       },
       "cost": [
@@ -26983,7 +27007,7 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "自分にも10ダメージ。",
        "en": "Erika's Bellsprout does 10 damage to itself."
       }
      }
@@ -26999,8 +27023,14 @@
      "gym1-76"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%9E%E3%83%80%E3%83%84%E3%83%9C%E3%83%9FLV.15_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 15,
+    "rarity": "●(C)",
+    "series": "タマムシシティジム エリカ・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%9E%E3%83%80%E3%83%84%E3%83%9C%E3%83%9FLV.15_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-006",
@@ -27051,7 +27081,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "つるでうつ",
        "en": "Vine Slap"
       },
       "cost": [
@@ -27070,7 +27100,7 @@
      },
      {
       "name": {
-       "ja": null,
+       "ja": "のびるつる",
        "en": "Stretch Vine"
       },
       "cost": [
@@ -27081,7 +27111,7 @@
       "cost_total": 3,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "相手の控えポケモンから1匹を選び、(「弱点・抵抗力」に関係なく)20ダメージ。",
        "en": "If your opponent has any Benched Pokémon, choose 1 of them and this attack does 20 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
       }
      }
@@ -27097,8 +27127,14 @@
      "gym1-79"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A3%E3%83%A9_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 21,
+    "rarity": "●(C)",
+    "series": "タマムシシティジム エリカ・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A3%E3%83%A9_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-007",
@@ -27149,7 +27185,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ねむりのたね",
        "en": "Sleep Seed"
       },
       "cost": [
@@ -27162,13 +27198,13 @@
        "display": "10"
       },
       "text": {
-       "ja": null,
+       "ja": "相手を「ねむり」状態にする。",
        "en": "The Defending Pokémon is now Asleep."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "おつかい",
        "en": "Errand-Running"
       },
       "cost": [
@@ -27178,7 +27214,7 @@
       "cost_total": 2,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、自分の山札から「トレーナーカード」1枚を選び出し、相手に見せてから、手札に加えてよい。その後、その山札をよく切る。",
        "en": "Flip a coin. If heads, you may search your deck for a Trainer card. Show it to your opponent and put it into your hand. Shuffle your deck afterward."
       }
      }
@@ -27194,8 +27230,14 @@
      "gym2-39"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%95%E3%82%B7%E3%82%AE%E3%83%80%E3%83%8D_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 15,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%95%E3%82%B7%E3%82%AE%E3%83%80%E3%83%8D_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-008",
@@ -27255,7 +27297,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "スピードひこう",
        "en": "Dive"
       },
       "cost": [
@@ -27274,7 +27316,7 @@
      },
      {
       "name": {
-       "ja": null,
+       "ja": "かいてんひこう",
        "en": "Spiral Dive"
       },
       "cost": [
@@ -27285,7 +27327,7 @@
       "cost_total": 3,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "相手と相手の控えポケモン全員に、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。",
        "en": "Does 10 damage to each of your opponent's Pokémon. Don't apply Weakness and Resistance."
       }
      }
@@ -27301,8 +27343,14 @@
      "gym1-39"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B4%E3%83%AB%E3%83%90%E3%83%83%E3%83%88_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 30,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B4%E3%83%AB%E3%83%90%E3%83%83%E3%83%88_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-009",
@@ -27356,7 +27404,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ヒーリングかふん",
        "en": "Healing Pollen"
       },
       "cost": [
@@ -27365,13 +27413,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、自分にのっているダメージカウンターを、4つとりのぞく。",
        "en": "Flip a coin. If heads, remove 4 damage counters from Erika's Gloom. If Erika's Gloom has fewer damage counters than that, remove all of them."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ミラクルかふん",
        "en": "Magic Pollen"
       },
       "cost": [
@@ -27386,7 +27434,7 @@
        "display": "30"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、「ねむり・マヒ・こんらん・どく」の中から1つを選び、相手をその状態にする。",
        "en": "Flip a coin. If heads, the Defending Pokémon is now Asleep, Confused, Paralyzed, or Poisoned (your choice)."
       }
      }
@@ -27402,8 +27450,14 @@
      "gym1-45"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%82%AF%E3%82%B5%E3%82%A4%E3%83%8F%E3%83%8ALV.24_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 24,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%82%AF%E3%82%B5%E3%82%A4%E3%83%8F%E3%83%8ALV.24_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-010",
@@ -27454,11 +27508,11 @@
      {
       "kind": "pokemon_power",
       "name": {
-       "ja": null,
+       "ja": "ようぶんきゅうしゅう",
        "en": "Soak Up"
       },
       "text": {
-       "ja": null,
+       "ja": "この力は、自分の番ごとに1回使える。自分の場のポケモンについている「草」エネルギーカードを最大2枚選び、はがしてこのカードにつける。このカードが「ねむり・マヒ・こんらん」状態の時、この力は使えない。",
        "en": "Once during your turn (before your attack), you may take up to 2 Grass Energy cards attached to your other Pokémon and attach them to Erika's Bellsprout. This power can't be used if Erika's Bellsprout is Asleep, Confused, or Paralyzed."
       }
      }
@@ -27466,7 +27520,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "のびるつる",
        "en": "Stretch Vine"
       },
       "cost": [
@@ -27475,7 +27529,7 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "相手の控えポケモンを1匹選び、そのポケモンに、「弱点・抵抗力」に関係なく、10ダメージ。",
        "en": "Choose 1 of your opponent's Benched Pokémon, and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
       }
      }
@@ -27491,8 +27545,14 @@
      "gym2-38"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%9E%E3%83%80%E3%83%84%E3%83%9C%E3%83%9FLV.13_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 13,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%9E%E3%83%80%E3%83%84%E3%83%9C%E3%83%9FLV.13_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-011",
@@ -27546,7 +27606,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "よだれ",
        "en": "Drool"
       },
       "cost": [
@@ -27565,7 +27625,7 @@
      },
      {
       "name": {
-       "ja": null,
+       "ja": "さそってとかす",
        "en": "Flytrap"
       },
       "cost": [
@@ -27579,7 +27639,7 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "ダメージを与える前に、相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。(ダメージは新しい対戦ポケモンに与える。相手に控えがいない時、このワザは使えない)",
        "en": "Before doing damage, choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon. This attack can't be used if your opponent has no Benched Pokémon."
       }
      }
@@ -27595,8 +27655,14 @@
      "gym1-48"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%82%A6%E3%83%84%E3%83%89%E3%83%B3LV.26_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 26,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%82%A6%E3%83%84%E3%83%89%E3%83%B3LV.26_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-012",
@@ -27647,7 +27713,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "リフレクター",
        "en": "Deflector"
       },
       "cost": [
@@ -27656,13 +27722,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "次の相手の番、このカードが受けるダメージは半分(切りすて)になる。(ダメージ以外の効果はそのまま)",
        "en": "During your opponent's next turn, whenever Erika's Exeggcute takes damage, divide that damage in half (rounded down to the nearest 10). (Any other effects still happen.)"
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "タマゴばくだん",
        "en": "Egg Bomb"
       },
       "cost": [
@@ -27676,7 +27742,7 @@
        "display": "40"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「うら」なら、相手へのダメージはなくなり、自分に20ダメージ。",
        "en": "Flip a coin. If tails, this attack does nothing to the Defending Pokémon and Erika's Exeggcute does 20 damage to itself."
       }
      }
@@ -27692,8 +27758,14 @@
      "gym1-43"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%82%BF%E3%83%9E%E3%82%BF%E3%83%9ELV.15_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 15,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%82%BF%E3%83%9E%E3%82%BF%E3%83%9ELV.15_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-013",
@@ -27747,7 +27819,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "サイコエクスチェンジ",
        "en": "Psychic Exchange"
       },
       "cost": [
@@ -27756,13 +27828,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "自分の手札をすべて山札にもどし、山札をよく切る。その後、カードを5枚引いて、手札にする。",
        "en": "Shuffle your hand into your deck, then draw 5 cards."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ふみつけ",
        "en": "Stomp"
       },
       "cost": [
@@ -27777,7 +27849,7 @@
        "display": "30+"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、10ダメージを追加する。",
        "en": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage."
       }
      }
@@ -27793,8 +27865,14 @@
      "gym1-44"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%8A%E3%83%83%E3%82%B7%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 31,
+    "rarity": "◆(U)",
+    "series": "タマムシシティジム エリカ・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%8A%E3%83%83%E3%82%B7%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-014",
@@ -27848,11 +27926,11 @@
      {
       "kind": "pokemon_power",
       "name": {
-       "ja": null,
+       "ja": "ぼうぎょかふん",
        "en": "Pollen Defense"
       },
       "text": {
-       "ja": null,
+       "ja": "このカードがバトル場でワザによるダメージを受けた時、（このカードが「きぜつ」するかしないかにかかわらず）コインを投げ、「おもて」なら、ダメージを与えたポケモンを「こんらん」状態にする。この力は、このカードが「ねむり・マヒ・こんらん」状態でも、必ずはたらく。",
        "en": "If an attack does damage to Erika's Vileplume while it's your Active Pokémon (even if it's Knocked Out), flip a coin. If heads, your opponent's Active Pokémon is now Confused. This power works even while Erika's Vileplume is Asleep, Confused, or Paralyzed."
       }
      }
@@ -27860,7 +27938,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "メガドレイン",
        "en": "Mega Drain"
       },
       "cost": [
@@ -27875,7 +27953,7 @@
        "display": "30"
       },
       "text": {
-       "ja": null,
+       "ja": "相手にダメージを与えたら、与えたダメージの半分（切り上げ）のダメージカウンターを、自分からとりのぞく。",
        "en": "If Erika's Vileplume does damage to the Defending Pokémon (after applying Weakness and Resistance), remove a number of damage counters from Erika's Vileplume equal to half the damage done to the Defending Pokémon (rounded up to the nearest 10). If Erika's Vileplume has fewer damage counters than that, remove all of them."
       }
      }
@@ -27891,8 +27969,14 @@
      "gym1-5"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%A9%E3%83%95%E3%83%AC%E3%82%B7%E3%82%A2_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 34,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%A9%E3%83%95%E3%83%AC%E3%82%B7%E3%82%A2_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-015",
@@ -27946,11 +28030,11 @@
      {
       "kind": "pokemon_power",
       "name": {
-       "ja": null,
+       "ja": "かおりのわな",
        "en": "Fragrance Trap"
       },
       "text": {
-       "ja": null,
+       "ja": "この力は、自分の番ごとに1回使える。コインを投げて「おもて」なら、相手の控えポケモンから1匹を選び、相手の対戦ポケモンと入れ替える。このカードが「ねむり・マヒ・こんらん」状態の時、この力は使えない。",
        "en": "Once during your turn (before your attack), you may flip a coin. If heads, and if your opponent has any Benched Pokémon, choose 1 of them and switch it with his or her Active Pokémon. This power can't be used if Erika's Victreebel is Asleep, Confused, or Paralyzed."
       }
      }
@@ -27958,7 +28042,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "はっぱカッター",
        "en": "Razor Leaf"
       },
       "cost": [
@@ -27989,8 +28073,14 @@
      "gym1-26"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%82%A6%E3%83%84%E3%83%9C%E3%83%83%E3%83%88_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 37,
+    "rarity": "★(R)",
+    "series": "タマムシシティジム エリカ・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%82%A6%E3%83%84%E3%83%9C%E3%83%83%E3%83%88_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-016",
@@ -28047,7 +28137,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "かげぶんしん",
        "en": "Shadow Images"
       },
       "cost": [
@@ -28056,13 +28146,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "これ以降、このカードが相手のワザによるダメージを受ける時、相手プレイヤーはコインを投げる。「うら」なら、このカードはそのダメージを受けない。(ダメージ以外の効果は、そのまま)。このカードがダメージを受けるか、バトル場をはなれた時、この効果は消える。",
        "en": "Whenever Rocket's Scyther is attacked, your opponent flips a coin. If tails, that attack does no damage to Rocket's Scyther. (Any other effects of the attack still happen.) This effect lasts until Rocket's Scyther takes damage (or is Benched or is evolved)."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "こうそくカマ",
        "en": "Blinding Scythe"
       },
       "cost": [
@@ -28093,8 +28183,14 @@
      "gym1-13"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%82%B9%E3%83%88%E3%83%A9%E3%82%A4%E3%82%AF_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 23,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%82%B9%E3%83%88%E3%83%A9%E3%82%A4%E3%82%AF_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-017",
@@ -28145,7 +28241,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "みつめる",
        "en": "Hypnotic Gaze"
       },
       "cost": [
@@ -28154,13 +28250,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "相手を「ねむり」状態にする。",
        "en": "The Defending Pokémon is now Asleep."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ほのおのわ",
        "en": "Fire Ring"
       },
       "cost": [
@@ -28174,7 +28270,7 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "相手に控えポケモンがいれば、1匹を選び、「弱点・抵抗力」に関係なく、10ダメージ。",
        "en": "If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
       }
      }
@@ -28190,8 +28286,14 @@
      "gym2-37"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%83%AD%E3%82%B3%E3%83%B3LV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 16,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%83%AD%E3%82%B3%E3%83%B3LV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-018",
@@ -28242,7 +28344,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ほのお",
        "en": "Flame"
       },
       "cost": [
@@ -28261,7 +28363,7 @@
      },
      {
       "name": {
-       "ja": null,
+       "ja": "でんこうせっか",
        "en": "Quick Attack"
       },
       "cost": [
@@ -28275,7 +28377,7 @@
        "display": "10+"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、20ダメージを追加する。",
        "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
       }
      }
@@ -28291,8 +28393,14 @@
      "gym1-73"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%83%AD%E3%82%B3%E3%83%B3LV.10_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 10,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%83%AD%E3%82%B3%E3%83%B3LV.10_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-019",
@@ -28346,11 +28454,11 @@
      {
       "kind": "pokemon_power",
       "name": {
-       "ja": null,
+       "ja": "ばける",
        "en": "Shapeshift"
       },
       "text": {
-       "ja": null,
+       "ja": "この力は、自分の番ごとに1回だけ使える。手札から「進化カード」を1枚選び、このカードの上にのせる。それ以後、このカードを、のせた「進化カード」のポケモンとしてあつかう。(ただし「進化・退化」はできない)。自分の番に、このカードの上にのっている「進化カード」をトラッシュして、このカードを「タケシのキュウコン」にもどしてもよい。このカードが「ねむり・マヒ・こんらん」状態の時、この「ばける」の力は使えず、このカードは「タケシのキュウコン」にもどる。(のせてあった「進化カード」はトラッシュされる)",
        "en": "Once during your turn (before your attack), you may attach an Evolution card from your hand to Brock's Ninetales. (This doesn't count as evolving Brock's Ninetales.) Treat Brock's Ninetales as if it were that Pokémon instead. It can't evolve, devolve, or use the Pokémon Power of that Pokémon. During your turn, you may discard the Evolution card attached to Brock's Ninetales. This power can't be used if Brock's Ninetales is Asleep, Confused, or Paralyzed. If Brock's Ninetales becomes Asleep, Confused, or Paralyzed, discard all Evolution cards attached to it."
       }
      }
@@ -28358,7 +28466,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "おにび",
        "en": "Will-o'-the-wisp"
       },
       "cost": [
@@ -28380,7 +28488,19 @@
    },
    "trainer": null,
    "energy": null,
-   "jp_en_differences": [],
+   "jp_en_differences": [
+    {
+     "kind": "text",
+     "summary": "ポケモンパワー ばける（Shapeshift）で、のせた進化カードのポケモンパワーを使えるか",
+     "ja": "「(ただし「進化・退化」はできない)」とだけ書かれ、のせた進化カードのポケモンパワーを使えないとは書かれていない。日本では当初、のせたカードのポケモンパワーを使えたため、わるいラフレシアと組み合わせて大会で広く使われ、のちにエラッタされた（時期は未確認）",
+     "en": "「It can't evolve, devolve, or use the Pokémon Power of that Pokémon.」と、ポケモンパワーも使えないと明記（日本のエラッタ後の内容）",
+     "confidence": "確実",
+     "sources": [
+      "N2",
+      "X37"
+     ]
+    }
+   ],
    "notes": [],
    "source_ids": {
     "tcgdex": "PMCG5-019",
@@ -28388,8 +28508,14 @@
      "gym2-3"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%AD%E3%83%A5%E3%82%A6%E3%82%B3%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 30,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%AD%E3%83%A5%E3%82%A6%E3%82%B3%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-020",
@@ -28440,11 +28566,11 @@
      {
       "kind": "pokemon_power",
       "name": {
-       "ja": null,
+       "ja": "ふしちょう",
        "en": "Rebirth"
       },
       "text": {
-       "ja": null,
+       "ja": "この力は、このカードが「きぜつ」した時だけ、使える。このカードをトラッシュからとり出し、手札に加える。このカードが「ねむり・マヒ・こんらん」状態のまま「きぜつ」する時、この力は使えない。",
        "en": "When Rocket's Moltres is Knocked Out, you may return it to your hand after discarding it. This power can't be used if Rocket's Moltres is Asleep, Confused, or Paralyzed when it is Knocked Out."
       }
      }
@@ -28452,7 +28578,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ほのおのかべ",
        "en": "Fire Wall"
       },
       "cost": [
@@ -28467,7 +28593,7 @@
        "display": "40"
       },
       "text": {
-       "ja": null,
+       "ja": "次の相手の番、このカードが相手のワザによるダメージを受けた時、(このカードが「きぜつ」するしないにかかわらず)相手にも10ダメージ。",
        "en": "If an attack does damage to Rocket's Moltres during your opponent's next turn (even if Rocket's Moltres is Knocked Out), Rocket's Moltres attacks your opponent's Active Pokémon for 10 damage. (Apply Weakness and Resistance.)"
       }
      }
@@ -28483,8 +28609,14 @@
      "gym1-12"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%A4%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 26,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%A4%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-021",
@@ -28535,7 +28667,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ちょうのうりょく",
        "en": "ESP"
       },
       "cost": [
@@ -28544,7 +28676,7 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "コインを3枚投げる。「おもて」が1枚なら、山札の上からカードを1枚引いて、手札に加える。「おもて」が2枚なら、相手に20ダメージ。「おもて」が3枚なら相手のワザを1つ選び、それを、自分が持っているワザとして使う。(そのワザに必要なエネルギーがついていなくても、かまわない)",
        "en": "Flip 3 coins. If exactly 1 is heads, draw a card. If exactly 2 are heads, this attack does 20 damage. If all 3 are heads, choose 1 of the Defending Pokémon's attacks. Misty's Psyduck copies that attack except for its Energy costs. (No matter what type the Defending Pokémon is, Misty's Psyduck's type is still Water.)"
       }
      }
@@ -28560,8 +28692,14 @@
      "gym2-90"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%B3%E3%83%80%E3%83%83%E3%82%AFLV.18_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 18,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%B3%E3%83%80%E3%83%83%E3%82%AFLV.18_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-022",
@@ -28612,7 +28750,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "あわあわ",
        "en": "Bubbles"
       },
       "cost": [
@@ -28625,13 +28763,13 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「うら」なら、次の自分の番、このカードは「あわあわ」を使えない。",
        "en": "Flip a coin. If tails, you can't use this attack during your next turn."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ドわすれ",
        "en": "Amnesia"
       },
       "cost": [
@@ -28641,7 +28779,7 @@
       "cost_total": 2,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "相手のワザを1つ選ぶ。次の相手の番、そのポケモンは、そのワザを使えない。",
        "en": "Choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn."
       }
      }
@@ -28657,8 +28795,14 @@
      "gym2-89"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%8B%E3%83%A7%E3%83%AD%E3%83%A2LV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 16,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%8B%E3%83%A7%E3%83%AD%E3%83%A2LV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-023",
@@ -28709,7 +28853,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "アイスバーン",
        "en": "Frostbite"
       },
       "cost": [
@@ -28722,13 +28866,13 @@
        "display": "10"
       },
       "text": {
-       "ja": null,
+       "ja": "このワザを受けた相手は、次の相手の番に「にげる」ことができない。",
        "en": "The Defending Pokémon can't retreat during your opponent's next turn."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "しんきろう",
        "en": "Mirage"
       },
       "cost": [
@@ -28742,7 +28886,7 @@
        "display": "10"
       },
       "text": {
-       "ja": null,
+       "ja": "このワザを受けた相手は、次の相手の番でワザを使う時にコインを投げ、「うら」なら、ワザは失敗する。",
        "en": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
       }
      }
@@ -28758,8 +28902,14 @@
      "gym2-91"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%91%E3%82%A6%E3%83%AF%E3%82%A6LV.14_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 14,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%91%E3%82%A6%E3%83%AF%E3%82%A6LV.14_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-024",
@@ -28810,7 +28960,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "スミをかける",
        "en": "Ink Spurt"
       },
       "cost": [
@@ -28824,7 +28974,7 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、このワザを受けた相手は、それ以後ワザを使うたびにコインを投げ、「うら」ならワザは失敗する。バトル場をはなれたポケモンからは、このワザの効果は消える。",
        "en": "Flip a coin. If heads, whenever the Defending Pokémon tries to attack, your opponent flips a coin. If tails, that attack does nothing. (This effect lasts until the Defending Pokémon evolves or is Benched.)"
       }
      }
@@ -28840,8 +28990,14 @@
      "gym2-87"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%BF%E3%83%83%E3%83%84%E3%83%BCLV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 16,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%BF%E3%83%83%E3%83%84%E3%83%BCLV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-025",
@@ -28892,7 +29048,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "たいあたり",
        "en": "Tackle"
       },
       "cost": [
@@ -28911,7 +29067,7 @@
      },
      {
       "name": {
-       "ja": null,
+       "ja": "えんまく",
        "en": "Smokescreen"
       },
       "cost": [
@@ -28925,7 +29081,7 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "このワザを受けたポケモンは、次の相手の番にワザを使う時にコインを投げ、「うら」ならワザは失敗する。",
        "en": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
       }
      }
@@ -28941,8 +29097,14 @@
      "gym1-86"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%BF%E3%83%83%E3%83%84%E3%83%BCLV.10_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 10,
+    "rarity": "●(C)",
+    "series": "ハナダシティジム カスミ・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%BF%E3%83%83%E3%83%84%E3%83%BCLV.10_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-026",
@@ -28993,7 +29155,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "みだれづき",
        "en": "Fury Attack"
       },
       "cost": [
@@ -29006,13 +29168,13 @@
        "display": "10×"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを2枚投げて「おもて」の数×10のダメージ。",
        "en": "Flip 2 coins. This attack does 10 damage times the number of heads."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ちょうおんぱ",
        "en": "Supersonic"
       },
       "cost": [
@@ -29021,7 +29183,7 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。",
        "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
       }
      }
@@ -29037,8 +29199,14 @@
      "gym1-85"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%88%E3%82%B5%E3%82%AD%E3%83%B3%E3%83%88LV.10_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 10,
+    "rarity": null,
+    "series": "ハナダシティジム カスミ・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%88%E3%82%B5%E3%82%AD%E3%83%B3%E3%83%88LV.10_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-027",
@@ -29089,7 +29257,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "スターブーメラン",
        "en": "Star Boomerang"
       },
       "cost": [
@@ -29102,7 +29270,7 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、このカードと、このカードについている全てのカードを、持ち主の手札にもどす。",
        "en": "Flip a coin. If heads, return Misty's Staryu and all cards attached to it to your hand. (Either way, this attack does its damage.)"
       }
      }
@@ -29118,8 +29286,14 @@
      "gym2-92"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%92%E3%83%88%E3%83%87%E3%83%9E%E3%83%B3LV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 16,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%92%E3%83%88%E3%83%87%E3%83%9E%E3%83%B3LV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-028",
@@ -29170,7 +29344,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "しんだふり",
        "en": "Play Dead"
       },
       "cost": [
@@ -29179,13 +29353,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。",
        "en": "Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Misty's Magikarp."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "はねる",
        "en": "Leap"
       },
       "cost": [
@@ -29214,8 +29388,14 @@
      "gym2-88"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%B3%E3%82%A4%E3%82%AD%E3%83%B3%E3%82%B0_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 5,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%B3%E3%82%A4%E3%82%AD%E3%83%B3%E3%82%B0_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-029",
@@ -29269,7 +29449,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "はかいのうず",
        "en": "Rapids"
       },
       "cost": [
@@ -29283,13 +29463,13 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、相手についているエネルギーカードを1枚選び、トラッシュする。",
        "en": "If the Defending Pokémon has any Energy cards attached to it, flip a coin. If heads, choose 1 of those Energy cards and discard it."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ウォーターパンチ",
        "en": "Water Punch"
       },
       "cost": [
@@ -29304,7 +29484,7 @@
        "display": "30+"
       },
       "text": {
-       "ja": null,
+       "ja": "このカードについている「水」エネルギーの数ぶんコインを投げ、「おもて」の数×10のダメージを追加する。",
        "en": "Flip a number of coins equal to the number of Water Energy attached to Misty's Poliwhirl. This attack does 30 damage plus 10 damage for each heads."
       }
      }
@@ -29320,8 +29500,14 @@
      "gym1-53"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%8B%E3%83%A7%E3%83%AD%E3%82%BE_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 37,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%8B%E3%83%A7%E3%83%AD%E3%82%BE_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-030",
@@ -29372,7 +29558,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "クリスタルビーム",
        "en": "Crystal Beam"
       },
       "cost": [
@@ -29386,7 +29572,7 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、次の相手の番、このワザを受けた相手には、「エネルギーカード」をつけることができない。",
        "en": "Flip a coin. If heads, your opponent can't attach Energy cards to the Defending Pokémon during his or her next turn."
       }
      }
@@ -29402,8 +29588,14 @@
      "gym1-57"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%A1%E3%83%8E%E3%82%AF%E3%83%A9%E3%82%B2LV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 16,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%A1%E3%83%8E%E3%82%AF%E3%83%A9%E3%82%B2LV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-031",
@@ -29457,7 +29649,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "こおりのつぶて",
        "en": "Ice Throw"
       },
       "cost": [
@@ -29471,13 +29663,13 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "このワザを受ける相手が「闘」ポケモンなら、このワザのダメージは2倍になる。",
        "en": "If the Defending Pokémon is Fighting, this attack's base damage is doubled."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "とっしん",
        "en": "Take Down"
       },
       "cost": [
@@ -29493,7 +29685,7 @@
        "display": "60"
       },
       "text": {
-       "ja": null,
+       "ja": "自分にも20ダメージ。",
        "en": "Misty's Dewgong does 20 damage to itself."
       }
      }
@@ -29509,8 +29701,14 @@
      "gym2-54"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%B8%E3%83%A5%E3%82%B4%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 40,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%B8%E3%83%A5%E3%82%B4%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-032",
@@ -29564,7 +29762,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "エクストラビーム",
        "en": "Electro Beam"
       },
       "cost": [
@@ -29578,13 +29776,13 @@
        "display": "40"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「うら」なら、自分についているエネルギーカードを、すべてトラッシュする。",
        "en": "Flip a coin. If tails, discard all Energy cards attached to Misty's Golduck."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "スーパーデストロイ",
        "en": "Super Removal"
       },
       "cost": [
@@ -29594,7 +29792,7 @@
       "cost_total": 2,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、相手と相手の控えポケモン全員から、それぞれエネルギーカードを1枚ずつ選び、トラッシュする。",
        "en": "Flip a coin. If heads, choose 1 Energy card attached to each of your opponent's Pokémon that has any Energy cards and discard those Energy cards."
       }
      }
@@ -29610,8 +29808,14 @@
      "gym2-12"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%B4%E3%83%AB%E3%83%80%E3%83%83%E3%82%AF_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 32,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%B4%E3%83%AB%E3%83%80%E3%83%83%E3%82%AF_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-033",
@@ -29665,11 +29869,11 @@
      {
       "kind": "pokemon_power",
       "name": {
-       "ja": null,
+       "ja": "にげこむ",
        "en": "Flee"
       },
       "text": {
-       "ja": null,
+       "ja": "この力は、このカードがバトル場にいて、ワザによるダメージを受けるたびに1回、使える。自分の控えポケモンがいれば、そのうちの1匹を選び、このカードと入れ替える。ダメージを受ける時にこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
        "en": "If an attack does damage to Misty's Tentacruel while it's your Active Pokémon, you may switch it with 1 of your Benched Pokémon, which prevents all other effects of that attack on Misty's Tentacruel. This power can't be used if Misty's Tentacruel is already Asleep, Confused, or Paralyzed."
       }
      }
@@ -29677,7 +29881,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "クラゲどく",
        "en": "Jellyfish Poison"
       },
       "cost": [
@@ -29693,7 +29897,7 @@
        "display": "30"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、相手を「どく」状態に、「うら」なら「こんらん」状態にする。",
        "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned. If tails, the Defending Pokémon is now Confused."
       }
      }
@@ -29709,8 +29913,14 @@
      "gym1-10"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%89%E3%82%AF%E3%82%AF%E3%83%A9%E3%82%B2_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 30,
+    "rarity": "★(R)",
+    "series": "ハナダシティジム カスミ・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%89%E3%82%AF%E3%82%AF%E3%83%A9%E3%82%B2_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-034",
@@ -29764,7 +29974,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "しっぽのムチ",
        "en": "Tail Snap"
       },
       "cost": [
@@ -29783,7 +29993,7 @@
      },
      {
       "name": {
-       "ja": null,
+       "ja": "きぜつばり",
        "en": "Knockout Needle"
       },
       "cost": [
@@ -29798,7 +30008,7 @@
        "display": "30+"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを2枚投げ、すべて「おもて」なら、60ダメージを追加する。",
        "en": "Flip 2 coins. If both of them are heads, this attack does 30 damage plus 60 more damage. If 1 or both of them are tails, this attack does 30 damage."
       }
      }
@@ -29814,8 +30024,14 @@
      "gym1-9"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%B7%E3%83%BC%E3%83%89%E3%83%A9_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 30,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%B7%E3%83%BC%E3%83%89%E3%83%A9_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-035",
@@ -29875,11 +30091,11 @@
      {
       "kind": "pokemon_power",
       "name": {
-       "ja": null,
+       "ja": "はんこう",
        "en": "Rebellion"
       },
       "text": {
-       "ja": null,
+       "ja": "このカードがワザを使う時、コインを2枚投げる。コインがすべて「うら」なら、そのワザは失敗となり、このカードと、これについているすべてのカードを山札にもどし、その山札をよく切る。この力は、このカードが「こんらん」状態でも、必ずはたらく。",
        "en": "Whenever Misty's Gyarados attacks, flip 2 coins. If both of them are tails, that attack does nothing. Instead, shuffle Misty's Gyarados and all cards attached to it into your deck. (This power works even if Misty's Gyarados is Confused.)"
       }
      }
@@ -29887,7 +30103,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ハイドロクラッシュ",
        "en": "Tidal Wave"
       },
       "cost": [
@@ -29919,8 +30135,14 @@
      "gym2-13"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%AE%E3%83%A3%E3%83%A9%E3%83%89%E3%82%B9_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 42,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%AE%E3%83%A3%E3%83%A9%E3%83%89%E3%82%B9_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-036",
@@ -29971,7 +30193,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "でんこうせっか",
        "en": "Quick Attack"
       },
       "cost": [
@@ -29985,7 +30207,7 @@
        "display": "10+"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、20ダメージを追加する。",
        "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
       }
      }
@@ -30001,8 +30223,14 @@
      "gym2-84"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%83%94%E3%82%AB%E3%83%81%E3%83%A5%E3%82%A6LV.10_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 10,
+    "rarity": "●(C)",
+    "series": "クチバシティジム マチス・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%83%94%E3%82%AB%E3%83%81%E3%83%A5%E3%82%A6LV.10_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-037",
@@ -30053,7 +30281,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "でんきショック",
        "en": "Thundershock"
       },
       "cost": [
@@ -30066,13 +30294,13 @@
        "display": "10"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
        "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "たいあたり",
        "en": "Tackle"
       },
       "cost": [
@@ -30102,8 +30330,14 @@
      "gym1-80"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%B3%E3%82%A4%E3%83%ABLV.12_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 12,
+    "rarity": "●(C)",
+    "series": "クチバシティジム マチス・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%B3%E3%82%A4%E3%83%ABLV.12_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-038",
@@ -30154,7 +30388,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "スピンボール",
        "en": "Spin Ball"
       },
       "cost": [
@@ -30167,13 +30401,13 @@
        "display": "20×"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを1枚投げ、「おもて」の数×20のダメージ。",
        "en": "Flip 1 coin. This attack does 20 damage times the number of heads."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ダブルスピン",
        "en": "Double Spin"
       },
       "cost": [
@@ -30187,7 +30421,7 @@
        "display": "20×"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを2枚投げ、「おもて」の数×20のダメージ。",
        "en": "Flip 2 coins. This attack does 20 damage times the number of heads."
       }
      }
@@ -30203,8 +30437,14 @@
      "gym1-84"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%83%93%E3%83%AA%E3%83%AA%E3%83%80%E3%83%9ELV.12_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 12,
+    "rarity": "●(C)",
+    "series": "クチバシティジム マチス・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%83%93%E3%83%AA%E3%83%AA%E3%83%80%E3%83%9ELV.12_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-039",
@@ -30255,7 +30495,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "はかいでんぱ",
        "en": "Removal Pulse"
       },
       "cost": [
@@ -30268,13 +30508,13 @@
        "display": "10"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、相手についているエネルギーカードを1枚選び、トラッシュさせる。",
        "en": "If the Defending Pokémon has any Energy cards attached to it, flip a coin. If heads, choose 1 of those Energy cards and discard it."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "こんらんでんぱ",
        "en": "Confusion Pulse"
       },
       "cost": [
@@ -30288,7 +30528,7 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。",
        "en": "Flip a coin. If heads, the Defending Pokémon is now Confused."
       }
      }
@@ -30304,8 +30544,14 @@
      "gym1-50"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%B3%E3%82%A4%E3%83%ABLV.10_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 10,
+    "rarity": "◆(U)",
+    "series": "クチバシティジム マチス・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%B3%E3%82%A4%E3%83%ABLV.10_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-040",
@@ -30359,11 +30605,11 @@
      {
       "kind": "pokemon_power",
       "name": {
-       "ja": null,
+       "ja": "エナジーチャージ",
        "en": "Energy Charge"
       },
       "text": {
-       "ja": null,
+       "ja": "この力は、このカードがバトル場にいる時だけ、使える。自分の控えポケモンについている「雷」エネルギーカードを好きなだけはがし、このカードにつける。このカードが「ねむり・マヒ・こんらん」状態の時、この力は使えない。",
        "en": "As often as you like during your turn (before your attack), if Lt. Surge's Magneton is your Active Pokémon, you may take 1 Lightning Energy card attached to 1 of your Pokémon and attach it to Lt. Surge's Magneton. This power can't be used if Lt. Surge's Magneton is Asleep, Confused, or Paralyzed."
       }
      }
@@ -30371,7 +30617,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "メガショック",
        "en": "Mega Shock"
       },
       "cost": [
@@ -30387,7 +30633,7 @@
        "display": "50"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「うら」なら、自分にも20ダメージ。",
        "en": "Flip a coin. If tails, Lt. Surge's Magneton does 20 damage to itself."
       }
      }
@@ -30403,8 +30649,14 @@
      "gym1-8"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%83%AC%E3%82%A2%E3%82%B3%E3%82%A4%E3%83%AB_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 30,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%83%AC%E3%82%A2%E3%82%B3%E3%82%A4%E3%83%AB_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-041",
@@ -30455,7 +30707,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "たいでん",
        "en": "Charge"
       },
       "cost": [
@@ -30464,13 +30716,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "自分のトラッシュに「雷」エネルギーカードがあれば、最大2枚を取り出して、自分につける。",
        "en": "Take up to 2 Lightning Energy cards from your discard pile and attach them to Lt. Surge's Electabuzz."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ほうでん",
        "en": "Discharge"
       },
       "cost": [
@@ -30483,7 +30735,7 @@
        "display": "30×"
       },
       "text": {
-       "ja": null,
+       "ja": "自分についている「雷」エネルギーカードを、すべてトラッシュする。その後、トラッシュした「雷」エネルギーカードの数だけコインを投げ、「おもて」の数×30のダメージ。",
        "en": "Discard all Lightning Energy cards attached to Lt. Surge's Electabuzz in order to use this attack. Flip a number of coins equal to the number of Lightning Energy cards you discarded. This attack does 30 damage times the number of heads."
       }
      }
@@ -30499,8 +30751,14 @@
      "gym1-6"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%A8%E3%83%AC%E3%83%96%E3%83%BCLV.28_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 28,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%A8%E3%83%AC%E3%83%96%E3%83%BCLV.28_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-042",
@@ -30554,7 +30812,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "こうしゅうは",
        "en": "High Voltage"
       },
       "cost": [
@@ -30568,13 +30826,13 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、次の相手の番が終わるまで、相手プレイヤーは「トレーナーカード」を使うことができない。",
        "en": "Flip a coin. If heads, your opponent can't play Trainer cards during his or her next turn."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "いかりのサンダー",
        "en": "Thunder Flare"
       },
       "cost": [
@@ -30589,7 +30847,7 @@
        "display": "30+"
       },
       "text": {
-       "ja": null,
+       "ja": "自分にのっているダメージカウンターの数×10のダメージを追加する。その後、コインを投げて「うら」なら、自分にも30ダメージ。",
        "en": "Does 30 damage plus 10 damage times the number of damage counters on Lt. Surge's Jolteon, then flip a coin. If tails, Lt. Surge's Jolteon does 30 damage to itself."
       }
      }
@@ -30605,8 +30863,14 @@
      "gym2-28"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B9_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 32,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%80%E3%83%BC%E3%82%B9_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-043",
@@ -30663,7 +30927,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "すなじごく",
        "en": "Sand Pit"
       },
       "cost": [
@@ -30677,7 +30941,7 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "このワザを受けた相手は、次の相手の番に「にげる」ことができない。",
        "en": "The Defending Pokémon can't retreat during your opponent's next turn."
       }
      }
@@ -30693,8 +30957,14 @@
      "gym1-72"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%89LV.20_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 20,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%89LV.20_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-044",
@@ -30751,7 +31021,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ふいをつく",
        "en": "Surprise Attack"
       },
       "cost": [
@@ -30764,13 +31034,13 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「うら」なら、このワザは失敗する。",
        "en": "Flip a coin. If tails, this attack does nothing."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ミニじしん",
        "en": "Tremor"
       },
       "cost": [
@@ -30784,7 +31054,7 @@
        "display": "40"
       },
       "text": {
-       "ja": null,
+       "ja": "自分の控えポケモン全員にも、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。",
        "en": "Does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
       }
      }
@@ -30800,8 +31070,14 @@
      "gym2-67"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%83%87%E3%82%A3%E3%82%B0%E3%83%80_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 13,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%83%87%E3%82%A3%E3%82%B0%E3%83%80_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-045",
@@ -30852,7 +31128,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ひまつぶし",
        "en": "Fidget"
       },
       "cost": [
@@ -30861,13 +31137,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "自分の山札をよく切る。",
        "en": "Shuffle your deck."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "からてチョップ",
        "en": "Karate Chop"
       },
       "cost": [
@@ -30881,7 +31157,7 @@
        "display": "40-"
       },
       "text": {
-       "ja": null,
+       "ja": "このワザのダメージは、自分にのっているダメージカウンターの数×10だけ、小さくなる。",
        "en": "Does 40 damage minus 10 damage for each damage counter on Brock's Mankey."
       }
      }
@@ -30897,8 +31173,14 @@
      "gym1-68"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%83%9E%E3%83%B3%E3%82%AD%E3%83%BCLV.12_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 12,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%83%9E%E3%83%B3%E3%82%AD%E3%83%BCLV.12_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-046",
@@ -30949,7 +31231,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "いしなげ",
        "en": "Rock Toss"
       },
       "cost": [
@@ -30962,7 +31244,7 @@
        "display": "10×"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを3枚投げ、「おもて」の数×10のダメージ。",
        "en": "Flip 3 coins. This attack does 10 damage times the number of heads."
       }
      }
@@ -30978,8 +31260,14 @@
      "gym2-68"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%A4%E3%82%B7%E3%83%84%E3%83%96%E3%83%86LV.15_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 15,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%A4%E3%82%B7%E3%83%84%E3%83%96%E3%83%86LV.15_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-047",
@@ -31030,7 +31318,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "たすけをよぶ",
        "en": "Call for Friend"
       },
       "cost": [
@@ -31039,13 +31327,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、「タケシのポケモン」(進化カード以外)を自分の山札から1枚選び出し、自分のベンチに出してよい。その後、その山札をよく切る。(自分のベンチに空きが無い時、このワザは使えない)",
        "en": "Flip a coin. If heads, you may search your deck for a Basic Pokémon card with Brock in its name and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)"
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "スパイラルショット",
        "en": "Hook Shot"
       },
       "cost": [
@@ -31059,7 +31347,7 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "このワザのダメージは、「抵抗力」の影響を受けない。",
        "en": "Don't apply Resistance for this attack. (Any other effects that would happen after applying Resistance still happen.)"
       }
      }
@@ -31075,8 +31363,14 @@
      "gym1-66"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%A4%E3%82%B7%E3%83%84%E3%83%96%E3%83%86LV.13_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 13,
+    "rarity": "●(C)",
+    "series": "ニビシティジム タケシ・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%A4%E3%82%B7%E3%83%84%E3%83%96%E3%83%86LV.13_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-048",
@@ -31127,7 +31421,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "うなりごえ",
        "en": "Bellow"
       },
       "cost": [
@@ -31136,13 +31430,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
        "en": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "いわおとし",
        "en": "Rock Throw"
       },
       "cost": [
@@ -31173,8 +31467,14 @@
      "gym1-69"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%A4%E3%83%AF%E3%83%BC%E3%82%AFLV.41_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 41,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%A4%E3%83%AF%E3%83%BC%E3%82%AFLV.41_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-049",
@@ -31231,7 +31531,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ドリルタックル",
        "en": "Drill Tackle"
       },
       "cost": [
@@ -31245,7 +31545,7 @@
        "display": "70"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを2枚投げ、1つでも「うら」なら、このワザは失敗する。",
        "en": "Flip 2 coins. If 1 or both of them are tails, this attack does nothing."
       }
      }
@@ -31261,8 +31561,14 @@
      "gym1-70"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%9B%E3%83%BC%E3%83%B3LV.29_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 29,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%9B%E3%83%BC%E3%83%B3LV.29_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-050",
@@ -31322,7 +31628,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "スピードスター",
        "en": "Swift"
       },
       "cost": [
@@ -31336,13 +31642,13 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "このワザのダメージは、相手の持っている「弱点・抵抗力・特殊能力・その他の効果」の影響を受けない。",
        "en": "This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "とげボール",
        "en": "Needle Ball"
       },
       "cost": [
@@ -31356,7 +31662,7 @@
        "display": "30"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、相手を「どく」状態にする。",
        "en": "Flip a coin. If heads, the Defending Pokémon is now Poisoned."
       }
      }
@@ -31372,8 +31678,14 @@
      "gym2-36"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%89%E3%83%91%E3%83%B3LV.34_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 34,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%89%E3%83%91%E3%83%B3LV.34_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-051",
@@ -31427,11 +31739,11 @@
      {
       "kind": "pokemon_power",
       "name": {
-       "ja": null,
+       "ja": "ずらかる",
        "en": "Scram"
       },
       "text": {
-       "ja": null,
+       "ja": "この力は、このカードの残りHPが「10」になった時、必ずはたらく。このカードと、これについているすべてのカードを山札にもどし、その山札をよく切る。ただし、このカードが「ねむり・マヒ・こんらん」状態の時には、この力ははたらかない。",
        "en": "If Brock's Primeape ever has exactly 10 HP left, shuffle it and all cards attached to it into your deck. This power stops working while Brock's Primeape is Asleep, Confused, or Paralyzed."
       }
      }
@@ -31439,7 +31751,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "おおあばれ",
        "en": "Mega Thrash"
       },
       "cost": [
@@ -31454,7 +31766,7 @@
        "display": "60"
       },
       "text": {
-       "ja": null,
+       "ja": "自分にも20ダメージ。場に「スタジアムカード」があれば、それをトラッシュする。",
        "en": "Brock's Primeape does 20 damage to itself. If there is a Stadium card in play, discard it."
       }
      }
@@ -31470,8 +31782,14 @@
      "gym2-35"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%AA%E3%82%B3%E3%83%AA%E3%82%B6%E3%83%AB_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 32,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%AA%E3%82%B3%E3%83%AA%E3%82%B6%E3%83%AB_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-052",
@@ -31525,7 +31843,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "たいあたり",
        "en": "Tackle"
       },
       "cost": [
@@ -31545,7 +31863,7 @@
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ばくれつ",
        "en": "Detonate"
       },
       "cost": [
@@ -31560,7 +31878,7 @@
        "display": "50"
       },
       "text": {
-       "ja": null,
+       "ja": "自分にも50ダメージ。お互いの控えポケモン全員にも、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。場に「スタジアムカード」があれば、それをトラッシュする。",
        "en": "Does 10 damage to each Pokémon on each player's bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Brock's Graveler does 50 damage to itself. If there is a Stadium card in play, discard it."
       }
      }
@@ -31576,8 +31894,14 @@
      "gym2-34"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B4%E3%83%AD%E3%83%BC%E3%83%B3LV.32_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 32,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B4%E3%83%AD%E3%83%BC%E3%83%B3LV.32_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-053",
@@ -31631,7 +31955,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "いわなだれ",
        "en": "Rock Slide"
       },
       "cost": [
@@ -31646,13 +31970,13 @@
        "display": "20"
       },
       "text": {
-       "ja": null,
+       "ja": "相手の控えポケモンから最大3匹を選び、それぞれに(「弱点・抵抗力」に関係なく)10ダメージ。",
        "en": "If your opponent has any Benched Pokémon, choose up to 3 of them. This attack does 10 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.)"
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ランドクラッシュ",
        "en": "Fissure"
       },
       "cost": [
@@ -31684,8 +32008,14 @@
      "gym1-20"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B4%E3%83%AD%E3%83%BC%E3%83%8B%E3%83%A3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 40,
+    "rarity": "★(R)",
+    "series": "ニビシティジム タケシ・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B4%E3%83%AD%E3%83%BC%E3%83%8B%E3%83%A3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-054",
@@ -31736,7 +32066,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "クロスカウンター",
        "en": "Crosscounter"
       },
       "cost": [
@@ -31745,13 +32075,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "次の相手の番、このカードが相手のワザによるダメージを受けた時、(このカードが「きぜつ」するしないにかかわらず、)コインを投げる。「おもて」なら、相手に、このカードが受けた2倍のダメージを与える。",
        "en": "If an attack does damage to Rocket's Hitmonchan during your opponent's next turn (even if Rocket's Hitmonchan is Knocked Out), flip a coin. If heads, Rocket's Hitmonchan attacks your opponent's Active Pokémon for double that amount of damage. (If Rocket's Hitmonchan takes 20 damage, it does 40 damage to that Pokémon.)"
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "マグナムパンチ",
        "en": "Magnum Punch"
       },
       "cost": [
@@ -31782,8 +32112,14 @@
      "gym1-11"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%82%A8%E3%83%93%E3%83%AF%E3%83%A9%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 29,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%82%A8%E3%83%93%E3%83%AF%E3%83%A9%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-055",
@@ -31843,11 +32179,11 @@
      {
       "kind": "pokemon_power",
       "name": {
-       "ja": null,
+       "ja": "ベンチガード",
        "en": "Bench Guard"
       },
       "text": {
-       "ja": null,
+       "ja": "この力は、このカードがベンチにいて、自分の控えポケモンがダメージを受けるたびに、1回使える。そのダメージのうちの10ダメージを、このカードがかわりに受ける。(2匹以上がダメージを受けた時は、それぞれのダメージに対して1回ずつ使える)",
        "en": "As long as Brock's Rhydon is Benched, whenever 1 of your Benched Pokémon is damaged, you may do 10 of that damage to Brock's Rhydon instead. (If more than 1 of your Benched Pokémon is damaged at the same time, you may use this power once for each of them.)"
       }
      }
@@ -31855,7 +32191,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ラリアット",
        "en": "Lariat"
       },
       "cost": [
@@ -31871,7 +32207,7 @@
        "display": "70"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「うら」なら、このワザは失敗する。",
        "en": "Flip a coin. If tails, this attack does nothing."
       }
      }
@@ -31887,8 +32223,14 @@
      "gym1-2"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 38,
+    "rarity": "★(R)",
+    "series": "ニビシティジム タケシ・リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%89%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-056",
@@ -31945,7 +32287,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "きあいだめ",
        "en": "Focus Energy"
       },
       "cost": [
@@ -31954,13 +32296,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "次の自分の番、この「マチスのコラッタ」が使う「でんこうせっか」のダメージは2倍になる。",
        "en": "During your next turn, Lt. Surge's Rattata's Quick Attack's base damage is doubled."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "でんこうせっか",
        "en": "Quick Attack"
       },
       "cost": [
@@ -31974,7 +32316,7 @@
        "display": "10+"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、20ダメージを追加する。",
        "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
       }
      }
@@ -31990,8 +32332,14 @@
      "gym2-85"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%B3%E3%83%A9%E3%83%83%E3%82%BFLV.7_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 7,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%B3%E3%83%A9%E3%83%83%E3%82%BFLV.7_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-057",
@@ -32048,7 +32396,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ふきとばし",
        "en": "Whirlwind"
       },
       "cost": [
@@ -32061,13 +32409,13 @@
        "display": "10"
       },
       "text": {
-       "ja": null,
+       "ja": "相手を、控えポケモンと入れ替える。入れ替えるポケモンは、相手が選ぶ。（相手に控えがいない時、入れ替えはおこらない。）",
        "en": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "かまいたち",
        "en": "Razor Wind"
       },
       "cost": [
@@ -32081,7 +32429,7 @@
        "display": "40"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「うら」なら、このワザは失敗する。",
        "en": "Flip a coin. If tails, this attack does nothing."
       }
      }
@@ -32097,8 +32445,14 @@
      "gym1-83"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%AA%E3%83%8B%E3%82%B9%E3%82%BA%E3%83%A1LV.17_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 17,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%AA%E3%83%8B%E3%82%B9%E3%82%BA%E3%83%A1LV.17_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-058",
@@ -32155,7 +32509,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "みんなでかいふく",
        "en": "Group Therapy"
       },
       "cost": [
@@ -32164,13 +32518,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "お互いの場にいるポケモン全員から、それぞれダメージカウンターを1つずつ、とりのぞく。",
        "en": "You and your opponent remove 1 damage counter from each of your Pokémon with damage counters on them."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "やさしいパンチ",
        "en": "Pulled Punch"
       },
       "cost": [
@@ -32184,7 +32538,7 @@
        "display": "40-"
       },
       "text": {
-       "ja": null,
+       "ja": "相手にダメージカウンターがのっている時、このワザのダメージは「-30」される。",
        "en": "If the Defending Pokémon has no damage counters on it, this attack does 40 damage. If it has any damage counters on it, this attack does 10 damage."
       }
      }
@@ -32200,8 +32554,14 @@
      "gym2-69"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%97%E3%83%AA%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 13,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%97%E3%83%AA%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-059",
@@ -32261,7 +32621,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "きあいだめ",
        "en": "Focus Energy"
       },
       "cost": [
@@ -32270,13 +32630,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "次の自分の番、この「マチスのラッタ」が使う「すてみタックル」のダメージは2倍になる。(自分へのダメージも2倍)",
        "en": "During your next turn, Lt. Surge's Raticate's Double-edge attack's damage (base damage and damage to itself) is doubled."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "すてみタックル",
        "en": "Double-edge"
       },
       "cost": [
@@ -32290,7 +32650,7 @@
        "display": "40"
       },
       "text": {
-       "ja": null,
+       "ja": "自分にも20ダメージ。",
        "en": "Lt. Surge's Raticate does 20 damage to itself."
       }
      }
@@ -32306,8 +32666,14 @@
      "gym2-53"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%83%A9%E3%83%83%E3%82%BFLV.33_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 33,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%83%A9%E3%83%83%E3%82%BFLV.33_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-060",
@@ -32364,7 +32730,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "つきのちから",
        "en": "Lunar Power"
       },
       "cost": [
@@ -32373,13 +32739,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、自分の山札から、自分または自分の控えポケモンを進化させる「進化カード」を1枚選び出し、そのポケモンの上にのせる。その後、その山札をよく切る。",
        "en": "Flip a coin. If heads, search your deck for a card that evolves from 1 of your Benched Pokémon and put that card on that Pokémon. (This counts as evolving that Pokémon.) Shuffle your deck afterward."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ムーンキック",
        "en": "Moon Kick"
       },
       "cost": [
@@ -32401,7 +32767,18 @@
    },
    "trainer": null,
    "energy": null,
-   "jp_en_differences": [],
+   "jp_en_differences": [
+    {
+     "kind": "text",
+     "summary": "ワザ つきのちから（Lunar Power）で進化させられるポケモン",
+     "ja": "「自分または自分の控えポケモンを進化させる『進化カード』」と、ワザを使ったピッピ自身も進化させられる",
+     "en": "「a card that evolves from 1 of your Benched Pokémon」と、ベンチのポケモンだけ",
+     "confidence": "有力",
+     "sources": [
+      "N2"
+     ]
+    }
+   ],
    "notes": [],
    "source_ids": {
     "tcgdex": "PMCG5-060",
@@ -32409,8 +32786,14 @@
      "gym2-40"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%94%E3%83%83%E3%83%94LV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 16,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%94%E3%83%83%E3%83%94LV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-061",
@@ -32467,7 +32850,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ベロではたく",
        "en": "Tongue Slap"
       },
       "cost": [
@@ -32487,7 +32870,7 @@
      },
      {
       "name": {
-       "ja": null,
+       "ja": "たたきつける",
        "en": "Slam"
       },
       "cost": [
@@ -32502,7 +32885,7 @@
        "display": "30×"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを2枚投げ、「おもて」の数×30のダメージ。",
        "en": "Flip 2 coins. This attack does 30 damage times the number of heads."
       }
      }
@@ -32518,8 +32901,14 @@
      "gym1-41"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%83%99%E3%83%AD%E3%83%AA%E3%83%B3%E3%82%AC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 24,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%BF%E3%82%B1%E3%82%B7%E3%81%AE%E3%83%99%E3%83%AD%E3%83%AA%E3%83%B3%E3%82%AC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-062",
@@ -32576,7 +32965,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "おどろかす",
        "en": "Surprise"
       },
       "cost": [
@@ -32585,13 +32974,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "相手の手札から、おもてを見ないで1枚選び、そのカードを見る。その後、そのカードを相手の山札にもどさせ、その山札をよく切る。",
        "en": "Look at a random card from your opponent's hand. Your opponent shuffles that card into his or her deck."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ひっかく",
        "en": "Scratch"
       },
       "cost": [
@@ -32621,8 +33010,14 @@
      "gym2-51"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%A4%E3%83%BC%E3%83%96%E3%82%A4_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 10,
+    "rarity": "◆(U)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%A4%E3%83%BC%E3%83%96%E3%82%A4_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-063",
@@ -32673,11 +33068,11 @@
      {
       "kind": "pokemon_power",
       "name": {
-       "ja": null,
+       "ja": "ふしぎなバリアー",
        "en": "Strange Barrier"
       },
       "text": {
-       "ja": null,
+       "ja": "このカードが「たねポケモン」から受ける20以上のダメージは、「10」になる。(ダメージ以外の効果は、そのまま)。ダメージを受ける時、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
        "en": "Whenever an attack by a Basic Pokémon (including your own) does 20 or more damage to Erika's Dratini (after applying Weakness and Resistance), reduce that damage to 10. (Any other effects of attacks still happen.) This power stops working while Erika's Dratini is Asleep, Confused, or Paralyzed."
       }
      }
@@ -32685,7 +33080,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "しっぽでつく",
        "en": "Tail Strike"
       },
       "cost": [
@@ -32699,7 +33094,7 @@
        "display": "10+"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、20ダメージを追加する。",
        "en": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
       }
      }
@@ -32715,8 +33110,14 @@
      "gym1-42"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%9F%E3%83%8B%E3%83%AA%E3%83%A5%E3%82%A6_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 14,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%9F%E3%83%8B%E3%83%AA%E3%83%A5%E3%82%A6_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-064",
@@ -32776,7 +33177,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "マシンガンドリル",
        "en": "Repeating Drill"
       },
       "cost": [
@@ -32790,13 +33191,13 @@
        "display": "10×"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを5枚投げ、「おもて」の数×10のダメージ。",
        "en": "Flip 5 coins. This attack does 10 damage times the number of heads."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "わしづかみ",
        "en": "Clutch"
       },
       "cost": [
@@ -32811,7 +33212,7 @@
        "display": "30"
       },
       "text": {
-       "ja": null,
+       "ja": "このワザを受けた相手は、次の相手の番に「にげる」ことができない。",
        "en": "The Defending Pokémon can't retreat during your opponent's next turn."
       }
      }
@@ -32827,8 +33228,14 @@
      "gym1-7"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%AA%E3%83%8B%E3%83%89%E3%83%AA%E3%83%AB_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 30,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%83%9E%E3%83%81%E3%82%B9%E3%81%AE%E3%82%AA%E3%83%8B%E3%83%89%E3%83%AA%E3%83%AB_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-065",
@@ -32888,7 +33295,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ようせいのきせき",
        "en": "Fairy Power"
       },
       "cost": [
@@ -32897,13 +33304,13 @@
       "cost_total": 1,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "コインを投げて「おもて」なら、自分の場にいるポケモンを好きなだけ選び、そのポケモンと、それらについているすべてのカードを手札にもどす。",
        "en": "Flip a coin. If heads, you may return any number of your Pokémon in play and all cards attached to them to your hand."
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "ムーンインパクト",
        "en": "Moon Impact"
       },
       "cost": [
@@ -32934,8 +33341,14 @@
      "gym1-3"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%94%E3%82%AF%E3%82%B7%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 35,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%94%E3%82%AF%E3%82%B7%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-066",
@@ -32989,7 +33402,7 @@
     "attacks": [
      {
       "name": {
-       "ja": null,
+       "ja": "ふぶき",
        "en": "Blizzard"
       },
       "cost": [
@@ -33004,13 +33417,13 @@
        "display": "30"
       },
       "text": {
-       "ja": null,
+       "ja": "コインを投げ、「おもて」なら相手の控えポケモン全員に、「うら」なら自分の控えポケモン全員に、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。",
        "en": "Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon. If tails, this attack does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
       }
      },
      {
       "name": {
-       "ja": null,
+       "ja": "つれさる",
        "en": "Take Away"
       },
       "cost": [
@@ -33022,7 +33435,7 @@
       "cost_total": 4,
       "damage": null,
       "text": {
-       "ja": null,
+       "ja": "自分と相手、そしてそれらについているすべてのカードをそれぞれの山札にもどし、それぞれの山札をよく切る。",
        "en": "Shuffle Erika's Dragonair and all cards attached to it into your deck. Then, your opponent shuffles his or her Active Pokémon and all cards attached to it into his or her deck."
       }
      }
@@ -33038,8 +33451,14 @@
      "gym1-4"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%8F%E3%82%AF%E3%83%AA%E3%83%A5%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+   "jp_print": {
+    "level": 32,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%8F%E3%82%AF%E3%83%AA%E3%83%A5%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-067",
@@ -33050,7 +33469,7 @@
     "ja": "エネルギーサーキュレート",
     "en": "Energy Flow"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "common",
     "mark": "●",
@@ -33070,12 +33489,23 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "あなたの場のポケモンについている「基本エネルギーカード」を好きなだけはがし、手札に戻してよい。",
      "en": "For each of your Pokémon, you may return any number of Energy cards attached to it to your hand."
     }
    },
    "energy": null,
-   "jp_en_differences": [],
+   "jp_en_differences": [
+    {
+     "kind": "text",
+     "summary": "手札にもどせるエネルギーの種類",
+     "ja": "「あなたの場のポケモンについている『基本エネルギーカード』を好きなだけはがし、手札に戻してよい。」と、基本エネルギーに限っている",
+     "en": "「any number of Energy cards」と、特殊エネルギー（無色2個エネルギーなど）も含む",
+     "confidence": "有力",
+     "sources": [
+      "N2"
+     ]
+    }
+   ],
    "notes": [],
    "source_ids": {
     "tcgdex": "PMCG5-067",
@@ -33083,8 +33513,14 @@
      "gym1-122"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%88",
+   "jp_print": {
+    "level": null,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%88"
+   }
   },
   {
    "id": "PMCG5-068",
@@ -33095,7 +33531,7 @@
     "ja": "カスミの勝負",
     "en": "Misty's Duel"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "common",
     "mark": "●",
@@ -33115,7 +33551,7 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "相手プレイヤーと「じゃんけん」をする。勝ったプレイヤーは手札をすべて山札にもどし、その山札をよく切ってから、カードを5枚引いて、手札にする。",
      "en": "You and your opponent play a game of Rock-Paper-Scissors. The winner shuffles his or her hand into his or her deck and draws a new hand of 5 cards. (If you don't know how to play Rock-Paper-Scissors, flip a coin to decide who's the winner.)"
     }
    },
@@ -33128,8 +33564,14 @@
      "gym1-123"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E5%8B%9D%E8%B2%A0",
+   "jp_print": {
+    "level": null,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E5%8B%9D%E8%B2%A0"
+   }
   },
   {
    "id": "PMCG5-069",
@@ -33140,7 +33582,7 @@
     "ja": "カスミのなみだ",
     "en": "Misty's Tears"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "common",
     "mark": "●",
@@ -33160,7 +33602,7 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "手札からカードを1枚選んでトラッシュしなければ、このカードは使えない。あなたの山札から「水」エネルギーカードを最大2枚選び出し、相手プレイヤーに見せてから、手札に加えてよい。その後、その山札をよく切る。",
      "en": "Discard 1 of the other cards in your hand in order to search your deck for up to 2 Water Energy cards. Show those cards to your opponent, then put them into your hand. Shuffle your deck afterward."
     }
    },
@@ -33173,8 +33615,14 @@
      "gym2-118"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%81%AA%E3%81%BF%E3%81%A0",
+   "jp_print": {
+    "level": null,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%81%AA%E3%81%BF%E3%81%A0"
+   }
   },
   {
    "id": "PMCG5-070",
@@ -33185,7 +33633,7 @@
     "ja": "せまいジム",
     "en": "Narrow Gym"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "common",
     "mark": "●",
@@ -33207,7 +33655,7 @@
      "stadium"
     ],
     "text": {
-     "ja": null,
+     "ja": "お互いのプレイヤーの「ベンチに出しておける控えポケモンの数」は、「4匹まで」となる。このカードが場に出た時、ベンチにポケモンが5匹いるプレイヤーは、その中から1匹を選び、そのカードと、それについているすべてのカードを手札にもどす。(このスタジアムカードは、バトル場の横に出して使う。別のスタジアムカードが場に出た時、このカードをトラッシュする。)",
      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. No player may have more than 4 Pokémon on his or her Bench. When this card is played, if a player has 5 Pokémon on his or her Bench, that player chooses 1 of them and returns it and all cards attached to it to his or her hand. (If both players have to return a Pokémon, your opponent returns a Pokémon first.)"
     }
    },
@@ -33220,8 +33668,14 @@
      "gym1-124"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%81%9B%E3%81%BE%E3%81%84%E3%82%B8%E3%83%A0",
+   "jp_print": {
+    "level": null,
+    "rarity": "●(C)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%81%9B%E3%81%BE%E3%81%84%E3%82%B8%E3%83%A0"
+   }
   },
   {
    "id": "PMCG5-071",
@@ -33232,7 +33686,7 @@
     "ja": "思い出させる",
     "en": "Recall"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "uncommon",
     "mark": "◆",
@@ -33252,7 +33706,7 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "あなたの対戦ポケモンが進化カードなら、この番だけ、進化前に持っていたワザを自分のワザとして使ってよい。",
      "en": "For your attack this turn, your Active Pokémon can use any attack from its Basic Pokémon card or any Evolution card attached to it. (You still have to pay for that attack's Energy cost.)"
     }
    },
@@ -33265,8 +33719,14 @@
      "gym1-116"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E6%80%9D%E3%81%84%E5%87%BA%E3%81%95%E3%81%9B%E3%82%8B",
+   "jp_print": {
+    "level": null,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E6%80%9D%E3%81%84%E5%87%BA%E3%81%95%E3%81%9B%E3%82%8B"
+   }
   },
   {
    "id": "PMCG5-072",
@@ -33277,7 +33737,7 @@
     "ja": "エリカのお付き",
     "en": "Erika's Maids"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "uncommon",
     "mark": "◆",
@@ -33297,7 +33757,7 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "手札からカードを2枚選んで、山札にもどす。それができない時、このカードは使えない。あなたの山札から「エリカのポケモン」を最大2枚選び出し、相手プレイヤーに見せてから、手札に加えてよい。その後、その山札をよく切る。",
      "en": "Trade 2 of the other cards in your hand for up to 2 Basic Pokémon and/or Evolution cards with Erika in their names from your deck. Show those cards to your opponent, then put them into your hand. Shuffle your deck afterward."
     }
    },
@@ -33310,8 +33770,14 @@
      "gym1-109"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%81%8A%E4%BB%98%E3%81%8D",
+   "jp_print": {
+    "level": null,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%81%8A%E4%BB%98%E3%81%8D"
+   }
   },
   {
    "id": "PMCG5-073",
@@ -33322,7 +33788,7 @@
     "ja": "エリカの香水",
     "en": "Erika's Perfume"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "uncommon",
     "mark": "◆",
@@ -33342,7 +33808,7 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "相手プレイヤーの手札を見る。相手のベンチに空きがあれば、相手の手札から「たねポケモン」を好きなだけ選び、相手のベンチに出させてよい。",
      "en": "Look at your opponent's hand. If he or she has any Basic Pokémon cards there, you may put any number of them onto your opponent's Bench (as long as there's room)."
     }
    },
@@ -33355,8 +33821,14 @@
      "gym1-110"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E9%A6%99%E6%B0%B4",
+   "jp_print": {
+    "level": null,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E9%A6%99%E6%B0%B4"
+   }
   },
   {
    "id": "PMCG5-074",
@@ -33367,7 +33839,7 @@
     "ja": "お上品攻撃",
     "en": "Charity"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "rare",
     "mark": "★",
@@ -33387,12 +33859,23 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "このカードはあなたの対戦ポケモンにつけて使い、相手の番が終わったら、手札にもどす。(そのポケモンが「きぜつ」したときは、このカードもトラッシュする)このカードをつけているポケモンのワザが、相手の対戦ポケモンにダメージを与える時、のぞむなら、そのダメージを好きなだけ小さくしてよい。",
      "en": "Attach Charity to your Active Pokémon. Unless that Pokémon gets Knocked Out, return Charity to your hand at the end of your turn. If that Pokémon attacks and does damage to the Defending Pokémon, you may reduce that damage by any amount (rounded to the nearest 10)."
     }
    },
    "energy": null,
-   "jp_en_differences": [],
+   "jp_en_differences": [
+    {
+     "kind": "text",
+     "summary": "手札にもどすタイミング",
+     "ja": "「相手の番が終わったら、手札にもどす」と、相手の番のあいだもつけたままにする",
+     "en": "「return Charity to your hand at the end of your turn」と、自分の番の終わりにもどす",
+     "confidence": "有力",
+     "sources": [
+      "N2"
+     ]
+    }
+   ],
    "notes": [],
    "source_ids": {
     "tcgdex": "PMCG5-074",
@@ -33400,8 +33883,14 @@
      "gym1-99"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%81%8A%E4%B8%8A%E5%93%81%E6%94%BB%E6%92%83",
+   "jp_print": {
+    "level": null,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%81%8A%E4%B8%8A%E5%93%81%E6%94%BB%E6%92%83"
+   }
   },
   {
    "id": "PMCG5-075",
@@ -33412,7 +33901,7 @@
     "ja": "カスミのいかり",
     "en": "Misty's Wrath"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "uncommon",
     "mark": "◆",
@@ -33432,7 +33921,7 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "あなたの山札の上から7枚のカードを見て、その中から2枚を選んで手札に加え、残りをトラッシュする。",
      "en": "Look at the top 7 cards of your deck. Choose 2 of those cards and put them into your hand. Discard the rest."
     }
    },
@@ -33445,8 +33934,14 @@
      "gym1-114"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%81%84%E3%81%8B%E3%82%8A",
+   "jp_print": {
+    "level": null,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%81%84%E3%81%8B%E3%82%8A"
+   }
   },
   {
    "id": "PMCG5-076",
@@ -33457,7 +33952,7 @@
     "ja": "クチバシティジム",
     "en": "Vermilion City Gym"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "uncommon",
     "mark": "◆",
@@ -33479,7 +33974,7 @@
      "stadium"
     ],
     "text": {
-     "ja": null,
+     "ja": "お互いのプレイヤーは、のぞむなら、自分の番で「マチスのポケモン」がワザを使う時、コインを投げてもよい。コインが「おもて」なら、そのワザによって相手の対戦ポケモンに与えるダメージは「+10」される。(控えポケモンへのダメージは、そのまま)「うら」なら、ワザを使ったポケモン自身にも、そのワザのダメージとして、10ダメージ。(このスタジアムカードは、バトル場の横に出して使う。別のスタジアムカードが場に出た時、このカードをトラッシュする。)",
      "en": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Whenever a player attacks with a Pokémon with Lt. Surge in its name, he or she may flip a coin. If heads, and if that Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), that attack does 10 more damage to the Defending Pokémon. If tails, the attacking Pokémon does 10 damage to itself in addition to whatever its attack usually does."
     }
    },
@@ -33492,8 +33987,14 @@
      "gym1-120"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AF%E3%83%81%E3%83%90%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B8%E3%83%A0",
+   "jp_print": {
+    "level": null,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AF%E3%83%81%E3%83%90%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B8%E3%83%A0"
+   }
   },
   {
    "id": "PMCG5-077",
@@ -33780,7 +34281,7 @@
     "ja": "エリカ",
     "en": "Erika"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "rare",
     "mark": "★",
@@ -33801,7 +34302,7 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "あなたと相手プレイヤーは、それぞれ、のぞむなら最大3枚まで、山札からカードを引いてよい。(あなたがカードを引き終わってから、相手プレイヤーが引く)",
      "en": "You may draw up to 3 cards, then your opponent may draw up to 3 cards."
     }
    },
@@ -33815,8 +34316,14 @@
      "gym1-100"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB_(%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0)",
+   "jp_print": {
+    "level": null,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB_(%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-084",
@@ -33827,7 +34334,7 @@
     "ja": "エリカの親切",
     "en": "Erika's Kindness"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "rare",
     "mark": "★",
@@ -33847,7 +34354,7 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "お互いの場にいるポケモン全員から、それぞれ、ダメージカウンターを2つずつとりのぞく。",
      "en": "Remove 2 damage counters from each Pokémon (yours and your opponent's) with any damage counters on it. If a Pokémon has just 1 damage counter, remove it."
     }
    },
@@ -33860,8 +34367,14 @@
      "gym2-103"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E8%A6%AA%E5%88%87",
+   "jp_print": {
+    "level": null,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E8%A6%AA%E5%88%87"
+   }
   },
   {
    "id": "PMCG5-085",
@@ -33872,7 +34385,7 @@
     "ja": "カスミ",
     "en": "Misty"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "rare",
     "mark": "★",
@@ -33893,7 +34406,7 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "手札からカードを2枚選んでトラッシュしなければ、このカードは使えない。「カスミのポケモン」が使うワザが対戦ポケモンにダメージを与える時、この番だけ、そのダメージは「+20」される。(控えポケモンへのダメージは、そのまま)",
      "en": "Discard 2 of the other cards in your hand in order to play this card. If this turn's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), and if the attacking Pokémon has Misty in its name, the attack does 20 more damage to the Defending Pokémon."
     }
    },
@@ -33907,8 +34420,14 @@
      "gym1-102"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F_(%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0)",
+   "jp_print": {
+    "level": null,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F_(%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0)"
+   }
   },
   {
    "id": "PMCG5-086",
@@ -33919,7 +34438,7 @@
     "ja": "カスミのわがまま",
     "en": "Misty's Wish"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "rare",
     "mark": "★",
@@ -33939,7 +34458,7 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "あなたのサイドカードから1枚を選び、おもてを見る。その後、そのカードを、あなたの手札の中の1枚と交換してもよいかどうか、相手プレイヤーにたずねる。オーケーなら、あなたの手札からカードを1枚選び、見たカードと交換する。オーケーでないなら、あなたは山札からカードを1枚引く。",
      "en": "Look at 1 of your Prize cards. Then, ask your opponent if you may switch that card with 1 of the cards in your hand. If your opponent accepts and if you have any other cards in your hand, switch those cards. If your opponent declines, return the Prize card face down and draw a card."
     }
    },
@@ -33952,8 +34471,14 @@
      "gym2-108"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%8F%E3%81%8C%E3%81%BE%E3%81%BE",
+   "jp_print": {
+    "level": null,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%82%8F%E3%81%8C%E3%81%BE%E3%81%BE"
+   }
   },
   {
    "id": "PMCG5-087",
@@ -33964,7 +34489,7 @@
     "ja": "錯乱ジム",
     "en": "Chaos Gym"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "rare",
     "mark": "★",
@@ -33986,7 +34511,7 @@
      "stadium"
     ],
     "text": {
-     "ja": null,
+     "ja": "このスタジアムカードは、バトル場の横に出して使う。このカード以外のスタジアムカードが場に出た時、このカードをトラッシュする。どちらかのプレイヤーが「トレーナーカード」(スタジアムカード以外)を使う時、そのプレイヤーはコインを投げる。コインが「うら」なら、そのプレイヤーは、そのカードを使うことができず、相手プレイヤーは、のぞむなら、そのカードを使ってもよい。相手プレイヤーが使う場合、ポケモンにつけて使うカード(「プラスパワー」など)や、場に出して使うカード(「ピッピ人形」など)は、使うことができない。また、そのカードの「使うための条件」(「手札からカードを1枚トラッシュする」など)を満たせない時も、使うことができない。使ったトレーナーカードは、持ち主のトラッシュにすてる。使えなかったり、使わなかったカードも、持ち主のトラッシュにすてる。",
      "en": "This card stays in play after being played. Discard this card if another Stadium card comes into play. Whenever a player plays a Trainer card other than a Stadium card, he or she flips a coin. If heads, that player plays that card normally. If tails, the player can't play that card. If the card isn't put into play, the player's opponent may use that card instead, if he or she does everything required in order to play that card (like discarding cards). Either way, the card goes to its owner's discard pile."
     }
    },
@@ -33999,8 +34524,14 @@
      "gym2-102"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E9%8C%AF%E4%B9%B1%E3%82%B8%E3%83%A0",
+   "jp_print": {
+    "level": null,
+    "rarity": "★(R)",
+    "series": "リーダーズスタジアム",
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E9%8C%AF%E4%B9%B1%E3%82%B8%E3%83%A0"
+   }
   },
   {
    "id": "PMCG5-088",
@@ -34011,7 +34542,7 @@
     "ja": "スパイ作戦",
     "en": "Secret Mission"
    },
-   "name_ja_confidence": "有力",
+   "name_ja_confidence": "確実",
    "rarity_jp": {
     "code": "uncommon",
     "mark": "◆",
@@ -34031,7 +34562,7 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": null,
+     "ja": "相手プレイヤーの手札を見る。その後、のぞむなら、あなたの手札からカードを好きなだけトラッシュして、トラッシュしたのと同じ数のカードを、山札から引いてよい。",
      "en": "Look at your opponent's hand. Then, you may discard as many other cards as you want from your hand and draw that many cards."
     }
    },
@@ -34044,8 +34575,14 @@
      "gym1-118"
     ]
    },
-   "ja_text_source": null,
-   "jp_print": null
+   "ja_text_source": "https://wiki.pokemonwiki.com/wiki/%E3%82%B9%E3%83%91%E3%82%A4%E4%BD%9C%E6%88%A6",
+   "jp_print": {
+    "level": null,
+    "rarity": null,
+    "series": null,
+    "remarks": [],
+    "source": "https://wiki.pokemonwiki.com/wiki/%E3%82%B9%E3%83%91%E3%82%A4%E4%BD%9C%E6%88%A6"
+   }
   },
   {
    "id": "PMCG5-089",
