@@ -1,0 +1,87 @@
+{
+ "_comment": "日本版と英語版で違いが指摘されているカード。キーはカード id（TCGdex の日本版 id）。kind: text=文面の意味の違い, errata=後年のエラッタの違い, placement=収録先の違い, print=英語版の表記・誤植。sources の記号は docs/sources.md を参照。",
+ "PMCG1-067": [
+  {"kind": "text", "summary": "ワザ Metronomeでコピーしたワザの条件",
+   "ja": "写したワザのエネルギーコストだけを無視する。エネルギーのトラッシュなど、ほかの条件は満たす必要がある（二次資料による）",
+   "en": "エネルギーコストに加えて「エネルギーのトラッシュなど、そのワザを使うために必要なこと」も不要と書かれている",
+   "confidence": "有力", "sources": ["X3"]}
+ ],
+ "PMCG2-044": [
+  {"kind": "text", "summary": "ワザ Metronomeでコピーしたワザの条件",
+   "ja": "写したワザのエネルギーコストだけを無視する。エネルギーのトラッシュなど、ほかの条件は満たす必要がある（二次資料による）",
+   "en": "エネルギーコストに加えて「エネルギーのトラッシュなど、そのワザを使うために必要なこと」も不要と書かれている",
+   "confidence": "有力", "sources": ["X3"]}
+ ],
+ "neo2-052": [
+  {"kind": "text", "summary": "ワザ Sketchでコピーしたワザの条件",
+   "ja": "写したワザのエネルギーコストだけを無視する（二次資料による）",
+   "en": "エネルギーコストに加えて「そのワザを使うために必要なこと」も不要と書かれている",
+   "confidence": "有力", "sources": ["X3"]}
+ ],
+ "neo1-049": [
+  {"kind": "text", "summary": "ポケモンパワー Mind Gamesの使える場所",
+   "ja": "ヤドキングがバトル場にいるときだけ使える（二次資料による）",
+   "en": "バトル場の条件がなく、ベンチからでも働き、複数枚で重ねがけできた。WotC は 2002年末に Modified で禁止",
+   "confidence": "有力", "sources": ["X3", "X11", "X15", "X16"]}
+ ],
+ "neo1-095": [
+  {"kind": "text", "summary": "鋼エネルギーが減らすダメージの範囲",
+   "ja": "ワザによるダメージだけを 10 減らす（二次資料による）",
+   "en": "「Damage done to the Pokémon … is reduced by 10」とワザに限定していない",
+   "confidence": "有力", "sources": ["X3"]}
+ ],
+ "PMCG4-056": [
+  {"kind": "text", "summary": "ポケモンパワーを止める範囲",
+   "ja": "使った時点で場に出ているポケモンのポケモンパワーだけを止める（二次資料による）",
+   "en": "「All Pokémon Powers stop working …」とあり、後から出たポケモンも止まるかがあいまい。WotC の裁定は一部だけ正しかった",
+   "confidence": "有力", "sources": ["X3", "X14"]}
+ ],
+ "neo1-022": [
+  {"kind": "text", "summary": "ワザ Sputter でポケモンパワーを止める範囲",
+   "ja": "使った時点で場に出ているポケモンのポケモンパワーだけを止める（二次資料による）",
+   "en": "「All Pokémon Powers stop working …」とあり、後から出たポケモンも止まるかがあいまい",
+   "confidence": "有力", "sources": ["X3", "X14"]}
+ ],
+ "PMCG1-081": [
+  {"kind": "text", "summary": "プラスパワーが上乗せするダメージ",
+   "ja": "初期の文面では、自分のバトルポケモンが受けるダメージにも 10 加わった。1998年頃にエラッタ（二次資料による）",
+   "en": "相手のバトルポケモンに与えるダメージだけを 10 増やす",
+   "confidence": "有力", "sources": ["J1", "X1"]}
+ ],
+ "PMCG1-094": [
+  {"kind": "errata", "summary": "サポーター扱いのエラッタ",
+   "ja": "サポーター導入時（2001年12月以降）に、日本でのみ「サポーターとして扱う」エラッタが出た",
+   "en": "エラッタなし",
+   "confidence": "有力", "sources": ["X17"]}
+ ],
+ "PMCG4-061": [
+  {"kind": "errata", "summary": "サポーター扱いのエラッタ",
+   "ja": "サポーター導入時（2001年12月以降）に、日本でのみ「サポーターとして扱う」エラッタが出た",
+   "en": "エラッタなし",
+   "confidence": "有力", "sources": ["X17"]}
+ ],
+ "PMCG3-033": [
+  {"kind": "placement", "summary": "収録先",
+   "ja": "拡張パック「化石の秘密」に収録",
+   "en": "英語版 Fossil には入らず、Wizards Black Star Promos（8・9）として発売",
+   "confidence": "確実", "sources": []}
+ ],
+ "neo2-021": [
+  {"kind": "placement", "summary": "収録先と登場順",
+   "ja": "「遺跡をこえて...」（2000年7月）で登場",
+   "en": "Team Rocket（2000年4月）のシークレットカード（83/82）として先に登場",
+   "confidence": "有力", "sources": ["X27"]}
+ ],
+ "PMCG1-089": [
+  {"kind": "print", "summary": "英語版のカード名の綴り",
+   "ja": "にせオーキドはかせ",
+   "en": "初期の英語版は「Impostor Professor Oak」、のちの版は「Imposter Professor Oak」",
+   "confidence": "有力", "sources": ["X17"]}
+ ],
+ "PMCG6-084": [
+  {"kind": "print", "summary": "英語版の分類表記の誤植",
+   "ja": "―",
+   "en": "Gym Heroes 版は「Rocket's Secret Machine」とすべきところが「Rocket's Secret Robot」と誤植された",
+   "confidence": "有力", "sources": ["X9"]}
+ ]
+}

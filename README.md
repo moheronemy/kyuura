@@ -16,21 +16,30 @@
 
 ### ルール
 
-- [日本版と英語版の違い](docs/rules/differences.md) — **まずこれ**。比較表、よくある誤解、カードの文面・収録内容の違い
+- [日米のルールの違い](docs/rules/differences.md) — **まずこれ**。ルールの違いだけを項目ごとに比べた専用ページ（データ: [`data/rule_differences.json`](data/rule_differences.json)）
 - [日本版のルールと変遷](docs/rules/japanese.md) — ルールブック第1版〜第5版での変更点、公式大会のルール
 - [英語版（WotC 版）のルール](docs/rules/wotc.md) — 1999〜2003年。2003年の変更も参考に記載
 - [出典と確認状況](docs/sources.md)
 
-### カードリスト
+### カード
 
-- [カードリストの見かた](docs/cards/README.md) と各弾のリスト（10 弾・780 枚、英語版との対応つき）
+- [カードリストの見かた](docs/cards/README.md) と各弾のリスト（10 弾・780 枚。一覧表と、ワザ・ポケモンパワー・効果文つきのカード詳細）
+- [カードの日英の違い](docs/cards/card-differences.md) — 文面の意味・エラッタ・表記
+- [収録内容・製品の違い](docs/cards/set-differences.md) — 弾の対応、印刷、裏面
 - [英語版のみに見られるカード](docs/cards/english-only.md)
-- データ: [`data/cards.csv`](data/cards.csv)、[`data/cards.json`](data/cards.json)。ワザ・弱点・抵抗力など、英語版の数値も含みます
+
+### データ
+
+- [`data/cards.json`](data/cards.json) — 構造化データ（スキーマ: [docs/data-schema.md](docs/data-schema.md)）
+- [`data/cards.csv`](data/cards.csv)、[`data/attacks.csv`](data/attacks.csv)、[`data/powers.csv`](data/powers.csv) — 表形式の写し
+- [`data/rule_differences.json`](data/rule_differences.json) — 日米のルールの違い
 - 生成スクリプト: [`scripts/`](scripts/README.md)
 
-## 日英の違い（要約）
+**日本語テキストについて**: カード名は日英とも収録しています。ワザ名・ポケモンパワー名・効果文は、英語版は全件収録していますが、日本版（公式の印刷文面）は未収録です。理由と今後の入れ方は [カードリストの見かた](docs/cards/README.md#日本語テキストについて) を参照してください。
 
-詳しくは [日本版と英語版の違い](docs/rules/differences.md) を参照してください。
+## 日英のルールの違い（要約）
+
+詳しくは [日米のルールの違い](docs/rules/differences.md) を参照してください。
 
 | 項目 | 日本版（旧裏） | 英語版（WotC） |
 |---|---|---|
@@ -38,7 +47,8 @@
 | たねポケモンがいない場合 | 初期は引き直し 2 回まで、3 回目で負け、相手は引かない。1999年の第5版から、相手が 2 枚まで引ける | 引き直しのたびに、相手は 2 枚まで引ける |
 | こんらんでワザ失敗 | 初期はワザのダメージと効果を自分が受ける。第5版から自分に 20 ダメージ | 自分に 20 ダメージ |
 | 対戦準備のベンチ | 初期は 0〜1 匹。第5版から 5 匹まで | 5 匹まで |
-| 1 番ににげられる回数 | 1 回 | 何回でも |
-| 先攻 1 ターン目のワザ・トレーナー | 制限なし | 制限なし |
+| サドンデス | 次のきぜつまで続けたとする資料あり（未確認） | サイド 1 枚で対戦し直す |
+| 先攻 1 ターン目のワザ・トレーナー | 制限なし | 制限なし（同じ） |
+| 1 番ににげられる回数 | 制限なし | 制限なし（同じ） |
 
 **注意**: この資料は、ネットワークに制限のある環境で、ウェブ検索の要約をもとに作りました。ルールブックの原本とは照合していません。各項目には確度（確実／有力／未確認）を付けています。確度の意味と調べ方の限界は [ルール資料の README](docs/rules/README.md) を参照してください。

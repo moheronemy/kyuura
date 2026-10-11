@@ -15,7 +15,19 @@ node scripts/ts2json.mjs "$WORK/cards-database" "$WORK/jp.json"
 # カードリストを生成（Python 3.9 以降、標準ライブラリのみ）
 python3 scripts/build_cardlist.py --jp "$WORK/jp.json" \
   --en "$WORK/pokemon-tcg-data" --species "$WORK/pokemon_species_names.csv"
+
+# 日米のルールの違いのページを生成（data/rule_differences.json → docs/rules/differences.md）
+python3 scripts/build_rule_differences.py
 ```
+
+生成されるもの:
+
+| スクリプト | 出力 |
+|---|---|
+| `build_cardlist.py` | `data/cards.json`、`data/cards.csv`、`data/attacks.csv`、`data/powers.csv`、`docs/cards/` の各弾のページ・`card-differences.md`・`english-only.md` |
+| `build_rule_differences.py` | `docs/rules/differences.md` |
+
+`data/rule_differences.json` は手で編集する元データです（生成物ではありません）。
 
 手作業で作った補正データは `data/curation/` にあります。
 
@@ -25,6 +37,8 @@ python3 scripts/build_cardlist.py --jp "$WORK/jp.json" \
 | `pokemon_overrides.json` | 自動照合できないポケモンの対応付け（出典データの名前の誤り、アンノーンの文字など） |
 | `naming.json` | 英語版の接頭辞（Light、Rocket's）の日本語表記、アンノーンの表記 |
 | `jp_only.json` | 英語版に対応カードがない日本版カード |
+| `card_differences.json` | カードごとの日英の違い（文面・エラッタ・収録先・表記） |
+| `ja_text.json` | 日本版の公式テキスト（ワザ名・ポケモンパワー・効果文）。現在は空 |
 | `sets.json` | 各弾の名前・発売日・収録数 |
 
 最後に生成したときの出典データ:
