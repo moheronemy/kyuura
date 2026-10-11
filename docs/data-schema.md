@@ -223,8 +223,10 @@
 | `entries` | ルール・レギュレーションの記録 |
 | `errata` | カード個別のエラッタ・印刷テキストの変更・裁定の記録 |
 | `card_lists` | 読み替えの対象カードの一覧（`supporter`: サポーターとして扱う 15 種、`poke_body`: ポケボディーとして扱うカード）。`ids` はこのリポジトリのカード id、`bulbapedia` は Bulbapedia の表記、`qa`（`poke_body` だけ）は公式 Q&A の原文の表記（`type`・`name`・`series`・`power`） |
-| `jp_editions` | 日本版のルールの版（`id`: `ed1`〜`ed5` など、`label`、`date`、`event`: 対応する `events` の id、`in_matrix`: 比較表の列にするか、`period`、`name_in_sources`: 資料での呼び名、`basis`、`confidence`、`sources`）。`date` は `event` の日付と一致しなければエラー |
-| `jp_edition_matrix` | 版ごとの比較表の行（`id`: ページ内のアンカー、`label`、`rd_item`: 対応する `data/rule_differences.json` の項目の `id` か `null`、`cells`、`notes`）。`cells` は版の `id` をキーに `text`・`confidence`・`sources`・`basis`（根拠の種類。`evidence_kinds` の値）を持つ。キーのない版は「未確認」と表示する（ほかの版から推測して埋めない） |
+| `jp_editions` | 日本版のルールの版（`id`: `ed1`〜`ed5` など、`label`、`date`: 発表・告知の日、`event`: 対応する `events` の id、`in_matrix`: 比較表の列にするか、`period`、`name_in_sources`: 資料での呼び名、`applied`: ルールが使われ始めた時期（発表日とは別。わからなければ「未確認」）、`basis`、`confidence`、`sources`）。`date` は `event` の日付と一致しなければエラー |
+| `jp_edition_matrix` | 版ごとの比較表の行（`id`: ページ内のアンカー、`label`、`rd_item`: 対応する `data/rule_differences.json` の項目の `id` か `null`、`rd_periods`: 同じ項目を複数の行に分けたとき、突き合わせる rule_differences の行の時期（任意）、`cells`、`notes`）。`cells` は版の `id` をキーに `text`・`confidence`・`sources`・`basis`（資料の確認方法。`evidence_kinds` の値）・`evidence_type`（根拠の性質。`matrix_evidence_types` の値）・`scope`（その根拠が裏付ける時期・範囲）・`rd_note`（rule_differences の行と確度が違う理由。任意）を持つ。キーのない版は「未確認」と表示する（ほかの版から推測して埋めない）。`evidence_type` が `secondary`・`inferred` のマスは「確実」にできない。rule_differences の「第N版」で始まる行は、含む版のマスと確度が合わなければエラー（比較表で未確認の版を含めてもエラー） |
+| `matrix_evidence_types` | 比較表のマスの根拠の性質: `edition_document`（版の文書そのもの）、`contemporary_official`（その版の時期の公式の雑誌・書籍・大会の要項）、`later_official`（後の公式資料の「前のルール」の説明。直前の版だけに当てはめる）、`secondary`（後年の二次資料）、`inferred`（公式資料の変更内容からの推定） |
+| `stage_kinds` | エラッタの記録の段階: `preannouncement`（変更の予告・検討）、`printed_change`（新しい文面の印刷）、`official_notice`（既存のカードにも適用する公式の告知）、`applied`（実際の適用） |
 | `documents` | スキャンで確認した印刷物の巻号ごとの記録（`code`: docs/sources.md の P 記号、`title`、`series`、`volume`、`publisher`、`issued`: 表紙・奥付の発行日、`released`: 公式の発売日（わからなければ `null`）、`printing_checked`: 確認した刷（奥付を見ていないものはそう書く）、`scan`（`source`: J37 など、`url`: 開けることを確かめたファイルの URL、`pdf_pages`）、`pages`（`printed`: 誌面のページ番号、`pdf`: PDF のページ、`content`: 要約、`refs`: そのページを根拠にした id）、`notes`）。`evidence` で J37 のスキャンを根拠にした記録の `cites` の P 記号は、ここに載っていなければエラー |
 
 `entries`・`errata` の各要素の主な欄:
@@ -232,6 +234,7 @@
 | 欄 | 内容 |
 |---|---|
 | `id` | ルールの識別 id（`MIX-`: 混合期、`KGR-`: ガルーラルール、`EN-`: 英語版、`ERR-`: エラッタ、`TXT-`: 印刷の変更、`RUL-`: 裁定） |
+| `stages` | エラッタの段階ごとの確認状況（任意。`kind`: `stage_kinds` の値、`date`、`text`、`confidence`、`sources`）。公式エラッタ（`official_errata`）に分類した記録には必須で、確認できた `official_notice` がなければエラー（予告や再録の文面の変更だけで公式エラッタとしない）。未確認の `official_notice`・`applied` に日付を書くとエラー（推定した日付を確定日として書かない） |
 | `id_note` | id の文字列と内容がずれている理由（任意）。参照の互換性のため id は変えず、ここで説明する（例: `MIX-SUPPORTER-ERRATA` は公式エラッタではなく大会レギュレーション） |
 | `region` | `JP`（日本版）／`EN`（英語版） |
 | `category` | 上の区分 |

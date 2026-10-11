@@ -22,8 +22,15 @@
       正当に違う日付（雑誌の発行日と発売日など）は other_dates に書くので、単純な文字列の一致では検出しない
   - documents: 記号が docs/sources.md にあるか、ページの refs の id があるか。スキャン（kind が scan_image で
     source が J37）を根拠にした記録が挙げる当時の資料（cites）が、documents にあるか
-  - jp_editions・jp_edition_matrix: 版の出来事の日付、出典の記号、確度・根拠の種類の値、
-    rd_item（data/rule_differences.json の項目）があるか、表のマスの版が jp_editions の版か
+  - jp_editions・jp_edition_matrix: 版の出来事の日付、出典の記号、確度・根拠の種類・根拠の性質の値、
+    rd_item（data/rule_differences.json の項目）があるか、表のマスの版が jp_editions の版か。
+    二次資料だけ・推定だけのマスを「確実」にしていないか。
+    比較表のマスと、日米の違いの表（rule_differences）の「第N版」の行とで、確度が食い違っていないか、
+    rule_differences の行が、比較表で未確認の版まで含めていないか
+  - errata の stages（予告・印刷の変更・公式の告知・適用の段階）: 段階の種類・確度・日付の書式・出典。
+    公式エラッタ（official_errata）に分類した記録に、確認できた「公式の告知」の段階があるか
+    （変更の予告や再録の文面の変更だけで公式エラッタとしていないか）
+  - verification に「原本と照合した」などと書いた記録に、根拠の種類 original があるか
   - --check: 生成結果が上の 3 つのページと同じか（ファイルは書き換えない）
 
 使い方: python3 scripts/build_rule_history.py [--check]
@@ -56,6 +63,10 @@ EVIDENCE_SHORT = {'original': '原本', 'archived_official': '公式ページの
                   'official_later': '後年の公式資料', 'secondary_direct': '二次資料（本文を確認）', 'search_summary': '検索結果の要約のみ'}
 
 
+MATRIX_TYPE_SHORT = {'edition_document': '版の文書', 'contemporary_official': '同時期の公式資料', 'later_official': '後の公式資料の「前のルール」',
+                     'secondary': '二次資料', 'inferred': '推定'}
+ORIGINAL_CLAIM_RE = re.compile(r'原本(?:と|で|を)(?:照合|確認)(?:した|済)')
+EDITION_RE = re.compile(r'^第(\d)版')
 BASIS_SHORT = {'original': '原本', 'archived_official': '公式サイトの保存版', 'scan_image': 'スキャン', 'card_image': 'カードの画像',
                'official_later': '後年の公式資料', 'secondary_direct': '二次資料', 'search_summary': '検索結果の要約'}
 
@@ -253,6 +264,10 @@ def validate(data, cards, codes):
             errors.append(f"{x['id']}: 確度の値が不正: {x['confidence']}")
         if x.get('category') and x['category'] not in data['categories']:
             errors.append(f"{x['id']}: 区分の値が不正: {x['category']}")
+        kinds = {e['kind'] for e in x.get('evidence', [])}
+        if ORIGINAL_CLAIM_RE.search(x.get('verification') or '') and 'original' not in kinds:
+            errors.append(f"{x['id']}: verification が原本との照合を書いているが、根拠に original がない")
+        errors += validate_stages(x, data, codes)
     for name, lst in data['card_lists'].items():
         if lst['entry'] not in known:
             errors.append(f'card_lists.{name}: entry がない: {lst["entry"]}')
@@ -278,6 +293,37 @@ def validate(data, cards, codes):
     errors += validate_dates(data, codes)
     errors += validate_documents(data, codes, known)
     errors += validate_editions(data, codes)
+    return errors
+
+
+def validate_stages(x, data, codes):
+    errors = []
+    stages = x.get('stages', [])
+    for st in stages:
+        if st['kind'] not in data['stage_kinds']:
+            errors.append(f"{x['id']}: 段階の種類がない: {st['kind']}")
+        if st['confidence'] not in data['confidence_values']:
+            errors.append(f"{x['id']}: 段階の確度の値が不正: {st['confidence']}")
+        if st.get('date') and not DATE_FULL_RE.match(st['date']):
+            errors.append(f"{x['id']}: 段階の日付の書式が不正: {st['date']}")
+        if st['confidence'] != '未確認' and not st.get('sources'):
+            errors.append(f"{x['id']}: 確認した段階（{st['kind']}）に出典がない")
+        for c in st.get('sources', []) + SRC_RE.findall(json.dumps(st, ensure_ascii=False)):
+            if c not in codes:
+                errors.append(f"{x['id']}: 段階の出典の記号がない: {c}")
+    if x.get('category') == 'official_errata':
+        notices = [st for st in stages if st['kind'] == 'official_notice']
+        if not stages:
+            errors.append(f"{x['id']}: 公式エラッタに分類しているが、stages（予告・印刷・告知・適用の区別）がない")
+        elif not any(st['confidence'] in ('確実', '有力') for st in notices):
+            errors.append(f"{x['id']}: 公式エラッタに分類しているが、公式の告知（official_notice）の段階が確認できていない")
+        a = lead_date(x.get('announced'))
+        for st in notices:
+            if st.get('date') and a and not compatible(st['date'], a):
+                errors.append(f"{x['id']}: 公式の告知の段階の日付（{st['date']}）が announced（{a}）と合わない")
+    for st in stages:
+        if st['kind'] in ('official_notice', 'applied') and st['confidence'] == '未確認' and st.get('date'):
+            errors.append(f"{x['id']}: 未確認の段階（{st['kind']}）に日付がある（推定した日付を確定日として書かない）")
     return errors
 
 
@@ -330,7 +376,8 @@ def validate_editions(data, codes):
                 errors.append(f"jp_editions.{ed['id']}: 出典の記号がない: {s}")
     columns = {e for e, v in eds.items() if v['in_matrix']}
     diff = json.loads((ROOT / 'data' / 'rule_differences.json').read_text(encoding='utf-8'))
-    items = {i['id'] for i in diff['items']}
+    items_by_id = {i['id']: i for i in diff['items']}
+    items = set(items_by_id)
     rows = set()
     for row in data.get('jp_edition_matrix', []):
         rid = row['id']
@@ -348,9 +395,59 @@ def validate_editions(data, codes):
                 errors.append(f'jp_edition_matrix.{rid}.{ed}: 根拠の種類がない: {c["basis"]}')
             if not c['sources']:
                 errors.append(f'jp_edition_matrix.{rid}.{ed}: 出典がない')
+            if c.get('evidence_type') not in data['matrix_evidence_types']:
+                errors.append(f'jp_edition_matrix.{rid}.{ed}: 根拠の性質の値が不正: {c.get("evidence_type")}')
+            elif c['evidence_type'] in ('secondary', 'inferred') and c['confidence'] == '確実':
+                errors.append(f'jp_edition_matrix.{rid}.{ed}: 二次資料だけ・推定だけのマスを「確実」にしている')
+            if not c.get('scope'):
+                errors.append(f'jp_edition_matrix.{rid}.{ed}: 裏付けの範囲（scope）がない')
+        errors += compare_with_differences(row, eds, items_by_id.get(row.get('rd_item')))
         for s in SRC_RE.findall(json.dumps(row, ensure_ascii=False)) + [s for c in row['cells'].values() for s in c['sources']]:
             if s not in codes:
                 errors.append(f'jp_edition_matrix.{rid}: 出典の記号がない: {s}')
+    return errors
+
+
+def editions_of_period(period, last):
+    """rule_differences の行の時期（「第1版〜第4版」「第3版（…）以降」「第5版より前」など）が指す版の番号。版で始まらなければ空。"""
+    m = EDITION_RE.match(period)
+    if not m:
+        return set()
+    n = int(m.group(1))
+    rest = period[m.end():]
+    if rest.startswith('〜第'):
+        return set(range(n, int(rest[2]) + 1))
+    if rest.startswith('より前'):
+        return set(range(1, n))
+    if rest.startswith('まで'):
+        return set(range(1, n + 1))
+    if re.match(r'^(?:（[^）]*）)?以降', rest):
+        return set(range(n, last + 1))
+    return {n}
+
+
+def compare_with_differences(row, eds, item):
+    """版ごとの比較表のマスと、日米の違いの表の「第N版」の行の確度を突き合わせる。"""
+    if item is None:
+        return []
+    errors = []
+    number = {e: int(EDITION_RE.match(v['label']).group(1)) for e, v in eds.items() if v['in_matrix']}
+    last = max(number.values())
+    rows = item['jp']
+    if 'rd_periods' in row:  # 同じ項目を比較表の複数の行に分けたときは、対応する行だけを比べる
+        periods = {r['period'] for r in rows}
+        errors += [f"jp_edition_matrix.{row['id']}: rd_periods の時期が rule_differences にない: {p}" for p in row['rd_periods'] if p not in periods]
+        rows = [r for r in rows if r['period'] in row['rd_periods']]
+    for r in rows:
+        covered = editions_of_period(r['period'], last)
+        for ed, n in number.items():
+            if n not in covered:
+                continue
+            cell = row['cells'].get(ed)
+            if cell is None:
+                errors.append(f"jp_edition_matrix.{row['id']}: rule_differences の行「{r['period']}」が第{n}版を含むが、比較表のマスは未確認")
+            elif cell['confidence'] != r['confidence'] and not cell.get('rd_note'):
+                errors.append(f"jp_edition_matrix.{row['id']}.{ed}: 確度（{cell['confidence']}）が rule_differences の行「{r['period']}」（{r['confidence']}）と違う（理由は rd_note に書く）")
     return errors
 
 
@@ -384,6 +481,14 @@ def detail(x, data, cards):
     for key, label in (('printed_text', '印刷された文面'), ('play_text', 'エラッタ後・読み替え後'), ('before', '変更前'), ('after', '変更後')):
         if x.get(key):
             L.append(f'- {label}: {x[key]}')
+    if x.get('stages'):
+        L.append('- 段階ごとの確認状況:')
+        L.append('')
+        L.append('  | 段階 | 日付 | 内容 | 確度 | 出典 |')
+        L.append('  |---|---|---|---|---|')
+        for st in x['stages']:
+            L.append(f"  | {data['stage_kinds'][st['kind']]} | {st.get('date') or '—'} | {md(st['text'])} | {st['confidence']} | {cite(st.get('sources', [])) or '—'} |")
+        L.append('')
     for n in x.get('notes', []):
         L.append(f'- {n}')
     L.append('- 根拠:')
@@ -436,10 +541,13 @@ def build(data, cards):
     L += ['', '表の短い名前（各項目の「根拠」で使用）: ' + '、'.join(f'{k} = {v}' for k, v in EVIDENCE_SHORT.items()) + '。',
           '', '| 確度 | 意味 |', '|---|---|']
     L += [f'| {k} | {v} |' for k, v in data['confidence_values'].items()]
+    scanned = '、'.join(f"[{d['code']}]" for d in data['documents'])
     L += ['', '- 当時の公式資料のうち原文を確認できたのは、公式サイトのページ（[P10]、[P15]〜[P23]、[P28]。Internet Archive に保存された写し）と、'
-          '『トレーナーズ』Vol.10〜16・18〜21 と 1996年のガイドブックの誌面（[P4]〜[P9]、[P13]、[P24]〜[P27]、[P29]。[J37] のスキャン）です。'
-          'ルールブック・ファンクラブ会報の原本と、『トレーナーズ』Vol.9 以前・Vol.17 は確認できていません。'
-          '二次資料が挙げている当時の資料は [P1] などの記号で示しています。', '',
+          f"[印刷物の照合記録](../printed-sources.md) の {len(data['documents'])} 冊の誌面（{scanned}。[J37] のスキャンで、実物ではない）です。"
+          'ルールブック（どの版も）の原文は確認できていません。'
+          '二次資料が挙げている当時の資料も [P1] などの記号で示しています。',
+          '- エラッタの記録の一部には「段階ごとの確認状況」を付けています。変更の予告、新しい文面の印刷、既存のカードにも適用する公式の告知、'
+          '実際の適用（大会・ふだんの対戦）を分けて、それぞれ確認できたかを書いています。予告や再録の文面の変更だけでは、公式エラッタとはしていません。', '',
           '## 一覧', '',
           '| id | 地域 | 区分 | 対象 | 公表・印刷 | 確度 |', '|---|---|---|---|---|---|']
     for x in errata:
@@ -480,28 +588,35 @@ def build_editions(data):
          '- 「公式ルール」「ルールブック」「遊びかた説明書」は資料によって呼び方が違います。1997年の会報は、詳しい「公式ルール」は書籍（『大人にもわかるポケモンカード戦略』）に載せ、スターターパックの「遊びかた説明書」は「順次改定される予定」と書いています [P31]。版の番号が同じ文書の系列を指すかは確認できていません。',
          '- 発売元のガイドブック [P29] の「公式ルール」は、基本の遊びかたとは別の追加ルールとして書かれています。公式大会の大会専用ルールも、基本ルールとは別のものです。', '',
          '## 版と時期', '',
-         '| 版 | 時期 | 資料での呼び名 | 根拠 | 確度 |', '|---|---|---|---|---|']
+         '版の日付は発表・告知の日で、ルールが実際に使われ始めた日（適用）とは限りません。', '',
+         '| 版 | 時期 | 資料での呼び名 | 適用 | 根拠 | 確度 |', '|---|---|---|---|---|---|']
     for e in eds:
-        extra = [s for s in e['sources'] if f'[{s}]' not in e['basis'] + e['name_in_sources'] + e['period']]
-        L.append(f"| {e['label']} | {md(e['period'])} | {md(e['name_in_sources'])} | {md(e['basis'])} {cite(extra)} | {e['confidence']} |")
+        extra = [s for s in e['sources'] if f'[{s}]' not in e['basis'] + e['name_in_sources'] + e['period'] + e['applied']]
+        L.append(f"| {e['label']} | {md(e['period'])} | {md(e['name_in_sources'])} | {md(e['applied'])} | {md(e['basis'])} {cite(extra)} | {e['confidence']} |")
     L += ['', '## 項目ごとの比較', '',
-          '各マスは「内容（確度・根拠の種類）[出典]」です。根拠の種類の「スキャン」は当時の印刷物のスキャンで文面を確認したもの、「二次資料」はファンサイトなどの本文を読んだものです。', '',
+          '各マスは「内容（確度・根拠の性質）[出典]」です。根拠の性質:', '']
+    L += [f"- **{MATRIX_TYPE_SHORT[k]}**: {v}" for k, v in data['matrix_evidence_types'].items()]
+    L += ['', 'どの資料がどの時期・範囲まで裏付けるか（裏付けの範囲）と、資料の確認方法（スキャン・二次資料など）は、[項目ごとの補足](#notes) にマスごとに書いています。', '',
           '| 項目 | ' + ' | '.join(c['label'] for c in cols) + ' |', '|---|' + '---|' * len(cols)]
     for row in data['jp_edition_matrix']:
         cells = []
         for c in cols:
             v = row['cells'].get(c['id'])
-            cells.append('未確認' if v is None else f"{md(v['text'])}（{v['confidence']}・{BASIS_SHORT[v['basis']]}）{cite(v['sources'])}")
+            cells.append('未確認' if v is None else f"{md(v['text'])}（{v['confidence']}・{MATRIX_TYPE_SHORT[v['evidence_type']]}）{cite(v['sources'])}")
         L.append(f"| [{row['label']}](#{row['id']}) | " + ' | '.join(cells) + ' |')
-    L += ['', '## 項目ごとの補足', '']
+    L += ['', '<a id="notes"></a>', '', '## 項目ごとの補足', '']
     for row in data['jp_edition_matrix']:
         L += [f'<a id="{row["id"]}"></a>', '', f"### {row['label']}", '']
         if row.get('rd_item'):
             L.append(f"- 英語版との比較: [日米のルールの違い](differences.md#{row['rd_item']})")
+        for c in cols:
+            v = row['cells'].get(c['id'])
+            if v is None:
+                continue
+            note = f"（{v['rd_note']}）" if v.get('rd_note') else ''
+            L.append(f"- {c['label']}: {MATRIX_TYPE_SHORT[v['evidence_type']]}・{BASIS_SHORT[v['basis']]} {cite(v['sources'])}。裏付けの範囲: {md(v['scope'])}{md(note)}")
         for n in row['notes']:
             L.append(f'- {n}')
-        if not row['notes'] and not row.get('rd_item'):
-            L.append('- 補足なし')
         L.append('')
     return L
 
@@ -517,13 +632,13 @@ def build_documents(data):
          '- 本文の引用は、それぞれの記録（`data/rule_history.json` の id）にあります。ここにはページの内容の要約だけを置いています。', '',
          '| 記号 | 資料 | 発行日 | 発売日 | 確認した刷 | スキャン |', '|---|---|---|---|---|---|']
     for doc in data['documents']:
-        L.append(f"| [{doc['code']}](#{doc['code'].lower()}) | {md(doc['title'])} | {doc['issued']} | {doc.get('released') or '—'} | "
+        L.append(f"| [{doc['code']}](#{doc['code'].lower()}) | {md(doc['title'])} | {doc.get('issued') or '—'} | {doc.get('released') or '—'} | "
                  f"{md(doc['printing_checked'])} | [PDF]({doc['scan']['url']}) |")
     L.append('')
     for doc in data['documents']:
         L += [f'<a id="{doc["code"].lower()}"></a>', '', f"## {doc['code']}: {doc['title']}", '',
               f"- 発行: {md(doc['publisher'])}",
-              f"- 発行日: {doc['issued']}" + (f"（発売日 {doc['released']}）" if doc.get('released') else ''),
+              f"- 発行日: {doc.get('issued') or '未確認'}" + (f"（発売日 {doc['released']}）" if doc.get('released') else ''),
               f"- 確認した刷: {doc['printing_checked']}",
               f"- スキャン: {doc['scan']['url']}（[{doc['scan']['source']}]" + (f"、PDF {doc['scan']['pdf_pages']} ページ）" if doc['scan']['pdf_pages'] else '）')]
         for n in doc['notes']:
