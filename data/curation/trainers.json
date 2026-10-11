@@ -3,8 +3,8 @@
   "en": [
    "base1-92"
   ],
-  "ja": "エネルギーリムーブ",
-  "confidence": "未確認"
+  "ja": "エネルギー・リムーブ",
+  "confidence": "有力"
  },
  "PMCG1-071": {
   "en": [
@@ -18,14 +18,14 @@
    "base1-93"
   ],
   "ja": "突風",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG1-073": {
   "en": [
    "base1-95"
   ],
   "ja": "ポケモンいれかえ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG1-074": {
   "en": [
@@ -53,7 +53,7 @@
    "base1-88"
   ],
   "ja": "オーキドはかせ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG1-078": {
   "en": [
@@ -81,7 +81,7 @@
    "base1-84"
   ],
   "ja": "プラスパワー",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG1-082": {
   "en": [
@@ -116,7 +116,7 @@
    "base1-72"
   ],
   "ja": "退化スプレー",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG1-087": {
   "en": [
@@ -130,21 +130,21 @@
    "base1-79"
   ],
   "ja": "超エネルギーリムーブ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG1-089": {
   "en": [
    "base1-73"
   ],
   "ja": "にせオーキドはかせ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG1-090": {
   "en": [
    "base1-71"
   ],
   "ja": "パソコン通信",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG1-091": {
   "en": [
@@ -179,7 +179,7 @@
    "base1-75"
   ],
   "ja": "ミニスカート",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG1-096": {
   "en": [
@@ -193,133 +193,142 @@
    "base1-99"
   ],
   "ja": "草エネルギー",
-  "confidence": "未確認"
+  "confidence": "有力",
+  "note": "旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）"
  },
  "PMCG1-098": {
   "en": [
    "base1-98"
   ],
   "ja": "炎エネルギー",
-  "confidence": "未確認"
+  "confidence": "有力",
+  "note": "旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）"
  },
  "PMCG1-099": {
   "en": [
    "base1-102"
   ],
   "ja": "水エネルギー",
-  "confidence": "未確認"
+  "confidence": "有力",
+  "note": "旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）"
  },
  "PMCG1-100": {
   "en": [
    "base1-100"
   ],
   "ja": "雷エネルギー",
-  "confidence": "未確認"
+  "confidence": "有力",
+  "note": "旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）"
  },
  "PMCG1-101": {
   "en": [
    "base1-101"
   ],
   "ja": "超エネルギー",
-  "confidence": "未確認"
+  "confidence": "有力",
+  "note": "旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）"
  },
  "PMCG1-102": {
   "en": [
    "base1-97"
   ],
   "ja": "闘エネルギー",
-  "confidence": "未確認"
+  "confidence": "有力",
+  "note": "旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）"
  },
  "PMCG2-048": {
   "en": [
    "base2-64"
   ],
   "ja": "モンスターボール",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG3-044": {
   "en": [
    "base3-59"
   ],
   "ja": "エネルギー転送",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG3-045": {
   "en": [
    "base3-60"
   ],
   "ja": "ギャンブラー",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG3-046": {
   "en": [
    "base3-62"
   ],
   "ja": "なにかの化石",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG3-047": {
   "en": [
    "base3-61"
   ],
   "ja": "リサイクル",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG3-048": {
   "en": [
    "base3-58"
   ],
   "ja": "フジろうじん",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG4-054": {
   "en": [
    "base5-79"
   ],
   "ja": "ねむれ!ねむれ!",
-  "confidence": "未確認"
+  "confidence": "有力",
+  "note": "「!」の後の空白の有無はデータにより異なる"
  },
  "PMCG4-055": {
   "en": [
    "base5-75"
   ],
   "ja": "バトル場は穴だらけ!",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG4-056": {
   "en": [
    "base5-78"
   ],
   "ja": "まきちらせ!ベトベトガス",
-  "confidence": "未確認"
+  "confidence": "有力",
+  "note": "「!」の後の空白の有無はデータにより異なる"
  },
  "PMCG4-057": {
   "en": [
    "base5-77"
   ],
   "ja": "夜の廃品回収",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG4-058": {
   "en": [
    "base5-74"
   ],
   "ja": "たたきつけろ!挑戦状",
-  "confidence": "未確認"
+  "confidence": "有力",
+  "note": "「!」の後の空白の有無はデータにより異なる"
  },
  "PMCG4-059": {
   "en": [
    "base5-76"
   ],
   "ja": "にせオーキドの逆襲",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG4-060": {
   "en": [
    "base5-73"
   ],
   "ja": "ボスのやりかた",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG4-061": {
   "en": [
@@ -327,7 +336,7 @@
    "base5-72"
   ],
   "ja": "ロケット団のおねーさん",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG4-062": {
   "en": [
@@ -335,21 +344,21 @@
    "base5-71"
   ],
   "ja": "ロケット団参上!",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG4-063": {
   "en": [
    "base5-82"
   ],
   "ja": "きずぐすり配合エネルギー",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG4-064": {
   "en": [
    "base5-81"
   ],
   "ja": "なんでもなおし配合エネルギー",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG4-065": {
   "en": [
@@ -357,119 +366,119 @@
    "base5-80"
   ],
   "ja": "レインボーエネルギー",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-067": {
   "en": [
    "gym1-122"
   ],
   "ja": "エネルギーサーキュレート",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-068": {
   "en": [
    "gym1-123"
   ],
   "ja": "カスミの勝負",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-069": {
   "en": [
    "gym2-118"
   ],
   "ja": "カスミのなみだ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-070": {
   "en": [
    "gym1-124"
   ],
   "ja": "せまいジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-071": {
   "en": [
    "gym1-116"
   ],
   "ja": "思い出させる",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-072": {
   "en": [
    "gym1-109"
   ],
   "ja": "エリカのお付き",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-073": {
   "en": [
    "gym1-110"
   ],
   "ja": "エリカの香水",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-074": {
   "en": [
    "gym1-99"
   ],
   "ja": "お上品攻撃",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-075": {
   "en": [
    "gym1-114"
   ],
   "ja": "カスミのいかり",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-076": {
   "en": [
    "gym1-120"
   ],
   "ja": "クチバシティジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-077": {
   "en": [
    "gym1-106"
   ],
   "ja": "タケシの育て方",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-078": {
   "en": [
    "gym1-107"
   ],
   "ja": "タマムシシティジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-079": {
   "en": [
    "gym1-115"
   ],
   "ja": "ニビシティジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-080": {
   "en": [
    "gym1-108"
   ],
   "ja": "ハナダシティジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-081": {
   "en": [
    "gym1-112"
   ],
   "ja": "マチスの交渉",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-082": {
   "en": [
    "gym1-111"
   ],
   "ja": "礼儀作法",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-083": {
   "en": [
@@ -477,14 +486,14 @@
    "gym1-100"
   ],
   "ja": "エリカ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-084": {
   "en": [
    "gym2-103"
   ],
   "ja": "エリカの親切",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-085": {
   "en": [
@@ -492,28 +501,28 @@
    "gym1-102"
   ],
   "ja": "カスミ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-086": {
   "en": [
    "gym2-108"
   ],
   "ja": "カスミのわがまま",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-087": {
   "en": [
    "gym2-102"
   ],
   "ja": "錯乱ジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-088": {
   "en": [
    "gym1-118"
   ],
   "ja": "スパイ作戦",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-089": {
   "en": [
@@ -521,21 +530,21 @@
    "gym1-98"
   ],
   "ja": "タケシ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-090": {
   "en": [
    "gym2-101"
   ],
   "ja": "タケシの保護",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-091": {
   "en": [
    "gym2-109"
   ],
   "ja": "抵抗力低下ジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-092": {
   "en": [
@@ -543,140 +552,141 @@
    "gym1-101"
   ],
   "ja": "マチス",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-093": {
   "en": [
    "gym2-107"
   ],
   "ja": "マチスの秘策",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-094": {
   "en": [
    "gym1-103"
   ],
   "ja": "リムーブ禁止ジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-095": {
   "en": [
    "gym1-104"
   ],
   "ja": "ロケット団の特訓ジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG5-096": {
   "en": [
    "gym1-19"
   ],
   "ja": "ロケット団のワナ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-076": {
   "en": [
    "gym1-121"
   ],
   "ja": "カツラのギャンブル",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-077": {
   "en": [
    "gym1-126"
   ],
   "ja": "トラッシュ交換",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-078": {
   "en": [
    "gym1-125"
   ],
   "ja": "ナツメの眼",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-079": {
   "en": [
    "gym2-125"
   ],
   "ja": "見えない壁",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-080": {
   "en": [
    "gym2-126"
   ],
   "ja": "ワープポイント",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-081": {
   "en": [
    "gym1-105"
   ],
   "ja": "カツラの奥の手",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-082": {
   "en": [
    "gym2-112"
   ],
   "ja": "カツラのクイズ その3",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-083": {
   "en": [
    "gym2-115"
   ],
   "ja": "キョウ秘伝 変わり身の術",
-  "confidence": "未確認"
+  "confidence": "有力",
+  "note": "名前の区切り（読点の有無）は未確認"
  },
  "PMCG6-084": {
   "en": [
    "gym1-119"
   ],
   "ja": "くすぐりマシーン",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-085": {
   "en": [
    "gym2-113"
   ],
   "ja": "グレンタウンジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-086": {
   "en": [
    "gym2-114"
   ],
   "ja": "セキチクシティジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-087": {
   "en": [
    "gym1-117"
   ],
   "ja": "ナツメのESP",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-088": {
   "en": [
    "gym2-121"
   ],
   "ja": "ナツメのサイキックコントロール",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-089": {
   "en": [
    "gym1-113"
   ],
   "ja": "ロケット団員",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-090": {
   "en": [
    "gym2-122"
   ],
   "ja": "ヤマブキシティジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-091": {
   "en": [
@@ -690,7 +700,7 @@
    "gym2-119"
   ],
   "ja": "ロケット団の爆発ジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-093": {
   "en": [
@@ -698,7 +708,7 @@
    "gym2-100"
   ],
   "ja": "カツラ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-094": {
   "en": [
@@ -706,7 +716,7 @@
    "gym2-106"
   ],
   "ja": "キョウ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-095": {
   "en": [
@@ -714,21 +724,21 @@
    "gym2-104"
   ],
   "ja": "サカキ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-096": {
   "en": [
    "gym2-105"
   ],
   "ja": "サカキの切り札",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-097": {
   "en": [
    "gym2-123"
   ],
   "ja": "トキワシティジム",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "PMCG6-098": {
   "en": [
@@ -736,349 +746,351 @@
    "gym2-110"
   ],
   "ja": "ナツメ",
-  "confidence": "未確認"
+  "confidence": "有力"
  },
  "neo1-073": {
   "en": [
    "neo1-99"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "きのみ",
+  "confidence": "有力"
  },
  "neo1-074": {
   "en": [
    "neo1-103"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "すごいつりざお",
+  "confidence": "確実"
  },
  "neo1-075": {
   "en": [
    "neo1-100"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ポケモンぎゃくしめい",
+  "confidence": "確実"
  },
  "neo1-076": {
   "en": [
    "neo1-102"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ポケモンマーチ",
+  "confidence": "確実"
  },
  "neo1-077": {
   "en": [
    "neo1-101"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "モーモーミルク",
+  "confidence": "確実"
  },
  "neo1-078": {
   "en": [
    "neo1-96"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ウツギはかせ",
+  "confidence": "確実"
  },
  "neo1-079": {
   "en": [
    "neo1-93"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "おうごんのみ",
+  "confidence": "確実"
  },
  "neo1-080": {
   "en": [
    "neo1-92"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "カードめくりゲーム",
+  "confidence": "確実"
  },
  "neo1-081": {
   "en": [
    "neo1-94"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "きせきのみ",
+  "confidence": "確実"
  },
  "neo1-082": {
   "en": [
    "neo1-95"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "新ポケモン図鑑HANDY808",
+  "confidence": "確実"
  },
  "neo1-083": {
   "en": [
    "neo1-98"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "スーパーポケモン回収",
+  "confidence": "確実"
  },
  "neo1-084": {
   "en": [
    "neo1-91"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "マサキの転送装置",
+  "confidence": "確実"
  },
  "neo1-085": {
   "en": [
    "neo1-97"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "マダツボミのとう",
+  "confidence": "確実"
  },
  "neo1-086": {
   "en": [
    "neo1-84"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "エコロジム",
+  "confidence": "確実"
  },
  "neo1-087": {
   "en": [
    "neo1-85"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "エネルギーチャージ",
+  "confidence": "有力"
  },
  "neo1-088": {
   "en": [
    "neo1-86"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "きあいのハチマキ",
+  "confidence": "確実"
  },
  "neo1-089": {
   "en": [
    "neo1-87"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "クルミ",
+  "confidence": "確実"
  },
  "neo1-090": {
   "en": [
    "neo1-83"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "スロットゲーム",
+  "confidence": "確実"
  },
  "neo1-091": {
   "en": [
    "neo1-90"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "タイムカプセル",
+  "confidence": "確実"
  },
  "neo1-092": {
   "en": [
    "neo1-89"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "超エネルギー回収",
+  "confidence": "確実"
  },
  "neo1-093": {
   "en": [
    "neo1-88"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ポケモンギア",
+  "confidence": "確実"
  },
  "neo1-094": {
   "en": [
    "neo1-104"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "悪エネルギー",
+  "confidence": "有力"
  },
  "neo1-095": {
   "en": [
    "neo1-19"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "鋼エネルギー",
+  "confidence": "有力"
  },
  "neo1-096": {
   "en": [
    "neo1-105"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "リサイクルエネルギー",
+  "confidence": "有力"
  },
  "neo2-053": {
   "en": [
    "neo2-75"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "エネルギーアーク",
+  "confidence": "有力"
  },
  "neo2-054": {
   "en": [
    "neo2-74"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "遺跡の石版",
+  "confidence": "有力",
+  "note": "TCGdex は絵柄違い（カブト／プテラ）の2種として掲載。別データでは1種のみ。2種あったかは未確認"
  },
  "neo2-055": {
   "en": [
    "neo2-72"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "たまごの化石",
+  "confidence": "有力"
  },
  "neo2-056": {
   "en": [
    "neo2-73"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "退化スプレーHYPER",
+  "confidence": "有力"
  },
  "neo2-057": {
   "en": [
    "neo2-74"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "遺跡の石版",
+  "confidence": "有力",
+  "note": "TCGdex は絵柄違い（カブト／プテラ）の2種として掲載。別データでは1種のみ。2種あったかは未確認"
  },
  "neo3-053": {
   "en": [
    "neo3-64"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ボロのつりざお",
+  "confidence": "有力"
  },
  "neo3-054": {
   "en": [
    "neo3-61"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "いやしの野原",
+  "confidence": "有力"
  },
  "neo3-055": {
   "en": [
    "neo3-60"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ふうせんのみ",
+  "confidence": "有力"
  },
  "neo3-056": {
   "en": [
    "neo3-62"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ポケモン育て屋夫婦",
+  "confidence": "有力"
  },
  "neo3-057": {
   "en": [
    "neo3-63"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ロケット団のアジト",
+  "confidence": "有力"
  },
  "neo4-099": {
   "en": [
    "neo4-104"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ばんのうごな",
+  "confidence": "有力"
  },
  "neo4-100": {
   "en": [
    "neo4-105"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "マサキのメール",
+  "confidence": "有力"
  },
  "neo4-101": {
   "en": [
    "neo4-99"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "エネルギースタジアム",
+  "confidence": "有力"
  },
  "neo4-102": {
   "en": [
    "neo4-98"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "エネルギー増幅装置",
+  "confidence": "有力"
  },
  "neo4-103": {
   "en": [
    "neo4-97"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "はんげきのツメ",
+  "confidence": "有力"
  },
  "neo4-104": {
   "en": [
    "neo4-101"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ピントレンズ",
+  "confidence": "有力"
  },
  "neo4-105": {
   "en": [
    "neo4-102"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ポケモン性格判定",
+  "confidence": "有力"
  },
  "neo4-106": {
   "en": [
    "neo4-100"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ラッキースタジアム",
+  "confidence": "有力"
  },
  "neo4-107": {
   "en": [
    "neo4-103"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ロケット団の暗躍",
+  "confidence": "有力"
  },
  "neo4-108": {
   "en": [
    "neo4-96"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "怪電波マシーン",
+  "confidence": "有力"
  },
  "neo4-109": {
   "en": [
    "neo4-93"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "学習装置",
+  "confidence": "有力"
  },
  "neo4-110": {
   "en": [
    "neo4-92"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "でこぼこジム",
+  "confidence": "有力"
  },
  "neo4-111": {
   "en": [
    "neo4-94"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "にせオーキドの発明",
+  "confidence": "有力"
  },
  "neo4-112": {
   "en": [
    "neo4-95"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ラジオとう",
+  "confidence": "有力"
  },
  "neo4-113": {
   "en": [
    "neo4-16"
   ],
-  "ja": "",
-  "confidence": "未確認"
+  "ja": "ミラクルエネルギー",
+  "confidence": "有力"
  }
 }

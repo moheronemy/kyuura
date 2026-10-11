@@ -59,18 +59,18 @@
 | 51 | ミニリュウ | ポケモン | 無色 | たね | 40 | ● | Dratini<br>Team Rocket 53 |  |
 | 52 | わるいハクリュー | ポケモン | 無色 | 1進化 | 60 | ◆ | Dark Dragonair<br>Team Rocket 33 | 再録: LC 38 |
 | 53 | わるいカイリュー | ポケモン | 無色 | 2進化 | 70 | ★キラ | Dark Dragonite<br>Team Rocket 5・22 | 再録: LC 5 |
-| 54 | ねむれ!ねむれ! ※ | トレーナー（Rocket's Secret Machine） |  |  |  | ● | Sleep!<br>Team Rocket 79 |  |
-| 55 | バトル場は穴だらけ! ※ | トレーナー（Rocket's Secret Machine） |  |  |  | ● | Digger<br>Team Rocket 75 |  |
-| 56 | まきちらせ!ベトベトガス ※ | トレーナー |  |  |  | ● | Goop Gas Attack<br>Team Rocket 78 |  |
-| 57 | 夜の廃品回収 ※ | トレーナー（Rocket's Secret Machine） |  |  |  | ● | Nightly Garbage Run<br>Team Rocket 77 |  |
-| 58 | たたきつけろ!挑戦状 ※ | トレーナー |  |  |  | ◆ | Challenge!<br>Team Rocket 74 |  |
-| 59 | にせオーキドの逆襲 ※ | トレーナー |  |  |  | ◆ | Imposter Oak's Revenge<br>Team Rocket 76 |  |
-| 60 | ボスのやりかた ※ | トレーナー |  |  |  | ◆ | The Boss's Way<br>Team Rocket 73 |  |
-| 61 | ロケット団のおねーさん ※ | トレーナー |  |  |  | ★キラ | Rocket's Sneak Attack<br>Team Rocket 16・72 |  |
-| 62 | ロケット団参上! ※ | トレーナー |  |  |  | 特殊 | Here Comes Team Rocket!<br>Team Rocket 15・71 |  |
-| 63 | きずぐすり配合エネルギー ※ | 特殊エネルギー |  |  |  | ● | Potion Energy<br>Team Rocket 82 |  |
-| 64 | なんでもなおし配合エネルギー ※ | 特殊エネルギー |  |  |  | ● | Full Heal Energy<br>Team Rocket 81 |  |
-| 65 | レインボーエネルギー ※ | 特殊エネルギー |  |  |  | ★キラ | Rainbow Energy<br>Team Rocket 17・80 |  |
+| 54 | ねむれ!ねむれ! | トレーナー（Rocket's Secret Machine） |  |  |  | ● | Sleep!<br>Team Rocket 79 | 「!」の後の空白の有無はデータにより異なる |
+| 55 | バトル場は穴だらけ! | トレーナー（Rocket's Secret Machine） |  |  |  | ● | Digger<br>Team Rocket 75 |  |
+| 56 | まきちらせ!ベトベトガス | トレーナー |  |  |  | ● | Goop Gas Attack<br>Team Rocket 78 | 「!」の後の空白の有無はデータにより異なる |
+| 57 | 夜の廃品回収 | トレーナー（Rocket's Secret Machine） |  |  |  | ● | Nightly Garbage Run<br>Team Rocket 77 |  |
+| 58 | たたきつけろ!挑戦状 | トレーナー |  |  |  | ◆ | Challenge!<br>Team Rocket 74 | 「!」の後の空白の有無はデータにより異なる |
+| 59 | にせオーキドの逆襲 | トレーナー |  |  |  | ◆ | Imposter Oak's Revenge<br>Team Rocket 76 |  |
+| 60 | ボスのやりかた | トレーナー |  |  |  | ◆ | The Boss's Way<br>Team Rocket 73 |  |
+| 61 | ロケット団のおねーさん | トレーナー |  |  |  | ★キラ | Rocket's Sneak Attack<br>Team Rocket 16・72 |  |
+| 62 | ロケット団参上! | トレーナー |  |  |  | 特殊 | Here Comes Team Rocket!<br>Team Rocket 15・71 |  |
+| 63 | きずぐすり配合エネルギー | 特殊エネルギー |  |  |  | ● | Potion Energy<br>Team Rocket 82 |  |
+| 64 | なんでもなおし配合エネルギー | 特殊エネルギー |  |  |  | ● | Full Heal Energy<br>Team Rocket 81 |  |
+| 65 | レインボーエネルギー | 特殊エネルギー |  |  |  | ★キラ | Rainbow Energy<br>Team Rocket 17・80 |  |
 
 ## 英語版との対応メモ
 

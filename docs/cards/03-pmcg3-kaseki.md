@@ -38,7 +38,7 @@
 | 30 | ゴースト | ポケモン | 超 | 1進化 | 50 | ★キラ | Haunter<br>Fossil 6・21 | 再録: LC 46 |
 | 31 | ゲンガー | ポケモン | 超 | 2進化 | 80 | ★キラ | Gengar<br>Fossil 5・20 | 再録: LC 11 |
 | 32 | スリーパー | ポケモン | 超 | 1進化 | 90 | ★キラ | Hypno<br>Fossil 8・23 | 再録: LC 25 |
-| 33 | ミュウ | ポケモン | 超 | たね | 50 | ★キラ | Mew<br>Wizards Black Star Promos 8・9 ⚠ |  |
+| 33 | ミュウ | ポケモン | 超 | たね | 50 | ★キラ | Mew<br>Wizards Black Star Promos 8・9 ⚠ | 英語版 Fossil には収録されず、WotC のプロモとして発売 |
 | 34 | イシツブテ | ポケモン | 闘 | たね | 50 | ● | Geodude<br>Fossil 47 | 再録: LC 77 |
 | 35 | カブト | ポケモン | 闘 | 1進化 | 30 | ● | Kabuto<br>Fossil 50 | 再録: LC 48 |
 | 36 | サンドパン | ポケモン | 闘 | 1進化 | 70 | ◆ | Sandslash<br>Fossil 41 | 再録: LC 62 |
@@ -49,11 +49,11 @@
 | 41 | プテラ | ポケモン | 闘 | 1進化 | 60 | ★キラ | Aerodactyl<br>Fossil 1・16 |  |
 | 42 | メタモン | ポケモン | 無色 | たね | 50 | ★キラ | Ditto<br>Fossil 3・18 |  |
 | 43 | カイリュー | ポケモン | 無色 | 2進化 | 100 | ★キラ | Dragonite<br>Fossil 4・19 |  |
-| 44 | エネルギー転送 ※ | トレーナー |  |  |  | ● | Energy Search<br>Fossil 59 |  |
-| 45 | ギャンブラー ※ | トレーナー |  |  |  | ● | Gambler<br>Fossil 60 |  |
-| 46 | なにかの化石 ※ | トレーナー |  |  |  | ● | Mysterious Fossil<br>Fossil 62 |  |
-| 47 | リサイクル ※ | トレーナー |  |  |  | ● | Recycle<br>Fossil 61 |  |
-| 48 | フジろうじん ※ | トレーナー |  |  |  | ◆ | Mr. Fuji<br>Fossil 58 |  |
+| 44 | エネルギー転送 | トレーナー |  |  |  | ● | Energy Search<br>Fossil 59 |  |
+| 45 | ギャンブラー | トレーナー |  |  |  | ● | Gambler<br>Fossil 60 |  |
+| 46 | なにかの化石 | トレーナー |  |  |  | ● | Mysterious Fossil<br>Fossil 62 |  |
+| 47 | リサイクル | トレーナー |  |  |  | ● | Recycle<br>Fossil 61 |  |
+| 48 | フジろうじん | トレーナー |  |  |  | ◆ | Mr. Fuji<br>Fossil 58 |  |
 
 ## 英語版との対応メモ
 

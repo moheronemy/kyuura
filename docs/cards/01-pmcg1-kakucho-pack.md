@@ -75,39 +75,39 @@
 | 67 | ピッピ | ポケモン | 無色 | たね | 40 | ★キラ | Clefairy<br>Base Set 5 | 再録: BS2 6 |
 | 68 | ラッキー | ポケモン | 無色 | たね | 120 | ★キラ | Chansey<br>Base Set 3 | 再録: BS2 3 |
 | 69 | ハクリュー | ポケモン | 無色 | 1進化 | 80 | ★ | Dragonair<br>Base Set 18 | 再録: BS2 22 |
-| 70 | エネルギーリムーブ ※ | トレーナー |  |  |  | ● | Energy Removal<br>Base Set 92 |  |
+| 70 | エネルギー・リムーブ | トレーナー |  |  |  | ● | Energy Removal<br>Base Set 92 |  |
 | 71 | きずぐすり ※ | トレーナー |  |  |  | ● | Potion<br>Base Set 94 |  |
-| 72 | 突風 ※ | トレーナー |  |  |  | ● | Gust of Wind<br>Base Set 93 |  |
-| 73 | ポケモンいれかえ ※ | トレーナー |  |  |  | ● | Switch<br>Base Set 95 |  |
+| 72 | 突風 | トレーナー |  |  |  | ● | Gust of Wind<br>Base Set 93 |  |
+| 73 | ポケモンいれかえ | トレーナー |  |  |  | ● | Switch<br>Base Set 95 |  |
 | 74 | マサキ ※ | トレーナー |  |  |  | ● | Bill<br>Base Set 91 |  |
 | 75 | いいきずぐすり ※ | トレーナー |  |  |  | ◆ | Super Potion<br>Base Set 90 |  |
 | 76 | エネルギー回収 ※ | トレーナー |  |  |  | ◆ | Energy Retrieval<br>Base Set 81 |  |
-| 77 | オーキドはかせ ※ | トレーナー |  |  |  | ◆ | Professor Oak<br>Base Set 88 |  |
+| 77 | オーキドはかせ | トレーナー |  |  |  | ◆ | Professor Oak<br>Base Set 88 |  |
 | 78 | げんきのかけら ※ | トレーナー |  |  |  | ◆ | Revive<br>Base Set 89 |  |
 | 79 | ディフェンダー ※ | トレーナー |  |  |  | ◆ | Defender<br>Base Set 80 |  |
 | 80 | なんでもなおし ※ | トレーナー |  |  |  | ◆ | Full Heal<br>Base Set 82 |  |
-| 81 | プラスパワー ※ | トレーナー |  |  |  | ◆ | PlusPower<br>Base Set 84 |  |
+| 81 | プラスパワー | トレーナー |  |  |  | ◆ | PlusPower<br>Base Set 84 |  |
 | 82 | ポケモン図鑑 ※ | トレーナー |  |  |  | ◆ | Pokédex<br>Base Set 87 |  |
 | 83 | ポケモンセンター ※ | トレーナー |  |  |  | ◆ | Pokémon Center<br>Base Set 85 |  |
 | 84 | ポケモンの笛 ※ | トレーナー |  |  |  | ◆ | Pokémon Flute<br>Base Set 86 |  |
 | 85 | メンテナンス ※ | トレーナー |  |  |  | ◆ | Maintenance<br>Base Set 83 |  |
-| 86 | 退化スプレー ※ | トレーナー |  |  |  | ★ | Devolution Spray<br>Base Set 72 |  |
+| 86 | 退化スプレー | トレーナー |  |  |  | ★ | Devolution Spray<br>Base Set 72 |  |
 | 87 | ダウジングマシーン ※ | トレーナー |  |  |  | ★ | Item Finder<br>Base Set 74 |  |
-| 88 | 超エネルギーリムーブ ※ | トレーナー |  |  |  | ★ | Super Energy Removal<br>Base Set 79 |  |
-| 89 | にせオーキドはかせ ※ | トレーナー |  |  |  | ★ | Impostor Professor Oak<br>Base Set 73 |  |
-| 90 | パソコン通信 ※ | トレーナー |  |  |  | ★ | Computer Search<br>Base Set 71 |  |
+| 88 | 超エネルギーリムーブ | トレーナー |  |  |  | ★ | Super Energy Removal<br>Base Set 79 |  |
+| 89 | にせオーキドはかせ | トレーナー |  |  |  | ★ | Impostor Professor Oak<br>Base Set 73 |  |
+| 90 | パソコン通信 | トレーナー |  |  |  | ★ | Computer Search<br>Base Set 71 |  |
 | 91 | ピッピ人形 ※ | トレーナー |  |  |  | ★ | Clefairy Doll<br>Base Set 70 |  |
 | 92 | ポケモン回収 ※ | トレーナー |  |  |  | ★ | Scoop Up<br>Base Set 78 |  |
 | 93 | ポケモン交換おじさん ※ | トレーナー |  |  |  | ★ | Pokémon Trader<br>Base Set 77 |  |
 | 94 | ポケモン育て屋さん ※ | トレーナー |  |  |  | ★ | Pokémon Breeder<br>Base Set 76 |  |
-| 95 | ミニスカート ※ | トレーナー |  |  |  | ★ | Lass<br>Base Set 75 |  |
+| 95 | ミニスカート | トレーナー |  |  |  | ★ | Lass<br>Base Set 75 |  |
 | 96 | ダブル無色エネルギー ※ | 特殊エネルギー |  |  |  | ◆ | Double Colorless Energy<br>Base Set 96 |  |
-| 97 | 草エネルギー ※ | 基本エネルギー |  |  |  | ● | Grass Energy<br>Base Set 99 |  |
-| 98 | 炎エネルギー ※ | 基本エネルギー |  |  |  | ● | Fire Energy<br>Base Set 98 |  |
-| 99 | 水エネルギー ※ | 基本エネルギー |  |  |  | ● | Water Energy<br>Base Set 102 |  |
-| 100 | 雷エネルギー ※ | 基本エネルギー |  |  |  | ● | Lightning Energy<br>Base Set 100 |  |
-| 101 | 超エネルギー ※ | 基本エネルギー |  |  |  | ● | Psychic Energy<br>Base Set 101 |  |
-| 102 | 闘エネルギー ※ | 基本エネルギー |  |  |  | ● | Fighting Energy<br>Base Set 97 |  |
+| 97 | 草エネルギー | 基本エネルギー |  |  |  | ● | Grass Energy<br>Base Set 99 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
+| 98 | 炎エネルギー | 基本エネルギー |  |  |  | ● | Fire Energy<br>Base Set 98 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
+| 99 | 水エネルギー | 基本エネルギー |  |  |  | ● | Water Energy<br>Base Set 102 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
+| 100 | 雷エネルギー | 基本エネルギー |  |  |  | ● | Lightning Energy<br>Base Set 100 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
+| 101 | 超エネルギー | 基本エネルギー |  |  |  | ● | Psychic Energy<br>Base Set 101 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
+| 102 | 闘エネルギー | 基本エネルギー |  |  |  | ● | Fighting Energy<br>Base Set 97 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
 
 ## 英語版との対応メモ
 

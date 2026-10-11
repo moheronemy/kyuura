@@ -26,7 +26,7 @@
 | 18 | ヒノアラシ | ポケモン | 炎 | たね | 50 | ● | Cyndaquil<br>Neo Genesis 57 |  |
 | 19 | ブーバー | ポケモン | 炎 | たね | 70 | ◆ | Magmar<br>Neo Genesis 40 |  |
 | 20 | マグマラシ | ポケモン | 炎 | 1進化 | 70 | ◆ | Quilava<br>Neo Genesis 47 |  |
-| 21 | バクフーン | ポケモン | 炎 | 2進化 | 100 | ★キラ | Typhlosion<br>Neo Genesis 17・18 |  |
+| 21 | バクフーン | ポケモン | 炎 | 2進化 | 100 | ★キラ | Typhlosion<br>Neo Genesis 17 |  |
 | 22 | ブビィ | ポケモン | 炎 | ベイビィ | 30 | ★ | Magby<br>Neo Genesis 23 |  |
 | 23 | タッツー | ポケモン | 水 | たね | 50 | ● | Horsea<br>Neo Genesis 62 |  |
 | 24 | ワニノコ | ポケモン | 水 | たね | 50 | ● | Totodile<br>Neo Genesis 81 |  |
@@ -78,30 +78,30 @@
 | 70 | ピィ | ポケモン | 無色 | ベイビィ | 30 | ★ | Cleffa<br>Neo Genesis 20 |  |
 | 71 | トゲチック | ポケモン | 無色 | 1進化 | 60 | ★キラ | Togetic<br>Neo Genesis 16 |  |
 | 72 | ルギア | ポケモン | 無色 | たね | 90 | ★キラ | Lugia<br>Neo Genesis 9 |  |
-| 73 | （公式名未確認） | トレーナー（ポケモンのどうぐ） |  |  |  | ● | Berry<br>Neo Genesis 99 |  |
-| 74 | （公式名未確認） | トレーナー |  |  |  | ● | Super Rod<br>Neo Genesis 103 |  |
-| 75 | （公式名未確認） | トレーナー |  |  |  | ● | Double Gust<br>Neo Genesis 100 |  |
-| 76 | （公式名未確認） | トレーナー |  |  |  | ● | Pokémon March<br>Neo Genesis 102 |  |
-| 77 | （公式名未確認） | トレーナー |  |  |  | ● | Moo-Moo Milk<br>Neo Genesis 101 |  |
-| 78 | （公式名未確認） | トレーナー |  |  |  | ◆ | Professor Elm<br>Neo Genesis 96 |  |
-| 79 | （公式名未確認） | トレーナー（ポケモンのどうぐ） |  |  |  | ◆ | Gold Berry<br>Neo Genesis 93 |  |
-| 80 | （公式名未確認） | トレーナー（Goldenrod Game Corner） |  |  |  | ◆ | Card-Flip Game<br>Neo Genesis 92 |  |
-| 81 | （公式名未確認） | トレーナー（ポケモンのどうぐ） |  |  |  | ◆ | Miracle Berry<br>Neo Genesis 94 |  |
-| 82 | （公式名未確認） | トレーナー |  |  |  | ◆ | New Pokédex<br>Neo Genesis 95 |  |
-| 83 | （公式名未確認） | トレーナー |  |  |  | ◆ | Super Scoop Up<br>Neo Genesis 98 |  |
-| 84 | （公式名未確認） | トレーナー |  |  |  | ◆ | Bill's Teleporter<br>Neo Genesis 91 |  |
-| 85 | （公式名未確認） | トレーナー（スタジアム） |  |  |  | ◆ | Sprout Tower<br>Neo Genesis 97 |  |
-| 86 | （公式名未確認） | トレーナー（スタジアム） |  |  |  | ★ | Ecogym<br>Neo Genesis 84 |  |
-| 87 | （公式名未確認） | トレーナー |  |  |  | ★ | Energy Charge<br>Neo Genesis 85 |  |
-| 88 | （公式名未確認） | トレーナー（ポケモンのどうぐ） |  |  |  | ★ | Focus Band<br>Neo Genesis 86 |  |
-| 89 | （公式名未確認） | トレーナー |  |  |  | ★ | Mary<br>Neo Genesis 87 |  |
-| 90 | （公式名未確認） | トレーナー（Goldenrod Game Corner） |  |  |  | ★ | Arcade Game<br>Neo Genesis 83 |  |
-| 91 | （公式名未確認） | トレーナー |  |  |  | ★ | Time Capsule<br>Neo Genesis 90 |  |
-| 92 | （公式名未確認） | トレーナー |  |  |  | ★ | Super Energy Retrieval<br>Neo Genesis 89 |  |
-| 93 | （公式名未確認） | トレーナー |  |  |  | ★ | PokéGear<br>Neo Genesis 88 |  |
-| 94 | （公式名未確認） | 特殊エネルギー |  |  |  | ★ | Darkness Energy<br>Neo Genesis 104 |  |
-| 95 | （公式名未確認） | 特殊エネルギー |  |  |  | ★キラ | Metal Energy<br>Neo Genesis 19 |  |
-| 96 | （公式名未確認） | 特殊エネルギー |  |  |  | ★ | Recycle Energy<br>Neo Genesis 105 |  |
+| 73 | きのみ | トレーナー（ポケモンのどうぐ） |  |  |  | ● | Berry<br>Neo Genesis 99 |  |
+| 74 | すごいつりざお | トレーナー |  |  |  | ● | Super Rod<br>Neo Genesis 103 |  |
+| 75 | ポケモンぎゃくしめい | トレーナー |  |  |  | ● | Double Gust<br>Neo Genesis 100 |  |
+| 76 | ポケモンマーチ | トレーナー |  |  |  | ● | Pokémon March<br>Neo Genesis 102 |  |
+| 77 | モーモーミルク | トレーナー |  |  |  | ● | Moo-Moo Milk<br>Neo Genesis 101 |  |
+| 78 | ウツギはかせ | トレーナー |  |  |  | ◆ | Professor Elm<br>Neo Genesis 96 |  |
+| 79 | おうごんのみ | トレーナー（ポケモンのどうぐ） |  |  |  | ◆ | Gold Berry<br>Neo Genesis 93 |  |
+| 80 | カードめくりゲーム | トレーナー（Goldenrod Game Corner） |  |  |  | ◆ | Card-Flip Game<br>Neo Genesis 92 |  |
+| 81 | きせきのみ | トレーナー（ポケモンのどうぐ） |  |  |  | ◆ | Miracle Berry<br>Neo Genesis 94 |  |
+| 82 | 新ポケモン図鑑HANDY808 | トレーナー |  |  |  | ◆ | New Pokédex<br>Neo Genesis 95 |  |
+| 83 | スーパーポケモン回収 | トレーナー |  |  |  | ◆ | Super Scoop Up<br>Neo Genesis 98 |  |
+| 84 | マサキの転送装置 | トレーナー |  |  |  | ◆ | Bill's Teleporter<br>Neo Genesis 91 |  |
+| 85 | マダツボミのとう | トレーナー（スタジアム） |  |  |  | ◆ | Sprout Tower<br>Neo Genesis 97 |  |
+| 86 | エコロジム | トレーナー（スタジアム） |  |  |  | ★ | Ecogym<br>Neo Genesis 84 |  |
+| 87 | エネルギーチャージ | トレーナー |  |  |  | ★ | Energy Charge<br>Neo Genesis 85 |  |
+| 88 | きあいのハチマキ | トレーナー（ポケモンのどうぐ） |  |  |  | ★ | Focus Band<br>Neo Genesis 86 |  |
+| 89 | クルミ | トレーナー |  |  |  | ★ | Mary<br>Neo Genesis 87 |  |
+| 90 | スロットゲーム | トレーナー（Goldenrod Game Corner） |  |  |  | ★ | Arcade Game<br>Neo Genesis 83 |  |
+| 91 | タイムカプセル | トレーナー |  |  |  | ★ | Time Capsule<br>Neo Genesis 90 |  |
+| 92 | 超エネルギー回収 | トレーナー |  |  |  | ★ | Super Energy Retrieval<br>Neo Genesis 89 |  |
+| 93 | ポケモンギア | トレーナー |  |  |  | ★ | PokéGear<br>Neo Genesis 88 |  |
+| 94 | 悪エネルギー | 特殊エネルギー |  |  |  | ★ | Darkness Energy<br>Neo Genesis 104 |  |
+| 95 | 鋼エネルギー | 特殊エネルギー |  |  |  | ★キラ | Metal Energy<br>Neo Genesis 19 |  |
+| 96 | リサイクルエネルギー | 特殊エネルギー |  |  |  | ★ | Recycle Energy<br>Neo Genesis 105 |  |
 
 ## 英語版との対応メモ
 
@@ -111,6 +111,7 @@ Neo Genesis にあって、日本版の本弾に収録されていないカー�
 
 - 5 Feraligatr
 - 10 Meganium
+- 18 Typhlosion
 - 28 Bayleef
 - 32 Croconaw
 - 46 Quilava

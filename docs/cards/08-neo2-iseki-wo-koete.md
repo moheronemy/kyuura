@@ -1,7 +1,7 @@
 # 遺跡をこえて...（neo 第2弾）
 
 - 発売日: 2000年7月7日
-- 収録枚数: 56種＋α
+- 収録枚数: 56種（TCGdex は遺跡の石版を2種と数えて57）
 - 主に対応する英語版: Neo Discovery
 
 | No. | 日本語名 | 種類 | タイプ | 進化 | HP | レア | 英語版（WotC） | 備考 |
@@ -26,7 +26,7 @@
 | 18 | カブトプス | ポケモン | 水 | 2進化 | 90 | ★キラ | Kabutops<br>Neo Discovery 6・25 |  |
 | 19 | ニョロトノ | ポケモン | 水 | 2進化 | 100 | ★キラ | Politoed<br>Neo Discovery 8・27 |  |
 | 20 | メリープ | ポケモン | 雷 | たね | 50 | ● | Mareep<br>Neo Discovery 58 |  |
-| 21 | わるいライチュウ | ポケモン | 雷 | 1進化 | 70 | 特殊 | Dark Raichu<br>Team Rocket 83 ⚠ | 再録: LC 7 |
+| 21 | わるいライチュウ | ポケモン | 雷 | 1進化 | 70 | 特殊 | Dark Raichu<br>Team Rocket 83 ⚠ | 英語版は Team Rocket（2000年4月）のシークレットカードが先。日本ではこの弾で登場<br>再録: LC 7 |
 | 22 | ネイティ | ポケモン | 超 | たね | 40 | ● | Natu<br>Neo Discovery 59 |  |
 | 23 | アンノーンI | ポケモン | 超 | たね | 40 | ● | Unown [I]<br>Neo Discovery 68 |  |
 | 24 | ネイティオ | ポケモン | 超 | 1進化 | 70 | ◆ | Xatu<br>Neo Discovery 52 |  |
@@ -58,11 +58,11 @@
 | 50 | ププリン | ポケモン | 無色 | ベイビィ | 30 | ◆ | Igglybuff<br>Neo Discovery 40 |  |
 | 51 | リングマ | ポケモン | 無色 | 1進化 | 80 | ★キラ | Ursaring<br>Neo Discovery 15・34 |  |
 | 52 | ドーブル | ポケモン | 無色 | たね | 50 | ★キラ | Smeargle<br>Neo Discovery 11・30 |  |
-| 53 | （公式名未確認） | トレーナー |  |  |  | ● | Energy Ark<br>Neo Discovery 75 |  |
-| 54 | （公式名未確認） | トレーナー |  |  |  | ◆ | Ruin Wall<br>Neo Discovery 74 |  |
-| 55 | （公式名未確認） | トレーナー |  |  |  | ◆ | Fossil Egg<br>Neo Discovery 72 |  |
-| 56 | （公式名未確認） | トレーナー |  |  |  | ◆ | Hyper Devolution Spray<br>Neo Discovery 73 |  |
-| 57 | （公式名未確認） | トレーナー |  |  |  | ◆ | Ruin Wall<br>Neo Discovery 74 |  |
+| 53 | エネルギーアーク | トレーナー |  |  |  | ● | Energy Ark<br>Neo Discovery 75 |  |
+| 54 | 遺跡の石版 | トレーナー |  |  |  | ◆ | Ruin Wall<br>Neo Discovery 74 | TCGdex は絵柄違い（カブト／プテラ）の2種として掲載。別データでは1種のみ。2種あったかは未確認 |
+| 55 | たまごの化石 | トレーナー |  |  |  | ◆ | Fossil Egg<br>Neo Discovery 72 |  |
+| 56 | 退化スプレーHYPER | トレーナー |  |  |  | ◆ | Hyper Devolution Spray<br>Neo Discovery 73 |  |
+| 57 | 遺跡の石版 | トレーナー |  |  |  | ◆ | Ruin Wall<br>Neo Discovery 74 | TCGdex は絵柄違い（カブト／プテラ）の2種として掲載。別データでは1種のみ。2種あったかは未確認 |
 
 ## 英語版との対応メモ
 

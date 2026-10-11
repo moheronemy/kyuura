@@ -1,5 +1,9 @@
 {
  "unown_format": "アンノーン{letter}",
- "owner_prefix": {"Rocket's": "ロケット団の"},
- "prefix": {"Light": "やさしい"}
+ "owner_prefix": {
+  "Rocket's": "R団の"
+ },
+ "prefix": {
+  "Light": "やさしい"
+ }
 }

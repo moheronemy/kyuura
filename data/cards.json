@@ -3276,8 +3276,8 @@
   "rarity_jp": "Common",
   "holo": false,
   "notes": [],
-  "ja_name": "エネルギーリムーブ",
-  "ja_name_basis": "未確認",
+  "ja_name": "エネルギー・リムーブ",
+  "ja_name_basis": "有力",
   "en_name": "Energy Removal",
   "en_set": "base1",
   "en_numbers": [
@@ -3335,7 +3335,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "突風",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Gust of Wind",
   "en_set": "base1",
   "en_numbers": [
@@ -3364,7 +3364,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ポケモンいれかえ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Switch",
   "en_set": "base1",
   "en_numbers": [
@@ -3480,7 +3480,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "オーキドはかせ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Professor Oak",
   "en_set": "base1",
   "en_numbers": [
@@ -3596,7 +3596,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "プラスパワー",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "PlusPower",
   "en_set": "base1",
   "en_numbers": [
@@ -3741,7 +3741,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "退化スプレー",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Devolution Spray",
   "en_set": "base1",
   "en_numbers": [
@@ -3799,7 +3799,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "超エネルギーリムーブ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Super Energy Removal",
   "en_set": "base1",
   "en_numbers": [
@@ -3828,7 +3828,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "にせオーキドはかせ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Impostor Professor Oak",
   "en_set": "base1",
   "en_numbers": [
@@ -3857,7 +3857,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "パソコン通信",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Computer Search",
   "en_set": "base1",
   "en_numbers": [
@@ -4002,7 +4002,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ミニスカート",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Lass",
   "en_set": "base1",
   "en_numbers": [
@@ -4060,9 +4060,11 @@
   "category": "Energy",
   "rarity_jp": "Common",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）"
+  ],
   "ja_name": "草エネルギー",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Grass Energy",
   "en_set": "base1",
   "en_numbers": [
@@ -4091,9 +4093,11 @@
   "category": "Energy",
   "rarity_jp": "Common",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）"
+  ],
   "ja_name": "炎エネルギー",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Fire Energy",
   "en_set": "base1",
   "en_numbers": [
@@ -4122,9 +4126,11 @@
   "category": "Energy",
   "rarity_jp": "Common",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）"
+  ],
   "ja_name": "水エネルギー",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Water Energy",
   "en_set": "base1",
   "en_numbers": [
@@ -4153,9 +4159,11 @@
   "category": "Energy",
   "rarity_jp": "Common",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）"
+  ],
   "ja_name": "雷エネルギー",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Lightning Energy",
   "en_set": "base1",
   "en_numbers": [
@@ -4184,9 +4192,11 @@
   "category": "Energy",
   "rarity_jp": "Common",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）"
+  ],
   "ja_name": "超エネルギー",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Psychic Energy",
   "en_set": "base1",
   "en_numbers": [
@@ -4215,9 +4225,11 @@
   "category": "Energy",
   "rarity_jp": "Common",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）"
+  ],
   "ja_name": "闘エネルギー",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Fighting Energy",
   "en_set": "base1",
   "en_numbers": [
@@ -6532,7 +6544,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "モンスターボール",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Poké Ball",
   "en_set": "base2",
   "en_numbers": [
@@ -8044,7 +8056,9 @@
   "category": "Pokemon",
   "rarity_jp": "Holo Rare",
   "holo": true,
-  "notes": [],
+  "notes": [
+   "英語版 Fossil には収録されず、WotC のプロモとして発売"
+  ],
   "ja_name": "ミュウ",
   "ja_name_basis": "generated",
   "en_name": "Mew",
@@ -8555,7 +8569,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "エネルギー転送",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Energy Search",
   "en_set": "base3",
   "en_numbers": [
@@ -8584,7 +8598,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ギャンブラー",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Gambler",
   "en_set": "base3",
   "en_numbers": [
@@ -8613,7 +8627,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "なにかの化石",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Mysterious Fossil",
   "en_set": "base3",
   "en_numbers": [
@@ -8642,7 +8656,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "リサイクル",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Recycle",
   "en_set": "base3",
   "en_numbers": [
@@ -8671,7 +8685,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "フジろうじん",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Mr. Fuji",
   "en_set": "base3",
   "en_numbers": [
@@ -11129,9 +11143,11 @@
   "category": "Trainer",
   "rarity_jp": "Common",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "「!」の後の空白の有無はデータにより異なる"
+  ],
   "ja_name": "ねむれ!ねむれ!",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Sleep!",
   "en_set": "base5",
   "en_numbers": [
@@ -11162,7 +11178,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "バトル場は穴だらけ!",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Digger",
   "en_set": "base5",
   "en_numbers": [
@@ -11191,9 +11207,11 @@
   "category": "Trainer",
   "rarity_jp": "Common",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "「!」の後の空白の有無はデータにより異なる"
+  ],
   "ja_name": "まきちらせ!ベトベトガス",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Goop Gas Attack",
   "en_set": "base5",
   "en_numbers": [
@@ -11222,7 +11240,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "夜の廃品回収",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Nightly Garbage Run",
   "en_set": "base5",
   "en_numbers": [
@@ -11251,9 +11269,11 @@
   "category": "Trainer",
   "rarity_jp": "Uncommon",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "「!」の後の空白の有無はデータにより異なる"
+  ],
   "ja_name": "たたきつけろ!挑戦状",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Challenge!",
   "en_set": "base5",
   "en_numbers": [
@@ -11282,7 +11302,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "にせオーキドの逆襲",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Imposter Oak's Revenge",
   "en_set": "base5",
   "en_numbers": [
@@ -11311,7 +11331,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ボスのやりかた",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "The Boss's Way",
   "en_set": "base5",
   "en_numbers": [
@@ -11340,7 +11360,7 @@
   "holo": true,
   "notes": [],
   "ja_name": "ロケット団のおねーさん",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Rocket's Sneak Attack",
   "en_set": "base5",
   "en_numbers": [
@@ -11370,7 +11390,7 @@
   "holo": true,
   "notes": [],
   "ja_name": "ロケット団参上!",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Here Comes Team Rocket!",
   "en_set": "base5",
   "en_numbers": [
@@ -11400,7 +11420,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "きずぐすり配合エネルギー",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Potion Energy",
   "en_set": "base5",
   "en_numbers": [
@@ -11431,7 +11451,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "なんでもなおし配合エネルギー",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Full Heal Energy",
   "en_set": "base5",
   "en_numbers": [
@@ -11462,7 +11482,7 @@
   "holo": true,
   "notes": [],
   "ja_name": "レインボーエネルギー",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Rainbow Energy",
   "en_set": "base5",
   "en_numbers": [
@@ -12168,7 +12188,7 @@
   "rarity_jp": "Holo Rare",
   "holo": true,
   "notes": [],
-  "ja_name": "ロケット団のストライク",
+  "ja_name": "R団のストライク",
   "ja_name_basis": "generated",
   "en_name": "Rocket's Scyther",
   "en_set": "gym1",
@@ -12351,7 +12371,7 @@
   "rarity_jp": "Holo Rare",
   "holo": true,
   "notes": [],
-  "ja_name": "ロケット団のファイヤー",
+  "ja_name": "R団のファイヤー",
   "ja_name_basis": "generated",
   "en_name": "Rocket's Moltres",
   "en_set": "gym1",
@@ -13870,7 +13890,7 @@
   "rarity_jp": "Holo Rare",
   "holo": true,
   "notes": [],
-  "ja_name": "ロケット団のエビワラー",
+  "ja_name": "R団のエビワラー",
   "ja_name_basis": "generated",
   "en_name": "Rocket's Hitmonchan",
   "en_set": "gym1",
@@ -14483,7 +14503,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "エネルギーサーキュレート",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Energy Flow",
   "en_set": "gym1",
   "en_numbers": [
@@ -14512,7 +14532,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "カスミの勝負",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Misty's Duel",
   "en_set": "gym1",
   "en_numbers": [
@@ -14541,7 +14561,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "カスミのなみだ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Misty's Tears",
   "en_set": "gym2",
   "en_numbers": [
@@ -14570,7 +14590,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "せまいジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Narrow Gym",
   "en_set": "gym1",
   "en_numbers": [
@@ -14601,7 +14621,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "思い出させる",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Recall",
   "en_set": "gym1",
   "en_numbers": [
@@ -14630,7 +14650,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "エリカのお付き",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Erika's Maids",
   "en_set": "gym1",
   "en_numbers": [
@@ -14659,7 +14679,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "エリカの香水",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Erika's Perfume",
   "en_set": "gym1",
   "en_numbers": [
@@ -14688,7 +14708,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "お上品攻撃",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Charity",
   "en_set": "gym1",
   "en_numbers": [
@@ -14717,7 +14737,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "カスミのいかり",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Misty's Wrath",
   "en_set": "gym1",
   "en_numbers": [
@@ -14746,7 +14766,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "クチバシティジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Vermilion City Gym",
   "en_set": "gym1",
   "en_numbers": [
@@ -14777,7 +14797,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "タケシの育て方",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Brock's Training Method",
   "en_set": "gym1",
   "en_numbers": [
@@ -14806,7 +14826,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "タマムシシティジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Celadon City Gym",
   "en_set": "gym1",
   "en_numbers": [
@@ -14837,7 +14857,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ニビシティジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Pewter City Gym",
   "en_set": "gym1",
   "en_numbers": [
@@ -14868,7 +14888,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ハナダシティジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Cerulean City Gym",
   "en_set": "gym1",
   "en_numbers": [
@@ -14899,7 +14919,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "マチスの交渉",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Lt. Surge's Treaty",
   "en_set": "gym1",
   "en_numbers": [
@@ -14928,7 +14948,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "礼儀作法",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Good Manners",
   "en_set": "gym1",
   "en_numbers": [
@@ -14957,7 +14977,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "エリカ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Erika",
   "en_set": "gym1",
   "en_numbers": [
@@ -14987,7 +15007,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "エリカの親切",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Erika's Kindness",
   "en_set": "gym2",
   "en_numbers": [
@@ -15016,7 +15036,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "カスミ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Misty",
   "en_set": "gym1",
   "en_numbers": [
@@ -15046,7 +15066,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "カスミのわがまま",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Misty's Wish",
   "en_set": "gym2",
   "en_numbers": [
@@ -15075,7 +15095,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "錯乱ジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Chaos Gym",
   "en_set": "gym2",
   "en_numbers": [
@@ -15106,7 +15126,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "スパイ作戦",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Secret Mission",
   "en_set": "gym1",
   "en_numbers": [
@@ -15135,7 +15155,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "タケシ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Brock",
   "en_set": "gym1",
   "en_numbers": [
@@ -15165,7 +15185,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "タケシの保護",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Brock's Protection",
   "en_set": "gym2",
   "en_numbers": [
@@ -15194,7 +15214,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "抵抗力低下ジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Resistance Gym",
   "en_set": "gym2",
   "en_numbers": [
@@ -15225,7 +15245,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "マチス",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Lt. Surge",
   "en_set": "gym1",
   "en_numbers": [
@@ -15255,7 +15275,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "マチスの秘策",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Lt. Surge's Secret Plan",
   "en_set": "gym2",
   "en_numbers": [
@@ -15284,7 +15304,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "リムーブ禁止ジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "No Removal Gym",
   "en_set": "gym1",
   "en_numbers": [
@@ -15315,7 +15335,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ロケット団の特訓ジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "The Rocket's Training Gym",
   "en_set": "gym1",
   "en_numbers": [
@@ -15346,7 +15366,7 @@
   "holo": true,
   "notes": [],
   "ja_name": "ロケット団のワナ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "The Rocket's Trap",
   "en_set": "gym1",
   "en_numbers": [
@@ -17217,7 +17237,7 @@
   "rarity_jp": "Holo Rare",
   "holo": true,
   "notes": [],
-  "ja_name": "ロケット団のサンダー",
+  "ja_name": "R団のサンダー",
   "ja_name_basis": "generated",
   "en_name": "Rocket's Zapdos",
   "en_set": "gym2",
@@ -17794,7 +17814,7 @@
   "rarity_jp": "Holo Rare",
   "holo": true,
   "notes": [],
-  "ja_name": "ロケット団のミュウツー",
+  "ja_name": "R団のミュウツー",
   "ja_name_basis": "generated",
   "en_name": "Rocket's Mewtwo",
   "en_set": "gym2",
@@ -18647,7 +18667,7 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "ロケット団のカビゴン",
+  "ja_name": "R団のカビゴン",
   "ja_name_basis": "generated",
   "en_name": "Rocket's Snorlax",
   "en_set": "gym1",
@@ -18692,7 +18712,7 @@
   "rarity_jp": "Hyper rare",
   "holo": false,
   "notes": [
-   "日本のみのカード。TCGdex では本弾に含めて掲載（収録形態は要確認）"
+   "英語版なし。出典データでは本弾の番外カードとして掲載。拡張パックに封入されていたかは未確認"
   ],
   "ja_name": "イマクニ？のドードー",
   "ja_name_basis": "curated",
@@ -18723,9 +18743,9 @@
   "rarity_jp": "Ultra Rare",
   "holo": false,
   "notes": [
-   "日本のみのカード。TCGdex では本弾に含めて掲載（収録形態は要確認）"
+   "英語版なし。出典データでは本弾の番外カードとして掲載。配布方法は未確認"
   ],
-  "ja_name": "_____のチャンシー",
+  "ja_name": "_____のラッキー",
   "ja_name_basis": "curated",
   "en_name": "",
   "en_set": "",
@@ -18755,7 +18775,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "カツラのギャンブル",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Blaine's Gamble",
   "en_set": "gym1",
   "en_numbers": [
@@ -18784,7 +18804,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "トラッシュ交換",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Trash Exchange",
   "en_set": "gym1",
   "en_numbers": [
@@ -18813,7 +18833,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ナツメの眼",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Sabrina's Gaze",
   "en_set": "gym1",
   "en_numbers": [
@@ -18842,7 +18862,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "見えない壁",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Transparent Walls",
   "en_set": "gym2",
   "en_numbers": [
@@ -18871,7 +18891,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ワープポイント",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Warp Point",
   "en_set": "gym2",
   "en_numbers": [
@@ -18900,7 +18920,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "カツラの奥の手",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Blaine's Last Resort",
   "en_set": "gym1",
   "en_numbers": [
@@ -18929,7 +18949,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "カツラのクイズ その3",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Blaine's Quiz #3",
   "en_set": "gym2",
   "en_numbers": [
@@ -18956,9 +18976,11 @@
   "category": "Trainer",
   "rarity_jp": "Uncommon",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "名前の区切り（読点の有無）は未確認"
+  ],
   "ja_name": "キョウ秘伝 変わり身の術",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Koga's Ninja Trick",
   "en_set": "gym2",
   "en_numbers": [
@@ -18987,7 +19009,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "くすぐりマシーン",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Tickling Machine",
   "en_set": "gym1",
   "en_numbers": [
@@ -19018,7 +19040,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "グレンタウンジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Cinnabar City Gym",
   "en_set": "gym2",
   "en_numbers": [
@@ -19049,7 +19071,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "セキチクシティジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Fuchsia City Gym",
   "en_set": "gym2",
   "en_numbers": [
@@ -19080,7 +19102,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ナツメのESP",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Sabrina's ESP",
   "en_set": "gym1",
   "en_numbers": [
@@ -19109,7 +19131,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ナツメのサイキックコントロール",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Sabrina's Psychic Control",
   "en_set": "gym2",
   "en_numbers": [
@@ -19138,7 +19160,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ロケット団員",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Minion of Team Rocket",
   "en_set": "gym1",
   "en_numbers": [
@@ -19167,7 +19189,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ヤマブキシティジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Saffron City Gym",
   "en_set": "gym2",
   "en_numbers": [
@@ -19227,7 +19249,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ロケット団の爆発ジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Rocket's Minefield Gym",
   "en_set": "gym2",
   "en_numbers": [
@@ -19258,7 +19280,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "カツラ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Blaine",
   "en_set": "gym2",
   "en_numbers": [
@@ -19288,7 +19310,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "キョウ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Koga",
   "en_set": "gym2",
   "en_numbers": [
@@ -19318,7 +19340,7 @@
   "holo": true,
   "notes": [],
   "ja_name": "サカキ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Giovanni",
   "en_set": "gym2",
   "en_numbers": [
@@ -19348,7 +19370,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "サカキの切り札",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Giovanni's Last Resort",
   "en_set": "gym2",
   "en_numbers": [
@@ -19377,7 +19399,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "トキワシティジム",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Viridian City Gym",
   "en_set": "gym2",
   "en_numbers": [
@@ -19408,7 +19430,7 @@
   "holo": false,
   "notes": [],
   "ja_name": "ナツメ",
-  "ja_name_basis": "未確認",
+  "ja_name_basis": "有力",
   "en_name": "Sabrina",
   "en_set": "gym2",
   "en_numbers": [
@@ -20356,10 +20378,9 @@
   "en_name": "Typhlosion",
   "en_set": "neo1",
   "en_numbers": [
-   "17",
-   "18"
+   "17"
   ],
-  "en_ref": "Neo Genesis 17・18",
+  "en_ref": "Neo Genesis 17",
   "en_set_differs": false,
   "types": [
    "Fire"
@@ -22706,8 +22727,8 @@
   "rarity_jp": "Common",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "きのみ",
+  "ja_name_basis": "有力",
   "en_name": "Berry",
   "en_set": "neo1",
   "en_numbers": [
@@ -22737,8 +22758,8 @@
   "rarity_jp": "Common",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "すごいつりざお",
+  "ja_name_basis": "確実",
   "en_name": "Super Rod",
   "en_set": "neo1",
   "en_numbers": [
@@ -22766,8 +22787,8 @@
   "rarity_jp": "Common",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ポケモンぎゃくしめい",
+  "ja_name_basis": "確実",
   "en_name": "Double Gust",
   "en_set": "neo1",
   "en_numbers": [
@@ -22795,8 +22816,8 @@
   "rarity_jp": "Common",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ポケモンマーチ",
+  "ja_name_basis": "確実",
   "en_name": "Pokémon March",
   "en_set": "neo1",
   "en_numbers": [
@@ -22824,8 +22845,8 @@
   "rarity_jp": "Common",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "モーモーミルク",
+  "ja_name_basis": "確実",
   "en_name": "Moo-Moo Milk",
   "en_set": "neo1",
   "en_numbers": [
@@ -22853,8 +22874,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ウツギはかせ",
+  "ja_name_basis": "確実",
   "en_name": "Professor Elm",
   "en_set": "neo1",
   "en_numbers": [
@@ -22882,8 +22903,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "おうごんのみ",
+  "ja_name_basis": "確実",
   "en_name": "Gold Berry",
   "en_set": "neo1",
   "en_numbers": [
@@ -22913,8 +22934,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "カードめくりゲーム",
+  "ja_name_basis": "確実",
   "en_name": "Card-Flip Game",
   "en_set": "neo1",
   "en_numbers": [
@@ -22944,8 +22965,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "きせきのみ",
+  "ja_name_basis": "確実",
   "en_name": "Miracle Berry",
   "en_set": "neo1",
   "en_numbers": [
@@ -22975,8 +22996,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "新ポケモン図鑑HANDY808",
+  "ja_name_basis": "確実",
   "en_name": "New Pokédex",
   "en_set": "neo1",
   "en_numbers": [
@@ -23004,8 +23025,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "スーパーポケモン回収",
+  "ja_name_basis": "確実",
   "en_name": "Super Scoop Up",
   "en_set": "neo1",
   "en_numbers": [
@@ -23033,8 +23054,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "マサキの転送装置",
+  "ja_name_basis": "確実",
   "en_name": "Bill's Teleporter",
   "en_set": "neo1",
   "en_numbers": [
@@ -23062,8 +23083,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "マダツボミのとう",
+  "ja_name_basis": "確実",
   "en_name": "Sprout Tower",
   "en_set": "neo1",
   "en_numbers": [
@@ -23093,8 +23114,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "エコロジム",
+  "ja_name_basis": "確実",
   "en_name": "Ecogym",
   "en_set": "neo1",
   "en_numbers": [
@@ -23124,8 +23145,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "エネルギーチャージ",
+  "ja_name_basis": "有力",
   "en_name": "Energy Charge",
   "en_set": "neo1",
   "en_numbers": [
@@ -23153,8 +23174,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "きあいのハチマキ",
+  "ja_name_basis": "確実",
   "en_name": "Focus Band",
   "en_set": "neo1",
   "en_numbers": [
@@ -23184,8 +23205,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "クルミ",
+  "ja_name_basis": "確実",
   "en_name": "Mary",
   "en_set": "neo1",
   "en_numbers": [
@@ -23213,8 +23234,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "スロットゲーム",
+  "ja_name_basis": "確実",
   "en_name": "Arcade Game",
   "en_set": "neo1",
   "en_numbers": [
@@ -23244,8 +23265,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "タイムカプセル",
+  "ja_name_basis": "確実",
   "en_name": "Time Capsule",
   "en_set": "neo1",
   "en_numbers": [
@@ -23273,8 +23294,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "超エネルギー回収",
+  "ja_name_basis": "確実",
   "en_name": "Super Energy Retrieval",
   "en_set": "neo1",
   "en_numbers": [
@@ -23302,8 +23323,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ポケモンギア",
+  "ja_name_basis": "確実",
   "en_name": "PokéGear",
   "en_set": "neo1",
   "en_numbers": [
@@ -23331,8 +23352,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "悪エネルギー",
+  "ja_name_basis": "有力",
   "en_name": "Darkness Energy",
   "en_set": "neo1",
   "en_numbers": [
@@ -23362,8 +23383,8 @@
   "rarity_jp": "Holo Rare",
   "holo": true,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "鋼エネルギー",
+  "ja_name_basis": "有力",
   "en_name": "Metal Energy",
   "en_set": "neo1",
   "en_numbers": [
@@ -23393,8 +23414,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "リサイクルエネルギー",
+  "ja_name_basis": "有力",
   "en_name": "Recycle Energy",
   "en_set": "neo1",
   "en_numbers": [
@@ -24313,7 +24334,9 @@
   "category": "Pokemon",
   "rarity_jp": "Secret Rare",
   "holo": true,
-  "notes": [],
+  "notes": [
+   "英語版は Team Rocket（2000年4月）のシークレットカードが先。日本ではこの弾で登場"
+  ],
   "ja_name": "わるいライチュウ",
   "ja_name_basis": "generated",
   "en_name": "Dark Raichu",
@@ -25750,8 +25773,8 @@
   "rarity_jp": "Common",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "エネルギーアーク",
+  "ja_name_basis": "有力",
   "en_name": "Energy Ark",
   "en_set": "neo2",
   "en_numbers": [
@@ -25778,9 +25801,11 @@
   "category": "Trainer",
   "rarity_jp": "Uncommon",
   "holo": false,
-  "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "notes": [
+   "TCGdex は絵柄違い（カブト／プテラ）の2種として掲載。別データでは1種のみ。2種あったかは未確認"
+  ],
+  "ja_name": "遺跡の石版",
+  "ja_name_basis": "有力",
   "en_name": "Ruin Wall",
   "en_set": "neo2",
   "en_numbers": [
@@ -25808,8 +25833,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "たまごの化石",
+  "ja_name_basis": "有力",
   "en_name": "Fossil Egg",
   "en_set": "neo2",
   "en_numbers": [
@@ -25837,8 +25862,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "退化スプレーHYPER",
+  "ja_name_basis": "有力",
   "en_name": "Hyper Devolution Spray",
   "en_set": "neo2",
   "en_numbers": [
@@ -25865,9 +25890,11 @@
   "category": "Trainer",
   "rarity_jp": "Uncommon",
   "holo": false,
-  "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "notes": [
+   "TCGdex は絵柄違い（カブト／プテラ）の2種として掲載。別データでは1種のみ。2種あったかは未確認"
+  ],
+  "ja_name": "遺跡の石版",
+  "ja_name_basis": "有力",
   "en_name": "Ruin Wall",
   "en_set": "neo2",
   "en_numbers": [
@@ -26855,7 +26882,9 @@
   "category": "Pokemon",
   "rarity_jp": "Secret Rare",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "レアリティ表記は出典データにより異なる（TCGdex: Secret Rare／別データ: ★キラ）"
+  ],
   "ja_name": "ひかるコイキング",
   "ja_name_basis": "generated",
   "en_name": "Shining Magikarp",
@@ -26901,7 +26930,9 @@
   "category": "Pokemon",
   "rarity_jp": "Secret Rare",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "レアリティ表記は出典データにより異なる（TCGdex: Secret Rare／別データ: ★キラ）"
+  ],
   "ja_name": "ひかるギャラドス",
   "ja_name_basis": "generated",
   "en_name": "Shining Gyarados",
@@ -28166,7 +28197,7 @@
   "rarity_jp": "Holo Rare",
   "holo": true,
   "notes": [],
-  "ja_name": "ポリゴン２",
+  "ja_name": "ポリゴン2",
   "ja_name_basis": "generated",
   "en_name": "Porygon2",
   "en_set": "neo3",
@@ -28256,8 +28287,8 @@
   "rarity_jp": "Common",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ボロのつりざお",
+  "ja_name_basis": "有力",
   "en_name": "Old Rod",
   "en_set": "neo3",
   "en_numbers": [
@@ -28285,8 +28316,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "いやしの野原",
+  "ja_name_basis": "有力",
   "en_name": "Healing Field",
   "en_set": "neo3",
   "en_numbers": [
@@ -28316,8 +28347,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ふうせんのみ",
+  "ja_name_basis": "有力",
   "en_name": "Balloon Berry",
   "en_set": "neo3",
   "en_numbers": [
@@ -28347,8 +28378,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ポケモン育て屋夫婦",
+  "ja_name_basis": "有力",
   "en_name": "Pokémon Breeder Fields",
   "en_set": "neo3",
   "en_numbers": [
@@ -28376,8 +28407,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ロケット団のアジト",
+  "ja_name_basis": "有力",
   "en_name": "Rocket's Hideout",
   "en_set": "neo3",
   "en_numbers": [
@@ -28955,7 +28986,9 @@
   "category": "Pokemon",
   "rarity_jp": "Rare",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ）"
+  ],
   "ja_name": "ひかるセレビィ",
   "ja_name_basis": "generated",
   "en_name": "Shining Celebi",
@@ -29481,7 +29514,9 @@
   "category": "Pokemon",
   "rarity_jp": "Rare",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ）"
+  ],
   "ja_name": "ひかるリザードン",
   "ja_name_basis": "generated",
   "en_name": "Shining Charizard",
@@ -30447,7 +30482,9 @@
   "category": "Pokemon",
   "rarity_jp": "Rare",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ）"
+  ],
   "ja_name": "ひかるライチュウ",
   "ja_name_basis": "generated",
   "en_name": "Shining Raichu",
@@ -31361,7 +31398,9 @@
   "category": "Pokemon",
   "rarity_jp": "Rare",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ）"
+  ],
   "ja_name": "ひかるミュウツー",
   "ja_name_basis": "generated",
   "en_name": "Shining Mewtwo",
@@ -31912,7 +31951,9 @@
   "category": "Pokemon",
   "rarity_jp": "Rare",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ）"
+  ],
   "ja_name": "ひかるカブトプス",
   "ja_name_basis": "generated",
   "en_name": "Shining Kabutops",
@@ -31958,7 +31999,9 @@
   "category": "Pokemon",
   "rarity_jp": "Common",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "レアリティ表記は出典データにより異なる（TCGdex: ●／別データ: ◆）"
+  ],
   "ja_name": "デルビル",
   "ja_name_basis": "generated",
   "en_name": "Houndour",
@@ -32004,7 +32047,9 @@
   "category": "Pokemon",
   "rarity_jp": "Rare",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ）"
+  ],
   "ja_name": "ひかるバンギラス",
   "ja_name_basis": "generated",
   "en_name": "Shining Tyranitar",
@@ -32098,7 +32143,9 @@
   "category": "Pokemon",
   "rarity_jp": "Rare",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ）"
+  ],
   "ja_name": "ひかるハガネール",
   "ja_name_basis": "generated",
   "en_name": "Shining Steelix",
@@ -32688,7 +32735,7 @@
   "rarity_jp": "Holo Rare",
   "holo": true,
   "notes": [],
-  "ja_name": "わるいポリゴン２",
+  "ja_name": "わるいポリゴン2",
   "ja_name_basis": "generated",
   "en_name": "Dark Porygon2",
   "en_set": "neo4",
@@ -32732,7 +32779,9 @@
   "category": "Pokemon",
   "rarity_jp": "Rare",
   "holo": false,
-  "notes": [],
+  "notes": [
+   "レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ）"
+  ],
   "ja_name": "ひかるヨルノズク",
   "ja_name_basis": "generated",
   "en_name": "Shining Noctowl",
@@ -32776,8 +32825,8 @@
   "rarity_jp": "Common",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ばんのうごな",
+  "ja_name_basis": "有力",
   "en_name": "Heal Powder",
   "en_set": "neo4",
   "en_numbers": [
@@ -32805,8 +32854,8 @@
   "rarity_jp": "Common",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "マサキのメール",
+  "ja_name_basis": "有力",
   "en_name": "Mail from Bill",
   "en_set": "neo4",
   "en_numbers": [
@@ -32834,8 +32883,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "エネルギースタジアム",
+  "ja_name_basis": "有力",
   "en_name": "Energy Stadium",
   "en_set": "neo4",
   "en_numbers": [
@@ -32865,8 +32914,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "エネルギー増幅装置",
+  "ja_name_basis": "有力",
   "en_name": "Energy Amplifier",
   "en_set": "neo4",
   "en_numbers": [
@@ -32894,8 +32943,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "はんげきのツメ",
+  "ja_name_basis": "有力",
   "en_name": "Counterattack Claws",
   "en_set": "neo4",
   "en_numbers": [
@@ -32925,8 +32974,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ピントレンズ",
+  "ja_name_basis": "有力",
   "en_name": "Magnifier",
   "en_set": "neo4",
   "en_numbers": [
@@ -32954,8 +33003,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ポケモン性格判定",
+  "ja_name_basis": "有力",
   "en_name": "Pokémon Personality Test",
   "en_set": "neo4",
   "en_numbers": [
@@ -32983,8 +33032,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ラッキースタジアム",
+  "ja_name_basis": "有力",
   "en_name": "Lucky Stadium",
   "en_set": "neo4",
   "en_numbers": [
@@ -33014,8 +33063,8 @@
   "rarity_jp": "Uncommon",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ロケット団の暗躍",
+  "ja_name_basis": "有力",
   "en_name": "Team Rocket's Evil Deeds",
   "en_set": "neo4",
   "en_numbers": [
@@ -33043,8 +33092,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "怪電波マシーン",
+  "ja_name_basis": "有力",
   "en_name": "Thought Wave Machine",
   "en_set": "neo4",
   "en_numbers": [
@@ -33074,8 +33123,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "学習装置",
+  "ja_name_basis": "有力",
   "en_name": "EXP.ALL",
   "en_set": "neo4",
   "en_numbers": [
@@ -33105,8 +33154,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "でこぼこジム",
+  "ja_name_basis": "有力",
   "en_name": "Broken Ground Gym",
   "en_set": "neo4",
   "en_numbers": [
@@ -33136,8 +33185,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "にせオーキドの発明",
+  "ja_name_basis": "有力",
   "en_name": "Impostor Professor Oak's Invention",
   "en_set": "neo4",
   "en_numbers": [
@@ -33165,8 +33214,8 @@
   "rarity_jp": "Rare",
   "holo": false,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ラジオとう",
+  "ja_name_basis": "有力",
   "en_name": "Radio Tower",
   "en_set": "neo4",
   "en_numbers": [
@@ -33196,8 +33245,8 @@
   "rarity_jp": "Holo Rare",
   "holo": true,
   "notes": [],
-  "ja_name": "",
-  "ja_name_basis": "unknown",
+  "ja_name": "ミラクルエネルギー",
+  "ja_name_basis": "有力",
   "en_name": "Miracle Energy",
   "en_set": "neo4",
   "en_numbers": [

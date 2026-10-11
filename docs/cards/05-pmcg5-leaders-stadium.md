@@ -1,4 +1,4 @@
-# リーダーズスタジアム（第5弾（ジム拡張第1弾））
+# リーダーズスタジアム（第5弾）
 
 - 発売日: 1998年10月24日
 - 収録枚数: 96種
@@ -21,11 +21,11 @@
 | 13 | エリカのナッシー | ポケモン | 草 | 1進化 | 70 | ◆ | Erika's Exeggutor<br>Gym Heroes 44 |  |
 | 14 | エリカのラフレシア | ポケモン | 草 | 2進化 | 80 | ★キラ | Erika's Vileplume<br>Gym Heroes 5 |  |
 | 15 | エリカのウツボット | ポケモン | 草 | 2進化 | 80 | ★ | Erika's Victreebel<br>Gym Heroes 26 |  |
-| 16 | ロケット団のストライク | ポケモン | 草 | たね | 60 | ★キラ | Rocket's Scyther<br>Gym Heroes 13 |  |
+| 16 | R団のストライク | ポケモン | 草 | たね | 60 | ★キラ | Rocket's Scyther<br>Gym Heroes 13 |  |
 | 17 | タケシのロコン | ポケモン | 炎 | たね | 50 | ● | Brock's Vulpix<br>Gym Challenge 37 ⚠ |  |
 | 18 | タケシのロコン | ポケモン | 炎 | たね | 40 | ◆ | Brock's Vulpix<br>Gym Heroes 73 |  |
 | 19 | タケシのキュウコン | ポケモン | 炎 | 1進化 | 70 | ★キラ | Brock's Ninetales<br>Gym Challenge 3 ⚠ |  |
-| 20 | ロケット団のファイヤー | ポケモン | 炎 | たね | 60 | ★キラ | Rocket's Moltres<br>Gym Heroes 12 |  |
+| 20 | R団のファイヤー | ポケモン | 炎 | たね | 60 | ★キラ | Rocket's Moltres<br>Gym Heroes 12 |  |
 | 21 | カスミのコダック | ポケモン | 水 | たね | 60 | ● | Misty's Psyduck<br>Gym Challenge 90 ⚠ |  |
 | 22 | カスミのニョロモ | ポケモン | 水 | たね | 50 | ● | Misty's Poliwag<br>Gym Challenge 89 ⚠ |  |
 | 23 | カスミのパウワウ | ポケモン | 水 | たね | 50 | ● | Misty's Seel<br>Gym Challenge 91 ⚠ |  |
@@ -59,7 +59,7 @@
 | 51 | タケシのオコリザル | ポケモン | 闘 | 1進化 | 70 | ◆ | Brock's Primeape<br>Gym Challenge 35 ⚠ |  |
 | 52 | タケシのゴローン | ポケモン | 闘 | 1進化 | 70 | ◆ | Brock's Graveler<br>Gym Challenge 34 ⚠ |  |
 | 53 | タケシのゴローニャ | ポケモン | 闘 | 2進化 | 90 | ★ | Brock's Golem<br>Gym Heroes 20 |  |
-| 54 | ロケット団のエビワラー | ポケモン | 闘 | たね | 60 | ★キラ | Rocket's Hitmonchan<br>Gym Heroes 11 |  |
+| 54 | R団のエビワラー | ポケモン | 闘 | たね | 60 | ★キラ | Rocket's Hitmonchan<br>Gym Heroes 11 |  |
 | 55 | タケシのサイドン | ポケモン | 闘 | 1進化 | 80 | ★キラ | Brock's Rhydon<br>Gym Heroes 2 |  |
 | 56 | マチスのコラッタ | ポケモン | 無色 | たね | 30 | ● | Lt. Surge's Rattata<br>Gym Challenge 85 ⚠ |  |
 | 57 | マチスのオニスズメ | ポケモン | 無色 | たね | 50 | ● | Lt. Surge's Spearow<br>Gym Heroes 83 |  |
@@ -72,36 +72,36 @@
 | 64 | マチスのオニドリル | ポケモン | 無色 | 1進化 | 70 | ★キラ | Lt. Surge's Fearow<br>Gym Heroes 7 |  |
 | 65 | エリカのピクシー | ポケモン | 無色 | 1進化 | 70 | ★キラ | Erika's Clefable<br>Gym Heroes 3 |  |
 | 66 | エリカのハクリュー | ポケモン | 無色 | 1進化 | 80 | ★キラ | Erika's Dragonair<br>Gym Heroes 4 |  |
-| 67 | エネルギーサーキュレート ※ | トレーナー |  |  |  | ● | Energy Flow<br>Gym Heroes 122 |  |
-| 68 | カスミの勝負 ※ | トレーナー |  |  |  | ● | Misty's Duel<br>Gym Heroes 123 |  |
-| 69 | カスミのなみだ ※ | トレーナー |  |  |  | ● | Misty's Tears<br>Gym Challenge 118 ⚠ |  |
-| 70 | せまいジム ※ | トレーナー（スタジアム） |  |  |  | ● | Narrow Gym<br>Gym Heroes 124 |  |
-| 71 | 思い出させる ※ | トレーナー |  |  |  | ◆ | Recall<br>Gym Heroes 116 |  |
-| 72 | エリカのお付き ※ | トレーナー |  |  |  | ◆ | Erika's Maids<br>Gym Heroes 109 |  |
-| 73 | エリカの香水 ※ | トレーナー |  |  |  | ◆ | Erika's Perfume<br>Gym Heroes 110 |  |
-| 74 | お上品攻撃 ※ | トレーナー |  |  |  | ★ | Charity<br>Gym Heroes 99 |  |
-| 75 | カスミのいかり ※ | トレーナー |  |  |  | ◆ | Misty's Wrath<br>Gym Heroes 114 |  |
-| 76 | クチバシティジム ※ | トレーナー（スタジアム） |  |  |  | ◆ | Vermilion City Gym<br>Gym Heroes 120 |  |
-| 77 | タケシの育て方 ※ | トレーナー |  |  |  | ◆ | Brock's Training Method<br>Gym Heroes 106 |  |
-| 78 | タマムシシティジム ※ | トレーナー（スタジアム） |  |  |  | ◆ | Celadon City Gym<br>Gym Heroes 107 |  |
-| 79 | ニビシティジム ※ | トレーナー（スタジアム） |  |  |  | ◆ | Pewter City Gym<br>Gym Heroes 115 |  |
-| 80 | ハナダシティジム ※ | トレーナー（スタジアム） |  |  |  | ◆ | Cerulean City Gym<br>Gym Heroes 108 |  |
-| 81 | マチスの交渉 ※ | トレーナー |  |  |  | ◆ | Lt. Surge's Treaty<br>Gym Heroes 112 |  |
-| 82 | 礼儀作法 ※ | トレーナー |  |  |  | ◆ | Good Manners<br>Gym Heroes 111 |  |
-| 83 | エリカ ※ | トレーナー |  |  |  | ★ | Erika<br>Gym Heroes 16・100 |  |
-| 84 | エリカの親切 ※ | トレーナー |  |  |  | ★ | Erika's Kindness<br>Gym Challenge 103 ⚠ |  |
-| 85 | カスミ ※ | トレーナー |  |  |  | ★ | Misty<br>Gym Heroes 18・102 |  |
-| 86 | カスミのわがまま ※ | トレーナー |  |  |  | ★ | Misty's Wish<br>Gym Challenge 108 ⚠ |  |
-| 87 | 錯乱ジム ※ | トレーナー（スタジアム） |  |  |  | ★ | Chaos Gym<br>Gym Challenge 102 ⚠ |  |
-| 88 | スパイ作戦 ※ | トレーナー |  |  |  | ◆ | Secret Mission<br>Gym Heroes 118 |  |
-| 89 | タケシ ※ | トレーナー |  |  |  | ★ | Brock<br>Gym Heroes 15・98 |  |
-| 90 | タケシの保護 ※ | トレーナー |  |  |  | ★ | Brock's Protection<br>Gym Challenge 101 ⚠ |  |
-| 91 | 抵抗力低下ジム ※ | トレーナー（スタジアム） |  |  |  | ★ | Resistance Gym<br>Gym Challenge 109 ⚠ |  |
-| 92 | マチス ※ | トレーナー |  |  |  | ★ | Lt. Surge<br>Gym Heroes 17・101 |  |
-| 93 | マチスの秘策 ※ | トレーナー |  |  |  | ★ | Lt. Surge's Secret Plan<br>Gym Challenge 107 ⚠ |  |
-| 94 | リムーブ禁止ジム ※ | トレーナー（スタジアム） |  |  |  | ★ | No Removal Gym<br>Gym Heroes 103 |  |
-| 95 | ロケット団の特訓ジム ※ | トレーナー（スタジアム） |  |  |  | ★ | The Rocket's Training Gym<br>Gym Heroes 104 |  |
-| 96 | ロケット団のワナ ※ | トレーナー |  |  |  | ★キラ | The Rocket's Trap<br>Gym Heroes 19 |  |
+| 67 | エネルギーサーキュレート | トレーナー |  |  |  | ● | Energy Flow<br>Gym Heroes 122 |  |
+| 68 | カスミの勝負 | トレーナー |  |  |  | ● | Misty's Duel<br>Gym Heroes 123 |  |
+| 69 | カスミのなみだ | トレーナー |  |  |  | ● | Misty's Tears<br>Gym Challenge 118 ⚠ |  |
+| 70 | せまいジム | トレーナー（スタジアム） |  |  |  | ● | Narrow Gym<br>Gym Heroes 124 |  |
+| 71 | 思い出させる | トレーナー |  |  |  | ◆ | Recall<br>Gym Heroes 116 |  |
+| 72 | エリカのお付き | トレーナー |  |  |  | ◆ | Erika's Maids<br>Gym Heroes 109 |  |
+| 73 | エリカの香水 | トレーナー |  |  |  | ◆ | Erika's Perfume<br>Gym Heroes 110 |  |
+| 74 | お上品攻撃 | トレーナー |  |  |  | ★ | Charity<br>Gym Heroes 99 |  |
+| 75 | カスミのいかり | トレーナー |  |  |  | ◆ | Misty's Wrath<br>Gym Heroes 114 |  |
+| 76 | クチバシティジム | トレーナー（スタジアム） |  |  |  | ◆ | Vermilion City Gym<br>Gym Heroes 120 |  |
+| 77 | タケシの育て方 | トレーナー |  |  |  | ◆ | Brock's Training Method<br>Gym Heroes 106 |  |
+| 78 | タマムシシティジム | トレーナー（スタジアム） |  |  |  | ◆ | Celadon City Gym<br>Gym Heroes 107 |  |
+| 79 | ニビシティジム | トレーナー（スタジアム） |  |  |  | ◆ | Pewter City Gym<br>Gym Heroes 115 |  |
+| 80 | ハナダシティジム | トレーナー（スタジアム） |  |  |  | ◆ | Cerulean City Gym<br>Gym Heroes 108 |  |
+| 81 | マチスの交渉 | トレーナー |  |  |  | ◆ | Lt. Surge's Treaty<br>Gym Heroes 112 |  |
+| 82 | 礼儀作法 | トレーナー |  |  |  | ◆ | Good Manners<br>Gym Heroes 111 |  |
+| 83 | エリカ | トレーナー |  |  |  | ★ | Erika<br>Gym Heroes 16・100 |  |
+| 84 | エリカの親切 | トレーナー |  |  |  | ★ | Erika's Kindness<br>Gym Challenge 103 ⚠ |  |
+| 85 | カスミ | トレーナー |  |  |  | ★ | Misty<br>Gym Heroes 18・102 |  |
+| 86 | カスミのわがまま | トレーナー |  |  |  | ★ | Misty's Wish<br>Gym Challenge 108 ⚠ |  |
+| 87 | 錯乱ジム | トレーナー（スタジアム） |  |  |  | ★ | Chaos Gym<br>Gym Challenge 102 ⚠ |  |
+| 88 | スパイ作戦 | トレーナー |  |  |  | ◆ | Secret Mission<br>Gym Heroes 118 |  |
+| 89 | タケシ | トレーナー |  |  |  | ★ | Brock<br>Gym Heroes 15・98 |  |
+| 90 | タケシの保護 | トレーナー |  |  |  | ★ | Brock's Protection<br>Gym Challenge 101 ⚠ |  |
+| 91 | 抵抗力低下ジム | トレーナー（スタジアム） |  |  |  | ★ | Resistance Gym<br>Gym Challenge 109 ⚠ |  |
+| 92 | マチス | トレーナー |  |  |  | ★ | Lt. Surge<br>Gym Heroes 17・101 |  |
+| 93 | マチスの秘策 | トレーナー |  |  |  | ★ | Lt. Surge's Secret Plan<br>Gym Challenge 107 ⚠ |  |
+| 94 | リムーブ禁止ジム | トレーナー（スタジアム） |  |  |  | ★ | No Removal Gym<br>Gym Heroes 103 |  |
+| 95 | ロケット団の特訓ジム | トレーナー（スタジアム） |  |  |  | ★ | The Rocket's Training Gym<br>Gym Heroes 104 |  |
+| 96 | ロケット団のワナ | トレーナー |  |  |  | ★キラ | The Rocket's Trap<br>Gym Heroes 19 |  |
 
 ## 英語版との対応メモ
 

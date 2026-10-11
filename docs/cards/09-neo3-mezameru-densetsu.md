@@ -27,8 +27,8 @@
 | 19 | オクタン | ポケモン | 水 | 1進化 | 80 | ◆ | Octillery<br>Neo Revelation 34 |  |
 | 20 | キングドラ | ポケモン | 水 | 2進化 | 90 | ★キラ | Kingdra<br>Neo Revelation 19 |  |
 | 21 | スイクン | ポケモン | 水 | たね | 70 | ★キラ | Suicune<br>Neo Revelation 14 |  |
-| 22 | ひかるコイキング | ポケモン | 水 | たね | 30 | 特殊 | Shining Magikarp<br>Neo Revelation 66 |  |
-| 23 | ひかるギャラドス | ポケモン | 水 | たね | 100 | 特殊 | Shining Gyarados<br>Neo Revelation 65 |  |
+| 22 | ひかるコイキング | ポケモン | 水 | たね | 30 | 特殊 | Shining Magikarp<br>Neo Revelation 66 | レアリティ表記は出典データにより異なる（TCGdex: Secret Rare／別データ: ★キラ） |
+| 23 | ひかるギャラドス | ポケモン | 水 | たね | 100 | 特殊 | Shining Gyarados<br>Neo Revelation 65 | レアリティ表記は出典データにより異なる（TCGdex: Secret Rare／別データ: ★キラ） |
 | 24 | チョンチー | ポケモン | 雷 | たね | 50 | ● | Chinchou<br>Neo Revelation 42 |  |
 | 25 | ライチュウ | ポケモン | 雷 | 1進化 | 80 | ◆ | Raichu<br>Neo Revelation 21 |  |
 | 26 | ランターン | ポケモン | 雷 | 1進化 | 80 | ◆ | Lanturn<br>Neo Revelation 32 |  |
@@ -56,13 +56,13 @@
 | 48 | ブルー | ポケモン | 無色 | たね | 50 | ● | Snubbull<br>Neo Revelation 55 |  |
 | 49 | オドシシ | ポケモン | 無色 | たね | 60 | ◆ | Stantler<br>Neo Revelation 38 |  |
 | 50 | デリバード | ポケモン | 無色 | たね | 60 | ★キラ | Delibird<br>Neo Revelation 5 |  |
-| 51 | ポリゴン２ | ポケモン | 無色 | 1進化 | 70 | ★キラ | Porygon2<br>Neo Revelation 12 |  |
+| 51 | ポリゴン2 | ポケモン | 無色 | 1進化 | 70 | ★キラ | Porygon2<br>Neo Revelation 12 |  |
 | 52 | ハピナス | ポケモン | 無色 | 1進化 | 120 | ★キラ | Blissey<br>Neo Revelation 2 |  |
-| 53 | （公式名未確認） | トレーナー |  |  |  | ● | Old Rod<br>Neo Revelation 64 |  |
-| 54 | （公式名未確認） | トレーナー（スタジアム） |  |  |  | ◆ | Healing Field<br>Neo Revelation 61 |  |
-| 55 | （公式名未確認） | トレーナー（ポケモンのどうぐ） |  |  |  | ◆ | Balloon Berry<br>Neo Revelation 60 |  |
-| 56 | （公式名未確認） | トレーナー |  |  |  | ◆ | Pokémon Breeder Fields<br>Neo Revelation 62 |  |
-| 57 | （公式名未確認） | トレーナー（スタジアム） |  |  |  | ◆ | Rocket's Hideout<br>Neo Revelation 63 |  |
+| 53 | ボロのつりざお | トレーナー |  |  |  | ● | Old Rod<br>Neo Revelation 64 |  |
+| 54 | いやしの野原 | トレーナー（スタジアム） |  |  |  | ◆ | Healing Field<br>Neo Revelation 61 |  |
+| 55 | ふうせんのみ | トレーナー（ポケモンのどうぐ） |  |  |  | ◆ | Balloon Berry<br>Neo Revelation 60 |  |
+| 56 | ポケモン育て屋夫婦 | トレーナー |  |  |  | ◆ | Pokémon Breeder Fields<br>Neo Revelation 62 |  |
+| 57 | ロケット団のアジト | トレーナー（スタジアム） |  |  |  | ◆ | Rocket's Hideout<br>Neo Revelation 63 |  |
 
 ## 英語版との対応メモ
 

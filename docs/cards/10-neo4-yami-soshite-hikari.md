@@ -18,7 +18,7 @@
 | 10 | やさしいレディアン | ポケモン | 草 | 1進化 | 70 | ★ | Light Ledian<br>Neo Destiny 24 |  |
 | 11 | わるいアリアドス | ポケモン | 草 | 1進化 | 60 | ★ | Dark Ariados<br>Neo Destiny 17 |  |
 | 12 | わるいクロバット | ポケモン | 草 | 2進化 | 70 | ★キラ | Dark Crobat<br>Neo Destiny 2 |  |
-| 13 | ひかるセレビィ | ポケモン | 草 | たね | 50 | ★ | Shining Celebi<br>Neo Destiny 106 |  |
+| 13 | ひかるセレビィ | ポケモン | 草 | たね | 50 | ★ | Shining Celebi<br>Neo Destiny 106 | レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ） |
 | 14 | ロコン | ポケモン | 炎 | たね | 50 | ● | Vulpix<br>Neo Destiny 91 |  |
 | 15 | ガーディ | ポケモン | 炎 | たね | 50 | ● | Growlithe<br>Neo Destiny 68 |  |
 | 16 | ヒノアラシ | ポケモン | 炎 | たね | 40 | ● | Cyndaquil<br>Neo Destiny 61 |  |
@@ -30,7 +30,7 @@
 | 22 | わるいバクフーン | ポケモン | 炎 | 2進化 | 80 | ★キラ | Dark Typhlosion<br>Neo Destiny 10 |  |
 | 23 | わるいマグカルゴ | ポケモン | 炎 | 1進化 | 60 | ★ | Dark Magcargo<br>Neo Destiny 18 |  |
 | 24 | わるいヘルガー | ポケモン | 炎 | 1進化 | 60 | ★キラ | Dark Houndoom<br>Neo Destiny 7 |  |
-| 25 | ひかるリザードン | ポケモン | 炎 | たね | 100 | ★ | Shining Charizard<br>Neo Destiny 107 |  |
+| 25 | ひかるリザードン | ポケモン | 炎 | たね | 100 | ★ | Shining Charizard<br>Neo Destiny 107 | レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ） |
 | 26 | コダック | ポケモン | 水 | たね | 50 | ● | Psyduck<br>Neo Destiny 79 |  |
 | 27 | パウワウ | ポケモン | 水 | たね | 50 | ● | Seel<br>Neo Destiny 81 |  |
 | 28 | ワニノコ | ポケモン | 水 | たね | 50 | ● | Totodile<br>Neo Destiny 85 |  |
@@ -52,7 +52,7 @@
 | 44 | わるいモココ | ポケモン | 雷 | 1進化 | 60 | ◆ | Dark Flaaffy<br>Neo Destiny 34 |  |
 | 45 | やさしいランターン | ポケモン | 雷 | 1進化 | 80 | ★ | Light Lanturn<br>Neo Destiny 23 |  |
 | 46 | わるいデンリュウ | ポケモン | 雷 | 2進化 | 70 | ★キラ | Dark Ampharos<br>Neo Destiny 1 |  |
-| 47 | ひかるライチュウ | ポケモン | 雷 | たね | 70 | ★ | Shining Raichu<br>Neo Destiny 111 |  |
+| 47 | ひかるライチュウ | ポケモン | 雷 | たね | 70 | ★ | Shining Raichu<br>Neo Destiny 111 | レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ） |
 | 48 | ゴース | ポケモン | 超 | たね | 40 | ● | Gastly<br>Neo Destiny 65 |  |
 | 49 | タマタマ | ポケモン | 超 | たね | 40 | ● | Exeggcute<br>Neo Destiny 64 |  |
 | 50 | アンノーンL | ポケモン | 超 | たね | 50 | ● | Unown [L]<br>Neo Destiny 86 |  |
@@ -73,7 +73,7 @@
 | 65 | アンノーンX | ポケモン | 超 | たね | 50 | ★ | Unown [X]<br>Neo Destiny 30 |  |
 | 66 | わるいゲンガー | ポケモン | 超 | 2進化 | 70 | ★キラ | Dark Gengar<br>Neo Destiny 6 |  |
 | 67 | わるいエーフィ | ポケモン | 超 | 1進化 | 60 | ★キラ | Dark Espeon<br>Neo Destiny 4 |  |
-| 68 | ひかるミュウツー | ポケモン | 超 | たね | 70 | ★ | Shining Mewtwo<br>Neo Destiny 109 |  |
+| 68 | ひかるミュウツー | ポケモン | 超 | たね | 70 | ★ | Shining Mewtwo<br>Neo Destiny 109 | レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ） |
 | 69 | ワンリキー | ポケモン | 闘 | たね | 40 | ● | Machop<br>Neo Destiny 73 |  |
 | 70 | エビワラー | ポケモン | 闘 | たね | 60 | ● | Hitmonchan<br>Neo Destiny 69 |  |
 | 71 | グライガー | ポケモン | 闘 | たね | 50 | ● | Gligar<br>Neo Destiny 67 |  |
@@ -85,11 +85,11 @@
 | 77 | やさしいカイリキー | ポケモン | 闘 | 2進化 | 100 | ★ | Light Machamp<br>Neo Destiny 25 |  |
 | 78 | わるいドンファン | ポケモン | 闘 | 1進化 | 60 | ★キラ | Dark Donphan<br>Neo Destiny 3 |  |
 | 79 | わるいバンギラス | ポケモン | 闘 | 2進化 | 90 | ★キラ | Dark Tyranitar<br>Neo Destiny 11 |  |
-| 80 | ひかるカブトプス | ポケモン | 闘 | たね | 80 | ★ | Shining Kabutops<br>Neo Destiny 108 |  |
-| 81 | デルビル | ポケモン | 悪 | たね | 40 | ● | Houndour<br>Neo Destiny 43 |  |
-| 82 | ひかるバンギラス | ポケモン | 悪 | たね | 80 | ★ | Shining Tyranitar<br>Neo Destiny 113 |  |
+| 80 | ひかるカブトプス | ポケモン | 闘 | たね | 80 | ★ | Shining Kabutops<br>Neo Destiny 108 | レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ） |
+| 81 | デルビル | ポケモン | 悪 | たね | 40 | ● | Houndour<br>Neo Destiny 43 | レアリティ表記は出典データにより異なる（TCGdex: ●／別データ: ◆） |
+| 82 | ひかるバンギラス | ポケモン | 悪 | たね | 80 | ★ | Shining Tyranitar<br>Neo Destiny 113 | レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ） |
 | 83 | わるいハッサム | ポケモン | 鋼 | 1進化 | 70 | ★キラ | Dark Scizor<br>Neo Destiny 9 |  |
-| 84 | ひかるハガネール | ポケモン | 鋼 | たね | 90 | ★ | Shining Steelix<br>Neo Destiny 112 |  |
+| 84 | ひかるハガネール | ポケモン | 鋼 | たね | 90 | ★ | Shining Steelix<br>Neo Destiny 112 | レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ） |
 | 85 | プリン | ポケモン | 無色 | たね | 50 | ● | Jigglypuff<br>Neo Destiny 44 |  |
 | 86 | ポリゴン | ポケモン | 無色 | たね | 50 | ● | Porygon<br>Neo Destiny 78 |  |
 | 87 | ミニリュウ | ポケモン | 無色 | たね | 40 | ● | Dratini<br>Neo Destiny 63 |  |
@@ -102,23 +102,23 @@
 | 94 | やさしいカイリュー | ポケモン | 無色 | 2進化 | 100 | ★キラ | Light Dragonite<br>Neo Destiny 14 |  |
 | 95 | やさしいトゲチック | ポケモン | 無色 | 1進化 | 60 | ★キラ | Light Togetic<br>Neo Destiny 15 |  |
 | 96 | わるいリングマ | ポケモン | 無色 | 1進化 | 60 | ★ | Dark Ursaring<br>Neo Destiny 21 |  |
-| 97 | わるいポリゴン２ | ポケモン | 無色 | 1進化 | 60 | ★キラ | Dark Porygon2<br>Neo Destiny 8 |  |
-| 98 | ひかるヨルノズク | ポケモン | 無色 | たね | 60 | ★ | Shining Noctowl<br>Neo Destiny 110 |  |
-| 99 | （公式名未確認） | トレーナー |  |  |  | ● | Heal Powder<br>Neo Destiny 104 |  |
-| 100 | （公式名未確認） | トレーナー |  |  |  | ● | Mail from Bill<br>Neo Destiny 105 |  |
-| 101 | （公式名未確認） | トレーナー（スタジアム） |  |  |  | ◆ | Energy Stadium<br>Neo Destiny 99 |  |
-| 102 | （公式名未確認） | トレーナー |  |  |  | ◆ | Energy Amplifier<br>Neo Destiny 98 |  |
-| 103 | （公式名未確認） | トレーナー（ポケモンのどうぐ） |  |  |  | ◆ | Counterattack Claws<br>Neo Destiny 97 |  |
-| 104 | （公式名未確認） | トレーナー |  |  |  | ◆ | Magnifier<br>Neo Destiny 101 |  |
-| 105 | （公式名未確認） | トレーナー |  |  |  | ◆ | Pokémon Personality Test<br>Neo Destiny 102 |  |
-| 106 | （公式名未確認） | トレーナー（スタジアム） |  |  |  | ◆ | Lucky Stadium<br>Neo Destiny 100 |  |
-| 107 | （公式名未確認） | トレーナー |  |  |  | ◆ | Team Rocket's Evil Deeds<br>Neo Destiny 103 |  |
-| 108 | （公式名未確認） | トレーナー（Rocket's Secret Machine） |  |  |  | ★ | Thought Wave Machine<br>Neo Destiny 96 |  |
-| 109 | （公式名未確認） | トレーナー（ポケモンのどうぐ） |  |  |  | ★ | EXP.ALL<br>Neo Destiny 93 |  |
-| 110 | （公式名未確認） | トレーナー（スタジアム） |  |  |  | ★ | Broken Ground Gym<br>Neo Destiny 92 |  |
-| 111 | （公式名未確認） | トレーナー |  |  |  | ★ | Impostor Professor Oak's Invention<br>Neo Destiny 94 |  |
-| 112 | （公式名未確認） | トレーナー（スタジアム） |  |  |  | ★ | Radio Tower<br>Neo Destiny 95 |  |
-| 113 | （公式名未確認） | 特殊エネルギー |  |  |  | ★キラ | Miracle Energy<br>Neo Destiny 16 |  |
+| 97 | わるいポリゴン2 | ポケモン | 無色 | 1進化 | 60 | ★キラ | Dark Porygon2<br>Neo Destiny 8 |  |
+| 98 | ひかるヨルノズク | ポケモン | 無色 | たね | 60 | ★ | Shining Noctowl<br>Neo Destiny 110 | レアリティ表記は出典データにより異なる（TCGdex: Rare／別データ: ★キラ） |
+| 99 | ばんのうごな | トレーナー |  |  |  | ● | Heal Powder<br>Neo Destiny 104 |  |
+| 100 | マサキのメール | トレーナー |  |  |  | ● | Mail from Bill<br>Neo Destiny 105 |  |
+| 101 | エネルギースタジアム | トレーナー（スタジアム） |  |  |  | ◆ | Energy Stadium<br>Neo Destiny 99 |  |
+| 102 | エネルギー増幅装置 | トレーナー |  |  |  | ◆ | Energy Amplifier<br>Neo Destiny 98 |  |
+| 103 | はんげきのツメ | トレーナー（ポケモンのどうぐ） |  |  |  | ◆ | Counterattack Claws<br>Neo Destiny 97 |  |
+| 104 | ピントレンズ | トレーナー |  |  |  | ◆ | Magnifier<br>Neo Destiny 101 |  |
+| 105 | ポケモン性格判定 | トレーナー |  |  |  | ◆ | Pokémon Personality Test<br>Neo Destiny 102 |  |
+| 106 | ラッキースタジアム | トレーナー（スタジアム） |  |  |  | ◆ | Lucky Stadium<br>Neo Destiny 100 |  |
+| 107 | ロケット団の暗躍 | トレーナー |  |  |  | ◆ | Team Rocket's Evil Deeds<br>Neo Destiny 103 |  |
+| 108 | 怪電波マシーン | トレーナー（Rocket's Secret Machine） |  |  |  | ★ | Thought Wave Machine<br>Neo Destiny 96 |  |
+| 109 | 学習装置 | トレーナー（ポケモンのどうぐ） |  |  |  | ★ | EXP.ALL<br>Neo Destiny 93 |  |
+| 110 | でこぼこジム | トレーナー（スタジアム） |  |  |  | ★ | Broken Ground Gym<br>Neo Destiny 92 |  |
+| 111 | にせオーキドの発明 | トレーナー |  |  |  | ★ | Impostor Professor Oak's Invention<br>Neo Destiny 94 |  |
+| 112 | ラジオとう | トレーナー（スタジアム） |  |  |  | ★ | Radio Tower<br>Neo Destiny 95 |  |
+| 113 | ミラクルエネルギー | 特殊エネルギー |  |  |  | ★キラ | Miracle Energy<br>Neo Destiny 16 |  |
 
 ## 英語版との対応メモ
 

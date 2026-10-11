@@ -84,10 +84,11 @@
 
 ## Neo Genesis
 
-8 枚
+9 枚
 
 - 5 Feraligatr
 - 10 Meganium
+- 18 Typhlosion
 - 28 Bayleef
 - 32 Croconaw
 - 46 Quilava

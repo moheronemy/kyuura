@@ -1,7 +1,7 @@
-# 闇からの挑戦（第6弾（ジム拡張第2弾））
+# 闇からの挑戦（第6弾）
 
 - 発売日: 1999年6月25日
-- 収録枚数: 98種（TCGdex 掲載数）
+- 収録枚数: 98種（うち2枚は通常のレアリティ構成外のカード）
 - 主に対応する英語版: Gym Challenge
 
 | No. | 日本語名 | 種類 | タイプ | 進化 | HP | レア | 英語版（WotC） | 備考 |
@@ -47,7 +47,7 @@
 | 39 | カスミのニョロボン | ポケモン | 水 | 2進化 | 90 | ★ | Misty's Poliwrath<br>Gym Heroes 31 ⚠ |  |
 | 40 | サカキのギャラドス | ポケモン | 水 | 1進化 | 90 | ★キラ | Giovanni's Gyarados<br>Gym Challenge 5 |  |
 | 41 | マチスのライチュウ | ポケモン | 雷 | 1進化 | 80 | ★キラ | Lt. Surge's Raichu<br>Gym Challenge 11 |  |
-| 42 | ロケット団のサンダー | ポケモン | 雷 | たね | 70 | ★キラ | Rocket's Zapdos<br>Gym Challenge 15 |  |
+| 42 | R団のサンダー | ポケモン | 雷 | たね | 70 | ★キラ | Rocket's Zapdos<br>Gym Challenge 15 |  |
 | 43 | ナツメのケーシィ | ポケモン | 超 | たね | 40 | ● | Sabrina's Abra<br>Gym Heroes 91 ⚠ |  |
 | 44 | ナツメのヤドン | ポケモン | 超 | たね | 50 | ● | Sabrina's Slowpoke<br>Gym Heroes 95 ⚠ |  |
 | 45 | ナツメのスリープ | ポケモン | 超 | たね | 50 | ● | Sabrina's Drowzee<br>Gym Heroes 92 ⚠ |  |
@@ -60,7 +60,7 @@
 | 52 | ナツメのルージュラ | ポケモン | 超 | たね | 60 | ◆ | Sabrina's Jynx<br>Gym Challenge 57 |  |
 | 53 | ナツメのフーディン | ポケモン | 超 | 2進化 | 80 | ★キラ | Sabrina's Alakazam<br>Gym Challenge 16 |  |
 | 54 | ナツメのゲンガー | ポケモン | 超 | 2進化 | 80 | ★キラ | Sabrina's Gengar<br>Gym Heroes 14 ⚠ |  |
-| 55 | ロケット団のミュウツー | ポケモン | 超 | たね | 70 | ★キラ | Rocket's Mewtwo<br>Gym Challenge 14 |  |
+| 55 | R団のミュウツー | ポケモン | 超 | たね | 70 | ★キラ | Rocket's Mewtwo<br>Gym Challenge 14 |  |
 | 56 | カツラのマンキー | ポケモン | 闘 | たね | 40 | ● | Blaine's Mankey<br>Gym Challenge 63 |  |
 | 57 | サカキのワンリキー | ポケモン | 闘 | たね | 50 | ● | Giovanni's Machop<br>Gym Challenge 72 |  |
 | 58 | カツラのサイホーン | ポケモン | 闘 | たね | 60 | ● | Blaine's Rhyhorn<br>Gym Challenge 65 |  |
@@ -78,32 +78,32 @@
 | 70 | キョウのピジョン | ポケモン | 無色 | 1進化 | 60 | ★ | Koga's Pidgeotto<br>Gym Challenge 27 |  |
 | 71 | サカキのペルシアン | ポケモン | 無色 | 1進化 | 60 | ★キラ | Giovanni's Persian<br>Gym Challenge 8 |  |
 | 72 | キョウのメタモン | ポケモン | 無色 | たね | 40 | ★キラ | Koga's Ditto<br>Gym Challenge 10 |  |
-| 73 | ロケット団のカビゴン | ポケモン | 無色 | たね | 90 | ★ | Rocket's Snorlax<br>Gym Heroes 33 ⚠ |  |
-| 74 | イマクニ？のドードー | ポケモン | 無色 | たね | 50 | 特殊 | （英語版なし） | 日本のみのカード。TCGdex では本弾に含めて掲載（収録形態は要確認） |
-| 75 | _____のチャンシー | ポケモン | 無色 | たね | 90 | 特殊 | （英語版なし） | 日本のみのカード。TCGdex では本弾に含めて掲載（収録形態は要確認） |
-| 76 | カツラのギャンブル ※ | トレーナー |  |  |  | ● | Blaine's Gamble<br>Gym Heroes 121 ⚠ |  |
-| 77 | トラッシュ交換 ※ | トレーナー |  |  |  | ● | Trash Exchange<br>Gym Heroes 126 ⚠ |  |
-| 78 | ナツメの眼 ※ | トレーナー |  |  |  | ● | Sabrina's Gaze<br>Gym Heroes 125 ⚠ |  |
-| 79 | 見えない壁 ※ | トレーナー |  |  |  | ● | Transparent Walls<br>Gym Challenge 125 |  |
-| 80 | ワープポイント ※ | トレーナー |  |  |  | ● | Warp Point<br>Gym Challenge 126 |  |
-| 81 | カツラの奥の手 ※ | トレーナー |  |  |  | ◆ | Blaine's Last Resort<br>Gym Heroes 105 ⚠ |  |
-| 82 | カツラのクイズ その3 ※ | トレーナー |  |  |  | ◆ | Blaine's Quiz #3<br>Gym Challenge 112 |  |
-| 83 | キョウ秘伝 変わり身の術 ※ | トレーナー |  |  |  | ◆ | Koga's Ninja Trick<br>Gym Challenge 115 |  |
-| 84 | くすぐりマシーン ※ | トレーナー（Rocket's Secret Machine） |  |  |  | ◆ | Tickling Machine<br>Gym Heroes 119 ⚠ |  |
-| 85 | グレンタウンジム ※ | トレーナー（スタジアム） |  |  |  | ◆ | Cinnabar City Gym<br>Gym Challenge 113 |  |
-| 86 | セキチクシティジム ※ | トレーナー（スタジアム） |  |  |  | ◆ | Fuchsia City Gym<br>Gym Challenge 114 |  |
-| 87 | ナツメのESP ※ | トレーナー |  |  |  | ◆ | Sabrina's ESP<br>Gym Heroes 117 ⚠ |  |
-| 88 | ナツメのサイキックコントロール ※ | トレーナー |  |  |  | ◆ | Sabrina's Psychic Control<br>Gym Challenge 121 |  |
-| 89 | ロケット団員 ※ | トレーナー |  |  |  | ◆ | Minion of Team Rocket<br>Gym Heroes 113 ⚠ |  |
-| 90 | ヤマブキシティジム ※ | トレーナー（スタジアム） |  |  |  | ◆ | Saffron City Gym<br>Gym Challenge 122 |  |
+| 73 | R団のカビゴン | ポケモン | 無色 | たね | 90 | ★ | Rocket's Snorlax<br>Gym Heroes 33 ⚠ |  |
+| 74 | イマクニ？のドードー | ポケモン | 無色 | たね | 50 | 特殊 | （英語版なし） | 英語版なし。出典データでは本弾の番外カードとして掲載。拡張パックに封入されていたかは未確認 |
+| 75 | _____のラッキー | ポケモン | 無色 | たね | 90 | 特殊 | （英語版なし） | 英語版なし。出典データでは本弾の番外カードとして掲載。配布方法は未確認 |
+| 76 | カツラのギャンブル | トレーナー |  |  |  | ● | Blaine's Gamble<br>Gym Heroes 121 ⚠ |  |
+| 77 | トラッシュ交換 | トレーナー |  |  |  | ● | Trash Exchange<br>Gym Heroes 126 ⚠ |  |
+| 78 | ナツメの眼 | トレーナー |  |  |  | ● | Sabrina's Gaze<br>Gym Heroes 125 ⚠ |  |
+| 79 | 見えない壁 | トレーナー |  |  |  | ● | Transparent Walls<br>Gym Challenge 125 |  |
+| 80 | ワープポイント | トレーナー |  |  |  | ● | Warp Point<br>Gym Challenge 126 |  |
+| 81 | カツラの奥の手 | トレーナー |  |  |  | ◆ | Blaine's Last Resort<br>Gym Heroes 105 ⚠ |  |
+| 82 | カツラのクイズ その3 | トレーナー |  |  |  | ◆ | Blaine's Quiz #3<br>Gym Challenge 112 |  |
+| 83 | キョウ秘伝 変わり身の術 | トレーナー |  |  |  | ◆ | Koga's Ninja Trick<br>Gym Challenge 115 | 名前の区切り（読点の有無）は未確認 |
+| 84 | くすぐりマシーン | トレーナー（Rocket's Secret Machine） |  |  |  | ◆ | Tickling Machine<br>Gym Heroes 119 ⚠ |  |
+| 85 | グレンタウンジム | トレーナー（スタジアム） |  |  |  | ◆ | Cinnabar City Gym<br>Gym Challenge 113 |  |
+| 86 | セキチクシティジム | トレーナー（スタジアム） |  |  |  | ◆ | Fuchsia City Gym<br>Gym Challenge 114 |  |
+| 87 | ナツメのESP | トレーナー |  |  |  | ◆ | Sabrina's ESP<br>Gym Heroes 117 ⚠ |  |
+| 88 | ナツメのサイキックコントロール | トレーナー |  |  |  | ◆ | Sabrina's Psychic Control<br>Gym Challenge 121 |  |
+| 89 | ロケット団員 | トレーナー |  |  |  | ◆ | Minion of Team Rocket<br>Gym Heroes 113 ⚠ |  |
+| 90 | ヤマブキシティジム | トレーナー（スタジアム） |  |  |  | ◆ | Saffron City Gym<br>Gym Challenge 122 |  |
 | 91 | ロケット団の実験 ※ | トレーナー |  |  |  | ◆ | Rocket's Secret Experiment<br>Gym Challenge 120 |  |
-| 92 | ロケット団の爆発ジム ※ | トレーナー（スタジアム） |  |  |  | ◆ | Rocket's Minefield Gym<br>Gym Challenge 119 |  |
-| 93 | カツラ ※ | トレーナー |  |  |  | ★ | Blaine<br>Gym Challenge 17・100 |  |
-| 94 | キョウ ※ | トレーナー |  |  |  | ★ | Koga<br>Gym Challenge 19・106 |  |
-| 95 | サカキ ※ | トレーナー |  |  |  | ★キラ | Giovanni<br>Gym Challenge 18・104 |  |
-| 96 | サカキの切り札 ※ | トレーナー |  |  |  | ★ | Giovanni's Last Resort<br>Gym Challenge 105 |  |
-| 97 | トキワシティジム ※ | トレーナー（スタジアム） |  |  |  | ★ | Viridian City Gym<br>Gym Challenge 123 |  |
-| 98 | ナツメ ※ | トレーナー |  |  |  | ★ | Sabrina<br>Gym Challenge 20・110 |  |
+| 92 | ロケット団の爆発ジム | トレーナー（スタジアム） |  |  |  | ◆ | Rocket's Minefield Gym<br>Gym Challenge 119 |  |
+| 93 | カツラ | トレーナー |  |  |  | ★ | Blaine<br>Gym Challenge 17・100 |  |
+| 94 | キョウ | トレーナー |  |  |  | ★ | Koga<br>Gym Challenge 19・106 |  |
+| 95 | サカキ | トレーナー |  |  |  | ★キラ | Giovanni<br>Gym Challenge 18・104 |  |
+| 96 | サカキの切り札 | トレーナー |  |  |  | ★ | Giovanni's Last Resort<br>Gym Challenge 105 |  |
+| 97 | トキワシティジム | トレーナー（スタジアム） |  |  |  | ★ | Viridian City Gym<br>Gym Challenge 123 |  |
+| 98 | ナツメ | トレーナー |  |  |  | ★ | Sabrina<br>Gym Challenge 20・110 |  |
 
 ## 英語版との対応メモ
 
@@ -126,7 +126,7 @@
 - ナツメのゲンガー → Sabrina's Gengar（Gym Heroes 14）
 - カツラのケンタロス → Blaine's Tauros（Gym Heroes 64）
 - カツラのガルーラ → Blaine's Kangaskhan（Gym Heroes 36）
-- ロケット団のカビゴン → Rocket's Snorlax（Gym Heroes 33）
+- R団のカビゴン → Rocket's Snorlax（Gym Heroes 33）
 - カツラのギャンブル → Blaine's Gamble（Gym Heroes 121）
 - トラッシュ交換 → Trash Exchange（Gym Heroes 126）
 - ナツメの眼 → Sabrina's Gaze（Gym Heroes 125）
@@ -137,8 +137,8 @@
 
 英語版に対応カードがないもの:
 
-- イマクニ？のドードー：日本のみのカード。TCGdex では本弾に含めて掲載（収録形態は要確認）
-- _____のチャンシー：日本のみのカード。TCGdex では本弾に含めて掲載（収録形態は要確認）
+- イマクニ？のドードー：英語版なし。出典データでは本弾の番外カードとして掲載。拡張パックに封入されていたかは未確認
+- _____のラッキー：英語版なし。出典データでは本弾の番外カードとして掲載。配布方法は未確認
 
 Gym Challenge にあって、日本版の本弾に収録されていないカード（基本エネルギー除く）:
 

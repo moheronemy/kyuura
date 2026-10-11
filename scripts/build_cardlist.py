@@ -153,6 +153,12 @@ def score(jc, ec, name_hint):
     return sc
 
 
+def card_signature(c):
+    """同一カードのホロ版・ノーマル版を同一視するための署名。"""
+    return (c['name'], c.get('hp'), tuple(a['name'] for a in c.get('attacks', [])),
+            tuple(a['name'] for a in c.get('abilities', [])), tuple(c.get('rules', [])))
+
+
 def species_ja(path):
     names = {}
     with open(path, encoding='utf-8') as f:
@@ -181,6 +187,11 @@ def ja_pokemon_name(ec, species, conv):
         ja_prefix = PREFIX_JA[p] or conv['prefix'].get(p.strip())
         return (ja_prefix or p) + base
     return base
+
+
+def normalize_ja(name):
+    # PokeAPI の全角数字（ポリゴン２）をカード表記に合わせて半角にする
+    return name.translate(str.maketrans('０１２３４５６７８９', '0123456789')) if name else name
 
 
 def en_ref(cards):
@@ -224,6 +235,8 @@ def main():
                    'holo': any(v.get('type') == 'holo' for v in jc.get('variants', [])),
                    'notes': []}
             ov = overrides.get(key, {})
+            if ov.get('note'):
+                rec['notes'].append(ov['note'])
             if jc['category'] == 'Pokemon':
                 if key in jp_only:
                     best = []
@@ -244,7 +257,7 @@ def main():
                         order = search + [x for x in EN_ORDER if x not in search]
                         chosen_set = min({c['_set'] for c in tops}, key=order.index)
                         best = [c for c in tops if c['_set'] == chosen_set]
-                        if len({c['name'] for c in best}) > 1:
+                        if len({card_signature(c) for c in best}) > 1:
                             raise SystemExit(f'ambiguous match for {key}: {[c["id"] for c in best]}')
                     else:
                         best = []
@@ -252,7 +265,7 @@ def main():
                     raise SystemExit(f'no English match for {key} {jc["name"]["ja"]}')
                 if best:
                     e0 = best[0]
-                    rec['ja_name'] = ov.get('ja_name') or ja_pokemon_name(e0, species, conv)
+                    rec['ja_name'] = normalize_ja(ov.get('ja_name') or ja_pokemon_name(e0, species, conv))
                     rec['ja_name_basis'] = 'curated' if ov.get('ja_name') else 'generated'
                 else:
                     rec['ja_name'] = jp_only[key]['ja_name']
