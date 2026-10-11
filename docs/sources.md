@@ -4,7 +4,7 @@
 
 - ルール関係の文書は、ウェブ検索の結果（検索エンジンが返す要約と抜粋）をもとに書いています。
 - 作成環境のネットワーク制限のため、下記のページの多くは直接開いて読めていません。内容は検索結果の要約で確かめたものです。
-  - 例外: Bulbapedia の X30、X31、X37、X38、X41〜X44 は、2026年10月に MediaWiki の API でページの原文（ウィキテキスト）を取得して確かめました。
+  - 例外: Bulbapedia の X30、X31、X37、X38、X41〜X48 は、2026年10月に MediaWiki の API でページの原文（ウィキテキスト）を取得して確かめました。
   - 引用の文言が原文と一字一句同じとは限りません。
   - 要約の取り違えが含まれている可能性もあります。
 - 公開・引用の前に、各ページを開いて確認してください。特に、旧裏 wiki「当時のルール」[J1] と、WotC の Advanced Rulebook [E4][E5] を優先してください。
@@ -100,6 +100,10 @@
 | X42 | Bulbapedia「Tentacruel (Southern Islands 10)」（どくばりの日英の違い） | https://bulbapedia.bulbagarden.net/wiki/Tentacruel_(Southern_Islands_10) |
 | X43 | Bulbapedia の拡張シートのシート構成（Template:ExpansionSheet/Series1〜3）と各カードのページ（Bill's PC、Imakuni?'s Corner、Lose?、Pokémon Machine、Fossil Excavation、Kadabra・Haunter (Vending S3)） | https://bulbapedia.bulbagarden.net/wiki/Template:ExpansionSheet/Series1 ほか |
 | X44 | Bulbapedia「List of Japanese Pokémon Trading Card Game expansions」（日本の弾と商品の発売日・枚数） | https://bulbapedia.bulbagarden.net/wiki/List_of_Japanese_Pok%C3%A9mon_Trading_Card_Game_expansions |
+| X45 | Bulbapedia の英語版セットのページ（Gym Heroes、Gym Challenge、Neo Genesis、Neo Discovery、Neo Revelation。イラストが日英で違うカード） | https://bulbapedia.bulbagarden.net/wiki/Gym_Heroes_(TCG) ほか |
+| X46 | Bulbapedia「Original TCG Era merchandise」、ジムデッキ 6 種のページ（Nivi City Gym など）、「Quick Starter Gift Set (TCG)」、ジムデッキのカードのページ（英語版のカードへの転送） | https://bulbapedia.bulbagarden.net/wiki/Original_TCG_Era_merchandise ほか |
+| X47 | Bulbapedia「Neo TCG Era merchandise」（プレミアムファイル 1〜3） | https://bulbapedia.bulbagarden.net/wiki/Neo_TCG_Era_merchandise |
+| X48 | Bulbapedia「Unnumbered Promotional cards (TCG)/1996-2005」（日本の番号なしプロモの一覧） | https://bulbapedia.bulbagarden.net/wiki/Unnumbered_Promotional_cards_(TCG)/1996-2005 |
 
 ## カードテキストの出典
 
@@ -168,7 +172,7 @@
   - エリカのピッピ: つきのちからで、自分自身も進化させられるか。
   - エネルギーサーキュレート: 手札にもどせるのが基本エネルギーだけか。
   - お上品攻撃: 手札にもどすのが自分の番の終わりか、相手の番の終わりか。
-- 拡張パック以外の商品（拡張シート第1〜3弾、映画公開記念パック「サザンアイランド」）の 143 枚は、pcg-search [N3] から取り込みました（`data/ja_text_pcgsearch.json`、[拡張シートとサザンアイランド](cards/other-products.md)）。
+- 拡張パック以外の商品（拡張シート第1〜3弾、映画公開記念パック「サザンアイランド」、ポケモンジムの構築済みデッキ 6 種、クイックスターターギフト、neo プレミアムファイル 1〜3、プロモ）の 519 枚は、pcg-search [N3] から取り込みました（`data/ja_text_pcgsearch.json`、[拡張パック以外の商品](cards/other-products.md)）。
   - サザンアイランドの 18 枚はなぞのばしょ [N1] の転記とも照合し、食い違いは 3 件（転記の誤り）でした。
   - 拡張パック 10 弾のデータ（`data/cards.json`）には入れていません。
 - 取得方法:
@@ -191,5 +195,5 @@
 - タケシのキュウコンの日本でのエラッタの時期と文面
 - リーダーズスタジアムのエリカのピッピ・エネルギーサーキュレート・お上品攻撃の日英の違い（日本版の文面はポケモンWiki の転記 1 系統だけで確認）
 - なぞのばしょ・ポケモンWiki から取り込んだ効果文の誤字（数値以外は英語版と突き合わせていない）
-- 拡張シート・サザンアイランドについて未確認のこと（[一覧](cards/other-products.md#まだ確認できていないこと)）
+- 拡張パック以外の商品について未確認のこと（[一覧](cards/other-products.md#まだ確認できていないこと)）
 - 英語版の区分 Goldenrod Game Corner（カードめくりゲーム、スロットゲーム）の日本語の区分名。なぞのばしょの分類は「トレーナーカード」だけ

@@ -163,7 +163,7 @@
 }
 ```
 
-`kind` は `text`（文面の意味）／`numbers`（数値）／`errata`（後年のエラッタ）／`placement`（収録先）／`print`（英語版の表記・誤植）／`wording`（書き方の違い。効果は同じだが、説明を書いている場所や分け方が違う）。`sources` の記号は [出典と確認状況](sources.md) を参照。
+`kind` は `text`（文面の意味）／`numbers`（数値）／`errata`（後年のエラッタ）／`placement`（収録先）／`print`（英語版の表記・誤植）／`wording`（書き方の違い。効果は同じだが、説明を書いている場所や分け方が違う）／`art`（イラストの違い）。`sources` の記号は [出典と確認状況](sources.md) を参照。
 
 ## タイプの列挙値
 
@@ -193,9 +193,19 @@
 
 ## `data/ja_text_pcgsearch.json`（拡張シート・サザンアイランド）
 
-拡張パック以外の商品のカードです。`data/cards.json` とは別のファイルで、pcg-search.com の記載をそのまま持っています（[拡張シートとサザンアイランド](cards/other-products.md)）。
+拡張パック以外の商品のカードです。`data/cards.json` とは別のファイルで、pcg-search.com の記載をそのまま持っています（[拡張パック以外の商品](cards/other-products.md)）。
 
 - `products` の各キーが商品名（サイトの見出し）、値がカードの配列です。
 - カードの主な欄: `list_number`（サイトの並び順。印刷された番号ではない）、`url`、`kind`（たねポケモン／トレーナー／EXTRA RULE など）、`name`、`type`、`hp`、`weakness`、`resistance`、`retreat`、`powers`、`attacks`、`text`、`illustrator`、`rarity`、`remarks`。
 - エネルギーは記号（草・炎・水・雷・超・闘・無）の文字列です。`retreat` はにげるのエネルギーを並べたもので、`null` はにげるコストなし。
-- 英語版との対応と日英の違いは `data/curation/other_products.json` にあります。
+- 商品についての補足は `data/curation/other_products.json` にあります。
+
+| キー | 内容 |
+|---|---|
+| `products` | 商品ごとの名前、まとまり（`group`）、発売日、出典 |
+| `en_prints` | pcg-search のカードページ名 → 対応する英語版カード。ここにないカードで、拡張パックと同じカードは `data/cards.json` の対応を使う |
+| `differences` | 日英の違い（`data/curation/card_differences.json` と同じ形） |
+| `sheets` | 拡張シートの各シートの場所とカード |
+| `decks` | ジムデッキの構成（カードページ名と枚数、基本エネルギーの枚数） |
+| `quick_starter_gift` | クイックスターターギフトの赤デッキ・緑デッキの構成 |
+| `promos` | プロモの配布（pcg-search の備考）、配布日と Bulbapedia の記載 |

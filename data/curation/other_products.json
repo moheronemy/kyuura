@@ -10,7 +10,8 @@
     "X39",
     "X40",
     "X44"
-   ]
+   ],
+   "group": "expansion_sheet"
   },
   {
    "pcg_title": "拡張シート 第2弾(赤版)",
@@ -21,7 +22,8 @@
     "X39",
     "X40",
     "X44"
-   ]
+   ],
+   "group": "expansion_sheet"
   },
   {
    "pcg_title": "拡張シート 第3弾(緑版)",
@@ -32,7 +34,8 @@
     "X39",
     "X40",
     "X44"
-   ]
+   ],
+   "group": "expansion_sheet"
   },
   {
    "pcg_title": "映画公開記念パック「サザンアイランド」",
@@ -42,6 +45,115 @@
     "J24",
     "X31",
     "X44"
+   ],
+   "group": "southern_islands"
+  },
+  {
+   "pcg_title": "ポケモンジム第1弾「ニビシティジム タケシ」",
+   "name": "ポケモンジム第1弾「ニビシティジム タケシ」",
+   "group": "gym_deck",
+   "release_date": "1998-04-26",
+   "sources": [
+    "X46"
+   ]
+  },
+  {
+   "pcg_title": "ポケモンジム第1弾「ハナダシティジム カスミ」",
+   "name": "ポケモンジム第1弾「ハナダシティジム カスミ」",
+   "group": "gym_deck",
+   "release_date": "1998-04-26",
+   "sources": [
+    "X46"
+   ]
+  },
+  {
+   "pcg_title": "ポケモンジム第2弾「クチバシティジム マチス」",
+   "name": "ポケモンジム第2弾「クチバシティジム マチス」",
+   "group": "gym_deck",
+   "release_date": "1998-07-25",
+   "sources": [
+    "X46"
+   ]
+  },
+  {
+   "pcg_title": "ポケモンジム第2弾「タマムシシティジム エリカ」",
+   "name": "ポケモンジム第2弾「タマムシシティジム エリカ」",
+   "group": "gym_deck",
+   "release_date": "1998-07-25",
+   "sources": [
+    "X46"
+   ]
+  },
+  {
+   "pcg_title": "ポケモンジム第3弾「グレンタウンジム カツラ」",
+   "name": "ポケモンジム第3弾「グレンタウンジム カツラ」",
+   "group": "gym_deck",
+   "release_date": "1999-02-26",
+   "sources": [
+    "X46"
+   ]
+  },
+  {
+   "pcg_title": "ポケモンジム第3弾「ヤマブキシティジム ナツメ」",
+   "name": "ポケモンジム第3弾「ヤマブキシティジム ナツメ」",
+   "group": "gym_deck",
+   "release_date": "1999-02-26",
+   "sources": [
+    "X46"
+   ]
+  },
+  {
+   "pcg_title": "クイックスターターギフト",
+   "name": "クイックスターターギフト",
+   "group": "quick_starter_gift",
+   "release_date": "1998-12-04",
+   "sources": [
+    "X46"
+   ]
+  },
+  {
+   "pcg_title": "プレミアムファイル",
+   "name": "プレミアムファイル",
+   "group": "premium_file",
+   "release_date": "1999-12-10",
+   "sources": [
+    "X47"
+   ]
+  },
+  {
+   "pcg_title": "プレミアムファイル2",
+   "name": "プレミアムファイル2",
+   "group": "premium_file",
+   "release_date": "2000-07-08",
+   "sources": [
+    "X47"
+   ]
+  },
+  {
+   "pcg_title": "プレミアムファイル3",
+   "name": "プレミアムファイル3",
+   "group": "premium_file",
+   "release_date": "2000-11-23",
+   "sources": [
+    "X47"
+   ]
+  },
+  {
+   "pcg_title": "プロモ(旧裏)",
+   "name": "プロモーションカード（第1弾〜闇からの挑戦の時期）",
+   "group": "promo",
+   "release_date": null,
+   "sources": [
+    "X48"
+   ]
+  },
+  {
+   "pcg_title": "プロモ(neo)",
+   "name": "プロモーションカード（neo の時期）",
+   "group": "promo",
+   "release_date": null,
+   "sources": [
+    "X48"
    ]
   }
  ],
@@ -207,6 +319,678 @@
    "released": "2002-08",
    "distribution": "ポケモンリーグで配布",
    "note": "日本では青版のシート 16（コロコロのイラストコンテスト入賞作。入賞者に 20 枚が先に贈られた）。英語版は WotC のイラストコンテストで選ばれた別のイラスト。日本ではクイックスターターギフトの赤デッキに再録"
+  },
+  "1stgymd1001": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "24",
+   "name": "Brock's Zubat"
+  },
+  "1stgymd1002": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "73",
+   "name": "Brock's Vulpix"
+  },
+  "1stgymd1003": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "71",
+   "name": "Brock's Sandshrew"
+  },
+  "1stgymd1004": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "23",
+   "name": "Brock's Sandslash"
+  },
+  "1stgymd1005": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "67",
+   "name": "Brock's Mankey"
+  },
+  "1stgymd1006": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "66",
+   "name": "Brock's Geodude"
+  },
+  "1stgymd1007": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "38",
+   "name": "Brock's Geodude"
+  },
+  "1stgymd1008": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "40",
+   "name": "Brock's Graveler"
+  },
+  "1stgymd1009": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "20",
+   "name": "Brock's Golem"
+  },
+  "1stgymd1010": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "21",
+   "name": "Brock's Onix"
+  },
+  "1stgymd1011": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "69",
+   "name": "Brock's Onix"
+  },
+  "1stgymd1012": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "22",
+   "name": "Brock's Rhyhorn"
+  },
+  "1stgymd1013": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "2",
+   "name": "Brock's Rhydon"
+  },
+  "1stgymd1015": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "116",
+   "name": "Recall"
+  },
+  "1stgymd1018": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "15",
+   "name": "Brock"
+  },
+  "1stgymd1019": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "106",
+   "name": "Brock's Training Method"
+  },
+  "1stgymd1024": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "115",
+   "name": "Pewter City Gym"
+  },
+  "1stgymd2001": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "54",
+   "name": "Misty's Psyduck"
+  },
+  "1stgymd2002": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "87",
+   "name": "Misty's Poliwag"
+  },
+  "1stgymd2003": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "32",
+   "name": "Misty's Tentacool"
+  },
+  "1stgymd2004": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "10",
+   "name": "Misty's Tentacruel"
+  },
+  "1stgymd2005": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "88",
+   "name": "Misty's Seel"
+  },
+  "1stgymd2006": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "89",
+   "name": "Misty's Shellder"
+  },
+  "1stgymd2007": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "29",
+   "name": "Misty's Cloyster"
+  },
+  "1stgymd2008": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "86",
+   "name": "Misty's Horsea"
+  },
+  "1stgymd2010": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "85",
+   "name": "Misty's Goldeen"
+  },
+  "1stgymd2009": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "30",
+   "name": "Misty's Goldeen"
+  },
+  "1stgymd2011": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "55",
+   "name": "Misty's Seaking"
+  },
+  "1stgymd2012": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "92",
+   "name": "Misty's Staryu"
+  },
+  "1stgymd2013": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "90",
+   "name": "Misty's Staryu"
+  },
+  "1stgymd2014": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "56",
+   "name": "Misty's Starmie"
+  },
+  "1stgymd2015": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "18",
+   "name": "Misty"
+  },
+  "1stgymd2016": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "114",
+   "name": "Misty's Wrath"
+  },
+  "1stgymd2017": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "123",
+   "name": "Misty's Duel"
+  },
+  "1stgymd2018": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "118",
+   "name": "Misty's Tears"
+  },
+  "1stgymd2023": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "108",
+   "name": "Cerulean City Gym"
+  },
+  "1stgymd3002": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "81",
+   "name": "Lt. Surge's Pikachu"
+  },
+  "1stgymd3001": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "84",
+   "name": "Lt. Surge's Pikachu"
+  },
+  "1stgymd3003": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "28",
+   "name": "Lt. Surge's Raichu"
+  },
+  "1stgymd3005": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "80",
+   "name": "Lt. Surge's Magnemite"
+  },
+  "1stgymd3004": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "50",
+   "name": "Lt. Surge's Magnemite"
+  },
+  "1stgymd3006": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "8",
+   "name": "Lt. Surge's Magneton"
+  },
+  "1stgymd3008": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "86",
+   "name": "Lt. Surge's Voltorb"
+  },
+  "1stgymd3007": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "84",
+   "name": "Lt. Surge's Voltorb"
+  },
+  "1stgymd3009": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "52",
+   "name": "Lt. Surge's Electrode"
+  },
+  "1stgymd3010": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "27",
+   "name": "Lt. Surge's Electabuzz"
+  },
+  "1stgymd3011": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "82",
+   "name": "Lt. Surge's Rattata"
+  },
+  "1stgymd3012": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "51",
+   "name": "Lt. Surge's Raticate"
+  },
+  "1stgymd3013": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "52",
+   "name": "Lt. Surge's Spearow"
+  },
+  "1stgymd3015": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "122",
+   "name": "Energy Flow"
+  },
+  "1stgymd3024": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "120",
+   "name": "Vermilion City Gym"
+  },
+  "1stgymd3016": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "118",
+   "name": "Secret Mission"
+  },
+  "1stgymd3021": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "17",
+   "name": "Lt. Surge"
+  },
+  "1stgymd3022": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "112",
+   "name": "Lt. Surge's Treaty"
+  },
+  "1stgymd4001": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "47",
+   "name": "Erika's Oddish"
+  },
+  "1stgymd4002": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "78",
+   "name": "Erika's Oddish"
+  },
+  "1stgymd4003": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "46",
+   "name": "Erika's Gloom"
+  },
+  "1stgymd4004": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "5",
+   "name": "Erika's Vileplume"
+  },
+  "1stgymd4005": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "75",
+   "name": "Erika's Bellsprout"
+  },
+  "1stgymd4006": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "76",
+   "name": "Erika's Bellsprout"
+  },
+  "1stgymd4007": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "49",
+   "name": "Erika's Weepinbell"
+  },
+  "1stgymd4008": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "26",
+   "name": "Erika's Victreebel"
+  },
+  "1stgymd4009": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "77",
+   "name": "Erika's Exeggcute"
+  },
+  "1stgymd4010": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "44",
+   "name": "Erika's Exeggutor"
+  },
+  "1stgymd4011": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "79",
+   "name": "Erika's Tangela"
+  },
+  "1stgymd4012": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "25",
+   "name": "Erika's Clefairy"
+  },
+  "1stgymd4013": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "42",
+   "name": "Erika's Dratini"
+  },
+  "1stgymd4016": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "16",
+   "name": "Erika"
+  },
+  "1stgymd4017": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "109",
+   "name": "Erika's Maids"
+  },
+  "1stgymd4018": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "110",
+   "name": "Erika's Perfume"
+  },
+  "1stgymd4019": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "99",
+   "name": "Charity"
+  },
+  "1stgymd4027": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "107",
+   "name": "Celadon City Gym"
+  },
+  "1stgymd4026": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "111",
+   "name": "Good Manners"
+  },
+  "1stgymd6001": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "93",
+   "name": "Sabrina's Abra"
+  },
+  "1stgymd6002": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "94",
+   "name": "Sabrina's Abra"
+  },
+  "1stgymd6003": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "58",
+   "name": "Sabrina's Kadabra"
+  },
+  "1stgymd6004": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "16",
+   "name": "Sabrina's Alakazam"
+  },
+  "1stgymd6005": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "96",
+   "name": "Sabrina's Gastly"
+  },
+  "1stgymd6006": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "93",
+   "name": "Sabrina's Gastly"
+  },
+  "1stgymd6007": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "55",
+   "name": "Sabrina's Haunter"
+  },
+  "1stgymd6008": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "29",
+   "name": "Sabrina's Gengar"
+  },
+  "1stgymd6009": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "95",
+   "name": "Sabrina's Drowzee"
+  },
+  "1stgymd6010": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "56",
+   "name": "Sabrina's Hypno"
+  },
+  "1stgymd6011": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "59",
+   "name": "Sabrina's Mr. Mime"
+  },
+  "1stgymd6012": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "59",
+   "name": "Sabrina's Jynx"
+  },
+  "1stgymd6013": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "98",
+   "name": "Sabrina's Porygon"
+  },
+  "1stgymd6017": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "20",
+   "name": "Sabrina"
+  },
+  "1stgymd6018": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "117",
+   "name": "Sabrina's ESP"
+  },
+  "1stgymd6019": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "125",
+   "name": "Sabrina's Gaze"
+  },
+  "1stgymd6023": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "116",
+   "name": "Master Ball"
+  },
+  "1stgymd6025": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "122",
+   "name": "Saffron City Gym"
+  },
+  "1stgymd6024": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "126",
+   "name": "Warp Point"
+  },
+  "1stgymd5001": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "60",
+   "name": "Blaine's Charmander"
+  },
+  "1stgymd5003": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "66",
+   "name": "Blaine's Vulpix"
+  },
+  "1stgymd5002": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "65",
+   "name": "Blaine's Vulpix"
+  },
+  "1stgymd5004": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "21",
+   "name": "Blaine's Ninetales"
+  },
+  "1stgymd5005": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "35",
+   "name": "Blaine's Growlithe"
+  },
+  "1stgymd5006": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "62",
+   "name": "Blaine's Growlithe"
+  },
+  "1stgymd5007": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "1",
+   "name": "Blaine's Arcanine"
+  },
+  "1stgymd5008": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "63",
+   "name": "Blaine's Ponyta"
+  },
+  "1stgymd5009": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "64",
+   "name": "Blaine's Ponyta"
+  },
+  "1stgymd5010": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "33",
+   "name": "Blaine's Rapidash"
+  },
+  "1stgymd5011": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "37",
+   "name": "Blaine's Magmar"
+  },
+  "1stgymd5012": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "61",
+   "name": "Blaine's Doduo"
+  },
+  "1stgymd5013": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "32",
+   "name": "Blaine's Dodrio"
+  },
+  "1stgymd5014": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "17",
+   "name": "Blaine"
+  },
+  "1stgymd5015": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "121",
+   "name": "Blaine's Gamble"
+  },
+  "1stgymd5016": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "97",
+   "name": "Blaine's Quiz 1"
+  },
+  "1stgymd5017": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "111",
+   "name": "Blaine's Quiz 2"
+  },
+  "1stgymd5024": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "113",
+   "name": "Cinnabar City Gym"
+  },
+  "1stgymd5019": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "117",
+   "name": "Max Revive"
+  },
+  "1stgymd5021": {
+   "set_id": "gym2",
+   "set_name": "Gym Challenge",
+   "number": "124",
+   "name": "Fervor"
   }
  },
  "differences": {
@@ -828,5 +1612,985 @@
     ]
    }
   ]
+ },
+ "decks": {
+  "ポケモンジム第1弾「ニビシティジム タケシ」": {
+   "cards": [
+    {
+     "page": "1stgymd1001",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1002",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1003",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd1004",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1005",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd1006",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd1007",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd1008",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd1009",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1010",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd1011",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd1012",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd1013",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1014",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1015",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1016",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1017",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1018",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1019",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1020",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1024",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1021",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd1022",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1023",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd1025",
+     "qty": 1
+    }
+   ],
+   "basic_energy": [
+    {
+     "name": "Fire Energy",
+     "qty": 2
+    },
+    {
+     "name": "Fighting Energy",
+     "qty": 28
+    }
+   ]
+  },
+  "ポケモンジム第1弾「ハナダシティジム カスミ」": {
+   "cards": [
+    {
+     "page": "1stgymd2001",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd2002",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd2003",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd2004",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd2005",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd2006",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd2007",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd2008",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd2010",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd2009",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd2011",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd2012",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd2013",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd2014",
+     "qty": 3
+    },
+    {
+     "page": "1stgymd2015",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd2016",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd2017",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd2018",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd2020",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd2021",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd2019",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd2023",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd2022",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd2024",
+     "qty": 1
+    }
+   ],
+   "basic_energy": [
+    {
+     "name": "Water Energy",
+     "qty": 26
+    }
+   ]
+  },
+  "ポケモンジム第2弾「クチバシティジム マチス」": {
+   "cards": [
+    {
+     "page": "1stgymd3002",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3001",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3003",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3005",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3004",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd3006",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd3008",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3007",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3009",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3010",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3011",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3012",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd3013",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3014",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd3015",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3024",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd3016",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3017",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd3018",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd3019",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd3020",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd3021",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd3022",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd3023",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd3025",
+     "qty": 1
+    }
+   ],
+   "basic_energy": [
+    {
+     "name": "Lightning Energy",
+     "qty": 26
+    }
+   ]
+  },
+  "ポケモンジム第2弾「タマムシシティジム エリカ」": {
+   "cards": [
+    {
+     "page": "1stgymd4001",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd4002",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd4003",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd4004",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4005",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd4006",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd4007",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd4008",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4009",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd4010",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4011",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd4012",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd4013",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4014",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4015",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd4016",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4017",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4018",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4019",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4020",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4027",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4021",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd4022",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4023",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4024",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4025",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4026",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd4028",
+     "qty": 1
+    }
+   ],
+   "basic_energy": [
+    {
+     "name": "Grass Energy",
+     "qty": 20
+    },
+    {
+     "name": "Psychic Energy",
+     "qty": 5
+    }
+   ]
+  },
+  "ポケモンジム第3弾「ヤマブキシティジム ナツメ」": {
+   "cards": [
+    {
+     "page": "1stgymd6001",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd6002",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd6003",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd6004",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6005",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd6006",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd6007",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd6008",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6009",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd6010",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6011",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd6012",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd6013",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd6014",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6015",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6016",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6017",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6018",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6019",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd6020",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6021",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6022",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6023",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6025",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd6024",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd6026",
+     "qty": 1
+    }
+   ],
+   "basic_energy": [
+    {
+     "name": "Psychic Energy",
+     "qty": 26
+    }
+   ]
+  },
+  "ポケモンジム第3弾「グレンタウンジム カツラ」": {
+   "cards": [
+    {
+     "page": "1stgymd5001",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd5003",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd5002",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd5004",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd5005",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd5006",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd5007",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd5008",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd5009",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd5010",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd5011",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd5012",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd5013",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd5014",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd5015",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd5016",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd5017",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd5018",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd5024",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd5019",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd5020",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd5021",
+     "qty": 2
+    },
+    {
+     "page": "1stgymd5022",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd5023",
+     "qty": 1
+    },
+    {
+     "page": "1stgymd5025",
+     "qty": 1
+    }
+   ],
+   "basic_energy": [
+    {
+     "name": "Fire Energy",
+     "qty": 27
+    }
+   ]
+  }
+ },
+ "quick_starter_gift": {
+  "red": {
+   "name": "赤デッキ",
+   "types": "水・雷・闘",
+   "cards": [
+    {
+     "page": "1stqsg013",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg014",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg015",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg016",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg017",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg018",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg019",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg057",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg020",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg021",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg022",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg023",
+     "qty": 2
+    },
+    {
+     "page": "1stqsg024",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg025",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg056",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg031",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg033",
+     "qty": 2
+    },
+    {
+     "page": "1stqsg034",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg035",
+     "qty": 2
+    },
+    {
+     "page": "1stqsg036",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg037",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg038",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg041",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg042",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg046",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg047",
+     "qty": 2
+    },
+    {
+     "page": "1stqsg048",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg051",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg058",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg053",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg049",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg052",
+     "qty": 1
+    }
+   ],
+   "basic_energy": [
+    {
+     "name": "水エネルギー",
+     "qty": 8
+    },
+    {
+     "name": "雷エネルギー",
+     "qty": 8
+    },
+    {
+     "name": "闘エネルギー",
+     "qty": 8
+    }
+   ]
+  },
+  "green": {
+   "name": "緑デッキ",
+   "types": "草・炎・超",
+   "cards": [
+    {
+     "page": "1stqsg001",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg002",
+     "qty": 2
+    },
+    {
+     "page": "1stqsg003",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg004",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg005",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg054",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg006",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg007",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg008",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg009",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg010",
+     "qty": 2
+    },
+    {
+     "page": "1stqsg011",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg012",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg055",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg026",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg027",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg028",
+     "qty": 2
+    },
+    {
+     "page": "1stqsg029",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg030",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg032",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg039",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg040",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg043",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg044",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg045",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg047",
+     "qty": 2
+    },
+    {
+     "page": "1stqsg048",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg050",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg051",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg058",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg053",
+     "qty": 1
+    },
+    {
+     "page": "1stqsg049",
+     "qty": 1
+    }
+   ],
+   "basic_energy": [
+    {
+     "name": "草エネルギー",
+     "qty": 8
+    },
+    {
+     "name": "炎エネルギー",
+     "qty": 8
+    },
+    {
+     "name": "超エネルギー",
+     "qty": 8
+    }
+   ]
+  }
  }
 }

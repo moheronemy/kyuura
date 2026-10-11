@@ -33607,7 +33607,18 @@
     }
    },
    "energy": null,
-   "jp_en_differences": [],
+   "jp_en_differences": [
+    {
+     "kind": "art",
+     "summary": "イラスト",
+     "ja": "カスミが裸で描かれている",
+     "en": "不適切とされ、カスミの涙が落ちるのをゼニガメが止めようとしているイラストに変更",
+     "confidence": "確実",
+     "sources": [
+      "X45"
+     ]
+    }
+   ],
    "notes": [],
    "source_ids": {
     "tcgdex": "PMCG5-069",
@@ -43112,7 +43123,18 @@
     }
    },
    "energy": null,
-   "jp_en_differences": [],
+   "jp_en_differences": [
+    {
+     "kind": "art",
+     "summary": "イラスト",
+     "ja": "ナツメがマスターボールを持つ手の中指が立っているように見える",
+     "en": "ナツメがモンスターボールを投げるイラストに変更",
+     "confidence": "確実",
+     "sources": [
+      "X45"
+     ]
+    }
+   ],
    "notes": [],
    "source_ids": {
     "tcgdex": "PMCG6-078",
@@ -43367,7 +43389,18 @@
     }
    },
    "energy": null,
-   "jp_en_differences": [],
+   "jp_en_differences": [
+    {
+     "kind": "art",
+     "summary": "イラスト",
+     "ja": "表卍（まんじ）が描かれている",
+     "en": "不適切とされ、別の記号に変更",
+     "confidence": "確実",
+     "sources": [
+      "X45"
+     ]
+    }
+   ],
    "notes": [
     "TCGdex・Scrydex 由来のデータ・ポケモンWiki とも、読点で区切る表記（区切りの文字は資料によって「,」「, 」と違う）"
    ],
@@ -52032,7 +52065,18 @@
     }
    },
    "energy": null,
-   "jp_en_differences": [],
+   "jp_en_differences": [
+    {
+     "kind": "art",
+     "summary": "イラスト",
+     "ja": "オタチがミルタンクの乳を飲んでいる",
+     "en": "不適切とされ、納屋に置かれたモーモーミルクの缶とピィのイラストに変更",
+     "confidence": "確実",
+     "sources": [
+      "X45"
+     ]
+    }
+   ],
    "notes": [],
    "source_ids": {
     "tcgdex": "neo1-077",

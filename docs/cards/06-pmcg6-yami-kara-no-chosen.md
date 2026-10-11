@@ -85,12 +85,12 @@
 | 75 | _____のラッキー | ポケモン | 無色 | たね | 90 | 特殊 | （英語版なし） | 英語版なし。ポケモンWiki ではシリーズ「闇からの挑戦」、レアリティ「◇」と記載。カード名の空欄の長さと配布方法は未確認 |
 | 76 | カツラのギャンブル | トレーナー |  |  |  | ● | Blaine's Gamble<br>Gym Heroes 121 ⚠ |  |
 | 77 | トラッシュ交換 | トレーナー |  |  |  | ● | Trash Exchange<br>Gym Heroes 126 ⚠ |  |
-| 78 | ナツメの眼 | トレーナー |  |  |  | ● | Sabrina's Gaze<br>Gym Heroes 125 ⚠ |  |
+| 78 | ナツメの眼 | トレーナー |  |  |  | ● | Sabrina's Gaze<br>Gym Heroes 125 ⚠ | 日英の違い: イラスト |
 | 79 | 見えない壁 | トレーナー |  |  |  | ● | Transparent Walls<br>Gym Challenge 125 |  |
 | 80 | ワープポイント | トレーナー |  |  |  | ● | Warp Point<br>Gym Challenge 126 |  |
 | 81 | カツラの奥の手 | トレーナー |  |  |  | ◆ | Blaine's Last Resort<br>Gym Heroes 105 ⚠ |  |
 | 82 | カツラのクイズ その3 | トレーナー |  |  |  | ◆ | Blaine's Quiz #3<br>Gym Challenge 112 |  |
-| 83 | キョウ秘伝,変わり身の術 | トレーナー |  |  |  | ◆ | Koga's Ninja Trick<br>Gym Challenge 115 | TCGdex・Scrydex 由来のデータ・ポケモンWiki とも、読点で区切る表記（区切りの文字は資料によって「,」「, 」と違う） |
+| 83 | キョウ秘伝,変わり身の術 | トレーナー |  |  |  | ◆ | Koga's Ninja Trick<br>Gym Challenge 115 | 日英の違い: イラスト<br>TCGdex・Scrydex 由来のデータ・ポケモンWiki とも、読点で区切る表記（区切りの文字は資料によって「,」「, 」と違う） |
 | 84 | くすぐりマシーン | トレーナー（ロケット団秘密メカ） |  |  |  | ◆ | Tickling Machine<br>Gym Heroes 119 ⚠ | 日英の違い: 英語版の分類表記の誤植 |
 | 85 | グレンタウンジム | トレーナー（スタジアム） |  |  |  | ◆ | Cinnabar City Gym<br>Gym Challenge 113 |  |
 | 86 | セキチクシティジム | トレーナー（スタジアム） |  |  |  | ◆ | Fuchsia City Gym<br>Gym Challenge 114 |  |
@@ -1274,6 +1274,7 @@ Gym Challenge にあって、日本版の本弾に収録されていないカー
 - 英語: Each player shuffles his or her hand into his or her deck and draws a new hand of the same number of cards.
 
 - 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%83%8A%E3%83%84%E3%83%A1%E3%81%AE%E7%9C%BC)
+- **日英の違い（イラスト、確度: 確実）** 日本版: ナツメがマスターボールを持つ手の中指が立っているように見える ／ 英語版: ナツメがモンスターボールを投げるイラストに変更
 
 ### 79. 見えない壁 / Transparent Walls
 
@@ -1332,6 +1333,7 @@ Gym Challenge にあって、日本版の本弾に収録されていないカー
 - 英語: Attach Koga's Ninja Trick to your Active Pokémon with Koga in its name. If this Pokémon goes to your Bench, discard this card. When your opponent attacks, you may switch this Pokémon with 1 of your Benched Pokémon (before damage or other effects of attacks).
 
 - 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%82%AD%E3%83%A7%E3%82%A6%E7%A7%98%E4%BC%9D,%E5%A4%89%E3%82%8F%E3%82%8A%E8%BA%AB%E3%81%AE%E8%A1%93)
+- **日英の違い（イラスト、確度: 確実）** 日本版: 表卍（まんじ）が描かれている ／ 英語版: 不適切とされ、別の記号に変更
 - 備考: TCGdex・Scrydex 由来のデータ・ポケモンWiki とも、読点で区切る表記（区切りの文字は資料によって「,」「, 」と違う）
 - 日本版の収録商品: 闇からの挑戦
 

@@ -844,30 +844,61 @@ def write_set_docs(records, en_only):
         lines += ['---', '', '凡例・出典は [カードリストの見かた](README.md) を参照。', '']
         (out / f'{slug}.md').write_text('\n'.join(lines), encoding='utf-8')
 
+    origins = jp_origins()
     lines = ['# 英語版のみに見られるカード（日本の拡張パック未収録）', '',
              '英語版（WotC）の各セットに収録されているが、日本の旧裏拡張パック 10 弾のどれにも対応カードが見つからないもの。',
-             '日本ではスターターデッキ・テーマデッキ・プロモなど拡張パック以外の商品で出たカードが多い（個別の初出は未調査）。',
-             '基本エネルギーは除外。', '']
+             '基本エネルギーは除外。', '',
+             '「日本での初出」は、拡張パック以外の商品（ジムデッキ、拡張シート、プレミアムファイル、プロモなど）の調査から、'
+             '同じカードが日本で最初に出た商品を付けたものです（[拡張パック以外の商品](other-products.md)）。', '']
     for s in ['base1', 'base2', 'base3', 'base5', 'gym1', 'gym2', 'neo1', 'neo2', 'neo3', 'neo4']:
         eo = sorted([c for c in en_only if c['_set'] == s], key=lambda c: num_key(c['number']))
         lines += [f'## {EN_SET_NAMES[s]}', '']
         if not eo:
             lines += ['（なし）', '']
             continue
-        lines += [f'{len(eo)} 枚', '']
-        lines += [f"- {c['number']} {c['name']}" for c in eo]
+        lines += [f'{len(eo)} 枚', '', '| 番号 | カード名 | 日本での初出 | 日本語名 |', '|---|---|---|---|']
+        for c in eo:
+            o = origins.get((s, c['number']))
+            first = f"{o[0][1]}（{o[0][0]}）" if o else '未確認'
+            lines.append(f"| {c['number']} | {c['name']} | {first} | {o[0][2] if o else ''} |")
         lines.append('')
     (out / 'english-only.md').write_text('\n'.join(lines), encoding='utf-8')
 
 
 DIFF_KIND_JA = {'text': '文面の意味', 'numbers': '数値', 'errata': 'エラッタ', 'placement': '収録先', 'print': '英語版の表記・誤植',
-                'wording': '書き方（意味は同じ）'}
+                'wording': '書き方（意味は同じ）', 'art': 'イラスト'}
+
+
+def jp_origins():
+    """英語版のカード (セット id, 番号) → 日本で同じカードが出た拡張パック以外の商品 [(日付, 商品名, 日本語名)]（日付順）。
+    data/curation/other_products.json の英語版の対応と、data/ja_text_pcgsearch.json のカードから作る。"""
+    cur_path, data_path = ROOT / 'data' / 'curation' / 'other_products.json', ROOT / 'data' / 'ja_text_pcgsearch.json'
+    if not (cur_path.exists() and data_path.exists()):
+        return {}
+    cur, data = load_json(cur_path), load_json(data_path)['products']
+    products = {p['pcg_title']: p for p in cur['products']}
+    promos = cur.get('promos', {})
+    def sig(c):  # 同じカードの判定（build_other_products.py と同じ考え方: 名前・HP・特殊能力名・ワザ名）
+        return (norm_name(c['name']).replace('ウィンディ', 'ウインディ'), c.get('hp'),
+                tuple(norm_name(x['name']) for x in c['powers']), tuple(norm_name(a['name']) for a in c['attacks']))
+    page_of, by_sig = {}, {}
+    for key, cards in data.items():
+        for c in cards:
+            page = c['url'].rsplit('/', 1)[-1][:-len('.php')]
+            date = (promos.get(page) or {}).get('date') or products[key].get('release_date') or '9999'
+            page_of[page] = c
+            by_sig.setdefault(sig(c), []).append((date, products[key]['name'], c['name']))
+    out = {}
+    for page, e in cur['en_prints'].items():
+        if page in page_of:
+            out.setdefault((e['set_id'], e['number']), set()).update(by_sig[sig(page_of[page])])
+    return {k: sorted(v) for k, v in out.items()}
 
 
 def write_card_differences(records):
     lines = ['# カードの日英の違い', '',
              '<!-- このファイルは scripts/build_cardlist.py が data/curation/card_differences.json から生成しています。直接編集しないでください。 -->', '',
-             '日本版と英語版（WotC 版）で、文面の意味・エラッタ・収録先・表記・書き方が違うと指摘されているカードの一覧です。',
+             '日本版と英語版（WotC 版）で、文面の意味・エラッタ・収録先・表記・書き方・イラストが違うと指摘されているカードの一覧です。',
              'ルールの違いは [日米のルールの違い](../rules/differences.md)、弾ごとの収録内容の違いは [収録内容・製品の違い](set-differences.md) を参照してください。', '',
              '- 英語版の文面は英語版カードデータ（pokemon-tcg-data）で確認したもの。日本版の文面は、なぞのばしょ [N1]・ポケモンWiki [N2] の転記で確認できたものは「」で引用し、それ以外は二次資料の説明によるものです。',
              '- 日英の文面を全カードで厳密に突き合わせたわけではありません。ここに挙げたのは、二次資料で指摘されたもの、特殊能力が使えなくなる状態の書き方を機械的に比べて見つかったもの、リーダーズスタジアムのワザ・特殊能力・トレーナーと、ポケモンWiki から取り込んだほかの弾のトレーナーの文面を読み比べて見つかったものです。',

@@ -76,7 +76,7 @@
 | 66 | エリカのハクリュー | ポケモン | 無色 | 1進化 | 80 | ★キラ | Erika's Dragonair<br>Gym Heroes 4 |  |
 | 67 | エネルギーサーキュレート | トレーナー |  |  |  | ● | Energy Flow<br>Gym Heroes 122 | 日英の違い: 手札にもどせるエネルギーの種類 |
 | 68 | カスミの勝負 | トレーナー |  |  |  | ● | Misty's Duel<br>Gym Heroes 123 |  |
-| 69 | カスミのなみだ | トレーナー |  |  |  | ● | Misty's Tears<br>Gym Challenge 118 ⚠ |  |
+| 69 | カスミのなみだ | トレーナー |  |  |  | ● | Misty's Tears<br>Gym Challenge 118 ⚠ | 日英の違い: イラスト |
 | 70 | せまいジム | トレーナー（スタジアム） |  |  |  | ● | Narrow Gym<br>Gym Heroes 124 |  |
 | 71 | 思い出させる | トレーナー |  |  |  | ◆ | Recall<br>Gym Heroes 116 |  |
 | 72 | エリカのお付き | トレーナー |  |  |  | ◆ | Erika's Maids<br>Gym Heroes 109 |  |
@@ -1159,6 +1159,7 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 - 英語: Discard 1 of the other cards in your hand in order to search your deck for up to 2 Water Energy cards. Show those cards to your opponent, then put them into your hand. Shuffle your deck afterward.
 
 - 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%81%AA%E3%81%BF%E3%81%A0)
+- **日英の違い（イラスト、確度: 確実）** 日本版: カスミが裸で描かれている ／ 英語版: 不適切とされ、カスミの涙が落ちるのをゼニガメが止めようとしているイラストに変更
 
 ### 70. せまいジム / Narrow Gym
 

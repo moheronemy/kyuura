@@ -1,5 +1,5 @@
 {
- "_comment": "日本版と英語版で違いが指摘されているカード。キーはカード id（TCGdex の日本版 id）。kind: text=文面の意味の違い, numbers=数値の違い, errata=後年のエラッタの違い, placement=収録先の違い, print=英語版の表記・誤植, wording=書き方の違い（意味は同じ）。sources の記号は docs/sources.md を参照。",
+ "_comment": "日本版と英語版で違いが指摘されているカード。キーはカード id（TCGdex の日本版 id）。kind: text=文面の意味の違い, numbers=数値の違い, errata=後年のエラッタの違い, placement=収録先の違い, print=英語版の表記・誤植, wording=書き方の違い（意味は同じ）, art=イラストの違い。sources の記号は docs/sources.md を参照。",
  "PMCG1-021": [
   {
    "kind": "text",
@@ -161,6 +161,18 @@
    ]
   }
  ],
+ "PMCG5-069": [
+  {
+   "kind": "art",
+   "summary": "イラスト",
+   "ja": "カスミが裸で描かれている",
+   "en": "不適切とされ、カスミの涙が落ちるのをゼニガメが止めようとしているイラストに変更",
+   "confidence": "確実",
+   "sources": [
+    "X45"
+   ]
+  }
+ ],
  "PMCG5-074": [
   {
    "kind": "text",
@@ -183,6 +195,30 @@
    "sources": [
     "N2",
     "X38"
+   ]
+  }
+ ],
+ "PMCG6-078": [
+  {
+   "kind": "art",
+   "summary": "イラスト",
+   "ja": "ナツメがマスターボールを持つ手の中指が立っているように見える",
+   "en": "ナツメがモンスターボールを投げるイラストに変更",
+   "confidence": "確実",
+   "sources": [
+    "X45"
+   ]
+  }
+ ],
+ "PMCG6-083": [
+  {
+   "kind": "art",
+   "summary": "イラスト",
+   "ja": "表卍（まんじ）が描かれている",
+   "en": "不適切とされ、別の記号に変更",
+   "confidence": "確実",
+   "sources": [
+    "X45"
    ]
   }
  ],
@@ -236,6 +272,18 @@
    "sources": [
     "N1",
     "S1"
+   ]
+  }
+ ],
+ "neo1-077": [
+  {
+   "kind": "art",
+   "summary": "イラスト",
+   "ja": "オタチがミルタンクの乳を飲んでいる",
+   "en": "不適切とされ、納屋に置かれたモーモーミルクの缶とピィのイラストに変更",
+   "confidence": "確実",
+   "sources": [
+    "X45"
    ]
   }
  ],

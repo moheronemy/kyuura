@@ -84,7 +84,7 @@
 | 74 | すごいつりざお | トレーナー |  |  |  | ● | Super Rod<br>Neo Genesis 103 |  |
 | 75 | ポケモンぎゃくしめい | トレーナー |  |  |  | ● | Double Gust<br>Neo Genesis 100 |  |
 | 76 | ポケモンマーチ | トレーナー |  |  |  | ● | Pokémon March<br>Neo Genesis 102 |  |
-| 77 | モーモーミルク | トレーナー |  |  |  | ● | Moo-Moo Milk<br>Neo Genesis 101 |  |
+| 77 | モーモーミルク | トレーナー |  |  |  | ● | Moo-Moo Milk<br>Neo Genesis 101 | 日英の違い: イラスト |
 | 78 | ウツギはかせ | トレーナー |  |  |  | ◆ | Professor Elm<br>Neo Genesis 96 |  |
 | 79 | おうごんのみ | トレーナー（ポケモンのどうぐ） |  |  |  | ◆ | Gold Berry<br>Neo Genesis 93 |  |
 | 80 | カードめくりゲーム | トレーナー（Goldenrod Game Corner） |  |  |  | ◆ | Card-Flip Game<br>Neo Genesis 92 |  |
@@ -1232,6 +1232,7 @@ Neo Genesis にあって、日本版の本弾に収録されていないカー�
 - 英語: Choose 1 of your Pokémon. Flip 2 coins. Remove 2 damage counters times the number of heads from that Pokémon. If the Pokémon has fewer damage counters than that, remove all of them.
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo01-077-momomilk/)
+- **日英の違い（イラスト、確度: 確実）** 日本版: オタチがミルタンクの乳を飲んでいる ／ 英語版: 不適切とされ、納屋に置かれたモーモーミルクの缶とピィのイラストに変更
 - 日本版の収録商品: 金、銀、新世界へ...、スターターパック
 
 ### 78. ウツギはかせ / Professor Elm

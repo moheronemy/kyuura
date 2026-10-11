@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """ポケモンカード 旧シリーズ検索（pcg-search.com）から、拡張パック以外の旧裏の商品のカードを取り出す。
 
+対象: 拡張シート第1〜3弾、映画公開記念パック「サザンアイランド」、ポケモンジムの構築済みデッキ 6 種、
+クイックスターターギフト、neo プレミアムファイル 1〜3、旧裏期と neo 期のプロモ。
+
   fetch   カードリストのページと、対象の商品のカード個別ページを取得してキャッシュに保存する
-          （robots.txt はなし。2 秒間隔で 1 件ずつ取得し、接続が切れたら間をあけて再試行）
+          （robots.txt はなし。2 秒間隔で 1 件ずつ取得し、接続が切れたら間をあけて再試行。約 520 ページ）
   extract キャッシュした HTML からカードの欄を取り出し、JSON に書き出す
 
 使い方:
@@ -24,12 +27,25 @@ from pathlib import Path
 
 BASE = 'https://pcg-search.com'
 LIST_PAGE = '/card/card_list.php'
-# 取り込む商品（カードリストの見出しの表記）
+# 取り込む商品。(カードリストの見出しの表記, カードページのディレクトリ, 出力でのキー)。
+# 「プロモ」のように同じ見出しが複数あるので、カードページのディレクトリで区別する
 PRODUCTS = [
-    '拡張シート 第1弾(青版)',
-    '拡張シート 第2弾(赤版)',
-    '拡張シート 第3弾(緑版)',
-    '映画公開記念パック「サザンアイランド」',
+    ('拡張シート 第1弾(青版)', '/card/1st/', '拡張シート 第1弾(青版)'),
+    ('拡張シート 第2弾(赤版)', '/card/1st/', '拡張シート 第2弾(赤版)'),
+    ('拡張シート 第3弾(緑版)', '/card/1st/', '拡張シート 第3弾(緑版)'),
+    ('映画公開記念パック「サザンアイランド」', '/card/1st/', '映画公開記念パック「サザンアイランド」'),
+    ('ポケモンジム第1弾「ニビシティジム タケシ」', '/card/1st/', 'ポケモンジム第1弾「ニビシティジム タケシ」'),
+    ('ポケモンジム第1弾「ハナダシティジム カスミ」', '/card/1st/', 'ポケモンジム第1弾「ハナダシティジム カスミ」'),
+    ('ポケモンジム第2弾「クチバシティジム マチス」', '/card/1st/', 'ポケモンジム第2弾「クチバシティジム マチス」'),
+    ('ポケモンジム第2弾「タマムシシティジム エリカ」', '/card/1st/', 'ポケモンジム第2弾「タマムシシティジム エリカ」'),
+    ('ポケモンジム第3弾「グレンタウンジム カツラ」', '/card/1st/', 'ポケモンジム第3弾「グレンタウンジム カツラ」'),
+    ('ポケモンジム第3弾「ヤマブキシティジム ナツメ」', '/card/1st/', 'ポケモンジム第3弾「ヤマブキシティジム ナツメ」'),
+    ('クイックスターターギフト', '/card/1st/', 'クイックスターターギフト'),
+    ('プロモ', '/card/1st/', 'プロモ(旧裏)'),
+    ('プレミアムファイル', '/card/neo/', 'プレミアムファイル'),
+    ('プレミアムファイル2', '/card/neo/', 'プレミアムファイル2'),
+    ('プレミアムファイル3', '/card/neo/', 'プレミアムファイル3'),
+    ('プロモ', '/card/neo/', 'プロモ(neo)'),
 ]
 UA = 'Mozilla/5.0 (compatible; kyuura-docs/1.0; +https://github.com/moheronemy/kyuura)'
 DELAY = 2.0
@@ -69,14 +85,22 @@ def sections(list_html):
     return out
 
 
+def selected(list_html):
+    """取り込む商品の [(出力でのキー, 行)]。"""
+    out = []
+    for title, rows in sections(list_html):
+        for t, d, key in PRODUCTS:
+            if t == title and rows and rows[0][1].startswith(d):
+                out.append((key, rows))
+    return out
+
+
 def fetch(cache):
     cache.mkdir(parents=True, exist_ok=True)
     list_file = cache / cache_name(LIST_PAGE + '.html')
     if not list_file.exists():
         list_file.write_text(get(BASE + LIST_PAGE), encoding='utf-8')
-    for title, rows in sections(list_file.read_text(encoding='utf-8')):
-        if title not in PRODUCTS:
-            continue
+    for _, rows in selected(list_file.read_text(encoding='utf-8')):
         for _, link in rows:
             f = cache / cache_name(link + '.html')
             if f.exists():
@@ -139,15 +163,13 @@ def extract(cache, out):
               'note': 'ポケモンカード 旧シリーズ検索（pcg-search.com）のカードページから scripts/pcg_search.py で抽出。'
                       'list_number はサイトの並び順で、カードに印刷された番号ではない。',
               'products': {}}
-    for title, rows in sections((cache / cache_name(LIST_PAGE + '.html')).read_text(encoding='utf-8')):
-        if title not in PRODUCTS:
-            continue
+    for key, rows in selected((cache / cache_name(LIST_PAGE + '.html')).read_text(encoding='utf-8')):
         cards = []
         for cells, link in rows:
             card = {'list_number': cells[0], 'url': BASE + link}
             card.update(parse_card((cache / cache_name(link + '.html')).read_text(encoding='utf-8')))
             cards.append(card)
-        result['products'][title] = cards
+        result['products'][key] = cards
     out.write_text(json.dumps(result, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     print({k: len(v) for k, v in result['products'].items()}, file=sys.stderr)
 
