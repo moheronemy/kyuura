@@ -13,9 +13,9 @@
   "attacks": [
    {
     "name": "Feint Attack",
-    "text": "Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers or any other effects on the Defending Pokémon."
+    "text": "Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
    }
   ],
-  "reason": "Umbreon（Neo Discovery 13）の Feint Attack はデータ上効果文が空だが、実際のカードには効果文がある。文面は TCGdex（cards-database）の英語データによる。Bulbapedia の記載、日本版のだましうちの効果文（なぞのばしょ）とも内容が一致"
+  "reason": "Umbreon（Neo Discovery 13）の Feint Attack はデータ上効果文が空だが、実際のカードには効果文がある。文面は Bulbapedia「Umbreon (Neo Discovery 13)」による（TCGdex の英語データとも読点の有無を除き一致）。日本版のだましうちの効果文（なぞのばしょ）とも内容が一致"
  }
 }

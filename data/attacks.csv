@@ -776,7 +776,7 @@ neo2-038,2,トリプルキック,Triple Kick,fighting fighting fighting,3,30,×,
 neo2-039,1,かみつく,Bite,colorless,1,10,,10,,
 neo2-039,2,ごうだつ,Plunder,darkness colorless,2,20,,20,ダメージを与える前に、相手についている「トレーナーカード」をすべてトラッシュする。,"Before doing damage, discard all Trainer cards attached to the Defending Pokémon (before they affect the damage)."
 neo2-040,1,かみつく,Bite,colorless colorless,2,20,,20,,
-neo2-040,2,だましうち,Feint Attack,darkness darkness colorless,3,,,,相手の場のポケモンを1匹選び、そのポケモンに、「弱点・抵抗力・特殊能力・その他の効果」に関係なく、30ダメージ。,"Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers or any other effects on the Defending Pokémon."
+neo2-040,2,だましうち,Feint Attack,darkness darkness colorless,3,,,,相手の場のポケモンを1匹選び、そのポケモンに、「弱点・抵抗力・特殊能力・その他の効果」に関係なく、30ダメージ。,"Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
 neo2-041,1,かみくだく,Crunch,darkness colorless colorless,3,30,,30,次の相手の番と、次の自分の番、このワザを受けた相手が、ワザによるダメージを受けるとき、そのダメージは「+20」される。,"Until the end of your next turn, if an attack damages the Defending Pokémon (after applying Weakness and Resistance), that attack does 20 more damage to the Defending Pokémon."
 neo2-041,2,かえんほうしゃ,Flamethrower,fire fire colorless,3,50,,50,自分についている「炎」エネルギーカードを1枚トラッシュする。トラッシュできないとき、このワザのダメージはなくなる。,Discard 1 Fire Energy card attached to Houndoom or this attack does nothing.
 neo2-042,1,たたきつける,Slam,colorless colorless colorless,3,30,×,30×,コインを2枚投げ、「おもて」の数×30のダメージ。,Flip 2 coins. This attack does 30 damage times the number of heads.

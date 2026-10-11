@@ -8,7 +8,8 @@
    "sources": [
     "X30",
     "X39",
-    "X40"
+    "X40",
+    "X44"
    ]
   },
   {
@@ -18,7 +19,8 @@
    "sources": [
     "X30",
     "X39",
-    "X40"
+    "X40",
+    "X44"
    ]
   },
   {
@@ -28,7 +30,8 @@
    "sources": [
     "X30",
     "X39",
-    "X40"
+    "X40",
+    "X44"
    ]
   },
   {
@@ -37,7 +40,8 @@
    "release_date": "1999-07-17",
    "sources": [
     "J24",
-    "X31"
+    "X31",
+    "X44"
    ]
   }
  ],
@@ -156,7 +160,8 @@
    "number": "27",
    "name": "Pikachu",
    "released": "2000-11-14",
-   "distribution": "英語版『ルギア爆誕』（Pokémon the Movie 2000: The Power of One）の VHS・DVD に付属"
+   "distribution": "英語版『ルギア爆誕』（The Power of One）の VHS・DVD に付属",
+   "note": "日本では青版のシート 6。日本ではクイックスターターギフトの赤デッキに光沢なしで再録"
   },
   "1stex3012": {
    "set_id": "basep",
@@ -164,7 +169,8 @@
    "number": "44",
    "name": "Magmar",
    "released": "2002-03",
-   "distribution": "ポケモンリーグで配布"
+   "distribution": "ポケモンリーグで配布",
+   "note": "日本では緑版のシート 5。日本ではクイックスターターギフトの緑デッキに再録"
   },
   "1stex3008": {
    "set_id": "basep",
@@ -172,7 +178,8 @@
    "number": "45",
    "name": "Scyther",
    "released": "2002-04",
-   "distribution": "ポケモンリーグで配布"
+   "distribution": "ポケモンリーグで配布",
+   "note": "日本では緑版のシート 7。日本ではクイックスターターギフトの緑デッキにキラで再録"
   },
   "1stex2017": {
    "set_id": "basep",
@@ -180,7 +187,8 @@
    "number": "46",
    "name": "Electabuzz",
    "released": "2002-05",
-   "distribution": "ポケモンリーグで配布"
+   "distribution": "ポケモンリーグで配布",
+   "note": "日本では赤版のシート 5・6"
   },
   "1stex2012": {
    "set_id": "basep",
@@ -188,7 +196,8 @@
    "number": "48",
    "name": "Articuno",
    "released": "2002-07",
-   "distribution": "ポケモンリーグで配布"
+   "distribution": "ポケモンリーグで配布",
+   "note": "日本では赤版のシート 9。日本ではクイックスターターギフトの赤デッキにキラで再録"
   },
   "1stex1034": {
    "set_id": "basep",
@@ -196,7 +205,8 @@
    "number": "49",
    "name": "Snorlax",
    "released": "2002-08",
-   "distribution": "ポケモンリーグで配布"
+   "distribution": "ポケモンリーグで配布",
+   "note": "日本では青版のシート 16（コロコロのイラストコンテスト入賞作。入賞者に 20 枚が先に贈られた）。英語版は WotC のイラストコンテストで選ばれた別のイラスト。日本ではクイックスターターギフトの赤デッキに再録"
   }
  },
  "differences": {
@@ -224,6 +234,597 @@
     "sources": [
      "N1",
      "N3"
+    ]
+   }
+  ],
+  "1stex2012": [
+   {
+    "kind": "text",
+    "summary": "ポケモンパワー オーロラヴェール（Aurora Veil）が働かなくなる状態",
+    "ja": "「このカードが『ねむり・マヒ・こんらん』状態の時、この力は消える」",
+    "en": "「This power cannot be used if Articuno is affected by a Special Condition.」と、どく・やけども含む特殊状態すべて",
+    "confidence": "確実",
+    "sources": [
+     "N3",
+     "X41"
+    ]
+   }
+  ],
+  "1stex1034": [
+   {
+    "kind": "text",
+    "summary": "ポケモンパワー とおせんぼ（Guard）が働かなくなる状態",
+    "ja": "「このカードが『ねむり・マヒ・こんらん』状態の時、この力は消える」（pcg-search の転記は「このカは消える」）",
+    "en": "「This power stops working when Snorlax is affected by a Special Condition.」と、どく・やけども含む特殊状態すべて",
+    "confidence": "有力",
+    "sources": [
+     "N3"
+    ]
+   }
+  ]
+ },
+ "sheets": {
+  "拡張シート 第1弾(青版)": [
+   {
+    "sheet": 1,
+    "area_en": "Professor Oak's Laboratory",
+    "area_ja": "オーキド研究所",
+    "cards": [
+     "1stex1025",
+     "1stex1015",
+     "1stex1016"
+    ]
+   },
+   {
+    "sheet": 2,
+    "area_en": "Professor Oak's Laboratory",
+    "area_ja": "オーキド研究所",
+    "cards": [
+     "1stex1024",
+     "1stex1013",
+     "1stex1016"
+    ]
+   },
+   {
+    "sheet": 3,
+    "area_en": "Professor Oak's Laboratory",
+    "area_ja": "オーキド研究所",
+    "cards": [
+     "1stex1025",
+     "1stex1001",
+     "1stex1024"
+    ]
+   },
+   {
+    "sheet": 4,
+    "area_en": "Viridian Forest",
+    "area_ja": "トキワのもり",
+    "cards": [
+     "1stex1002",
+     "1stex1003",
+     "1stex1005"
+    ]
+   },
+   {
+    "sheet": 5,
+    "area_en": "Viridian Forest",
+    "area_ja": "トキワのもり",
+    "cards": [
+     "1stex1004",
+     "1stex1021",
+     "1stex1005"
+    ]
+   },
+   {
+    "sheet": 6,
+    "area_en": "Viridian Forest",
+    "area_ja": "トキワのもり",
+    "cards": [
+     "1stex1004",
+     "1stex1019",
+     "1stex1002"
+    ]
+   },
+   {
+    "sheet": 7,
+    "area_en": "Mt. Moon",
+    "area_ja": "おつきみやま",
+    "cards": [
+     "1stex1023",
+     "1stex1026",
+     "1stex1008"
+    ]
+   },
+   {
+    "sheet": 8,
+    "area_en": "Mt. Moon",
+    "area_ja": "おつきみやま",
+    "cards": [
+     "1stex1023",
+     "1stex1035",
+     "1stex1010"
+    ]
+   },
+   {
+    "sheet": 9,
+    "area_en": "Mt. Moon",
+    "area_ja": "おつきみやま",
+    "cards": [
+     "1stex1008",
+     "1stex1036",
+     "1stex1010"
+    ]
+   },
+   {
+    "sheet": 10,
+    "area_en": "Kanto Safari Zone",
+    "area_ja": "サファリゾーン",
+    "cards": [
+     "1stex1012",
+     "1stex1028",
+     "1stex1007"
+    ]
+   },
+   {
+    "sheet": 11,
+    "area_en": "Kanto Safari Zone",
+    "area_ja": "サファリゾーン",
+    "cards": [
+     "1stex1006",
+     "1stex1028",
+     "1stex1030"
+    ]
+   },
+   {
+    "sheet": 12,
+    "area_en": "Kanto Safari Zone",
+    "area_ja": "サファリゾーン",
+    "cards": [
+     "1stex1031",
+     "1stex1006",
+     "1stex1007"
+    ]
+   },
+   {
+    "sheet": 13,
+    "area_en": "Cerulean Cave",
+    "area_ja": "ハナダのどうくつ",
+    "cards": [
+     "1stex1014",
+     "1stex1009",
+     "1stex1029"
+    ]
+   },
+   {
+    "sheet": 14,
+    "area_en": "Cerulean Cave",
+    "area_ja": "ハナダのどうくつ",
+    "cards": [
+     "1stex1011",
+     "1stex1009",
+     "1stex1027"
+    ]
+   },
+   {
+    "sheet": 15,
+    "area_en": "Cerulean Cave",
+    "area_ja": "ハナダのどうくつ",
+    "cards": [
+     "1stex1011",
+     "1stex1022",
+     "1stex1029"
+    ]
+   },
+   {
+    "sheet": 16,
+    "area_en": "Celadon City",
+    "area_ja": "タマムシシティ",
+    "cards": [
+     "1stex1034",
+     "1stex1020",
+     "1stex1032"
+    ]
+   },
+   {
+    "sheet": 17,
+    "area_en": "Celadon City",
+    "area_ja": "タマムシシティ",
+    "cards": [
+     "1stex1020",
+     "1stex1033",
+     "1stex1017"
+    ]
+   },
+   {
+    "sheet": 18,
+    "area_en": "Celadon City",
+    "area_ja": "タマムシシティ",
+    "cards": [
+     "1stex1032",
+     "1stex1018",
+     "1stex1033"
+    ]
+   }
+  ],
+  "拡張シート 第2弾(赤版)": [
+   {
+    "sheet": 1,
+    "area_en": "Rock Tunnel",
+    "area_ja": "イワヤマトンネル",
+    "cards": [
+     "1stex2024",
+     "1stex2020",
+     "1stex2030"
+    ]
+   },
+   {
+    "sheet": 2,
+    "area_en": "Rock Tunnel",
+    "area_ja": "イワヤマトンネル",
+    "cards": [
+     "1stex2030",
+     "1stex2021",
+     "1stex2035"
+    ]
+   },
+   {
+    "sheet": 3,
+    "area_en": "Rock Tunnel",
+    "area_ja": "イワヤマトンネル",
+    "cards": [
+     "1stex2020",
+     "1stex2032",
+     "1stex2021"
+    ]
+   },
+   {
+    "sheet": 4,
+    "area_en": "Kanto Power Plant",
+    "area_ja": "むじんはつでんしょ",
+    "cards": [
+     "1stex2014",
+     "1stex2016",
+     "1stex2015"
+    ]
+   },
+   {
+    "sheet": 5,
+    "area_en": "Kanto Power Plant",
+    "area_ja": "むじんはつでんしょ",
+    "cards": [
+     "1stex2017",
+     "1stex2018",
+     "1stex2014"
+    ]
+   },
+   {
+    "sheet": 6,
+    "area_en": "Kanto Power Plant",
+    "area_ja": "むじんはつでんしょ",
+    "cards": [
+     "1stex2013",
+     "1stex2016",
+     "1stex2017"
+    ]
+   },
+   {
+    "sheet": 7,
+    "area_en": "Seafoam Islands",
+    "area_ja": "ふたごじま",
+    "cards": [
+     "1stex2006",
+     "1stex2007",
+     "1stex2008"
+    ]
+   },
+   {
+    "sheet": 8,
+    "area_en": "Seafoam Islands",
+    "area_ja": "ふたごじま",
+    "cards": [
+     "1stex2019",
+     "1stex2008",
+     "1stex2009"
+    ]
+   },
+   {
+    "sheet": 9,
+    "area_en": "Seafoam Islands",
+    "area_ja": "ふたごじま",
+    "cards": [
+     "1stex2006",
+     "1stex2012",
+     "1stex2009"
+    ]
+   },
+   {
+    "sheet": 10,
+    "area_en": "Victory Road (Kanto)",
+    "area_ja": "チャンピオンロード",
+    "cards": [
+     "1stex2023",
+     "1stex2001",
+     "1stex2031"
+    ]
+   },
+   {
+    "sheet": 11,
+    "area_en": "Victory Road (Kanto)",
+    "area_ja": "チャンピオンロード",
+    "cards": [
+     "1stex2031",
+     "1stex2025",
+     "1stex2022"
+    ]
+   },
+   {
+    "sheet": 12,
+    "area_en": "Victory Road (Kanto)",
+    "area_ja": "チャンピオンロード",
+    "cards": [
+     "1stex2001",
+     "1stex2022",
+     "1stex2005"
+    ]
+   },
+   {
+    "sheet": 13,
+    "area_en": "Saffron City",
+    "area_ja": "ヤマブキシティ",
+    "cards": [
+     "1stex2033",
+     "1stex2026",
+     "1stex2010"
+    ]
+   },
+   {
+    "sheet": 14,
+    "area_en": "Saffron City",
+    "area_ja": "ヤマブキシティ",
+    "cards": [
+     "1stex2034",
+     "1stex2010",
+     "1stex2027"
+    ]
+   },
+   {
+    "sheet": 15,
+    "area_en": "Saffron City",
+    "area_ja": "ヤマブキシティ",
+    "cards": [
+     "1stex2036",
+     "1stex2033",
+     "1stex2034"
+    ]
+   },
+   {
+    "sheet": 16,
+    "area_en": "Cinnabar Island",
+    "area_ja": "グレンじま",
+    "cards": [
+     "1stex2002",
+     "1stex2004",
+     "1stex2029"
+    ]
+   },
+   {
+    "sheet": 17,
+    "area_en": "Cinnabar Island",
+    "area_ja": "グレンじま",
+    "cards": [
+     "1stex2028",
+     "1stex2002",
+     "1stex2003"
+    ]
+   },
+   {
+    "sheet": 18,
+    "area_en": "Cinnabar Island",
+    "area_ja": "グレンじま",
+    "cards": [
+     "1stex2003",
+     "1stex2011",
+     "1stex2004"
+    ]
+   }
+  ],
+  "拡張シート 第3弾(緑版)": [
+   {
+    "sheet": 1,
+    "area_en": "Lavender Town",
+    "area_ja": "シオンタウン",
+    "cards": [
+     "1stex3030",
+     "1stex3042",
+     "1stex3036",
+     "1stex3005"
+    ]
+   },
+   {
+    "sheet": 2,
+    "area_en": "Lavender Town",
+    "area_ja": "シオンタウン",
+    "cards": [
+     "1stex3022",
+     "1stex3047",
+     "1stex3006",
+     "1stex3030"
+    ]
+   },
+   {
+    "sheet": 3,
+    "area_en": "Lavender Town",
+    "area_ja": "シオンタウン",
+    "cards": [
+     "1stex3024",
+     "1stex3037",
+     "1stex3005",
+     "1stex3022"
+    ]
+   },
+   {
+    "sheet": 4,
+    "area_en": "Cinnabar Island",
+    "area_ja": "グレンじま",
+    "cards": [
+     "1stex3010",
+     "name:イマクニ？のコーナー",
+     "1stex3011",
+     "1stex3032"
+    ]
+   },
+   {
+    "sheet": 5,
+    "area_en": "Cinnabar Island",
+    "area_ja": "グレンじま",
+    "cards": [
+     "1stex3012",
+     "1stex3038",
+     "1stex3009",
+     "1stex3011"
+    ]
+   },
+   {
+    "sheet": 6,
+    "area_en": "Cinnabar Island",
+    "area_ja": "グレンじま",
+    "cards": [
+     "1stex3007",
+     "1stex3043",
+     "1stex3009",
+     "1stex3010"
+    ]
+   },
+   {
+    "sheet": 7,
+    "area_en": "Kanto Safari Zone",
+    "area_ja": "サファリゾーン",
+    "cards": [
+     "1stex3008",
+     "1stex3039",
+     "1stex3033",
+     "1stex3034"
+    ]
+   },
+   {
+    "sheet": 8,
+    "area_en": "Kanto Safari Zone",
+    "area_ja": "サファリゾーン",
+    "cards": [
+     "1stex3004",
+     "1stex3044",
+     "1stex3033",
+     "1stex3002"
+    ]
+   },
+   {
+    "sheet": 9,
+    "area_en": "Kanto Safari Zone",
+    "area_ja": "サファリゾーン",
+    "cards": [
+     "1stex3034",
+     "1stex3048",
+     "1stex3003",
+     "1stex3004"
+    ]
+   },
+   {
+    "sheet": 10,
+    "area_en": "Seafoam Islands",
+    "area_ja": "ふたごじま",
+    "cards": [
+     "1stex3017",
+     "1stex3045",
+     "1stex3014",
+     "1stex3015"
+    ]
+   },
+   {
+    "sheet": 11,
+    "area_en": "Seafoam Islands",
+    "area_ja": "ふたごじま",
+    "cards": [
+     "1stex3013",
+     "1stex3040",
+     "1stex3017",
+     "1stex3021"
+    ]
+   },
+   {
+    "sheet": 12,
+    "area_en": "Seafoam Islands",
+    "area_ja": "ふたごじま",
+    "cards": [
+     "1stex3015",
+     "1stex3052",
+     "1stex3021",
+     "1stex3016"
+    ]
+   },
+   {
+    "sheet": 13,
+    "area_en": "Cerulean Cave",
+    "area_ja": "ハナダのどうくつ",
+    "cards": [
+     "1stex3026",
+     "1stex3041",
+     "1stex3001",
+     "1stex3020"
+    ]
+   },
+   {
+    "sheet": 14,
+    "area_en": "Cerulean Cave",
+    "area_ja": "ハナダのどうくつ",
+    "cards": [
+     "1stex3020",
+     "1stex3046",
+     "1stex3025",
+     "1stex3027"
+    ]
+   },
+   {
+    "sheet": 15,
+    "area_en": "Cerulean Cave",
+    "area_ja": "ハナダのどうくつ",
+    "cards": [
+     "1stex3027",
+     "name:Pokémon Machine",
+     "1stex3031",
+     "1stex3026"
+    ]
+   },
+   {
+    "sheet": 16,
+    "area_en": "Sea Cottage",
+    "area_ja": "みさきのこや",
+    "cards": [
+     "1stex3035",
+     "1stex3053",
+     "1stex3019",
+     "1stex3028"
+    ]
+   },
+   {
+    "sheet": 17,
+    "area_en": "Sea Cottage",
+    "area_ja": "みさきのこや",
+    "cards": [
+     "1stex3029",
+     "1stex3053",
+     "1stex3018",
+     "1stex3035"
+    ]
+   },
+   {
+    "sheet": 18,
+    "area_en": "Sea Cottage",
+    "area_ja": "みさきのこや",
+    "cards": [
+     "1stex3029",
+     "name:ハズレ？",
+     "1stex3023",
+     "1stex3028"
     ]
    }
   ]

@@ -3,7 +3,8 @@
 ## 調べ方について
 
 - ルール関係の文書は、ウェブ検索の結果（検索エンジンが返す要約と抜粋）をもとに書いています。
-- 作成環境のネットワーク制限のため、下記のページはどれも直接開いて読めていません。内容は検索結果の要約で確かめたものです。
+- 作成環境のネットワーク制限のため、下記のページの多くは直接開いて読めていません。内容は検索結果の要約で確かめたものです。
+  - 例外: Bulbapedia の X30、X31、X37、X38、X41〜X44 は、2026年10月に MediaWiki の API でページの原文（ウィキテキスト）を取得して確かめました。
   - 引用の文言が原文と一字一句同じとは限りません。
   - 要約の取り違えが含まれている可能性もあります。
 - 公開・引用の前に、各ページを開いて確認してください。特に、旧裏 wiki「当時のルール」[J1] と、WotC の Advanced Rulebook [E4][E5] を優先してください。
@@ -95,8 +96,10 @@
 | X38 | Bulbapedia「Koga's Ditto (Gym Challenge 10)」 | https://bulbapedia.bulbagarden.net/wiki/Koga%27s_Ditto_(Gym_Challenge_10) |
 | X39 | Serebii「Vending Machine Series」（拡張シートの価格・構成） | https://serebii.net/card/vendingmachineset2 |
 | X40 | Pokumon「Vending Machine Sheet 1〜3」（拡張シートの発売日・シートの構成・正式名） | https://pokumon.com/vending-machine-sheet-1/ |
-| X41 | Bulbapedia「Wizards Black Star Promos (TCG)」「Pikachu (Wizards Promo 27)」、WikiDex の各プロモのページ（拡張シートのカードの英語版） | https://bulbapedia.bulbagarden.net/wiki/Wizards_Black_Star_Promos_(TCG) 、 https://bulbapedia.bulbagarden.net/wiki/Pikachu_(Wizards_Promo_27) |
+| X41 | Bulbapedia の Wizards Black Star Promos 各カードのページ（Pikachu 27、Magmar 44、Scyther 45、Electabuzz 46、Articuno 48、Snorlax 49。日本での初出のシート・英語版の配布・日英の違い） | https://bulbapedia.bulbagarden.net/wiki/Pikachu_(Wizards_Promo_27) ほか |
 | X42 | Bulbapedia「Tentacruel (Southern Islands 10)」（どくばりの日英の違い） | https://bulbapedia.bulbagarden.net/wiki/Tentacruel_(Southern_Islands_10) |
+| X43 | Bulbapedia の拡張シートのシート構成（Template:ExpansionSheet/Series1〜3）と各カードのページ（Bill's PC、Imakuni?'s Corner、Lose?、Pokémon Machine、Fossil Excavation、Kadabra・Haunter (Vending S3)） | https://bulbapedia.bulbagarden.net/wiki/Template:ExpansionSheet/Series1 ほか |
+| X44 | Bulbapedia「List of Japanese Pokémon Trading Card Game expansions」（日本の弾と商品の発売日・枚数） | https://bulbapedia.bulbagarden.net/wiki/List_of_Japanese_Pok%C3%A9mon_Trading_Card_Game_expansions |
 
 ## カードテキストの出典
 
@@ -171,7 +174,8 @@
 - 取得方法:
   - 旧裏 wiki（wikiwiki.jp）とポケモンWiki は、Cloudflare の自動アクセス防止で作成環境から取得できませんでした。回避はしていません。
   - ポケモンWiki のページは、ユーザーがブラウザで保存したもの（`data/raw/`）を使っています。
-  - Bulbapedia と Pokumon は、作成環境のネットワーク設定で接続できませんでした。これらの内容（X30、X39〜X42 など）は検索結果の要約で確かめたものです。
+  - Bulbapedia は記事ページが Cloudflare の確認画面になるため、公開されている MediaWiki の API（`api.php` の `action=parse`）でウィキテキストを取得しました（2 秒間隔）。確認画面の回避はしていません。
+  - Pokumon（X40）と Serebii（X39）は直接読めておらず、検索結果の要約によります。
 
 ## まだ確認できていないこと
 

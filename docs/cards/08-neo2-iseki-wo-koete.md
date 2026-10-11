@@ -665,7 +665,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 | ワザ | エネルギー | ダメージ | 効果 |
 |---|---|---:|---|
 | かみつく / Bite | 無無 | 20 |  |
-| だましうち / Feint Attack | 悪悪無 |  | 日本語: 相手の場のポケモンを1匹選び、そのポケモンに、「弱点・抵抗力・特殊能力・その他の効果」に関係なく、30ダメージ。 英語: Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers or any other effects on the Defending Pokémon. |
+| だましうち / Feint Attack | 悪悪無 |  | 日本語: 相手の場のポケモンを1匹選び、そのポケモンに、「弱点・抵抗力・特殊能力・その他の効果」に関係なく、30ダメージ。 英語: Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon. |
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo2-040-blacky/)
 - 日本版の収録商品: 遺跡をこえて...
