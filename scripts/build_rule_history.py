@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""ルール・レギュレーション・エラッタの履歴（data/rule_history.json）を検査し、docs/rules/errata-history.md を生成する。
+"""ルール・レギュレーション・エラッタの履歴（data/rule_history.json）を検査し、次のページを生成する。
+
+  - docs/rules/errata-history.md（カードの文面の変更とエラッタの履歴）
+  - docs/rules/japanese-editions.md（日本版のルールの版ごとの比較。jp_editions・jp_edition_matrix から）
+  - docs/printed-sources.md（スキャンで確認した印刷物の巻号・ページごとの記録。documents から）
 
 検査すること:
   - id（EV-・MIX-・KGR-・EN-・ERR-・TXT-・RUL-）の重複
@@ -16,7 +20,11 @@
       その日付を挙げた資料（claimed_by の記号）や「以前の版」の説明なしに使われていないか
       （data/rule_history.json・data/rule_differences.json・手書きの docs/rules/*.md・docs/sources.md）。
       正当に違う日付（雑誌の発行日と発売日など）は other_dates に書くので、単純な文字列の一致では検出しない
-  - --check: 生成結果が docs/rules/errata-history.md と同じか（ファイルは書き換えない）
+  - documents: 記号が docs/sources.md にあるか、ページの refs の id があるか。スキャン（kind が scan_image で
+    source が J37）を根拠にした記録が挙げる当時の資料（cites）が、documents にあるか
+  - jp_editions・jp_edition_matrix: 版の出来事の日付、出典の記号、確度・根拠の種類の値、
+    rd_item（data/rule_differences.json の項目）があるか、表のマスの版が jp_editions の版か
+  - --check: 生成結果が上の 3 つのページと同じか（ファイルは書き換えない）
 
 使い方: python3 scripts/build_rule_history.py [--check]
 """
@@ -31,6 +39,8 @@ import build_other_products as bop  # noqa: E402  同じカードの判定（Cat
 
 DATA = ROOT / 'data' / 'rule_history.json'
 OUT = ROOT / 'docs' / 'rules' / 'errata-history.md'
+OUT_EDITIONS = ROOT / 'docs' / 'rules' / 'japanese-editions.md'
+OUT_DOCUMENTS = ROOT / 'docs' / 'printed-sources.md'
 HANDWRITTEN = [ROOT / 'docs' / 'rules' / 'mixed-2002.md', ROOT / 'docs' / 'rules' / 'kangaskhan-2002.md']
 # rejected_dates を探す文書（手書き。生成物は元データを検査すれば足りる）
 PROSE = HANDWRITTEN + [ROOT / 'docs' / 'rules' / n for n in ('japanese.md', 'wotc.md', 'README.md')] + [ROOT / 'docs' / 'sources.md']
@@ -42,8 +52,12 @@ SRC_RE = re.compile(r'\[([A-Z]\d+)\]')
 GENERATED = ('<!-- このファイルは scripts/build_rule_history.py が data/rule_history.json から生成しています。'
              '直接編集しないでください。 -->')
 REGION_JA = {'JP': '日本版', 'EN': '英語版'}
-EVIDENCE_SHORT = {'original': '原本', 'archived_official': '公式ページの保存版（原文を確認）', 'scan_image': '印刷物の写真（文面を確認）', 'card_image': 'カードの画像',
+EVIDENCE_SHORT = {'original': '原本', 'archived_official': '公式ページの保存版（原文を確認）', 'scan_image': '印刷物のスキャン・写真（文面を確認）', 'card_image': 'カードの画像',
                   'official_later': '後年の公式資料', 'secondary_direct': '二次資料（本文を確認）', 'search_summary': '検索結果の要約のみ'}
+
+
+BASIS_SHORT = {'original': '原本', 'archived_official': '公式サイトの保存版', 'scan_image': 'スキャン', 'card_image': 'カードの画像',
+               'official_later': '後年の公式資料', 'secondary_direct': '二次資料', 'search_summary': '検索結果の要約'}
 
 
 def md(s):
@@ -262,6 +276,81 @@ def validate(data, cards, codes):
             if s not in codes:
                 errors.append(f'{path.relative_to(ROOT)}: 出典の記号がない: {s}')
     errors += validate_dates(data, codes)
+    errors += validate_documents(data, codes, known)
+    errors += validate_editions(data, codes)
+    return errors
+
+
+def validate_documents(data, codes, known):
+    errors = []
+    docs = {}
+    for doc in data.get('documents', []):
+        c = doc['code']
+        if c in docs:
+            errors.append(f'documents: 記号の重複: {c}')
+        docs[c] = doc
+        for s in (c, doc['scan']['source']):
+            if s not in codes:
+                errors.append(f'documents.{c}: 出典の記号がない: {s}')
+        for key in ('issued', 'released'):
+            if doc.get(key) and not DATE_FULL_RE.match(doc[key]):
+                errors.append(f'documents.{c}: {key} の書式が不正: {doc[key]}')
+        for pg in doc['pages']:
+            for r in pg['refs']:
+                if r not in known:
+                    errors.append(f'documents.{c}: p.{pg["printed"]} の id がない: {r}')
+    for x in all_items(data):
+        for e in x.get('evidence', []):
+            if e['kind'] == 'scan_image' and e['source'] == 'J37':
+                for c in e.get('cites', []):
+                    if c not in docs:
+                        errors.append(f"{x['id']}: スキャンの資料 {c} が documents にない")
+    return errors
+
+
+def validate_editions(data, codes):
+    errors = []
+    events = {e['id']: e for e in data['events']}
+    eds = {}
+    for ed in data.get('jp_editions', []):
+        if ed['id'] in eds:
+            errors.append(f"jp_editions: id の重複: {ed['id']}")
+        eds[ed['id']] = ed
+        if not DATE_FULL_RE.match(ed['date']):
+            errors.append(f"jp_editions.{ed['id']}: date の書式が不正: {ed['date']}")
+        ev = events.get(ed.get('event'))
+        if ed.get('event') and ev is None:
+            errors.append(f"jp_editions.{ed['id']}: 出来事がない: {ed['event']}")
+        elif ev and not compatible(ed['date'], event_dates(ev)[0]):
+            errors.append(f"jp_editions.{ed['id']}: date（{ed['date']}）が {ev['id']} の日付と合わない")
+        if ed['confidence'] not in data['confidence_values']:
+            errors.append(f"jp_editions.{ed['id']}: 確度の値が不正")
+        for s in ed['sources'] + SRC_RE.findall(json.dumps(ed, ensure_ascii=False)):
+            if s not in codes:
+                errors.append(f"jp_editions.{ed['id']}: 出典の記号がない: {s}")
+    columns = {e for e, v in eds.items() if v['in_matrix']}
+    diff = json.loads((ROOT / 'data' / 'rule_differences.json').read_text(encoding='utf-8'))
+    items = {i['id'] for i in diff['items']}
+    rows = set()
+    for row in data.get('jp_edition_matrix', []):
+        rid = row['id']
+        if rid in rows:
+            errors.append(f'jp_edition_matrix: id の重複: {rid}')
+        rows.add(rid)
+        if row.get('rd_item') and row['rd_item'] not in items:
+            errors.append(f"jp_edition_matrix.{rid}: rule_differences の項目がない: {row['rd_item']}")
+        for ed, c in row['cells'].items():
+            if ed not in columns:
+                errors.append(f'jp_edition_matrix.{rid}: 版がない: {ed}')
+            if c['confidence'] not in data['confidence_values']:
+                errors.append(f'jp_edition_matrix.{rid}.{ed}: 確度の値が不正')
+            if c['basis'] not in data['evidence_kinds']:
+                errors.append(f'jp_edition_matrix.{rid}.{ed}: 根拠の種類がない: {c["basis"]}')
+            if not c['sources']:
+                errors.append(f'jp_edition_matrix.{rid}.{ed}: 出典がない')
+        for s in SRC_RE.findall(json.dumps(row, ensure_ascii=False)) + [s for c in row['cells'].values() for s in c['sources']]:
+            if s not in codes:
+                errors.append(f'jp_edition_matrix.{rid}: 出典の記号がない: {s}')
     return errors
 
 
@@ -277,6 +366,8 @@ def card_cell(cards, ids):
 def detail(x, data, cards):
     L = [f'<a id="{x['id'].lower()}"></a>', '', f"### {x['id']}: {x['title']}", '',
          f"- 地域: {REGION_JA[x['region']]}　区分: {data['categories'][x['category']]}"]
+    if x.get('id_note'):
+        L.append(f"- id について: {x['id_note']}")
     for key, label in (('announced', '公表'), ('effective_from', '適用・印刷の開始'), ('effective_until', '適用の終了')):
         if x.get(key):
             L.append(f'- {label}: {x[key]}')
@@ -372,17 +463,92 @@ def build(data, cards):
     return L
 
 
+def cite(sources):
+    return ''.join(f'[{s}]' for s in sources)
+
+
+def build_editions(data):
+    eds = data['jp_editions']
+    cols = [e for e in eds if e['in_matrix']]
+    L = ['# 日本版のルールの版ごとの比較（1996〜1999年）', '',
+         '<!-- このファイルは scripts/build_rule_history.py が data/rule_history.json の jp_editions・jp_edition_matrix から生成しています。直接編集しないでください。 -->', '',
+         '旧裏期の日本版のルールを、版ごと・項目ごとに並べた表です。ルールの説明と資料の食い違いは [日本版のルールと変遷](japanese.md)、'
+         '英語版との比較は [日米のルールの違い](differences.md)、出典の記号は [出典と確認状況](../sources.md)、'
+         'スキャンで確認した誌面のページは [印刷物の照合記録](../printed-sources.md) を参照してください。', '',
+         '- 版ごとの文書（ルールブック・遊びかた説明書）の原文は、どの版も確認できていません。表の内容は、各版の時期の公式の雑誌・書籍の説明（スキャン）と二次資料によります。',
+         '- 原文や当時の説明で確認できなかったマスは「未確認」です。ほかの版の内容から推測して埋めていません。',
+         '- 「公式ルール」「ルールブック」「遊びかた説明書」は資料によって呼び方が違います。1997年の会報は、詳しい「公式ルール」は書籍（『大人にもわかるポケモンカード戦略』）に載せ、スターターパックの「遊びかた説明書」は「順次改定される予定」と書いています [P31]。版の番号が同じ文書の系列を指すかは確認できていません。',
+         '- 発売元のガイドブック [P29] の「公式ルール」は、基本の遊びかたとは別の追加ルールとして書かれています。公式大会の大会専用ルールも、基本ルールとは別のものです。', '',
+         '## 版と時期', '',
+         '| 版 | 時期 | 資料での呼び名 | 根拠 | 確度 |', '|---|---|---|---|---|']
+    for e in eds:
+        extra = [s for s in e['sources'] if f'[{s}]' not in e['basis'] + e['name_in_sources'] + e['period']]
+        L.append(f"| {e['label']} | {md(e['period'])} | {md(e['name_in_sources'])} | {md(e['basis'])} {cite(extra)} | {e['confidence']} |")
+    L += ['', '## 項目ごとの比較', '',
+          '各マスは「内容（確度・根拠の種類）[出典]」です。根拠の種類の「スキャン」は当時の印刷物のスキャンで文面を確認したもの、「二次資料」はファンサイトなどの本文を読んだものです。', '',
+          '| 項目 | ' + ' | '.join(c['label'] for c in cols) + ' |', '|---|' + '---|' * len(cols)]
+    for row in data['jp_edition_matrix']:
+        cells = []
+        for c in cols:
+            v = row['cells'].get(c['id'])
+            cells.append('未確認' if v is None else f"{md(v['text'])}（{v['confidence']}・{BASIS_SHORT[v['basis']]}）{cite(v['sources'])}")
+        L.append(f"| [{row['label']}](#{row['id']}) | " + ' | '.join(cells) + ' |')
+    L += ['', '## 項目ごとの補足', '']
+    for row in data['jp_edition_matrix']:
+        L += [f'<a id="{row["id"]}"></a>', '', f"### {row['label']}", '']
+        if row.get('rd_item'):
+            L.append(f"- 英語版との比較: [日米のルールの違い](differences.md#{row['rd_item']})")
+        for n in row['notes']:
+            L.append(f'- {n}')
+        if not row['notes'] and not row.get('rd_item'):
+            L.append('- 補足なし')
+        L.append('')
+    return L
+
+
+def build_documents(data):
+    names = {x['id']: x.get('title') or x.get('name') for x in all_items(data)}
+    L = ['# 印刷物の照合記録', '',
+         '<!-- このファイルは scripts/build_rule_history.py が data/rule_history.json の documents から生成しています。直接編集しないでください。 -->', '',
+         '当時の印刷物を、スキャン（[出典と確認状況](sources.md) の J37。Elite Fourum のスレッドで公開された Google Drive の PDF）で確認した記録です。'
+         '印刷物の実物を確認したものではありません。ページ番号は誌面に印刷された番号（ノンブル）、PDF のページは Drive のビューアーで数えたページです。', '',
+         '- スキャンのファイルは第三者が公開したもので、公開が続く保証はありません。',
+         '- 確認した刷が初版でないものは、その刷を書いています。初版の文面と同じとは限りません。',
+         '- 本文の引用は、それぞれの記録（`data/rule_history.json` の id）にあります。ここにはページの内容の要約だけを置いています。', '',
+         '| 記号 | 資料 | 発行日 | 発売日 | 確認した刷 | スキャン |', '|---|---|---|---|---|---|']
+    for doc in data['documents']:
+        L.append(f"| [{doc['code']}](#{doc['code'].lower()}) | {md(doc['title'])} | {doc['issued']} | {doc.get('released') or '—'} | "
+                 f"{md(doc['printing_checked'])} | [PDF]({doc['scan']['url']}) |")
+    L.append('')
+    for doc in data['documents']:
+        L += [f'<a id="{doc["code"].lower()}"></a>', '', f"## {doc['code']}: {doc['title']}", '',
+              f"- 発行: {md(doc['publisher'])}",
+              f"- 発行日: {doc['issued']}" + (f"（発売日 {doc['released']}）" if doc.get('released') else ''),
+              f"- 確認した刷: {doc['printing_checked']}",
+              f"- スキャン: {doc['scan']['url']}（[{doc['scan']['source']}]" + (f"、PDF {doc['scan']['pdf_pages']} ページ）" if doc['scan']['pdf_pages'] else '）')]
+        for n in doc['notes']:
+            L.append(f'- {n}')
+        L += ['', '| ページ | PDF のページ | 内容 | 根拠にした記録 |', '|---|---|---|---|']
+        for pg in doc['pages']:
+            refs = '<br>'.join(f'{r}（{md(names.get(r, ""))}）' for r in pg['refs']) or '—'
+            L.append(f"| {pg['printed']} | {pg['pdf']} | {md(pg['content'])} | {refs} |")
+        L.append('')
+    return L
+
+
 def main():
     check = '--check' in sys.argv[1:]
     data = json.loads(DATA.read_text(encoding='utf-8'))
     cards = Cards()
     errors = validate(data, cards, source_codes())
-    text = '\n'.join(build(data, cards))
-    if check:
-        if not OUT.exists() or OUT.read_text(encoding='utf-8') != text:
-            errors.append(f'{OUT.relative_to(ROOT)} が data/rule_history.json から生成した内容と違う（生成し直す）')
-    else:
-        OUT.write_text(text, encoding='utf-8')
+    outputs = [(OUT, '\n'.join(build(data, cards))), (OUT_EDITIONS, '\n'.join(build_editions(data))),
+               (OUT_DOCUMENTS, '\n'.join(build_documents(data)))]
+    for path, text in outputs:
+        if check:
+            if not path.exists() or path.read_text(encoding='utf-8') != text:
+                errors.append(f'{path.relative_to(ROOT)} が data/rule_history.json から生成した内容と違う（生成し直す）')
+        else:
+            path.write_text(text, encoding='utf-8')
     if errors:
         print('\n'.join(errors), file=sys.stderr)
         raise SystemExit(f'{len(errors)} 件の参照切れ・不正な値')

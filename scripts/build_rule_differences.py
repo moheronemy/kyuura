@@ -105,7 +105,7 @@ def cell(entries):
     return '<br>'.join(x.replace('|', '\\|') for x in out)
 
 
-def build(data):
+def build(data, editions):
     items = data['items']
     lines = [
         '# 日米のルールの違い（旧裏期の日本版 × WotC 期の英語版）',
@@ -121,12 +121,12 @@ def build(data):
         '- 日本版の各版の詳しい内容: [日本版のルールと変遷](japanese.md)',
         '- 英語版の詳しい内容: [英語版（WotC 版）のルール](wotc.md)',
         '',
-        '日本版は時期によってルールが違います。各版の施行時期:',
+        '日本版は時期によってルールが違います。各版の時期（`data/rule_history.json` の `jp_editions`。版ごとの比較は [日本版のルールの版ごとの比較](japanese-editions.md)）:',
         '',
-        '| 版 | 時期 |',
-        '|---|---|',
+        '| 版 | 時期 | 確度 |',
+        '|---|---|---|',
     ]
-    lines += [f'| {k} | {v} |' for k, v in data['jp_periods'].items()]
+    lines += [f"| {e['label']} | {e['period']} | {e['confidence']} |" for e in editions]
     lines += ['', '## 一覧', '', '| 項目 | 判定 | 日本版 | 英語版（WotC） |', '|---|---|---|---|']
     for it in sorted(items, key=lambda i: STATUS_ORDER.index(i['status'])):
         lines.append(f"| [{it['topic']}](#{it['id']}) | {it['status']} | {cell(it['jp'])} | {cell(it['en'])} |")
@@ -164,7 +164,8 @@ def main():
     check = '--check' in sys.argv[1:]
     data = json.loads((ROOT / 'data' / 'rule_differences.json').read_text(encoding='utf-8'))
     errors = validate(data, source_codes(), history_confidence())
-    text = build(data)
+    editions = json.loads((ROOT / 'data' / 'rule_history.json').read_text(encoding='utf-8'))['jp_editions']
+    text = build(data, editions)
     if check:
         if not OUT.exists() or OUT.read_text(encoding='utf-8') != text:
             errors.append(f'{OUT.relative_to(ROOT)} が data/rule_differences.json から生成した内容と違う（生成し直す）')

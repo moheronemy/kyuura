@@ -202,9 +202,17 @@
 
 `misconceptions` の `later_rules_note` は、後のルールの表の前に置く説明文です（任意）。
 
+日本版の版の時期の表（以前の `jp_periods`）は、このファイルではなく `data/rule_history.json` の `jp_editions` から生成します。
+
 ## `data/rule_history.json`
 
-2001〜2003年の旧裏から新裏への移行期を中心に、ルール・大会レギュレーション・エラッタを記録する調査データです。[カードの文面の変更とエラッタの履歴](rules/errata-history.md) はこのファイルから `scripts/build_rule_history.py` で生成し、[旧裏・新裏の混合ルール](rules/mixed-2002.md)・[新ガルーラルール](rules/kangaskhan-2002.md) は手書きでこのファイルの id を参照します（参照切れは同じスクリプトが検査）。
+旧裏期（1996〜2003年）のルール・大会レギュレーション・エラッタと、その根拠にした印刷物を記録する調査データです。次の 3 つはこのファイルから `scripts/build_rule_history.py` で生成します。
+
+- [カードの文面の変更とエラッタの履歴](rules/errata-history.md)（`events`・`entries`・`errata`）
+- [日本版のルールの版ごとの比較](rules/japanese-editions.md)（`jp_editions`・`jp_edition_matrix`）
+- [印刷物の照合記録](printed-sources.md)（`documents`）
+
+[旧裏・新裏の混合ルール](rules/mixed-2002.md)・[新ガルーラルール](rules/kangaskhan-2002.md) は手書きでこのファイルの id を参照します（参照切れは同じスクリプトが検査）。
 
 | キー | 内容 |
 |---|---|
@@ -215,16 +223,20 @@
 | `entries` | ルール・レギュレーションの記録 |
 | `errata` | カード個別のエラッタ・印刷テキストの変更・裁定の記録 |
 | `card_lists` | 読み替えの対象カードの一覧（`supporter`: サポーターとして扱う 15 種、`poke_body`: ポケボディーとして扱うカード）。`ids` はこのリポジトリのカード id、`bulbapedia` は Bulbapedia の表記、`qa`（`poke_body` だけ）は公式 Q&A の原文の表記（`type`・`name`・`series`・`power`） |
+| `jp_editions` | 日本版のルールの版（`id`: `ed1`〜`ed5` など、`label`、`date`、`event`: 対応する `events` の id、`in_matrix`: 比較表の列にするか、`period`、`name_in_sources`: 資料での呼び名、`basis`、`confidence`、`sources`）。`date` は `event` の日付と一致しなければエラー |
+| `jp_edition_matrix` | 版ごとの比較表の行（`id`: ページ内のアンカー、`label`、`rd_item`: 対応する `data/rule_differences.json` の項目の `id` か `null`、`cells`、`notes`）。`cells` は版の `id` をキーに `text`・`confidence`・`sources`・`basis`（根拠の種類。`evidence_kinds` の値）を持つ。キーのない版は「未確認」と表示する（ほかの版から推測して埋めない） |
+| `documents` | スキャンで確認した印刷物の巻号ごとの記録（`code`: docs/sources.md の P 記号、`title`、`series`、`volume`、`publisher`、`issued`: 表紙・奥付の発行日、`released`: 公式の発売日（わからなければ `null`）、`printing_checked`: 確認した刷（奥付を見ていないものはそう書く）、`scan`（`source`: J37 など、`url`: 開けることを確かめたファイルの URL、`pdf_pages`）、`pages`（`printed`: 誌面のページ番号、`pdf`: PDF のページ、`content`: 要約、`refs`: そのページを根拠にした id）、`notes`）。`evidence` で J37 のスキャンを根拠にした記録の `cites` の P 記号は、ここに載っていなければエラー |
 
 `entries`・`errata` の各要素の主な欄:
 
 | 欄 | 内容 |
 |---|---|
 | `id` | ルールの識別 id（`MIX-`: 混合期、`KGR-`: ガルーラルール、`EN-`: 英語版、`ERR-`: エラッタ、`TXT-`: 印刷の変更、`RUL-`: 裁定） |
+| `id_note` | id の文字列と内容がずれている理由（任意）。参照の互換性のため id は変えず、ここで説明する（例: `MIX-SUPPORTER-ERRATA` は公式エラッタではなく大会レギュレーション） |
 | `region` | `JP`（日本版）／`EN`（英語版） |
 | `category` | 上の区分 |
 | `announced`・`effective_from`・`effective_until` | 公表日・適用（印刷）の開始・終了。先頭に日付を書き、続けて説明を書く。わからないものは「未確認」などと文で書く |
-| `announced_event`・`effective_event` | 公表・適用開始に当たる `events` の id（任意）。書いた場合は、日付が合うかを検査する |
+| `announced_event`・`effective_event` | 公表・適用開始に当たる `events` の id（任意）。書いた場合は、日付が合うかを検査する。エラッタは、公表した会報・雑誌の号の出来事を `announced_event` にする（例: `ERR-ENERGY-RETRIEVAL` は `EV-1998-FANCLUB5`）。公表した資料を確認できていないものは書かない |
 | `applies_to.events` | 対象の大会・商品（`events` の id） |
 | `cards`・`cards_from`・`external_cards` | 対象カード（`data/cards.json` の id か `data/ja_text_pcgsearch.json` のページ名）、`card_lists` の名前、このリポジトリにないカード |
 | `printed_text`・`play_text`・`before`・`after` | 印刷された文面、エラッタ後・読み替え後の文面、変更前・変更後のルール |
