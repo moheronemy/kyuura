@@ -915,7 +915,8 @@ def write_set_docs(records, en_only):
 
 
 DIFF_KIND_JA = {'text': '文面の意味', 'numbers': '数値', 'errata': 'エラッタ', 'placement': '収録先', 'print': '英語版の表記・誤植',
-                'wording': '書き方（意味は同じ）', 'art': 'イラスト'}
+                'wording': '書き方（意味は同じ）', 'art': 'イラスト',
+                'regulation': '大会での扱い'}
 
 
 def jp_origins():

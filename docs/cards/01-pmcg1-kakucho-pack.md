@@ -103,7 +103,7 @@
 | 91 | ピッピ人形 | トレーナー |  |  |  | ★ | Clefairy Doll<br>Base Set 70 |  |
 | 92 | ポケモン回収 | トレーナー |  |  |  | ★ | Scoop Up<br>Base Set 78 | 再録: BS2 107、LC 104 |
 | 93 | ポケモン交換おじさん | トレーナー |  |  |  | ★ | Pokémon Trader<br>Base Set 77 | 再録: BS2 106、LC 103 |
-| 94 | ポケモン育て屋さん | トレーナー |  |  |  | ★ | Pokémon Breeder<br>Base Set 76 | 日英の違い: サポーター扱いのエラッタ<br>再録: BS2 105、LC 102（文面が違う） |
+| 94 | ポケモン育て屋さん | トレーナー |  |  |  | ★ | Pokémon Breeder<br>Base Set 76 | 日英の違い: 2002年の公式大会でサポーターとして扱う（日本だけ）<br>再録: BS2 105、LC 102（文面が違う） |
 | 95 | ミニスカート | トレーナー |  |  |  | ★ | Lass<br>Base Set 75 | 再録: BS2 104 |
 | 96 | 無色2個エネルギー | 特殊エネルギー |  |  |  | ◆ | Double Colorless Energy<br>Base Set 96 | なぞのばしょの表記による。TCGdex の表記は「ダブル無色エネルギー」<br>再録: BS2 124 |
 | 97 | 草エネルギー | 基本エネルギー |  |  |  | ● | Grass Energy<br>Base Set 99 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
@@ -1499,7 +1499,7 @@
 - 英語: Put a Stage 2 Evolution card from your hand on the matching Basic Pokémon. You can only play this card when you would be allowed to evolve that Pokémon anyway.
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/pmcg01-091-pokemonsodateyasan/)
-- **日英の違い（サポーター扱いのエラッタ、確度: 有力）** 日本版: サポーター導入時（2001年12月以降）に、日本でのみ「サポーターとして扱う」エラッタが出た ／ 英語版: エラッタなし
+- **日英の違い（2002年の公式大会でサポーターとして扱う（日本だけ）、確度: 確実）** 日本版: 2002年の公式大会（バトルロード スプリング2002・サマー2002）のレギュレーションの「サポーター適用カード」で、サポーターとして扱われた。印刷の文面は変わっていない。ふだんの対戦については、2001年10月の制作者のコラムが「カードの書かれている記述の通りにプレイしてください」としていた（data/rule_history.json の MIX-SUPPORTER-ERRATA） ／ 英語版: この扱いはない（トレーナーのまま）
 - 日本版の収録商品: 第1弾拡張パック、スターターパック
 - 日本版の印刷について: 初版はレアリティマークなし
 

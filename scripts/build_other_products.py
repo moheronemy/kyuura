@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'docs' / 'cards'
 SI = '映画公開記念パック「サザンアイランド」'
 DIFF_KIND_JA = {'text': '文面の意味', 'numbers': '数値', 'print': '英語版の表記・誤植', 'wording': '書き方（意味は同じ）', 'art': 'イラスト',
-                'errata': 'エラッタ'}
+                'errata': 'エラッタ', 'regulation': '大会での扱い'}
 GENERATED = ('<!-- このファイルは scripts/build_other_products.py が data/ja_text_pcgsearch.json と '
              'data/curation/other_products.json から生成しています。直接編集しないでください。 -->')
 # サイトの表記の揺れ（カード名の照合だけに使う）

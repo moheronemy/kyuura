@@ -163,7 +163,7 @@
 }
 ```
 
-`kind` は `text`（文面の意味）／`numbers`（数値）／`errata`（後年のエラッタ）／`placement`（収録先）／`print`（英語版の表記・誤植）／`wording`（書き方の違い。効果は同じだが、説明を書いている場所や分け方が違う）／`art`（イラストの違い）。`sources` の記号は [出典と確認状況](sources.md) を参照。
+`kind` は `text`（文面の意味）／`numbers`（数値）／`errata`（後年のエラッタ）／`regulation`（大会のレギュレーションでの扱い。印刷の文面は同じ）／`placement`（収録先）／`print`（英語版の表記・誤植）／`wording`（書き方の違い。効果は同じだが、説明を書いている場所や分け方が違う）／`art`（イラストの違い）。`sources` の記号は [出典と確認状況](sources.md) を参照。
 
 ## タイプの列挙値
 
@@ -189,7 +189,18 @@
 
 ## `data/rule_differences.json`
 
-日米のルールの違いのデータです。`items` の各要素が 1 項目で、`jp`・`en` にそれぞれ時期ごとのルール、`status` に判定（`違う`／`時期により違う`／`違う可能性あり`／`同じ`／`不明`）があります。[日米のルールの違い](rules/differences.md) はこのファイルから生成しています。
+日米のルールの違いのデータです。`items` の各要素が 1 項目で、`jp`・`en` にそれぞれ時期ごとのルール、`status` に判定（`違う`／`時期により違う`／`違う可能性あり`／`同じ`／`不明`）があります。[日米のルールの違い](rules/differences.md) はこのファイルから `scripts/build_rule_differences.py` で生成しています。
+
+`jp`・`en` の各行（と `misconceptions` の行・`later_rules` の行）の欄:
+
+| 欄 | 内容 |
+|---|---|
+| `period` | 時期。基本ルールと大会のルールは行を分ける（例:「2002年の公式大会」） |
+| `rule`・`confidence`・`sources` | ルールの内容、確度、出典の記号（docs/sources.md） |
+| `refs` | 関連する `data/rule_history.json` の id（任意）。存在しない id はエラー |
+| `confidence_note` | `refs` の記録より確度を低くしている理由（任意）。範囲が違うなどの理由がないまま確度が低いと、確度の更新漏れとしてエラーになる |
+
+`misconceptions` の `later_rules_note` は、後のルールの表の前に置く説明文です（任意）。
 
 ## `data/rule_history.json`
 
@@ -200,7 +211,7 @@
 | `categories` | 区分: `basic_rule`（基本ルール）、`tournament_regulation`（大会レギュレーション）、`card_ruling`（カード個別の裁定）、`official_errata`（公式エラッタ）、`printed_text_change`（印刷テキストの変更）、`product_change` |
 | `evidence_kinds` | 根拠の種類: `original`、`archived_official`（当時の公式サイトのページを Internet Archive の写しで読んだ）、`scan_image`（当時の印刷物のページの写真・スキャンで文面を確認した）、`card_image`、`official_later`、`secondary_direct`、`search_summary` |
 | `confidence_values` | 確度（確実／有力／未確認）の基準 |
-| `events` | 商品の発売・大会・雑誌の発行などの出来事（`id`、`date`、`region`、`type`、`name`、`notes`、`evidence`） |
+| `events` | 商品の発売・大会・雑誌の発行などの出来事（`id`、`date`、`region`、`type`、`name`、`notes`、`evidence`）。`date` は `YYYY`・`YYYY-MM`・`YYYY-MM-DD`、期間は `開始/終了`。雑誌は公式の発売日がわかればそれを、なければ表紙の発行日を使う。`other_dates`（`date`・`label`・`sources`）は正当に違う日付（雑誌の発行日など）、`rejected_dates`（`date`・`claimed_by`・`keywords`・`reason`）は資料が挙げるが誤りと判断した日付 |
 | `entries` | ルール・レギュレーションの記録 |
 | `errata` | カード個別のエラッタ・印刷テキストの変更・裁定の記録 |
 | `card_lists` | 読み替えの対象カードの一覧（`supporter`: サポーターとして扱う 15 種、`poke_body`: ポケボディーとして扱うカード）。`ids` はこのリポジトリのカード id、`bulbapedia` は Bulbapedia の表記、`qa`（`poke_body` だけ）は公式 Q&A の原文の表記（`type`・`name`・`series`・`power`） |
@@ -212,7 +223,8 @@
 | `id` | ルールの識別 id（`MIX-`: 混合期、`KGR-`: ガルーラルール、`EN-`: 英語版、`ERR-`: エラッタ、`TXT-`: 印刷の変更、`RUL-`: 裁定） |
 | `region` | `JP`（日本版）／`EN`（英語版） |
 | `category` | 上の区分 |
-| `announced`・`effective_from`・`effective_until` | 公表日・適用（印刷）の開始・終了。わからないものは「未確認」などと文で書く |
+| `announced`・`effective_from`・`effective_until` | 公表日・適用（印刷）の開始・終了。先頭に日付を書き、続けて説明を書く。わからないものは「未確認」などと文で書く |
+| `announced_event`・`effective_event` | 公表・適用開始に当たる `events` の id（任意）。書いた場合は、日付が合うかを検査する |
 | `applies_to.events` | 対象の大会・商品（`events` の id） |
 | `cards`・`cards_from`・`external_cards` | 対象カード（`data/cards.json` の id か `data/ja_text_pcgsearch.json` のページ名）、`card_lists` の名前、このリポジトリにないカード |
 | `printed_text`・`play_text`・`before`・`after` | 印刷された文面、エラッタ後・読み替え後の文面、変更前・変更後のルール |

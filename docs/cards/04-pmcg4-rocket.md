@@ -70,7 +70,7 @@
 | 58 | たたきつけろ!挑戦状 | トレーナー |  |  |  | ◆ | Challenge!<br>Team Rocket 74 | 「!」の後の空白の有無はデータにより異なる<br>再録: LC 106 |
 | 59 | にせオーキドの逆襲 | トレーナー |  |  |  | ◆ | Imposter Oak's Revenge<br>Team Rocket 76 |  |
 | 60 | ボスのやりかた | トレーナー |  |  |  | ◆ | The Boss's Way<br>Team Rocket 73 | 再録: LC 105 |
-| 61 | ロケット団のおねーさん | トレーナー |  |  |  | ★キラ | Rocket's Sneak Attack<br>Team Rocket 16・72 | 日英の違い: サポーター扱いのエラッタ |
+| 61 | ロケット団のおねーさん | トレーナー |  |  |  | ★キラ | Rocket's Sneak Attack<br>Team Rocket 16・72 | 日英の違い: 2002年の公式大会でサポーターとして扱う（日本だけ） |
 | 62 | ロケット団参上! | トレーナー |  |  |  | 特殊 | Here Comes Team Rocket!<br>Team Rocket 15・71 |  |
 | 63 | きずぐすり配合エネルギー | 特殊エネルギー |  |  |  | ● | Potion Energy<br>Team Rocket 82 | 再録: LC 101 |
 | 64 | なんでもなおし配合エネルギー | 特殊エネルギー |  |  |  | ● | Full Heal Energy<br>Team Rocket 81 | 再録: LC 100（文面が違う） |
@@ -971,7 +971,7 @@
 - 英語: Look at your opponent's hand. If he or she has any Trainer cards, choose 1 of them. Your opponent shuffles that card into his or her deck.
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/pmcg04-061-rocketdannoonesan/)
-- **日英の違い（サポーター扱いのエラッタ、確度: 有力）** 日本版: サポーター導入時（2001年12月以降）に、日本でのみ「サポーターとして扱う」エラッタが出た ／ 英語版: エラッタなし
+- **日英の違い（2002年の公式大会でサポーターとして扱う（日本だけ）、確度: 確実）** 日本版: 2002年の公式大会（バトルロード スプリング2002・サマー2002）のレギュレーションの「サポーター適用カード」で、サポーターとして扱われた。印刷の文面は変わっていない。ふだんの対戦については、2001年10月の制作者のコラムが「カードの書かれている記述の通りにプレイしてください」としていた（data/rule_history.json の MIX-SUPPORTER-ERRATA） ／ 英語版: この扱いはない（トレーナーのまま）
 - 日本版の収録商品: ロケット団
 
 ### 62. ロケット団参上! / Here Comes Team Rocket!

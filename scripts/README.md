@@ -35,6 +35,10 @@ python3 scripts/build_rule_history.py
 
 # 拡張パック以外の商品のページと、再録の対応付けのページを生成（→ docs/cards/other-products.md、docs/cards/products/*.md、docs/cards/reprints.md）
 python3 scripts/build_other_products.py
+
+# 生成物が元データと合っているかだけを検査（ファイルは書き換えない。食い違いや参照切れがあれば終了コード 1）
+python3 scripts/build_rule_differences.py --check
+python3 scripts/build_rule_history.py --check
 ```
 
 生成されるもの:
@@ -42,8 +46,8 @@ python3 scripts/build_other_products.py
 | スクリプト | 出力 |
 |---|---|
 | `build_cardlist.py` | `data/cards.json`、`data/cards.csv`、`data/attacks.csv`、`data/powers.csv`、`docs/cards/` の各弾のページ・`card-differences.md`・`english-only.md` |
-| `build_rule_differences.py` | `docs/rules/differences.md` |
-| `build_rule_history.py` | `docs/rules/errata-history.md`（あわせて `data/rule_history.json` と `docs/rules/mixed-2002.md`・`kangaskhan-2002.md` の id・カード id・出典の記号の参照切れを検査） |
+| `build_rule_differences.py` | `docs/rules/differences.md`（あわせて出典の記号・`data/rule_history.json` の id の参照切れと、確度の更新漏れを検査） |
+| `build_rule_history.py` | `docs/rules/errata-history.md`（あわせて `data/rule_history.json` と `docs/rules/mixed-2002.md`・`kangaskhan-2002.md` の id・カード id・出典の記号の参照切れと、日付の矛盾（公表・適用の順、出来事の日付との食い違い、誤りと判断した日付の使用）を検査） |
 | `nazonobasho.py extract` | `data/ja_text_nazonobasho.json`（日本語テキスト。カードテキストと印刷情報の欄だけを残す） |
 | `pcg_search.py extract` | `data/ja_text_pcgsearch.json`（拡張パック以外の商品の 681 枚） |
 | `build_other_products.py` | `docs/cards/other-products.md`（一覧）、`docs/cards/products/*.md`（商品ごと）、`docs/cards/reprints.md`（再録の対応付けと点検の結果） |
