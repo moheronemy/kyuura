@@ -198,7 +198,7 @@
 | キー | 内容 |
 |---|---|
 | `categories` | 区分: `basic_rule`（基本ルール）、`tournament_regulation`（大会レギュレーション）、`card_ruling`（カード個別の裁定）、`official_errata`（公式エラッタ）、`printed_text_change`（印刷テキストの変更）、`product_change` |
-| `evidence_kinds` | 根拠の種類: `original`、`archived_official`（当時の公式サイトのページを Internet Archive の写しで読んだ）、`card_image`、`official_later`、`secondary_direct`、`search_summary` |
+| `evidence_kinds` | 根拠の種類: `original`、`archived_official`（当時の公式サイトのページを Internet Archive の写しで読んだ）、`scan_image`（当時の印刷物のページの写真・スキャンで文面を確認した）、`card_image`、`official_later`、`secondary_direct`、`search_summary` |
 | `confidence_values` | 確度（確実／有力／未確認）の基準 |
 | `events` | 商品の発売・大会・雑誌の発行などの出来事（`id`、`date`、`region`、`type`、`name`、`notes`、`evidence`） |
 | `entries` | ルール・レギュレーションの記録 |

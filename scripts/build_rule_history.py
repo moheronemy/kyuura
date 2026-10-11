@@ -27,7 +27,7 @@ SRC_RE = re.compile(r'\[([A-Z]\d+)\]')
 GENERATED = ('<!-- このファイルは scripts/build_rule_history.py が data/rule_history.json から生成しています。'
              '直接編集しないでください。 -->')
 REGION_JA = {'JP': '日本版', 'EN': '英語版'}
-EVIDENCE_SHORT = {'original': '原本', 'archived_official': '公式ページの保存版（原文を確認）', 'card_image': 'カードの画像',
+EVIDENCE_SHORT = {'original': '原本', 'archived_official': '公式ページの保存版（原文を確認）', 'scan_image': '印刷物の写真（文面を確認）', 'card_image': 'カードの画像',
                   'official_later': '後年の公式資料', 'secondary_direct': '二次資料（本文を確認）', 'search_summary': '検索結果の要約のみ'}
 
 
@@ -215,8 +215,9 @@ def build(data, cards):
     L += ['', '表の短い名前（各項目の「根拠」で使用）: ' + '、'.join(f'{k} = {v}' for k, v in EVIDENCE_SHORT.items()) + '。',
           '', '| 確度 | 意味 |', '|---|---|']
     L += [f'| {k} | {v} |' for k, v in data['confidence_values'].items()]
-    L += ['', '- 当時の公式資料のうち原文を確認できたのは、公式サイトの「ポケモンカードｅシリーズ以前の特殊能力 Ｑ＆Ａ」[P10]（Internet Archive に保存された写し）だけです。'
-          'ルールブック・『トレーナーズ』・ファンクラブ会報の原本は確認できていません。二次資料が挙げている当時の資料は [P1] などの記号で示しています。', '',
+    L += ['', '- 当時の公式資料のうち原文を確認できたのは、公式サイトのページ（[P10]、[P15]〜[P23]。Internet Archive に保存された写し）と、'
+          '『トレーナーズ』Vol.14 p.21 の誌面の写真（[J32] に掲載）です。ルールブック・ファンクラブ会報の原本と、『トレーナーズ』のほかのページは確認できていません。'
+          '二次資料が挙げている当時の資料は [P1] などの記号で示しています。', '',
           '## 一覧', '',
           '| id | 地域 | 区分 | 対象 | 公表・印刷 | 確度 |', '|---|---|---|---|---|---|']
     for x in errata:

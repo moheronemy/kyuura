@@ -8,8 +8,10 @@
   - なぞのばしょ（J22、J23、J25〜J28、N1）と pcg-search（N3。カードの画像を含む）も、ページを直接取得して読みました。
   - 2026年10月の追加の検証で、Internet Archive（web.archive.org）と note.com を開けるようになりました。
     - 公式サイトの Q&A [P10] は、Internet Archive に保存された写し（2002-06-10・2005-10-18・2007-02-09）で原文を読みました。
-    - 旧裏 wiki（wikiwiki.jp）は、サイト側の Cloudflare の確認画面（HTTP 403）で直接は開けませんでした（回避はしていません）。Internet Archive に保存された写しで、J1（2026-03-20 の保存）と J6（2026-01-28 の保存）の本文を読みました。
-    - note の J30、J31、J32 は記事を直接取得して読みました。ただし、記事の中の画像（assets.st-note.com）は作成環境のネットワーク制限で開けませんでした。
+    - 旧裏 wiki（wikiwiki.jp）は、サイト側の Cloudflare の確認画面（HTTP 403）で直接は開けませんでした（回避はしていません）。Internet Archive に保存された写しで、J1（2026-03-20 の保存）、J6（2026-01-28 の保存）、J36（2026-02-06 の保存）の本文を読みました。
+    - note の J30、J31、J32 は記事を直接取得して読みました。J32 の記事の中の画像（assets.st-note.com。『トレーナーズ』Vol.14 p.21 の誌面の写真）は、その後に許可され、文面を確認しました。
+    - 公式サイトのページ（P15〜P23）は、Internet Archive に保存された写しで原文を読みました。画像で書かれた部分は、保存された写しをブラウザで表示して確かめました。
+    - ポケブーン（J33・J34）は直接取得して読みました。駿河屋（J35）、Elite Fourum の『トレーナーズ』のスキャンのスレッド、Google Drive（Bulbapedia が引く Vol.14 の PDF など）は、作成環境のネットワーク制限で開けませんでした（回避はしていません）。
   - ポケモンWiki、Wikipedia、ポケブーン、上記以外の旧裏 wiki のページと note などは、作成環境のネットワーク制限で開けていません。これらは検索結果の要約だけで確かめています（回避はしていません）。
   - 引用の文言が原文と一字一句同じとは限りません。
   - 要約の取り違えが含まれている可能性もあります。
@@ -52,7 +54,11 @@
 | J29 | ポケブーン「バトルロード サマー★2002 &『ポケモンフェスタ2002』」（新ガルーラルールの案内の転記。検索結果の要約だけで確認） | https://pokeboon.com/jp/promo_event/battle-road-summer-2002-and-pokemon-festa-2002/ |
 | J30 | ももち氏の note「老害、昔を振り返る その１」（2021-08-30 公開。バトル★ネオ サマーロード2001 とバトルロード スプリング★2002 のシニアの部の回想。2026年10月に本文を確認） | https://note.com/arcanine/n/nb465d938f3fb |
 | J31 | プレイジム TOKYO の note「【ポケモンカードe】シリーズ現在のルールとの相違点について」（2024-02-02 公開。2003年1月時点のルールを適用するとする店舗のルール。使えるカードは ★VS・★Web・ポケモンカードe。2026年10月に本文を確認） | https://note.com/play_gym_tokyo/n/nd37499228118 |
-| J32 | なにものか氏の note「【イベント】第9回ニモノ杯クラシック・新ガルーラバトルの部［8/14（月）横浜（関内）］」（2023-07-30 公開、2023-08-13 更新。2023年の再現大会の要項。『トレーナーズ』Vol.14 p.21 の「新ガルーラルールの説明」を画像で引用。本文は 2026年10月に確認、画像は作成環境から開けず未確認） | https://note.com/nimono_note/n/nbe579f5b16f1 |
+| J32 | なにものか氏の note「【イベント】第9回ニモノ杯クラシック・新ガルーラバトルの部［8/14（月）横浜（関内）］」（2023-07-30 公開、2023-08-13 更新。2023年の再現大会の要項。『トレーナーズ』Vol.14 p.21 の「新ガルーラルールの説明」の誌面の写真を掲載。本文と写真を 2026年10月に確認） | https://note.com/nimono_note/n/nbe579f5b16f1 （写真: https://assets.st-note.com/img/1690551618718-c5MuLaFidk.jpg ） |
+| J33 | ポケブーン「『ポケモンカード トレーナーズ』Vol.1～Vol.21までの一覧」（2020-09-04 公開。各号の「発行年」・目次・おまけ。本文を確認） | https://pokeboon.com/jp/pokemoncard-trainers/ |
+| J34 | ポケブーン「009/P マサキ：『ポケモンカードトレーナーズVOL.13』おまけカード」（2019-05-01 公開。「リリース 2001年11月1日(木）」。本文を確認） | https://pokeboon.com/jp/009p-bill-promo/ |
+| J35 | 駿河屋の商品ページ（『トレーナーズ』Vol.13 とされる。作成環境のネットワーク制限で開けず、内容は未確認） | https://www.suruga-ya.jp/product/detail/620027658 |
+| J36 | 旧裏 wiki「バトルネオ★サマーロード レギュレーション」（2001年のジュニア・シニアリーグのカードプールと殿堂ポイント。Internet Archive の 2026-02-06 の保存で本文を確認。ページの最終更新 2024-04-30） | https://wikiwiki.jp/pcg-base-neo/バトルネオ★サマーロード%20レギュレーション （保存: https://web.archive.org/web/20260206111650/https://wikiwiki.jp/pcg-base-neo/%E3%83%90%E3%83%88%E3%83%AB%E3%83%8D%E3%82%AA%E2%98%85%E3%82%B5%E3%83%9E%E3%83%BC%E3%83%AD%E3%83%BC%E3%83%89%20%E3%83%AC%E3%82%AE%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3 ） |
 
 ## 英語版（WotC）の公式資料の転載
 
@@ -134,6 +140,15 @@
 | 記号 | 資料 | 内容・確認した写し |
 |---|---|---|
 | P10 | 公式サイト（pokemon-card.com）「ポケモンカードｅシリーズ以前の特殊能力 Ｑ＆Ａ」（ページの日付 2002.5.24） | 旧裏・neo の特殊能力の「ポケボディー」一覧表（65 行。ここにないものはすべてポケパワー）と、ブビィ「モクモク」の Q&A。保存の写し: 2002-06-10 https://web.archive.org/web/20020610221924/http://www.pokemon-card.com:80/play/q_and_a/e_before_qa.html （日付の表示なし）、2005-10-18 https://web.archive.org/web/20051018170017/http://www.pokemon-card.com:80/play/q_and_a/e_before_qa.html 、2007-02-09 https://web.archive.org/web/20070209013655/http://www.pokemon-card.com/asobikata/qa_020524_2.html 。2002-08-04 の「あそびかたQ&A」の目次（https://web.archive.org/web/20020804064207/http://www.pokemon-card.com:80/play/play_qa.html ）からリンクされている。Bulbapedia [X52] も出典に挙げる |
+| P15 | 公式サイト「殿堂入りカード」（2001年）: 「『殿堂入りカード』とは？」（/play/dendo1.html）と「PCL認定『殿堂入りカード』リスト」（/play/dendo2.html） | 2001-07-24 の写し: 32 種。凡例「＝2001年夏から追加されるカードだよ」と 6 種の色の付いた行。2001-11-04 の写し: 36 種。凡例「＝2001年9月から追加されたカードだよ」と 4 種の色の付いた行（凡例の色の画像は保存されていない）。https://web.archive.org/web/20010724222610/http://www.pokemon-card.com:80/play/dendo2.html 、https://web.archive.org/web/20011104124800/http://www.pokemon-card.com:80/play/dendo2.html |
+| P16 | 公式サイト「殿堂入りカード」（2002年）: 「殿堂入りカードリスト」（/play/dendo/list.html）、「『殿堂入りカード』ってなに？」（/play/dendo/what.html）、目次（/play/play_dendo.html） | 2002-01-19 の写し:「『殿堂入りカード』リスト（2001年12月版）」。2002-06-04 の写し: 2002年の一覧に「（2001年5月版）」と表示（目次は「2002年5月版」）。2002-08-05 の写し: 見出しは「2002年5月版」、ページの題名は「2001年5月版」のまま。https://web.archive.org/web/20020119223256/http://www.pokemon-card.com:80/play/dendo/list.html 、https://web.archive.org/web/20020604200248/http://www.pokemon-card.com:80/play/dendo/list.html 、https://web.archive.org/web/20020805034629/http://www.pokemon-card.com:80/play/dendo/list.html |
+| P17 | 公式サイト「いろんなルールで遊ぼう！」: 「ミックスデッキルール＜基本のルール＞」（/play/ironnarule/mix1.html）、「＜いろんな遊びかた＞」（mix2.html）、「ハーフデッキルール」（half.html） | 2002-01-19 の写しなど。https://web.archive.org/web/20020119223510/http://www.pokemon-card.com:80/play/ironnarule/mix1.html 、https://web.archive.org/web/20020119220836/http://www.pokemon-card.com:80/play/ironnarule/mix2.html 、https://web.archive.org/web/20020119223607/http://www.pokemon-card.com:80/play/ironnarule/half.html |
+| P18 | 公式サイト「新ガルーラルールであそぼう！」（/play/ironnarule/galura_rule01.html〜04.html、目次 galura_rule_top.html） | 2002-03-05〜2002-04-04 の写し。https://web.archive.org/web/20020404005141/http://www.pokemon-card.com:80/play/ironnarule/galura_rule01.html 、https://web.archive.org/web/20020306000907/http://www.pokemon-card.com:80/play/ironnarule/galura_rule02.html 、https://web.archive.org/web/20020306001040/http://www.pokemon-card.com:80/play/ironnarule/galura_rule03.html 、https://web.archive.org/web/20020305235849/http://www.pokemon-card.com:80/play/ironnarule/galura_rule04.html |
+| P19 | 公式サイト「バトルロード スプリング2002」: マスター・シニア・ジュニアトレーナーズリーグのレギュレーション（/event/sp2002_master.html ほか）、「レギュレーションに関するQ&A」（sp2002qa_regulation.html）、「トーナメントのチェックポイント」（sp2002_checkpoint.html）、「コーナーしょうかい」（sp2002_corner.html）、「追加・変更」（sp2002_tuika_henkou.html） | 2002-02-10〜2002-04-11 の写し。https://web.archive.org/web/20020210025450/http://www.pokemon-card.com:80/event/sp2002_master.html 、https://web.archive.org/web/20020210031032/http://www.pokemon-card.com:80/event/sp2002qa_regulation.html 、https://web.archive.org/web/20020210023029/http://www.pokemon-card.com:80/event/sp2002_checkpoint.html 、https://web.archive.org/web/20020411020409/http://www.pokemon-card.com:80/event/sp2002_corner.html 。チェックポイントからリンクされた詳しい説明（sub_sp2002_rule.html など）は保存されていない |
+| P20 | 公式サイト「バトルロード サマー2002」: マスター・シニア・ジュニアトレーナーズリーグと予選リーグのレギュレーション（/event/summer2002/regu_master.html ほか。ページの日付 2002.5.1）、「コーナーしょうかい」（corner1.html・corner2.html） | 2002-06-11〜2002-08-09 の写し。https://web.archive.org/web/20020611025724/http://www.pokemon-card.com:80/event/summer2002/regu_master.html 、https://web.archive.org/web/20020809005812/http://www.pokemon-card.com:80/event/summer2002/regu_yosen.html 、https://web.archive.org/web/20020809005121/http://www.pokemon-card.com:80/event/summer2002/corner2.html |
+| P21 | 公式サイトの『トレーナーズ』の発売告知（/hot/tre10.html・tre11.html・tre13.html）と、トップページの更新情報（/top.html） | Vol.13: 2001-10-16 の写し「全国書店・玩具店にて 2001年11月2日(金)発売」。Vol.11:「2001年5月25日(金)発売」。Vol.10:「2001年3月9日(金)発売」。トップページ（2001-10-24 の写し）: 「ポケモンカード★web」ポケモンセンターオンラインで10月20日より限定発売、更新情報「10/12 ポケモンカードトレーナーズVol.13 発売情報」「9/28 PCL公認『殿堂入りカード』リスト更新」。https://web.archive.org/web/20011016061859/http://www.pokemon-card.com:80/hot/tre13.html 、https://web.archive.org/web/20011024211606/http://pokemon-card.com:80/top.html |
+| P22 | 公式サイト「サポーター」（/hot/play_supporter.html） | 2001-12-18 の写し。サポーターの説明とルール。https://web.archive.org/web/20011218055040/http://www.pokemon-card.com:80/hot/play_supporter.html |
+| P23 | 公式サイト「プレイルール」（/play/officialrule/official_rule.txt） | 2002-01-19 の写し。スタンダードデッキ・ハーフデッキ・ミックスデッキ、特殊状態など。https://web.archive.org/web/20020119220950/http://www.pokemon-card.com:80/play/officialrule/official_rule.txt |
 
 ## 当時の公式資料（原本は未確認）
 
@@ -145,15 +160,15 @@
 | P2 | 『ポケモンカード・ファンクラブ』会報 Vol.5（1998年6月10日） | p.16 エネルギー回収・超エネルギー回収のエラッタ（[X52][J1]）。p.30〜31「親子で遊ぼうポケモンカード」のガルーラルールと、おまけの「タッチ交代！」（[J27]） |
 | P3 | 『ポケモンカード トレーナーズ』Vol.6 p.58 | タケシのキュウコンのエラッタ（[X52]） |
 | P4 | 『トレーナーズ』Vol.10（2001年3月1日とされる）p.6 | PCL の殿堂入りカードの発表（[J23]） |
-| P5 | 『トレーナーズ』Vol.12（2001年7月1日発行とされる [J6]）p.5 | 裏面の変更と、新旧の裏面のカードを混ぜるときの方法（[J25]） |
-| P6 | 『トレーナーズ』Vol.13（Bulbapedia [X55] は 2001年9月、旧裏 wiki [J6] は 2001年11月1日発行とする）p.5 | 特殊能力（ポケパワー・ポケボディー）、サポーター、やけど（[J25]）。付録の P プロモ「マサキ」009/P（[X55]） |
-| P7 | 『トレーナーズ』Vol.14（2002年1月5日発行とされる [J6]） | p.25: 旧裏・neo のトレーナー 15 種をサポーターとして扱う（[X52]）。p.21: 新ガルーラルールの説明（[J32] が画像で引用。画像は未確認）。ページ不明: ミックスデッキルールの告知（[J6]）、殿堂 2001.12版（バトルロード スプリング2002 のマスタートレーナーズのレギュレーション。スリーブ・30 枚ずつ・旧裏のトレーナー 10 枚・旧裏のプロモ★1・リムーブの読み替え）（[J1]） |
+| P5 | 『トレーナーズ』Vol.12（2001年7月1日発行とされる [J6][J33]）p.5 | 裏面の変更と、新旧の裏面のカードを混ぜるときの方法（[J25]） |
+| P6 | 『トレーナーズ』Vol.13（公式サイトの告知 [P21] は「2001年11月2日(金)発売」。ポケブーン [J33][J34] と旧裏 wiki [J6] は 2001年11月1日、Bulbapedia [X55] は 2001年9月とする）p.5 | 特殊能力（ポケパワー・ポケボディー）、サポーター、やけど（[J25]）。付録の P プロモ「マサキ」009/P（[X55]） |
+| P7 | 『トレーナーズ』Vol.14（2002年1月5日発行とされる [J6][J33]） | p.25: 旧裏・neo のトレーナー 15 種をサポーターとして扱う（[X52]。Bulbapedia が引く Google Drive の PDF は作成環境から開けず未確認）。p.21: 新ガルーラルールの説明（[J32] が掲載した誌面の写真で文面を確認。写真にはページ番号 21 と誌名があり、号数は掲載元の説明による）。ページ不明: ミックスデッキルールの告知（[J6]）、殿堂 2001.12版（バトルロード スプリング2002 のマスタートレーナーズのレギュレーション。スリーブ・30 枚ずつ・旧裏のトレーナー 10 枚・旧裏のプロモ★1・リムーブの読み替え）（[J1]） |
 | P8 | 『トレーナーズ』Vol.16 | 殿堂 2002.05版（バトルロード サマー★2002 のマスタートレーナーズリーグのレギュレーション）（[J1]） |
 | P9 | 『トレーナーズ』Vol.20 p.5、p.41〜43 | ADV への移行、ポケモンex（[J28]） |
 | P11 | 公式 PDF「『クラシックレギュレーション2016』及び、基本ルールの詳細」（2016年9月21日。後年の公式資料） | 2001年のバトル★ネオ サマーロードと同様の基本ルールとする（検索結果の要約）。https://www.pokemon-card.com/20th/assets/docs/classic-regulation.pdf |
 | P12 | 公式サイト「詳しいレギュレーション」（2000年12月20日） | 検索結果に出たが本文は未確認。https://www.pokemon-card.com/info/2000/20001220_001586.html |
-| P13 | 『トレーナーズ』Vol.11（2001年5月1日発行とされる [J6]） | 殿堂の「2001.01版」（バトルネオ★サマーロードのシニアリーグのレギュレーションと共通）（[J1]）。なぞのばしょの「2001年5月発表」[J23] に当たるとみられる |
-| P14 | 2001年夏のチャンピオンズリーグ、チャレンジパスポート（旧裏 wiki の記述による） | 殿堂の 2001.09版（[J1]）。なぞのばしょ [J23] には載っていない |
+| P13 | 『トレーナーズ』Vol.11（2001年5月1日発行とされる [J6][J33]。公式サイトの告知 [P21] は「2001年5月25日(金)発売」） | 殿堂の「2001.01版」（バトルネオ★サマーロードのシニアリーグのレギュレーションと共通）（[J1]）。なぞのばしょの「2001年5月発表」[J23] に当たるとみられる |
+| P14 | 2001年夏のチャンピオンズリーグ、チャレンジパスポート（旧裏 wiki の記述による） | 殿堂の 2001.09版（[J1]）。なぞのばしょ [J23] には載っていない。同じ一覧は公式サイト [P15] の 2001-11-04 の写しで確認（チャンピオンズリーグ・チャレンジパスポートの原本は未確認） |
 
 ## カードテキストの出典
 
