@@ -102,8 +102,9 @@ class Catalog:
             self.groups.setdefault(sig_record(r), []).append({'date': date, 'product': label, 'record': r})
         for key, cards in self.data.items():
             for c in cards:
+                label = 'プロモ' if (self.products.get(key) or {}).get('group') == 'promo' else self.short_name(key)
                 self.groups.setdefault(sig_pcg(c), []).append(
-                    {'date': self.date_of(key, c), 'product': self.short_name(key), 'card': c, 'key': key})
+                    {'date': self.date_of(key, c), 'product': label, 'card': c, 'key': key})
 
     def short_name(self, key):
         return self.products[key]['name'] if key in self.products else key
@@ -145,6 +146,58 @@ class Catalog:
         mine = self.date_of(key, c)
         others = [g['date'] for g in self.same(c) if g['date']]
         return bool(mine) and all(mine <= d for d in others)
+
+
+MONTHS = {m: i for i, m in enumerate(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+                                       'October', 'November', 'December'], 1)}
+DIST_JA = [  # Bulbapedia の配布の記載 → 日本語（言い回しが確かなものだけ。ほかは英語のまま）
+    (r'(?:Gekkan )?CoroCoro Comic (\w+) (\d{4}) issue insert', lambda m: f'月刊コロコロコミック {m[2]}年{MONTHS[m[1]]}月号の付録'),
+    (r'Bessatsu CoroCoro Comic Special (\w+) (\d{4}) issue insert', lambda m: f'別冊コロコロコミックスペシャル {m[2]}年{MONTHS[m[1]]}月号の付録'),
+    (r'Pokémon Card Trainers Vol\. (\d+) insert', lambda m: f'『ポケモンカード トレーナーズ』Vol.{m[1]} の付録'),
+    (r'How I Became a Pokémon Card Vol\. (\d+) insert', lambda m: f'『ポケモンカードになったワケ』{m[1]} 巻の付録'),
+    (r'Pokémon Card Fan Club Vol\. (\d+)(?: insert)?', lambda m: f'ポケモンカードファンクラブ会報 Vol.{m[1]}'),
+    (r'Pokémon Card Fan Club (\d+) GET point prize', lambda m: f'ポケモンカードファンクラブ {m[1]} GET ポイントの景品'),
+    (r'Easily Understand How to Play Pokémon Cards: Latest Edition', lambda m: '『すぐわかるポケモンカードの遊びかた 最新版』の付録'),
+    (r'Easily Understand How to Play Pokémon Cards', lambda m: '『すぐわかるポケモンカードの遊びかた』の付録'),
+    (r'All Nippon Airlines (".*?")(?: campaign)?(?: phase (\d))?', lambda m: f'全日空（ANA）のキャンペーン {m[1]}' + (f' 第{m[2]}期' if m[2] else '')),
+    (r'World Hobby Fair Special Limited Expansion Sheet', lambda m: '次世代ワールドホビーフェアの限定拡張シート'),
+    (r'World Hobby Fair 2000 commemoration card', lambda m: 'ワールドホビーフェア 2000 の記念カード'),
+    (r'Champion Road 2000 participation prize', lambda m: 'チャンピオンロード 2000 の参加賞'),
+    (r'Tropical Mega Battle finals participation prize', lambda m: 'トロピカルメガバトル決勝大会の参加賞'),
+    (r'Toyota campaign', lambda m: 'トヨタのキャンペーン'),
+    (r'Nintendo 64 Double Get Campaign', lambda m: 'NINTENDO64 ダブルゲットキャンペーン'),
+    (r'Trade Please campaign', lambda m: '「とりかえっこプリーズ」キャンペーン'),
+    (r'Pokémon Song Best Collection CD insert', lambda m: 'CD『ポケモンソング ベストコレクション』の付録'),
+    (r'Pokémon Card GB Official Guidebook insert', lambda m: '『ポケモンカードGB 公式ガイドブック』の付録'),
+    (r'Pokémon Trading Card Game 2: The Invasion of Team GR! insert|Pokémon Card GB2: Here Comes Team GR! insert', lambda m: 'ゲームボーイ『ポケモンカードGB2 GR団参上!』の付録'),
+    (r'Pokémon Card GB2: Here Comes Team GR! Official Guidebook insert', lambda m: '『ポケモンカードGB2 GR団参上!』公式ガイドブックの付録'),
+    (r'Pokémon Trading Card Game insert', lambda m: 'ゲームボーイ『ポケモンカードGB』の付録'),
+    (r'Pocket Monsters Fan Book insert', lambda m: '『ポケットモンスター ファンブック』の付録'),
+    (r'Official Card File insert', lambda m: 'オフィシャルカードファイルの付録'),
+    (r'JR East Pokémon Stamp Rally', lambda m: 'JR東日本 ポケモンスタンプラリー'),
+    (r'CoroCoro Best Photo Contest', lambda m: 'コロコロ ベストフォトコンテストの賞品'),
+    (r'64 Mario Stadium Best Photo Contest', lambda m: '64マリオスタジアム ベストフォトコンテストの賞品'),
+    (r'Communication Evolution Campaign', lambda m: '通信進化キャンペーン（拡張シート第3弾のマサキのパソコンで応募）'),
+    (r"Mirage Pokémon: Lugia's Explosive Birth movie pamphlet", lambda m: '映画『幻のポケモン ルギア爆誕』のパンフレット'),
+    (r'Emperor of the Crystal Tower: Entei theatrical release', lambda m: '映画『結晶塔の帝王 ENTEI』の上映館'),
+    (r"Garura Parent/Child Tournament winner's prize", lambda m: 'ガルーラ親子大会の優勝賞'),
+    (r'Blastoise Mega Battle participation', lambda m: 'カメックスメガバトルの参加賞'),
+    (r'Riding on Lapras CD insert', lambda m: 'CD「ラプラスにのって」の付録'),
+    (r"Meowth's Party CD insert", lambda m: 'CD「ニャースのパーティ」の付録'),
+    (r'All Card Calendar', lambda m: 'オールカードカレンダー'),
+    (r'Pokémon Card Game Illust Artist Contest', lambda m: 'ポケモンカードゲーム イラストレーターコンテストの賞品'),
+]
+
+
+def dist_ja(text):
+    """Bulbapedia の配布の記載を日本語に。訳せないものは英語のまま（Bulbapedia）と付ける。日付の括弧は除く。"""
+    if not text:
+        return ''
+    for pat, fn in DIST_JA:
+        m = re.match(pat, text)
+        if m:
+            return fn(m)
+    return re.sub(r'\s*\([^)]*\d{4}\)$', '', text) + '（Bulbapedia）'
 
 
 def card_table(cat, cards, key, qty=None, en_prints=None):
@@ -422,13 +475,31 @@ def page_promos(cat):
         '- 旧裏期のプロモカードには番号がなく、雑誌の付録、キャンペーン、大会の賞品、映画、本・CD の付録などで配られました [X48]。**確実**',
         '- 配布方法と時期は、Bulbapedia の日本の番号なしプロモの一覧 [X48] と突き合わせたものです。突き合わせられなかったカードは空欄にしています。',
         '- 拡張パック・ジムデッキなどと同じカードのプロモ（イラストやマークが違うだけのもの）は、「ほかの収録」に載せています。', '']
+    # Wizards Black Star Promos の日本での初出（pcg-search のカードとの対応がわかったもの）
+    first = {}
+    for key, cards in cat.data.items():
+        for c in cards:
+            e = cat.cur['en_prints'].get(page_id(c))
+            if e and e['set_id'] == 'basep':
+                date = cat.date_of(key, c) or '9999'
+                dist = cat.promo_info.get(page_id(c), {})
+                where = (dist.get('distribution') or dist_ja(dist.get('distribution_en'))) if dist else cat.short_name(key)
+                first.setdefault(int(e['number']), []).append((date, e['name'], c['name'], where.replace('\n', ' ')))
+    L += ['## Wizards Black Star Promos の日本での初出', '',
+          '英語版のプロモ（Wizards Black Star Promos、全 53 枚）は、ミュウ（8・9。日本では「化石の秘密」）を除いて、日本でプロモや特別な商品として先に出たカードです [X41]。'
+          'このページ群のカードと対応がわかったものを載せています（Bulbapedia の英語版カードのページにある日本語のワザ名と照合）。', '',
+          '| 番号 | 英語版 | 日本語名 | 日本での初出 |', '|---|---|---|---|']
+    for num in sorted(first):
+        date, en_name, ja_name, where = sorted(first[num])[0]
+        L.append(f"| {num} | {en_name} | {ja_name} | {date} {md(where)} |")
+    L += ['', f'対応がわかったのは {len(first)} 枚です。', '']
     for k in keys:
         cards = cat.data[k]
         L += [f"## {cat.short_name(k)}", '',
               '| 番号 | カード名 | 種類 | HP | 配布 | 英語版 | ほかの収録 |', '|---|---|---|---|---|---|---|']
         for c in cards:
             info = cat.promo_info.get(page_id(c), {})
-            dist = md(info.get('distribution', ''))
+            dist = md((info.get('distribution') or '').replace('\n', ' ') or dist_ja(info.get('distribution_en')))
             if info.get('date'):
                 dist = f"{info['date']} {dist}"
             L.append('| {} | [{}]({}) | {} | {} | {} | {} | {} |'.format(
@@ -462,7 +533,8 @@ def page_index(cat):
             continue
         n_cards = sum(len(cat.data[k]) for k in keys)
         date, en = rows[group]
-        L.append(f"| {title}（{len(keys)} 種）| {date} | {n_cards} 種 | {en} | [{slug}.md](products/{slug}.md) |")
+        kinds = '旧裏期・neo 期' if group == 'promo' else f'{len(keys)} 種'
+        L.append(f"| {title}（{kinds}）| {date} | {n_cards} 種 | {en} | [{slug}.md](products/{slug}.md) |")
     L += ['', '英語版にあって日本の拡張パックにないカードの、日本での初出は [英語版のみに見られるカード](english-only.md) にあります。', '',
           '## まだ確認できていないこと', '',
           '- 拡張シートの自動販売機の種類（バンダイの「ジャンボカードダス」とする情報があるが未確認）',
@@ -470,6 +542,7 @@ def page_index(cat):
           '- サザンアイランドの 3 枚入りパックの販売場所（ファイル版は上映館だけ）']
     if keys_of(cat, 'promo'):
         L.append('- プロモカードのうち、配布方法を突き合わせられなかったもの（[プロモーションカード](products/promos.md) で空欄のもの）')
+        L.append('- Wizards Black Star Promos のうち、日本のカードとの対応がわからなかったもの（[プロモーションカード](products/promos.md) の表にない番号）')
     L.append('')
     return L
 

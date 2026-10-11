@@ -96,7 +96,7 @@
 | X38 | Bulbapedia「Koga's Ditto (Gym Challenge 10)」 | https://bulbapedia.bulbagarden.net/wiki/Koga%27s_Ditto_(Gym_Challenge_10) |
 | X39 | Serebii「Vending Machine Series」（拡張シートの価格・構成） | https://serebii.net/card/vendingmachineset2 |
 | X40 | Pokumon「Vending Machine Sheet 1〜3」（拡張シートの発売日・シートの構成・正式名） | https://pokumon.com/vending-machine-sheet-1/ |
-| X41 | Bulbapedia の Wizards Black Star Promos 各カードのページ（Pikachu 27、Magmar 44、Scyther 45、Electabuzz 46、Articuno 48、Snorlax 49。日本での初出のシート・英語版の配布・日英の違い） | https://bulbapedia.bulbagarden.net/wiki/Pikachu_(Wizards_Promo_27) ほか |
+| X41 | Bulbapedia「Wizards Black Star Promos (TCG)」と各カードのページ（日本での初出・英語版の配布・日英の違い・日本語のワザ名） | https://bulbapedia.bulbagarden.net/wiki/Wizards_Black_Star_Promos_(TCG) ほか |
 | X42 | Bulbapedia「Tentacruel (Southern Islands 10)」（どくばりの日英の違い） | https://bulbapedia.bulbagarden.net/wiki/Tentacruel_(Southern_Islands_10) |
 | X43 | Bulbapedia の拡張シートのシート構成（Template:ExpansionSheet/Series1〜3）と各カードのページ（Bill's PC、Imakuni?'s Corner、Lose?、Pokémon Machine、Fossil Excavation、Kadabra・Haunter (Vending S3)） | https://bulbapedia.bulbagarden.net/wiki/Template:ExpansionSheet/Series1 ほか |
 | X44 | Bulbapedia「List of Japanese Pokémon Trading Card Game expansions」（日本の弾と商品の発売日・枚数） | https://bulbapedia.bulbagarden.net/wiki/List_of_Japanese_Pok%C3%A9mon_Trading_Card_Game_expansions |

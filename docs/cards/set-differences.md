@@ -31,10 +31,11 @@
 ### 英語版だけ、日本だけのもの
 
 - 英語版に入っていて日本の拡張パックにないカードの一覧: [english-only.md](english-only.md)。
-  - 日本では、拡張パック以外の商品で出たものが中心です [X28][X29][X30]。カードごとの日本での初出は [english-only.md](english-only.md) に載せています（調べた商品の範囲で）。
-    - ポケモンジム（ジムデッキ、1998年〜）
-    - 拡張シート（自動販売機カード）。英語版になったのは 6 枚で、どれも Wizards Black Star Promos（[詳細](products/expansion-sheets.md)）
-    - neo プレミアムファイル
+  - 75 枚とも、日本では拡張パック以外の商品で出たカードです。カードごとの日本での初出は [english-only.md](english-only.md) に載せています [N3][X46][X47][X48]。**確実**
+    - Gym Heroes・Gym Challenge の 52 枚: 47 枚はポケモンジムの構築済みデッキ（1998〜1999年）が初出（[詳細](products/gym-decks.md)）。マチスのエレブー・カツラのガーディ・ナツメのケーシィの 3 枚はデッキの少し前にコロコロコミックの付録で、マスターボール・元気のかたまりの 2 枚は拡張シート第2弾で先に出ています。
+    - Neo Genesis・Discovery・Revelation の 23 枚: neo プレミアムファイル 1〜3（[詳細](products/premium-files.md)）。
+  - 拡張シート（自動販売機カード）のうち英語版になったのは 6 枚で、どれも Wizards Black Star Promos（[詳細](products/expansion-sheets.md)）。
+  - Wizards Black Star Promos は、ミュウ（8・9）を除く全カードが日本でプロモや特別な商品として先に出ています [X41]。対応は [プロモーションカード](products/promos.md) に載せています。
 - **英語版だけの商品**: Base Set 2（2000年）、Legendary Collection（2002年）、Wizards Black Star Promos。
 - **日本だけの商品**:
   - 拡張シート（自動販売機で売られたシート、1998年、第1〜3弾。各 36 種、第3弾はほかにおまけカード 17 種）。英語版になったのは 6 枚だけで、Wizards Black Star Promos 27・44・45・46・48・49 として 2000〜2002年に出た [N3][X30][X41]。**確実**

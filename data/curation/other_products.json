@@ -991,6 +991,420 @@
    "set_name": "Gym Challenge",
    "number": "124",
    "name": "Fervor"
+  },
+  "neopf1001": {
+   "set_id": "neo1",
+   "set_name": "Neo Genesis",
+   "number": "54",
+   "name": "Chikorita"
+  },
+  "neopf1002": {
+   "set_id": "neo1",
+   "set_name": "Neo Genesis",
+   "number": "28",
+   "name": "Bayleef"
+  },
+  "neopf1004": {
+   "set_id": "neo1",
+   "set_name": "Neo Genesis",
+   "number": "56",
+   "name": "Cyndaquil"
+  },
+  "neopf1005": {
+   "set_id": "neo1",
+   "set_name": "Neo Genesis",
+   "number": "46",
+   "name": "Quilava"
+  },
+  "neopf1006": {
+   "set_id": "neo1",
+   "set_name": "Neo Genesis",
+   "number": "18",
+   "name": "Typhlosion"
+  },
+  "neopf1007": {
+   "set_id": "neo1",
+   "set_name": "Neo Genesis",
+   "number": "80",
+   "name": "Totodile"
+  },
+  "neopf1008": {
+   "set_id": "neo1",
+   "set_name": "Neo Genesis",
+   "number": "32",
+   "name": "Croconaw"
+  },
+  "neopf1009": {
+   "set_id": "neo1",
+   "set_name": "Neo Genesis",
+   "number": "5",
+   "name": "Feraligatr"
+  },
+  "neopf2004": {
+   "set_id": "neo2",
+   "set_name": "Neo Discovery",
+   "number": "20",
+   "name": "Espeon"
+  },
+  "neopf2006": {
+   "set_id": "neo2",
+   "set_name": "Neo Discovery",
+   "number": "32",
+   "name": "Umbreon"
+  },
+  "neopf2008": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "34",
+   "name": "Entei"
+  },
+  "neopf3001": {
+   "set_id": "neo3",
+   "set_name": "Neo Revelation",
+   "number": "26",
+   "name": "Sudowoodo"
+  },
+  "neopf3002": {
+   "set_id": "neo3",
+   "set_name": "Neo Revelation",
+   "number": "16",
+   "name": "Celebi"
+  },
+  "neopf3003": {
+   "set_id": "neo3",
+   "set_name": "Neo Revelation",
+   "number": "24",
+   "name": "Sneasel"
+  },
+  "neopf3004": {
+   "set_id": "neo3",
+   "set_name": "Neo Revelation",
+   "number": "22",
+   "name": "Raikou"
+  },
+  "neopf3005": {
+   "set_id": "neo3",
+   "set_name": "Neo Revelation",
+   "number": "17",
+   "name": "Entei"
+  },
+  "neopf3006": {
+   "set_id": "neo3",
+   "set_name": "Neo Revelation",
+   "number": "27",
+   "name": "Suicune"
+  },
+  "neopf3007": {
+   "set_id": "neo3",
+   "set_name": "Neo Revelation",
+   "number": "18",
+   "name": "Ho-oh"
+  },
+  "neopf3008": {
+   "set_id": "neo3",
+   "set_name": "Neo Revelation",
+   "number": "20",
+   "name": "Lugia"
+  },
+  "neopf3009": {
+   "set_id": "neo3",
+   "set_name": "Neo Revelation",
+   "number": "23",
+   "name": "Skarmory"
+  },
+  "1stp001": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "1",
+   "name": "Pikachu"
+  },
+  "1stp002": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "7",
+   "name": "Jigglypuff"
+  },
+  "1stp003": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "1",
+   "name": "Pikachu"
+  },
+  "1stp004": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "7",
+   "name": "Jigglypuff"
+  },
+  "1stp005": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "47",
+   "name": "Mew"
+  },
+  "1stp010": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "2",
+   "name": "Electabuzz"
+  },
+  "1stp012": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "47",
+   "name": "Mew"
+  },
+  "1stp017": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "1",
+   "name": "Pikachu"
+  },
+  "1stp020": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "4",
+   "name": "Pikachu"
+  },
+  "1stp040": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "27",
+   "name": "Lt. Surge's Electabuzz"
+  },
+  "1stp043": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "5",
+   "name": "Dragonite"
+  },
+  "1stp052": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "43",
+   "name": "Machamp"
+  },
+  "1stp057": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "10",
+   "name": "Meowth"
+  },
+  "1stp058": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "13",
+   "name": "Venusaur"
+  },
+  "1stp059": {
+   "set_id": "gym1",
+   "set_name": "Gym Heroes",
+   "number": "35",
+   "name": "Blaine's Growlithe"
+  },
+  "1stp062": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "26",
+   "name": "Pikachu"
+  },
+  "1stp064": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "22",
+   "name": "Articuno"
+  },
+  "1stp065": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "30",
+   "name": "Togepi"
+  },
+  "1stp066": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "29",
+   "name": "Marill"
+  },
+  "1stp070": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "23",
+   "name": "Zapdos"
+  },
+  "1stp071": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "21",
+   "name": "Moltres"
+  },
+  "neop024": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "11",
+   "name": "Eevee"
+  },
+  "neop025": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "33",
+   "name": "Scizor"
+  },
+  "neop029": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "32",
+   "name": "Smeargle"
+  },
+  "neop030": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "37",
+   "name": "Hitmontop"
+  },
+  "neop036": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "39",
+   "name": "Misdreavus"
+  },
+  "neopf1003": {
+   "set_id": "neo1",
+   "set_name": "Neo Genesis",
+   "number": "10",
+   "name": "Meganium"
+  },
+  "neopf2001": {
+   "set_id": "neo2",
+   "set_name": "Neo Discovery",
+   "number": "50",
+   "name": "Unown [N]"
+  },
+  "neopf2002": {
+   "set_id": "neo2",
+   "set_name": "Neo Discovery",
+   "number": "67",
+   "name": "Unown [E]"
+  },
+  "neopf2003": {
+   "set_id": "neo2",
+   "set_name": "Neo Discovery",
+   "number": "69",
+   "name": "Unown [O]"
+  },
+  "neopf2007": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "35",
+   "name": "Pichu"
+  },
+  "neop012": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "31",
+   "name": "Cleffa"
+  },
+  "1stp007": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "3",
+   "name": "Mewtwo"
+  },
+  "1stp008": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "3",
+   "name": "Mewtwo"
+  },
+  "1stp022": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "12",
+   "name": "Mewtwo"
+  },
+  "1stp060": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "19",
+   "name": "Sabrina's Abra"
+  },
+  "1stp011": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "28",
+   "name": "Surfing Pikachu"
+  },
+  "1stp014": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "28",
+   "name": "Surfing Pikachu"
+  },
+  "1stp018": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "25",
+   "name": "Flying Pikachu"
+  },
+  "1stp063": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "25",
+   "name": "Flying Pikachu"
+  },
+  "1stp023": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "15",
+   "name": "Cool Porygon"
+  },
+  "1stp016": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "6",
+   "name": "Arcanine"
+  },
+  "1stp078": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "18",
+   "name": "Team Rocket's Meowth"
+  },
+  "1stp044": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "24",
+   "name": "_____'s Pikachu"
+  },
+  "1stp090": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "24",
+   "name": "_____'s Pikachu"
+  },
+  "neop034": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "38",
+   "name": "Unown [J]"
+  },
+  "neop031": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "36",
+   "name": "Igglybuff"
+  },
+  "1stp026": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "16",
+   "name": "Computer Error"
+  },
+  "1stp041": {
+   "set_id": "basep",
+   "set_name": "Wizards Black Star Promos",
+   "number": "16",
+   "name": "Computer Error"
   }
  },
  "differences": {
@@ -2591,6 +3005,836 @@
      "qty": 8
     }
    ]
+  }
+ },
+ "promos": {
+  "1stp001": {
+   "date": "1996-10-15",
+   "distribution": "小学館「月刊コロコロコミック96年11月号」おまけ",
+   "bulbapedia": "Pikachu [CoroCoro] [Glossy, Ken Sugimori]",
+   "distribution_en": "CoroCoro Comic November 1996 issue insert (October 15, 1996)"
+  },
+  "1stp002": {
+   "date": "1996-10-15",
+   "distribution": "小学館「月刊コロコロコミック96年11月号」おまけ",
+   "bulbapedia": "Jigglypuff [CoroCoro] [Glossy]",
+   "distribution_en": "CoroCoro Comic November 1996 issue insert (October 15, 1996)"
+  },
+  "1stp003": {
+   "date": "1996-11-30",
+   "distribution": "「すぐわかるポケモンカードの遊びかた」おまけ",
+   "bulbapedia": "Pikachu [Asobikata] [Non-glossy, Keiji Kinebuchi]",
+   "distribution_en": "Easily Understand How to Play Pokémon Cards (November 30, 1996)"
+  },
+  "1stp004": {
+   "date": "1996-11-30",
+   "distribution": "「すぐわかるポケモンカードの遊びかた」おまけ",
+   "bulbapedia": "Jigglypuff [Asobikata] [Non-glossy]",
+   "distribution_en": "Easily Understand How to Play Pokémon Cards (November 30, 1996)"
+  },
+  "1stp005": {
+   "date": "1997-01-15",
+   "distribution": "",
+   "bulbapedia": "Mew [CoroCoro] [Glossy]",
+   "distribution_en": "CoroCoro Comic February 1997 issue insert (January 15, 1997)"
+  },
+  "1stp006": {
+   "date": "1997-05-02",
+   "distribution": "",
+   "bulbapedia": "Slowpoke [Playmat]",
+   "distribution_en": "Red, Green & Black Playmats insert (May 2, 1997)"
+  },
+  "1stp007": {
+   "date": "1997-05-15",
+   "distribution": "",
+   "bulbapedia": "Mewtwo [CoroCoro]",
+   "distribution_en": "CoroCoro Comic June 1997 issue insert (May 15, 1997)"
+  },
+  "1stp008": {
+   "date": "1997-05-20",
+   "distribution": "",
+   "bulbapedia": "Mewtwo [Fan Book]",
+   "distribution_en": "Pocket Monsters Fan Book insert (May 20, 1997)"
+  },
+  "1stp009": {
+   "date": "1997-05-20",
+   "distribution": "",
+   "bulbapedia": "Super Energy Retrieval [Fan Book]",
+   "distribution_en": "Pocket Monsters Fan Book insert (May 20, 1997)"
+  },
+  "1stp010": {
+   "date": "1997-06-13",
+   "distribution": "",
+   "bulbapedia": "Electabuzz [Card File]",
+   "distribution_en": "Official Card File insert (June 13, 1997)"
+  },
+  "1stp011": {
+   "date": "1997-08",
+   "distribution": "",
+   "bulbapedia": "Surfing Pikachu [JR] [Non-glossy]",
+   "distribution_en": "JR East Pokémon Stamp Rally (August 9-17, 1997)"
+  },
+  "1stp012": {
+   "date": "1997-08",
+   "distribution": "",
+   "bulbapedia": "Mew [CoroCoro] [Non-glossy]",
+   "distribution_en": "JR East Pokémon Stamp Rally (August 9-17, 1997)"
+  },
+  "1stp013": {
+   "date": "1997-08-15",
+   "distribution": "",
+   "bulbapedia": "Imakuni? [CoroCoro] [Glossy]",
+   "distribution_en": "CoroCoro Comic September 1997 issue insert (August 15, 1997)"
+  },
+  "1stp014": {
+   "date": "1997-08-15",
+   "distribution": "",
+   "bulbapedia": "Surfing Pikachu [CoroCoro] [Glossy]",
+   "distribution_en": "CoroCoro Comic September 1997 issue insert (August 15, 1997)"
+  },
+  "1stp015": {
+   "date": "1997",
+   "distribution": "",
+   "bulbapedia": "Pokémon Illustrator [CoroCoro]",
+   "distribution_en": "Pokémon Card Game Illust Artist Contest / Mewtwo's Counterattack Commemoration Illust Artist Contest / Pikachu's Summer Vacation Commemoration Illust Artist Contest"
+  },
+  "1stp016": {
+   "date": "1997-10",
+   "distribution": "",
+   "bulbapedia": "Arcanine [Toyota]",
+   "distribution_en": "Toyota campaign (October-December 1997)"
+  },
+  "1stp017": {
+   "date": "1997-10",
+   "distribution": "",
+   "bulbapedia": "Pikachu [Toyota]",
+   "distribution_en": "Toyota campaign (October-December 1997)"
+  },
+  "1stp018": {
+   "date": "1997-10-15",
+   "distribution": "",
+   "bulbapedia": "Flying Pikachu [CoroCoro]",
+   "distribution_en": "CoroCoro Comic November 1997 issue insert (October 15, 1997)"
+  },
+  "1stp019": {
+   "date": "1997-11-18",
+   "distribution": "",
+   "bulbapedia": "Dark Persian [Pokémon Card Fan Club]",
+   "distribution_en": "Pokémon Card Fan Club Vol. 3 (November 18, 1997)"
+  },
+  "1stp020": {
+   "date": "1997",
+   "distribution": "",
+   "bulbapedia": "Pikachu [WHF Special Sheet]",
+   "distribution_en": "World Hobby Fair Special Limited Expansion Sheet"
+  },
+  "1stp021": {
+   "date": "1997",
+   "distribution": "",
+   "bulbapedia": "Mew [WHF Special Sheet]",
+   "distribution_en": "World Hobby Fair Special Limited Expansion Sheet"
+  },
+  "1stp022": {
+   "date": "1997",
+   "distribution": "",
+   "bulbapedia": "Mewtwo [WHF Special Sheet]",
+   "distribution_en": "World Hobby Fair Special Limited Expansion Sheet"
+  },
+  "1stp023": {
+   "date": "1997-12-10",
+   "distribution": "",
+   "bulbapedia": "Cool Porygon [Nintendo 64]",
+   "distribution_en": "Nintendo 64 Double Get Campaign (December 10, 1997-January 31, 1998)"
+  },
+  "1stp024": {
+   "date": "1997-12-10",
+   "distribution": "",
+   "bulbapedia": "Hungry Snorlax [Nintendo 64]",
+   "distribution_en": "Nintendo 64 Double Get Campaign (December 10, 1997-January 31, 1998)"
+  },
+  "1stp025": {
+   "date": "1997-12-15",
+   "distribution": "",
+   "bulbapedia": "Meowth [CoroCoro]",
+   "distribution_en": "CoroCoro Comic January 1998 issue insert (December 15, 1997)"
+  },
+  "1stp026": {
+   "date": "1997-12-15",
+   "distribution": "",
+   "bulbapedia": "Computer Error [CoroCoro] [Glossy]",
+   "distribution_en": "CoroCoro Comic January 1998 issue insert (December 15, 1997)"
+  },
+  "1stp027": {
+   "date": "1998-02",
+   "distribution": "",
+   "bulbapedia": "Trade Please! [Trade Please]",
+   "distribution_en": "Trade Please campaign (February 10-July 31, 1998)"
+  },
+  "1stp028": {
+   "date": "1998-02",
+   "distribution": "",
+   "bulbapedia": "Blastoise [Trade Please]",
+   "distribution_en": "Trade Please campaign (February 10-July 31, 1998)"
+  },
+  "1stp029": {
+   "date": "1998-02",
+   "distribution": "",
+   "bulbapedia": "Venusaur [Trade Please]",
+   "distribution_en": "Trade Please campaign (February 10-July 31, 1998)"
+  },
+  "1stp030": {
+   "date": "1998-02",
+   "distribution": "",
+   "bulbapedia": "Charizard [Trade Please]",
+   "distribution_en": "Trade Please campaign (February 10-July 31, 1998)"
+  },
+  "1stp031": {
+   "date": "1998-02-15",
+   "distribution": "",
+   "bulbapedia": "Misty's Staryu [CoroCoro]",
+   "distribution_en": "CoroCoro Comic March 1998 issue insert (February 15, 1998)"
+  },
+  "1stp032": {
+   "date": "1998-02-15",
+   "distribution": "",
+   "bulbapedia": "Brock's Onix [CoroCoro]",
+   "distribution_en": "CoroCoro Comic March 1998 issue insert (February 15, 1998)"
+  },
+  "1stp033": {
+   "date": "1998-03-15",
+   "distribution": "",
+   "bulbapedia": "Farfetch'd [CoroCoro]",
+   "distribution_en": "CoroCoro Comic April 1998 issue insert (March 15, 1998)"
+  },
+  "1stp034": {
+   "date": "1998-03-15",
+   "distribution": "",
+   "bulbapedia": "Cubone [CoroCoro]",
+   "distribution_en": "CoroCoro Comic April 1998 issue insert (March 15, 1998)"
+  },
+  "1stp035": {
+   "date": "1998-03-15",
+   "distribution": "",
+   "bulbapedia": "Jynx [CoroCoro]",
+   "distribution_en": "CoroCoro Comic April 1998 issue insert (March 15, 1998)"
+  },
+  "1stp036": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Magikarp [University]",
+   "distribution_en": "Celadon University Hyper Professor Test certification prize"
+  },
+  "1stp037": {
+   "date": "1998",
+   "distribution": "",
+   "bulbapedia": "Kangaskhan [Garura Parent/Child]",
+   "distribution_en": "Garura Parent/Child Tournament winner's prize"
+  },
+  "1stp038": {
+   "date": "1998-06-10",
+   "distribution": "",
+   "bulbapedia": "Touch Change! [Pokémon Card Fan Club]",
+   "distribution_en": "Pokémon Card Fan Club Vol. 5 insert (June 10, 1998)"
+  },
+  "1stp039": {
+   "date": "1998-07-15",
+   "distribution": "",
+   "bulbapedia": "Erika's Dratini [CoroCoro]",
+   "distribution_en": "CoroCoro Comic August 1998 issue insert (July 15, 1998)"
+  },
+  "1stp040": {
+   "date": "1998-07-15",
+   "distribution": "",
+   "bulbapedia": "Lt. Surge's Electabuzz [CoroCoro]",
+   "distribution_en": "CoroCoro Comic August 1998 issue insert (July 15, 1998)"
+  },
+  "1stp041": {
+   "date": "1998",
+   "distribution": "",
+   "bulbapedia": "Computer Error [Kamex Mega Battle] [Non-glossy]",
+   "distribution_en": "Blastoise Mega Battle participation prize"
+  },
+  "1stp042": {
+   "date": "1998-11",
+   "distribution": "",
+   "bulbapedia": "Flying Pikachu [ANA promo]",
+   "distribution_en": "All Nippon Airlines \"Get in a Jet! Double Chance Campaign\" (November 1-31, 1998)"
+  },
+  "1stp043": {
+   "date": "1998-11",
+   "distribution": "",
+   "bulbapedia": "Dragonite [ANA]",
+   "distribution_en": "All Nippon Airlines \"Get in a Jet! Double Chance Campaign\" (November 1-31, 1998)"
+  },
+  "1stp044": {
+   "date": "1998-11-05",
+   "distribution": "",
+   "bulbapedia": "_____'s Pikachu [All Card Calendar]",
+   "distribution_en": "All Card Calendar (November 5, 1998)"
+  },
+  "1stp045": {
+   "date": "1998-11-13",
+   "distribution": "",
+   "bulbapedia": "Diglett [Asobikata]",
+   "distribution_en": "Easily Understand How to Play Pokémon Cards: Latest Edition (November 13, 1998)"
+  },
+  "1stp046": {
+   "date": "1998-11-13",
+   "distribution": "",
+   "bulbapedia": "Dugtrio [Asobikata]",
+   "distribution_en": "Easily Understand How to Play Pokémon Cards: Latest Edition (November 13, 1998)"
+  },
+  "1stp047": {
+   "date": "1998-11-15",
+   "distribution": "",
+   "bulbapedia": "Erika's Bulbasaur [CoroCoro]",
+   "distribution_en": "CoroCoro Comic December 1998 issue insert (November 15, 1998)"
+  },
+  "1stp048": {
+   "date": "1998-11-15",
+   "distribution": "",
+   "bulbapedia": "Misty's Tentacool [CoroCoro]",
+   "distribution_en": "CoroCoro Comic December 1998 issue insert (November 15, 1998)"
+  },
+  "1stp049": {
+   "date": "1998-11-15",
+   "distribution": "",
+   "bulbapedia": "Brock's Mankey [CoroCoro]",
+   "distribution_en": "CoroCoro Comic December 1998 issue insert (November 15, 1998)"
+  },
+  "1stp050": {
+   "date": "1998-11-15",
+   "distribution": "",
+   "bulbapedia": "Lt. Surge's Jolteon [CoroCoro]",
+   "distribution_en": "CoroCoro Comic December 1998 issue insert (November 15, 1998)"
+  },
+  "1stp051": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Omastar [Communication Evolution Campaign]",
+   "distribution_en": "Communication Evolution Campaign"
+  },
+  "1stp052": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Machamp [Communication Evolution Campaign]",
+   "distribution_en": "Communication Evolution Campaign"
+  },
+  "1stp053": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Gengar [Communication Evolution Campaign]",
+   "distribution_en": "Communication Evolution Campaign"
+  },
+  "1stp054": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Golem [Communication Evolution Campaign]",
+   "distribution_en": "Communication Evolution Campaign"
+  },
+  "1stp055": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Alakazam [Communication Evolution Campaign]",
+   "distribution_en": "Communication Evolution Campaign"
+  },
+  "1stp056": {
+   "date": "1998",
+   "distribution": "",
+   "bulbapedia": "Dragonite [Pokémon Card GB]",
+   "distribution_en": "Pokémon Trading Card Game insert"
+  },
+  "1stp057": {
+   "date": "1999-01-15",
+   "distribution": "",
+   "bulbapedia": "Meowth [CoroCoro promo]",
+   "distribution_en": "CoroCoro Comic February 1999 issue insert (January 15, 1999)"
+  },
+  "1stp058": {
+   "date": "1999-01-28",
+   "distribution": "",
+   "bulbapedia": "Venusaur [Pokémon Card GB]",
+   "distribution_en": "Pokémon Card GB Official Guidebook insert (January 28, 1999)"
+  },
+  "1stp059": {
+   "date": "1999-02-15",
+   "distribution": "",
+   "bulbapedia": "Blaine's Growlithe [CoroCoro]",
+   "distribution_en": "CoroCoro Comic March 1999 issue insert (February 15, 1999)"
+  },
+  "1stp060": {
+   "date": "1999-02-15",
+   "distribution": "",
+   "bulbapedia": "Sabrina's Abra [CoroCoro]",
+   "distribution_en": "CoroCoro Comic March 1999 issue insert (February 15, 1999)"
+  },
+  "1stp061": {
+   "date": "1999-05-22",
+   "distribution": "",
+   "bulbapedia": "Mankey [How I Became a Pokémon Card]",
+   "distribution_en": "How I Became a Pokémon Card Vol. 1 insert (May 22, 1999)"
+  },
+  "1stp062": {
+   "date": "1999-05-28",
+   "distribution": "",
+   "bulbapedia": "Pikachu [Pokémon Card Trainers]",
+   "distribution_en": "Pokémon Card Trainers Vol. 1 insert (May 28, 1999)"
+  },
+  "1stp063": {
+   "date": "1999-06",
+   "distribution": "",
+   "bulbapedia": "Flying Pikachu [ANA promo]",
+   "distribution_en": "All Nippon Airlines \"Everyone's Happy Campaign\" phase 1 (June 1-July 31, 1999)"
+  },
+  "1stp064": {
+   "date": "1999-06",
+   "distribution": "",
+   "bulbapedia": "Articuno [ANA]",
+   "distribution_en": "All Nippon Airlines \"Everyone's Happy Campaign\" phase 1 (June 1-July 31, 1999)"
+  },
+  "1stp065": {
+   "date": "1999-05-15",
+   "distribution": "",
+   "bulbapedia": "Togepi [CoroCoro]",
+   "distribution_en": "CoroCoro Comic June 1999 issue insert (May 15, 1999)"
+  },
+  "1stp066": {
+   "date": "1999-06-15",
+   "distribution": "",
+   "bulbapedia": "Marill [CoroCoro]",
+   "distribution_en": "CoroCoro Comic July 1999 issue insert (June 15, 1999)"
+  },
+  "1stp067": {
+   "date": "1999-07-15",
+   "distribution": "",
+   "bulbapedia": "Koga's Ninja Gym [CoroCoro]",
+   "distribution_en": "CoroCoro Comic August 1999 issue insert (July 15, 1999)"
+  },
+  "1stp068": {
+   "date": "1999-07-15",
+   "distribution": "",
+   "bulbapedia": "Giovanni's Nidoking [CoroCoro]",
+   "distribution_en": "CoroCoro Comic August 1999 issue insert (July 15, 1999)"
+  },
+  "1stp069": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Ancient Mew [The Power of One]",
+   "distribution_en": "Mirage Pokémon: Lugia's Explosive Birth movie pamphlet"
+  },
+  "1stp070": {
+   "date": "1999-08",
+   "distribution": "",
+   "bulbapedia": "Zapdos [ANA]",
+   "distribution_en": "All Nippon Airlines \"Everyone's Happy Campaign\" phase 2 (August 1-September 30, 1999)"
+  },
+  "1stp071": {
+   "date": "1999-08",
+   "distribution": "",
+   "bulbapedia": "Moltres [ANA]",
+   "distribution_en": "All Nippon Airlines \"Everyone's Happy Campaign\" phase 2 (August 1-September 30, 1999)"
+  },
+  "1stp072": {
+   "date": "1999-08-15",
+   "distribution": "",
+   "bulbapedia": "Hama-chan's Slowking [CoroCoro]",
+   "distribution_en": "CoroCoro Comic September 1999 issue insert (August 15, 1999)"
+  },
+  "1stp073": {
+   "date": "1999-08-21",
+   "distribution": "",
+   "bulbapedia": "Misty's Treatment [CD]",
+   "distribution_en": "Riding on Lapras CD insert (August 21, 1999)"
+  },
+  "1stp074": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Tropical Wind [Tropical Mega Battle]",
+   "distribution_en": "Tropical Mega Battle finals participation prize"
+  },
+  "1stp075": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Exeggutor [Tropical Mega Battle] [Bilingual] [Non-glossy]",
+   "distribution_en": "Tropical Mega Battle finals participation prize"
+  },
+  "1stp076": {
+   "date": "1999-09-22",
+   "distribution": "",
+   "bulbapedia": "Psyduck [How I Became a Pokémon Card]",
+   "distribution_en": "How I Became a Pokémon Card Vol. 2 insert (September 22, 1999)"
+  },
+  "1stp077": {
+   "date": "1999-10-01",
+   "distribution": "",
+   "bulbapedia": "Exeggutor [Pokémon Card Trainers] [Bilingual] [Glossy]",
+   "distribution_en": "Pokémon Card Trainers Vol. 3 insert (October 1, 1999)"
+  },
+  "1stp078": {
+   "date": "1999-10-27",
+   "distribution": "",
+   "bulbapedia": "Team Rocket's Meowth [CD]",
+   "distribution_en": "Meowth's Party CD insert (October 27, 1999)"
+  },
+  "1stp079": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Trainer Certification Card [Fan Club]",
+   "distribution_en": "Grand Party 1999-2000 campaign"
+  },
+  "1stp080": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Gyarados [Base Set]",
+   "distribution_en": "CoroCoro Best Photo Contest"
+  },
+  "1stp081": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Pikachu [Base Set]",
+   "distribution_en": "CoroCoro Best Photo Contest"
+  },
+  "1stp082": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Poliwag [Base Set]",
+   "distribution_en": "CoroCoro Best Photo Contest"
+  },
+  "1stp083": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Bulbasaur [Base Set]",
+   "distribution_en": "CoroCoro Best Photo Contest"
+  },
+  "1stp084": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Magikarp [Base Set]",
+   "distribution_en": "CoroCoro Best Photo Contest"
+  },
+  "1stp085": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Squirtle [Base Set]",
+   "distribution_en": "64 Mario Stadium Best Photo Contest"
+  },
+  "1stp086": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Koffing [Base Set]",
+   "distribution_en": "64 Mario Stadium Best Photo Contest"
+  },
+  "1stp087": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Chansey [Base Set]",
+   "distribution_en": "64 Mario Stadium Best Photo Contest"
+  },
+  "1stp088": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Articuno [Fossil]",
+   "distribution_en": "64 Mario Stadium Best Photo Contest"
+  },
+  "1stp089": {
+   "date": "1999",
+   "distribution": "",
+   "bulbapedia": "Charmander [Base Set]",
+   "distribution_en": "64 Mario Stadium Best Photo Contest"
+  },
+  "1stp090": {
+   "date": "2001-09-23",
+   "distribution": "",
+   "bulbapedia": "_____'s Pikachu [How I Became a Pokémon Card]",
+   "distribution_en": "How I Became a Pokémon Card Vol. 6 insert (September 23, 2001)"
+  },
+  "neop001": {
+   "date": "1999-12-01",
+   "distribution": "",
+   "bulbapedia": "Murkrow [Pokémon Card Trainers]",
+   "distribution_en": "Pokémon Card Trainers Vol. 4 insert (December 1, 1999)"
+  },
+  "neop002": {
+   "date": "1999-12-01",
+   "distribution": "",
+   "bulbapedia": "Darkness Energy [Pokémon Card Trainers]",
+   "distribution_en": "Pokémon Card Trainers Vol. 4 insert (December 1, 1999)"
+  },
+  "neop003": {
+   "date": "1999-12-15",
+   "distribution": "",
+   "bulbapedia": "Wooper [CoroCoro]",
+   "distribution_en": "CoroCoro Comic January 2000 issue insert (December 15, 1999)"
+  },
+  "neop004": {
+   "date": "2000",
+   "distribution": "",
+   "bulbapedia": "Berry [Champion Road]",
+   "distribution_en": "Champion Road 2000: 3-Man Tournament Corner"
+  },
+  "neop005": {
+   "date": "2000",
+   "distribution": "",
+   "bulbapedia": "Miracle Berry [Champion Road]",
+   "distribution_en": "Champion Road 2000: 3-Man Tournament Corner"
+  },
+  "neop006": {
+   "date": "2000",
+   "distribution": "",
+   "bulbapedia": "Chikorita [WHF]",
+   "distribution_en": "World Hobby Fair 2000 commemoration card"
+  },
+  "neop007": {
+   "date": "2000",
+   "distribution": "",
+   "bulbapedia": "Cyndaquil [WHF]",
+   "distribution_en": "World Hobby Fair 2000 commemoration card"
+  },
+  "neop008": {
+   "date": "2000",
+   "distribution": "",
+   "bulbapedia": "Totodile [WHF]",
+   "distribution_en": "World Hobby Fair 2000 commemoration card"
+  },
+  "neop009": {
+   "date": "2000",
+   "distribution": "",
+   "bulbapedia": "Chikorita [Champion Road]",
+   "distribution_en": "Champion Road 2000 participation prize"
+  },
+  "neop010": {
+   "date": "2000",
+   "distribution": "",
+   "bulbapedia": "Cyndaquil [Champion Road]",
+   "distribution_en": "Champion Road 2000 participation prize"
+  },
+  "neop011": {
+   "date": "2000",
+   "distribution": "",
+   "bulbapedia": "Totodile [Champion Road]",
+   "distribution_en": "Champion Road 2000 participation prize"
+  },
+  "neop012": {
+   "date": "2000-01-15",
+   "distribution": "",
+   "bulbapedia": "Cleffa [CoroCoro]",
+   "distribution_en": "CoroCoro Comic February 2000 issue insert (January 15, 2000)"
+  },
+  "neop013": {
+   "date": "2000-01-22",
+   "distribution": "",
+   "bulbapedia": "Jynx [How I Became a Pokémon Card]",
+   "distribution_en": "How I Became a Pokémon Card Vol. 3 insert (January 22, 2000)"
+  },
+  "neop014": {
+   "date": "2000-03-01",
+   "distribution": "",
+   "bulbapedia": "Steelix [Pokémon Card Trainers]",
+   "distribution_en": "Pokémon Card Trainers Vol. 5 insert (March 1, 2000)"
+  },
+  "neop015": {
+   "date": "2000",
+   "distribution": "ポケモンカードワールドチャレンジ(九州地方)",
+   "bulbapedia": "Lucky Stadium [World Challenge Summer] [Onix]",
+   "distribution_en": "World Challenge Summer participation prize (Kyūshū conference)"
+  },
+  "neop016": {
+   "date": "2000",
+   "distribution": "ポケモンカードワールドチャレンジ(関東地方)",
+   "bulbapedia": "Lucky Stadium [World Challenge Summer] [Lugia]",
+   "distribution_en": "World Challenge Summer participation prize (Kantō conference)"
+  },
+  "neop017": {
+   "date": "2000",
+   "distribution": "ポケモンカードワールドチャレンジ(関西地方)",
+   "bulbapedia": "Lucky Stadium [World Challenge Summer] [Ho-Oh]",
+   "distribution_en": "World Challenge Summer participation prize (Kansai conference)"
+  },
+  "neop018": {
+   "date": "2000",
+   "distribution": "ポケモンカードワールドチャレンジ(中国・四国地方)",
+   "bulbapedia": "Lucky Stadium [World Challenge Summer] [Gyarados]",
+   "distribution_en": "World Challenge Summer participation prize (Chūgoku/Shikoku conference)"
+  },
+  "neop019": {
+   "date": "2000",
+   "distribution": "ポケモンカードワールドチャレンジ(中部地方)",
+   "bulbapedia": "Lucky Stadium [World Challenge Summer] [Zapdos]",
+   "distribution_en": "World Challenge Summer participation prize (Chūbu conference)"
+  },
+  "neop020": {
+   "date": "2000",
+   "distribution": "ポケモンカードワールドチャレンジ(東北地方)",
+   "bulbapedia": "Lucky Stadium [World Challenge Summer] [Diglett]",
+   "distribution_en": "World Challenge Summer participation prize (Tōhoku conference)"
+  },
+  "neop021": {
+   "date": "2000",
+   "distribution": "ポケモンカードワールドチャレンジ(北信越地方)",
+   "bulbapedia": "Lucky Stadium [World Challenge Summer] [Mew]",
+   "distribution_en": "World Challenge Summer participation prize (Hokushin'etsu conference)"
+  },
+  "neop022": {
+   "date": "2000",
+   "distribution": "ポケモンカードワールドチャレンジ(北海道)",
+   "bulbapedia": "Lucky Stadium [World Challenge Summer] [Pikachu]",
+   "distribution_en": "World Challenge Summer participation prize (Hokkaidō conference)"
+  },
+  "neop023": {
+   "date": "2000",
+   "distribution": "",
+   "bulbapedia": "Porygon [Fan Club]",
+   "distribution_en": "Pokémon Card Fan Club 700 GET point prize"
+  },
+  "neop024": {
+   "date": "2000",
+   "distribution": "",
+   "bulbapedia": "Eevee [Fan Club]",
+   "distribution_en": "Pokémon Card Fan Club 500 GET point prize"
+  },
+  "neop025": {
+   "date": "2000-06-15",
+   "distribution": "",
+   "bulbapedia": "Scizor [CoroCoro]",
+   "distribution_en": "CoroCoro Comic July 2000 issue insert (June 15, 2000)"
+  },
+  "neop026": {
+   "date": "2000-06-28",
+   "distribution": "",
+   "bulbapedia": "Dance! Neo Imakuni? [CD]",
+   "distribution_en": "Can You Name All the Pokémon Neo? CD insert (June 28, 2000)"
+  },
+  "neop027": {
+   "date": "2000",
+   "distribution": "",
+   "bulbapedia": "Lucky Stadium [Tropical Mega Battle] [Bilingual]",
+   "distribution_en": "Tropical Mega Battle finals participation prize"
+  },
+  "neop028": {
+   "date": "2000-07",
+   "distribution": "",
+   "bulbapedia": "Marill [ANA]",
+   "distribution_en": "All Nippon Airlines \"Get in a Jet! 2000\" campaign phase 1 (July 1-August 31, 2000)"
+  },
+  "neop029": {
+   "date": "2000-07-01",
+   "distribution": "",
+   "bulbapedia": "Smeargle [Pokémon Card Trainers]",
+   "distribution_en": "Pokémon Card Trainers Vol. 7 insert (July 1, 2000)"
+  },
+  "neop030": {
+   "date": "2000-07-08",
+   "distribution": "",
+   "bulbapedia": "Hitmontop [Emperor of the Crystal Tower: Entei]",
+   "distribution_en": "Emperor of the Crystal Tower: Entei theatrical release"
+  },
+  "neop031": {
+   "date": "2000-07-08",
+   "distribution": "",
+   "bulbapedia": "Igglybuff [Emperor of the Crystal Tower: Entei]",
+   "distribution_en": "Emperor of the Crystal Tower: Entei theatrical release"
+  },
+  "neop032": {
+   "date": "2000-08-23",
+   "distribution": "",
+   "bulbapedia": "Sunkern [How I Became a Pokémon Card]",
+   "distribution_en": "How I Became a Pokémon Card Vol. 4 insert (August 23, 2000)"
+  },
+  "neop033": {
+   "date": "2000-09",
+   "distribution": "",
+   "bulbapedia": "Togepi [ANA]",
+   "distribution_en": "All Nippon Airlines \"Get in a Jet! 2000\" campaign phase 2 (September 1-October 31, 2000)"
+  },
+  "neop034": {
+   "date": "2000-09-01",
+   "distribution": "",
+   "bulbapedia": "Unown J [Pokémon Card Trainers]",
+   "distribution_en": "Pokémon Card Trainers Vol. 8 insert (September 1, 2000)"
+  },
+  "neop035": {
+   "date": "2000-10-15",
+   "distribution": "",
+   "bulbapedia": "Unown R [CoroCoro]",
+   "distribution_en": "CoroCoro Comic November 2000 issue insert (October 15, 2000)"
+  },
+  "neop036": {
+   "date": "2000-12-01",
+   "distribution": "",
+   "bulbapedia": "Misdreavus [Pokémon Card Trainers]",
+   "distribution_en": "Pokémon Card Trainers Vol. 9 insert (December 1, 2000)"
+  },
+  "neop037": {
+   "date": "2000-12-15",
+   "distribution": "",
+   "bulbapedia": "Smoochum [CoroCoro]",
+   "distribution_en": "CoroCoro Comic January 2001 issue insert (December 15, 2000)"
+  },
+  "neop038": {
+   "date": "2001-01-01",
+   "distribution": "",
+   "bulbapedia": "Dunsparce [Information Pack]",
+   "distribution_en": "Pokémon Card Information Vol. 1 insert (January 1, 2001)"
+  },
+  "neop039": {
+   "date": "2001-03-01",
+   "distribution": "",
+   "bulbapedia": "Dark Ivysaur [Pokémon Card Trainers]",
+   "distribution_en": "Pokémon Card Trainers Vol. 10 insert (March 1, 2001)"
+  },
+  "neop040": {
+   "date": "2001-03-01",
+   "distribution": "",
+   "bulbapedia": "Dark Venusaur [Pokémon Card Trainers]",
+   "distribution_en": "Pokémon Card Trainers Vol. 10 insert (March 1, 2001)"
+  },
+  "neop041": {
+   "date": "2001",
+   "distribution": "",
+   "bulbapedia": "Team GR's Mewtwo [Pokémon Card GB2]",
+   "distribution_en": "Pokémon Trading Card Game 2: The Invasion of Team GR! insert"
+  },
+  "neop042": {
+   "date": "2001",
+   "distribution": "",
+   "bulbapedia": "Lugia [Pokémon Card GB2]",
+   "distribution_en": "Pokémon Card GB2: Here Comes Team GR! insert"
+  },
+  "neop043": {
+   "date": "2001-04-01",
+   "distribution": "",
+   "bulbapedia": "Bellossom [Information Pack]",
+   "distribution_en": "Pokémon Card Information Vol. 2 insert (April 1, 2001)"
+  },
+  "neop044": {
+   "date": "2001-04-15",
+   "distribution": "",
+   "bulbapedia": "Shining Mew [CoroCoro]",
+   "distribution_en": "CoroCoro Comic May 2001 issue insert (April 15, 2001)"
+  },
+  "neop045": {
+   "date": "2001-04-12",
+   "distribution": "",
+   "bulbapedia": "Dark Fearow [Pokémon Card GB2]",
+   "distribution_en": "Pokémon Card GB2: Here Comes Team GR! Official Guidebook insert (April 12, 2001)"
+  },
+  "neop046": {
+   "date": "2001",
+   "distribution": "",
+   "bulbapedia": "Shining Magikarp [Fan Club]",
+   "distribution_en": "Pokémon Card Fan Club 600 GET point prize"
+  },
+  "neop047": {
+   "date": "2001-07-23",
+   "distribution": "",
+   "bulbapedia": "Hoppip [How I Became a Pokémon Card]",
+   "distribution_en": "How I Became a Pokémon Card Vol. 5 insert (July 23, 2001)"
+  },
+  "neop048": {
+   "date": null,
+   "distribution": "",
+   "bulbapedia": null,
+   "distribution_en": null
   }
  }
 }

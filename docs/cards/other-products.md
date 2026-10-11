@@ -13,6 +13,10 @@
 |---|---|---|---|---|
 | 拡張シート（3 種）| 1998-03〜1998-11 | 125 種 | 英語版になったのは 6 枚（Wizards Black Star Promos） | [expansion-sheets.md](products/expansion-sheets.md) |
 | 映画公開記念パック「サザンアイランド」（1 種）| 1999-07-17 | 18 種 | Southern Islands（2001）の 18 枚 | [southern-islands.md](products/southern-islands.md) |
+| ポケモンジム（構築済みデッキ）（6 種）| 1998-04〜1999-02 | 153 種 | デッキにしかなかったカードは Gym Heroes・Gym Challenge へ | [gym-decks.md](products/gym-decks.md) |
+| クイックスターターギフト（1 種）| 1998-12-04 | 58 種 | 再録だけ | [quick-starter-gift.md](products/quick-starter-gift.md) |
+| neo プレミアムファイル（3 種）| 1999-12〜2000-11 | 27 種 | Neo Genesis・Discovery・Revelation へ | [premium-files.md](products/premium-files.md) |
+| プロモーションカード（旧裏期・neo 期）| 1996〜2001 | 138 種 | 一部が Wizards Black Star Promos など | [promos.md](products/promos.md) |
 
 英語版にあって日本の拡張パックにないカードの、日本での初出は [英語版のみに見られるカード](english-only.md) にあります。
 
@@ -21,3 +25,5 @@
 - 拡張シートの自動販売機の種類（バンダイの「ジャンボカードダス」とする情報があるが未確認）
 - 青版の「化石の発掘」「月の石」のレアリティマークの有無（pcg-search と Bulbapedia で食い違い）
 - サザンアイランドの 3 枚入りパックの販売場所（ファイル版は上映館だけ）
+- プロモカードのうち、配布方法を突き合わせられなかったもの（[プロモーションカード](products/promos.md) で空欄のもの）
+- Wizards Black Star Promos のうち、日本のカードとの対応がわからなかったもの（[プロモーションカード](products/promos.md) の表にない番号）
