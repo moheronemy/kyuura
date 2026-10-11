@@ -170,6 +170,11 @@ def parse_card(page_html):
     return card
 
 
+# 出力に残す欄（図鑑の説明文・身長・体重などカードテキスト以外は入れない）
+KEEP_FIELDS = ('カード名称', 'LV.', 'カード分類', '進化条件', 'HP', 'タイプ', '弱点（×2）', '抵抗力（-30）',
+               'にげる', 'イラストレーター', 'レアリティ', 'シリーズ', '備考')
+
+
 def extract(cache, out):
     result = {'source': BASE, 'note': 'なぞのばしょ（nazonobasho.com）のカード個別ページに掲載された日本版のカードテキスト。scripts/nazonobasho.py で抽出。',
               'sets': {}}
@@ -182,6 +187,7 @@ def extract(cache, out):
                 print(f'missing: {u}', file=sys.stderr)
                 continue
             c = parse_card(path.read_text(encoding='utf-8'))
+            c['fields'] = {k: v for k, v in c['fields'].items() if k in KEEP_FIELDS}
             c.update({'url': u, 'list_position': pos})
             cards.append(c)
         result['sets'][page] = {'tcgdex_set': set_id, 'cards': cards}

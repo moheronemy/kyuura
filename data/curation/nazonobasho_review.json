@@ -1,0 +1,19 @@
+{
+ "_comment": "なぞのばしょの記載と英語版データの食い違いの確認結果。キーは「カード id|項目」。verdict: site_error=サイトの誤記（Scrydex 由来の日本版データが英語版と一致）、en_data_error=英語版データの誤り（en_fixes.json で補正）、possible_difference=日英で本当に違う可能性（card_differences.json に記載）。",
+ "PMCG1-003|name": {"verdict": "site_error", "note": "トランセルのページのカード名が「キャタピー」"},
+ "PMCG1-008|damage": {"verdict": "site_error", "note": "つるのムチのダメージが 60（Scrydex 由来・英語版とも 30）"},
+ "PMCG1-027|cost": {"verdict": "site_error", "note": "からにこもるのコストが無無（Scrydex 由来・英語版とも水無）"},
+ "PMCG1-056|name": {"verdict": "site_error", "note": "「ダクトリオ」と誤記"},
+ "PMCG2-021|retreat": {"verdict": "site_error", "note": "にげるコストが 1（Scrydex 由来・英語版とも 0）"},
+ "PMCG2-040|retreat": {"verdict": "site_error", "note": "にげるコストが 1（Scrydex 由来・英語版とも 0）"},
+ "PMCG3-011|retreat": {"verdict": "site_error", "note": "にげるコストが 1（Scrydex 由来・英語版とも 0）"},
+ "PMCG3-023|damage": {"verdict": "site_error", "note": "ふぶきのダメージが空欄（Scrydex 由来・英語版とも 50）"},
+ "PMCG4-002|cost": {"verdict": "site_error", "note": "たいあたりのコストが草（Scrydex 由来・英語版とも無）"},
+ "PMCG4-037|cost": {"verdict": "site_error", "note": "ワザのコストが草無（Scrydex 由来・英語版とも超超無）"},
+ "neo1-003|damage": {"verdict": "en_data_error", "note": "英語版データの Comet Punch のダメージ欄が空。en_fixes.json で 10× に補正"},
+ "neo1-049|retreat": {"verdict": "possible_difference", "note": "にげるコストが日本版のデータ 2 つで 1、英語版で 3"},
+ "neo1-054|damage": {"verdict": "site_error", "note": "じたばたのダメージが空欄（Scrydex 由来・英語版とも 10×）"},
+ "neo1-060|damage": {"verdict": "site_error", "note": "つつくのダメージが 10（Scrydex 由来・英語版とも 20）"},
+ "neo2-013|hp": {"verdict": "site_error", "note": "HP が 50（Scrydex 由来・英語版とも 40）"},
+ "neo2-025|name": {"verdict": "site_error", "note": "アンノーンD のページのカード名が「アンノーン[I]」"}
+}

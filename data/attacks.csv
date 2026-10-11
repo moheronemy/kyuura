@@ -1,361 +1,361 @@
 card_id,index,name_ja,name_en,cost,cost_total,damage_base,damage_modifier,damage_display,text_ja,text_en
-PMCG1-001,1,,Leech Seed,grass grass,2,20,,20,,"Unless all damage from this attack is prevented, you may remove 1 damage counter from Bulbasaur."
-PMCG1-002,1,,String Shot,grass,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG1-003,1,,Stiffen,colorless colorless,2,,,,,"Flip a coin. If heads, prevent all damage done to Metapod during your opponent's next turn. (Any other effects of attacks still happen.)"
-PMCG1-003,2,,Stun Spore,grass grass,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG1-004,1,,Poison Sting,grass,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-PMCG1-005,1,,Horn Hazard,grass,1,30,,30,,"Flip a coin. If tails, this attack does nothing."
-PMCG1-006,1,,Foul Gas,grass grass,2,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned; if tails, it is now Confused."
-PMCG1-007,1,,Bind,grass colorless,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG1-007,2,,Poisonpowder,grass grass grass,3,20,,20,,The Defending Pokémon is now Poisoned.
-PMCG1-008,1,,Vine Whip,grass colorless colorless,3,30,,30,,
-PMCG1-008,2,,Poisonpowder,grass grass grass,3,20,,20,,The Defending Pokémon is now Poisoned.
-PMCG1-009,1,,Stiffen,colorless colorless,2,,,,,"Flip a coin. If heads, prevent all damage done to Kakuna during your opponent's next turn. (Any other effects of attacks still happen.)"
-PMCG1-009,2,,Poisonpowder,grass grass,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-PMCG1-010,1,,Double Kick,grass colorless colorless,3,30,×,30×,,Flip 2 coins. This attack does 30 damage times the number of heads.
-PMCG1-010,2,,Horn Drill,grass grass colorless colorless,4,50,,50,,
-PMCG1-011,1,,Solarbeam,grass grass grass grass,4,60,,60,,
-PMCG1-012,1,,Twineedle,colorless colorless colorless,3,30,×,30×,,Flip 2 coins. This attack does 30 damage times the number of heads.
-PMCG1-012,2,,Poison Sting,grass grass grass,3,40,,40,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-PMCG1-013,1,,Thrash,grass colorless colorless,3,30,+,30+,,"Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage and Nidoking does 10 damage to itself."
-PMCG1-013,2,,Toxic,grass grass grass,3,20,,20,,The Defending Pokémon is now Poisoned. It now takes 20 Poison damage instead of 10 after each player's turn (even if it was already Poisoned).
-PMCG1-014,1,,Scratch,colorless,1,10,,10,,
-PMCG1-014,2,,Ember,fire colorless,2,30,,30,,Discard 1 Fire Energy card attached to Charmander in order to use this attack.
-PMCG1-015,1,,Confuse Ray,fire fire,2,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-PMCG1-016,1,,Smash Kick,colorless colorless,2,20,,20,,
-PMCG1-016,2,,Flame Tail,fire fire,2,30,,30,,
-PMCG1-017,1,,Slash,colorless colorless colorless,3,30,,30,,
-PMCG1-017,2,,Flamethrower,fire fire colorless,3,50,,50,,Discard 1 Fire Energy card attached to Charmeleon in order to use this attack.
-PMCG1-018,1,,Flare,fire colorless,2,20,,20,,
-PMCG1-019,1,,Flamethrower,fire fire colorless,3,50,,50,,Discard 1 Fire Energy card attached to Arcanine in order to use this attack.
-PMCG1-019,2,,Take Down,fire fire colorless colorless,4,80,,80,,Arcanine does 30 damage to itself.
-PMCG1-020,1,,Fire Punch,fire fire,2,30,,30,,
-PMCG1-020,2,,Flamethrower,fire fire colorless,3,50,,50,,Discard 1 Fire Energy card attached to Magmar in order to use this attack.
-PMCG1-021,1,,Fire Spin,fire fire fire fire,4,100,,100,,Discard 2 Energy cards attached to Charizard in order to use this attack.
-PMCG1-022,1,,Lure,colorless colorless,2,,,,,"If your opponent has any Benched Pokémon, choose 1 of them and switch it with his or her Active Pokémon."
-PMCG1-022,2,,Fire Blast,fire fire fire fire,4,80,,80,,Discard 1 Fire Energy card attached to Ninetales in order to use this attack.
-PMCG1-023,1,,Bubble,water,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG1-023,2,,Withdraw,water colorless,2,,,,,"Flip a coin. If heads, prevent all damage done to Squirtle during your opponent's next turn. (Any other effects of attacks still happen.)"
-PMCG1-024,1,,Water Gun,water,1,10,+,10+,,Does 10 damage plus 10 more damage for each Water Energy attached to Poliwag but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd don't count.
-PMCG1-025,1,,Slap,water,1,20,,20,,
-PMCG1-026,1,,Recover,water water,2,,,,,Discard 1 Water Energy card attached to Starmie in order to use this attack. Remove all damage counters from Starmie.
-PMCG1-026,2,,Star Freeze,water colorless colorless,3,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG1-027,1,,Withdraw,water colorless,2,,,,,"Flip a coin. If heads, prevent all damage done to Wartortle during your opponent's next turn. (Any other effects of attacks still happen.)"
-PMCG1-027,2,,Bite,water colorless colorless,3,40,,40,,
-PMCG1-028,1,,Amnesia,water water,2,,,,,Choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.
-PMCG1-028,2,,Doubleslap,water water colorless,3,30,×,30×,,Flip 2 coins. This attack does 30 damage times the number of heads.
-PMCG1-029,1,,Headbutt,water,1,10,,10,,
-PMCG1-030,1,,Aurora Beam,water water colorless,3,50,,50,,
-PMCG1-030,2,,Ice Beam,water water colorless colorless,4,30,,30,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG1-031,1,,Tackle,colorless,1,10,,10,,
-PMCG1-031,2,,Flail,water,1,10,×,10×,,Does 10 damage times the number of damage counters on Magikarp.
-PMCG1-032,1,,Hydro Pump,water water water,3,40,+,40+,,Does 40 damage plus 10 more damage for each Water Energy attached to Blastoise but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.
-PMCG1-033,1,,Water Gun,water water colorless,3,30,+,30+,,Does 30 damage plus 10 more damage for each Water Energy attached to Poliwrath but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.
-PMCG1-033,2,,Whirlpool,water water colorless colorless,4,40,,40,,"If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it."
-PMCG1-034,1,,Dragon Rage,water water water,3,50,,50,,
-PMCG1-034,2,,Bubblebeam,water water water water,4,40,,40,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG1-035,1,,Gnaw,colorless,1,10,,10,,
-PMCG1-035,2,,Thunder Jolt,lightning colorless,2,30,,30,,"Flip a coin. If tails, Pikachu does 10 damage to itself."
-PMCG1-036,1,,Thunder Wave,lightning,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG1-036,2,,Selfdestruct,lightning colorless,2,40,,40,,Does 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magnemite does 40 damage to itself.
-PMCG1-037,1,,Tackle,colorless,1,10,,10,,
-PMCG1-038,1,,Agility,lightning colorless colorless,3,20,,20,,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Raichu."
-PMCG1-038,2,,Thunder,lightning lightning lightning colorless,4,60,,60,,"Flip a coin. If tails, Raichu does 30 damage to itself."
-PMCG1-039,1,,Thunder Wave,lightning lightning colorless,3,30,,30,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG1-039,2,,Selfdestruct,lightning lightning colorless colorless,4,80,,80,,Does 20 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magneton does 80 damage to itself.
-PMCG1-040,1,,Electric Shock,lightning lightning lightning,3,50,,50,,"Flip a coin. If tails, Electrode does 10 damage to itself."
-PMCG1-041,1,,Thundershock,lightning,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG1-041,2,,Thunderpunch,lightning colorless,2,30,+,30+,,"Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage plus Electabuzz does 10 damage to itself."
-PMCG1-042,1,,Thunder,lightning lightning lightning colorless,4,60,,60,,"Flip a coin. If tails, Zapdos does 30 damage to itself."
-PMCG1-042,2,,Thunderbolt,lightning lightning lightning lightning,4,100,,100,,Discard all Energy cards attached to Zapdos in order to use this attack.
-PMCG1-043,1,,Psyshock,psychic,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG1-044,1,,Sleeping Gas,psychic,1,,,,,"Flip a coin. If heads, the Defending Pokémon is now Asleep."
-PMCG1-044,2,,Destiny Bond,psychic colorless,2,,,,,"Discard 1 Psychic Energy card attached to Gastly in order to use this attack. If a Pokémon Knocks Out Gastly during your opponent's next turn, Knock Out that Pokémon."
-PMCG1-045,1,,Pound,colorless,1,10,,10,,
-PMCG1-045,2,,Confuse Ray,psychic psychic,2,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-PMCG1-046,1,,Recover,psychic psychic,2,,,,,Discard 1 Psychic Energy card attached to Kadabra in order to use this attack. Remove all damage counters from Kadabra.
-PMCG1-046,2,,Super Psy,psychic psychic colorless,3,50,,50,,
-PMCG1-047,1,,Hypnosis,psychic,1,,,,,The Defending Pokémon is now Asleep.
-PMCG1-047,2,,Dream Eater,psychic psychic,2,50,,50,,You can't use this attack unless the Defending Pokémon is Asleep.
-PMCG1-048,1,,Doubleslap,psychic,1,10,×,10×,,Flip 2 coins. This attack does 10 damage times the number of heads.
-PMCG1-048,2,,Meditate,psychic psychic colorless,3,20,+,20+,,Does 20 damage plus 10 more damage for each damage counter on the Defending Pokémon.
-PMCG1-049,1,,Confuse Ray,psychic psychic psychic,3,30,,30,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-PMCG1-050,1,,Psychic,psychic colorless,2,10,+,10+,,Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon.
-PMCG1-050,2,,Barrier,psychic psychic,2,,,,,"Discard 1 Psychic Energy card attached to Mewtwo in order to prevent all effects of attacks, including damage, done to Mewtwo during your opponent's next turn."
-PMCG1-051,1,,Sand-attack,fighting,1,10,,10,,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
-PMCG1-052,1,,Dig,fighting,1,10,,10,,
-PMCG1-052,2,,Mud Slap,fighting fighting,2,30,,30,,
-PMCG1-053,1,,Low Kick,fighting,1,20,,20,,
-PMCG1-054,1,,Rock Throw,fighting,1,10,,10,,
-PMCG1-054,2,,Harden,fighting fighting,2,,,,,"During your opponent's next turn, whenever 30 or less damage is done to Onix (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.)"
-PMCG1-055,1,,Karate Chop,fighting fighting colorless,3,50,-,50-,,Does 50 damage minus 10 damage for each damage counter on Machoke.
-PMCG1-055,2,,Submission,fighting fighting colorless colorless,4,60,,60,,Machoke does 20 damage to itself.
-PMCG1-056,1,,Slash,fighting fighting colorless,3,40,,40,,
-PMCG1-056,2,,Earthquake,fighting fighting fighting fighting,4,70,,70,,Does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)
-PMCG1-057,1,,Seismic Toss,fighting fighting fighting colorless,4,60,,60,,
-PMCG1-058,1,,Jab,fighting,1,20,,20,,
-PMCG1-058,2,,Special Punch,fighting fighting colorless,3,40,,40,,
-PMCG1-059,1,,Whirlwind,colorless colorless,2,10,,10,,"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
-PMCG1-060,1,,Bite,colorless,1,20,,20,,
-PMCG1-061,1,,Fury Attack,colorless,1,10,×,10×,,Flip 2 coins. This attack does 10 damage times the number of heads.
-PMCG1-062,1,,Bite,colorless,1,20,,20,,
-PMCG1-062,2,,Super Fang,colorless colorless colorless,3,,?,?,,Does damage to the Defending Pokémon equal to half the Defending Pokémon's remaining HP (rounded up to the nearest 10).
-PMCG1-063,1,,Leek Slap,colorless,1,30,,30,,"Flip a coin. If tails, this attack does nothing. Either way, you can't use this attack again as long as Farfetch'd stays in play (even putting Farfetch'd on the Bench won't let you use it again)."
-PMCG1-063,2,,Pot Smash,colorless colorless colorless,3,30,,30,,
-PMCG1-064,1,,Conversion 1,colorless,1,,,,,"If the Defending Pokémon has a Weakness, you may change it to a type of your choice other than Colorless."
-PMCG1-064,2,,Conversion 2,colorless colorless,2,,,,,Change Porygon's Resistance to a type of your choice other than Colorless.
-PMCG1-065,1,,Pound,colorless,1,10,,10,,
-PMCG1-066,1,,Whirlwind,colorless colorless,2,20,,20,,"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
-PMCG1-066,2,,Mirror Move,colorless colorless colorless,3,,,,,"If Pidgeotto was attacked last turn, do the final result of that attack on Pidgeotto to the Defending Pokémon."
-PMCG1-067,1,,Sing,colorless,1,,,,,"Flip a coin. If heads, the Defending Pokémon is now Asleep."
-PMCG1-067,2,,Metronome,colorless colorless colorless,3,,,,,"Choose 1 of the Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs and anything else required in order to use that attack, such as discarding Energy cards. (No matter what type the Defending Pokémon is, Clefairy's type is still Colorless.)"
-PMCG1-068,1,,Scrunch,colorless colorless,2,,,,,"Flip a coin. If heads, prevent all damage done to Chansey during your opponent's next turn. (Any other effects of attacks still happen.)"
-PMCG1-068,2,,Double-edge,colorless colorless colorless colorless,4,80,,80,,Chansey does 80 damage to itself.
-PMCG1-069,1,,Slam,colorless colorless colorless,3,30,×,30×,,Flip 2 coins. This attack does 30 damage times the number of heads.
-PMCG1-069,2,,Hyper Beam,colorless colorless colorless colorless,4,20,,20,,"If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it."
-PMCG2-001,1,,Fury Swipes,grass,1,10,×,10×,,Flip 3 coins. This attack does 10 damage times the number of heads.
-PMCG2-001,2,,Call for Family,grass grass,2,,,,,Search your deck for a Basic Pokémon named Nidoran ♂ or Nidoran ♀ and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)
-PMCG2-002,1,,Stun Spore,grass,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG2-002,2,,Sprout,grass grass,2,,,,,Search your deck for a Basic Pokémon named Oddish and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)
-PMCG2-003,1,,Scratch,colorless colorless,2,20,,20,,
-PMCG2-003,2,,Spore,grass grass,2,,,,,The Defending Pokémon is now Asleep.
-PMCG2-004,1,,Stun Spore,grass,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG2-004,2,,Leech Life,grass colorless,2,10,,10,,Remove a number of damage counters from Venonat equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance).
-PMCG2-005,1,,Vine Whip,grass,1,10,,10,,
-PMCG2-005,2,,Call for Family,grass,1,,,,,Search your deck for a Basic Pokémon named Bellsprout and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)
-PMCG2-006,1,,Hypnosis,psychic,1,,,,,The Defending Pokémon is now Asleep.
-PMCG2-006,2,,Leech Seed,grass grass,2,20,,20,,"Unless all damage from this attack is prevented, you may remove 1 damage counter from Exeggcute."
-PMCG2-007,1,,Whirlwind,colorless colorless,2,20,,20,,"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
-PMCG2-007,2,,Mega Drain,grass grass grass grass,4,40,,40,,Remove a number of damage counters from Butterfree equal to half the damage done to the Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10).
-PMCG2-008,1,,Supersonic,grass,1,,,,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-PMCG2-008,2,,Double Kick,grass colorless colorless,3,30,×,30×,,Flip 2 coins. This attack does 30 damage times the number of heads.
-PMCG2-009,1,,Poisonpowder,grass,1,,,,,The Defending Pokémon is now Poisoned.
-PMCG2-009,2,,Foul Odor,grass grass,2,20,,20,,Both the Defending Pokémon and Gloom are now Confused (after doing damage).
-PMCG2-010,1,,Spore,grass grass,2,,,,,The Defending Pokémon is now Asleep.
-PMCG2-010,2,,Slash,colorless colorless colorless,3,30,,30,,
-PMCG2-011,1,,Poisonpowder,grass,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-PMCG2-011,2,,Razor Leaf,grass grass,2,30,,30,,
-PMCG2-012,1,,Teleport,psychic,1,,,,,Switch Exeggutor with 1 of your Benched Pokémon.
-PMCG2-012,2,,Big Eggsplosion,colorless,1,20,×,20×,,Flip a number of coins equal to the number of Energy attached to Exeggutor. This attack does 20 damage times the number of heads.
-PMCG2-013,1,,Boyfriends,grass colorless,2,20,+,20+,,Does 20 damage plus 20 more damage for each Nidoking you have in play.
-PMCG2-013,2,,Mega Punch,grass grass colorless colorless,4,50,,50,,
-PMCG2-014,1,,Petal Dance,grass grass grass,3,40,×,40×,,Flip 3 coins. This attack does 40 damage times the number of heads. Vileplume is now Confused (after doing damage).
-PMCG2-015,1,,Venom Powder,grass grass,2,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Confused and Poisoned."
-PMCG2-016,1,,Lure,grass,1,,,,,"If your opponent has any Benched Pokémon, choose 1 of them and switch it with his or her Active Pokémon."
-PMCG2-016,2,,Acid,grass grass,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon can't retreat during your next turn."
-PMCG2-017,1,,Swords Dance,grass,1,,,,,"During your next turn, Scyther's Slash attack's base damage is 60 instead of 30."
-PMCG2-017,2,,Slash,colorless colorless colorless,3,30,,30,,
-PMCG2-018,1,,Irongrip,grass grass,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG2-018,2,,Guillotine,grass grass colorless colorless,4,50,,50,,
-PMCG2-019,1,,Stomp,colorless colorless,2,20,+,20+,,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage; if tails, this attack does 20 damage."
-PMCG2-019,2,,Agility,fire fire colorless,3,30,,30,,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Rapidash."
-PMCG2-020,1,,Quick Attack,colorless colorless,2,10,+,10+,,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
-PMCG2-020,2,,Flamethrower,fire fire colorless colorless,4,60,,60,,Discard 1 Fire Energy card attached to Flareon in order to use this attack.
-PMCG2-021,1,,Horn Attack,water,1,10,,10,,
-PMCG2-022,1,,Horn Attack,water,1,10,,10,,
-PMCG2-022,2,,Waterfall,water colorless,2,30,,30,,
-PMCG2-023,1,,Quick Attack,colorless colorless,2,10,+,10+,,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
-PMCG2-023,2,,Water Gun,water water colorless,3,30,+,30+,,Does 30 damage plus 10 more damage for each Water Energy attached to Vaporeon but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.
-PMCG2-024,1,,Spark,lightning lightning,2,20,,20,,"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-PMCG2-025,1,,Tackle,colorless colorless,2,20,,20,,
-PMCG2-025,2,,Chain Lightning,lightning lightning lightning,3,20,,20,,"If the Defending Pokémon isn't Colorless, this attack does 10 damage to each Benched Pokémon of the same type as the Defending Pokémon (including your own)."
-PMCG2-026,1,,Quick Attack,colorless colorless,2,10,+,10+,,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
-PMCG2-026,2,,Pin Missile,lightning lightning colorless,3,20,×,20×,,Flip 4 coins. This attack does 20 damage times the number of heads.
-PMCG2-027,1,,Meditate,psychic colorless,2,10,+,10+,,Does 10 damage plus 10 more damage for each damage counter on the Defending Pokémon.
-PMCG2-028,1,,Scratch,colorless,1,10,,10,,
-PMCG2-029,1,,Snivel,colorless,1,,,,,"If the Defending Pokémon attacks Cubone during your opponent's next turn, any damage done by the attack is reduced by 20 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)"
-PMCG2-029,2,,Rage,fighting fighting,2,10,+,10+,,Does 10 damage plus 10 more damage for each damage counter on Cubone.
-PMCG2-030,1,,Leer,colorless,1,,,,,"Flip a coin. If heads, the Defending Pokémon can't attack Rhyhorn during your opponent's next turn. (Benching either Pokémon ends this effect.)"
-PMCG2-030,2,,Horn Attack,fighting colorless colorless,3,30,,30,,
-PMCG2-031,1,,Fury Swipes,fighting fighting,2,20,×,20×,,Flip 3 coins. This attack does 20 damage times the number of heads.
-PMCG2-031,2,,Tantrum,fighting fighting colorless,3,50,,50,,"Flip a coin. If tails, Primeape is now Confused (after doing damage)."
-PMCG2-032,1,,Bonemerang,fighting fighting,2,30,×,30×,,Flip 2 coins. This attack does 30 damage times the number of heads.
-PMCG2-032,2,,Call for Friend,fighting fighting colorless,3,,,,,Search your deck for a Fighting Basic Pokémon card and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)
-PMCG2-033,1,,Horn Attack,fighting colorless colorless,3,30,,30,,
-PMCG2-033,2,,Ram,fighting fighting fighting fighting,4,50,,50,,"Rhydon does 20 damage to itself. If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon. Switch the Pokémon even if Rhydon is knocked out.)"
-PMCG2-034,1,,Peck,colorless,1,10,,10,,
-PMCG2-034,2,,Mirror Move,colorless colorless colorless,3,,,,,"If Spearow was attacked last turn, do the final result of that attack on Spearow to the Defending Pokémon."
-PMCG2-035,1,,Lullaby,colorless,1,,,,,The Defending Pokémon is now Asleep.
-PMCG2-035,2,,Pound,colorless colorless,2,20,,20,,
-PMCG2-036,1,,Pay Day,colorless colorless,2,10,,10,,"Flip a coin. If heads, draw a card."
-PMCG2-037,1,,Tail Wag,colorless,1,,,,,"Flip a coin. If heads, the Defending Pokémon can't attack Eevee during your opponent's next turn. (Benching either Pokémon ends this effect.)"
-PMCG2-037,2,,Quick Attack,colorless colorless,2,10,+,10+,,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
-PMCG2-038,1,,Agility,colorless colorless colorless,3,20,,20,,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Fearow."
-PMCG2-038,2,,Drill Peck,colorless colorless colorless colorless,4,40,,40,,
-PMCG2-039,1,,Scratch,colorless colorless,2,20,,20,,
-PMCG2-039,2,,Pounce,colorless colorless colorless,3,30,,30,,"If the Defending Pokémon attacks Persian during your next turn, any damage done by the attack is reduced by 10 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)"
-PMCG2-040,1,,Rage,colorless colorless colorless,3,10,+,10+,,Does 10 damage plus 10 more damage for each damage counter on Dodrio.
-PMCG2-041,1,,Tongue Wrap,colorless,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG2-041,2,,Supersonic,colorless colorless,2,,,,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-PMCG2-042,1,,Stomp,colorless colorless,2,20,+,20+,,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage; if tails, this attack does 20 damage."
-PMCG2-042,2,,Rampage,colorless colorless colorless,3,20,+,20+,,"Does 20 damage plus 10 more damage for each damage counter on Tauros. Flip a coin. If tails, Tauros is now Confused (after doing damage)."
-PMCG2-043,1,,Wing Attack,colorless colorless,2,20,,20,,
-PMCG2-043,2,,Hurricane,colorless colorless colorless,3,30,,30,,"Unless this attack Knocks Out the Defending Pokémon, return the Defending Pokémon and all cards attached to it to your opponent's hand."
-PMCG2-044,1,,Metronome,colorless,1,,,,,"Choose 1 of the Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs and anything else required in order to use that attack, such as discarding Energy cards. (No matter what type the Defending Pokémon is, Clefable's type is still Colorless.)"
-PMCG2-044,2,,Minimize,colorless colorless,2,,,,,All damage done by attacks to Clefable during your opponent's next turn is reduced by 20 (after applying Weakness and Resistance).
-PMCG2-045,1,,Lullaby,colorless,1,,,,,The Defending Pokémon is now Asleep.
-PMCG2-045,2,,Do the Wave,colorless colorless colorless,3,10,+,10+,,Does 10 damage plus 10 more damage for each of your Benched Pokémon.
-PMCG2-046,1,,Fetch,colorless,1,,,,,Draw a card.
-PMCG2-046,2,,Comet Punch,colorless colorless colorless colorless,4,20,×,20×,,Flip 4 coins. This attack does 20 damage times the number of heads.
-PMCG2-047,1,,Body Slam,colorless colorless colorless colorless,4,30,,30,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG3-001,1,,Spit Poison,grass,1,,,,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-PMCG3-001,2,,Wrap,grass colorless,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG3-002,1,,Supersonic,colorless colorless,2,,,,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-PMCG3-002,2,,Leech Life,grass colorless,2,10,,10,,"Remove a number of damage counters from Zubat equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance). If Zubat has fewer damage counters than that, remove all of them."
-PMCG3-003,1,,Nasty Goo,colorless,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG3-003,2,,Minimize,grass,1,,,,,All damage done by attacks to Grimer during your opponent's next turn is reduced by 20 (after applying Weakness and Resistance).
-PMCG3-004,1,,Terror Strike,grass,1,10,,10,,"Flip a coin. If heads and if your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
-PMCG3-004,2,,Poison Fang,grass grass colorless,3,20,,20,,The Defending Pokémon is now Poisoned.
-PMCG3-005,1,,Wing Attack,colorless colorless colorless,3,30,,30,,
-PMCG3-005,2,,Leech Life,grass grass colorless,3,20,,20,,"Remove a number of damage counters from Golbat equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance). If Golbat has fewer damage counters than that, remove all of them."
-PMCG3-006,1,,Smog,grass grass,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-PMCG3-006,2,,Selfdestruct,grass grass colorless,3,60,,60,,Does 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Weezing does 60 damage to itself.
-PMCG3-007,1,,Sludge,grass grass grass,3,30,,30,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-PMCG3-008,1,,Smokescreen,fire,1,10,,10,,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
-PMCG3-008,2,,Smog,fire fire,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-PMCG3-009,1,,Wildfire,fire,1,,,,,"You may discard any number of Fire Energy cards attached to Moltres when you use this attack. If you do, discard that many cards from the top of your opponent's deck."
-PMCG3-009,2,,Dive Bomb,fire fire fire fire,4,80,,80,,"Flip a coin. If tails, this attack does nothing."
-PMCG3-010,1,,Headache,psychic,1,,,,,Your opponent can't play Trainer cards during his or her next turn.
-PMCG3-010,2,,Fury Swipes,water,1,10,×,10×,,Flip 3 coins. This attack does 10 damage times the number of heads.
-PMCG3-011,1,,Acid,water,1,10,,10,,
-PMCG3-012,1,,Supersonic,water,1,,,,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-PMCG3-012,2,,Hide in Shell,water,1,,,,,"Flip a coin. If heads, prevent all damage done to Shellder during your opponent's next turn. (Any other effects of attacks still happen.)"
-PMCG3-013,1,,Call for Family,water,1,,,,,Search your deck for a Basic Pokémon named Krabby and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench if full.)
-PMCG3-013,2,,Irongrip,water colorless,2,20,,20,,
-PMCG3-014,1,,Smokescreen,water,1,10,,10,,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
-PMCG3-015,1,,Water Gun,water,1,10,+,10+,,Does 10 damage plus 10 more damage for each Water Energy attached to Omanyte but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
-PMCG3-016,1,,Psyshock,psychic,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG3-016,2,,Hyper Beam,water water colorless,3,20,,20,,"If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it."
-PMCG3-017,1,,Supersonic,water,1,,,,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-PMCG3-017,2,,Jellyfish Sting,water water,2,10,,10,,The Defending Pokémon is now Poisoned.
-PMCG3-018,1,,Clamp,water water,2,30,,30,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, this attack does nothing (not even damage)."
-PMCG3-018,2,,Spike Cannon,water water,2,30,×,30×,,Flip 2 coins. This attack does 30 damage times the number of heads.
-PMCG3-019,1,,Flail,water,1,10,×,10×,,Does 10 damage times the number of damage counters on Kingler.
-PMCG3-019,2,,Crabhammer,water water colorless,3,40,,40,,
-PMCG3-020,1,,Water Gun,water colorless,2,20,+,20+,,Does 20 damage plus 10 more damage for each Water Energy attached to Seadra but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
-PMCG3-020,2,,Agility,water colorless colorless,3,20,,20,,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Seadra."
-PMCG3-021,1,,Water Gun,water colorless,2,20,+,20+,,Does 20 damage plus 10 more damage for each Water Energy attached to Omastar but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
-PMCG3-021,2,,Spike Cannon,water water,2,30,×,30×,,Flip 2 coins. This attack does 30 damage times the number of heads.
-PMCG3-022,1,,Water Gun,water,1,10,+,10+,,Does 10 damage plus 10 more damage for each Water Energy attached to Lapras but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
-PMCG3-022,2,,Confuse Ray,water water,2,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-PMCG3-023,1,,Freeze Dry,water water water,3,30,,30,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG3-023,2,,Blizzard,water water water water,4,50,,50,,"Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon. If tails, this attack does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-PMCG3-024,1,,Gigashock,lightning lightning lightning lightning,4,30,,30,,"Choose 3 of your opponent's Benched Pokémon and this attack does 10 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.) If your opponent has fewer than 3 Benched Pokémon, do the damage to each of them."
-PMCG3-025,1,,Sonicboom,lightning colorless,2,20,,20,,Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
-PMCG3-025,2,,Selfdestruct,lightning lightning lightning lightning,4,100,,100,,Does 20 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magneton does 100 damage to itself.
-PMCG3-026,1,,Thunderstorm,lightning lightning lightning lightning,4,40,,40,,"For each of your opponent's Benched Pokémon, flip a coin. If heads, this attack does 20 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) Then, Zapdos does 10 damage times the number of tails to itself."
-PMCG3-027,1,,Spacing Out,colorless,1,,,,,"Flip a coin. If heads, remove a damage counter from Slowpoke. This attack can't be used if Slowpoke has no damage counters on it."
-PMCG3-027,2,,Scavenge,psychic psychic,2,,,,,Discard 1 Psychic Energy card attached to Slowpoke in order to use this attack. Put a Trainer card from your discard pile into your hand.
-PMCG3-028,1,,Psyshock,psychic psychic,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG3-029,1,,Lick,psychic,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG3-029,2,,Energy Conversion,psychic psychic,2,,,,,Put up to 2 Energy cards from your discard pile into your hand. Gastly does 10 damage to itself.
-PMCG3-030,1,,Nightmare,psychic colorless,2,10,,10,,The Defending Pokémon is now Asleep.
-PMCG3-031,1,,Dark Mind,psychic psychic psychic,3,30,,30,,"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-PMCG3-032,1,,Prophecy,psychic,1,,,,,Look at up to 3 cards from the top of either player's deck and rearrange them as you like.
-PMCG3-032,2,,Dark Mind,psychic psychic psychic,3,30,,30,,"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-PMCG3-033,1,,Psywave,psychic,1,10,×,10×,,Does 10 damage times the number of Energy cards attached to the Defending Pokémon.
-PMCG3-033,2,,Devolution Beam,psychic psychic,2,,,,,"Choose an evolved Pokémon (your own or your opponent's). Return the highest Stage Evolution card on that Pokémon to its player's hand. That Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned, or anything else that might be the result of an attack (just as if you had evolved it)."
-PMCG3-034,1,,Stone Barrage,fighting colorless,2,10,×,10×,,Flip a coin until you get tails. This attack does 10 damage times the number of heads.
-PMCG3-035,1,,Scratch,colorless,1,10,,10,,
-PMCG3-036,1,,Slash,colorless colorless,2,20,,20,,
-PMCG3-036,2,,Fury Swipes,fighting fighting,2,20,×,20×,,Flip 3 coins. This attack does 20 damage times the number of heads.
-PMCG3-037,1,,Harden,fighting fighting,2,,,,,"During your opponent's next turn, whenever 30 or less damage is done to Graveler (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.)"
-PMCG3-037,2,,Rock Throw,fighting fighting colorless,3,40,,40,,
-PMCG3-038,1,,Avalanche,fighting fighting fighting colorless,4,60,,60,,
-PMCG3-038,2,,Selfdestruct,fighting fighting fighting fighting,4,100,,100,,Does 20 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Golem does 100 damage to itself.
-PMCG3-039,1,,Stretch Kick,fighting fighting,2,,,,,"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 20 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-PMCG3-039,2,,High Jump Kick,fighting fighting fighting,3,50,,50,,
-PMCG3-040,1,,Sharp Sickle,fighting fighting,2,30,,30,,
-PMCG3-040,2,,Absorb,fighting fighting fighting fighting,4,40,,40,,"Remove a number of damage counters from Kabutops equal to half the damage done to the Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10). If Kabutops has fewer damage counters than that, remove all of them."
-PMCG3-041,1,,Wing Attack,colorless colorless colorless,3,30,,30,,
-PMCG3-043,1,,Slam,colorless colorless colorless colorless,4,40,×,40×,,Flip 2 coins. This attack does 40 damage times the number of heads.
-PMCG4-001,1,,Bite,colorless,1,10,,10,,
-PMCG4-001,2,,Poison Sting,grass grass,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-PMCG4-002,1,,Ram,colorless,1,10,,10,,
-PMCG4-002,2,,Bite,grass colorless,2,20,,20,,
-PMCG4-003,1,,Sleep Powder,grass,1,,,,,The Defending Pokémon is now Asleep.
-PMCG4-003,2,,Poisonpowder,grass,1,,,,,The Defending Pokémon is now Poisoned.
-PMCG4-004,1,,Poison Gas,grass,1,,,,,The Defending Pokémon is now Asleep.
-PMCG4-004,2,,Sticky Hands,grass grass,2,10,+,10+,,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage and the Defending Pokémon is now Paralyzed; if tails, this attack does 10 damage."
-PMCG4-005,1,,Tackle,colorless,1,10,,10,,
-PMCG4-005,2,,Poison Gas,grass colorless,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-PMCG4-006,1,,Poisonpowder,grass grass,2,10,,10,,The Defending Pokémon is now Poisoned.
-PMCG4-007,1,,Sludge Punch,grass grass,2,20,,20,,The Defending Pokémon is now Poisoned.
-PMCG4-008,1,,Stare,grass grass,2,,,,,"Choose 1 of your opponent's Pokémon. This attack does 10 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.) If that Pokémon has a Pokémon Power, that power stops working until the end of your opponent's next turn."
-PMCG4-008,2,,Poison Vapor,grass grass grass,3,10,,10,,The Defending Pokémon is now Poisoned. This attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)
-PMCG4-009,1,,Flitter,grass grass,2,,,,,Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
-PMCG4-010,1,,Petal Whirlwind,grass grass grass,3,30,×,30×,,"Flip a coins. This attack does 30 damage times the number of heads. If you get 2 or more heads, Dark Vileplume is now Confused (after doing damage)."
-PMCG4-011,1,,Mass Explosion,grass colorless,2,20,×,20×,,"Does 20 damage times the total number of Koffings, Weezings, and Dark Weezings in play (Apply Weakness and Resistance.). Then, this attack does 20 damage to each Koffing, Weezing, and Dark Weezing (even your own). Don't apply Weakness and Resistance."
-PMCG4-011,2,,Stun Gas,grass grass grass,3,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned; if tails, the Defending Pokémon is now Paralyzed."
-PMCG4-012,1,,Fire Tail,fire,1,20,,20,,
-PMCG4-013,1,,Ember,fire colorless,2,30,,30,,Discard 1 Fire Energy card attached to Ponyta in order to use this attack.
-PMCG4-014,1,,Rear Kick,colorless colorless,2,20,,20,,
-PMCG4-014,2,,Flame Pillar,fire fire,2,30,,30,,"You may discard 1 Fire Energy card attached to Dark Rapidash when you use this attack. If you do and if your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-PMCG4-015,1,,Tail Slap,colorless colorless,2,20,,20,,
-PMCG4-015,2,,Fireball,fire fire fire,3,70,,70,,"Use this attack only if there are any Fire Energy cards attached to Dark Charmeleon. Flip a coin. If heads, discard 1 of those Energy cards. If tails, this attack does nothing (not even damage)."
-PMCG4-016,1,,Rage,colorless,1,10,+,10+,,Does 10 damage plus 10 more damage for each damage counter on Dark Flareon.
-PMCG4-016,2,,Playing with Fire,fire fire,2,30,+,30+,,"Use this attack only if there are any Fire Energy cards attached to Dark Flareon. Flip a coin. If heads, discard 1 of those Energy cards and this attack does 30 damage plus 20 more damage; if tails, this attack does 30 damage."
-PMCG4-017,1,,Nail Flick,colorless,1,10,,10,,
-PMCG4-017,2,,Continuous Fireball,fire fire,2,50,×,50×,,Flip a number of coins equal to the number of Fire Energy cards attached to Dark Charizard. This attack does 50 damage times the number of heads. Discard a number of Fire Energy cards attached to Dark Charizard equal to the number of heads.
-PMCG4-018,1,,Shell Attack,colorless colorless,2,20,,20,,
-PMCG4-019,1,,Dizziness,psychic,1,,,,,Draw a card.
-PMCG4-019,2,,Water Gun,water colorless,2,20,+,20+,,Does 20 damage plus 10 more damage for each Water Energy attached to Psyduck but not used to pay for this attack. You can't add more than 20 damage in this way.
-PMCG4-020,1,,Flop,colorless,1,10,,10,,
-PMCG4-020,2,,Rapid Evolution,water water water,3,,,,,Search your deck for an Evolution card named Gyarados or Dark Gyarados and put it on Magikarp. (This counts as evolving Magikarp.) Shuffle your deck afterward.
-PMCG4-021,1,,Doubleslap,water,1,10,×,10×,,Flip 2 coins. This attack does 10 damage times the number of heads.
-PMCG4-021,2,,Mirror Shell,water colorless,2,,,,,"If an attack does damage to Dark Wartortle during your opponent's next turn (even if Dark Wartortle is Knocked Out), Dark Wartortle attacks the Defending Pokémon for an equal amount of damage."
-PMCG4-022,1,,Third Eye,psychic,1,,,,,Discard 1 Energy card attached to Dark Golduck in order to draw up to 3 cards.
-PMCG4-022,2,,Super Psy,psychic psychic colorless,3,50,,50,,
-PMCG4-023,1,,Bite,colorless colorless colorless,3,30,,30,,
-PMCG4-023,2,,Whirlpool,water water colorless,3,20,,20,,"If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it."
-PMCG4-024,1,,Hydrocannon,water water,2,30,+,30+,,Does 30 damage plus 20 more damage for each Water Energy attached to Dark Blastoise but not used to pay for this attack. You can't add more than 40 damage in this way.
-PMCG4-024,2,,Rocket Tackle,water colorless colorless,3,40,,40,,"Dark Blastoise does 10 damage to itself. Flip a coin. If heads, prevent all damage done to Dark Blastoise during your opponent's next turn. (Any other effects of attacks still happen.)"
-PMCG4-025,1,,Ice Beam,water water water,3,30,,30,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG4-026,1,,Tackle,colorless colorless,2,20,,20,,
-PMCG4-026,2,,Magnetism,lightning colorless,2,10,+,10+,,"Does 10 damage plus 10 more damage for each Magnemite, Magneton, and Dark Magneton on your Bench."
-PMCG4-027,1,,Speed Ball,lightning,1,20,,20,,
-PMCG4-028,1,,Rolling Tackle,colorless,1,10,,10,,
-PMCG4-028,2,,Energy Bomb,lightning lightning,2,30,,30,,"Take all Energy cards attached to Dark Electrode and attach them to your Benched Pokémon (in any way you choose). If you have no Benched Pokémon, discard all Energy cards attached to Dark Electrode."
-PMCG4-029,1,,Lightning Flash,lightning,1,20,,20,,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
-PMCG4-029,2,,Thunder Attack,lightning lightning colorless,3,30,,30,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, Dark Jolteon does 10 damage to itself."
-PMCG4-030,1,,Sonicboom,colorless colorless,2,20,,20,,Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
-PMCG4-030,2,,Magnetic Lines,lightning lightning,2,30,,30,,"If the Defending Pokémon has any basic Energy cards attached to it, choose 1 of them. If your opponent has any Benched Pokémon, choose 1 of them and attach that Energy card to it."
-PMCG4-031,1,,Vanish,psychic,1,,,,,Shuffle Abra into your deck. (Discard all cards attached to Abra.)
-PMCG4-031,2,,Psyshock,psychic,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG4-032,1,,Afternoon Nap,colorless,1,,,,,Search your deck for a Psychic Energy card and attach it to Slowpoke. Shuffle your deck afterward.
-PMCG4-032,2,,Headbutt,psychic,1,10,,10,,
-PMCG4-033,1,,Nightmare,psychic colorless,2,10,,10,,The Defending Pokémon is now Asleep.
-PMCG4-034,1,,Mind Shock,psychic psychic,2,30,,30,,Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
-PMCG4-035,1,,Teleport Blast,psychic psychic colorless,3,30,,30,,You may switch Dark Alakazam with 1 of your Benched Pokémon. (Do the damage before switching the Pokémon.)
-PMCG4-035,2,,Mind Shock,psychic psychic psychic,3,40,,40,,Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
-PMCG4-036,1,,Fickle Attack,psychic psychic,2,40,,40,,"Flip a coin. If tails, this attack does nothing."
-PMCG4-037,1,,Psypunch,psychic,1,20,,20,,
-PMCG4-037,2,,Bench Manipulation,psychic psychic colorless,3,20,×,20×,,Your opponent flips a number of coins equal to the number of Pokémon on his or her Bench. This attack does 20 damage times the number of tails. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
-PMCG4-038,1,,Dig Under,fighting,1,,,,,Choose 1 of your opponent's Pokémon. This attack does 10 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
-PMCG4-038,2,,Scratch,fighting colorless,2,20,,20,,
-PMCG4-039,1,,Mischief,colorless,1,,,,,Shuffle your opponent's deck.
-PMCG4-039,2,,Anger,fighting colorless,2,20,+,20+,,"Flip a coin. If heads, this attack does 20 damage plus 20 more damage; if tails, this attack does 20 damage."
-PMCG4-040,1,,Punch,colorless colorless,2,20,,20,,
-PMCG4-040,2,,Kick,fighting colorless colorless,3,30,,30,,
-PMCG4-041,1,,Frenzied Attack,fighting fighting,2,40,,40,,Dark Primeape is now Confused (after doing damage).
-PMCG4-042,1,,Drag Off,fighting fighting colorless,3,20,,20,,"Before doing damage, choose 1 of your opponent's Benched Pokémon and switch it with the Defending Pokémon. Do the damage to the new Defending Pokémon. This attack can't be used if your opponent has no Benched Pokémon."
-PMCG4-042,2,,Knock Back,fighting fighting colorless,3,30,,30,,"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
-PMCG4-043,1,,Knock Down,fighting fighting,2,20,+,20+,,"Your opponent flips a coin. If tails, this attack does 20 damage plus 20 more damage; if heads, this attack does 20 damage."
-PMCG4-044,1,,Mega Punch,fighting fighting,2,30,,30,,
-PMCG4-044,2,,Fling,fighting fighting fighting colorless,4,,,,,Your opponent shuffles his or her Active Pokémon and all cards attached to it into his or her deck. This attack can't be used if your opponent has no Benched Pokémon.
-PMCG4-045,1,,Quick Attack,colorless,1,10,+,10+,,"Flip a coin. If heads, this attack does 10 damage plus 10 more damage; if tails, this attack does 10 damage."
-PMCG4-046,1,,Gnaw,colorless colorless,2,20,,20,,
-PMCG4-046,2,,Hyper Fang,colorless colorless colorless,3,50,,50,,"Flip a coin. If tails, this attack does nothing."
-PMCG4-047,1,,Coin Hurl,colorless colorless,2,,,,,"Choose 1 of your opponent's Pokémon and flip a coin. If heads, this attack does 20 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)"
-PMCG4-048,1,,Fascinate,colorless,1,,,,,"Flip a coin. If heads, choose 1 of your opponent's Benched Pokémon and switch it with the Defending Pokémon. This attack can't be used if your opponent has no Benched Pokémon."
-PMCG4-048,2,,Poison Claws,colorless colorless,2,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-PMCG4-049,1,,Tackle,colorless,1,10,,10,,
-PMCG4-049,2,,Sand-attack,colorless colorless,2,10,,10,,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
-PMCG4-050,1,,Conversion 1,colorless,1,,,,,"If the Defending Pokémon has a Weakness, you may change it to a type of your choice other than Colorless."
-PMCG4-050,2,,Psybeam,colorless colorless colorless,3,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-PMCG4-051,1,,Wrap,colorless colorless,2,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-PMCG4-052,1,,Tail Strike,colorless colorless colorless,3,20,+,20+,,"Flip a coin. If heads, this attack does 20 damage plus 20 more damage; if tails, this attack does 20 damage."
-PMCG4-053,1,,Giant Tail,colorless colorless colorless colorless,4,70,,70,,"Flip a coin. If tails, this attack does nothing."
+PMCG1-001,1,やどりぎのタネ,Leech Seed,grass grass,2,20,,20,相手にダメージをあたえることができたら、その時点で自分のダメージカウンターを1つとりのぞくことができる。,"Unless all damage from this attack is prevented, you may remove 1 damage counter from Bulbasaur."
+PMCG1-002,1,いとをはく,String Shot,grass,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG1-003,1,かたまる,Stiffen,colorless colorless,2,,,,コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。,"Flip a coin. If heads, prevent all damage done to Metapod during your opponent's next turn. (Any other effects of attacks still happen.)"
+PMCG1-003,2,しびれごな,Stun Spore,grass grass,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG1-004,1,どくばり,Poison Sting,grass,1,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PMCG1-005,1,つのでつつく,Horn Hazard,grass,1,30,,30,コインを投げて「うら」なら、相手にダメージをあたえることができない。,"Flip a coin. If tails, this attack does nothing."
+PMCG1-006,1,くさいガス,Foul Gas,grass grass,2,10,,10,コインを投げて「おもて」なら、相手を「どく」状態、「うら」なら「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned; if tails, it is now Confused."
+PMCG1-007,1,しめつける,Bind,grass colorless,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG1-007,2,どくのこな,Poisonpowder,grass grass grass,3,20,,20,相手を「どく」状態にする。,The Defending Pokémon is now Poisoned.
+PMCG1-008,1,つるのムチ,Vine Whip,grass colorless colorless,3,30,,30,,
+PMCG1-008,2,どくのこな,Poisonpowder,grass grass grass,3,20,,20,相手を「どく」状態にする。,The Defending Pokémon is now Poisoned.
+PMCG1-009,1,かたまる,Stiffen,colorless colorless,2,,,,コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。,"Flip a coin. If heads, prevent all damage done to Kakuna during your opponent's next turn. (Any other effects of attacks still happen.)"
+PMCG1-009,2,どくのこな,Poisonpowder,grass grass,2,20,,20,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PMCG1-010,1,にどげり,Double Kick,grass colorless colorless,3,30,×,30×,コインを2枚投げて「おもて」のでた数×30のダメージをあたえる。,Flip 2 coins. This attack does 30 damage times the number of heads.
+PMCG1-010,2,つのドリル,Horn Drill,grass grass colorless colorless,4,50,,50,,
+PMCG1-011,1,ソーラービーム,Solarbeam,grass grass grass grass,4,60,,60,,
+PMCG1-012,1,ダブルニードル,Twineedle,colorless colorless colorless,3,30,×,30×,コインを2枚投げて「おもて」の出た数×30のダメージ。,Flip 2 coins. This attack does 30 damage times the number of heads.
+PMCG1-012,2,どくばり,Poison Sting,grass grass grass,3,40,,40,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PMCG1-013,1,あばれる,Thrash,grass colorless colorless,3,30,+,30+,コインを投げて「おもて」なら相手に追加10ダメージ、「うら」なら自分に10ダメージ。,"Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage and Nidoking does 10 damage to itself."
+PMCG1-013,2,どくどく,Toxic,grass grass grass,3,20,,20,相手に「どく」カウンターを2個のせ、ポケモンチェックごとに20の「どく」ダメージ。,The Defending Pokémon is now Poisoned. It now takes 20 Poison damage instead of 10 after each player's turn (even if it was already Poisoned).
+PMCG1-014,1,ひっかく,Scratch,colorless,1,10,,10,,
+PMCG1-014,2,ひのこ,Ember,fire colorless,2,30,,30,自分の「炎」エネルギーカードを1枚はがしてすてる。,Discard 1 Fire Energy card attached to Charmander in order to use this attack.
+PMCG1-015,1,あやしいひかり,Confuse Ray,fire fire,2,10,,10,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PMCG1-016,1,けりとばす,Smash Kick,colorless colorless,2,20,,20,,
+PMCG1-016,2,ほのおのしっぽ,Flame Tail,fire fire,2,30,,30,,
+PMCG1-017,1,きりさく,Slash,colorless colorless colorless,3,30,,30,,
+PMCG1-017,2,かえんほうしゃ,Flamethrower,fire fire colorless,3,50,,50,自分の「炎」エネルギーカードを1枚はがしてすてる。,Discard 1 Fire Energy card attached to Charmeleon in order to use this attack.
+PMCG1-018,1,ほのお,Flare,fire colorless,2,20,,20,,
+PMCG1-019,1,かえんほうしゃ,Flamethrower,fire fire colorless,3,50,,50,自分の「炎」エネルギーカードを1枚はがしてすてる。,Discard 1 Fire Energy card attached to Arcanine in order to use this attack.
+PMCG1-019,2,とっしん,Take Down,fire fire colorless colorless,4,80,,80,自分にも30ダメージ。,Arcanine does 30 damage to itself.
+PMCG1-020,1,ほのおパンチ,Fire Punch,fire fire,2,30,,30,,
+PMCG1-020,2,かえんほうしゃ,Flamethrower,fire fire colorless,3,50,,50,自分の「炎」エネルギーカードを1枚はがしてすてる。,Discard 1 Fire Energy card attached to Magmar in order to use this attack.
+PMCG1-021,1,ほのおのうず,Fire Spin,fire fire fire fire,4,100,,100,自分のエネルギーカードを2枚はがしてすてる。,Discard 2 Energy cards attached to Charizard in order to use this attack.
+PMCG1-022,1,かどわかす,Lure,colorless colorless,2,,,,相手の控えポケモンを選んで、相手の対戦ポケモンと入れ替える。,"If your opponent has any Benched Pokémon, choose 1 of them and switch it with his or her Active Pokémon."
+PMCG1-022,2,だいもんじ,Fire Blast,fire fire fire fire,4,80,,80,自分の「炎」エネルギーカードを1枚はがしてすてる。,Discard 1 Fire Energy card attached to Ninetales in order to use this attack.
+PMCG1-023,1,あわ,Bubble,water,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG1-023,2,からにこもる,Withdraw,water colorless,2,,,,コインを投げて「おもて」なら、次の相手の番に受けるダメージが0になる。,"Flip a coin. If heads, prevent all damage done to Squirtle during your opponent's next turn. (Any other effects of attacks still happen.)"
+PMCG1-024,1,みずでっぽう,Water Gun,water,1,10,+,10+,「水」エネルギーを1つ追加すると、10ダメージ追加できる。(追加は2つまで),Does 10 damage plus 10 more damage for each Water Energy attached to Poliwag but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd don't count.
+PMCG1-025,1,ひらてうち,Slap,water,1,20,,20,,
+PMCG1-026,1,じこさいせい,Recover,water water,2,,,,自分の「水」エネルギーカードを1枚はがしてすてることによってダメージカウンターを全てとりのぞく。,Discard 1 Water Energy card attached to Starmie in order to use this attack. Remove all damage counters from Starmie.
+PMCG1-026,2,スターフリーズ,Star Freeze,water colorless colorless,3,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG1-027,1,からにこもる,Withdraw,water colorless,2,,,,コインを投げて「おもて」なら、次の相手の番に受けるダメージが0になる。,"Flip a coin. If heads, prevent all damage done to Wartortle during your opponent's next turn. (Any other effects of attacks still happen.)"
+PMCG1-027,2,かみつく,Bite,water colorless colorless,3,40,,40,,
+PMCG1-028,1,ドわすれ,Amnesia,water water,2,,,,相手の対戦ポケモンの「ワザ」を1つ選ぶ。次の相手の番でその「ワザ」はつかえない。,Choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.
+PMCG1-028,2,おうふくびんた,Doubleslap,water water colorless,3,30,×,30×,コインを2枚投げて、表の出た数×30のダメージをあたえる。,Flip 2 coins. This attack does 30 damage times the number of heads.
+PMCG1-029,1,ずつき,Headbutt,water,1,10,,10,,
+PMCG1-030,1,オーロラビーム,Aurora Beam,water water colorless,3,50,,50,,
+PMCG1-030,2,れいとうビーム,Ice Beam,water water colorless colorless,4,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG1-031,1,たいあたり,Tackle,colorless,1,10,,10,,
+PMCG1-031,2,じたばた,Flail,water,1,10,×,10×,自分のダメージカウンターの数×10のダメージをあたえる。,Does 10 damage times the number of damage counters on Magikarp.
+PMCG1-032,1,ハイドロポンプ,Hydro Pump,water water water,3,40,+,40+,「水」エネルギーを1つ追加すると、10ダメージ追加できる。(追加は2つまで),Does 40 damage plus 10 more damage for each Water Energy attached to Blastoise but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.
+PMCG1-033,1,みずでっぽう,Water Gun,water water colorless,3,30,+,30+,「水」エネルギーを1つ追加すると、10ダメージ追加できる。(追加は2つまで),Does 30 damage plus 10 more damage for each Water Energy attached to Poliwrath but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.
+PMCG1-033,2,うずしお,Whirlpool,water water colorless colorless,4,40,,40,相手の対戦ポケモンのエネルギーカードを1枚はがしてすてる。,"If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it."
+PMCG1-034,1,りゅうのいかり,Dragon Rage,water water water,3,50,,50,,
+PMCG1-034,2,バブルこうせん,Bubblebeam,water water water water,4,40,,40,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG1-035,1,かじる,Gnaw,colorless,1,10,,10,,
+PMCG1-035,2,でんげき,Thunder Jolt,lightning colorless,2,30,,30,コインを投げて「うら」なら、自分にも10ダメージ。,"Flip a coin. If tails, Pikachu does 10 damage to itself."
+PMCG1-036,1,でんじは,Thunder Wave,lightning,1,10,,10,コインを投げて「おもて」がでたら「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG1-036,2,じばく,Selfdestruct,lightning colorless,2,40,,40,自分と相手に40ダメージをあたえ、お互いの控えポケモン全員にも10ダメージ。,Does 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magnemite does 40 damage to itself.
+PMCG1-037,1,たいあたり,Tackle,colorless,1,10,,10,,
+PMCG1-038,1,こうそくいどう,Agility,lightning colorless colorless,3,20,,20,コインを投げて「おもて」なら、次の相手の番の「ワザ」をうけない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Raichu."
+PMCG1-038,2,かみなり,Thunder,lightning lightning lightning colorless,4,60,,60,コインを投げて「うら」なら、自分にも30ダメージ。,"Flip a coin. If tails, Raichu does 30 damage to itself."
+PMCG1-039,1,でんじは,Thunder Wave,lightning lightning colorless,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG1-039,2,じばく,Selfdestruct,lightning lightning colorless colorless,4,80,,80,自分と相手に80ダメージをあたえ、お互いの控えポケモン全員にも20ダメージ。,Does 20 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magneton does 80 damage to itself.
+PMCG1-040,1,でんげき,Electric Shock,lightning lightning lightning,3,50,,50,コインを投げて「うら」なら、自分に10ダメージ。,"Flip a coin. If tails, Electrode does 10 damage to itself."
+PMCG1-041,1,でんきショック,Thundershock,lightning,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG1-041,2,かみなりパンチ,Thunderpunch,lightning colorless,2,30,+,30+,コインを投げて「おもて」なら、相手に10ダメージを追加する。「うら」なら自分にも10ダメージ。,"Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage plus Electabuzz does 10 damage to itself."
+PMCG1-042,1,かみなり,Thunder,lightning lightning lightning colorless,4,60,,60,コインを投げて「うら」なら、自分にも30ダメージ。,"Flip a coin. If tails, Zapdos does 30 damage to itself."
+PMCG1-042,2,10まんボルト,Thunderbolt,lightning lightning lightning lightning,4,100,,100,自分のエネルギーカードを全てはがしてすてる。,Discard all Energy cards attached to Zapdos in order to use this attack.
+PMCG1-043,1,ねんりき,Psyshock,psychic,1,10,,10,コインを投げて、「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG1-044,1,さいみんガス,Sleeping Gas,psychic,1,,,,コインを投げて「おもて」なら、相手を「ねむり」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Asleep."
+PMCG1-044,2,みちづれ,Destiny Bond,psychic colorless,2,,,,「超」エネルギーカードを1枚はがしてすてる。次の相手の番で自分が「きぜつ」したときには、相手の対戦ポケモンも「きぜつ」する。,"Discard 1 Psychic Energy card attached to Gastly in order to use this attack. If a Pokémon Knocks Out Gastly during your opponent's next turn, Knock Out that Pokémon."
+PMCG1-045,1,はたく,Pound,colorless,1,10,,10,,
+PMCG1-045,2,あやしいひかり,Confuse Ray,psychic psychic,2,10,,10,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PMCG1-046,1,じこさいせい,Recover,psychic psychic,2,,,,自分の「超」エネルギーカードを1枚はがしてすてることによってダメージカウンターを全てとりのぞく。,Discard 1 Psychic Energy card attached to Kadabra in order to use this attack. Remove all damage counters from Kadabra.
+PMCG1-046,2,ちょうねんりき,Super Psy,psychic psychic colorless,3,50,,50,,
+PMCG1-047,1,さいみんじゅつ,Hypnosis,psychic,1,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+PMCG1-047,2,ゆめくい,Dream Eater,psychic psychic,2,50,,50,相手が「ねむり」状態のときだけ、ダメージをあたえる。,You can't use this attack unless the Defending Pokémon is Asleep.
+PMCG1-048,1,おうふくびんた,Doubleslap,psychic,1,10,×,10×,コインを2枚投げて「おもて」の出た数×10のダメージをあたえる。,Flip 2 coins. This attack does 10 damage times the number of heads.
+PMCG1-048,2,ヨガのポーズ,Meditate,psychic psychic colorless,3,20,+,20+,相手のポケモンにのっているダメージカウンター×10のダメージを追加する。,Does 20 damage plus 10 more damage for each damage counter on the Defending Pokémon.
+PMCG1-049,1,あやしいひかり,Confuse Ray,psychic psychic psychic,3,30,,30,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PMCG1-050,1,サイコキネシス,Psychic,psychic colorless,2,10,+,10+,相手についているエネルギーカード×10の追加ダメージをあたえる。,Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon.
+PMCG1-050,2,バリアー,Barrier,psychic psychic,2,,,,自分についている「超」エネルギーカードを1枚はがしてすてることによって、次の相手の番の「ワザ」をうけない。,"Discard 1 Psychic Energy card attached to Mewtwo in order to prevent all effects of attacks, including damage, done to Mewtwo during your opponent's next turn."
+PMCG1-051,1,すなかけ,Sand-attack,fighting,1,10,,10,「すなかけ」を受けた相手は、次の番に「ワザ」を使うときに、コインをなげ、「おもて」なら成功、「うら」なら「ワザ」は失敗する。「すなかけ」の効果は1回できえる。,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
+PMCG1-052,1,あなをほる,Dig,fighting,1,10,,10,,
+PMCG1-052,2,どろかけ,Mud Slap,fighting fighting,2,30,,30,,
+PMCG1-053,1,けたぐり,Low Kick,fighting,1,20,,20,,
+PMCG1-054,1,いわおとし,Rock Throw,fighting,1,10,,10,,
+PMCG1-054,2,かたくなる,Harden,fighting fighting,2,,,,次の相手の番に受けるダメージが0になる。ただしダメージが40以上の場合は、そのままダメージをうける。,"During your opponent's next turn, whenever 30 or less damage is done to Onix (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.)"
+PMCG1-055,1,からてチョップ,Karate Chop,fighting fighting colorless,3,50,-,50-,自分のダメージカウンター×10だけ、相手にあたえるダメージがへる。,Does 50 damage minus 10 damage for each damage counter on Machoke.
+PMCG1-055,2,じごくぐるま,Submission,fighting fighting colorless colorless,4,60,,60,自分にも20ダメージ。,Machoke does 20 damage to itself.
+PMCG1-056,1,きりさく,Slash,fighting fighting colorless,3,40,,40,,
+PMCG1-056,2,じしん,Earthquake,fighting fighting fighting fighting,4,70,,70,自分の控えポケモン全員にも10ダメージ。,Does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)
+PMCG1-057,1,ちきゅうなげ,Seismic Toss,fighting fighting fighting colorless,4,60,,60,,
+PMCG1-058,1,ジャブ,Jab,fighting,1,20,,20,,
+PMCG1-058,2,スペシャルパンチ,Special Punch,fighting fighting colorless,3,40,,40,,
+PMCG1-059,1,かぜおこし,Whirlwind,colorless colorless,2,10,,10,相手の対戦ポケモンを控えポケモンと入れ替える。入れ替えは相手が行う。相手の控えポケモンがいないときには、ダメージだけをあたえる。,"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+PMCG1-060,1,かみつく,Bite,colorless,1,20,,20,,
+PMCG1-061,1,みだれづき,Fury Attack,colorless,1,10,×,10×,コインを2枚投げて「おもて」の数×10のダメージをあたえる。,Flip 2 coins. This attack does 10 damage times the number of heads.
+PMCG1-062,1,かみつく,Bite,colorless,1,20,,20,,
+PMCG1-062,2,いかりのまえば,Super Fang,colorless colorless colorless,3,,?,?,相手の残りのHPの半分(切り上げ)のダメージをあたえる。,Does damage to the Defending Pokémon equal to half the Defending Pokémon's remaining HP (rounded up to the nearest 10).
+PMCG1-063,1,ネギでたたく,Leek Slap,colorless,1,30,,30,コインを投げて「うら」なら、ダメージをあたえられない。場に出してから1度しか使えない。,"Flip a coin. If tails, this attack does nothing. Either way, you can't use this attack again as long as Farfetch'd stays in play (even putting Farfetch'd on the Bench won't let you use it again)."
+PMCG1-063,2,ナベでたたく,Pot Smash,colorless colorless colorless,3,30,,30,,
+PMCG1-064,1,テクスチャー1,Conversion 1,colorless,1,,,,相手の対戦ポケモンの弱点を好きな「色」にかえる。ただし「無色」にはできない。相手がベンチに戻った時にその効果はきえる。,"If the Defending Pokémon has a Weakness, you may change it to a type of your choice other than Colorless."
+PMCG1-064,2,テクスチャー2,Conversion 2,colorless colorless,2,,,,自分の抵抗力を好きな「色」にかえる。ただし「無色」にはできない。自分がベンチに戻ったときにその効果はきえる。,Change Porygon's Resistance to a type of your choice other than Colorless.
+PMCG1-065,1,はたく,Pound,colorless,1,10,,10,,
+PMCG1-066,1,ふきとばし,Whirlwind,colorless colorless,2,20,,20,相手の対戦ポケモンを控えポケモンと入れ替える。控えポケモンは相手がえらぶ。控えポケモンがいないときにはダメージのみ。,"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+PMCG1-066,2,オウムがえし,Mirror Move,colorless colorless colorless,3,,,,前の相手の番で受けた「ワザ」と同じ「ワザ」をだす。,"If Pidgeotto was attacked last turn, do the final result of that attack on Pidgeotto to the Defending Pokémon."
+PMCG1-067,1,うたう,Sing,colorless,1,,,,コインを投げて「おもて」なら、相手を「ねむり」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Asleep."
+PMCG1-067,2,ゆびをふる,Metronome,colorless colorless colorless,3,,,,相手の対戦ポケモンの「ワザ」の中から1つを選び、それを自分の「ワザ」としてつかう。,"Choose 1 of the Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs and anything else required in order to use that attack, such as discarding Energy cards. (No matter what type the Defending Pokémon is, Clefairy's type is still Colorless.)"
+PMCG1-068,1,まるまる,Scrunch,colorless colorless,2,,,,コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。,"Flip a coin. If heads, prevent all damage done to Chansey during your opponent's next turn. (Any other effects of attacks still happen.)"
+PMCG1-068,2,すてみタックル,Double-edge,colorless colorless colorless colorless,4,80,,80,自分にも80ダメージ。,Chansey does 80 damage to itself.
+PMCG1-069,1,たたきつける,Slam,colorless colorless colorless,3,30,×,30×,コインを2枚投げて「おもて」の数×30のダメージを相手にあたえる。,Flip 2 coins. This attack does 30 damage times the number of heads.
+PMCG1-069,2,はかいこうせん,Hyper Beam,colorless colorless colorless colorless,4,20,,20,相手の対戦ポケモンのエネルギーカードを1枚はがしてすてる。,"If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it."
+PMCG2-001,1,みだれひっかき,Fury Swipes,grass,1,10,×,10×,コインを3枚投げて「おもて」の数×10のダメージ。,Flip 3 coins. This attack does 10 damage times the number of heads.
+PMCG2-001,2,なかまをよぶ,Call for Family,grass grass,2,,,,自分の山札から「ニドラン♂」または「ニドラン♀」を1匹さがしてベンチにだす。その後、その山札をよくきる。自分のベンチに空きがなければ使えない。,Search your deck for a Basic Pokémon named Nidoran ♂ or Nidoran ♀ and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)
+PMCG2-002,1,しびれごな,Stun Spore,grass,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG2-002,2,ふえる,Sprout,grass grass,2,,,,自分の山札から「ナゾノクサ」を1匹さがしてベンチにだす。その後、その山札をよくきる。自分のベンチに空きがなければ使えない。,Search your deck for a Basic Pokémon named Oddish and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)
+PMCG2-003,1,ひっかく,Scratch,colorless colorless,2,20,,20,,
+PMCG2-003,2,キノコのほうし,Spore,grass grass,2,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+PMCG2-004,1,しびれごな,Stun Spore,grass,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG2-004,2,きゅうけつ,Leech Life,grass colorless,2,10,,10,相手にダメージを与えたら、与えたぶんのダメージカウンターを自分からとりのぞく。,Remove a number of damage counters from Venonat equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance).
+PMCG2-005,1,つるのムチ,Vine Whip,grass,1,10,,10,,
+PMCG2-005,2,なかまをよぶ,Call for Family,grass,1,,,,自分の山札から「マダツボミ」を1匹さがしてベンチにだす。その後、その山札をよくきる。自分のベンチに空きがなければ使えない。,Search your deck for a Basic Pokémon named Bellsprout and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)
+PMCG2-006,1,さいみんじゅつ,Hypnosis,psychic,1,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+PMCG2-006,2,やどりぎのタネ,Leech Seed,grass grass,2,20,,20,相手にダメージを与えたら、自分のダメージカウンターを1つとりのぞく。,"Unless all damage from this attack is prevented, you may remove 1 damage counter from Exeggcute."
+PMCG2-007,1,ふきとばし,Whirlwind,colorless colorless,2,20,,20,相手を控えポケモンと入れ替える。控えポケモンは相手プレイヤーがえらぶ。相手プレイヤーに控えポケモンがいないときには入れ替えはおこらない。,"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+PMCG2-007,2,メガドレイン,Mega Drain,grass grass grass grass,4,40,,40,相手に与えたダメージの半分(切り上げ)のダメージカウンターを自分からとりのぞく。,Remove a number of damage counters from Butterfree equal to half the damage done to the Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10).
+PMCG2-008,1,ちょうおんぱ,Supersonic,grass,1,,,,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PMCG2-008,2,にどげり,Double Kick,grass colorless colorless,3,30,×,30×,コインを2枚投げて「おもて」の数×30のダメージ。,Flip 2 coins. This attack does 30 damage times the number of heads.
+PMCG2-009,1,どくのこな,Poisonpowder,grass,1,,,,相手を「どく」状態にする。,The Defending Pokémon is now Poisoned.
+PMCG2-009,2,くさいにおい,Foul Odor,grass grass,2,20,,20,相手を「こんらん」状態にする。その後、自分も「こんらん」状態になる。,Both the Defending Pokémon and Gloom are now Confused (after doing damage).
+PMCG2-010,1,キノコのほうし,Spore,grass grass,2,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+PMCG2-010,2,きりさく,Slash,colorless colorless colorless,3,30,,30,,
+PMCG2-011,1,どくのこな,Poisonpowder,grass,1,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PMCG2-011,2,はっぱカッター,Razor Leaf,grass grass,2,30,,30,,
+PMCG2-012,1,テレポート,Teleport,psychic,1,,,,自分の控えポケモンを選び、このカードと入れ替える。,Switch Exeggutor with 1 of your Benched Pokémon.
+PMCG2-012,2,たまなげMAX,Big Eggsplosion,colorless,1,20,×,20×,自分についているエネルギーの数だけコインを投げて「おもて」の数×20のダメージ。,Flip a number of coins equal to the number of Energy attached to Exeggutor. This attack does 20 damage times the number of heads.
+PMCG2-013,1,ラブラブアタック,Boyfriends,grass colorless,2,20,+,20+,自分の場に出ている「ニドキング」の数×20のダメージを追加する。,Does 20 damage plus 20 more damage for each Nidoking you have in play.
+PMCG2-013,2,メガトンパンチ,Mega Punch,grass grass colorless colorless,4,50,,50,,
+PMCG2-014,1,はなびらのまい,Petal Dance,grass grass grass,3,40,×,40×,コインを3枚投げて「おもて」の数×40のダメージ。その後、自分は「こんらん」状態になる。,Flip 3 coins. This attack does 40 damage times the number of heads. Vileplume is now Confused (after doing damage).
+PMCG2-015,1,りんぷん,Venom Powder,grass grass,2,10,,10,コインを投げて「おもて」なら、相手を「どく」と「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused and Poisoned."
+PMCG2-016,1,さそうかおり,Lure,grass,1,,,,相手の控えポケモンを選び、相手の対戦ポケモンと入れ替える。,"If your opponent has any Benched Pokémon, choose 1 of them and switch it with his or her Active Pokémon."
+PMCG2-016,2,ようかいえき,Acid,grass grass,2,20,,20,コインを投げて「おもて」なら、「ようかいえき」を受けた相手の対戦ポケモンは、次の相手の番に「にげる」ことができない。,"Flip a coin. If heads, the Defending Pokémon can't retreat during your next turn."
+PMCG2-017,1,つるぎのまい,Swords Dance,grass,1,,,,次の自分の番だけ、このカードが使う「きりさく」のダメージは2倍になる。,"During your next turn, Scyther's Slash attack's base damage is 60 instead of 30."
+PMCG2-017,2,きりさく,Slash,colorless colorless colorless,3,30,,30,,
+PMCG2-018,1,まんりきばさみ,Irongrip,grass grass,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG2-018,2,ハサミギロチン,Guillotine,grass grass colorless colorless,4,50,,50,,
+PMCG2-019,1,ふみつけ,Stomp,colorless colorless,2,20,+,20+,コインを投げて「おもて」なら、10ダメージ追加する。,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage; if tails, this attack does 20 damage."
+PMCG2-019,2,こうそくいどう,Agility,fire fire colorless,3,30,,30,コインを投げて「おもて」なら、このカードは次の相手の番にワザをうけない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Rapidash."
+PMCG2-020,1,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージ追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+PMCG2-020,2,かえんほうしゃ,Flamethrower,fire fire colorless colorless,4,60,,60,このカードについている「炎」エネルギーカードを1枚はがしてすてなければ、このワザは失敗する。,Discard 1 Fire Energy card attached to Flareon in order to use this attack.
+PMCG2-021,1,つのでつく,Horn Attack,water,1,10,,10,,
+PMCG2-022,1,つのでつく,Horn Attack,water,1,10,,10,,
+PMCG2-022,2,たきのぼり,Waterfall,water colorless,2,30,,30,,
+PMCG2-023,1,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+PMCG2-023,2,みずでっぽう,Water Gun,water water colorless,3,30,+,30+,このワザに必要な分よりも多く「水」エネルギーがついている時、多いエネルギー1つにつき10ダメージを追加する。(ダメージ追加は2つぶんまで),Does 30 damage plus 10 more damage for each Water Energy attached to Vaporeon but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.
+PMCG2-024,1,スパーク,Spark,lightning lightning,2,20,,20,相手の控えポケモンから1匹選び、そのポケモンにも10ダメージ。相手の控えポケモンが1匹もいないときにはこの効果はない。,"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+PMCG2-025,1,たいあたり,Tackle,colorless colorless,2,20,,20,,
+PMCG2-025,2,ビリビリ,Chain Lightning,lightning lightning lightning,3,20,,20,相手の対戦ポケモンと同じ色の控えポケモン全員にそれぞれ10ダメージ。(自分の控えポケモンも含まれる),"If the Defending Pokémon isn't Colorless, this attack does 10 damage to each Benched Pokémon of the same type as the Defending Pokémon (including your own)."
+PMCG2-026,1,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+PMCG2-026,2,ミサイルばり,Pin Missile,lightning lightning colorless,3,20,×,20×,コインを4枚投げて「おもて」の数×20のダメージ。,Flip 4 coins. This attack does 20 damage times the number of heads.
+PMCG2-027,1,ヨガのポーズ,Meditate,psychic colorless,2,10,+,10+,相手にのっているダメージカウンター×10のダメージを追加する。,Does 10 damage plus 10 more damage for each damage counter on the Defending Pokémon.
+PMCG2-028,1,ひっかく,Scratch,colorless,1,10,,10,,
+PMCG2-029,1,なきつく,Snivel,colorless,1,,,,「なきつく」を受けた相手は、このカードにワザを使う時、与えるダメージが20へる。この状態は次の自分の番の始めに消える。,"If the Defending Pokémon attacks Cubone during your opponent's next turn, any damage done by the attack is reduced by 20 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)"
+PMCG2-029,2,いかり,Rage,fighting fighting,2,10,+,10+,自分にのっているダメージカウンター×10のダメージを追加する。,Does 10 damage plus 10 more damage for each damage counter on Cubone.
+PMCG2-030,1,にらみつける,Leer,colorless,1,,,,コインを投げて「おもて」なら「にらみつける」を受けた相手の対戦ポケモンは、次の相手の番にワザをつかえない。,"Flip a coin. If heads, the Defending Pokémon can't attack Rhyhorn during your opponent's next turn. (Benching either Pokémon ends this effect.)"
+PMCG2-030,2,つのでつく,Horn Attack,fighting colorless colorless,3,30,,30,,
+PMCG2-031,1,みだれひっかき,Fury Swipes,fighting fighting,2,20,×,20×,コインを3枚投げて「おもて」の数×20のダメージ。,Flip 3 coins. This attack does 20 damage times the number of heads.
+PMCG2-031,2,あばれまわる,Tantrum,fighting fighting colorless,3,50,,50,コインを投げて「うら」なら、自分は「こんらん」状態になる。,"Flip a coin. If tails, Primeape is now Confused (after doing damage)."
+PMCG2-032,1,ほねブーメラン,Bonemerang,fighting fighting,2,30,×,30×,コインを2枚投げて「おもて」の数×30のダメージ。,Flip 2 coins. This attack does 30 damage times the number of heads.
+PMCG2-032,2,たすけをよぶ,Call for Friend,fighting fighting colorless,3,,,,自分の山札から「闘」ポケモンを1匹選んでベンチにだす。その後、その山札をよくきる。進化カードは選べない。自分のベンチに空きがなければ使えない。,Search your deck for a Fighting Basic Pokémon card and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)
+PMCG2-033,1,つのでつく,Horn Attack,fighting colorless colorless,3,30,,30,,
+PMCG2-033,2,げきとつ,Ram,fighting fighting fighting fighting,4,50,,50,相手の対戦ポケモンを控えポケモンと入れ替える。控えポケモンは相手プレイヤーがえらぶ。相手プレイヤーに控えポケモンがいないときには入れ替えはおこらない。その後、自分にも20ダメージ。,"Rhydon does 20 damage to itself. If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon. Switch the Pokémon even if Rhydon is knocked out.)"
+PMCG2-034,1,つつく,Peck,colorless,1,10,,10,,
+PMCG2-034,2,オウムがえし,Mirror Move,colorless colorless colorless,3,,,,前の相手の番に、このカードが受けたダメージと効果を【相手】に与える。「オウムがえし」の効果は1回で消える。,"If Spearow was attacked last turn, do the final result of that attack on Spearow to the Defending Pokémon."
+PMCG2-035,1,こもりうた,Lullaby,colorless,1,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+PMCG2-035,2,こもりうた,Pound,colorless colorless,2,20,,20,,
+PMCG2-036,1,ねこにこばん,Pay Day,colorless colorless,2,10,,10,コインを投げて「おもて」なら、自分の山札の上からカードを1枚ひいて、手札に加える。,"Flip a coin. If heads, draw a card."
+PMCG2-037,1,しっぽをふる,Tail Wag,colorless,1,,,,コインを投げて「おもて」なら「しっぽをふる」を受けた相手の対戦ポケモンは、次の相手の番にワザをつかえない。,"Flip a coin. If heads, the Defending Pokémon can't attack Eevee during your opponent's next turn. (Benching either Pokémon ends this effect.)"
+PMCG2-037,2,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージ追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+PMCG2-038,1,こうそくいどう,Agility,colorless colorless colorless,3,20,,20,コインを投げて「おもて」なら、このカードは次の相手の番にワザをうけない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Fearow."
+PMCG2-038,2,ドリルくちばし,Drill Peck,colorless colorless colorless colorless,4,40,,40,,
+PMCG2-039,1,ひっかく,Scratch,colorless colorless,2,20,,20,,
+PMCG2-039,2,かみつく,Pounce,colorless colorless colorless,3,30,,30,「かみつく」を受けた【相手】は、このカードにワザを使う時、あたえるダメージが10へる。この状態は次の自分の番の始めに消える。,"If the Defending Pokémon attacks Persian during your next turn, any damage done by the attack is reduced by 10 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)"
+PMCG2-040,1,いかり,Rage,colorless colorless colorless,3,10,+,10+,自分にのっているダメージカウンター×10のダメージを追加する。,Does 10 damage plus 10 more damage for each damage counter on Dodrio.
+PMCG2-041,1,したでなめる,Tongue Wrap,colorless,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG2-041,2,ちょうおんぱ,Supersonic,colorless colorless,2,,,,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PMCG2-042,1,ふみつけ,Stomp,colorless colorless,2,20,+,20+,コインを投げて「おもて」なら、10ダメージ追加する。,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage; if tails, this attack does 20 damage."
+PMCG2-042,2,いかりくるう,Rampage,colorless colorless colorless,3,20,+,20+,自分にのっているダメージカウンター×10のダメージを追加する。その後、コインを投げて「うら」なら、【自分】は「こんらん」状態になる。,"Does 20 damage plus 10 more damage for each damage counter on Tauros. Flip a coin. If tails, Tauros is now Confused (after doing damage)."
+PMCG2-043,1,つばさでうつ,Wing Attack,colorless colorless,2,20,,20,,
+PMCG2-043,2,ハリケーン,Hurricane,colorless colorless colorless,3,30,,30,相手の対戦ポケモンが「きぜつ」しなければ、そのカードにのっていたダメージカウンターをとりのぞき、そのカードを持ち主の手札に戻す。そのカードについていた全てのカードも持ち主の手札にもどす。,"Unless this attack Knocks Out the Defending Pokémon, return the Defending Pokémon and all cards attached to it to your opponent's hand."
+PMCG2-044,1,ゆびをふる,Metronome,colorless,1,,,,相手のワザの中から1つを選び、それを【自分】のワザとして使う。そのワザを使うのに必要なエネルギーがついていなくてもかまわないが、ほかに必要な条件(エネルギーカードをはがしてすてるなど)がたりないときには使えない。,"Choose 1 of the Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs and anything else required in order to use that attack, such as discarding Energy cards. (No matter what type the Defending Pokémon is, Clefable's type is still Colorless.)"
+PMCG2-044,2,ちいさくなる,Minimize,colorless colorless,2,,,,次の相手の番でこのカードが受けるダメージが20へる。,All damage done by attacks to Clefable during your opponent's next turn is reduced by 20 (after applying Weakness and Resistance).
+PMCG2-045,1,こもりうた,Lullaby,colorless,1,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+PMCG2-045,2,ともだちのわ,Do the Wave,colorless colorless colorless,3,10,+,10+,自分の控えポケモンの数×10ダメージを追加する。,Does 10 damage plus 10 more damage for each of your Benched Pokémon.
+PMCG2-046,1,こどものおつかい,Fetch,colorless,1,,,,コインを投げて「おもて」なら、自分の山札の上からカードを1枚ひいて、手札に加える。,Draw a card.
+PMCG2-046,2,れんぞくパンチ,Comet Punch,colorless colorless colorless colorless,4,20,×,20×,コインを4枚投げて「おもて」の数×20のダメージ。,Flip 4 coins. This attack does 20 damage times the number of heads.
+PMCG2-047,1,のしかかり,Body Slam,colorless colorless colorless colorless,4,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG3-001,1,どくえき,Spit Poison,grass,1,,,,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PMCG3-001,2,まきつく,Wrap,grass colorless,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG3-002,1,ちょうおんぱ,Supersonic,colorless colorless,2,,,,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PMCG3-002,2,きゅうけつ,Leech Life,grass colorless,2,10,,10,相手にダメージを与えたら、与えたぶんのダメージカウンターを自分からとりのぞく。,"Remove a number of damage counters from Zubat equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance). If Zubat has fewer damage counters than that, remove all of them."
+PMCG3-003,1,ベトベト,Nasty Goo,colorless,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG3-003,2,ちいさくなる,Minimize,grass,1,,,,次の相手の番でこのカードが受けるダメージは20へる。(ダメージ以外の効果はそのまま),All damage done by attacks to Grimer during your opponent's next turn is reduced by 20 (after applying Weakness and Resistance).
+PMCG3-004,1,いかくこうげき,Terror Strike,grass,1,10,,10,コインを投げて「おもて」なら、相手の対戦ポケモンを控えポケモンと入れ替える。入れ替わるポケモンは相手プレイヤーが選ぶ。相手に控えポケモンがいない時、この入れ替えは起こらない。,"Flip a coin. If heads and if your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+PMCG3-004,2,どくのきば,Poison Fang,grass grass colorless,3,20,,20,相手を「どく」状態にする。,The Defending Pokémon is now Poisoned.
+PMCG3-005,1,つばさでうつ,Wing Attack,colorless colorless colorless,3,30,,30,,
+PMCG3-005,2,きゅうけつ,Leech Life,grass grass colorless,3,20,,20,相手にダメージを与えたら、与えたぶんのダメージカウンターを自分からとりのぞく。,"Remove a number of damage counters from Golbat equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance). If Golbat has fewer damage counters than that, remove all of them."
+PMCG3-006,1,スモッグ,Smog,grass grass,2,20,,20,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PMCG3-006,2,じばく,Selfdestruct,grass grass colorless,3,60,,60,自分にも60ダメージ。お互いの控えポケモン全員にも、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。,Does 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Weezing does 60 damage to itself.
+PMCG3-007,1,ヘドロこうげき,Sludge,grass grass grass,3,30,,30,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PMCG3-008,1,えんまく,Smokescreen,fire,1,10,,10,「えんまく」を受けた相手は、次の相手の番にワザを使うときにコインを投げ、「うら」ならワザは失敗する。,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
+PMCG3-008,2,スモッグ,Smog,fire fire,2,20,,20,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PMCG3-009,1,やまやき,Wildfire,fire,1,,,,自分の「炎」エネルギーカードを好きなだけはがしてすてる。その後、はがしたのと同じ枚数のカードを相手の山札の上から取り、相手のトラッシュにすてる。,"You may discard any number of Fire Energy cards attached to Moltres when you use this attack. If you do, discard that many cards from the top of your opponent's deck."
+PMCG3-009,2,ゴッドバード,Dive Bomb,fire fire fire fire,4,80,,80,コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
+PMCG3-010,1,ずつう,Headache,psychic,1,,,,次の相手の番の終わりまで、相手プレイヤーはトレーナーカードを使うことができない。,Your opponent can't play Trainer cards during his or her next turn.
+PMCG3-010,2,みだれひっかき,Fury Swipes,water,1,10,×,10×,コインを3枚投げて「おもて」の数×10のダメージ。,Flip 3 coins. This attack does 10 damage times the number of heads.
+PMCG3-011,1,ようかいえき,Acid,water,1,10,,10,,
+PMCG3-012,1,ちょうおんぱ,Supersonic,water,1,,,,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PMCG3-012,2,からをとじる,Hide in Shell,water,1,,,,コインを投げて「おもて」なら、次の相手の番にこのカードが受けるダメージは0になる。(ダメージ以外の効果はそのまま),"Flip a coin. If heads, prevent all damage done to Shellder during your opponent's next turn. (Any other effects of attacks still happen.)"
+PMCG3-013,1,なかまをよぶ,Call for Family,water,1,,,,自分の山札から「クラブ」を1匹さがしてベンチに出す。その後、その山札をよくきる。自分のベンチに空きがなければ、このワザは使えない。,Search your deck for a Basic Pokémon named Krabby and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench if full.)
+PMCG3-013,2,はさむ,Irongrip,water colorless,2,20,,20,,
+PMCG3-014,1,えんまく,Smokescreen,water,1,10,,10,「えんまく」を受けた相手は、次の相手の番にワザを使うときにコインを投げ、「うら」ならワザは失敗する。,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
+PMCG3-015,1,みずでっぽう,Water Gun,water,1,10,+,10+,ワザに必要なぶんよりも多く「水」エネルギーカードがついている時、多いエネルギー1つにつき10ダメージを追加する。(ダメージ追加は2つぶんまで),Does 10 damage plus 10 more damage for each Water Energy attached to Omanyte but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
+PMCG3-016,1,ねんりき,Psyshock,psychic,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG3-016,2,はかいこうせん,Hyper Beam,water water colorless,3,20,,20,相手の対戦ポケモンについているエネルギーカードを1枚選び、それをはがして相手のトラッシュにすてる。相手の対戦ポケモンにエネルギーカードがついていない時には、この効果はない。,"If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it."
+PMCG3-017,1,ちょうおんぱ,Supersonic,water,1,,,,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PMCG3-017,2,クラゲばり,Jellyfish Sting,water water,2,10,,10,相手を「どく」状態にする。,The Defending Pokémon is now Poisoned.
+PMCG3-018,1,からではさむ,Clamp,water water,2,30,,30,コインを投げて「おもて」なら、ダメージとともに相手を「マヒ」状態にする。「うら」なら、このワザは失敗する。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, this attack does nothing (not even damage)."
+PMCG3-018,2,とげキャノン,Spike Cannon,water water,2,30,×,30×,コインを2枚投げて「おもて」の数×30のダメージ。,Flip 2 coins. This attack does 30 damage times the number of heads.
+PMCG3-019,1,じたばた,Flail,water,1,10,×,10×,自分にのっているダメージカウンターの数×10のダメージ。,Does 10 damage times the number of damage counters on Kingler.
+PMCG3-019,2,クラブハンマー,Crabhammer,water water colorless,3,40,,40,,
+PMCG3-020,1,みずでっぽう,Water Gun,water colorless,2,20,+,20+,ワザに必要なぶんよりも多く「水」エネルギーカードがついている時、多いエネルギー1つにつき10ダメージを追加する。（ダメージ追加は2つぶんまで）,Does 20 damage plus 10 more damage for each Water Energy attached to Seadra but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
+PMCG3-020,2,こうそくいどう,Agility,water colorless colorless,3,20,,20,コインを投げて「おもて」なら、このカードは次の相手の番に、ワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Seadra."
+PMCG3-021,1,みずでっぽう,Water Gun,water colorless,2,20,+,20+,ワザに必要なぶんよりも多く「水」エネルギーカードがついている時、多いエネルギー1つにつき10ダメージを追加する。(ダメージ追加は2つぶんまで),Does 20 damage plus 10 more damage for each Water Energy attached to Omastar but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
+PMCG3-021,2,とげキャノン,Spike Cannon,water water,2,30,×,30×,コインを2枚投げて「おもて」の数×30のダメージ。,Flip 2 coins. This attack does 30 damage times the number of heads.
+PMCG3-022,1,みずでっぽう,Water Gun,water,1,10,+,10+,ワザに必要なぶんよりも多く「水」エネルギーがついている時、多いエネルギー1つにつき10ダメージを追加する。(ダメージ追加は2つぶんまで),Does 10 damage plus 10 more damage for each Water Energy attached to Lapras but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
+PMCG3-022,2,あやしいひかり,Confuse Ray,water water,2,10,,10,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PMCG3-023,1,フリーズドライ,Freeze Dry,water water water,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG3-023,2,ふぶき,Blizzard,water water water water,4,50,,50,コインを投げて「おもて」なら相手の控えポケモン全員に、「うら」なら自分の控えポケモン全員に、(「弱点・抵抗力」に関係なく)それぞれ10ダメージ。,"Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon. If tails, this attack does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+PMCG3-024,1,ギガスパーク,Gigashock,lightning lightning lightning lightning,4,30,,30,相手の控えポケモンから最大3匹を選び、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。,"Choose 3 of your opponent's Benched Pokémon and this attack does 10 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.) If your opponent has fewer than 3 Benched Pokémon, do the damage to each of them."
+PMCG3-025,1,ソニックブーム,Sonicboom,lightning colorless,2,20,,20,この「ソニックブーム」のダメージは、相手の「弱点・抵抗力」の影響を受けない。,Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
+PMCG3-025,2,じばく,Selfdestruct,lightning lightning lightning lightning,4,100,,100,自分にも100ダメージ。お互いの控えポケモン全員にも、「弱点・抵抗力」に関係なく、それぞれ20ダメージ。,Does 20 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magneton does 100 damage to itself.
+PMCG3-026,1,サンダーストーム,Thunderstorm,lightning lightning lightning lightning,4,40,,40,相手の控えポケモンそれぞれに対してコインを投げ、「おもて」ならそのポケモンに(「弱点・抵抗力」に関係なく)20ダメージ。相手の控えポケモン全員に対してコインを投げ終わったら、その間に出た「うら」の数×10ダメージをこのカードに与える。,"For each of your opponent's Benched Pokémon, flip a coin. If heads, this attack does 20 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) Then, Zapdos does 10 damage times the number of tails to itself."
+PMCG3-027,1,ぼーっとする,Spacing Out,colorless,1,,,,コインを投げて「おもて」なら、このカードからダメージカウンターを1つとりのぞく。このカードにダメージカウンターがのってない時には、このワザは使えない。,"Flip a coin. If heads, remove a damage counter from Slowpoke. This attack can't be used if Slowpoke has no damage counters on it."
+PMCG3-027,2,ゴミあさり,Scavenge,psychic psychic,2,,,,このカードについている「超」エネルギーカードを1枚はがしてすてなければ、このワザは使えない。自分のトラッシュの中からトレーナーカードを1枚選び、手札に加える。,Discard 1 Psychic Energy card attached to Slowpoke in order to use this attack. Put a Trainer card from your discard pile into your hand.
+PMCG3-028,1,ねんりき,Psyshock,psychic psychic,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG3-029,1,したでなめる,Lick,psychic,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG3-029,2,エナジーへんかん,Energy Conversion,psychic psychic,2,,,,自分のトラッシュから最大2枚のエネルギーカードを選び、手札に加える。その後、自分に10ダメージ。,Put up to 2 Energy cards from your discard pile into your hand. Gastly does 10 damage to itself.
+PMCG3-030,1,あくむ,Nightmare,psychic colorless,2,10,,10,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+PMCG3-031,1,ナイトヘッド,Dark Mind,psychic psychic psychic,3,30,,30,相手の控えポケモンから1匹選び、「弱点・抵抗力」に関係なく10ダメージ。相手に控えポケモンがいない時には、この効果はない。,"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+PMCG3-032,1,みらいよち,Prophecy,psychic,1,,,,自分または相手の山札の上から3枚まで見て、好きな順番に入れ替えて、もとの山札の上にもどす。,Look at up to 3 cards from the top of either player's deck and rearrange them as you like.
+PMCG3-032,2,ナイトヘッド,Dark Mind,psychic psychic psychic,3,30,,30,相手の控えポケモンから1匹選び、「弱点・抵抗力」に関係なく10ダメージ。相手に控えポケモンがいない時には、この効果はない。,"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+PMCG3-033,1,サイコウェーブ,Psywave,psychic,1,10,×,10×,相手についているエネルギーカード×10のダメージ。,Does 10 damage times the number of Energy cards attached to the Defending Pokémon.
+PMCG3-033,2,たいかビーム,Devolution Beam,psychic psychic,2,,,,自分または相手の場にいるポケモンの中から「進化カード」のついているもの1匹を選び、その「進化カード」を上から1枚はがして持ち主の手札に戻す。,"Choose an evolved Pokémon (your own or your opponent's). Return the highest Stage Evolution card on that Pokémon to its player's hand. That Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned, or anything else that might be the result of an attack (just as if you had evolved it)."
+PMCG3-034,1,れんぞくいしなげ,Stone Barrage,fighting colorless,2,10,×,10×,「うら」が出るまでコインを投げ続ける。その間に出た「おもて」の数×10のダメージ。,Flip a coin until you get tails. This attack does 10 damage times the number of heads.
+PMCG3-035,1,ひっかく,Scratch,colorless,1,10,,10,,
+PMCG3-036,1,きりさく,Slash,colorless colorless,2,20,,20,,
+PMCG3-036,2,みだれひっかき,Fury Swipes,fighting fighting,2,20,×,20×,コインを3枚投げて「おもて」の数×20のダメージ,Flip 3 coins. This attack does 20 damage times the number of heads.
+PMCG3-037,1,かたくなる,Harden,fighting fighting,2,,,,次の相手の番にこのカードが受ける30以下のダメージは0になる。(ダメージ以外の効果はそのまま)。40以上のダメージはそのまま受ける。,"During your opponent's next turn, whenever 30 or less damage is done to Graveler (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.)"
+PMCG3-037,2,いわおとし,Rock Throw,fighting fighting colorless,3,40,,40,,
+PMCG3-038,1,いわころがり,Avalanche,fighting fighting fighting colorless,4,60,,60,,
+PMCG3-038,2,じばく,Selfdestruct,fighting fighting fighting fighting,4,100,,100,自分にも100ダメージ。お互いの控えポケモン全員にも、「弱点・抵抗力」に関係なくそれぞれ20ダメージ。,Does 20 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Golem does 100 damage to itself.
+PMCG3-039,1,のびるキック,Stretch Kick,fighting fighting,2,,,,相手の控えポケモンを1匹選び、そのポケモンに「弱点・抵抗力」に関係なく20ダメージ。相手に控えポケモンがいないとき、このワザは使えない。,"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 20 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+PMCG3-039,2,とびひざげり,High Jump Kick,fighting fighting fighting,3,50,,50,,
+PMCG3-040,1,するどいかま,Sharp Sickle,fighting fighting,2,30,,30,,
+PMCG3-040,2,すいとる,Absorb,fighting fighting fighting fighting,4,40,,40,相手にあたえたダメージの半分(切り上げ)のダメージカウンターを自分からとりのぞく。,"Remove a number of damage counters from Kabutops equal to half the damage done to the Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10). If Kabutops has fewer damage counters than that, remove all of them."
+PMCG3-041,1,つばさでうつ,Wing Attack,colorless colorless colorless,3,30,,30,,
+PMCG3-043,1,たたきつける,Slam,colorless colorless colorless colorless,4,40,×,40×,コインを2枚投げて、「おもて」のでた数×40のダメージ。,Flip 2 coins. This attack does 40 damage times the number of heads.
+PMCG4-001,1,かみつく,Bite,colorless,1,10,,10,,
+PMCG4-001,2,どくばり,Poison Sting,grass grass,2,20,,20,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PMCG4-002,1,ぶつかる,Ram,colorless,1,10,,10,,
+PMCG4-002,2,かみつく,Bite,grass colorless,2,20,,20,,
+PMCG4-003,1,ねむりごな,Sleep Powder,grass,1,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+PMCG4-003,2,どくのこな,Poisonpowder,grass,1,,,,相手を「どく」状態にする。,The Defending Pokémon is now Poisoned.
+PMCG4-004,1,どくガス,Poison Gas,grass,1,,,,相手を「どく」状態にする。,The Defending Pokémon is now Asleep.
+PMCG4-004,2,ねばりつく,Sticky Hands,grass grass,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加して、相手を「マヒ」状態にする。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage and the Defending Pokémon is now Paralyzed; if tails, this attack does 10 damage."
+PMCG4-005,1,たいあたり,Tackle,colorless,1,10,,10,,
+PMCG4-005,2,どくガス,Poison Gas,grass colorless,2,20,,20,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PMCG4-006,1,どくのこな,Poisonpowder,grass grass,2,10,,10,相手を「どく」状態にする。,The Defending Pokémon is now Poisoned.
+PMCG4-007,1,ヘドロパンチ,Sludge Punch,grass grass,2,20,,20,相手を「どく」状態にする。,The Defending Pokémon is now Poisoned.
+PMCG4-008,1,ショックアイ,Stare,grass grass,2,,,,相手の場にいるポケモンから1匹を選び、(「弱点・抵抗力」に関係なく)10ダメージ。次の相手の番の終わりまで、そのポケモンは特殊能力を使うことができない。,"Choose 1 of your opponent's Pokémon. This attack does 10 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.) If that Pokémon has a Pokémon Power, that power stops working until the end of your opponent's next turn."
+PMCG4-008,2,どくのきり,Poison Vapor,grass grass grass,3,10,,10,相手を「どく」状態にする。相手の控えポケモン全員に(「弱点・抵抗力」に関係なく)それぞれ10ダメージ。,The Defending Pokémon is now Poisoned. This attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)
+PMCG4-009,1,ふらふらとぶ,Flitter,grass grass,2,,,,相手の場のポケモン1匹を選び、(「弱点・抵抗力」に関係なく)20ダメージ。,Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
+PMCG4-010,1,はなびらのうず,Petal Whirlwind,grass grass grass,3,30,×,30×,コインを3枚投げて「おもて」の数×30のダメージ。2枚以上「おもて」なら、自分は「こんらん」状態になる,"Flip a coins. This attack does 30 damage times the number of heads. If you get 2 or more heads, Dark Vileplume is now Confused (after doing damage)."
+PMCG4-011,1,みんなでばくはつ,Mass Explosion,grass colorless,2,20,×,20×,お互いの場にいるすべての「ドガース」「マタドガス」「わるいマタドガス」の数×20のダメージ。その後、お互いの場にいる全ての「ドガース」「マタドガス」「わるいマタドガス」に、それぞれ20ダメージ。,"Does 20 damage times the total number of Koffings, Weezings, and Dark Weezings in play (Apply Weakness and Resistance.). Then, this attack does 20 damage to each Koffing, Weezing, and Dark Weezing (even your own). Don't apply Weakness and Resistance."
+PMCG4-011,2,しびれガス,Stun Gas,grass grass grass,3,20,,20,コインを投げて「おもて」なら、相手を「どく」状態に、「うら」なら「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned; if tails, the Defending Pokémon is now Paralyzed."
+PMCG4-012,1,ほのおのしっぽ,Fire Tail,fire,1,20,,20,,
+PMCG4-013,1,ひのこ,Ember,fire colorless,2,30,,30,このカードについている「炎」エネルギーカードを1枚トラッシュする。(トラッシュできない時、このワザのダメージは0になる),Discard 1 Fire Energy card attached to Ponyta in order to use this attack.
+PMCG4-014,1,うしろげり,Rear Kick,colorless colorless,2,20,,20,,
+PMCG4-014,2,ひばしら,Flame Pillar,fire fire,2,30,,30,のぞむなら、このカードについている「炎」エネルギーカードを1枚トラッシュし、その後、相手の控えポケモンを1匹選んで(「弱点・抵抗力」に関係なく)10ダメージを与えてもよい。,"You may discard 1 Fire Energy card attached to Dark Rapidash when you use this attack. If you do and if your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+PMCG4-015,1,しっぽでたたく,Tail Slap,colorless colorless,2,20,,20,,
+PMCG4-015,2,ファイヤーボール,Fireball,fire fire fire,3,70,,70,コインを投げて「うら」なら、このワザは失敗する。「おもて」の時は、このカードについている「炎」エネルギーカードを1枚トラッシュする。(トラッシュできない時、このワザのダメージは0になる),"Use this attack only if there are any Fire Energy cards attached to Dark Charmeleon. Flip a coin. If heads, discard 1 of those Energy cards. If tails, this attack does nothing (not even damage)."
+PMCG4-016,1,いかり,Rage,colorless,1,10,+,10+,自分にのっているダメージカウンターの数×10のダメージを追加する。,Does 10 damage plus 10 more damage for each damage counter on Dark Flareon.
+PMCG4-016,2,ひあそび,Playing with Fire,fire fire,2,30,+,30+,コインを投げて「おもて」なら、20ダメージを追加して、このカードについている「炎」エネルギーカードを1枚トラッシュする。(トラッシュできない時、このワザのダメージは0になる),"Use this attack only if there are any Fire Energy cards attached to Dark Flareon. Flip a coin. If heads, discard 1 of those Energy cards and this attack does 30 damage plus 20 more damage; if tails, this attack does 30 damage."
+PMCG4-017,1,つめではじく,Nail Flick,colorless,1,10,,10,,
+PMCG4-017,2,れんぞくファイヤーボール,Continuous Fireball,fire fire,2,50,×,50×,このカードについている「炎」エネルギーカードの数だけコインを投げ、「おもて」の数×50のダメージ。その後、「おもて」の数ぶんの「炎」エネルギーカードを、このカードからはがしてトラッシュする。(トラッシュできない時、このワザのダメージは0になる),Flip a number of coins equal to the number of Fire Energy cards attached to Dark Charizard. This attack does 50 damage times the number of heads. Discard a number of Fire Energy cards attached to Dark Charizard equal to the number of heads.
+PMCG4-018,1,こうらアタック,Shell Attack,colorless colorless,2,20,,20,,
+PMCG4-019,1,めまい,Dizziness,psychic,1,,,,山札からカードを1枚引く。,Draw a card.
+PMCG4-019,2,みずでっぽう,Water Gun,water colorless,2,20,+,20+,ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで),Does 20 damage plus 10 more damage for each Water Energy attached to Psyduck but not used to pay for this attack. You can't add more than 20 damage in this way.
+PMCG4-020,1,はねまわる,Flop,colorless,1,10,,10,,
+PMCG4-020,2,たきのぼりしんか,Rapid Evolution,water water water,3,,,,「コイキング」から進化するカードを自分の山札から1枚選び出し、このカードにつけてよい。その後、その山札をよく切る。,Search your deck for an Evolution card named Gyarados or Dark Gyarados and put it on Magikarp. (This counts as evolving Magikarp.) Shuffle your deck afterward.
+PMCG4-021,1,おうふくびんた,Doubleslap,water,1,10,×,10×,コインを2枚投げて「おもて」の数×10のダメージ。,Flip 2 coins. This attack does 10 damage times the number of heads.
+PMCG4-021,2,こうらがえし,Mirror Shell,water colorless,2,,,,次の相手の番で、このカードが相手のワザによってダメージを受けた時、(このカードが「きぜつ」するしないにかかわらず、)そのポケモンにも同じダメージを与える。(ダメージ以外の効果は与えない),"If an attack does damage to Dark Wartortle during your opponent's next turn (even if Dark Wartortle is Knocked Out), Dark Wartortle attacks the Defending Pokémon for an equal amount of damage."
+PMCG4-022,1,だい3のめ,Third Eye,psychic,1,,,,このカードについているエネルギーカードを1枚選び、トラッシュする。その後、山札からカードを3枚引く。,Discard 1 Energy card attached to Dark Golduck in order to draw up to 3 cards.
+PMCG4-022,2,ちょうねんりき,Super Psy,psychic psychic colorless,3,50,,50,,
+PMCG4-023,1,かみつく,Bite,colorless colorless colorless,3,30,,30,,
+PMCG4-023,2,うずしお,Whirlpool,water water colorless,3,20,,20,相手の対戦ポケモンについているエネルギーカードを1枚選び、トラッシュさせる。,"If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it."
+PMCG4-024,1,ハイドロキャノン,Hydrocannon,water water,2,30,+,30+,ワザに必要なエネルギーよりも多く「水」エネルギーがいている時、多い「水」エネルギー1つにつき、20ダメージを追加する。(ダメージ追加は2つぶんまで),Does 30 damage plus 20 more damage for each Water Energy attached to Dark Blastoise but not used to pay for this attack. You can't add more than 40 damage in this way.
+PMCG4-024,2,ロケットタックル,Rocket Tackle,water colorless colorless,3,40,,40,このカードにも10ダメージ。コインを投げて「おもて」なら、このカードは次の相手の番にダメージを受けない。(ダメージ以外の効果は受ける),"Dark Blastoise does 10 damage to itself. Flip a coin. If heads, prevent all damage done to Dark Blastoise during your opponent's next turn. (Any other effects of attacks still happen.)"
+PMCG4-025,1,れいとうビーム,Ice Beam,water water water,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG4-026,1,たいあたり,Tackle,colorless colorless,2,20,,20,,
+PMCG4-026,2,ちょくれつじりょく,Magnetism,lightning colorless,2,10,+,10+,自分のベンチにいる「コイル」「レアコイル」「わるいレアコイル」1匹につき、10ダメージを追加する。,"Does 10 damage plus 10 more damage for each Magnemite, Magneton, and Dark Magneton on your Bench."
+PMCG4-027,1,スピードボール,Speed Ball,lightning,1,20,,20,,
+PMCG4-028,1,ころがりタックル,Rolling Tackle,colorless,1,10,,10,,
+PMCG4-028,2,エナジーボム,Energy Bomb,lightning lightning,2,30,,30,このカードについているエネルギーカードをすべてはがし、自分の控えポケモンに好きなようにつける。(自分に控えがいない時、エネルギーカードはトラッシュする),"Take all Energy cards attached to Dark Electrode and attach them to your Benched Pokémon (in any way you choose). If you have no Benched Pokémon, discard all Energy cards attached to Dark Electrode."
+PMCG4-029,1,サンダーフラッシュ,Lightning Flash,lightning,1,20,,20,このワザを受けたポケモンは、次の相手の番にワザを使うときにコインを投げ、「うら」ならワザは失敗する。,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
+PMCG4-029,2,サンダーアタック,Thunder Attack,lightning lightning colorless,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。「うら」なら自分に10ダメージ。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, Dark Jolteon does 10 damage to itself."
+PMCG4-030,1,ソニックブーム,Sonicboom,colorless colorless,2,20,,20,このワザのダメージは、相手の「弱点・抵抗力」の影響を受けない。,Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
+PMCG4-030,2,じりょくせん,Magnetic Lines,lightning lightning,2,30,,30,相手の対戦ポケモンのエネルギーカード(特殊エネルギーカード以外)を1枚選んではがす。その後、相手の控えポケモンを1匹選び、はがしたエネルギーをそのポケモンにつける。(相手に控えがいない時、この効果はない),"If the Defending Pokémon has any basic Energy cards attached to it, choose 1 of them. If your opponent has any Benched Pokémon, choose 1 of them and attach that Energy card to it."
+PMCG4-031,1,いなくなる,Vanish,psychic,1,,,,このカードにのっているダメージカウンターをすべてとりのぞき、ついているカードをすべてトラッシュする。その後、このカードを山札にもどし、その山札をよく切る。,Shuffle Abra into your deck. (Discard all cards attached to Abra.)
+PMCG4-031,2,ねんりき,Psyshock,psychic,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG4-032,1,ひなたぼっこ,Afternoon Nap,colorless,1,,,,自分の山札から「超」エネルギーカードを1枚選び出し、このカードにつけてよい。その後、その山札をよく切る。,Search your deck for a Psychic Energy card and attach it to Slowpoke. Shuffle your deck afterward.
+PMCG4-032,2,ずつき,Headbutt,psychic,1,10,,10,,
+PMCG4-033,1,あくむ,Nightmare,psychic colorless,2,10,,10,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+PMCG4-034,1,マインドショック,Mind Shock,psychic psychic,2,30,,30,このワザのダメージは、相手の「弱点・抵抗力」の影響を受けない。,Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
+PMCG4-035,1,テレポートブラスト,Teleport Blast,psychic psychic colorless,3,30,,30,のぞむなら、ダメージを与えた後、自分の控えポケモンを1匹選び、このカードと入れ替えてもよい。,You may switch Dark Alakazam with 1 of your Benched Pokémon. (Do the damage before switching the Pokémon.)
+PMCG4-035,2,マインドショック,Mind Shock,psychic psychic psychic,3,40,,40,このワザのダメージは、相手の「弱点・抵抗力」の影響を受けない。,Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
+PMCG4-036,1,きまぐれこうげき,Fickle Attack,psychic psychic,2,40,,40,コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
+PMCG4-037,1,サイコパンチ,Psypunch,psychic,1,20,,20,,
+PMCG4-037,2,ベンチをあやつる,Bench Manipulation,psychic psychic colorless,3,20,×,20×,相手プレイヤーに、相手の控えポケモンの数だけコインを投げさせ、「うら」が出た数×20のダメージ(このワザのダメージは相手の「弱点・抵抗力」の影響を受けない),Your opponent flips a number of coins equal to the number of Pokémon on his or her Bench. This attack does 20 damage times the number of tails. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
+PMCG4-038,1,じめんにもぐる,Dig Under,fighting,1,,,,相手の場のポケモンを1匹選び、(「弱点・抵抗力」に関係なく)10ダメージ。,Choose 1 of your opponent's Pokémon. This attack does 10 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
+PMCG4-038,2,ひっかく,Scratch,fighting colorless,2,20,,20,,
+PMCG4-039,1,いたずら,Mischief,colorless,1,,,,相手の山札をよく切る。,Shuffle your opponent's deck.
+PMCG4-039,2,おこる,Anger,fighting colorless,2,20,+,20+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 20 damage plus 20 more damage; if tails, this attack does 20 damage."
+PMCG4-040,1,パンチ,Punch,colorless colorless,2,20,,20,,
+PMCG4-040,2,キック,Kick,fighting colorless colorless,3,30,,30,,
+PMCG4-041,1,あばれくるう,Frenzied Attack,fighting fighting,2,40,,40,ダメージを与えた後、自分は「こんらん」状態になる。,Dark Primeape is now Confused (after doing damage).
+PMCG4-042,1,ひきずりだす,Drag Off,fighting fighting colorless,3,20,,20,ダメージを与える前に、相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。（ダメージは新しい対戦ポケモンに与える。相手に控えがいない時、このワザは使えない）,"Before doing damage, choose 1 of your opponent's Benched Pokémon and switch it with the Defending Pokémon. Do the damage to the new Defending Pokémon. This attack can't be used if your opponent has no Benched Pokémon."
+PMCG4-042,2,なぐりとばす,Knock Back,fighting fighting colorless,3,30,,30,相手の対戦ポケモンを控えポケモンと入れ替える。入れ替えるポケモンは相手が選ぶ。（相手に控えがいない時、入れ替えは起こらない）,"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+PMCG4-043,1,つきおとす,Knock Down,fighting fighting,2,20,+,20+,相手プレイヤーにコインを投げさせ、「うら」なら20ダメージを追加する。,"Your opponent flips a coin. If tails, this attack does 20 damage plus 20 more damage; if heads, this attack does 20 damage."
+PMCG4-044,1,メガトンパンチ,Mega Punch,fighting fighting,2,30,,30,,
+PMCG4-044,2,つまみだす,Fling,fighting fighting fighting colorless,4,,,,相手の対戦ポケモンとそれについているすべてのカードを山札にもどさせ、その山札をよく切る。(相手に控えがいない時、このワザは使えない),Your opponent shuffles his or her Active Pokémon and all cards attached to it into his or her deck. This attack can't be used if your opponent has no Benched Pokémon.
+PMCG4-045,1,でんこうせっか,Quick Attack,colorless,1,10,+,10+,コインを投げて「おもて」なら、10ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 10 more damage; if tails, this attack does 10 damage."
+PMCG4-046,1,かじる,Gnaw,colorless colorless,2,20,,20,,
+PMCG4-046,2,ひっさつまえば,Hyper Fang,colorless colorless colorless,3,50,,50,コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
+PMCG4-047,1,こばんなげ,Coin Hurl,colorless colorless,2,,,,コインを投げて「おもて」なら、相手の場にいるポケモンから1匹を選び、(「弱点・抵抗力」に関係なく)20ダメージ。,"Choose 1 of your opponent's Pokémon and flip a coin. If heads, this attack does 20 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)"
+PMCG4-048,1,ゆうわく,Fascinate,colorless,1,,,,コインを投げて「おもて」なら、相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。(相手に控えがいない時、このワザは使えない)。,"Flip a coin. If heads, choose 1 of your opponent's Benched Pokémon and switch it with the Defending Pokémon. This attack can't be used if your opponent has no Benched Pokémon."
+PMCG4-048,2,どくのつめ,Poison Claws,colorless colorless,2,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PMCG4-049,1,たいあたり,Tackle,colorless,1,10,,10,,
+PMCG4-049,2,すなかけ,Sand-attack,colorless colorless,2,10,,10,このワザを受けたポケモンは、次の相手の番にワザを使う時にコインを投げ、「うら」ならワザは失敗する。,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
+PMCG4-050,1,テクスチャー1,Conversion 1,colorless,1,,,,相手の対戦ポケモンの「弱点」を、無色以外の好きな「色」に変える。この効果は、そのポケモンがバトル場をはなれた時に消える。,"If the Defending Pokémon has a Weakness, you may change it to a type of your choice other than Colorless."
+PMCG4-050,2,サイケこうせん,Psybeam,colorless colorless colorless,3,20,,20,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PMCG4-051,1,まきつく,Wrap,colorless colorless,2,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG4-052,1,しっぽでつく,Tail Strike,colorless colorless colorless,3,20,+,20+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 20 damage plus 20 more damage; if tails, this attack does 20 damage."
+PMCG4-053,1,きょだいなしっぽ,Giant Tail,colorless colorless colorless colorless,4,70,,70,コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
 PMCG5-001,1,,Wing Attack,colorless,1,10,,10,,
 PMCG5-001,2,,Poison Fang,grass colorless,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
 PMCG5-002,1,,Blot,grass,1,10,,10,,"If there are any damage counters on Erika's Oddish, remove 1 of them."
@@ -593,205 +593,205 @@ PMCG6-071,1,,Ambush,colorless colorless colorless,3,20,+,20+,,"Flip a coin. If h
 PMCG6-072,1,,Giant Growth,colorless,1,,,,,"Flip a coin. If heads, Koga's Ditto's maximum HP is now 80 and Koga's Ditto's Pound attack's base damage is 30 instead of 10. (Benching Koga's Ditto ends this effect.)"
 PMCG6-072,2,,Pound,colorless,1,10,,10,,
 PMCG6-073,1,,Collapse,colorless colorless colorless,3,20,,20,,Rocket's Snorlax is now Asleep (after doing damage).
-neo1-001,1,,Hide,colorless,1,,,,,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Oddish."
-neo1-001,2,,Absorb,grass grass,2,20,,20,,"Remove a number of damage counters from Oddish equal to half the damage done to the Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10). If Oddish has fewer damage counters than that, remove all of them."
-neo1-002,1,,Tackle,colorless,1,10,,10,,
-neo1-002,2,,Deflector,grass,1,,,,,"During your opponent's next turn, whenever Chikorita takes damage, divide that damage in half (rounded down to the nearest 10). (Any other effects still happen.)"
-neo1-003,1,,Supersonic,grass,1,,,,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-neo1-003,2,,Comet Punch,grass grass,2,,,,,Flip 4 coins. This attack does 10 damage times the number of heads.
-neo1-004,1,,Scary Face,colorless,1,,,,,"Flip a coin. If heads, until the end of your opponent's next turn, the Defending Pokémon can't attack or retreat."
-neo1-004,2,,String Shot,grass,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-neo1-005,1,,Hop,colorless,1,10,,10,,
-neo1-005,2,,Sprout,grass,1,,,,,Search your deck for a Basic Pokémon named Hoppip and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)
-neo1-006,1,,Growth,grass,1,,,,,"Flip a coin. If heads, you may attach up to 2 Grass Energy cards from your hand to Sunkern."
-neo1-006,2,,Mega Drain,grass grass grass,3,30,,30,,"Remove a number of damage counters from Sunkern equal to half the damage done to the Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10). If Sunkern has fewer damage counters than that, remove all of them."
-neo1-007,1,,Withdraw,grass,1,,,,,"Flip a coin. If heads, prevent all damage done to Shuckle during your opponent's next turn. (Any other effects of attacks still happen.)"
-neo1-007,2,,Wrap,grass grass,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-neo1-008,1,,Strange Powder,grass colorless,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Confused. If tails, the Defending Pokémon is now Asleep."
-neo1-008,2,,Sticky Nectar,grass grass colorless,3,20,+,20+,,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage and, until the end of your next turn, as long as Gloom is your Active Pokémon, the Defending Pokémon can't retreat, and if the effect of an attack, Pokémon Power, or Trainer card would change that player's Active Pokémon, that part of the effect does nothing. If tails, this attack does 20 damage."
-neo1-009,1,,Sweet Scent,grass,1,,,,,"Flip a coin. If heads and if any of your Pokémon have any damage counters on them, then remove 2 damage counters from 1 of them (or 1 if it only has 1). If tails and if any of your opponent's Pokémon have any damage counters on them, choose 1 of them and remove 2 damage counters from it (or 1 if it only has 1)."
-neo1-009,2,,Double Razor Leaf,grass grass grass,3,40,×,40×,,Flip 2 coins. This attack does 40 damage times the number of heads.
-neo1-010,1,,Baton Pass,grass grass,2,30,,30,,"If you have any Grass Pokémon on your Bench, remove all Grass Energy cards from Ledian and attach them to 1 of those Pokémon, then switch Ledian with that Pokémon."
-neo1-011,1,,Spider Web,grass,1,,,,,"Flip a coin. If heads, the Defending Pokémon can't retreat. (Benching or evolving that Pokémon ends this effect.)"
-neo1-011,2,,Poison Bite,grass grass grass,3,20,,20,,"If this attack damages the Defending Pokémon, the Defending Pokémon is now Poisoned and you remove a number of damage counters from Ariados equal to half that damage (rounded up to the nearest 10). If Ariados has fewer damage counters than that, remove all of them."
-neo1-012,1,,Poisonpowder,grass,1,10,,10,,The Defending Pokémon is now Poisoned.
-neo1-012,2,,Stun Spore,grass,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-neo1-013,1,,Petal Dance,grass grass grass,3,30,×,30×,,Flip 3 coins. This attack does 30 damage times the number of heads. Sunflora is now Confused (after doing damage).
-neo1-014,1,,Soothing Scent,grass grass grass grass,4,40,,40,,The Defending Pokémon is now Asleep.
-neo1-015,1,,Sweet Nectar,grass,1,,,,,"Flip a coin. If heads, remove all damage counters from 1 of your Pokémon."
-neo1-015,2,,Flower Dance,grass grass colorless,3,30,×,30×,,Does 30 damage times the number of cards with Bellossom in their names that you have in play (including this one).
-neo1-016,1,,Sleep Powder,grass,1,20,,20,,The Defending Pokémon is now Asleep.
-neo1-016,2,,Leech Seed,grass,1,20,,20,,"If this attack damages the Defending Pokémon (after applying Weakness and Resistance), remove 1 damage counter from Jumpluff, if it has any."
-neo1-017,1,,Megahorn,grass grass grass,3,60,,60,,"Flip a coin. If tails, this attack does nothing."
-neo1-018,1,,Fireworks,fire,1,20,,20,,"Flip a coin. If tails, discard 1 Energy card attached to Cyndaquil."
-neo1-018,2,,Quick Attack,colorless colorless,2,10,+,10+,,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
-neo1-019,1,,Tail Slap,colorless colorless,2,20,,20,,
-neo1-019,2,,Magma Punch,fire fire colorless,3,40,,40,,
-neo1-020,1,,Smokescreen,fire fire,2,20,,20,,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
-neo1-020,2,,Char,fire fire fire,3,30,,30,,"If the Defending Pokémon doesn't have a Char counter on it, flip a coin. If heads, put a Char counter on it. A Char counter requires your opponent to flip a coin after every turn. If tails, put 2 damage counters on the Pokémon with that Char counter. (Char counters stay on the Pokémon as long as it's in play.)"
-neo1-021,1,,Flame Burst,fire fire fire fire,4,60,+,60+,,"Flip a coin. If heads, this attack does 60 damage plus 20 more damage and does 20 damage to Typhlosion. If tails, this attack does 60 damage."
-neo1-022,1,,Sputter,colorless,1,10,,10,,All Pokémon Powers stop working until the end of your next turn.
-neo1-023,1,,Fin Slap,water water,2,20,+,20+,,"If an attack damaged Horsea during your opponent's last turn, this attack does 20 damage plus 10 more damage. If not, this attack does 20 damage."
-neo1-024,1,,Leer,colorless,1,,,,,"Flip a coin. If heads, the Defending Pokémon can't attack Totodile during your opponent's next turn. (Benching or evolving either Pokémon ends this effect.)"
-neo1-024,2,,Fury Swipes,water,1,10,×,10×,,Flip 3 coins. This attack does 10 damage times the number of heads.
-neo1-025,1,,Defense Curl,colorless,1,,,,,"Flip a coin. If heads, prevent all damage done to Marill during your opponent's next turn. (Any other effects of attacks still happen.)"
-neo1-025,2,,Bubble Bomb,water water,2,30,,30,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, Marill does 10 damage to itself."
-neo1-026,1,,Amnesia,water,1,,,,,Choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.
-neo1-026,2,,Slam,colorless colorless,2,20,×,20×,,Flip 2 coins. This attack does 20 damage times the number of heads.
-neo1-027,1,,Powder Snow,water,1,10,,10,,The Defending Pokémon is now Asleep.
-neo1-028,1,,Undulate,water water,2,20,,20,,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Mantine."
-neo1-029,1,,Bubble,water,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-neo1-029,2,,Mud Splash,water water,2,30,,30,,"If your opponent has any Benched Pokémon, choose 1 of them and flip a coin. If heads, this attack does 10 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-neo1-030,1,,Screech,colorless,1,,,,,"Until the end of your next turn, if an attack damages the Defending Pokémon (after applying Weakness and Resistance), that attack does 20 more damage to the Defending Pokémon"
-neo1-030,2,,Jaw Clamp,water water colorless,3,30,,30,,"Until the end of your opponent's next turn, as long as Croconaw is your Active Pokémon, the Defending Pokémon can't retreat, and if the effect of an attack, Pokémon Power, or Trainer card would change that player's Active Pokémon, that part of the effect does nothing."
-neo1-031,1,,Surf,water water,2,30,,30,,
-neo1-031,2,,Earthquake,fighting fighting colorless colorless,4,60,,60,,Does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)
-neo1-032,1,,Freeze,water water,2,10,,10,,"Flip a coin. If heads, the Defending Pokémon can't attack. (Benching or evolving the Defending Pokémon ends this effect.)"
-neo1-032,2,,Blizzard,water water water,3,30,,30,,"Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon; if tails, this attack does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-neo1-033,1,,Chomp,water water water water,4,50,+,50+,,Flip a number of coins equal to the number of damage counters on Feraligatr. This attack does 50 damage plus 10 more damage for each heads.
-neo1-034,1,,Tackle,colorless colorless,2,20,,20,,
-neo1-034,2,,Bubble Shower,water water water,3,30,,30,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed and this attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-neo1-035,1,,Agility,water water colorless,3,30,,30,,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Kingdra."
-neo1-035,2,,Dragon Tornado,water water water water,4,50,,50,,"If this attack doesn't Knock Out the Defending Pokémon, and if there are any Pokémon on your opponent's Bench, choose 1 of them and switch it with the Defending Pokémon."
-neo1-036,1,,Quick Attack,colorless,1,10,+,10+,,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
-neo1-036,2,,Agility,lightning lightning colorless,3,20,,20,,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Pikachu."
-neo1-037,1,,Supersonic,lightning,1,,,,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-neo1-037,2,,Flail,water,1,10,×,10×,,Does 10 damage times the number of damage counters on Chinchou.
-neo1-038,1,,Static Electricity,lightning,1,,,,,"For each Mareep in play, you may search your deck for a Lightning Energy card and attach it to Mareep. Shuffle your deck afterward."
-neo1-038,2,,Thundershock,lightning lightning,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-neo1-039,1,,Punch,colorless colorless,2,20,,20,,
-neo1-039,2,,Swift,lightning lightning lightning,3,30,,30,,"This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
-neo1-040,1,,Floodlight,lightning lightning,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-neo1-041,1,,Discharge,lightning,1,30,×,30×,,Discard all Lightning Energy cards attached to Flaaffy in order to use this attack. Flip a number of coins equal to the number of Lightning Energy cards you discarded. This attack does 30 damage times then number of heads.
-neo1-041,2,,Electric Current,lightning lightning,2,20,,20,,"Take 1 Lightning Energy cards attached to Flaaffy and attach it to 1 of your Benched Pokémon. If you have no Benched Pokémon, discard that Energy card."
-neo1-042,1,,Zzzap,colorless,1,,,,,Does 20 damage to each Pokémon in play that has a Pokémon Power. Don't apply Weakness and Resistance.
-neo1-043,1,,Gigaspark,lightning lightning lightning,3,40,,40,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed and this attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-neo1-045,1,,Psyshock,psychic,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-neo1-045,2,,Water Gun,water,1,10,+,10+,,Does 10 damage plus 10 more damage for each Water Energy attached to Slowpoke but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
-neo1-046,1,,Peck,colorless,1,10,,10,,
-neo1-046,2,,Telekinesis,psychic psychic,2,,,,,Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
-neo1-047,1,,Agility,colorless colorless,2,10,,10,,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Girafarig."
-neo1-047,2,,Psybeam,psychic psychic,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-neo1-048,1,,Prophecy,psychic,1,,,,,Look at the top 3 cards of either player's deck and rearrange them as you like.
-neo1-048,2,,Confuse Ray,psychic psychic psychic,3,30,,30,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-neo1-049,1,,Mind Blast,psychic psychic psychic,3,20,+,20+,,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage and the Defending Pokémon is now Confused. If tails, this attack does 20 damage."
-neo1-050,1,,Screech,colorless,1,,,,,"Until the end of your next turn, if an attack damages the Defending Pokémon (after applying Weakness and Resistance), that attack does 20 more damage to the Defending Pokémon."
-neo1-050,2,,Rage,fighting fighting,2,10,+,10+,,Does 10 damage plus 10 more damage for each damage counter on Onix.
-neo1-051,1,,Flail,fighting,1,10,×,10×,,Does 10 damage times the number of damage counters on Sudowoodo.
-neo1-051,2,,Rock Throw,fighting colorless,2,30,,30,,
-neo1-052,1,,Poison Sting,fighting,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-neo1-052,2,,Slash,colorless colorless,2,20,,20,,
-neo1-053,1,,Tackle,colorless,1,10,,10,,
-neo1-053,2,,Endure,fighting,1,,,,,"Flip a coin. If heads, then if, during your opponent's next turn, Phanpy would be Knocked Out by an attack, Phanpy isn't Knocked Out and its remaining HP become 10 instead."
-neo1-054,1,,Flail,fighting,1,10,×,10×,,Does 10 damage times the number of damage counters on Donphan.
-neo1-054,2,,Rapid Spin,fighting fighting fighting,3,50,,50,,"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with his or her Active Pokémon, then, if you have any Benched Pokémon, you switch 1 of them with your Active Pokémon. (Do the damage before switching the Pokémon.)"
-neo1-055,1,,Mean Look,darkness,1,,,,,The Defending Pokémon can't retreat as long as Murkrow remains your Active Pokémon. (Benching or evolving either Pokémon ends this effect.)
-neo1-055,2,,Feint Attack,darkness colorless,2,,,,,"Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
-neo1-056,1,,Fury Swipes,colorless,1,10,×,10×,,Flip 3 coins. This attack does 10 damage times the number of heads.
-neo1-056,2,,Beat Up,darkness darkness,2,20,×,20×,,Flip a coin for each of your Pokémon in play (including this one). This attack does 20 damage times the number of heads.
-neo1-057,1,,Tackle,colorless colorless,2,20,,20,,
-neo1-057,2,,Tail Crush,metal colorless colorless,3,30,+,30+,,"Flip a coin. If heads, this attack does 30 damage plus 20 more damage; if tails, this attack does 30 damage."
-neo1-058,1,,Claw,colorless,1,20,,20,,"Flip a coin. If tails, this attack does nothing."
-neo1-058,2,,Steel Wing,metal colorless colorless,3,30,,30,,"Flip a coin. If heads, all damage done by attacks to Skarmory during your opponent's next turn is reduced by 20 (after applying Weakness and Resistance)."
-neo1-059,1,,Fury Swipes,colorless,1,10,×,10×,,Flip 3 coins. This attack does 10 damage times the number of heads.
-neo1-060,1,,Hypnosis,colorless,1,,,,,The Defending Pokémon is now Asleep.
-neo1-060,2,,Peck,colorless colorless,2,20,,20,,
-neo1-061,1,,Roar,colorless,1,,,,,"Flip a coin. If heads and if your opponent has any Benched Pokémon, he of she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
-neo1-061,2,,Lick,colorless colorless,2,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-neo1-062,1,,Stomp,colorless colorless,2,20,+,20+,,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage; if tails, this attack does 20 damage."
-neo1-062,2,,Mystifying Horns,colorless colorless colorless,3,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Confused."
-neo1-063,1,,Doubleslap,colorless colorless,2,10,×,10×,,Flip 2 coins. This attack does 10 damage times the number of heads.
-neo1-063,2,,Squaredance,colorless colorless colorless,3,,,,,"Flip a number of coins equal to the total number of Pokémon in play. For each heads, you may search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward."
-neo1-064,1,,Quick Attack,colorless colorless,2,20,+,20+,,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage; if tails, this attack does 20 damage."
-neo1-064,2,,Slam,colorless colorless colorless,3,30,×,30×,,Flip 2 coins. This attack does 30 damage times the number of heads.
-neo1-065,1,,Wing Attack,colorless colorless colorless,3,30,,30,,
-neo1-066,1,,Poison Barb,colorless colorless,2,10,,10,,The Defending Pokémon is now Poisoned.
-neo1-067,1,,Pilfer,colorless,1,,,,,"Shuffle Aipom and all cards attached to it into your deck. Flip a coin. If heads, shuffle a card from your discard pile into your deck."
-neo1-067,2,,Tail Rap,colorless,1,10,×,10×,,Flip 2 coins. This attack does 10 damage times the number of heads.
-neo1-068,1,,Tackle,colorless colorless,2,20,,20,,
-neo1-068,2,,Raging Charge,colorless colorless colorless,3,10,+,10+,,"This attack does 10 damage plus 10 more damage for each damage counter on Granbull. Then, Granbull does 20 damage to itself."
-neo1-069,1,,Milk Drink,colorless,1,,,,,"Flip 2 coins. Remove 2 damage counters times the number of heads from Miltank. If it has fewer damage counters than that, remove all of them."
-neo1-069,2,,Body Slam,colorless colorless colorless,3,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-neo1-070,1,,Eeeeeeek,colorless,1,,,,,"Shuffle your hand into your deck, then draw 7 cards."
-neo1-071,1,,Super Metronome,colorless,1,,,,,"Flip a coin. If heads, choose an attack on 1 of your opponent's Pokémon. Super Metronome copies that attack except for its Energy cost. (You must still do anything else in order to use that attack.) (No matter what type the Defending Pokémon is, Togetic's type is still Colorless.) Togetic performs that attack. (Togetic can make that attack even if it does not have the appropriate number or type of Energy attached to it necessary to make the attack.)"
-neo1-071,2,,Fly,colorless colorless colorless,3,30,,30,,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Togetic; if tails, this attack does nothing (not even damage)."
-neo1-072,1,,Elemental Blast,fire water lightning,3,90,,90,,"Discard a Fire Energy card, a Water Energy card, and a Lightning Energy card attached to Lugia in order to use this attack."
-neo2-001,1,,Spin Tackle,colorless,1,20,,20,,Caterpie does 10 damage to itself.
-neo2-002,1,,Spike Stab,grass,1,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned. If tails, this attack does nothing (not even damage)."
-neo2-003,1,,Poison Sting,grass colorless,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-neo2-004,1,,Rolling Tackle,grass,1,20,,20,,
-neo2-005,1,,Burst,grass,1,40,,40,,"Flip a coin. If heads, Pineco does 40 damage to itself and 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Flip a coin. If tails, this attack does nothing (not even damage)."
-neo2-006,1,,Harden,colorless colorless,2,,,,,"During your opponent's next turn, whenever 20 or less damage is done to Metapod (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen)."
-neo2-006,2,,Hatch,grass grass,2,,,,,"Flip a coin. If heads, remove all damage counters from Metapod. Then, search your deck for a card that evolves from Metapod and attach that card to Metapod. This counts as evolving Metapod. Shuffle your deck afterward."
-neo2-007,1,,Secrete Poison,grass grass,2,,,,,"During your opponent's next turn, whenever your opponent's attack damages Kakuna (even if Kakuna is Knocked Out), your opponent's Active Pokémon is now Poisoned and Kakuna does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-neo2-008,1,,Fury Cutter,grass grass,2,10,+,10+,,"Flip 4 coins. This attack does 10 damage plus 10 more damage if exactly 1 is heads, or 20 more damage if exactly 2 are heads, or 40 more damage if exactly 3 are heads, or 80 more damage if all 4 are heads."
-neo2-009,1,,Magic Dust,grass colorless,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now either Asleep, Confused, Paralyzed, or Poisoned (your choice)."
-neo2-009,2,,Hyper Reverse,grass grass colorless,3,,,,,"Does 10 damage times the number of Energy attached to the Defending Pokémon. After doing damage, remove a number of damage counters from Butterfree equal to the amount of damage done to the Defending Pokémon (after applying Weakness and Resistance)."
-neo2-010,1,,Triple Poison,grass,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned. Your opponent now puts 3 damage counters on it instead of 1 after each player's turn (even if it was already Poisoned)."
-neo2-010,2,,Pin Missile,grass grass colorless,3,20,×,20×,,Flip 4 coins. This attack does 20 damage times the number of heads.
-neo2-011,1,,Shockwave,grass,1,,,,,"Flip a coin. If heads, this attack does 10 damage to each of your opponent's Pokémon. Don't apply Weakness and Resistance. Then, if your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon."
-neo2-011,2,,Swift,grass grass grass,3,30,,30,,"This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
-neo2-012,1,,Smog,fire,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-neo2-012,2,,Collect Fire,fire fire,2,20,,20,,"If there are any Fire Energy cards in your discard pile, choose 1 of them and attach it to Houndour."
-neo2-013,1,,Rollout,colorless,1,10,,10,,
-neo2-013,2,,Hypnosis,water,1,,,,,The Defending Pokémon is now Asleep.
-neo2-014,1,,Work Together,fighting colorless,2,10,+,10+,,"Flip a coin. If heads, this attack does 10 damage plus 10 more damage for each Omanyte, Omastar, Kabuto, and Kabutops on your Bench."
-neo2-015,1,,Slime,water,1,,,,,"If an attack would do damage to Wooper during your opponent's next turn, your opponent flips a coin. If tails, prevent all damage to Wooper from that attack. (Any other effects of that attack happen.)"
-neo2-015,2,,Tail Slap,colorless colorless,2,20,,20,,
-neo2-016,1,,Belly Drum,colorless,1,,,,,"Put 3 damage counters on Poliwhirl. If this doesn't Knock Out Poliwhirl, search your deck for 2 Basic Energy cards and attach them to Poliwhirl. Shuffle your deck afterward."
-neo2-016,2,,Water Gun,water water colorless,3,30,+,30+,,Does 30 damage plus 10 more damage for each Water Energy attached to Poliwhirl but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
-neo2-017,1,,Recover,water,1,,,,,Discard 1 Water Energy card attached to Corsola or this attack does nothing. Remove all damage counters from Corsola.
-neo2-017,2,,Spike Cannon,fighting fighting,2,30,×,30×,,Flip 2 coins. This attack does 30 damage times the number of heads.
-neo2-018,1,,Slash,colorless,1,20,,20,,
-neo2-018,2,,Hydrocutter,fighting,1,40,×,40×,,Flip a number of coins equal to the number of Energy cards attached to Kabutops. This attack does 40 damage times the number of heads. You can't flip more than 3 coins in this way.
-neo2-019,1,,Doubleslap,water water colorless colorless,4,40,×,40×,,Flip 2 coins. This attack does 40 damage times the number of heads.
-neo2-020,1,,Thunder Jolt,lightning colorless,2,30,,30,,"Flip a coin. If tails, Mareep does 10 damage to itself."
-neo2-021,1,,Surprise Thunder,lightning lightning lightning,3,30,,30,,"Flip a coin. If heads, flip another coin. If the second coin is heads, this attack does 20 damage to each of your opponent's Benched Pokémon. If the second coin is tails, this attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-neo2-022,1,,Confuse Ray,psychic,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Confused"
-neo2-023,1,,Hidden Power,psychic,1,10,,10,,
-neo2-024,1,,Energy Cycle,psychic,1,,,,,"Flip a coin. If heads, choose 1 Energy card attached to the Defending Pokémon and 1 of your opponent's Benched Pokémon. Attach that Energy card to that Pokémon."
-neo2-024,2,,Super Psy,psychic psychic colorless,3,50,,50,,
-neo2-025,1,,Hidden Power,psychic,1,10,,10,,
-neo2-026,1,,Hidden Power,psychic,1,10,,10,,
-neo2-027,1,,Hidden Power,psychic,1,10,,10,,
-neo2-028,1,,Hidden Power,psychic,1,10,,10,,
-neo2-029,1,,Bite,colorless colorless,2,20,,20,,
-neo2-029,2,,Psychic,psychic psychic colorless,3,30,+,30+,,Does 30 damage plus 10 more damage for each Energy card attached to the Defending Pokémon.
-neo2-030,1,,Hidden Power,psychic,1,10,,10,,
-neo2-031,1,,Counter,psychic,1,,,,,"If an attack damages Wobbuffet during your opponent's next turn (even if Wobbuffet is Knocked Out), flip a coin. If heads, Wobbuffet attacks the Defending Pokémon for an equal amount of damage."
-neo2-032,1,,Bind,water,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-neo2-033,1,,Smash Punch,colorless,1,30,,30,,"Flip a coin. If tails, this attack does nothing."
-neo2-034,1,,Bite,colorless,1,10,,10,,
-neo2-035,1,,Squeeze,water,1,10,+,10+,,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage and the Defending Pokémon is now Paralyzed. If tails, this attack does 10 damage."
-neo2-035,2,,Spike Barrage,water water water,3,20,+,20+,,Flip a number of coins equal to the number of Water Energy attached to Omastar. This attack does 20 damage plus 20 more damage for each heads.
-neo2-036,1,,Skull Bash,colorless colorless,2,20,,20,,
-neo2-036,2,,Dust Devil,fighting fighting,2,,,,,Does 10 damage to each non-Fighting Pokémon in play. Don't apply Weakness and Resistance.
-neo2-037,1,,Corkscrew Punch,fighting colorless,2,30,,30,,
-neo2-037,2,,Submission,fighting fighting colorless colorless,4,70,,70,,Poliwrath does 20 damage to itself.
-neo2-038,1,,Detect,fighting,1,,,,,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Hitmontop."
-neo2-038,2,,Triple Kick,fighting fighting fighting,3,30,×,30×,,Flip 3 coins. This attack does 30 damage times the number of heads.
-neo2-039,1,,Bite,colorless,1,10,,10,,
-neo2-039,2,,Plunder,darkness colorless,2,20,,20,,"Before doing damage, discard all Trainer cards attached to the Defending Pokémon (before they affect the damage)."
-neo2-040,1,,Bite,colorless colorless,2,20,,20,,
-neo2-040,2,,Feint Attack,darkness darkness colorless,3,,,,,
-neo2-041,1,,Crunch,darkness colorless colorless,3,30,,30,,"Until the end of your next turn, if an attack damages the Defending Pokémon (after applying Weakness and Resistance), that attack does 20 more damage to the Defending Pokémon."
-neo2-041,2,,Flamethrower,fire fire colorless,3,50,,50,,Discard 1 Fire Energy card attached to Houndoom or this attack does nothing.
-neo2-042,1,,Slam,colorless colorless colorless,3,30,×,30×,,Flip 2 coins. This attack does 30 damage times the number of heads.
-neo2-042,2,,Trample,darkness darkness colorless colorless,4,50,,50,,"For each Benched Pokémon in play (yours and your opponent's), flip a coin. If heads, this attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-neo2-043,1,,Lock-on,colorless,1,,,,,"During your next turn, treat any tails flipped when using Magnemite's Electric Bolt attack as if they were heads. (Benching or evolving either Pokémon ends this effect.)"
-neo2-043,2,,Electric Bolt,lightning colorless,2,50,,50,,"Flip 2 coins. If both are heads, the Defending Pokémon is now Paralyzed. If either of them is tails, this attack does nothing (not even damage)."
-neo2-044,1,,Rapid Spin,metal colorless colorless,3,30,,30,,"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with his or her Active Pokémon, then, if you have any Benched Pokémon, you switch 1 of them with your Active Pokémon. (Do the damage before switching the Pokémon.)"
-neo2-045,1,,False Swipe,metal,1,,?,?,,Does damage equal to half the Defending Pokémon's remaining HP (rounded down to the nearest 10).
-neo2-045,2,,Double Claw,colorless colorless colorless,3,20,+,20+,,Flip 2 coins. This attack does 20 damage times the number of heads.
-neo2-046,1,,Scout,colorless,1,,,,,Look at your opponent's hand.
-neo2-046,2,,Tackle,colorless colorless,2,20,,20,,
-neo2-047,1,,Glare,colorless,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-neo2-048,1,,Scratch,colorless,1,10,,10,,
-neo2-048,2,,Nap Time,colorless colorless,2,,,,,Remove all damage counters from Teddiursa. Teddiursa is now Asleep.
-neo2-049,1,,Smash Kick,colorless,1,10,,10,,
-neo2-051,1,,Headpress,colorless colorless,2,20,,20,,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, this attack does nothing (not even damage)."
-neo2-051,2,,Double Lariat,colorless colorless colorless colorless,4,40,×,40×,,Flip 2 coins. This attack does 40 damage times the number of heads.
-neo2-052,1,,Sketch,colorless colorless,2,,,,,"If the Defending Pokémon attacked last turn, and Smeargle was in play during that attack, Smeargle copies that attack except for its Energy costs and anything else required in order to use that attack."
+neo1-001,1,かくれる,Hide,colorless,1,,,,コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Oddish."
+neo1-001,2,すいとる,Absorb,grass grass,2,20,,20,相手にダメージを与えたら、その半分(切り上げ)のダメージカウンターを、自分からとりのぞく。,"Remove a number of damage counters from Oddish equal to half the damage done to the Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10). If Oddish has fewer damage counters than that, remove all of them."
+neo1-002,1,たいあたり,Tackle,colorless,1,10,,10,,
+neo1-002,2,リフレクター,Deflector,grass,1,,,,次の相手の番、このカードが受けるダメージは半分(切りすて)になる。(ダメージ以外の効果は受ける),"During your opponent's next turn, whenever Chikorita takes damage, divide that damage in half (rounded down to the nearest 10). (Any other effects still happen.)"
+neo1-003,1,ちょうおんぱ,Supersonic,grass,1,,,,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+neo1-003,2,れんぞくパンチ,Comet Punch,grass grass,2,10,×,10×,コインを4枚投げ、「おもて」の数×10のダメージ。,Flip 4 coins. This attack does 10 damage times the number of heads.
+neo1-004,1,こわいかお,Scary Face,colorless,1,,,,コインを投げて「おもて」なら、次の相手の番、相手はワザを使えず、「にげる」こともできない。,"Flip a coin. If heads, until the end of your opponent's next turn, the Defending Pokémon can't attack or retreat."
+neo1-004,2,いとをはく,String Shot,grass,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+neo1-005,1,はねる,Hop,colorless,1,10,,10,,
+neo1-005,2,ふえる,Sprout,grass,1,,,,自分の山札から「ハネッコ」を1枚選び出し、自分のベンチに出す。その後、その山札をよく切る。(ベンチに空きがないとき、このワザは失敗する),Search your deck for a Basic Pokémon named Hoppip and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)
+neo1-006,1,せいちょう,Growth,grass,1,,,,コインを投げて「おもて」なら、自分の手札にある「草」エネルギーカードを最大2枚、自分につける。,"Flip a coin. If heads, you may attach up to 2 Grass Energy cards from your hand to Sunkern."
+neo1-006,2,メガドレイン,Mega Drain,grass grass grass,3,30,,30,相手にダメージを与えたら、与えたダメージの半分(切り上げ)のダメージカウンターを、自分からとりのぞく。,"Remove a number of damage counters from Sunkern equal to half the damage done to the Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10). If Sunkern has fewer damage counters than that, remove all of them."
+neo1-007,1,からにこもる,Withdraw,grass,1,,,,コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）,"Flip a coin. If heads, prevent all damage done to Shuckle during your opponent's next turn. (Any other effects of attacks still happen.)"
+neo1-007,2,まきつく,Wrap,grass grass,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+neo1-008,1,へんなこな,Strange Powder,grass colorless,2,20,,20,コインを投げ、「おもて」なら相手を「こんらん」状態に、「うら」なら「ねむり」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused. If tails, the Defending Pokémon is now Asleep."
+neo1-008,2,ねばるみつ,Sticky Nectar,grass grass colorless,3,20,+,20+,コインを投げて「おもて」なら、10ダメージを追加する。その場合、次の相手の番が終わるまで、このワザを受けた相手は、バトル場をはなれられない。,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage and, until the end of your next turn, as long as Gloom is your Active Pokémon, the Defending Pokémon can't retreat, and if the effect of an attack, Pokémon Power, or Trainer card would change that player's Active Pokémon, that part of the effect does nothing. If tails, this attack does 20 damage."
+neo1-009,1,あまいかおり,Sweet Scent,grass,1,,,,コインを投げ、「おもて」なら自分の場から、「うら」なら相手の場から、ダメージカウンターののっているポケモンを1匹選ぶ。選んだポケモンから、ダメージカウンターを2個、とりのぞく。,"Flip a coin. If heads and if any of your Pokémon have any damage counters on them, then remove 2 damage counters from 1 of them (or 1 if it only has 1). If tails and if any of your opponent's Pokémon have any damage counters on them, choose 1 of them and remove 2 damage counters from it (or 1 if it only has 1)."
+neo1-009,2,ダブルはっぱカッター,Double Razor Leaf,grass grass grass,3,40,×,40×,コインを2枚投げ、「おもて」の数×40のダメージ。,Flip 2 coins. This attack does 40 damage times the number of heads.
+neo1-010,1,バトンタッチ,Baton Pass,grass grass,2,30,,30,自分のベンチにいる「草」ポケモンを1匹選ぶ。自分についている「エネルギーカード」をすべてはがし、選んだポケモンに付け替えてから、選んだポケモンを自分と入れ替える。,"If you have any Grass Pokémon on your Bench, remove all Grass Energy cards from Ledian and attach them to 1 of those Pokémon, then switch Ledian with that Pokémon."
+neo1-011,1,クモのす,Spider Web,grass,1,,,,コインを投げて「おもて」なら、以後、このワザを受けた相手は、「にげる」ことができない。(相手がバトル場をはなれたとき、この効果は消える。),"Flip a coin. If heads, the Defending Pokémon can't retreat. (Benching or evolving that Pokémon ends this effect.)"
+neo1-011,2,きゅうけつどく,Poison Bite,grass grass grass,3,20,,20,相手にダメージを与えたら、その半分(切り上げ)のダメージカウンターを、自分からとりのぞく。その後、相手を「どく」状態にする。,"If this attack damages the Defending Pokémon, the Defending Pokémon is now Poisoned and you remove a number of damage counters from Ariados equal to half that damage (rounded up to the nearest 10). If Ariados has fewer damage counters than that, remove all of them."
+neo1-012,1,どくのこな,Poisonpowder,grass,1,10,,10,相手を「どく」状態にする。,The Defending Pokémon is now Poisoned.
+neo1-012,2,しびれごな,Stun Spore,grass,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+neo1-013,1,はなびらのまい,Petal Dance,grass grass grass,3,30,×,30×,コインを3枚投げ、「おもて」の数×30のダメージ。その後、自分を「こんらん」状態にする。,Flip 3 coins. This attack does 30 damage times the number of heads. Sunflora is now Confused (after doing damage).
+neo1-014,1,アロマスリープ,Soothing Scent,grass grass grass grass,4,40,,40,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+neo1-015,1,あまいみつ,Sweet Nectar,grass,1,,,,コインを投げて「おもて」なら、自分の場にいるポケモンを1匹選び、そのポケモンにのっているダメージカウンターを、すべてとりのぞく。,"Flip a coin. If heads, remove all damage counters from 1 of your Pokémon."
+neo1-015,2,フラワーダンス,Flower Dance,grass grass colorless,3,30,×,30×,自分の場にいる「キレイハナ」の数×30のダメージ。,Does 30 damage times the number of cards with Bellossom in their names that you have in play (including this one).
+neo1-016,1,ねむりごな,Sleep Powder,grass,1,20,,20,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+neo1-016,2,やどりぎのたね,Leech Seed,grass,1,20,,20,相手にダメージを与えたら、自分にのっているダメージカウンターを、1個とりのぞく。,"If this attack damages the Defending Pokémon (after applying Weakness and Resistance), remove 1 damage counter from Jumpluff, if it has any."
+neo1-017,1,メガホーン,Megahorn,grass grass grass,3,60,,60,コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
+neo1-018,1,ひばな,Fireworks,fire,1,20,,20,コインを投げて「うら」なら、自分についている「エネルギーカード」を1枚選び、トラッシュする。トラッシュできないとき、このワザのダメージはなくなる。,"Flip a coin. If tails, discard 1 Energy card attached to Cyndaquil."
+neo1-018,2,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+neo1-019,1,しっぽでたたく,Tail Slap,colorless colorless,2,20,,20,,
+neo1-019,2,マグマパンチ,Magma Punch,fire fire colorless,3,40,,40,,
+neo1-020,1,えんまく,Smokescreen,fire fire,2,20,,20,次の相手の番、このワザを受けた相手は、ワザを使うときにコインを投げ、「うら」なら、そのワザは失敗する。,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
+neo1-020,2,やきこがす,Char,fire fire fire,3,30,,30,相手に「くろこげマーカー」がのっていなければ、コインを投げ、「おもて」なら、相手に「くろこげマーカー」を1つのせる。おたがいのプレイヤーは、ポケモンチェックのたび、自分の場の「くろこげマーカー」をのせているポケモンそれぞれに対してコインを投げ、「うら」なら、そのポケモンに「弱点・抵抗力・特殊能力・その他の効果」に関係なく、20ダメージ。,"If the Defending Pokémon doesn't have a Char counter on it, flip a coin. If heads, put a Char counter on it. A Char counter requires your opponent to flip a coin after every turn. If tails, put 2 damage counters on the Pokémon with that Char counter. (Char counters stay on the Pokémon as long as it's in play.)"
+neo1-021,1,バーストフレイム,Flame Burst,fire fire fire fire,4,60,+,60+,コインを投げて「おもて」なら、20ダメージを追加して、自分にも20ダメージ。,"Flip a coin. If heads, this attack does 60 damage plus 20 more damage and does 20 damage to Typhlosion. If tails, this attack does 60 damage."
+neo1-022,1,モクモク,Sputter,colorless,1,10,,10,次の自分の番の終わりまで、おたがいの場にいるすべてのポケモンは「特殊能力」を使うことができず、その力も消える。,All Pokémon Powers stop working until the end of your next turn.
+neo1-023,1,ひれがえし,Fin Slap,water water,2,20,+,20+,前の相手の番、このカードがワザによるダメージを受けていたなら、10ダメージを追加する。,"If an attack damaged Horsea during your opponent's last turn, this attack does 20 damage plus 10 more damage. If not, this attack does 20 damage."
+neo1-024,1,にらみつける,Leer,colorless,1,,,,コインを投げて「おもて」なら、次の相手の番、このカードがバトル場にいるかぎり、このワザを受けた相手は、ワザを使えない。,"Flip a coin. If heads, the Defending Pokémon can't attack Totodile during your opponent's next turn. (Benching or evolving either Pokémon ends this effect.)"
+neo1-024,2,みだれひっかき,Fury Swipes,water,1,10,×,10×,コインを3枚投げ、「おもて」の数×10のダメージ。,Flip 3 coins. This attack does 10 damage times the number of heads.
+neo1-025,1,まるくなる,Defense Curl,colorless,1,,,,コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。(ダメージ以外の効果は受ける),"Flip a coin. If heads, prevent all damage done to Marill during your opponent's next turn. (Any other effects of attacks still happen.)"
+neo1-025,2,バブルボム,Bubble Bomb,water water,2,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。「うら」なら、自分にも10ダメージ。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, Marill does 10 damage to itself."
+neo1-026,1,ドわすれ,Amnesia,water,1,,,,相手のワザを1つ選ぶ。次の相手の番、そのポケモンは、そのワザを使えない。,Choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.
+neo1-026,2,たたきつける,Slam,colorless colorless,2,20,×,20×,コインを2枚投げ、「おもて」の数×20のダメージ。,Flip 2 coins. This attack does 20 damage times the number of heads.
+neo1-027,1,こなゆき,Powder Snow,water,1,10,,10,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+neo1-028,1,ゆらゆらおよぐ,Undulate,water water,2,20,,20,コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Mantine."
+neo1-029,1,あわ,Bubble,water,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+neo1-029,2,だくりゅう,Mud Splash,water water,2,30,,30,コインを投げて、「おもて」なら、相手の控えポケモンを1匹選び、そのポケモンにも、「弱点・抵抗力」に関係なく、10ダメージ。,"If your opponent has any Benched Pokémon, choose 1 of them and flip a coin. If heads, this attack does 10 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+neo1-030,1,いやなおと,Screech,colorless,1,,,,次の相手の番と、次の自分の番、このワザを受けた相手が、ワザによるダメージを受けるとき、そのダメージは「+20」される。,"Until the end of your next turn, if an attack damages the Defending Pokémon (after applying Weakness and Resistance), that attack does 20 more damage to the Defending Pokémon"
+neo1-030,2,くいつく,Jaw Clamp,water water colorless,3,30,,30,次の相手の番、このワザを受けた相手は、このカードがバトル場にいるかぎり、バトル場をはなれられない。(「きぜつ」した場合をのぞく),"Until the end of your opponent's next turn, as long as Croconaw is your Active Pokémon, the Defending Pokémon can't retreat, and if the effect of an attack, Pokémon Power, or Trainer card would change that player's Active Pokémon, that part of the effect does nothing."
+neo1-031,1,なみのり,Surf,water water,2,30,,30,,
+neo1-031,2,じしん,Earthquake,fighting fighting colorless colorless,4,60,,60,自分の控えポケモン全員にも、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。,Does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)
+neo1-032,1,こおりつかせる,Freeze,water water,2,10,,10,コインを投げて「おもて」なら、以後、このワザを受けた相手は、「ワザ」を使うことができない。（相手がバトル場をはなれたとき、この効果は消える）,"Flip a coin. If heads, the Defending Pokémon can't attack. (Benching or evolving the Defending Pokémon ends this effect.)"
+neo1-032,2,ふぶき,Blizzard,water water water,3,30,,30,コインを投げ、「おもて」なら相手の控えポケモン全員に、「うら」なら自分の控えポケモン全員に、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。,"Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon; if tails, this attack does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+neo1-033,1,いかりのキバ,Chomp,water water water water,4,50,+,50+,自分にのっているダメージカウンターの数ぶんコインを投げ、「おもて」の数×10ダメージを追加する。,Flip a number of coins equal to the number of damage counters on Feraligatr. This attack does 50 damage plus 10 more damage for each heads.
+neo1-034,1,たいあたり,Tackle,colorless colorless,2,20,,20,,
+neo1-034,2,バブルシャワー,Bubble Shower,water water water,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にし、相手の控えポケモン全員にも、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed and this attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+neo1-035,1,こうそくいどう,Agility,water water colorless,3,30,,30,コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Kingdra."
+neo1-035,2,りゅうのたつまき,Dragon Tornado,water water water water,4,50,,50,相手が「きぜつ」しなければ、相手の控えポケモンを1匹選び、相手と入れ替える。,"If this attack doesn't Knock Out the Defending Pokémon, and if there are any Pokémon on your opponent's Bench, choose 1 of them and switch it with the Defending Pokémon."
+neo1-036,1,でんこうせっか,Quick Attack,colorless,1,10,+,10+,コインを投げて「おもて」なら、10ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+neo1-036,2,こうそくいどう,Agility,lightning lightning colorless,3,20,,20,コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージを受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Pikachu."
+neo1-037,1,ちょうおんぱ,Supersonic,lightning,1,,,,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+neo1-037,2,じたばた,Flail,water,1,10,×,10×,自分にのっているダメージカウンターの数×10ダメージ。,Does 10 damage times the number of damage counters on Chinchou.
+neo1-038,1,せいでんき,Static Electricity,lightning,1,,,,おたがいの場にいる「メリープ」の数以下の「雷」エネルギーカードを自分の山札から選び出し、自分につける。その後、山札をよく切る。,"For each Mareep in play, you may search your deck for a Lightning Energy card and attach it to Mareep. Shuffle your deck afterward."
+neo1-038,2,でんきショック,Thundershock,lightning lightning,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+neo1-039,1,パンチ,Punch,colorless colorless,2,20,,20,,
+neo1-039,2,スピードスター,Swift,lightning lightning lightning,3,30,,30,このワザのダメージは、相手の持っている「弱点・抵抗力・特殊能力・その他の効果」の影響を受けない。,"This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
+neo1-040,1,まぶしいひかり,Floodlight,lightning lightning,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+neo1-041,1,ほうでん,Discharge,lightning,1,30,×,30×,自分についている「雷」エネルギーカードを、すべてトラッシュする。トラッシュした「雷」エネルギーカードの数だけコインを投げ、「おもて」の数×30のダメージ。,Discard all Lightning Energy cards attached to Flaaffy in order to use this attack. Flip a number of coins equal to the number of Lightning Energy cards you discarded. This attack does 30 damage times then number of heads.
+neo1-041,2,デンキとばし,Electric Current,lightning lightning,2,20,,20,自分についている「雷」エネルギーカードを1枚選んではがす。自分の控えポケモンを1匹選び、はがしたカードをそれにつける。（自分に控えがいないとき、はがしたカードはトラッシュする）,"Take 1 Lightning Energy cards attached to Flaaffy and attach it to 1 of your Benched Pokémon. If you have no Benched Pokémon, discard that Energy card."
+neo1-042,1,パチパチ,Zzzap,colorless,1,,,,おたがいの場にいる、「特殊能力」を持っているポケモン全員に、「弱点・抵抗力」に関係なく、それぞれ20ダメージ。,Does 20 damage to each Pokémon in play that has a Pokémon Power. Don't apply Weakness and Resistance.
+neo1-043,1,ギガショック,Gigaspark,lightning lightning lightning,3,40,,40,コインを投げて「おもて」なら、相手を「マヒ」状態にし、相手の控えポケモン全員にも、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed and this attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+neo1-045,1,ねんりき,Psyshock,psychic,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+neo1-045,2,みずでっぽう,Water Gun,water,1,10,+,10+,ワザに必要なエネルギーよりも多く「水」エネルギーがついているとき、多い「水」エネルギー1個につき、10ダメージを追加する。ダメージ追加は2個ぶんまで。,Does 10 damage plus 10 more damage for each Water Energy attached to Slowpoke but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
+neo1-046,1,つつく,Peck,colorless,1,10,,10,,
+neo1-046,2,テレキネシス,Telekinesis,psychic psychic,2,,,,相手の場のポケモンを1匹選び、「弱点・抵抗力」に関係なく、20ダメージ。,Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
+neo1-047,1,こうそくいどう,Agility,colorless colorless,2,10,,10,コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Girafarig."
+neo1-047,2,サイケこうせん,Psybeam,psychic psychic,2,20,,20,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+neo1-048,1,みらいよち,Prophecy,psychic,1,,,,自分または相手の山札の上から3枚のカードを見る。その後、その3枚を好きな順番に入れ替えて、もとの山札の上にもどす。,Look at the top 3 cards of either player's deck and rearrange them as you like.
+neo1-048,2,あやしいひかり,Confuse Ray,psychic psychic psychic,3,30,,30,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+neo1-049,1,マッドインパクト,Mind Blast,psychic psychic psychic,3,20,+,20+,コインを投げて「おもて」なら、10ダメージを追加して、相手を「こんらん」状態にする。,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage and the Defending Pokémon is now Confused. If tails, this attack does 20 damage."
+neo1-050,1,いやなおと,Screech,colorless,1,,,,次の相手の番と、次の自分の番、このワザを受けた相手が、ワザによるダメージを受けるとき、そのダメージは「+20」される。,"Until the end of your next turn, if an attack damages the Defending Pokémon (after applying Weakness and Resistance), that attack does 20 more damage to the Defending Pokémon."
+neo1-050,2,いかり,Rage,fighting fighting,2,10,+,10+,自分にのっているダメージカウンターの数×10のダメージを追加する。,Does 10 damage plus 10 more damage for each damage counter on Onix.
+neo1-051,1,じたばた,Flail,fighting,1,10,×,10×,自分にのっているダメージカウンターの数×10のダメージ。,Does 10 damage times the number of damage counters on Sudowoodo.
+neo1-051,2,いわおとし,Rock Throw,fighting colorless,2,30,,30,,
+neo1-052,1,どくばり,Poison Sting,fighting,1,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+neo1-052,2,きりさく,Slash,colorless colorless,2,20,,20,,
+neo1-053,1,たいあたり,Tackle,colorless,1,10,,10,,
+neo1-053,2,こらえる,Endure,fighting,1,,,,コインを投げて「おもて」なら、次の相手の番、相手のワザによるダメージで、このカードの残りHPがなくなっても、このカードは「きぜつ」しない。その場合、このカードの残りHPは「10」になる。,"Flip a coin. If heads, then if, during your opponent's next turn, Phanpy would be Knocked Out by an attack, Phanpy isn't Knocked Out and its remaining HP become 10 instead."
+neo1-054,1,じたばた,Flail,fighting,1,10,×,10×,自分にのっているダメージカウンターの数×10のダメージ。,Does 10 damage times the number of damage counters on Donphan.
+neo1-054,2,こうそくスピン,Rapid Spin,fighting fighting fighting,3,50,,50,相手を控えポケモンと入れ替える。入れ替わるポケモンは相手が選ぶ。その後、自分の控えポケモンから1匹を選び、自分と入れ替える。(控えがいない側は、入れ替えをしない),"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with his or her Active Pokémon, then, if you have any Benched Pokémon, you switch 1 of them with your Active Pokémon. (Do the damage before switching the Pokémon.)"
+neo1-055,1,くろいまなざし,Mean Look,darkness,1,,,,以後、このワザを受けた相手は、このカードがバトル場にいるかぎり、「にげる」ことができない。(自分か相手がバトル場をはなれたとき、この効果は消える),The Defending Pokémon can't retreat as long as Murkrow remains your Active Pokémon. (Benching or evolving either Pokémon ends this effect.)
+neo1-055,2,だましうち,Feint Attack,darkness colorless,2,,,,相手の場のポケモンを1匹選び、そのポケモンの持っている「弱点・抵抗力・特殊能力・その他の効果」に関係なく、20ダメージ。,"Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
+neo1-056,1,みだれひっかき,Fury Swipes,colorless,1,10,×,10×,コインを3枚投げ、「おもて」の数×10のダメージ。,Flip 3 coins. This attack does 10 damage times the number of heads.
+neo1-056,2,ふくろだたき,Beat Up,darkness darkness,2,20,×,20×,自分の場にいるポケモンの数ぶんコインを投げ、「おもて」の数×20のダメージ。,Flip a coin for each of your Pokémon in play (including this one). This attack does 20 damage times the number of heads.
+neo1-057,1,たいあたり,Tackle,colorless colorless,2,20,,20,,
+neo1-057,2,テールクラッシュ,Tail Crush,metal colorless colorless,3,30,+,30+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 30 damage plus 20 more damage; if tails, this attack does 30 damage."
+neo1-058,1,かぎづめ,Claw,colorless,1,20,,20,コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
+neo1-058,2,はがねのつばさ,Steel Wing,metal colorless colorless,3,30,,30,コインを投げて「おもて」なら、次の相手の番、このカードが、ワザによって受けるダメージは「-20」される。,"Flip a coin. If heads, all damage done by attacks to Skarmory during your opponent's next turn is reduced by 20 (after applying Weakness and Resistance)."
+neo1-059,1,みだれひっかき,Fury Swipes,colorless,1,10,×,10×,コインを3枚投げ、「おもて」の数×10のダメージ。,Flip 3 coins. This attack does 10 damage times the number of heads.
+neo1-060,1,さいみんじゅつ,Hypnosis,colorless,1,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+neo1-060,2,つつく,Peck,colorless colorless,2,20,,20,,
+neo1-061,1,ほえる,Roar,colorless,1,,,,コインを投げて「おもて」なら、相手を控えポケモンと入れ替える。入れ替わるポケモンは、相手が選ぶ。(相手に控えがいないとき、入れ替えは起こらない),"Flip a coin. If heads and if your opponent has any Benched Pokémon, he of she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+neo1-061,2,したでなめる,Lick,colorless colorless,2,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+neo1-062,1,ふみつけ,Stomp,colorless colorless,2,20,+,20+,コインを投げて「おもて」なら、10ダメージを追加する。,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage; if tails, this attack does 20 damage."
+neo1-062,2,つのでまどわす,Mystifying Horns,colorless colorless colorless,3,20,,20,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+neo1-063,1,おうふくビンタ,Doubleslap,colorless colorless,2,10,×,10×,コインを2枚投げ、「おもて」の数×10のダメージ。,Flip 2 coins. This attack does 10 damage times the number of heads.
+neo1-063,2,みんなでおどる,Squaredance,colorless colorless colorless,3,,,,おたがいの場にいるポケモンの数ぶんコインを投げ、「おもて」の数以下の枚数の「基本エネルギーカード」を自分の山札から選び出し、相手プレイヤーに見せてから、手札に加える。その後、その山札をよく切る。,"Flip a number of coins equal to the total number of Pokémon in play. For each heads, you may search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward."
+neo1-064,1,でんこうせっか,Quick Attack,colorless colorless,2,20,+,20+,コインを投げて「おもて」なら、10ダメージを追加する。,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage; if tails, this attack does 20 damage."
+neo1-064,2,たたきつける,Slam,colorless colorless colorless,3,30,×,30×,コインを2枚投げ、「おもて」の数×30のダメージ。,Flip 2 coins. This attack does 30 damage times the number of heads.
+neo1-065,1,つばさでうつ,Wing Attack,colorless colorless colorless,3,30,,30,,
+neo1-066,1,どくのトゲ,Poison Barb,colorless colorless,2,10,,10,相手を「どく」状態にする。,The Defending Pokémon is now Poisoned.
+neo1-067,1,もちさる,Pilfer,colorless,1,,,,自分と、自分についているすべてのカードを山札にもどす。コインを投げて「おもて」なら、自分のトラッシュからカードを1枚選び出し、山札にもどす。その後、その山札をよく切る。,"Shuffle Aipom and all cards attached to it into your deck. Flip a coin. If heads, shuffle a card from your discard pile into your deck."
+neo1-067,2,しっぽビンタ,Tail Rap,colorless,1,10,×,10×,コインを2枚投げ、「おもて」の数×10のダメージ。,Flip 2 coins. This attack does 10 damage times the number of heads.
+neo1-068,1,たいあたり,Tackle,colorless colorless,2,20,,20,,
+neo1-068,2,いかりのとっしん,Raging Charge,colorless colorless colorless,3,10,+,10+,自分にのっているダメージカウンターの数×10ダメージを追加する。その後、自分にも20ダメージ。,"This attack does 10 damage plus 10 more damage for each damage counter on Granbull. Then, Granbull does 20 damage to itself."
+neo1-069,1,ミルクのみ,Milk Drink,colorless,1,,,,コインを2枚投げ、「おもて」の数×2個のダメージカウンターを、自分からとりのぞく。,"Flip 2 coins. Remove 2 damage counters times the number of heads from Miltank. If it has fewer damage counters than that, remove all of them."
+neo1-069,2,のしかかり,Body Slam,colorless colorless colorless,3,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+neo1-070,1,ピピピ,Eeeeeeek,colorless,1,,,,自分の手札をすべて山札にもどし、その山札をよく切る。その後、山札からカードを7枚引いて、手札にする。,"Shuffle your hand into your deck, then draw 7 cards."
+neo1-071,1,おおきくゆびをふる,Super Metronome,colorless,1,,,,コインを投げて「おもて」なら、相手の場にいるポケモンのワザを1つ選び、それを自分が持っているワザとして使う。(そのワザに必要なエネルギーがついていなくても、かまわない),"Flip a coin. If heads, choose an attack on 1 of your opponent's Pokémon. Super Metronome copies that attack except for its Energy cost. (You must still do anything else in order to use that attack.) (No matter what type the Defending Pokémon is, Togetic's type is still Colorless.) Togetic performs that attack. (Togetic can make that attack even if it does not have the appropriate number or type of Energy attached to it necessary to make the attack.)"
+neo1-071,2,そらをとぶ,Fly,colorless colorless colorless,3,30,,30,コインを投げて「うら」なら、このワザは失敗する。「おもて」なら、次の相手の番、このカードは相手のワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Togetic; if tails, this attack does nothing (not even damage)."
+neo1-072,1,エレメンタルブラスト,Elemental Blast,fire water lightning,3,90,,90,自分についている「炎」「水」「雷」の「エネルギーカード」を、それぞれ1枚ずつトラッシュする。トラッシュできないとき、このワザのダメージはなくなる。,"Discard a Fire Energy card, a Water Energy card, and a Lightning Energy card attached to Lugia in order to use this attack."
+neo2-001,1,ころころタックル,Spin Tackle,colorless,1,20,,20,自分にも10ダメージ。,Caterpie does 10 damage to itself.
+neo2-002,1,とげでつつく,Spike Stab,grass,1,20,,20,相手を「どく」状態にする。コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned. If tails, this attack does nothing (not even damage)."
+neo2-003,1,どくばり,Poison Sting,grass colorless,2,20,,20,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+neo2-004,1,ころがりタックル,Rolling Tackle,grass,1,20,,20,,
+neo2-005,1,とつぜんじばく,Burst,grass,1,40,,40,自分にも40ダメージ。おたがいの控えポケモン全員にも、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If heads, Pineco does 40 damage to itself and 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Flip a coin. If tails, this attack does nothing (not even damage)."
+neo2-006,1,かたくなる,Harden,colorless colorless,2,,,,次の相手の番、このカードがダメージを受けるとき、そのダメージが20以下なら、このカードはダメージを受けない。(ダメージ以外の効果は受ける。),"During your opponent's next turn, whenever 20 or less damage is done to Metapod (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen)."
+neo2-006,2,からやぶりしんか,Hatch,grass grass,2,,,,コインを投げて「おもて」なら、自分にのっているダメージカウンターをすべてとりのぞく。その後、自分の山札から「トランセル」を進化させる「進化カード」を1枚選び出し、このトランセルの上にのせ、進化させる。山札を見た場合は、その山札をよく切る。,"Flip a coin. If heads, remove all damage counters from Metapod. Then, search your deck for a card that evolves from Metapod and attach that card to Metapod. This counts as evolving Metapod. Shuffle your deck afterward."
+neo2-007,1,どくをだす,Secrete Poison,grass grass,2,,,,次の相手の番、このカードが相手のワザによるダメージを受けたとき(それによって、このカードが「きぜつ」しても)、相手を「どく」状態にし、相手の控えポケモン全員に、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。,"During your opponent's next turn, whenever your opponent's attack damages Kakuna (even if Kakuna is Knocked Out), your opponent's Active Pokémon is now Poisoned and Kakuna does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+neo2-008,1,れんぞくぎり,Fury Cutter,grass grass,2,10,+,10+,コインを4枚投げる。「おもて」が1枚なら10ダメージ、「おもて」が2枚なら20ダメージ、3枚なら40ダメージ、「おもて」が4枚なら80ダメージを追加する。,"Flip 4 coins. This attack does 10 damage plus 10 more damage if exactly 1 is heads, or 20 more damage if exactly 2 are heads, or 40 more damage if exactly 3 are heads, or 80 more damage if all 4 are heads."
+neo2-009,1,ミラクルりんぷん,Magic Dust,grass colorless,2,20,,20,コインを投げて「おもて」なら、「どく・ねむり・マヒ・こんらん」の中から1つを選び、相手をその状態にする。,"Flip a coin. If heads, the Defending Pokémon is now either Asleep, Confused, Paralyzed, or Poisoned (your choice)."
+neo2-009,2,ハイパーリバース,Hyper Reverse,grass grass colorless,3,,,,相手についている「エネルギー」の数×10のダメージ。相手にダメージを与えたら、相手に与えたぶんのダメージカウンターを、自分からとりのぞく。,"Does 10 damage times the number of Energy attached to the Defending Pokémon. After doing damage, remove a number of damage counters from Butterfree equal to the amount of damage done to the Defending Pokémon (after applying Weakness and Resistance)."
+neo2-010,1,さんばいどく,Triple Poison,grass,1,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。このワザによって「どく」状態になったポケモンがポケモンチェックで受ける「どく」のダメージは、30ダメージ。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned. Your opponent now puts 3 damage counters on it instead of 1 after each player's turn (even if it was already Poisoned)."
+neo2-010,2,ミサイルばり,Pin Missile,grass grass colorless,3,20,×,20×,コインを4枚投げ、「おもて」の数×20のダメージ。,Flip 4 coins. This attack does 20 damage times the number of heads.
+neo2-011,1,しょうげきは,Shockwave,grass,1,,,,コインを投げて「おもて」なら、相手の場のポケモン全員に、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。その後、相手を相手の控えポケモンと入れ替える。入れ替わるポケモンは、相手が選ぶ。(相手に控えがいないとき、入れ替えはおこらない。),"Flip a coin. If heads, this attack does 10 damage to each of your opponent's Pokémon. Don't apply Weakness and Resistance. Then, if your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon."
+neo2-011,2,スピードスター,Swift,grass grass grass,3,30,,30,このワザのダメージは、相手の持っている「弱点・抵抗力・特殊能力・その他の効果」の影響を受けない。,"This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
+neo2-012,1,スモッグ,Smog,fire,1,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+neo2-012,2,ほのおをまとう,Collect Fire,fire fire,2,20,,20,自分のトラッシュに「炎」エネルギーカードがあれば、1枚を選び出し、自分につける。,"If there are any Fire Energy cards in your discard pile, choose 1 of them and attach it to Houndour."
+neo2-013,1,ころがる,Rollout,colorless,1,10,,10,,
+neo2-013,2,さいみんじゅつ,Hypnosis,water,1,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+neo2-014,1,ちからをあわせる,Work Together,fighting colorless,2,10,+,10+,コインを投げて「おもて」なら、自分のベンチの「オムナイト」「オムスター」「カブト」「カブトプス」「プテラ」の数×10のダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 10 more damage for each Omanyte, Omastar, Kabuto, and Kabutops on your Bench."
+neo2-015,1,ぬるぬる,Slime,water,1,,,,次の相手の番、このカードが相手のワザによるダメージを受けるとき、相手プレイヤーはコインを投げる。「うら」なら、このカードはそのダメージを受けない。(ダメージ以外の効果は受ける。),"If an attack would do damage to Wooper during your opponent's next turn, your opponent flips a coin. If tails, prevent all damage to Wooper from that attack. (Any other effects of that attack happen.)"
+neo2-015,2,しっぽでたたく,Tail Slap,colorless colorless,2,20,,20,,
+neo2-016,1,はらだいこ,Belly Drum,colorless,1,,,,自分にダメージカウンターを3個のせる。その後、自分の山札から「基本エネルギーカード」を2枚選び出し、自分につけ、その山札をよく切る。,"Put 3 damage counters on Poliwhirl. If this doesn't Knock Out Poliwhirl, search your deck for 2 Basic Energy cards and attach them to Poliwhirl. Shuffle your deck afterward."
+neo2-016,2,みずでっぽう,Water Gun,water water colorless,3,30,+,30+,ワザに必要な「エネルギー」よりも多く「水」エネルギーがついているとき、多い「水」エネルギー1個につき、10ダメージを追加する。ダメージ追加は2個ぶんまで。,Does 30 damage plus 10 more damage for each Water Energy attached to Poliwhirl but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
+neo2-017,1,じこさいせい,Recover,water,1,,,,自分についている「水」エネルギーカードを1枚トラッシュして、自分にのっているダメージカウンターを、すべてとりのぞく。「水」エネルギーカードをトラッシュできないとき、この効果はなくなる。,Discard 1 Water Energy card attached to Corsola or this attack does nothing. Remove all damage counters from Corsola.
+neo2-017,2,とげキャノン,Spike Cannon,fighting fighting,2,30,×,30×,コインを2枚投げ、「おもて」の数×30のダメージ。,Flip 2 coins. This attack does 30 damage times the number of heads.
+neo2-018,1,きりさく,Slash,colorless,1,20,,20,,
+neo2-018,2,ハイドロカッター,Hydrocutter,fighting,1,40,×,40×,自分についている「エネルギーカード」の数ぶんコインを投げ、「おもて」の数×40のダメージ。このワザで投げることのできるコインは3枚まで。,Flip a number of coins equal to the number of Energy cards attached to Kabutops. This attack does 40 damage times the number of heads. You can't flip more than 3 coins in this way.
+neo2-019,1,おうふくビンタ,Doubleslap,water water colorless colorless,4,40,×,40×,コインを2枚投げ、「おもて」の数×40のダメージ。,Flip 2 coins. This attack does 40 damage times the number of heads.
+neo2-020,1,でんげき,Thunder Jolt,lightning colorless,2,30,,30,コインを投げて「うら」なら、自分にも10ダメージ。,"Flip a coin. If tails, Mareep does 10 damage to itself."
+neo2-021,1,びっくりサンダー,Surprise Thunder,lightning lightning lightning,3,30,,30,コインを投げて「おもて」なら、もう1枚コインを投げる。2枚目のコインが「おもて」なら、相手の控えポケモン全員にも、「弱点・抵抗力」に関係なく、それぞれ20ダメージ。2枚目のコインが「うら」なら、相手の控えポケモン全員にも、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。,"Flip a coin. If heads, flip another coin. If the second coin is heads, this attack does 20 damage to each of your opponent's Benched Pokémon. If the second coin is tails, this attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+neo2-022,1,あやしいひかり,Confuse Ray,psychic,1,10,,10,コインを投げて、「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused"
+neo2-023,1,めざめるパワー,Hidden Power,psychic,1,10,,10,,
+neo2-024,1,エナジーサイクル,Energy Cycle,psychic,1,,,,コインを投げて「おもて」なら、相手についている「エネルギーカード」を1枚選んで、はがす。その後、相手の控えポケモンを1匹選び、はがした「エネルギーカード」を、そのポケモンにつけ替える。(相手に控えがいないとき、このワザは失敗する。),"Flip a coin. If heads, choose 1 Energy card attached to the Defending Pokémon and 1 of your opponent's Benched Pokémon. Attach that Energy card to that Pokémon."
+neo2-024,2,ちょうねんりき,Super Psy,psychic psychic colorless,3,50,,50,,
+neo2-025,1,めざめるパワー,Hidden Power,psychic,1,10,,10,,
+neo2-026,1,めざめるパワー,Hidden Power,psychic,1,10,,10,,
+neo2-027,1,めざめるパワー,Hidden Power,psychic,1,10,,10,,
+neo2-028,1,めざめるパワー,Hidden Power,psychic,1,10,,10,,
+neo2-029,1,かみつく,Bite,colorless colorless,2,20,,20,,
+neo2-029,2,サイコキネシス,Psychic,psychic psychic colorless,3,30,+,30+,相手についている「エネルギーカード」の数×10のダメージを追加する。,Does 30 damage plus 10 more damage for each Energy card attached to the Defending Pokémon.
+neo2-030,1,めざめるパワー,Hidden Power,psychic,1,10,,10,,
+neo2-031,1,カウンター,Counter,psychic,1,,,,次の相手の番、このカードが相手のワザによるダメージを受けたとき(それによって、このカードが「きぜつ」しても)、このカードの持ち主はコインを投げる。「おもて」なら、このカードが受けたダメージと同じダメージを相手に与える。(ダメージ以外の効果は与えない。),"If an attack damages Wobbuffet during your opponent's next turn (even if Wobbuffet is Knocked Out), flip a coin. If heads, Wobbuffet attacks the Defending Pokémon for an equal amount of damage."
+neo2-032,1,しめつける,Bind,water,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+neo2-033,1,スマッシュパンチ,Smash Punch,colorless,1,30,,30,コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
+neo2-034,1,かみつく,Bite,colorless,1,10,,10,,
+neo2-035,1,しめあげる,Squeeze,water,1,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加し、相手を「マヒ」状態にする。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage and the Defending Pokémon is now Paralyzed. If tails, this attack does 10 damage."
+neo2-035,2,とげとげMAX,Spike Barrage,water water water,3,20,+,20+,自分についている「水」エネルギーの数ぶんコインを投げ、「おもて」の数×20のダメージを追加する。,Flip a number of coins equal to the number of Water Energy attached to Omastar. This attack does 20 damage plus 20 more damage for each heads.
+neo2-036,1,ロケットずつき,Skull Bash,colorless colorless,2,20,,20,,
+neo2-036,2,すなあらし,Dust Devil,fighting fighting,2,,,,おたがいの場の「闘」ポケモン以外のポケモン全員に、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。,Does 10 damage to each non-Fighting Pokémon in play. Don't apply Weakness and Resistance.
+neo2-037,1,とづく,Corkscrew Punch,fighting colorless,2,30,,30,,
+neo2-037,2,じごくぐるま,Submission,fighting fighting colorless colorless,4,70,,70,自分にも20ダメージ。,Poliwrath does 20 damage to itself.
+neo2-038,1,みきり,Detect,fighting,1,,,,コインを投げて「おもて」なら、次の相手の番、このカードは相手のワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Hitmontop."
+neo2-038,2,トリプルキック,Triple Kick,fighting fighting fighting,3,30,×,30×,コインを3枚投げ、「おもて」の数×30ダメージ。,Flip 3 coins. This attack does 30 damage times the number of heads.
+neo2-039,1,かみつく,Bite,colorless,1,10,,10,,
+neo2-039,2,ごうだつ,Plunder,darkness colorless,2,20,,20,ダメージを与える前に、相手についている「トレーナーカード」をすべてトラッシュする。,"Before doing damage, discard all Trainer cards attached to the Defending Pokémon (before they affect the damage)."
+neo2-040,1,かみつく,Bite,colorless colorless,2,20,,20,,
+neo2-040,2,だましうち,Feint Attack,darkness darkness colorless,3,,,,相手の場のポケモンを1匹選び、そのポケモンに、「弱点・抵抗力・特殊能力・その他の効果」に関係なく、30ダメージ。,
+neo2-041,1,かみくだく,Crunch,darkness colorless colorless,3,30,,30,次の相手の番と、次の自分の番、このワザを受けた相手が、ワザによるダメージを受けるとき、そのダメージは「+20」される。,"Until the end of your next turn, if an attack damages the Defending Pokémon (after applying Weakness and Resistance), that attack does 20 more damage to the Defending Pokémon."
+neo2-041,2,かえんほうしゃ,Flamethrower,fire fire colorless,3,50,,50,自分についている「炎」エネルギーカードを1枚トラッシュする。トラッシュできないとき、このワザのダメージはなくなる。,Discard 1 Fire Energy card attached to Houndoom or this attack does nothing.
+neo2-042,1,たたきつける,Slam,colorless colorless colorless,3,30,×,30×,コインを2枚投げ、「おもて」の数×30のダメージ。,Flip 2 coins. This attack does 30 damage times the number of heads.
+neo2-042,2,なぎたおす,Trample,darkness darkness colorless colorless,4,50,,50,おたがいの控えポケモン全員に対して、1枚ずつコインを投げ、「おもて」が出たポケモンに、「弱点・抵抗力」に関係なく、30ダメージ。(コインを投げるのは、相手側から。),"For each Benched Pokémon in play (yours and your opponent's), flip a coin. If heads, this attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+neo2-043,1,ロックオン,Lock-on,colorless,1,,,,次の自分の番、このカードが使う「でんじほう」で投げるコインが「うら」でも、「でんじほう」は失敗しない。(このワザを受けた相手がバトル場をはなれたら、この効果は消える。),"During your next turn, treat any tails flipped when using Magnemite's Electric Bolt attack as if they were heads. (Benching or evolving either Pokémon ends this effect.)"
+neo2-043,2,でんじほう,Electric Bolt,lightning colorless,2,50,,50,相手を「マヒ」状態にする。コインを2枚投げて、1枚でも「うら」なら、このワザは失敗する。,"Flip 2 coins. If both are heads, the Defending Pokémon is now Paralyzed. If either of them is tails, this attack does nothing (not even damage)."
+neo2-044,1,こうそくスピン,Rapid Spin,metal colorless colorless,3,30,,30,相手を相手の控えポケモンと入れ替える。その後、自分を自分の控えポケモンと入れ替える。入れ替えるときは、それぞれのプレイヤーが、それぞれ自分の場のポケモンを選ぶ。(控えがいない側は、入れ替えをしない。),"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with his or her Active Pokémon, then, if you have any Benched Pokémon, you switch 1 of them with your Active Pokémon. (Do the damage before switching the Pokémon.)"
+neo2-045,1,みねうち,False Swipe,metal,1,,?,?,相手の残りHPの半分(切りすて)のダメージを与える。,Does damage equal to half the Defending Pokémon's remaining HP (rounded down to the nearest 10).
+neo2-045,2,ダブルクロー,Double Claw,colorless colorless colorless,3,20,+,20+,コインを2枚投げ、「おもて」の数×20のダメージを追加する。,Flip 2 coins. This attack does 20 damage times the number of heads.
+neo2-046,1,さぐる,Scout,colorless,1,,,,相手の手札を見る。,Look at your opponent's hand.
+neo2-046,2,たいあたり,Tackle,colorless colorless,2,20,,20,,
+neo2-047,1,へびにらみ,Glare,colorless,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+neo2-048,1,ひっかく,Scratch,colorless,1,10,,10,,
+neo2-048,2,おひるね,Nap Time,colorless colorless,2,,,,自分にのっているダメージカウンターを、すべてとりのぞく。その後、自分を「ねむり」状態にする。,Remove all damage counters from Teddiursa. Teddiursa is now Asleep.
+neo2-049,1,けとばす,Smash Kick,colorless,1,10,,10,,
+neo2-051,1,ヘッドプレス,Headpress,colorless colorless,2,20,,20,相手を「マヒ」状態にする。コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, this attack does nothing (not even damage)."
+neo2-051,2,ダブルラリアット,Double Lariat,colorless colorless colorless colorless,4,40,×,40×,コインを2枚投げ、「おもて」の数×40のダメージ。,Flip 2 coins. This attack does 40 damage times the number of heads.
+neo2-052,1,スケッチ,Sketch,colorless colorless,2,,,,前の相手の番に、相手のポケモンがワザを使っていたなら、そのワザを、このカードが持っているワザとして使う。(そのワザに必要な「エネルギー」がついていなくても、かまわない。)前の相手の番、このカードが場に出ていなければ、このワザは失敗する。,"If the Defending Pokémon attacked last turn, and Smeargle was in play during that attack, Smeargle copies that attack except for its Energy costs and anything else required in order to use that attack."
 neo3-001,1,,Bite,colorless,1,10,,10,,
 neo3-001,2,,Poison Spray,grass,1,,,,,The Defending Pokémon is now Poisoned.
 neo3-002,1,,Sleep Spore,grass,1,10,,10,,"Flip a coin. If heads, the Defending Pokémon is now Asleep."

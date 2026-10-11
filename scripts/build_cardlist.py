@@ -336,6 +336,12 @@ def build_records(args):
             c['_set'] = s
             en[c['id']] = c
     cur = ROOT / 'data' / 'curation'
+    for cid, fix in load_json(cur / 'en_fixes.json').items():  # 英語版データの誤りを補正
+        if cid.startswith('_'):
+            continue
+        for af in fix.get('attacks', []):
+            atk = next(a for a in en[cid]['attacks'] if a['name'] == af['name'])
+            atk.update({k: v for k, v in af.items() if k != 'name'})
     overrides = load_json(cur / 'pokemon_overrides.json')
     trainers = load_json(cur / 'trainers.json')
     jp_only = load_json(cur / 'jp_only.json')
@@ -426,6 +432,12 @@ def build_records(args):
         report = []
         for r, c in pairs:
             apply_nazonobasho(r, c, report)
+        review = load_json(cur / 'nazonobasho_review.json')
+        unreviewed = [x for x in report if f'{x[0]}|{x[1]}' not in review]
+        if unreviewed:
+            print('nazonobasho: 未確認の食い違い（data/curation/nazonobasho_review.json に判定を追加してください）:')
+            for x in unreviewed:
+                print('  ', x)
         with open(ROOT / 'data' / 'ja_text_nazonobasho_report.json', 'w', encoding='utf-8') as f:
             json.dump({'unmatched': unmatched, 'differences': report}, f, ensure_ascii=False, indent=1)
             f.write('\n')
@@ -450,7 +462,7 @@ JA_ENERGY = {'草': 'grass', '炎': 'fire', '水': 'water', '雷': 'lightning', 
 
 def norm_name(s):
     import unicodedata
-    return re.sub(r'\s', '', unicodedata.normalize('NFKC', s or ''))
+    return re.sub(r'[\s\[\]]', '', unicodedata.normalize('NFKC', s or ''))
 
 
 def ja_cost(s):
@@ -465,6 +477,22 @@ def attack_sig_ja(c):
     return [(ja_cost(a['cost']), dmg_digits(a['damage'])) for a in c['attacks']]
 
 
+def match_score(r, c):
+    """なぞのばしょのカード c とレコード r の一致度。サイトには名前・数値とも誤記があるため、
+    名前・HP・ワザの数・コスト・ダメージの一致を合計して判定する。"""
+    sc = 2 if norm_name(c['fields'].get('カード名称')) == norm_name(r['name']['ja']) else 0
+    p = r['pokemon']
+    if not p or not (c['attacks'] or c['powers']):
+        return sc
+    if str(p['hp']) == str(c['fields'].get('HP')):
+        sc += 2
+    if len(p['attacks']) == len(c['attacks']):
+        sc += 1
+    for (cost, dmg), (jcost, jdmg) in zip(attack_sig_en(p), attack_sig_ja(c)):
+        sc += (cost == jcost) + (dmg == jdmg)
+    return sc
+
+
 def match_nazonobasho(records, data, manual):
     """なぞのばしょのカードをレコードに対応付ける。戻り値は [(record, card)] と未対応のリスト。"""
     pairs, unmatched = [], []
@@ -476,27 +504,23 @@ def match_nazonobasho(records, data, manual):
         used = set()
         for c in info['cards']:
             slug = c['url'].rstrip('/').rsplit('/', 1)[-1]
+            unown = re.search(r'unknown-([a-z])$', slug)
             if slug in manual:
-                rid = manual[slug]
-                if rid is None:
+                if manual[slug] is None:
                     continue
-                r = next(x for x in pool if x['id'] == rid)
+                cands = [r for r in pool if r['id'] == manual[slug]]
+            elif unown:  # アンノーンは能力違いで数値が同じなので、URL の文字で対応付ける
+                cands = [r for r in pool if r['name']['ja'] == f'アンノーン{unown.group(1).upper()}']
             else:
-                name = norm_name(c['fields'].get('カード名称'))
-                cands = [r for r in pool if r['id'] not in used and norm_name(r['name']['ja']) == name]
-                if c['attacks'] or c['powers']:
-                    hp = c['fields'].get('HP')
-                    sig = attack_sig_ja(c)
-                    by_stats = [r for r in pool if r['id'] not in used and r['pokemon']
-                                and str(r['pokemon']['hp']) == str(hp) and attack_sig_en(r['pokemon']) == sig]
-                    both = [r for r in cands if r in by_stats]
-                    cands = both or (by_stats if len(by_stats) == 1 else cands)
-                if len(cands) != 1:
-                    unmatched.append((page, slug, c['fields'].get('カード名称'), [r['id'] for r in cands]))
-                    continue
-                r = cands[0]
-            used.add(r['id'])
-            pairs.append((r, c))
+                scored = sorted(((match_score(r, c), r) for r in pool if r['id'] not in used),
+                                key=lambda x: -x[0])
+                top = scored[0][0] if scored else 0
+                cands = [r for sc, r in scored if sc == top] if top >= 2 else []
+            if len(cands) != 1:
+                unmatched.append((page, slug, c['fields'].get('カード名称'), [r['id'] for r in cands]))
+                continue
+            used.add(cands[0]['id'])
+            pairs.append((cands[0], c))
     return pairs, unmatched
 
 
@@ -521,6 +545,9 @@ def apply_nazonobasho(r, c, report):
     jname = c['fields'].get('カード名称')
     if norm_name(jname) != norm_name(r['name']['ja']):
         report.append((r['id'], 'name', r['name']['ja'], jname))
+    elif not r['pokemon']:
+        # トレーナー・エネルギーの名前が、別系統の出典（なぞのばしょ）と一致したら確度を一段上げる
+        r['name_ja_confidence'] = {'未確認': '有力', '有力': '確実'}.get(r['name_ja_confidence'], r['name_ja_confidence'])
     p = r['pokemon']
     if p:
         if len(c['powers']) == len(p['powers']):
@@ -788,7 +815,7 @@ def write_set_docs(records, en_only):
     (out / 'english-only.md').write_text('\n'.join(lines), encoding='utf-8')
 
 
-DIFF_KIND_JA = {'text': '文面の意味', 'errata': 'エラッタ', 'placement': '収録先', 'print': '英語版の表記・誤植'}
+DIFF_KIND_JA = {'text': '文面の意味', 'numbers': '数値', 'errata': 'エラッタ', 'placement': '収録先', 'print': '英語版の表記・誤植'}
 
 
 def write_card_differences(records):
@@ -796,7 +823,8 @@ def write_card_differences(records):
              '<!-- このファイルは scripts/build_cardlist.py が data/curation/card_differences.json から生成しています。直接編集しないでください。 -->', '',
              '日本版と英語版（WotC 版）で、文面の意味・エラッタ・収録先・表記が違うと指摘されているカードの一覧です。',
              'ルールの違いは [日米のルールの違い](../rules/differences.md)、弾ごとの収録内容の違いは [収録内容・製品の違い](set-differences.md) を参照してください。', '',
-             '- 英語版の文面は英語版カードデータ（pokemon-tcg-data）で確認したもの。日本版の内容は、現物や公式資料ではなく二次資料の説明によるものです。',
+             '- 英語版の文面は英語版カードデータ（pokemon-tcg-data）で確認したもの。日本版の文面は、なぞのばしょの転記 [N1] で確認できたものは「」で引用し、それ以外は二次資料の説明によるものです。',
+             '- 日本語テキストを取り込んだ 6 弾（第1〜4弾、neo 第1〜2弾）でも、日英の文面を全カードで突き合わせたわけではありません。ここに挙げたのは、二次資料で指摘されたものと、特殊能力が使えなくなる状態の書き方を機械的に比べて見つかったものです。',
              '- jklacz は「WotC 期の約 50 枚が誤訳されており、ほとんどは訂正されないままだった（多くはエネルギー記号の誤りなどの小さなもの）」としています [X3]。ここに挙げたのは、そのうち内容を確認できたものだけです。',
              '- 出典の記号は [出典と確認状況](../sources.md)、データは `data/cards.json` の `jp_en_differences` にあります。', '',
              '| カード | 種類 | 内容 | 日本版 | 英語版 | 確度 | 出典 |', '|---|---|---|---|---|---|---|']

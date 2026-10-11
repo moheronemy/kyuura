@@ -12,6 +12,10 @@ curl -sS -o "$WORK/pokemon_species_names.csv" \
 # TCGdex の TypeScript 定義を JSON に変換（Node.js 18 以降）
 node scripts/ts2json.mjs "$WORK/cards-database" "$WORK/jp.json"
 
+# 日本語テキストを取得・抽出（なぞのばしょ。取得は 1.5 秒間隔で約 450 ページ）
+python3 scripts/nazonobasho.py fetch --cache "$WORK/nazonobasho"
+python3 scripts/nazonobasho.py extract --cache "$WORK/nazonobasho" --out data/ja_text_nazonobasho.json
+
 # カードリストを生成（Python 3.9 以降、標準ライブラリのみ）
 python3 scripts/build_cardlist.py --jp "$WORK/jp.json" \
   --en "$WORK/pokemon-tcg-data" --species "$WORK/pokemon_species_names.csv"
@@ -26,6 +30,9 @@ python3 scripts/build_rule_differences.py
 |---|---|
 | `build_cardlist.py` | `data/cards.json`、`data/cards.csv`、`data/attacks.csv`、`data/powers.csv`、`docs/cards/` の各弾のページ・`card-differences.md`・`english-only.md` |
 | `build_rule_differences.py` | `docs/rules/differences.md` |
+| `nazonobasho.py extract` | `data/ja_text_nazonobasho.json`（日本語テキスト。カードテキストと印刷情報の欄だけを残す） |
+
+`build_cardlist.py` は、なぞのばしょのカードと英語版データの数値（HP・コスト・ダメージ・にげる）の食い違いを `data/ja_text_nazonobasho_report.json` に書き出します。`data/curation/nazonobasho_review.json` に判定のない食い違いがあると、実行時に一覧を表示します。
 
 `data/rule_differences.json` は手で編集する元データです（生成物ではありません）。
 
@@ -38,7 +45,10 @@ python3 scripts/build_rule_differences.py
 | `naming.json` | 英語版の接頭辞（Light、Rocket's）の日本語表記、アンノーンの表記 |
 | `jp_only.json` | 英語版に対応カードがない日本版カード |
 | `card_differences.json` | カードごとの日英の違い（文面・エラッタ・収録先・表記） |
-| `ja_text.json` | 日本版の公式テキスト（ワザ名・ポケモンパワー・効果文）。現在は空 |
+| `ja_text.json` | 日本版の公式テキストの手入力用（なぞのばしょより優先）。現在は空 |
+| `nazonobasho_map.json` | なぞのばしょのページとカードの対応を手で決めたもの（自動で決まらないもの） |
+| `nazonobasho_review.json` | なぞのばしょと英語版データの数値の食い違いの判定 |
+| `en_fixes.json` | 英語版カードデータの誤りの補正 |
 | `sets.json` | 各弾の名前・発売日・収録数 |
 
 最後に生成したときの出典データ:
