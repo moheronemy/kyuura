@@ -1,0 +1,12 @@
+{
+ "PMCG1": {"ja": "拡張パック", "label": "第1弾", "release": "1996年10月20日", "count": "102種", "en": "Base Set"},
+ "PMCG2": {"ja": "ポケモンジャングル", "label": "第2弾", "release": "1997年3月5日", "count": "48種", "en": "Jungle"},
+ "PMCG3": {"ja": "化石の秘密", "label": "第3弾", "release": "1997年6月21日", "count": "48種", "en": "Fossil"},
+ "PMCG4": {"ja": "ロケット団", "label": "第4弾", "release": "1997年11月21日", "count": "65種", "en": "Team Rocket"},
+ "PMCG5": {"ja": "リーダーズスタジアム", "label": "第5弾（ジム拡張第1弾）", "release": "1998年10月24日", "count": "96種", "en": "Gym Heroes"},
+ "PMCG6": {"ja": "闇からの挑戦", "label": "第6弾（ジム拡張第2弾）", "release": "1999年6月25日", "count": "98種（TCGdex 掲載数）", "en": "Gym Challenge"},
+ "neo1": {"ja": "金、銀、新世界へ...", "label": "neo 第1弾", "release": "2000年2月4日", "count": "96種", "en": "Neo Genesis"},
+ "neo2": {"ja": "遺跡をこえて...", "label": "neo 第2弾", "release": "2000年7月7日", "count": "56種＋α", "en": "Neo Discovery"},
+ "neo3": {"ja": "めざめる伝説", "label": "neo 第3弾", "release": "2000年11月23日", "count": "57種", "en": "Neo Revelation"},
+ "neo4": {"ja": "闇、そして光へ...", "label": "neo 第4弾", "release": "2001年4月20日", "count": "113種", "en": "Neo Destiny"}
+}

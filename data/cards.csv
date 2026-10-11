@@ -1,0 +1,781 @@
+jp_set,seq,ja_name,ja_name_basis,category,rarity_jp,holo,en_name,en_set,en_numbers,types,stage,hp,evolves_from,weaknesses,resistances,retreat,powers,attacks,en_reprints,notes,tcgdex_id
+PMCG1,1,フシギダネ,generated,Pokemon,Common,False,Bulbasaur,base1,44,Grass,Basic,40,,Fire×2,,1,,Leech Seed [草草] 20,BS2 67 / LC 68,,PMCG1-001
+PMCG1,2,キャタピー,generated,Pokemon,Common,False,Caterpie,base1,45,Grass,Basic,40,,Fire×2,,1,,String Shot [草] 10,BS2 68 / LC 69,,PMCG1-002
+PMCG1,3,トランセル,generated,Pokemon,Common,False,Metapod,base1,54,Grass,Stage 1,70,Caterpie,Fire×2,,2,,Stiffen [無無] / Stun Spore [草草] 20,BS2 81 / LC 54,,PMCG1-003
+PMCG1,4,ビードル,generated,Pokemon,Common,False,Weedle,base1,69,Grass,Basic,40,,Fire×2,,1,,Poison Sting [草] 10,BS2 100 / LC 99,,PMCG1-004
+PMCG1,5,ニドラン♂,generated,Pokemon,Common,False,Nidoran ♂,base1,55,Grass,Basic,40,,Psychic×2,,1,,Horn Hazard [草] 30,BS2 83 / LC 83,,PMCG1-005
+PMCG1,6,ドガース,generated,Pokemon,Common,False,Koffing,base1,51,Grass,Basic,50,,Psychic×2,,1,,Foul Gas [草草] 10,,,PMCG1-006
+PMCG1,7,モンジャラ,generated,Pokemon,Common,False,Tangela,base1,66,Grass,Basic,50,,Fire×2,,2,,Bind [草無] 20 / Poisonpowder [草草草] 20,BS2 96,,PMCG1-007
+PMCG1,8,フシギソウ,generated,Pokemon,Uncommon,False,Ivysaur,base1,30,Grass,Stage 1,60,Bulbasaur,Fire×2,,1,,Vine Whip [草無無] 30 / Poisonpowder [草草草] 20,BS2 44 / LC 47,,PMCG1-008
+PMCG1,9,コクーン,generated,Pokemon,Uncommon,False,Kakuna,base1,33,Grass,Stage 1,80,Weedle,Fire×2,,2,,Stiffen [無無] / Poisonpowder [草草] 20,BS2 47 / LC 50,,PMCG1-009
+PMCG1,10,ニドリーノ,generated,Pokemon,Uncommon,False,Nidorino,base1,37,Grass,Stage 1,60,Nidoran ♂,Psychic×2,,1,,Double Kick [草無無] 30× / Horn Drill [草草無無] 50,BS2 54 / LC 56,,PMCG1-010
+PMCG1,11,フシギバナ,generated,Pokemon,Holo Rare,True,Venusaur,base1,15,Grass,Stage 2,100,Ivysaur,Fire×2,,2,Pokémon Power: Energy Trans,Solarbeam [草草草草] 60,BS2 18 / LC 18,,PMCG1-011
+PMCG1,12,スピアー,generated,Pokemon,Rare,False,Beedrill,base1,17,Grass,Stage 2,80,Kakuna,Fire×2,Fighting-30,0,,Twineedle [無無無] 30× / Poison Sting [草草草] 40,BS2 21 / LC 20,,PMCG1-012
+PMCG1,13,ニドキング,generated,Pokemon,Holo Rare,True,Nidoking,base1,11,Grass,Stage 2,90,Nidorino,Psychic×2,,3,,Thrash [草無無] 30+ / Toxic [草草草] 20,BS2 11 / LC 31,,PMCG1-013
+PMCG1,14,ヒトカゲ,generated,Pokemon,Common,False,Charmander,base1,46,Fire,Basic,50,,Water×2,,1,,Scratch [無] 10 / Ember [炎無] 30,BS2 69 / LC 70,,PMCG1-014
+PMCG1,15,ロコン,generated,Pokemon,Common,False,Vulpix,base1,68,Fire,Basic,50,,Water×2,,1,,Confuse Ray [炎炎] 10,BS2 99 / LC 98,,PMCG1-015
+PMCG1,16,ポニータ,generated,Pokemon,Common,False,Ponyta,base1,60,Fire,Basic,40,,Water×2,,1,,Smash Kick [無無] 20 / Flame Tail [炎炎] 30,LC 87,,PMCG1-016
+PMCG1,17,リザード,generated,Pokemon,Uncommon,False,Charmeleon,base1,24,Fire,Stage 1,80,Charmander,Water×2,,1,,Slash [無無無] 30 / Flamethrower [炎炎無] 50,BS2 35 / LC 37,,PMCG1-017
+PMCG1,18,ガーディ,generated,Pokemon,Uncommon,False,Growlithe,base1,28,Fire,Basic,60,,Water×2,,1,,Flare [炎無] 20,BS2 42 / LC 45,,PMCG1-018
+PMCG1,19,ウインディ,generated,Pokemon,Uncommon,False,Arcanine,base1,23,Fire,Stage 1,100,Growlithe,Water×2,,3,,Flamethrower [炎炎無] 50 / Take Down [炎炎無無] 80,BS2 33 / LC 36,,PMCG1-019
+PMCG1,20,ブーバー,generated,Pokemon,Uncommon,False,Magmar,base1,36,Fire,Basic,50,,Water×2,,2,,Fire Punch [炎炎] 30 / Flamethrower [炎炎無] 50,BS2 51,,PMCG1-020
+PMCG1,21,リザードン,generated,Pokemon,Holo Rare,True,Charizard,base1,4,Fire,Stage 2,120,Charmeleon,Water×2,Fighting-30,3,Pokémon Power: Energy Burn,Fire Spin [炎炎炎炎] 100,BS2 4 / LC 3,,PMCG1-021
+PMCG1,22,キュウコン,generated,Pokemon,Holo Rare,True,Ninetales,base1,12,Fire,Stage 1,80,Vulpix,Water×2,,1,,Lure [無無] / Fire Blast [炎炎炎炎] 80,BS2 13 / LC 17,,PMCG1-022
+PMCG1,23,ゼニガメ,generated,Pokemon,Common,False,Squirtle,base1,63,Water,Basic,40,,Lightning×2,,1,,Bubble [水] 10 / Withdraw [水無],BS2 93 / LC 95,,PMCG1-023
+PMCG1,24,ニョロモ,generated,Pokemon,Common,False,Poliwag,base1,59,Water,Basic,40,,Grass×2,,1,,Water Gun [水] 10+,BS2 88,,PMCG1-024
+PMCG1,25,ヒトデマン,generated,Pokemon,Common,False,Staryu,base1,65,Water,Basic,40,,Lightning×2,,1,,Slap [水] 20,BS2 95,,PMCG1-025
+PMCG1,26,スターミー,generated,Pokemon,Common,False,Starmie,base1,64,Water,Stage 1,60,Staryu,Lightning×2,,1,,Recover [水水] / Star Freeze [水無無] 20,BS2 94,,PMCG1-026
+PMCG1,27,カメール,generated,Pokemon,Uncommon,False,Wartortle,base1,42,Water,Stage 1,70,Squirtle,Lightning×2,,1,,Withdraw [水無] / Bite [水無無] 40,BS2 63,,PMCG1-027
+PMCG1,28,ニョロゾ,generated,Pokemon,Uncommon,False,Poliwhirl,base1,38,Water,Stage 1,60,Poliwag,Grass×2,,1,,Amnesia [水水] / Doubleslap [水水無] 30×,BS2 57,,PMCG1-028
+PMCG1,29,パウワウ,generated,Pokemon,Uncommon,False,Seel,base1,41,Water,Basic,60,,Lightning×2,,1,,Headbutt [水] 10,BS2 61 / LC 92,,PMCG1-029
+PMCG1,30,ジュゴン,generated,Pokemon,Uncommon,False,Dewgong,base1,25,Water,Stage 1,80,Seel,Lightning×2,,3,,Aurora Beam [水水無] 50 / Ice Beam [水水無無] 30,BS2 36 / LC 40,,PMCG1-030
+PMCG1,31,コイキング,generated,Pokemon,Uncommon,False,Magikarp,base1,35,Water,Basic,30,,Lightning×2,,1,,Tackle [無] 10 / Flail [水] 10×,BS2 50 / LC 52,,PMCG1-031
+PMCG1,32,カメックス,generated,Pokemon,Holo Rare,True,Blastoise,base1,2,Water,Stage 2,100,Wartortle,Lightning×2,,3,Pokémon Power: Rain Dance,Hydro Pump [水水水] 40+,BS2 2,,PMCG1-032
+PMCG1,33,ニョロボン,generated,Pokemon,Holo Rare,True,Poliwrath,base1,13,Water,Stage 2,90,Poliwhirl,Grass×2,,3,,Water Gun [水水無] 30+ / Whirlpool [水水無無] 40,BS2 15,,PMCG1-033
+PMCG1,34,ギャラドス,generated,Pokemon,Holo Rare,True,Gyarados,base1,6,Water,Stage 1,100,Magikarp,Grass×2,Fighting-30,3,,Dragon Rage [水水水] 50 / Bubblebeam [水水水水] 40,BS2 7 / LC 12,,PMCG1-034
+PMCG1,35,ピカチュウ,generated,Pokemon,Common,False,Pikachu,base1,58,Lightning,Basic,40,,Fighting×2,,1,,Gnaw [無] 10 / Thunder Jolt [雷無] 30,BS2 87,,PMCG1-035
+PMCG1,36,コイル,generated,Pokemon,Common,False,Magnemite,base1,53,Lightning,Basic,40,,Fighting×2,,1,,Thunder Wave [雷] 10 / Selfdestruct [雷無] 40,BS2 79 / LC 80,,PMCG1-036
+PMCG1,37,ビリリダマ,generated,Pokemon,Common,False,Voltorb,base1,67,Lightning,Basic,40,,Fighting×2,,1,,Tackle [無] 10,BS2 98 / LC 97,,PMCG1-037
+PMCG1,38,ライチュウ,generated,Pokemon,Holo Rare,True,Raichu,base1,14,Lightning,Stage 1,80,Pikachu,Fighting×2,,1,,Agility [雷無無] 20 / Thunder [雷雷雷無] 60,BS2 16,,PMCG1-038
+PMCG1,39,レアコイル,generated,Pokemon,Holo Rare,True,Magneton,base1,9,Lightning,Stage 1,60,Magnemite,Fighting×2,,1,,Thunder Wave [雷雷無] 30 / Selfdestruct [雷雷無無] 80,BS2 9,,PMCG1-039
+PMCG1,40,マルマイン,generated,Pokemon,Rare,False,Electrode,base1,21,Lightning,Stage 1,80,Voltorb,Fighting×2,,1,Pokémon Power: Buzzap,Electric Shock [雷雷雷] 50,BS2 25,,PMCG1-040
+PMCG1,41,エレブー,generated,Pokemon,Rare,False,Electabuzz,base1,20,Lightning,Basic,70,,Fighting×2,,2,,Thundershock [雷] 10 / Thunderpunch [雷無] 30+,BS2 24,,PMCG1-041
+PMCG1,42,サンダー,generated,Pokemon,Holo Rare,True,Zapdos,base1,16,Lightning,Basic,90,,,Fighting-30,3,,Thunder [雷雷雷無] 60 / Thunderbolt [雷雷雷雷] 100,BS2 20 / LC 19,,PMCG1-042
+PMCG1,43,ケーシィ,generated,Pokemon,Common,False,Abra,base1,43,Psychic,Basic,30,,Psychic×2,,0,,Psyshock [超] 10,BS2 65 / LC 67,,PMCG1-043
+PMCG1,44,ゴース,generated,Pokemon,Common,False,Gastly,base1,50,Psychic,Basic,30,,,Fighting-30,0,,Sleeping Gas [超] / Destiny Bond [超無],BS2 75,,PMCG1-044
+PMCG1,45,スリープ,generated,Pokemon,Common,False,Drowzee,base1,49,Psychic,Basic,50,,Psychic×2,,1,,Pound [無] 10 / Confuse Ray [超超] 10,BS2 73,,PMCG1-045
+PMCG1,46,ユンゲラー,generated,Pokemon,Uncommon,False,Kadabra,base1,32,Psychic,Stage 1,60,Abra,Psychic×2,,3,,Recover [超超] / Super Psy [超超無] 50,BS2 46 / LC 49,,PMCG1-046
+PMCG1,47,ゴースト,generated,Pokemon,Uncommon,False,Haunter,base1,29,Psychic,Stage 1,60,Gastly,,Fighting-30,1,,Hypnosis [超] / Dream Eater [超超] 50,BS2 43,,PMCG1-047
+PMCG1,48,ルージュラ,generated,Pokemon,Uncommon,False,Jynx,base1,31,Psychic,Basic,70,,Psychic×2,,2,,Doubleslap [超] 10× / Meditate [超超無] 20+,BS2 45 / LC 26,,PMCG1-048
+PMCG1,49,フーディン,generated,Pokemon,Holo Rare,True,Alakazam,base1,1,Psychic,Stage 2,80,Kadabra,Psychic×2,,3,Pokémon Power: Damage Swap,Confuse Ray [超超超] 30,BS2 1 / LC 1,,PMCG1-049
+PMCG1,50,ミュウツー,generated,Pokemon,Holo Rare,True,Mewtwo,base1,10,Psychic,Basic,60,,Psychic×2,,3,,Psychic [超無] 10+ / Barrier [超超],BS2 10,,PMCG1-050
+PMCG1,51,サンド,generated,Pokemon,Common,False,Sandshrew,base1,62,Fighting,Basic,40,,Grass×2,Lightning-30,1,,Sand-attack [闘] 10,BS2 91 / LC 91,,PMCG1-051
+PMCG1,52,ディグダ,generated,Pokemon,Common,False,Diglett,base1,47,Fighting,Basic,30,,Grass×2,Lightning-30,0,,Dig [闘] 10 / Mud Slap [闘闘] 30,BS2 71,,PMCG1-052
+PMCG1,53,ワンリキー,generated,Pokemon,Common,False,Machop,base1,52,Fighting,Basic,50,,Psychic×2,,1,,Low Kick [闘] 20,BS2 78,,PMCG1-053
+PMCG1,54,イワーク,generated,Pokemon,Common,False,Onix,base1,56,Fighting,Basic,90,,Grass×2,,3,,Rock Throw [闘] 10 / Harden [闘闘],BS2 84 / LC 84,,PMCG1-054
+PMCG1,55,ゴーリキー,generated,Pokemon,Uncommon,False,Machoke,base1,34,Fighting,Stage 1,80,Machop,Psychic×2,,3,,Karate Chop [闘闘無] 50- / Submission [闘闘無無] 60,BS2 49 / LC 51,,PMCG1-055
+PMCG1,56,ダグトリオ,generated,Pokemon,Rare,False,Dugtrio,base1,19,Fighting,Stage 1,70,Diglett,Grass×2,Lightning-30,2,,Slash [闘闘無] 40 / Earthquake [闘闘闘闘] 70,BS2 23,,PMCG1-056
+PMCG1,57,カイリキー,generated,Pokemon,Holo Rare,False,Machamp,base1,8,Fighting,Stage 2,100,Machoke,Psychic×2,,3,Pokémon Power: Strikes Back,Seismic Toss [闘闘闘無] 60,LC 15,,PMCG1-057
+PMCG1,58,エビワラー,generated,Pokemon,Holo Rare,False,Hitmonchan,base1,7,Fighting,Basic,70,,Psychic×2,,2,,Jab [闘] 20 / Special Punch [闘闘無] 40,BS2 8,,PMCG1-058
+PMCG1,59,ポッポ,generated,Pokemon,Common,False,Pidgey,base1,57,Colorless,Basic,40,,Lightning×2,Fighting-30,1,,Whirlwind [無無] 10,BS2 86 / LC 85,,PMCG1-059
+PMCG1,60,コラッタ,generated,Pokemon,Common,False,Rattata,base1,61,Colorless,Basic,30,,Fighting×2,Psychic-30,0,,Bite [無] 20,BS2 89 / LC 89,,PMCG1-060
+PMCG1,61,ドードー,generated,Pokemon,Common,False,Doduo,base1,48,Colorless,Basic,50,,Lightning×2,Fighting-30,0,,Fury Attack [無] 10×,BS2 72 / LC 71,,PMCG1-061
+PMCG1,62,ラッタ,generated,Pokemon,Uncommon,False,Raticate,base1,40,Colorless,Stage 1,60,Rattata,Fighting×2,Psychic-30,1,,Bite [無] 20 / Super Fang [無無無] ?,BS2 58 / LC 61,,PMCG1-062
+PMCG1,63,カモネギ,generated,Pokemon,Uncommon,False,Farfetch'd,base1,27,Colorless,Basic,50,,Lightning×2,Fighting-30,1,,Leek Slap [無] 30 / Pot Smash [無無無] 30,BS2 40,,PMCG1-063
+PMCG1,64,ポリゴン,generated,Pokemon,Uncommon,False,Porygon,base1,39,Colorless,Basic,30,,Fighting×2,Psychic-30,1,,Conversion 1 [無] / Conversion 2 [無無],,,PMCG1-064
+PMCG1,65,ミニリュウ,generated,Pokemon,Uncommon,False,Dratini,base1,26,Colorless,Basic,40,,,Psychic-30,1,,Pound [無] 10,BS2 38 / LC 72,,PMCG1-065
+PMCG1,66,ピジョン,generated,Pokemon,Rare,False,Pidgeotto,base1,22,Colorless,Stage 1,60,Pidgey,Lightning×2,Fighting-30,1,,Whirlwind [無無] 20 / Mirror Move [無無無],BS2 28 / LC 34,,PMCG1-066
+PMCG1,67,ピッピ,generated,Pokemon,Holo Rare,True,Clefairy,base1,5,Colorless,Basic,40,,Fighting×2,Psychic-30,1,,Sing [無] / Metronome [無無無],BS2 6,,PMCG1-067
+PMCG1,68,ラッキー,generated,Pokemon,Holo Rare,True,Chansey,base1,3,Colorless,Basic,120,,Fighting×2,Psychic-30,1,,Scrunch [無無] / Double-edge [無無無無] 80,BS2 3,,PMCG1-068
+PMCG1,69,ハクリュー,generated,Pokemon,Rare,False,Dragonair,base1,18,Colorless,Stage 1,80,Dratini,,Psychic-30,2,,Slam [無無無] 30× / Hyper Beam [無無無無] 20,BS2 22,,PMCG1-069
+PMCG1,70,エネルギーリムーブ,未確認,Trainer,Common,False,Energy Removal,base1,92,,,,,,,,,,,,PMCG1-070
+PMCG1,71,きずぐすり,未確認,Trainer,Common,False,Potion,base1,94,,,,,,,,,,,,PMCG1-071
+PMCG1,72,突風,未確認,Trainer,Common,False,Gust of Wind,base1,93,,,,,,,,,,,,PMCG1-072
+PMCG1,73,ポケモンいれかえ,未確認,Trainer,Common,False,Switch,base1,95,,,,,,,,,,,,PMCG1-073
+PMCG1,74,マサキ,未確認,Trainer,Common,False,Bill,base1,91,,,,,,,,,,,,PMCG1-074
+PMCG1,75,いいきずぐすり,未確認,Trainer,Uncommon,False,Super Potion,base1,90,,,,,,,,,,,,PMCG1-075
+PMCG1,76,エネルギー回収,未確認,Trainer,Uncommon,False,Energy Retrieval,base1,81,,,,,,,,,,,,PMCG1-076
+PMCG1,77,オーキドはかせ,未確認,Trainer,Uncommon,False,Professor Oak,base1,88,,,,,,,,,,,,PMCG1-077
+PMCG1,78,げんきのかけら,未確認,Trainer,Uncommon,False,Revive,base1,89,,,,,,,,,,,,PMCG1-078
+PMCG1,79,ディフェンダー,未確認,Trainer,Uncommon,False,Defender,base1,80,,,,,,,,,,,,PMCG1-079
+PMCG1,80,なんでもなおし,未確認,Trainer,Uncommon,False,Full Heal,base1,82,,,,,,,,,,,,PMCG1-080
+PMCG1,81,プラスパワー,未確認,Trainer,Uncommon,False,PlusPower,base1,84,,,,,,,,,,,,PMCG1-081
+PMCG1,82,ポケモン図鑑,未確認,Trainer,Uncommon,False,Pokédex,base1,87,,,,,,,,,,,,PMCG1-082
+PMCG1,83,ポケモンセンター,未確認,Trainer,Uncommon,False,Pokémon Center,base1,85,,,,,,,,,,,,PMCG1-083
+PMCG1,84,ポケモンの笛,未確認,Trainer,Uncommon,False,Pokémon Flute,base1,86,,,,,,,,,,,,PMCG1-084
+PMCG1,85,メンテナンス,未確認,Trainer,Uncommon,False,Maintenance,base1,83,,,,,,,,,,,,PMCG1-085
+PMCG1,86,退化スプレー,未確認,Trainer,Rare,False,Devolution Spray,base1,72,,,,,,,,,,,,PMCG1-086
+PMCG1,87,ダウジングマシーン,未確認,Trainer,Rare,False,Item Finder,base1,74,,,,,,,,,,,,PMCG1-087
+PMCG1,88,超エネルギーリムーブ,未確認,Trainer,Rare,False,Super Energy Removal,base1,79,,,,,,,,,,,,PMCG1-088
+PMCG1,89,にせオーキドはかせ,未確認,Trainer,Rare,False,Impostor Professor Oak,base1,73,,,,,,,,,,,,PMCG1-089
+PMCG1,90,パソコン通信,未確認,Trainer,Rare,False,Computer Search,base1,71,,,,,,,,,,,,PMCG1-090
+PMCG1,91,ピッピ人形,未確認,Trainer,Rare,False,Clefairy Doll,base1,70,,,,,,,,,,,,PMCG1-091
+PMCG1,92,ポケモン回収,未確認,Trainer,Rare,False,Scoop Up,base1,78,,,,,,,,,,,,PMCG1-092
+PMCG1,93,ポケモン交換おじさん,未確認,Trainer,Rare,False,Pokémon Trader,base1,77,,,,,,,,,,,,PMCG1-093
+PMCG1,94,ポケモン育て屋さん,未確認,Trainer,Rare,False,Pokémon Breeder,base1,76,,,,,,,,,,,,PMCG1-094
+PMCG1,95,ミニスカート,未確認,Trainer,Rare,False,Lass,base1,75,,,,,,,,,,,,PMCG1-095
+PMCG1,96,ダブル無色エネルギー,未確認,Energy,Uncommon,False,Double Colorless Energy,base1,96,,,,,,,,,,,,PMCG1-096
+PMCG1,97,草エネルギー,未確認,Energy,Common,False,Grass Energy,base1,99,,,,,,,,,,,,PMCG1-097
+PMCG1,98,炎エネルギー,未確認,Energy,Common,False,Fire Energy,base1,98,,,,,,,,,,,,PMCG1-098
+PMCG1,99,水エネルギー,未確認,Energy,Common,False,Water Energy,base1,102,,,,,,,,,,,,PMCG1-099
+PMCG1,100,雷エネルギー,未確認,Energy,Common,False,Lightning Energy,base1,100,,,,,,,,,,,,PMCG1-100
+PMCG1,101,超エネルギー,未確認,Energy,Common,False,Psychic Energy,base1,101,,,,,,,,,,,,PMCG1-101
+PMCG1,102,闘エネルギー,未確認,Energy,Common,False,Fighting Energy,base1,97,,,,,,,,,,,,PMCG1-102
+PMCG2,1,ニドラン♀,generated,Pokemon,Common,False,Nidoran ♀,base2,57,Grass,Basic,60,,Psychic×2,,1,,Fury Swipes [草] 10× / Call for Family [草草],BS2 82 / LC 82,,PMCG2-001
+PMCG2,2,ナゾノクサ,generated,Pokemon,Common,False,Oddish,base2,58,Grass,Basic,50,,Fire×2,,1,,Stun Spore [草] 10 / Sprout [草草],,,PMCG2-002
+PMCG2,3,パラス,generated,Pokemon,Common,False,Paras,base2,59,Grass,Basic,40,,Fire×2,,1,,Scratch [無無] 20 / Spore [草草],BS2 85,,PMCG2-003
+PMCG2,4,コンパン,generated,Pokemon,Common,False,Venonat,base2,63,Grass,Basic,40,,Fire×2,,1,,Stun Spore [草] 10 / Leech Life [草無] 10,BS2 97,,PMCG2-004
+PMCG2,5,マダツボミ,generated,Pokemon,Common,False,Bellsprout,base2,49,Grass,Basic,40,,Fire×2,,1,,Vine Whip [草] 10 / Call for Family [草],BS2 66,,PMCG2-005
+PMCG2,6,タマタマ,generated,Pokemon,Common,False,Exeggcute,base2,52,Grass,Basic,50,,Fire×2,,1,,Hypnosis [超] / Leech Seed [草草] 20,BS2 74 / LC 75,,PMCG2-006
+PMCG2,7,バタフリー,generated,Pokemon,Uncommon,False,Butterfree,base2,33,Grass,Stage 2,70,Metapod,Fire×2,Fighting-30,0,,Whirlwind [無無] 20 / Mega Drain [草草草草] 40,BS2 34 / LC 21,,PMCG2-007
+PMCG2,8,ニドリーナ,generated,Pokemon,Uncommon,False,Nidorina,base2,40,Grass,Stage 1,70,Nidoran ♀,Psychic×2,,1,,Supersonic [草] / Double Kick [草無無] 30×,BS2 53 / LC 55,,PMCG2-008
+PMCG2,9,クサイハナ,generated,Pokemon,Uncommon,False,Gloom,base2,37,Grass,Stage 1,60,Oddish,Fire×2,,1,,Poisonpowder [草] / Foul Odor [草草] 20,,,PMCG2-009
+PMCG2,10,パラセクト,generated,Pokemon,Uncommon,False,Parasect,base2,41,Grass,Stage 1,60,Paras,Fire×2,,1,,Spore [草草] / Slash [無無無] 30,BS2 55,,PMCG2-010
+PMCG2,11,ウツドン,generated,Pokemon,Uncommon,False,Weepinbell,base2,48,Grass,Stage 1,70,Bellsprout,Fire×2,,1,,Poisonpowder [草] 10 / Razor Leaf [草草] 30,BS2 64,,PMCG2-011
+PMCG2,12,ナッシー,generated,Pokemon,Uncommon,False,Exeggutor,base2,35,Grass,Stage 1,80,Exeggcute,Fire×2,,3,,Teleport [超] / Big Eggsplosion [無] 20×,BS2 39 / LC 23,,PMCG2-012
+PMCG2,13,ニドクイン,generated,Pokemon,Holo Rare,True,Nidoqueen,base2,7 23,Grass,Stage 2,90,Nidorina,Psychic×2,,3,,Boyfriends [草無] 20+ / Mega Punch [草草無無] 50,BS2 12 / LC 32,,PMCG2-013
+PMCG2,14,ラフレシア,generated,Pokemon,Holo Rare,True,Vileplume,base2,15 31,Grass,Stage 2,80,Gloom,Fire×2,,2,Pokémon Power: Heal,Petal Dance [草草草] 40×,,,PMCG2-014
+PMCG2,15,モルフォン,generated,Pokemon,Holo Rare,True,Venomoth,base2,13 29,Grass,Stage 1,70,Venonat,Fire×2,Fighting-30,0,Pokémon Power: Shift,Venom Powder [草草] 10,BS2 31,,PMCG2-015
+PMCG2,16,ウツボット,generated,Pokemon,Holo Rare,True,Victreebel,base2,14 30,Grass,Stage 2,80,Weepinbell,Fire×2,,2,,Lure [草] / Acid [草草] 20,BS2 32,,PMCG2-016
+PMCG2,17,ストライク,generated,Pokemon,Holo Rare,True,Scyther,base2,10 26,Grass,Basic,70,,Fire×2,Fighting-30,0,,Swords Dance [草] / Slash [無無無] 30,BS2 17,,PMCG2-017
+PMCG2,18,カイロス,generated,Pokemon,Holo Rare,True,Pinsir,base2,9 25,Grass,Basic,60,,Fire×2,,1,,Irongrip [草草] 20 / Guillotine [草草無無] 50,BS2 29,,PMCG2-018
+PMCG2,19,ギャロップ,generated,Pokemon,Uncommon,False,Rapidash,base2,44,Fire,Stage 1,70,Ponyta,Water×2,,0,,Stomp [無無] 20+ / Agility [炎炎無] 30,LC 60,,PMCG2-019
+PMCG2,20,ブースター,generated,Pokemon,Holo Rare,True,Flareon,base2,3 19,Fire,Stage 1,70,Eevee,Water×2,,1,,Quick Attack [無無] 10+ / Flamethrower [炎炎無無] 60,LC 10,,PMCG2-020
+PMCG2,21,トサキント,generated,Pokemon,Common,False,Goldeen,base2,53,Water,Basic,40,,Lightning×2,,0,,Horn Attack [水] 10,BS2 76,,PMCG2-021
+PMCG2,22,アズマオウ,generated,Pokemon,Uncommon,False,Seaking,base2,46,Water,Stage 1,70,Goldeen,Lightning×2,,1,,Horn Attack [水] 10 / Waterfall [水無] 30,BS2 60,,PMCG2-022
+PMCG2,23,シャワーズ,generated,Pokemon,Holo Rare,True,Vaporeon,base2,12 28,Water,Stage 1,80,Eevee,Lightning×2,,1,,Quick Attack [無無] 10+ / Water Gun [水水無] 30+,,,PMCG2-023
+PMCG2,24,ピカチュウ,generated,Pokemon,Common,False,Pikachu,base2,60,Lightning,Basic,50,,Fighting×2,,1,,Spark [雷雷] 20,LC 86,,PMCG2-024
+PMCG2,25,マルマイン,generated,Pokemon,Holo Rare,True,Electrode,base2,2 18,Lightning,Stage 1,90,Voltorb,Fighting×2,,1,,Tackle [無無] 20 / Chain Lightning [雷雷雷] 20,LC 22,,PMCG2-025
+PMCG2,26,サンダース,generated,Pokemon,Holo Rare,True,Jolteon,base2,4 20,Lightning,Stage 1,70,Eevee,Fighting×2,,1,,Quick Attack [無無] 10+ / Pin Missile [雷雷無] 20×,,,PMCG2-026
+PMCG2,27,バリヤード,generated,Pokemon,Holo Rare,True,Mr. Mime,base2,6 22,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: Invisible Wall,Meditate [超無] 10+,BS2 27,,PMCG2-027
+PMCG2,28,マンキー,generated,Pokemon,Common,False,Mankey,base2,55,Fighting,Basic,30,,Psychic×2,,0,Pokémon Power: Peek,Scratch [無] 10,,,PMCG2-028
+PMCG2,29,カラカラ,generated,Pokemon,Common,False,Cubone,base2,50,Fighting,Basic,40,,Grass×2,Lightning-30,1,,Snivel [無] / Rage [闘闘] 10+,BS2 70,,PMCG2-029
+PMCG2,30,サイホーン,generated,Pokemon,Common,False,Rhyhorn,base2,61,Fighting,Basic,70,,Grass×2,Lightning-30,3,,Leer [無] / Horn Attack [闘無無] 30,BS2 90 / LC 90,,PMCG2-030
+PMCG2,31,オコリザル,generated,Pokemon,Uncommon,False,Primeape,base2,43,Fighting,Stage 1,70,Mankey,Psychic×2,,1,,Fury Swipes [闘闘] 20× / Tantrum [闘闘無] 50,LC 59,,PMCG2-031
+PMCG2,32,ガラガラ,generated,Pokemon,Uncommon,False,Marowak,base2,39,Fighting,Stage 1,60,Cubone,Grass×2,Lightning-30,1,,Bonemerang [闘闘] 30× / Call for Friend [闘闘無],BS2 52,,PMCG2-032
+PMCG2,33,サイドン,generated,Pokemon,Uncommon,False,Rhydon,base2,45,Fighting,Stage 1,100,Rhyhorn,Grass×2,Lightning-30,3,,Horn Attack [闘無無] 30 / Ram [闘闘闘闘] 50,BS2 59 / LC 35,,PMCG2-033
+PMCG2,34,オニスズメ,generated,Pokemon,Common,False,Spearow,base2,62,Colorless,Basic,50,,Lightning×2,Fighting-30,0,,Peck [無] 10 / Mirror Move [無無無],BS2 92 / LC 94,,PMCG2-034
+PMCG2,35,プリン,generated,Pokemon,Common,False,Jigglypuff,base2,54,Colorless,Basic,60,,Fighting×2,Psychic-30,1,,Lullaby [無] / Pound [無無] 20,BS2 77,,PMCG2-035
+PMCG2,36,ニャース,generated,Pokemon,Common,False,Meowth,base2,56,Colorless,Basic,50,,Fighting×2,Psychic-30,1,,Pay Day [無無] 10,BS2 80 / LC 53,,PMCG2-036
+PMCG2,37,イーブイ,generated,Pokemon,Common,False,Eevee,base2,51,Colorless,Basic,50,,Fighting×2,Psychic-30,1,,Tail Wag [無] / Quick Attack [無無] 10+,LC 74,,PMCG2-037
+PMCG2,38,オニドリル,generated,Pokemon,Uncommon,False,Fearow,base2,36,Colorless,Stage 1,70,Spearow,Lightning×2,Fighting-30,0,,Agility [無無無] 20 / Drill Peck [無無無無] 40,BS2 41 / LC 42,,PMCG2-038
+PMCG2,39,ペルシアン,generated,Pokemon,Uncommon,False,Persian,base2,42,Colorless,Stage 1,70,Meowth,Fighting×2,Psychic-30,0,,Scratch [無無] 20 / Pounce [無無無] 30,BS2 56,,PMCG2-039
+PMCG2,40,ドードリオ,generated,Pokemon,Uncommon,False,Dodrio,base2,34,Colorless,Stage 1,70,Doduo,Lightning×2,Fighting-30,0,Pokémon Power: Retreat Aid,Rage [無無無] 10+,BS2 37 / LC 41,,PMCG2-040
+PMCG2,41,ベロリンガ,generated,Pokemon,Uncommon,False,Lickitung,base2,38,Colorless,Basic,90,,Fighting×2,Psychic-30,3,,Tongue Wrap [無] 10 / Supersonic [無無],BS2 48,,PMCG2-041
+PMCG2,42,ケンタロス,generated,Pokemon,Uncommon,False,Tauros,base2,47,Colorless,Basic,60,,Fighting×2,Psychic-30,2,,Stomp [無無] 20+ / Rampage [無無無] 20+,BS2 62 / LC 65,,PMCG2-042
+PMCG2,43,ピジョット,generated,Pokemon,Holo Rare,True,Pidgeot,base2,8 24,Colorless,Stage 2,80,Pidgeotto,Lightning×2,Fighting-30,0,,Wing Attack [無無] 20 / Hurricane [無無無] 30,BS2 14 / LC 33,,PMCG2-043
+PMCG2,44,ピクシー,generated,Pokemon,Holo Rare,True,Clefable,base2,1 17,Colorless,Stage 1,70,Clefairy,Fighting×2,Psychic-30,2,,Metronome [無] / Minimize [無無],BS2 5,,PMCG2-044
+PMCG2,45,プクリン,generated,Pokemon,Holo Rare,True,Wigglytuff,base2,16 32,Colorless,Stage 1,80,Jigglypuff,Fighting×2,Psychic-30,2,,Lullaby [無] / Do the Wave [無無無] 10+,BS2 19,,PMCG2-045
+PMCG2,46,ガルーラ,generated,Pokemon,Holo Rare,True,Kangaskhan,base2,5 21,Colorless,Basic,90,,Fighting×2,Psychic-30,3,,Fetch [無] / Comet Punch [無無無無] 20×,BS2 26,,PMCG2-046
+PMCG2,47,カビゴン,generated,Pokemon,Holo Rare,True,Snorlax,base2,11 27,Colorless,Basic,90,,Fighting×2,Psychic-30,4,Pokémon Power: Thick Skinned,Body Slam [無無無無] 30,BS2 30 / LC 64,,PMCG2-047
+PMCG2,48,モンスターボール,未確認,Trainer,Common,False,Poké Ball,base2,64,,,,,,,,,,,,PMCG2-048
+PMCG3,1,アーボ,generated,Pokemon,Common,False,Ekans,base3,46,Grass,Basic,40,,Psychic×2,,1,,Spit Poison [草] / Wrap [草無] 20,,,PMCG3-001
+PMCG3,2,ズバット,generated,Pokemon,Common,False,Zubat,base3,57,Grass,Basic,40,,Psychic×2,Fighting-30,0,,Supersonic [無無] / Leech Life [草無] 10,,,PMCG3-002
+PMCG3,3,ベトベター,generated,Pokemon,Common,False,Grimer,base3,48,Grass,Basic,50,,Psychic×2,,1,,Nasty Goo [無] 10 / Minimize [草],,,PMCG3-003
+PMCG3,4,アーボック,generated,Pokemon,Uncommon,False,Arbok,base3,31,Grass,Stage 1,60,Ekans,Psychic×2,,2,,Terror Strike [草] 10 / Poison Fang [草草無] 20,,,PMCG3-004
+PMCG3,5,ゴルバット,generated,Pokemon,Uncommon,False,Golbat,base3,34,Grass,Stage 1,60,Zubat,Psychic×2,Fighting-30,0,,Wing Attack [無無無] 30 / Leech Life [草草無] 20,,,PMCG3-005
+PMCG3,6,マタドガス,generated,Pokemon,Uncommon,False,Weezing,base3,45,Grass,Stage 1,60,Koffing,Psychic×2,,1,,Smog [草草] 20 / Selfdestruct [草草無] 60,,,PMCG3-006
+PMCG3,7,ベトベトン,generated,Pokemon,Holo Rare,True,Muk,base3,13 28,Grass,Stage 1,70,Grimer,Psychic×2,,2,Pokémon Power: Toxic Gas,Sludge [草草草] 30,LC 16,,PMCG3-007
+PMCG3,8,ブーバー,generated,Pokemon,Uncommon,False,Magmar,base3,39,Fire,Basic,70,,Water×2,,1,,Smokescreen [炎] 10 / Smog [炎炎] 20,,,PMCG3-008
+PMCG3,9,ファイヤー,generated,Pokemon,Holo Rare,True,Moltres,base3,12 27,Fire,Basic,70,,,Fighting-30,2,,Wildfire [炎] / Dive Bomb [炎炎炎炎] 80,LC 30,,PMCG3-009
+PMCG3,10,コダック,generated,Pokemon,Common,False,Psyduck,base3,53,Water,Basic,50,,Lightning×2,,1,,Headache [超] / Fury Swipes [水] 10×,Promo 20,,PMCG3-010
+PMCG3,11,メノクラゲ,generated,Pokemon,Common,False,Tentacool,base3,56,Water,Basic,30,,Lightning×2,,0,Pokémon Power: Cowardice,Acid [水] 10,LC 96,,PMCG3-011
+PMCG3,12,シェルダー,generated,Pokemon,Common,False,Shellder,base3,54,Water,Basic,30,,Lightning×2,,1,,Supersonic [水] / Hide in Shell [水],,,PMCG3-012
+PMCG3,13,クラブ,generated,Pokemon,Common,False,Krabby,base3,51,Water,Basic,50,,Lightning×2,,2,,Call for Family [水] / Irongrip [水無] 20,,,PMCG3-013
+PMCG3,14,タッツー,generated,Pokemon,Common,False,Horsea,base3,49,Water,Basic,40,,Lightning×2,,0,,Smokescreen [水] 10,,,PMCG3-014
+PMCG3,15,オムナイト,generated,Pokemon,Common,False,Omanyte,base3,52,Water,Stage 1,40,Mysterious Fossil,Grass×2,,1,Pokémon Power: Clairvoyance,Water Gun [水] 10+,LC 57,,PMCG3-015
+PMCG3,16,ゴルダック,generated,Pokemon,Uncommon,False,Golduck,base3,35,Water,Stage 1,70,Psyduck,Lightning×2,,1,,Psyshock [超] 10 / Hyper Beam [水水無] 20,LC 43,,PMCG3-016
+PMCG3,17,ドククラゲ,generated,Pokemon,Uncommon,False,Tentacruel,base3,44,Water,Stage 1,60,Tentacool,Lightning×2,,0,,Supersonic [水] / Jellyfish Sting [水水] 10,LC 66,,PMCG3-017
+PMCG3,18,パルシェン,generated,Pokemon,Uncommon,False,Cloyster,base3,32,Water,Stage 1,50,Shellder,Lightning×2,,2,,Clamp [水水] 30 / Spike Cannon [水水] 30×,,,PMCG3-018
+PMCG3,19,キングラー,generated,Pokemon,Uncommon,False,Kingler,base3,38,Water,Stage 1,60,Krabby,Lightning×2,,3,,Flail [水] 10× / Crabhammer [水水無] 40,,,PMCG3-019
+PMCG3,20,シードラ,generated,Pokemon,Uncommon,False,Seadra,base3,42,Water,Stage 1,60,Horsea,Lightning×2,,1,,Water Gun [水無] 20+ / Agility [水無無] 20,LC 63,,PMCG3-020
+PMCG3,21,オムスター,generated,Pokemon,Uncommon,False,Omastar,base3,40,Water,Stage 2,70,Omanyte,Grass×2,,1,,Water Gun [水無] 20+ / Spike Cannon [水水] 30×,LC 58,,PMCG3-021
+PMCG3,22,ラプラス,generated,Pokemon,Holo Rare,True,Lapras,base3,10 25,Water,Basic,80,,Lightning×2,,2,,Water Gun [水] 10+ / Confuse Ray [水水] 10,,,PMCG3-022
+PMCG3,23,フリーザー,generated,Pokemon,Holo Rare,True,Articuno,base3,2 17,Water,Basic,70,,,Fighting-30,2,,Freeze Dry [水水水] 30 / Blizzard [水水水水] 50,LC 2,,PMCG3-023
+PMCG3,24,ライチュウ,generated,Pokemon,Holo Rare,True,Raichu,base3,14 29,Lightning,Stage 1,90,Pikachu,Fighting×2,,1,,Gigashock [雷雷雷雷] 30,,,PMCG3-024
+PMCG3,25,レアコイル,generated,Pokemon,Holo Rare,True,Magneton,base3,11 26,Lightning,Stage 1,80,Magnemite,Fighting×2,,2,,Sonicboom [雷無] 20 / Selfdestruct [雷雷雷雷] 100,LC 28,,PMCG3-025
+PMCG3,26,サンダー,generated,Pokemon,Holo Rare,True,Zapdos,base3,15 30,Lightning,Basic,80,,,Fighting-30,2,,Thunderstorm [雷雷雷雷] 40,,,PMCG3-026
+PMCG3,27,ヤドン,generated,Pokemon,Common,False,Slowpoke,base3,55,Psychic,Basic,50,,Psychic×2,,1,,Spacing Out [無] / Scavenge [超超],LC 93,,PMCG3-027
+PMCG3,28,ヤドラン,generated,Pokemon,Uncommon,False,Slowbro,base3,43,Psychic,Stage 1,60,Slowpoke,Psychic×2,,1,Pokémon Power: Strange Behavior,Psyshock [超超] 20,,,PMCG3-028
+PMCG3,29,ゴース,generated,Pokemon,Uncommon,False,Gastly,base3,33,Psychic,Basic,50,,,Fighting-30,0,,Lick [超] 10 / Energy Conversion [超超],LC 76,,PMCG3-029
+PMCG3,30,ゴースト,generated,Pokemon,Holo Rare,True,Haunter,base3,6 21,Psychic,Stage 1,50,Gastly,,Fighting-30,0,Pokémon Power: Transparency,Nightmare [超無] 10,LC 46,,PMCG3-030
+PMCG3,31,ゲンガー,generated,Pokemon,Holo Rare,True,Gengar,base3,5 20,Psychic,Stage 2,80,Haunter,,Fighting-30,1,Pokémon Power: Curse,Dark Mind [超超超] 30,LC 11,,PMCG3-031
+PMCG3,32,スリーパー,generated,Pokemon,Holo Rare,True,Hypno,base3,8 23,Psychic,Stage 1,90,Drowzee,Psychic×2,,2,,Prophecy [超] / Dark Mind [超超超] 30,LC 25,,PMCG3-032
+PMCG3,33,ミュウ,generated,Pokemon,Holo Rare,True,Mew,basep,8 9,Psychic,Basic,50,,Psychic×2,,1,,Psywave [超] 10× / Devolution Beam [超超],,,PMCG3-033
+PMCG3,34,イシツブテ,generated,Pokemon,Common,False,Geodude,base3,47,Fighting,Basic,50,,Grass×2,,1,,Stone Barrage [闘無] 10×,LC 77,,PMCG3-034
+PMCG3,35,カブト,generated,Pokemon,Common,False,Kabuto,base3,50,Fighting,Stage 1,30,Mysterious Fossil,Grass×2,,1,Pokémon Power: Kabuto Armor,Scratch [無] 10,LC 48,,PMCG3-035
+PMCG3,36,サンドパン,generated,Pokemon,Uncommon,False,Sandslash,base3,41,Fighting,Stage 1,70,Sandshrew,Grass×2,Lightning-30,1,,Slash [無無] 20 / Fury Swipes [闘闘] 20×,LC 62,,PMCG3-036
+PMCG3,37,ゴローン,generated,Pokemon,Uncommon,False,Graveler,base3,37,Fighting,Stage 1,60,Geodude,Grass×2,,2,,Harden [闘闘] / Rock Throw [闘闘無] 40,LC 44,,PMCG3-037
+PMCG3,38,ゴローニャ,generated,Pokemon,Uncommon,False,Golem,base3,36,Fighting,Stage 2,80,Graveler,Grass×2,,4,,Avalanche [闘闘闘無] 60 / Selfdestruct [闘闘闘闘] 100,LC 24,,PMCG3-038
+PMCG3,39,サワムラー,generated,Pokemon,Holo Rare,True,Hitmonlee,base3,7 22,Fighting,Basic,60,,Psychic×2,,1,,Stretch Kick [闘闘] / High Jump Kick [闘闘闘] 50,LC 13,,PMCG3-039
+PMCG3,40,カブトプス,generated,Pokemon,Holo Rare,True,Kabutops,base3,9 24,Fighting,Stage 2,60,Kabuto,Grass×2,,1,,Sharp Sickle [闘闘] 30 / Absorb [闘闘闘闘] 40,LC 27,,PMCG3-040
+PMCG3,41,プテラ,generated,Pokemon,Holo Rare,True,Aerodactyl,base3,1 16,Fighting,Stage 1,60,Mysterious Fossil,Grass×2,Fighting-30,2,Pokémon Power: Prehistoric Power,Wing Attack [無無無] 30,,,PMCG3-041
+PMCG3,42,メタモン,generated,Pokemon,Holo Rare,True,Ditto,base3,3 18,Colorless,Basic,50,,Fighting×2,Psychic-30,1,Pokémon Power: Transform,,,,PMCG3-042
+PMCG3,43,カイリュー,generated,Pokemon,Holo Rare,True,Dragonite,base3,4 19,Colorless,Stage 2,100,Dragonair,,Fighting-30,1,Pokémon Power: Step In,Slam [無無無無] 40×,,,PMCG3-043
+PMCG3,44,エネルギー転送,未確認,Trainer,Common,False,Energy Search,base3,59,,,,,,,,,,,,PMCG3-044
+PMCG3,45,ギャンブラー,未確認,Trainer,Common,False,Gambler,base3,60,,,,,,,,,,,,PMCG3-045
+PMCG3,46,なにかの化石,未確認,Trainer,Common,False,Mysterious Fossil,base3,62,,,,,,,,,,,,PMCG3-046
+PMCG3,47,リサイクル,未確認,Trainer,Common,False,Recycle,base3,61,,,,,,,,,,,,PMCG3-047
+PMCG3,48,フジろうじん,未確認,Trainer,Uncommon,False,Mr. Fuji,base3,58,,,,,,,,,,,,PMCG3-048
+PMCG4,1,アーボ,generated,Pokemon,Common,False,Ekans,base5,56,Grass,Basic,50,,Psychic×2,,1,,Bite [無] 10 / Poison Sting [草草] 20,,,PMCG4-001
+PMCG4,2,ズバット,generated,Pokemon,Common,False,Zubat,base5,70,Grass,Basic,40,,Psychic×2,Fighting-30,0,,Ram [無] 10 / Bite [草無] 20,,,PMCG4-002
+PMCG4,3,ナゾノクサ,generated,Pokemon,Common,False,Oddish,base5,63,Grass,Basic,50,,Fire×2,,1,,Sleep Powder [草] / Poisonpowder [草],,,PMCG4-003
+PMCG4,4,ベトベター,generated,Pokemon,Common,False,Grimer,base5,57,Grass,Basic,40,,Psychic×2,,1,,Poison Gas [草] / Sticky Hands [草草] 10+,,,PMCG4-004
+PMCG4,5,ドガース,generated,Pokemon,Common,False,Koffing,base5,58,Grass,Basic,40,,Psychic×2,,1,,Tackle [無] 10 / Poison Gas [草無] 20,,,PMCG4-005
+PMCG4,6,わるいクサイハナ,generated,Pokemon,Uncommon,False,Dark Gloom,base5,36,Grass,Stage 1,50,Oddish,Fire×2,,2,Pokémon Power: Pollen Stench,Poisonpowder [草草] 10,,,PMCG4-006
+PMCG4,7,わるいベトベトン,generated,Pokemon,Uncommon,False,Dark Muk,base5,41,Grass,Stage 1,60,Grimer,Psychic×2,,2,Pokémon Power: Sticky Goo,Sludge Punch [草草] 20,,,PMCG4-007
+PMCG4,8,わるいアーボック,generated,Pokemon,Holo Rare,True,Dark Arbok,base5,2 19,Grass,Stage 1,60,Ekans,Psychic×2,,2,,Stare [草草] / Poison Vapor [草草草] 10,,,PMCG4-008
+PMCG4,9,わるいゴルバット,generated,Pokemon,Holo Rare,True,Dark Golbat,base5,7 24,Grass,Stage 1,50,Zubat,Psychic×2,Fighting-30,0,Pokémon Power: Sneak Attack,Flitter [草草],,,PMCG4-009
+PMCG4,10,わるいラフレシア,generated,Pokemon,Holo Rare,True,Dark Vileplume,base5,13 30,Grass,Stage 2,60,Dark Gloom,Fire×2,,2,Pokémon Power: Hay Fever,Petal Whirlwind [草草草] 30×,,,PMCG4-010
+PMCG4,11,わるいマタドガス,generated,Pokemon,Holo Rare,True,Dark Weezing,base5,14 31,Grass,Stage 1,60,Koffing,Psychic×2,,1,,Mass Explosion [草無] 20× / Stun Gas [草草草] 20,,,PMCG4-011
+PMCG4,12,ヒトカゲ,generated,Pokemon,Common,False,Charmander,base5,50,Fire,Basic,40,,Water×2,,1,Pokémon Power: Gather Fire,Fire Tail [炎] 20,,,PMCG4-012
+PMCG4,13,ポニータ,generated,Pokemon,Common,False,Ponyta,base5,64,Fire,Basic,50,,Water×2,,1,,Ember [炎無] 30,,,PMCG4-013
+PMCG4,14,わるいギャロップ,generated,Pokemon,Common,False,Dark Rapidash,base5,44,Fire,Stage 1,60,Ponyta,Water×2,,0,,Rear Kick [無無] 20 / Flame Pillar [炎炎] 30,,,PMCG4-014
+PMCG4,15,わるいリザード,generated,Pokemon,Uncommon,False,Dark Charmeleon,base5,32,Fire,Stage 1,50,Charmander,Water×2,,2,,Tail Slap [無無] 20 / Fireball [炎炎炎] 70,,,PMCG4-015
+PMCG4,16,わるいブースター,generated,Pokemon,Uncommon,False,Dark Flareon,base5,35,Fire,Stage 1,50,Eevee,Water×2,,1,,Rage [無] 10+ / Playing with Fire [炎炎] 30+,,,PMCG4-016
+PMCG4,17,わるいリザードン,generated,Pokemon,Holo Rare,True,Dark Charizard,base5,4 21,Fire,Stage 2,80,Dark Charmeleon,Water×2,Fighting-30,3,,Nail Flick [無] 10 / Continuous Fireball [炎炎] 50×,,,PMCG4-017
+PMCG4,18,ゼニガメ,generated,Pokemon,Common,False,Squirtle,base5,68,Water,Basic,50,,Lightning×2,,1,,Shell Attack [無無] 20,,,PMCG4-018
+PMCG4,19,コダック,generated,Pokemon,Common,False,Psyduck,base5,65,Water,Basic,50,,Lightning×2,,1,,Dizziness [超] / Water Gun [水無] 20+,LC 88,,PMCG4-019
+PMCG4,20,コイキング,generated,Pokemon,Common,False,Magikarp,base5,47,Water,Basic,30,,Lightning×2,,1,,Flop [無] 10 / Rapid Evolution [水水水],,,PMCG4-020
+PMCG4,21,わるいカメール,generated,Pokemon,Uncommon,False,Dark Wartortle,base5,46,Water,Stage 1,60,Squirtle,Lightning×2,,1,,Doubleslap [水] 10× / Mirror Shell [水無],LC 39,,PMCG4-021
+PMCG4,22,わるいゴルダック,generated,Pokemon,Uncommon,False,Dark Golduck,base5,37,Water,Stage 1,60,Psyduck,Lightning×2,,2,,Third Eye [超] / Super Psy [超超無] 50,,,PMCG4-022
+PMCG4,23,わるいシャワーズ,generated,Pokemon,Uncommon,False,Dark Vaporeon,base5,45,Water,Stage 1,60,Eevee,Lightning×2,,1,,Bite [無無無] 30 / Whirlpool [水水無] 20,LC 9,,PMCG4-023
+PMCG4,24,わるいカメックス,generated,Pokemon,Holo Rare,True,Dark Blastoise,base5,3 20,Water,Stage 2,70,Dark Wartortle,Lightning×2,,2,,Hydrocannon [水水] 30+ / Rocket Tackle [水無無] 40,LC 4,,PMCG4-024
+PMCG4,25,わるいギャラドス,generated,Pokemon,Holo Rare,True,Dark Gyarados,base5,8 25,Water,Stage 1,70,Magikarp,Grass×2,Fighting-30,2,Pokémon Power: Final Beam,Ice Beam [水水水] 30,,,PMCG4-025
+PMCG4,26,コイル,generated,Pokemon,Common,False,Magnemite,base5,60,Lightning,Basic,40,,Fighting×2,,1,,Tackle [無無] 20 / Magnetism [雷無] 10+,,,PMCG4-026
+PMCG4,27,ビリリダマ,generated,Pokemon,Common,False,Voltorb,base5,69,Lightning,Basic,40,,Fighting×2,,1,,Speed Ball [雷] 20,,,PMCG4-027
+PMCG4,28,わるいマルマイン,generated,Pokemon,Uncommon,False,Dark Electrode,base5,34,Lightning,Stage 1,60,Voltorb,Fighting×2,,1,,Rolling Tackle [無] 10 / Energy Bomb [雷雷] 30,,,PMCG4-028
+PMCG4,29,わるいサンダース,generated,Pokemon,Uncommon,False,Dark Jolteon,base5,38,Lightning,Stage 1,50,Eevee,Fighting×2,,1,,Lightning Flash [雷] 20 / Thunder Attack [雷雷無] 30,,,PMCG4-029
+PMCG4,30,わるいレアコイル,generated,Pokemon,Holo Rare,True,Dark Magneton,base5,11 28,Lightning,Stage 1,60,Magnemite,Fighting×2,,2,,Sonicboom [無無] 20 / Magnetic Lines [雷雷] 30,,,PMCG4-030
+PMCG4,31,ケーシィ,generated,Pokemon,Common,False,Abra,base5,49,Psychic,Basic,40,,Psychic×2,,1,,Vanish [超] / Psyshock [超] 10,,,PMCG4-031
+PMCG4,32,ヤドン,generated,Pokemon,Common,False,Slowpoke,base5,67,Psychic,Basic,50,,Psychic×2,,1,,Afternoon Nap [無] / Headbutt [超] 10,,,PMCG4-032
+PMCG4,33,スリープ,generated,Pokemon,Common,False,Drowzee,base5,54,Psychic,Basic,50,,Psychic×2,,1,Pokémon Power: Long-Distance Hypnosis,Nightmare [超無] 10,LC 73,,PMCG4-033
+PMCG4,34,わるいユンゲラー,generated,Pokemon,Uncommon,False,Dark Kadabra,base5,39,Psychic,Stage 1,50,Abra,Psychic×2,,2,Pokémon Power: Matter Exchange,Mind Shock [超超] 30,,,PMCG4-034
+PMCG4,35,わるいフーディン,generated,Pokemon,Holo Rare,True,Dark Alakazam,base5,1 18,Psychic,Stage 2,60,Dark Kadabra,Psychic×2,,3,,Teleport Blast [超超無] 30 / Mind Shock [超超超] 40,,,PMCG4-035
+PMCG4,36,わるいヤドラン,generated,Pokemon,Holo Rare,True,Dark Slowbro,base5,12 29,Psychic,Stage 1,60,Slowpoke,Psychic×2,,2,Pokémon Power: Reel In,Fickle Attack [超超] 40,LC 8,,PMCG4-036
+PMCG4,37,わるいスリーパー,generated,Pokemon,Holo Rare,True,Dark Hypno,base5,9 26,Psychic,Stage 1,60,Drowzee,Psychic×2,,2,,Psypunch [超] 20 / Bench Manipulation [超超無] 20×,,,PMCG4-037
+PMCG4,38,ディグダ,generated,Pokemon,Common,False,Diglett,base5,52,Fighting,Basic,40,,Grass×2,Lightning-30,0,,Dig Under [闘] / Scratch [闘無] 20,,,PMCG4-038
+PMCG4,39,マンキー,generated,Pokemon,Common,False,Mankey,base5,61,Fighting,Basic,40,,Psychic×2,,0,,Mischief [無] / Anger [闘無] 20+,LC 81,,PMCG4-039
+PMCG4,40,ワンリキー,generated,Pokemon,Common,False,Machop,base5,59,Fighting,Basic,50,,Psychic×2,,1,,Punch [無無] 20 / Kick [闘無無] 30,LC 79,,PMCG4-040
+PMCG4,41,わるいオコリザル,generated,Pokemon,Uncommon,False,Dark Primeape,base5,43,Fighting,Stage 1,60,Mankey,Psychic×2,,1,Pokémon Power: Frenzy,Frenzied Attack [闘闘] 40,,,PMCG4-041
+PMCG4,42,わるいゴーリキー,generated,Pokemon,Uncommon,False,Dark Machoke,base5,40,Fighting,Stage 1,60,Machop,Psychic×2,,2,,Drag Off [闘闘無] 20 / Knock Back [闘闘無] 30,,,PMCG4-042
+PMCG4,43,わるいダグトリオ,generated,Pokemon,Holo Rare,True,Dark Dugtrio,base5,6 23,Fighting,Stage 1,50,Diglett,Grass×2,Lightning-30,2,Pokémon Power: Sinkhole,Knock Down [闘闘] 20+,,,PMCG4-043
+PMCG4,44,わるいカイリキー,generated,Pokemon,Holo Rare,True,Dark Machamp,base5,10 27,Fighting,Stage 2,70,Dark Machoke,Psychic×2,,3,,Mega Punch [闘闘] 30 / Fling [闘闘闘無],,,PMCG4-044
+PMCG4,45,コラッタ,generated,Pokemon,Common,False,Rattata,base5,66,Colorless,Basic,40,,Fighting×2,Psychic-30,0,Pokémon Power: Trickery,Quick Attack [無] 10+,,,PMCG4-045
+PMCG4,46,わるいラッタ,generated,Pokemon,Common,False,Dark Raticate,base5,51,Colorless,Stage 1,50,Rattata,Fighting×2,Psychic-30,1,,Gnaw [無無] 20 / Hyper Fang [無無無] 50,,,PMCG4-046
+PMCG4,47,ニャース,generated,Pokemon,Common,False,Meowth,base5,62,Colorless,Basic,40,,Fighting×2,Psychic-30,1,,Coin Hurl [無無],,,PMCG4-047
+PMCG4,48,わるいペルシアン,generated,Pokemon,Common,False,Dark Persian,base5,42,Colorless,Stage 1,60,Meowth,Fighting×2,Psychic-30,0,,Fascinate [無] / Poison Claws [無無] 10,LC 6,,PMCG4-048
+PMCG4,49,イーブイ,generated,Pokemon,Common,False,Eevee,base5,55,Colorless,Basic,40,,Fighting×2,Psychic-30,1,,Tackle [無] 10 / Sand-attack [無無] 10,,,PMCG4-049
+PMCG4,50,ポリゴン,generated,Pokemon,Common,False,Porygon,base5,48,Colorless,Basic,40,,Fighting×2,Psychic-30,0,,Conversion 1 [無] / Psybeam [無無無] 20,,,PMCG4-050
+PMCG4,51,ミニリュウ,generated,Pokemon,Common,False,Dratini,base5,53,Colorless,Basic,40,,,Psychic-30,1,,Wrap [無無] 10,,,PMCG4-051
+PMCG4,52,わるいハクリュー,generated,Pokemon,Uncommon,False,Dark Dragonair,base5,33,Colorless,Stage 1,60,Dratini,,Psychic-30,2,Pokémon Power: Evolutionary Light,Tail Strike [無無無] 20+,LC 38,,PMCG4-052
+PMCG4,53,わるいカイリュー,generated,Pokemon,Holo Rare,True,Dark Dragonite,base5,5 22,Colorless,Stage 2,70,Dark Dragonair,,Fighting-30,2,Pokémon Power: Summon Minions,Giant Tail [無無無無] 70,LC 5,,PMCG4-053
+PMCG4,54,ねむれ!ねむれ!,未確認,Trainer,Common,False,Sleep!,base5,79,,,,,,,,,,,,PMCG4-054
+PMCG4,55,バトル場は穴だらけ!,未確認,Trainer,Common,False,Digger,base5,75,,,,,,,,,,,,PMCG4-055
+PMCG4,56,まきちらせ!ベトベトガス,未確認,Trainer,Common,False,Goop Gas Attack,base5,78,,,,,,,,,,,,PMCG4-056
+PMCG4,57,夜の廃品回収,未確認,Trainer,Common,False,Nightly Garbage Run,base5,77,,,,,,,,,,,,PMCG4-057
+PMCG4,58,たたきつけろ!挑戦状,未確認,Trainer,Uncommon,False,Challenge!,base5,74,,,,,,,,,,,,PMCG4-058
+PMCG4,59,にせオーキドの逆襲,未確認,Trainer,Uncommon,False,Imposter Oak's Revenge,base5,76,,,,,,,,,,,,PMCG4-059
+PMCG4,60,ボスのやりかた,未確認,Trainer,Uncommon,False,The Boss's Way,base5,73,,,,,,,,,,,,PMCG4-060
+PMCG4,61,ロケット団のおねーさん,未確認,Trainer,Holo Rare,True,Rocket's Sneak Attack,base5,16 72,,,,,,,,,,,,PMCG4-061
+PMCG4,62,ロケット団参上!,未確認,Trainer,Secret Rare,True,Here Comes Team Rocket!,base5,15 71,,,,,,,,,,,,PMCG4-062
+PMCG4,63,きずぐすり配合エネルギー,未確認,Energy,Common,False,Potion Energy,base5,82,,,,,,,,,,,,PMCG4-063
+PMCG4,64,なんでもなおし配合エネルギー,未確認,Energy,Common,False,Full Heal Energy,base5,81,,,,,,,,,,,,PMCG4-064
+PMCG4,65,レインボーエネルギー,未確認,Energy,Holo Rare,True,Rainbow Energy,base5,17 80,,,,,,,,,,,,PMCG4-065
+PMCG5,1,タケシのズバット,generated,Pokemon,Common,False,Brock's Zubat,gym1,74,Grass,Basic,40,,Psychic×2,Fighting-30,0,,Wing Attack [無] 10 / Poison Fang [草無] 20,,,PMCG5-001
+PMCG5,2,エリカのナゾノクサ,generated,Pokemon,Common,False,Erika's Oddish,gym1,78,Grass,Basic,50,,Fire×2,,1,,Blot [草] 10 / Sporadic Sponging [草無] 20,,,PMCG5-002
+PMCG5,3,エリカのナゾノクサ,generated,Pokemon,Common,False,Erika's Oddish,gym2,70,Grass,Basic,40,,Fire×2,,1,,Strange Powder [草] 10,,,PMCG5-003
+PMCG5,4,エリカのパラス,generated,Pokemon,Common,False,Erika's Paras,gym2,71,Grass,Basic,50,,Fire×2,,1,,Irongrip [無] 10 / Poison Spore [草草],,,PMCG5-004
+PMCG5,5,エリカのマダツボミ,generated,Pokemon,Common,False,Erika's Bellsprout,gym1,76,Grass,Basic,50,,Fire×2,,1,,Careless Tackle [無] 20,,,PMCG5-005
+PMCG5,6,エリカのモンジャラ,generated,Pokemon,Common,False,Erika's Tangela,gym1,79,Grass,Basic,60,,Fire×2,,2,,Vine Slap [草] 10 / Stretch Vine [草草無],,,PMCG5-006
+PMCG5,7,エリカのフシギダネ,generated,Pokemon,Uncommon,False,Erika's Bulbasaur,gym2,39,Grass,Basic,50,,Fire×2,,1,,Sleep Seed [草] 10 / Errand-Running [草草],,,PMCG5-007
+PMCG5,8,タケシのゴルバット,generated,Pokemon,Uncommon,False,Brock's Golbat,gym1,39,Grass,Stage 1,70,Brock's Zubat,Psychic×2,Fighting-30,1,,Dive [無] 20 / Spiral Dive [無無無],,,PMCG5-008
+PMCG5,9,エリカのクサイハナ,generated,Pokemon,Uncommon,False,Erika's Gloom,gym1,45,Grass,Stage 1,60,Erika's Oddish,Fire×2,,1,,Healing Pollen [草] / Magic Pollen [草草草] 30,,,PMCG5-009
+PMCG5,10,エリカのマダツボミ,generated,Pokemon,Uncommon,False,Erika's Bellsprout,gym2,38,Grass,Basic,40,,Fire×2,,1,Pokémon Power: Soak Up,Stretch Vine [草],,,PMCG5-010
+PMCG5,11,エリカのウツドン,generated,Pokemon,Uncommon,False,Erika's Weepinbell,gym1,48,Grass,Stage 1,60,Erika's Bellsprout,Fire×2,,1,,Drool [草] 10 / Flytrap [草草] 20,,,PMCG5-011
+PMCG5,12,エリカのタマタマ,generated,Pokemon,Uncommon,False,Erika's Exeggcute,gym1,43,Grass,Basic,50,,Fire×2,,1,,Deflector [超] / Egg Bomb [草無] 40,,,PMCG5-012
+PMCG5,13,エリカのナッシー,generated,Pokemon,Uncommon,False,Erika's Exeggutor,gym1,44,Grass,Stage 1,70,Erika's Exeggcute,Fire×2,,2,,Psychic Exchange [超] / Stomp [草無無] 30+,,,PMCG5-013
+PMCG5,14,エリカのラフレシア,generated,Pokemon,Holo Rare,True,Erika's Vileplume,gym1,5,Grass,Stage 2,80,Erika's Gloom,Fire×2,,2,Pokémon Power: Pollen Defense,Mega Drain [草草草] 30,,,PMCG5-014
+PMCG5,15,エリカのウツボット,generated,Pokemon,Rare,False,Erika's Victreebel,gym1,26,Grass,Stage 2,80,Erika's Weepinbell,Fire×2,,2,Pokémon Power: Fragrance Trap,Razor Leaf [草草草] 50,,,PMCG5-015
+PMCG5,16,ロケット団のストライク,generated,Pokemon,Holo Rare,True,Rocket's Scyther,gym1,13,Grass,Basic,60,,Fire×2,Fighting-30,1,,Shadow Images [草] / Blinding Scythe [草無無] 40,,,PMCG5-016
+PMCG5,17,タケシのロコン,generated,Pokemon,Common,False,Brock's Vulpix,gym2,37,Fire,Basic,50,,Water×2,,1,,Hypnotic Gaze [無] / Fire Ring [炎炎] 20,,,PMCG5-017
+PMCG5,18,タケシのロコン,generated,Pokemon,Uncommon,False,Brock's Vulpix,gym1,73,Fire,Basic,40,,Water×2,,1,,Flame [炎] 20 / Quick Attack [無無] 10+,,,PMCG5-018
+PMCG5,19,タケシのキュウコン,generated,Pokemon,Holo Rare,True,Brock's Ninetales,gym2,3,Fire,Stage 1,70,Brock's Vulpix,Water×2,,1,Pokémon Power: Shapeshift,Will-o'-the-wisp [炎炎] 30,,,PMCG5-019
+PMCG5,20,ロケット団のファイヤー,generated,Pokemon,Holo Rare,True,Rocket's Moltres,gym1,12,Fire,Basic,60,,,Fighting-30,2,Pokémon Power: Rebirth,Fire Wall [炎炎炎] 40,,,PMCG5-020
+PMCG5,21,カスミのコダック,generated,Pokemon,Common,False,Misty's Psyduck,gym2,90,Water,Basic,60,,Grass×2,,1,,ESP [超],,,PMCG5-021
+PMCG5,22,カスミのニョロモ,generated,Pokemon,Common,False,Misty's Poliwag,gym2,89,Water,Basic,50,,Grass×2,,1,,Bubbles [水] 20 / Amnesia [水水],,,PMCG5-022
+PMCG5,23,カスミのパウワウ,generated,Pokemon,Common,False,Misty's Seel,gym2,91,Water,Basic,50,,Lightning×2,,1,,Frostbite [水] 10 / Mirage [水無] 10,,,PMCG5-023
+PMCG5,24,カスミのタッツー,generated,Pokemon,Common,False,Misty's Horsea,gym2,87,Water,Basic,50,,Lightning×2,,0,,Ink Spurt [水水] 20,,,PMCG5-024
+PMCG5,25,カスミのタッツー,generated,Pokemon,Common,False,Misty's Horsea,gym1,86,Water,Basic,40,,Lightning×2,,0,,Tackle [水] 10 / Smokescreen [水水] 20,,,PMCG5-025
+PMCG5,26,カスミのトサキント,generated,Pokemon,Common,False,Misty's Goldeen,gym1,85,Water,Basic,40,,Lightning×2,,1,,Fury Attack [無] 10× / Supersonic [水],,,PMCG5-026
+PMCG5,27,カスミのヒトデマン,generated,Pokemon,Common,False,Misty's Staryu,gym2,92,Water,Basic,40,,Lightning×2,,1,,Star Boomerang [水] 20,,,PMCG5-027
+PMCG5,28,カスミのコイキング,generated,Pokemon,Common,False,Misty's Magikarp,gym2,88,Water,Basic,30,,Lightning×2,,1,,Play Dead [無] / Leap [無] 10,,,PMCG5-028
+PMCG5,29,カスミのニョロゾ,generated,Pokemon,Uncommon,False,Misty's Poliwhirl,gym1,53,Water,Stage 1,70,Misty's Poliwag,Grass×2,,2,,Rapids [水無] 20 / Water Punch [無無無] 30+,,,PMCG5-029
+PMCG5,30,カスミのメノクラゲ,generated,Pokemon,Uncommon,False,Misty's Tentacool,gym1,57,Water,Basic,50,,Lightning×2,,1,,Crystal Beam [水無] 20,,,PMCG5-030
+PMCG5,31,カスミのジュゴン,generated,Pokemon,Uncommon,False,Misty's Dewgong,gym2,54,Water,Stage 1,80,Misty's Seel,Lightning×2,,2,,Ice Throw [水水] 20 / Take Down [水無無無] 60,,,PMCG5-031
+PMCG5,32,カスミのゴルダック,generated,Pokemon,Holo Rare,True,Misty's Golduck,gym2,12,Water,Stage 1,70,Misty's Psyduck,Grass×2,,1,,Electro Beam [水無] 40 / Super Removal [超無],,,PMCG5-032
+PMCG5,33,カスミのドククラゲ,generated,Pokemon,Holo Rare,True,Misty's Tentacruel,gym1,10,Water,Stage 1,70,Misty's Tentacool,Lightning×2,,0,Pokémon Power: Flee,Jellyfish Poison [水水無無] 30,,,PMCG5-033
+PMCG5,34,カスミのシードラ,generated,Pokemon,Holo Rare,True,Misty's Seadra,gym1,9,Water,Stage 1,70,Misty's Horsea,Lightning×2,,1,,Tail Snap [水] 20 / Knockout Needle [水水水] 30+,,,PMCG5-034
+PMCG5,35,カスミのギャラドス,generated,Pokemon,Holo Rare,True,Misty's Gyarados,gym2,13,Water,Stage 1,100,Misty's Magikarp,Grass×2,Fighting-30,3,Pokémon Power: Rebellion,Tidal Wave [水水水水] 70,,,PMCG5-035
+PMCG5,36,マチスのピカチュウ,generated,Pokemon,Common,False,Lt. Surge's Pikachu,gym2,84,Lightning,Basic,40,,Fighting×2,,0,,Quick Attack [無無] 10+,,,PMCG5-036
+PMCG5,37,マチスのコイル,generated,Pokemon,Common,False,Lt. Surge's Magnemite,gym1,80,Lightning,Basic,40,,Fighting×2,,1,,Thundershock [雷] 10 / Tackle [無無] 20,,,PMCG5-037
+PMCG5,38,マチスのビリリダマ,generated,Pokemon,Common,False,Lt. Surge's Voltorb,gym1,84,Lightning,Basic,40,,Fighting×2,,1,,Spin Ball [雷] 20× / Double Spin [雷無] 20×,,,PMCG5-038
+PMCG5,39,マチスのコイル,generated,Pokemon,Uncommon,False,Lt. Surge's Magnemite,gym1,50,Lightning,Basic,30,,Fighting×2,,0,,Removal Pulse [雷] 10 / Confusion Pulse [雷雷] 20,,,PMCG5-039
+PMCG5,40,マチスのレアコイル,generated,Pokemon,Holo Rare,True,Lt. Surge's Magneton,gym1,8,Lightning,Stage 1,70,Lt. Surge's Magnemite,Fighting×2,,2,Pokémon Power: Energy Charge,Mega Shock [雷雷雷無] 50,,,PMCG5-040
+PMCG5,41,マチスのエレブー,generated,Pokemon,Holo Rare,True,Lt. Surge's Electabuzz,gym1,6,Lightning,Basic,70,,Fighting×2,,2,,Charge [雷] / Discharge [雷] 30×,,,PMCG5-041
+PMCG5,42,マチスのサンダース,generated,Pokemon,Rare,False,Lt. Surge's Jolteon,gym2,28,Lightning,Stage 1,70,Lt. Surge's Eevee,Fighting×2,,1,,High Voltage [雷無] 20 / Thunder Flare [雷雷雷] 30+,,,PMCG5-042
+PMCG5,43,タケシのサンド,generated,Pokemon,Common,False,Brock's Sandshrew,gym1,72,Fighting,Basic,50,,Grass×2,Lightning-30,1,,Sand Pit [闘闘] 20,,,PMCG5-043
+PMCG5,44,タケシのディグダ,generated,Pokemon,Common,False,Brock's Diglett,gym2,67,Fighting,Basic,40,,Grass×2,Lightning-30,1,,Surprise Attack [闘] 20 / Tremor [闘無] 40,,,PMCG5-044
+PMCG5,45,タケシのマンキー,generated,Pokemon,Common,False,Brock's Mankey,gym1,68,Fighting,Basic,40,,Psychic×2,,0,,Fidget [無] / Karate Chop [闘無] 40-,,,PMCG5-045
+PMCG5,46,タケシのイシツブテ,generated,Pokemon,Common,False,Brock's Geodude,gym2,68,Fighting,Basic,50,,Grass×2,,1,,Rock Toss [闘] 10×,,,PMCG5-046
+PMCG5,47,タケシのイシツブテ,generated,Pokemon,Common,False,Brock's Geodude,gym1,66,Fighting,Basic,40,,Grass×2,,1,,Call for Friend [闘] / Hook Shot [闘無] 20,,,PMCG5-047
+PMCG5,48,タケシのイワーク,generated,Pokemon,Common,False,Brock's Onix,gym1,69,Fighting,Basic,100,,Grass×2,,3,,Bellow [無] / Rock Throw [闘闘無] 30,,,PMCG5-048
+PMCG5,49,タケシのサイホーン,generated,Pokemon,Common,False,Brock's Rhyhorn,gym1,70,Fighting,Basic,70,,Grass×2,Lightning-30,3,,Drill Tackle [闘無] 70,,,PMCG5-049
+PMCG5,50,タケシのサンドパン,generated,Pokemon,Uncommon,False,Brock's Sandslash,gym2,36,Fighting,Stage 1,70,Brock's Sandshrew,Grass×2,Lightning-30,1,,Swift [闘無] 20 / Needle Ball [闘闘] 30,,,PMCG5-050
+PMCG5,51,タケシのオコリザル,generated,Pokemon,Uncommon,False,Brock's Primeape,gym2,35,Fighting,Stage 1,70,Brock's Mankey,Psychic×2,,1,Pokémon Power: Scram,Mega Thrash [闘闘闘] 60,,,PMCG5-051
+PMCG5,52,タケシのゴローン,generated,Pokemon,Uncommon,False,Brock's Graveler,gym2,34,Fighting,Stage 1,70,Brock's Geodude,Grass×2,,2,,Tackle [無無] 20 / Detonate [闘闘闘] 50,,,PMCG5-052
+PMCG5,53,タケシのゴローニャ,generated,Pokemon,Rare,False,Brock's Golem,gym1,20,Fighting,Stage 2,90,Brock's Graveler,Grass×2,,4,,Rock Slide [闘闘無] 20 / Fissure [闘闘無無] 50,,,PMCG5-053
+PMCG5,54,ロケット団のエビワラー,generated,Pokemon,Holo Rare,True,Rocket's Hitmonchan,gym1,11,Fighting,Basic,60,,Psychic×2,,1,,Crosscounter [闘] / Magnum Punch [闘闘無] 50,,,PMCG5-054
+PMCG5,55,タケシのサイドン,generated,Pokemon,Holo Rare,True,Brock's Rhydon,gym1,2,Fighting,Stage 1,80,Brock's Rhyhorn,Grass×2,Lightning-30,3,Pokémon Power: Bench Guard,Lariat [闘闘無無] 70,,,PMCG5-055
+PMCG5,56,マチスのコラッタ,generated,Pokemon,Common,False,Lt. Surge's Rattata,gym2,85,Colorless,Basic,30,,Fighting×2,Psychic-30,0,,Focus Energy [無] / Quick Attack [無無] 10+,,,PMCG5-056
+PMCG5,57,マチスのオニスズメ,generated,Pokemon,Common,False,Lt. Surge's Spearow,gym1,83,Colorless,Basic,50,,Lightning×2,Fighting-30,0,,Whirlwind [無] 10 / Razor Wind [無無] 40,,,PMCG5-057
+PMCG5,58,エリカのプリン,generated,Pokemon,Common,False,Erika's Jigglypuff,gym2,69,Colorless,Basic,50,,Fighting×2,Psychic-30,1,,Group Therapy [無] / Pulled Punch [無無] 40-,,,PMCG5-058
+PMCG5,59,マチスのラッタ,generated,Pokemon,Uncommon,False,Lt. Surge's Raticate,gym2,53,Colorless,Stage 1,60,Lt. Surge's Rattata,Fighting×2,Psychic-30,1,,Focus Energy [無] / Double-edge [無無] 40,,,PMCG5-059
+PMCG5,60,エリカのピッピ,generated,Pokemon,Uncommon,False,Erika's Clefairy,gym2,40,Colorless,Basic,50,,Fighting×2,Psychic-30,1,,Lunar Power [無] / Moon Kick [無無] 20,,,PMCG5-060
+PMCG5,61,タケシのベロリンガ,generated,Pokemon,Uncommon,False,Brock's Lickitung,gym1,41,Colorless,Basic,80,,Fighting×2,Psychic-30,3,,Tongue Slap [無無] 20 / Slam [無無無] 30×,,,PMCG5-061
+PMCG5,62,マチスのイーブイ,generated,Pokemon,Uncommon,False,Lt. Surge's Eevee,gym2,51,Colorless,Basic,40,,Fighting×2,Psychic-30,1,,Surprise [無] / Scratch [無無] 20,,,PMCG5-062
+PMCG5,63,エリカのミニリュウ,generated,Pokemon,Uncommon,False,Erika's Dratini,gym1,42,Colorless,Basic,40,,,Psychic-30,1,Pokémon Power: Strange Barrier,Tail Strike [無無] 10+,,,PMCG5-063
+PMCG5,64,マチスのオニドリル,generated,Pokemon,Holo Rare,True,Lt. Surge's Fearow,gym1,7,Colorless,Stage 1,70,Lt. Surge's Spearow,Lightning×2,Fighting-30,0,,Repeating Drill [無無] 10× / Clutch [無無無] 30,,,PMCG5-064
+PMCG5,65,エリカのピクシー,generated,Pokemon,Holo Rare,True,Erika's Clefable,gym1,3,Colorless,Stage 1,70,Erika's Clefairy,Fighting×2,Psychic-30,2,,Fairy Power [無] / Moon Impact [無無無] 30,,,PMCG5-065
+PMCG5,66,エリカのハクリュー,generated,Pokemon,Holo Rare,True,Erika's Dragonair,gym1,4,Colorless,Stage 1,80,Erika's Dratini,,Psychic-30,2,,Blizzard [無無無] 30 / Take Away [無無無無],,,PMCG5-066
+PMCG5,67,エネルギーサーキュレート,未確認,Trainer,Common,False,Energy Flow,gym1,122,,,,,,,,,,,,PMCG5-067
+PMCG5,68,カスミの勝負,未確認,Trainer,Common,False,Misty's Duel,gym1,123,,,,,,,,,,,,PMCG5-068
+PMCG5,69,カスミのなみだ,未確認,Trainer,Common,False,Misty's Tears,gym2,118,,,,,,,,,,,,PMCG5-069
+PMCG5,70,せまいジム,未確認,Trainer,Common,False,Narrow Gym,gym1,124,,,,,,,,,,,,PMCG5-070
+PMCG5,71,思い出させる,未確認,Trainer,Uncommon,False,Recall,gym1,116,,,,,,,,,,,,PMCG5-071
+PMCG5,72,エリカのお付き,未確認,Trainer,Uncommon,False,Erika's Maids,gym1,109,,,,,,,,,,,,PMCG5-072
+PMCG5,73,エリカの香水,未確認,Trainer,Uncommon,False,Erika's Perfume,gym1,110,,,,,,,,,,,,PMCG5-073
+PMCG5,74,お上品攻撃,未確認,Trainer,Rare,False,Charity,gym1,99,,,,,,,,,,,,PMCG5-074
+PMCG5,75,カスミのいかり,未確認,Trainer,Uncommon,False,Misty's Wrath,gym1,114,,,,,,,,,,,,PMCG5-075
+PMCG5,76,クチバシティジム,未確認,Trainer,Uncommon,False,Vermilion City Gym,gym1,120,,,,,,,,,,,,PMCG5-076
+PMCG5,77,タケシの育て方,未確認,Trainer,Uncommon,False,Brock's Training Method,gym1,106,,,,,,,,,,,,PMCG5-077
+PMCG5,78,タマムシシティジム,未確認,Trainer,Uncommon,False,Celadon City Gym,gym1,107,,,,,,,,,,,,PMCG5-078
+PMCG5,79,ニビシティジム,未確認,Trainer,Uncommon,False,Pewter City Gym,gym1,115,,,,,,,,,,,,PMCG5-079
+PMCG5,80,ハナダシティジム,未確認,Trainer,Uncommon,False,Cerulean City Gym,gym1,108,,,,,,,,,,,,PMCG5-080
+PMCG5,81,マチスの交渉,未確認,Trainer,Uncommon,False,Lt. Surge's Treaty,gym1,112,,,,,,,,,,,,PMCG5-081
+PMCG5,82,礼儀作法,未確認,Trainer,Uncommon,False,Good Manners,gym1,111,,,,,,,,,,,,PMCG5-082
+PMCG5,83,エリカ,未確認,Trainer,Rare,False,Erika,gym1,16 100,,,,,,,,,,,,PMCG5-083
+PMCG5,84,エリカの親切,未確認,Trainer,Rare,False,Erika's Kindness,gym2,103,,,,,,,,,,,,PMCG5-084
+PMCG5,85,カスミ,未確認,Trainer,Rare,False,Misty,gym1,18 102,,,,,,,,,,,,PMCG5-085
+PMCG5,86,カスミのわがまま,未確認,Trainer,Rare,False,Misty's Wish,gym2,108,,,,,,,,,,,,PMCG5-086
+PMCG5,87,錯乱ジム,未確認,Trainer,Rare,False,Chaos Gym,gym2,102,,,,,,,,,,,,PMCG5-087
+PMCG5,88,スパイ作戦,未確認,Trainer,Uncommon,False,Secret Mission,gym1,118,,,,,,,,,,,,PMCG5-088
+PMCG5,89,タケシ,未確認,Trainer,Rare,False,Brock,gym1,15 98,,,,,,,,,,,,PMCG5-089
+PMCG5,90,タケシの保護,未確認,Trainer,Rare,False,Brock's Protection,gym2,101,,,,,,,,,,,,PMCG5-090
+PMCG5,91,抵抗力低下ジム,未確認,Trainer,Rare,False,Resistance Gym,gym2,109,,,,,,,,,,,,PMCG5-091
+PMCG5,92,マチス,未確認,Trainer,Rare,False,Lt. Surge,gym1,17 101,,,,,,,,,,,,PMCG5-092
+PMCG5,93,マチスの秘策,未確認,Trainer,Rare,False,Lt. Surge's Secret Plan,gym2,107,,,,,,,,,,,,PMCG5-093
+PMCG5,94,リムーブ禁止ジム,未確認,Trainer,Rare,False,No Removal Gym,gym1,103,,,,,,,,,,,,PMCG5-094
+PMCG5,95,ロケット団の特訓ジム,未確認,Trainer,Rare,False,The Rocket's Training Gym,gym1,104,,,,,,,,,,,,PMCG5-095
+PMCG5,96,ロケット団のワナ,未確認,Trainer,Holo Rare,True,The Rocket's Trap,gym1,19,,,,,,,,,,,,PMCG5-096
+PMCG6,1,キョウのビードル,generated,Pokemon,Common,False,Koga's Weedle,gym2,82,Grass,Basic,40,,Fire×2,,1,,Sting [無] 10 / Sharp Stinger [草無] 10,,,PMCG6-001
+PMCG6,2,キョウのアーボ,generated,Pokemon,Common,False,Koga's Ekans,gym2,77,Grass,Basic,50,,Psychic×2,,1,,Fast-Acting Poison [草] 10,,,PMCG6-002
+PMCG6,3,サカキのニドラン♀,generated,Pokemon,Common,False,Giovanni's Nidoran ♀,gym2,75,Grass,Basic,50,,Psychic×2,,1,,Horn Thrust [草] 20 / Double-edge [無無] 30,,,PMCG6-003
+PMCG6,4,サカキのニドラン♂,generated,Pokemon,Common,False,Giovanni's Nidoran ♂,gym2,76,Grass,Basic,40,,Psychic×2,,1,,Double Kick [無] 10× / Retaliation [草] 30,,,PMCG6-004
+PMCG6,5,キョウのズバット,generated,Pokemon,Common,False,Koga's Zubat,gym2,83,Grass,Basic,40,,Psychic×2,Fighting-30,0,,Group Attack [草無] 10×,,,PMCG6-005
+PMCG6,6,ナツメのコンパン,generated,Pokemon,Common,False,Sabrina's Venonat,gym1,96,Grass,Basic,40,,Fire×2,,1,,Poison Antennae [草] / Removal Beam [超無] 20,,,PMCG6-006
+PMCG6,7,キョウのベトベター,generated,Pokemon,Common,False,Koga's Grimer,gym2,78,Grass,Basic,50,,Psychic×2,,1,,Sludge Grip [草] / Sludge Toss [草無] 20,,,PMCG6-007
+PMCG6,8,キョウのドガース,generated,Pokemon,Common,False,Koga's Koffing,gym2,79,Grass,Basic,40,,Psychic×2,,1,,Smelly Gas [草] 10,,,PMCG6-008
+PMCG6,9,キョウのモンジャラ,generated,Pokemon,Common,False,Koga's Tangela,gym2,81,Grass,Basic,50,,Fire×2,,2,,Sleep Powder [草] 10 / Grasping Vine [草無],,,PMCG6-009
+PMCG6,10,エリカのフシギソウ,generated,Pokemon,Uncommon,False,Erika's Ivysaur,gym2,41,Grass,Stage 1,60,Erika's Bulbasaur,Fire×2,,2,Pokémon Power: Relaxing Scent,Double Razor Leaf [草草草] 40×,,,PMCG6-010
+PMCG6,11,キョウのコクーン,generated,Pokemon,Uncommon,False,Koga's Kakuna,gym2,47,Grass,Stage 1,60,Koga's Weedle,Fire×2,,2,Pokémon Power: Emerge,Toxic Secretion [草],,,PMCG6-011
+PMCG6,12,サカキのニドリーナ,generated,Pokemon,Uncommon,False,Giovanni's Nidorina,gym2,44,Grass,Stage 1,80,Giovanni's Nidoran ♀,Psychic×2,,2,,Poison Sting Tackle [草無] 30 / Body Slam [草無無] 20,,,PMCG6-012
+PMCG6,13,サカキのニドリーノ,generated,Pokemon,Uncommon,False,Giovanni's Nidorino,gym2,45,Grass,Stage 1,70,Giovanni's Nidoran ♂,Psychic×2,,2,,Rend [草無無] 20+,,,PMCG6-013
+PMCG6,14,キョウのゴルバット,generated,Pokemon,Uncommon,False,Koga's Golbat,gym2,46,Grass,Stage 1,60,Koga's Zubat,Psychic×2,Fighting-30,0,,Bite [無無] 20 / Sonic Scream [草草草] 30,,,PMCG6-014
+PMCG6,15,キョウのドガース,generated,Pokemon,Uncommon,False,Koga's Koffing,gym2,48,Grass,Basic,50,,Psychic×2,,1,,Smokescreen [草] 10 / Obscuring Gas [草無] 30,,,PMCG6-015
+PMCG6,16,キョウのマタドガス,generated,Pokemon,Uncommon,False,Koga's Weezing,gym2,50,Grass,Stage 1,70,Koga's Koffing,Psychic×2,,2,,Spontaneous Explosion [草草] 10+ / Toxic Cloud [草草無] 20,,,PMCG6-016
+PMCG6,17,エリカのフシギバナ,generated,Pokemon,Holo Rare,True,Erika's Venusaur,gym2,4,Grass,Stage 2,90,Erika's Ivysaur,Fire×2,,2,,Growth [草] / Wide Solarbeam [草草草草] 20,,,PMCG6-017
+PMCG6,18,キョウのスピアー,generated,Pokemon,Holo Rare,True,Koga's Beedrill,gym2,9,Grass,Stage 2,80,Koga's Kakuna,Fire×2,Fighting-30,0,,Nerve Poison [草草] 20 / Hyper Needle [無無無] 70,,,PMCG6-018
+PMCG6,19,キョウのアーボック,generated,Pokemon,Rare,False,Koga's Arbok,gym2,25,Grass,Stage 1,90,Koga's Ekans,Psychic×2,,2,,Poison Buildup [草] / Poison Power [草草] 20,,,PMCG6-019
+PMCG6,20,サカキのニドクイン,generated,Pokemon,Rare,False,Giovanni's Nidoqueen,gym2,23,Grass,Stage 2,100,Giovanni's Nidorina,Psychic×2,,3,,Mega Kick [草草無] 40 / Love Lariat [草草無無] 50+,,,PMCG6-020
+PMCG6,21,サカキのニドキング,generated,Pokemon,Holo Rare,True,Giovanni's Nidoking,gym2,7,Grass,Stage 2,120,Giovanni's Nidorino,Psychic×2,,3,,Intimidate [草] / Tumbling Attack [草草草無] 40+,,,PMCG6-021
+PMCG6,22,ナツメのモルフォン,generated,Pokemon,Rare,False,Sabrina's Venomoth,gym1,34,Grass,Stage 1,60,Sabrina's Venonat,Fire×2,Fighting-30,0,,Healing Pollen [草] / Sonic Distortion [超] 10,,,PMCG6-022
+PMCG6,23,キョウのベトベトン,generated,Pokemon,Rare,False,Koga's Muk,gym2,26,Grass,Stage 1,80,Koga's Grimer,Psychic×2,,3,Pokémon Power: Energy Drain,Sludge Whirlpool [草草無] 40,,,PMCG6-023
+PMCG6,24,サカキのカイロス,generated,Pokemon,Rare,False,Giovanni's Pinsir,gym2,24,Grass,Basic,70,,Fire×2,,2,,Snapping Pincers [草無] 10+ / Overhead Toss [草無無] 40,,,PMCG6-024
+PMCG6,25,カツラのヒトカゲ,generated,Pokemon,Common,False,Blaine's Charmander,gym1,61,Fire,Basic,50,,Water×2,,1,,Kindle [炎] 10 / Slash [無無] 20,,,PMCG6-025
+PMCG6,26,カツラのロコン,generated,Pokemon,Common,False,Blaine's Vulpix,gym1,65,Fire,Basic,40,,Water×2,,1,Pokémon Power: Natural Healing,Tail Fan [炎無無] 20,,,PMCG6-026
+PMCG6,27,カツラのガーディ,generated,Pokemon,Common,False,Blaine's Growlithe,gym1,62,Fire,Basic,50,,Water×2,,1,,Blaze [炎炎] 20,,,PMCG6-027
+PMCG6,28,カツラのポニータ,generated,Pokemon,Common,False,Blaine's Ponyta,gym2,64,Fire,Basic,50,,Water×2,,1,,Hind Kick [無無] 20,,,PMCG6-028
+PMCG6,29,カツラのリザード,generated,Pokemon,Uncommon,False,Blaine's Charmeleon,gym2,31,Fire,Stage 1,70,Blaine's Charmander,Water×2,,2,,Fire Claws [炎炎] 30 / Bonfire [炎炎炎],,,PMCG6-029
+PMCG6,30,カツラのギャロップ,generated,Pokemon,Uncommon,False,Blaine's Rapidash,gym2,33,Fire,Stage 1,70,Blaine's Ponyta,Water×2,,0,,Fire Mane [炎] 20 / Stamp [炎無無] 30+,,,PMCG6-030
+PMCG6,31,カツラのブーバー,generated,Pokemon,Uncommon,False,Blaine's Magmar,gym1,37,Fire,Basic,60,,Water×2,,2,,Firebreathing [炎] 10+ / Lava Burst [炎炎炎] 20×,,,PMCG6-031
+PMCG6,32,カツラのリザードン,generated,Pokemon,Holo Rare,True,Blaine's Charizard,gym2,2,Fire,Stage 2,100,Blaine's Charmeleon,Water×2,Fighting-30,3,,Roaring Flames [炎] 20+ / Flame Jet [炎炎],,,PMCG6-032
+PMCG6,33,カツラのキュウコン,generated,Pokemon,Rare,False,Blaine's Ninetales,gym2,21,Fire,Stage 1,60,Blaine's Vulpix,Water×2,,2,Pokémon Power: Healing Fire,Burn Up [炎炎] 50,,,PMCG6-033
+PMCG6,34,カツラのウインディ,generated,Pokemon,Holo Rare,True,Blaine's Arcanine,gym2,1,Fire,Stage 1,90,Blaine's Growlithe,Water×2,,3,,Heat Tackle [炎無無] 40 / Firestorm [炎炎炎炎] 120,,,PMCG6-034
+PMCG6,35,カツラのファイヤー,generated,Pokemon,Holo Rare,True,Blaine's Moltres,gym1,1,Fire,Basic,90,,,Fighting-30,3,,Phoenix Flame [炎炎炎炎炎] 90,,,PMCG6-035
+PMCG6,36,ナツメのコダック,generated,Pokemon,Common,False,Sabrina's Psyduck,gym2,99,Water,Basic,50,,Lightning×2,,1,,Scratch [無] 10 / Random ESP [超] 20,,,PMCG6-036
+PMCG6,37,サカキのコイキング,generated,Pokemon,Common,False,Giovanni's Magikarp,gym2,73,Water,Basic,30,,Lightning×2,,1,,Ancestral Memory [水] 40 / Flail Around [水無] 10×,,,PMCG6-037
+PMCG6,38,ナツメのゴルダック,generated,Pokemon,Rare,False,Sabrina's Golduck,gym2,30,Water,Stage 1,70,Sabrina's Psyduck,Lightning×2,,2,,Damage Shift [超超] / Water Spray [水無無] 20+,,,PMCG6-038
+PMCG6,39,カスミのニョロボン,generated,Pokemon,Rare,False,Misty's Poliwrath,gym1,31,Water,Stage 2,90,Misty's Poliwhirl,Grass×2,,3,,Water Ring [水水無無] 30,,,PMCG6-039
+PMCG6,40,サカキのギャラドス,generated,Pokemon,Holo Rare,True,Giovanni's Gyarados,gym2,5,Water,Stage 1,90,Giovanni's Magikarp,Grass×2,Fighting-30,3,,Summon Storm [水] / Dragon Tornado [水水無無] 40,,,PMCG6-040
+PMCG6,41,マチスのライチュウ,generated,Pokemon,Holo Rare,True,Lt. Surge's Raichu,gym2,11,Lightning,Stage 1,80,Lt. Surge's Pikachu,Fighting×2,,2,,Kerzap [雷雷] 20+ / Thundertackle [雷雷無無] 40,,,PMCG6-041
+PMCG6,42,ロケット団のサンダー,generated,Pokemon,Holo Rare,True,Rocket's Zapdos,gym2,15,Lightning,Basic,70,,,Fighting-30,2,,Plasma [雷] 20 / Electroburn [雷雷雷無] 70,,,PMCG6-042
+PMCG6,43,ナツメのケーシィ,generated,Pokemon,Common,False,Sabrina's Abra,gym1,91,Psychic,Basic,40,,Psychic×2,,0,,Energy Loop [超] 20,,,PMCG6-043
+PMCG6,44,ナツメのヤドン,generated,Pokemon,Common,False,Sabrina's Slowpoke,gym1,95,Psychic,Basic,50,,Psychic×2,,1,,Lazy Attack [超無] 30,,,PMCG6-044
+PMCG6,45,ナツメのスリープ,generated,Pokemon,Common,False,Sabrina's Drowzee,gym1,92,Psychic,Basic,50,,Psychic×2,,1,,Suggestion [超] / Headbutt [無無] 20,,,PMCG6-045
+PMCG6,46,ナツメのバリヤード,generated,Pokemon,Common,False,Sabrina's Mr. Mime,gym1,94,Psychic,Basic,50,,Psychic×2,,1,,Sleight of Hand [無] / Slap [超無] 20,,,PMCG6-046
+PMCG6,47,ナツメのユンゲラー,generated,Pokemon,Uncommon,False,Sabrina's Kadabra,gym2,58,Psychic,Stage 1,70,Sabrina's Abra,Psychic×2,,1,,Life Drain [超] / Psyshot [超無無] 30,,,PMCG6-047
+PMCG6,48,ナツメのヤドラン,generated,Pokemon,Uncommon,False,Sabrina's Slowbro,gym1,60,Psychic,Stage 1,70,Sabrina's Slowpoke,Psychic×2,,2,,Naptime [超] / Screaming Headbutt [超無無] 40,,,PMCG6-048
+PMCG6,49,ナツメのゴース,generated,Pokemon,Uncommon,False,Sabrina's Gastly,gym2,97,Psychic,Basic,40,,,Fighting-30,1,Pokémon Power: Gaseous Form,Suffocating Gas [超超] 30,,,PMCG6-049
+PMCG6,50,ナツメのゴースト,generated,Pokemon,Uncommon,False,Sabrina's Haunter,gym1,58,Psychic,Stage 1,50,Sabrina's Gastly,,Fighting-30,0,,Night Spirits [超超] 30×,,,PMCG6-050
+PMCG6,51,ナツメのスリーパー,generated,Pokemon,Uncommon,False,Sabrina's Hypno,gym2,56,Psychic,Stage 1,70,Sabrina's Drowzee,Psychic×2,,2,,Invigorate [超] / Pendulum Curse [超超] 20×,,,PMCG6-051
+PMCG6,52,ナツメのルージュラ,generated,Pokemon,Uncommon,False,Sabrina's Jynx,gym2,57,Psychic,Basic,60,,Psychic×2,,1,,Helping Hand [超] / Hug [超無] 20,,,PMCG6-052
+PMCG6,53,ナツメのフーディン,generated,Pokemon,Holo Rare,True,Sabrina's Alakazam,gym2,16,Psychic,Stage 2,80,Sabrina's Kadabra,Psychic×2,,3,Pokémon Power: Psylink,Mega Burn [超無無無] 60,,,PMCG6-053
+PMCG6,54,ナツメのゲンガー,generated,Pokemon,Holo Rare,True,Sabrina's Gengar,gym1,14,Psychic,Stage 2,80,Sabrina's Haunter,,Fighting-30,1,,Pain Amplifier [超] / Call of the Night [超超超] 40,,,PMCG6-054
+PMCG6,55,ロケット団のミュウツー,generated,Pokemon,Holo Rare,True,Rocket's Mewtwo,gym2,14,Psychic,Basic,70,,Psychic×2,,2,,Juxtapose [超] / Hypnoblast [超超] 20 / Psyburn [超超超無] 60,,,PMCG6-055
+PMCG6,56,カツラのマンキー,generated,Pokemon,Common,False,Blaine's Mankey,gym2,63,Fighting,Basic,40,,Psychic×2,,0,,Pranks [無] / Fury Swipes [闘] 10×,,,PMCG6-056
+PMCG6,57,サカキのワンリキー,generated,Pokemon,Common,False,Giovanni's Machop,gym2,72,Fighting,Basic,50,,Psychic×2,,1,,Chop [無] 10 / Fury Punch [闘闘] 20×,,,PMCG6-057
+PMCG6,58,カツラのサイホーン,generated,Pokemon,Common,False,Blaine's Rhyhorn,gym2,65,Fighting,Basic,60,,Grass×2,Lightning-30,2,,Horn Charge [闘] 30 / Overrun [無無無] 20,,,PMCG6-058
+PMCG6,59,サカキのゴーリキー,generated,Pokemon,Uncommon,False,Giovanni's Machoke,gym2,42,Fighting,Stage 1,80,Giovanni's Machop,Psychic×2,,2,,Risky Attack [闘] 60 / Headlock [闘闘無] 20+,,,PMCG6-059
+PMCG6,60,タケシのダグトリオ,generated,Pokemon,Rare,False,Brock's Dugtrio,gym2,22,Fighting,Stage 1,60,Brock's Diglett,Grass×2,Lightning-30,1,,Lie Low [闘] / Earthdrill [闘闘無] 60,,,PMCG6-060
+PMCG6,61,サカキのカイリキー,generated,Pokemon,Holo Rare,True,Giovanni's Machamp,gym2,6,Fighting,Stage 2,100,Giovanni's Machoke,Psychic×2,,3,Pokémon Power: Fortitude,Hurricane Punch [闘闘闘無] 30×,,,PMCG6-061
+PMCG6,62,キョウのポッポ,generated,Pokemon,Common,False,Koga's Pidgey,gym2,80,Colorless,Basic,50,,Lightning×2,Fighting-30,1,,Peck [無] 10 / Sand-attack [無無無] 20,,,PMCG6-062
+PMCG6,63,サカキのニャース,generated,Pokemon,Common,False,Giovanni's Meowth,gym2,74,Colorless,Basic,50,,Fighting×2,Psychic-30,2,,Cat Fleas [無] / Cat Kick [無無無] 30,,,PMCG6-063
+PMCG6,64,カツラのドードー,generated,Pokemon,Common,False,Blaine's Doduo,gym2,61,Colorless,Basic,50,,Lightning×2,Fighting-30,0,,Wild Kick [無] 20 / Retaliate [無無] 10×,,,PMCG6-064
+PMCG6,65,カツラのケンタロス,generated,Pokemon,Common,False,Blaine's Tauros,gym1,64,Colorless,Basic,70,,Fighting×2,Psychic-30,2,,3-Pronged Tail [無] 10× / Full Speed Charge [無無無] 20×,,,PMCG6-065
+PMCG6,66,ナツメのポリゴン,generated,Pokemon,Common,False,Sabrina's Porygon,gym2,98,Colorless,Basic,40,,Fighting×2,Psychic-30,1,,Sharp Point [無] 10 / Barrier Attack [無無] 20,,,PMCG6-066
+PMCG6,67,キョウのポッポ,generated,Pokemon,Uncommon,False,Koga's Pidgey,gym2,49,Colorless,Basic,40,,Lightning×2,Fighting-30,1,,Messenger [無] / Wing Attack [無無] 20,,,PMCG6-067
+PMCG6,68,サカキのニャース,generated,Pokemon,Uncommon,False,Giovanni's Meowth,gym2,43,Colorless,Basic,40,,Fighting×2,Psychic-30,1,,False Charity [無] / Double Scratch [無無] 20×,,,PMCG6-068
+PMCG6,69,カツラのガルーラ,generated,Pokemon,Uncommon,False,Blaine's Kangaskhan,gym1,36,Colorless,Basic,80,,Fighting×2,Psychic-30,3,,Child's Punch [無] 10 / One-Two Punch [無無無] 30+,,,PMCG6-069
+PMCG6,70,キョウのピジョン,generated,Pokemon,Rare,False,Koga's Pidgeotto,gym2,27,Colorless,Stage 1,60,Koga's Pidgey,Lightning×2,Fighting-30,0,,Quick Turn [無無無] 30× / Aerial Maneuvers [無無無無] 10+,,,PMCG6-070
+PMCG6,71,サカキのペルシアン,generated,Pokemon,Holo Rare,True,Giovanni's Persian,gym2,8,Colorless,Stage 1,60,Giovanni's Meowth,Fighting×2,Psychic-30,0,Pokémon Power: Call the Boss,Ambush [無無無] 20+,,,PMCG6-071
+PMCG6,72,キョウのメタモン,generated,Pokemon,Holo Rare,True,Koga's Ditto,gym2,10,Colorless,Basic,40,,Fighting×2,Psychic-30,1,,Giant Growth [無] / Pound [無] 10,,,PMCG6-072
+PMCG6,73,ロケット団のカビゴン,generated,Pokemon,Rare,False,Rocket's Snorlax,gym1,33,Colorless,Basic,90,,Fighting×2,Psychic-30,4,Pokémon Power: Restless Sleep,Collapse [無無無] 20,,,PMCG6-073
+PMCG6,74,イマクニ？のドードー,curated,Pokemon,Hyper rare,False,,,,Colorless,Basic,50,,,,,,,,日本のみのカード。TCGdex では本弾に含めて掲載（収録形態は要確認）,PMCG6-074
+PMCG6,75,_____のチャンシー,curated,Pokemon,Ultra Rare,False,,,,Colorless,Basic,90,,,,1,,,,日本のみのカード。TCGdex では本弾に含めて掲載（収録形態は要確認）,PMCG6-075
+PMCG6,76,カツラのギャンブル,未確認,Trainer,Common,False,Blaine's Gamble,gym1,121,,,,,,,,,,,,PMCG6-076
+PMCG6,77,トラッシュ交換,未確認,Trainer,Common,False,Trash Exchange,gym1,126,,,,,,,,,,,,PMCG6-077
+PMCG6,78,ナツメの眼,未確認,Trainer,Common,False,Sabrina's Gaze,gym1,125,,,,,,,,,,,,PMCG6-078
+PMCG6,79,見えない壁,未確認,Trainer,Common,False,Transparent Walls,gym2,125,,,,,,,,,,,,PMCG6-079
+PMCG6,80,ワープポイント,未確認,Trainer,Common,False,Warp Point,gym2,126,,,,,,,,,,,,PMCG6-080
+PMCG6,81,カツラの奥の手,未確認,Trainer,Uncommon,False,Blaine's Last Resort,gym1,105,,,,,,,,,,,,PMCG6-081
+PMCG6,82,カツラのクイズ その3,未確認,Trainer,Uncommon,False,Blaine's Quiz #3,gym2,112,,,,,,,,,,,,PMCG6-082
+PMCG6,83,キョウ秘伝 変わり身の術,未確認,Trainer,Uncommon,False,Koga's Ninja Trick,gym2,115,,,,,,,,,,,,PMCG6-083
+PMCG6,84,くすぐりマシーン,未確認,Trainer,Uncommon,False,Tickling Machine,gym1,119,,,,,,,,,,,,PMCG6-084
+PMCG6,85,グレンタウンジム,未確認,Trainer,Uncommon,False,Cinnabar City Gym,gym2,113,,,,,,,,,,,,PMCG6-085
+PMCG6,86,セキチクシティジム,未確認,Trainer,Uncommon,False,Fuchsia City Gym,gym2,114,,,,,,,,,,,,PMCG6-086
+PMCG6,87,ナツメのESP,未確認,Trainer,Uncommon,False,Sabrina's ESP,gym1,117,,,,,,,,,,,,PMCG6-087
+PMCG6,88,ナツメのサイキックコントロール,未確認,Trainer,Uncommon,False,Sabrina's Psychic Control,gym2,121,,,,,,,,,,,,PMCG6-088
+PMCG6,89,ロケット団員,未確認,Trainer,Uncommon,False,Minion of Team Rocket,gym1,113,,,,,,,,,,,,PMCG6-089
+PMCG6,90,ヤマブキシティジム,未確認,Trainer,Uncommon,False,Saffron City Gym,gym2,122,,,,,,,,,,,,PMCG6-090
+PMCG6,91,ロケット団の実験,未確認,Trainer,Uncommon,False,Rocket's Secret Experiment,gym2,120,,,,,,,,,,,,PMCG6-091
+PMCG6,92,ロケット団の爆発ジム,未確認,Trainer,Uncommon,False,Rocket's Minefield Gym,gym2,119,,,,,,,,,,,,PMCG6-092
+PMCG6,93,カツラ,未確認,Trainer,Rare,False,Blaine,gym2,17 100,,,,,,,,,,,,PMCG6-093
+PMCG6,94,キョウ,未確認,Trainer,Rare,False,Koga,gym2,19 106,,,,,,,,,,,,PMCG6-094
+PMCG6,95,サカキ,未確認,Trainer,Holo Rare,True,Giovanni,gym2,18 104,,,,,,,,,,,,PMCG6-095
+PMCG6,96,サカキの切り札,未確認,Trainer,Rare,False,Giovanni's Last Resort,gym2,105,,,,,,,,,,,,PMCG6-096
+PMCG6,97,トキワシティジム,未確認,Trainer,Rare,False,Viridian City Gym,gym2,123,,,,,,,,,,,,PMCG6-097
+PMCG6,98,ナツメ,未確認,Trainer,Rare,False,Sabrina,gym2,20 110,,,,,,,,,,,,PMCG6-098
+neo1,1,ナゾノクサ,generated,Pokemon,Common,False,Oddish,neo1,68,Grass,Basic,40,,Fire×2,,1,,Hide [無] / Absorb [草草] 20,,,neo1-001
+neo1,2,チコリータ,generated,Pokemon,Common,False,Chikorita,neo1,53,Grass,Basic,40,,Fire×2,,1,,Tackle [無] 10 / Deflector [草],,,neo1-002
+neo1,3,レディバ,generated,Pokemon,Common,False,Ledyba,neo1,63,Grass,Basic,40,,Fire×2,Fighting-30,0,,Supersonic [草] / Comet Punch [草草],,,neo1-003
+neo1,4,イトマル,generated,Pokemon,Common,False,Spinarak,neo1,75,Grass,Basic,40,,Fire×2,,1,,Scary Face [無] / String Shot [草] 10,,,neo1-004
+neo1,5,ハネッコ,generated,Pokemon,Common,False,Hoppip,neo1,61,Grass,Basic,50,,Fire×2,Fighting-30,0,,Hop [無] 10 / Sprout [草],,,neo1-005
+neo1,6,ヒマナッツ,generated,Pokemon,Common,False,Sunkern,neo1,78,Grass,Basic,40,,Fire×2,,2,,Growth [草] / Mega Drain [草草草] 30,,,neo1-006
+neo1,7,ツボツボ,generated,Pokemon,Common,False,Shuckle,neo1,72,Grass,Basic,50,,Fire×2,,1,,Withdraw [草] / Wrap [草草] 20,,,neo1-007
+neo1,8,クサイハナ,generated,Pokemon,Uncommon,False,Gloom,neo1,36,Grass,Stage 1,60,Oddish,Fire×2,,1,,Strange Powder [草無] 20 / Sticky Nectar [草草無] 20+,,,neo1-008
+neo1,9,ベイリーフ,generated,Pokemon,Uncommon,False,Bayleef,neo1,29,Grass,Stage 1,80,Chikorita,Fire×2,,2,,Sweet Scent [草] / Double Razor Leaf [草草草] 40×,,,neo1-009
+neo1,10,レディアン,generated,Pokemon,Uncommon,False,Ledian,neo1,39,Grass,Stage 1,60,Ledyba,Fire×2,Fighting-30,0,,Baton Pass [草草] 30,,,neo1-010
+neo1,11,アリアドス,generated,Pokemon,Uncommon,False,Ariados,neo1,27,Grass,Stage 1,60,Spinarak,Fire×2,,1,,Spider Web [草] / Poison Bite [草草草] 20,,,neo1-011
+neo1,12,ポポッコ,generated,Pokemon,Uncommon,False,Skiploom,neo1,49,Grass,Stage 1,60,Hoppip,Fire×2,Fighting-30,0,,Poisonpowder [草] 10 / Stun Spore [草] 10,,,neo1-012
+neo1,13,キマワリ,generated,Pokemon,Uncommon,False,Sunflora,neo1,50,Grass,Stage 1,70,Sunkern,Fire×2,,1,,Petal Dance [草草草] 30×,,,neo1-013
+neo1,14,メガニウム,generated,Pokemon,Holo Rare,True,Meganium,neo1,11,Grass,Stage 2,100,Bayleef,Fire×2,,3,Pokémon Power: Wild Growth,Soothing Scent [草草草草] 40,,,neo1-014
+neo1,15,キレイハナ,generated,Pokemon,Holo Rare,True,Bellossom,neo1,3,Grass,Stage 2,70,Gloom,Fire×2,,2,,Sweet Nectar [草] / Flower Dance [草草無] 30×,,,neo1-015
+neo1,16,ワタッコ,generated,Pokemon,Holo Rare,True,Jumpluff,neo1,7,Grass,Stage 2,70,Skiploom,Fire×2,Fighting-30,0,,Sleep Powder [草] 20 / Leech Seed [草] 20,,,neo1-016
+neo1,17,ヘラクロス,generated,Pokemon,Holo Rare,True,Heracross,neo1,6,Grass,Basic,60,,Fire×2,,2,Pokémon Power: Final Blow,Megahorn [草草草] 60,,,neo1-017
+neo1,18,ヒノアラシ,generated,Pokemon,Common,False,Cyndaquil,neo1,57,Fire,Basic,50,,Water×2,,1,,Fireworks [炎] 20 / Quick Attack [無無] 10+,,,neo1-018
+neo1,19,ブーバー,generated,Pokemon,Uncommon,False,Magmar,neo1,40,Fire,Basic,70,,Water×2,,2,,Tail Slap [無無] 20 / Magma Punch [炎炎無] 40,,,neo1-019
+neo1,20,マグマラシ,generated,Pokemon,Uncommon,False,Quilava,neo1,47,Fire,Stage 1,70,Cyndaquil,Water×2,,1,,Smokescreen [炎炎] 20 / Char [炎炎炎] 30,,,neo1-020
+neo1,21,バクフーン,generated,Pokemon,Holo Rare,True,Typhlosion,neo1,17 18,Fire,Stage 2,100,Quilava,Water×2,,2,Pokémon Power: Fire Recharge,Flame Burst [炎炎炎炎] 60+,,,neo1-021
+neo1,22,ブビィ,generated,Pokemon,Rare,False,Magby,neo1,23,Fire,Baby,30,,,,0,,Sputter [無] 10,,,neo1-022
+neo1,23,タッツー,generated,Pokemon,Common,False,Horsea,neo1,62,Water,Basic,50,,Lightning×2,,0,,Fin Slap [水水] 20+,,,neo1-023
+neo1,24,ワニノコ,generated,Pokemon,Common,False,Totodile,neo1,81,Water,Basic,50,,Grass×2,,1,,Leer [無] / Fury Swipes [水] 10×,,,neo1-024
+neo1,25,マリル,generated,Pokemon,Common,False,Marill,neo1,66,Water,Basic,40,,Lightning×2,,1,,Defense Curl [無] / Bubble Bomb [水水] 30,,,neo1-025
+neo1,26,ウパー,generated,Pokemon,Common,False,Wooper,neo1,82,Water,Basic,50,,Grass×2,Lightning-30,1,,Amnesia [水] / Slam [無無] 20×,,,neo1-026
+neo1,27,ウリムー,generated,Pokemon,Common,False,Swinub,neo1,79,Water,Basic,40,,Grass×2,Lightning-30,1,,Powder Snow [水] 10,,,neo1-027
+neo1,28,マンタイン,generated,Pokemon,Common,False,Mantine,neo1,64,Water,Basic,60,,Lightning×2,Fighting-30,1,,Undulate [水水] 20,,,neo1-028
+neo1,29,シードラ,generated,Pokemon,Uncommon,False,Seadra,neo1,48,Water,Stage 1,70,Horsea,Lightning×2,,1,,Bubble [水] 10 / Mud Splash [水水] 30,,,neo1-029
+neo1,30,アリゲイツ,generated,Pokemon,Uncommon,False,Croconaw,neo1,31,Water,Stage 1,70,Totodile,Grass×2,,2,,Screech [無] / Jaw Clamp [水水無] 30,,,neo1-030
+neo1,31,ヌオー,generated,Pokemon,Uncommon,False,Quagsire,neo1,45,Water,Stage 1,70,Wooper,Grass×2,Lightning-30,2,,Surf [水水] 30 / Earthquake [闘闘無無] 60,,,neo1-031
+neo1,32,イノムー,generated,Pokemon,Uncommon,False,Piloswine,neo1,44,Water,Stage 1,80,Swinub,Grass×2,Lightning-30,3,,Freeze [水水] 10 / Blizzard [水水水] 30,,,neo1-032
+neo1,33,オーダイル,generated,Pokemon,Holo Rare,True,Feraligatr,neo1,4,Water,Stage 2,100,Croconaw,Grass×2,,3,Pokémon Power: Berserk,Chomp [水水水水] 50+,,,neo1-033
+neo1,34,マリルリ,generated,Pokemon,Holo Rare,True,Azumarill,neo1,2,Water,Stage 1,70,Marill,Lightning×2,,1,,Tackle [無無] 20 / Bubble Shower [水水水] 30,,,neo1-034
+neo1,35,キングドラ,generated,Pokemon,Holo Rare,True,Kingdra,neo1,8,Water,Stage 2,90,Seadra,,,2,,Agility [水水無] 30 / Dragon Tornado [水水水水] 50,,,neo1-035
+neo1,36,ピカチュウ,generated,Pokemon,Common,False,Pikachu,neo1,70,Lightning,Basic,50,,Fighting×2,,1,,Quick Attack [無] 10+ / Agility [雷雷無] 20,,,neo1-036
+neo1,37,チョンチー,generated,Pokemon,Common,False,Chinchou,neo1,55,Lightning,Basic,50,,Fighting×2,,1,,Supersonic [雷] / Flail [水] 10×,,,neo1-037
+neo1,38,メリープ,generated,Pokemon,Common,False,Mareep,neo1,65,Lightning,Basic,40,,Fighting×2,,1,,Static Electricity [雷] / Thundershock [雷雷] 20,,,neo1-038
+neo1,39,エレブー,generated,Pokemon,Uncommon,False,Electabuzz,neo1,33,Lightning,Basic,70,,Fighting×2,,1,,Punch [無無] 20 / Swift [雷雷雷] 30,,,neo1-039
+neo1,40,ランターン,generated,Pokemon,Uncommon,False,Lanturn,neo1,38,Lightning,Stage 1,70,Chinchou,Fighting×2,,2,Pokémon Power: Hydroelectric Power,Floodlight [雷雷] 20,,,neo1-040
+neo1,41,モココ,generated,Pokemon,Uncommon,False,Flaaffy,neo1,34,Lightning,Stage 1,60,Mareep,Fighting×2,,1,,Discharge [雷] 30× / Electric Current [雷雷] 20,,,neo1-041
+neo1,42,ピチュー,generated,Pokemon,Holo Rare,True,Pichu,neo1,12,Lightning,Baby,30,,,,0,,Zzzap [無],,,neo1-042
+neo1,43,デンリュウ,generated,Pokemon,Holo Rare,True,Ampharos,neo1,1,Lightning,Stage 2,80,Flaaffy,Fighting×2,,2,,Gigaspark [雷雷雷] 40,,,neo1-043
+neo1,44,エレキッド,generated,Pokemon,Rare,False,Elekid,neo1,22,Lightning,Baby,30,,,,0,Pokémon Power: Playful Punch,,,,neo1-044
+neo1,45,ヤドン,generated,Pokemon,Common,False,Slowpoke,neo1,73,Psychic,Basic,50,,Psychic×2,,1,,Psyshock [超] 10 / Water Gun [水] 10+,,TCGdex の日本版データでは HP 40（英語版は 50）,neo1-045
+neo1,46,ネイティ,generated,Pokemon,Common,False,Natu,neo1,67,Psychic,Basic,30,,Psychic×2,Fighting-30,0,,Peck [無] 10 / Telekinesis [超超],,,neo1-046
+neo1,47,キリンリキ,generated,Pokemon,Common,False,Girafarig,neo1,58,Psychic,Basic,60,,,,1,,Agility [無無] 10 / Psybeam [超超] 20,,,neo1-047
+neo1,48,ネイティオ,generated,Pokemon,Uncommon,False,Xatu,neo1,52,Psychic,Stage 1,80,Natu,Psychic×2,Fighting-30,1,,Prophecy [超] / Confuse Ray [超超超] 30,,,neo1-048
+neo1,49,ヤドキング,generated,Pokemon,Holo Rare,True,Slowking,neo1,14,Psychic,Stage 1,80,Slowpoke,Psychic×2,,3,Pokémon Power: Mind Games,Mind Blast [超超超] 20+,,,neo1-049
+neo1,50,イワーク,generated,Pokemon,Common,False,Onix,neo1,69,Fighting,Basic,60,,Grass×2,,2,,Screech [無] / Rage [闘闘] 10+,,,neo1-050
+neo1,51,ウソッキー,generated,Pokemon,Common,False,Sudowoodo,neo1,77,Fighting,Basic,60,,Water×2,,3,,Flail [闘] 10× / Rock Throw [闘無] 30,,,neo1-051
+neo1,52,グライガー,generated,Pokemon,Common,False,Gligar,neo1,59,Fighting,Basic,60,,Grass×2,Fighting-30,0,,Poison Sting [闘] 10 / Slash [無無] 20,,,neo1-052
+neo1,53,ゴマゾウ,generated,Pokemon,Uncommon,False,Phanpy,neo1,43,Fighting,Basic,40,,Grass×2,Lightning-30,1,,Tackle [無] 10 / Endure [闘],,,neo1-053
+neo1,54,ドンファン,generated,Pokemon,Rare,False,Donphan,neo1,21,Fighting,Stage 1,70,Phanpy,Grass×2,Lightning-30,3,,Flail [闘] 10× / Rapid Spin [闘闘闘] 50,,,neo1-054
+neo1,55,ヤミカラス,generated,Pokemon,Rare,False,Murkrow,neo1,24,Darkness,Basic,50,,,Psychic-30,0,,Mean Look [悪] / Feint Attack [悪無],,,neo1-055
+neo1,56,ニューラ,generated,Pokemon,Rare,False,Sneasel,neo1,25,Darkness,Basic,60,,,Psychic-30,0,,Fury Swipes [無] 10× / Beat Up [悪悪] 20×,,,neo1-056
+neo1,57,ハガネール,generated,Pokemon,Holo Rare,True,Steelix,neo1,15,Metal,Stage 1,110,Onix,Fire×2,Grass-30,4,,Tackle [無無] 20 / Tail Crush [鋼無無] 30+,,,neo1-057
+neo1,58,エアームド,generated,Pokemon,Holo Rare,True,Skarmory,neo1,13,Metal,Basic,60,,Fire×2,Grass-30,2,,Claw [無] 20 / Steel Wing [鋼無無] 30,,,neo1-058
+neo1,59,オタチ,generated,Pokemon,Common,False,Sentret,neo1,71,Colorless,Basic,40,,Fighting×2,Psychic-30,1,,Fury Swipes [無] 10×,,,neo1-059
+neo1,60,ホーホー,generated,Pokemon,Common,False,Hoothoot,neo1,60,Colorless,Basic,50,,Lightning×2,Fighting-30,1,,Hypnosis [無] / Peck [無無] 20,,,neo1-060
+neo1,61,ブルー,generated,Pokemon,Common,False,Snubbull,neo1,74,Colorless,Basic,50,,Fighting×2,Psychic-30,1,,Roar [無] / Lick [無無] 10,,,neo1-061
+neo1,62,オドシシ,generated,Pokemon,Common,False,Stantler,neo1,76,Colorless,Basic,60,,Fighting×2,Psychic-30,2,,Stomp [無無] 20+ / Mystifying Horns [無無無] 20,,,neo1-062
+neo1,63,ピッピ,generated,Pokemon,Uncommon,False,Clefairy,neo1,30,Colorless,Basic,50,,Fighting×2,Psychic-30,1,,Doubleslap [無無] 10× / Squaredance [無無無],,,neo1-063
+neo1,64,オオタチ,generated,Pokemon,Uncommon,False,Furret,neo1,35,Colorless,Stage 1,60,Sentret,Fighting×2,Psychic-30,1,,Quick Attack [無無] 20+ / Slam [無無無] 30×,,,neo1-064
+neo1,65,ヨルノズク,generated,Pokemon,Uncommon,False,Noctowl,neo1,42,Colorless,Stage 1,60,Hoothoot,Lightning×2,Fighting-30,0,Pokémon Power: Glaring Gaze,Wing Attack [無無無] 30,,,neo1-065
+neo1,66,トゲピー,generated,Pokemon,Uncommon,False,Togepi,neo1,51,Colorless,Basic,40,,,Psychic-30,1,,Poison Barb [無無] 10,,,neo1-066
+neo1,67,エイパム,generated,Pokemon,Uncommon,False,Aipom,neo1,26,Colorless,Basic,40,,Fighting×2,Psychic-30,0,,Pilfer [無] / Tail Rap [無] 10×,,,neo1-067
+neo1,68,グランブル,generated,Pokemon,Uncommon,False,Granbull,neo1,37,Colorless,Stage 1,70,Snubbull,Fighting×2,Psychic-30,2,,Tackle [無無] 20 / Raging Charge [無無無] 10+,,,neo1-068
+neo1,69,ミルタンク,generated,Pokemon,Uncommon,False,Miltank,neo1,41,Colorless,Basic,70,,Fighting×2,Psychic-30,2,,Milk Drink [無] / Body Slam [無無無] 20,,,neo1-069
+neo1,70,ピィ,generated,Pokemon,Rare,False,Cleffa,neo1,20,Colorless,Baby,30,,,,0,,Eeeeeeek [無],,,neo1-070
+neo1,71,トゲチック,generated,Pokemon,Holo Rare,True,Togetic,neo1,16,Colorless,Stage 1,60,Togepi,,Fighting-30,0,,Super Metronome [無] / Fly [無無無] 30,,,neo1-071
+neo1,72,ルギア,generated,Pokemon,Holo Rare,True,Lugia,neo1,9,Colorless,Basic,90,,Psychic×2,Fighting-30,2,,Elemental Blast [炎水雷] 90,,,neo1-072
+neo1,73,,unknown,Trainer,Common,False,Berry,neo1,99,,,,,,,,,,,,neo1-073
+neo1,74,,unknown,Trainer,Common,False,Super Rod,neo1,103,,,,,,,,,,,,neo1-074
+neo1,75,,unknown,Trainer,Common,False,Double Gust,neo1,100,,,,,,,,,,,,neo1-075
+neo1,76,,unknown,Trainer,Common,False,Pokémon March,neo1,102,,,,,,,,,,,,neo1-076
+neo1,77,,unknown,Trainer,Common,False,Moo-Moo Milk,neo1,101,,,,,,,,,,,,neo1-077
+neo1,78,,unknown,Trainer,Uncommon,False,Professor Elm,neo1,96,,,,,,,,,,,,neo1-078
+neo1,79,,unknown,Trainer,Uncommon,False,Gold Berry,neo1,93,,,,,,,,,,,,neo1-079
+neo1,80,,unknown,Trainer,Uncommon,False,Card-Flip Game,neo1,92,,,,,,,,,,,,neo1-080
+neo1,81,,unknown,Trainer,Uncommon,False,Miracle Berry,neo1,94,,,,,,,,,,,,neo1-081
+neo1,82,,unknown,Trainer,Uncommon,False,New Pokédex,neo1,95,,,,,,,,,,,,neo1-082
+neo1,83,,unknown,Trainer,Uncommon,False,Super Scoop Up,neo1,98,,,,,,,,,,,,neo1-083
+neo1,84,,unknown,Trainer,Uncommon,False,Bill's Teleporter,neo1,91,,,,,,,,,,,,neo1-084
+neo1,85,,unknown,Trainer,Uncommon,False,Sprout Tower,neo1,97,,,,,,,,,,,,neo1-085
+neo1,86,,unknown,Trainer,Rare,False,Ecogym,neo1,84,,,,,,,,,,,,neo1-086
+neo1,87,,unknown,Trainer,Rare,False,Energy Charge,neo1,85,,,,,,,,,,,,neo1-087
+neo1,88,,unknown,Trainer,Rare,False,Focus Band,neo1,86,,,,,,,,,,,,neo1-088
+neo1,89,,unknown,Trainer,Rare,False,Mary,neo1,87,,,,,,,,,,,,neo1-089
+neo1,90,,unknown,Trainer,Rare,False,Arcade Game,neo1,83,,,,,,,,,,,,neo1-090
+neo1,91,,unknown,Trainer,Rare,False,Time Capsule,neo1,90,,,,,,,,,,,,neo1-091
+neo1,92,,unknown,Trainer,Rare,False,Super Energy Retrieval,neo1,89,,,,,,,,,,,,neo1-092
+neo1,93,,unknown,Trainer,Rare,False,PokéGear,neo1,88,,,,,,,,,,,,neo1-093
+neo1,94,,unknown,Energy,Rare,False,Darkness Energy,neo1,104,,,,,,,,,,,,neo1-094
+neo1,95,,unknown,Energy,Holo Rare,True,Metal Energy,neo1,19,,,,,,,,,,,,neo1-095
+neo1,96,,unknown,Energy,Rare,False,Recycle Energy,neo1,105,,,,,,,,,,,,neo1-096
+neo2,1,キャタピー,generated,Pokemon,Common,False,Caterpie,neo2,53,Grass,Basic,50,,Fire×2,,1,,Spin Tackle [無] 20,,,neo2-001
+neo2,2,ビードル,generated,Pokemon,Common,False,Weedle,neo2,70,Grass,Basic,40,,Fire×2,,1,,Spike Stab [草] 20,,,neo2-002
+neo2,3,イトマル,generated,Pokemon,Common,False,Spinarak,neo2,64,Grass,Basic,50,,Fire×2,,1,,Poison Sting [草無] 20,,,neo2-003
+neo2,4,ハネッコ,generated,Pokemon,Common,False,Hoppip,neo2,55,Grass,Basic,30,,Fire×2,Fighting-30,0,,Rolling Tackle [草] 20,,,neo2-004
+neo2,5,クヌギダマ,generated,Pokemon,Common,False,Pineco,neo2,61,Grass,Basic,40,,Fire×2,,2,,Burst [草] 40,,,neo2-005
+neo2,6,トランセル,generated,Pokemon,Uncommon,False,Metapod,neo2,42,Grass,Stage 1,70,Caterpie,Fire×2,,2,,Harden [無無] / Hatch [草草],,,neo2-006
+neo2,7,コクーン,generated,Pokemon,Uncommon,False,Kakuna,neo2,41,Grass,Stage 1,70,Weedle,Fire×2,,2,,Secrete Poison [草草],,,neo2-007
+neo2,8,ストライク,generated,Pokemon,Uncommon,False,Scyther,neo2,46,Grass,Basic,60,,Fire×2,Fighting-30,1,,Fury Cutter [草草] 10+,,,neo2-008
+neo2,9,バタフリー,generated,Pokemon,Holo Rare,True,Butterfree,neo2,19,Grass,Stage 2,80,Metapod,Fire×2,Fighting-30,0,,Magic Dust [草無] 20 / Hyper Reverse [草草無],,,neo2-009
+neo2,10,スピアー,generated,Pokemon,Holo Rare,True,Beedrill,neo2,18,Grass,Stage 2,80,Kakuna,Fire×2,Fighting-30,0,,Triple Poison [草] 10 / Pin Missile [草草無] 20×,,,neo2-010
+neo2,11,ヤンヤンマ,generated,Pokemon,Holo Rare,True,Yanma,neo2,17 36,Grass,Basic,60,,Fire×2,Fighting-30,0,,Shockwave [草] / Swift [草草草] 30,,,neo2-011
+neo2,12,デルビル,generated,Pokemon,Holo Rare,True,Houndour,neo2,5 24,Fire,Basic,50,,Water×2,,1,,Smog [炎] 10 / Collect Fire [炎炎] 20,,,neo2-012
+neo2,13,ニョロモ,generated,Pokemon,Common,False,Poliwag,neo2,62,Water,Basic,40,,Grass×2,,1,,Rollout [無] 10 / Hypnosis [水],,,neo2-013
+neo2,14,カブト,generated,Pokemon,Common,False,Kabuto,neo2,56,Water,Stage 1,50,Mysterious Fossil,Grass×2,,1,Pokémon Power: Revive Friends,Work Together [闘無] 10+,,,neo2-014
+neo2,15,ウパー,generated,Pokemon,Common,False,Wooper,neo2,71,Water,Basic,50,,Grass×2,Lightning-30,1,,Slime [水] / Tail Slap [無無] 20,,,neo2-015
+neo2,16,ニョロゾ,generated,Pokemon,Uncommon,False,Poliwhirl,neo2,44,Water,Stage 1,70,Poliwag,Grass×2,,1,,Belly Drum [無] / Water Gun [水水無] 30+,,,neo2-016
+neo2,17,サニーゴ,generated,Pokemon,Uncommon,False,Corsola,neo2,37,Water,Basic,50,,Grass×2,,1,,Recover [水] / Spike Cannon [闘闘] 30×,,,neo2-017
+neo2,18,カブトプス,generated,Pokemon,Holo Rare,True,Kabutops,neo2,6 25,Water,Stage 2,90,Kabuto,Grass×2,,2,,Slash [無] 20 / Hydrocutter [闘] 40×,,,neo2-018
+neo2,19,ニョロトノ,generated,Pokemon,Holo Rare,True,Politoed,neo2,8 27,Water,Stage 2,100,Poliwhirl,Grass×2,,3,Pokémon Power: Frog Song,Doubleslap [水水無無] 40×,,,neo2-019
+neo2,20,メリープ,generated,Pokemon,Common,False,Mareep,neo2,58,Lightning,Basic,50,,Fighting×2,,1,,Thunder Jolt [雷無] 30,,,neo2-020
+neo2,21,わるいライチュウ,generated,Pokemon,Secret Rare,True,Dark Raichu,base5,83,Lightning,Stage 1,70,Pikachu,Fighting×2,,1,,Surprise Thunder [雷雷雷] 30,LC 7,,neo2-021
+neo2,22,ネイティ,generated,Pokemon,Common,False,Natu,neo2,59,Psychic,Basic,40,,Psychic×2,Fighting-30,1,,Confuse Ray [超] 10,,,neo2-022
+neo2,23,アンノーンI,generated,Pokemon,Common,False,Unown [I],neo2,68,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Increase],Hidden Power [超] 10,,,neo2-023
+neo2,24,ネイティオ,generated,Pokemon,Uncommon,False,Xatu,neo2,52,Psychic,Stage 1,70,Natu,Psychic×2,Fighting-30,1,,Energy Cycle [超] / Super Psy [超超無] 50,,,neo2-024
+neo2,25,アンノーンD,generated,Pokemon,Uncommon,False,Unown [D],neo2,47,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Darkness],Hidden Power [超] 10,,,neo2-025
+neo2,26,アンノーンF,generated,Pokemon,Uncommon,False,Unown [F],neo2,48,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Find],Hidden Power [超] 10,,,neo2-026
+neo2,27,アンノーンM,generated,Pokemon,Uncommon,False,Unown [M],neo2,49,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Metal],Hidden Power [超] 10,,,neo2-027
+neo2,28,アンノーンU,generated,Pokemon,Uncommon,False,Unown [U],neo2,51,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Undo],Hidden Power [超] 10,,,neo2-028
+neo2,29,エーフィ,generated,Pokemon,Holo Rare,True,Espeon,neo2,1,Psychic,Stage 1,80,Eevee,Psychic×2,,0,,Bite [無無] 20 / Psychic [超超無] 30+,,,neo2-029
+neo2,30,アンノーンA,generated,Pokemon,Holo Rare,True,Unown [A],neo2,14 33,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Anger],Hidden Power [超] 10,,,neo2-030
+neo2,31,ソーナンス,generated,Pokemon,Holo Rare,True,Wobbuffet,neo2,16 35,Psychic,Basic,90,,Psychic×2,,3,,Counter [超],,,neo2-031
+neo2,32,オムナイト,generated,Pokemon,Common,False,Omanyte,neo2,60,Fighting,Stage 1,50,Mysterious Fossil,Grass×2,,1,Pokémon Power: Revive Fossil,Bind [水] 10,,,neo2-032
+neo2,33,バルキー,generated,Pokemon,Common,False,Tyrogue,neo2,66,Fighting,Baby,30,,,,0,,Smash Punch [無] 30,,,neo2-033
+neo2,34,ヨーギラス,generated,Pokemon,Common,False,Larvitar,neo2,57,Fighting,Basic,40,,Grass×2,Lightning-30,1,,Bite [無] 10,,,neo2-034
+neo2,35,オムスター,generated,Pokemon,Uncommon,False,Omastar,neo2,43,Fighting,Stage 2,80,Omanyte,Grass×2,,2,,Squeeze [水] 10+ / Spike Barrage [水水水] 20+,,,neo2-035
+neo2,36,サナギラス,generated,Pokemon,Uncommon,False,Pupitar,neo2,45,Fighting,Stage 1,70,Larvitar,Grass×2,Lightning-30,1,,Skull Bash [無無] 20 / Dust Devil [闘闘],,,neo2-036
+neo2,37,ニョロボン,generated,Pokemon,Holo Rare,True,Poliwrath,neo2,9 28,Fighting,Stage 2,90,Poliwhirl,Psychic×2,,2,,Corkscrew Punch [闘無] 30 / Submission [闘闘無無] 70,,,neo2-037
+neo2,38,カポエラー,generated,Pokemon,Holo Rare,True,Hitmontop,neo2,3 22,Fighting,Basic,60,,Psychic×2,,1,,Detect [闘] / Triple Kick [闘闘闘] 30×,,,neo2-038
+neo2,39,デルビル,generated,Pokemon,Uncommon,False,Houndour,neo2,39,Darkness,Basic,40,,,Psychic-30,1,,Bite [無] 10 / Plunder [悪無] 20,,,neo2-039
+neo2,40,ブラッキー,generated,Pokemon,Holo Rare,True,Umbreon,neo2,13,Darkness,Stage 1,80,Eevee,,Psychic-30,1,,Bite [無無] 20 / Feint Attack [悪悪無],,,neo2-040
+neo2,41,ヘルガー,generated,Pokemon,Holo Rare,True,Houndoom,neo2,4 23,Darkness,Stage 1,70,Houndour,,Psychic-30,1,,Crunch [悪無無] 30 / Flamethrower [炎炎無] 50,,,neo2-041
+neo2,42,バンギラス,generated,Pokemon,Holo Rare,True,Tyranitar,neo2,12 31,Darkness,Stage 2,100,Pupitar,,Psychic-30,3,,Slam [無無無] 30× / Trample [悪悪無無] 50,,,neo2-042
+neo2,43,コイル,generated,Pokemon,Holo Rare,True,Magnemite,neo2,7 26,Metal,Basic,40,,Fire×2,Grass-30,1,,Lock-on [無] / Electric Bolt [雷無] 50,,,neo2-043
+neo2,44,フォレトス,generated,Pokemon,Holo Rare,True,Forretress,neo2,2 21,Metal,Stage 1,80,Pineco,Fire×2,Grass-30,3,Pokémon Power: Spikes,Rapid Spin [鋼無無] 30,,,neo2-044
+neo2,45,ハッサム,generated,Pokemon,Holo Rare,True,Scizor,neo2,10 29,Metal,Stage 1,80,Scyther,Fire×2,Grass-30,2,,False Swipe [鋼] ? / Double Claw [無無無] 20+,,,neo2-045
+neo2,46,オタチ,generated,Pokemon,Common,False,Sentret,neo2,63,Colorless,Basic,50,,Fighting×2,Psychic-30,1,,Scout [無] / Tackle [無無] 20,,,neo2-046
+neo2,47,ノコッチ,generated,Pokemon,Common,False,Dunsparce,neo2,54,Colorless,Basic,30,,Fighting×2,Psychic-30,0,,Glare [無] 10,,,neo2-047
+neo2,48,ヒメグマ,generated,Pokemon,Common,False,Teddiursa,neo2,65,Colorless,Basic,40,,Fighting×2,Psychic-30,1,,Scratch [無] 10 / Nap Time [無無],,,neo2-048
+neo2,49,イーブイ,generated,Pokemon,Uncommon,False,Eevee,neo2,38,Colorless,Basic,50,,Fighting×2,Psychic-30,1,Pokémon Power: Energy Evolution,Smash Kick [無] 10,,,neo2-049
+neo2,50,ププリン,generated,Pokemon,Uncommon,False,Igglybuff,neo2,40,Colorless,Baby,30,,,,0,Pokémon Power: Gaze,,,,neo2-050
+neo2,51,リングマ,generated,Pokemon,Holo Rare,True,Ursaring,neo2,15 34,Colorless,Stage 1,80,Teddiursa,Fighting×2,Psychic-30,3,,Headpress [無無] 20 / Double Lariat [無無無無] 40×,,,neo2-051
+neo2,52,ドーブル,generated,Pokemon,Holo Rare,True,Smeargle,neo2,11 30,Colorless,Basic,50,,Fighting×2,Psychic-30,1,,Sketch [無無],,,neo2-052
+neo2,53,,unknown,Trainer,Common,False,Energy Ark,neo2,75,,,,,,,,,,,,neo2-053
+neo2,54,,unknown,Trainer,Uncommon,False,Ruin Wall,neo2,74,,,,,,,,,,,,neo2-054
+neo2,55,,unknown,Trainer,Uncommon,False,Fossil Egg,neo2,72,,,,,,,,,,,,neo2-055
+neo2,56,,unknown,Trainer,Uncommon,False,Hyper Devolution Spray,neo2,73,,,,,,,,,,,,neo2-056
+neo2,57,,unknown,Trainer,Uncommon,False,Ruin Wall,neo2,74,,,,,,,,,,,,neo2-057
+neo3,1,ズバット,generated,Pokemon,Common,False,Zubat,neo3,59,Grass,Basic,40,,Psychic×2,Fighting-30,0,,Bite [無] 10 / Poison Spray [草],,,neo3-001
+neo3,2,パラス,generated,Pokemon,Common,False,Paras,neo3,47,Grass,Basic,40,,Fire×2,,1,,Sleep Spore [草] 10 / Scratch [無無] 20,,,neo3-002
+neo3,3,ポポッコ,generated,Pokemon,Common,False,Skiploom,neo3,52,Grass,Stage 1,60,Hoppip,Fire×2,Fighting-30,0,,Hop [無] 20 / Mysterious Powder [草] 10,,,neo3-003
+neo3,4,ゴルバット,generated,Pokemon,Uncommon,False,Golbat,neo3,29,Grass,Stage 1,60,Zubat,Psychic×2,Fighting-30,0,,Screech [無] / Poison Bite [草無] 10,,,neo3-004
+neo3,5,パラセクト,generated,Pokemon,Uncommon,False,Parasect,neo3,35,Grass,Stage 1,60,Paras,Fire×2,,2,Pokémon Power: Allergic Pollen,Sleep Pinchers [草草] 30,,,neo3-005
+neo3,6,クロバット,generated,Pokemon,Holo Rare,True,Crobat,neo3,4,Grass,Stage 2,90,Golbat,Psychic×2,Fighting-30,0,,Triggered Poison [草] 20 / Cross Attack [草草無] 20×,,,neo3-006
+neo3,7,ワタッコ,generated,Pokemon,Holo Rare,True,Jumpluff,neo3,9,Grass,Stage 2,70,Skiploom,Fire×2,Fighting-30,0,,Evolutionary Spore [草] / Solarbeam [草] 30,,,neo3-007
+neo3,8,マグマッグ,generated,Pokemon,Common,False,Slugma,neo3,53,Fire,Basic,50,,Water×2,,2,,Flare [炎] 10 / Magma Ring [炎炎] 20,,,neo3-008
+neo3,9,マグカルゴ,generated,Pokemon,Uncommon,False,Magcargo,neo3,33,Fire,Stage 1,80,Slugma,Water×2,,3,Pokémon Power: Magma Pool,Lava Flow [炎炎炎] 40+,,,neo3-009
+neo3,10,エンテイ,generated,Pokemon,Holo Rare,True,Entei,neo3,6,Fire,Basic,80,,Water×2,,1,Pokémon Power: Howl,Searing Flames [炎炎炎] 60,,,neo3-010
+neo3,11,ホウオウ,generated,Pokemon,Holo Rare,True,Ho-oh,neo3,7,Fire,Basic,90,,Water×2,Fighting-30,2,,Stoke [炎] / Sacred Fire [炎炎炎] / Dive Bomb [炎炎炎炎炎] 90,,,neo3-011
+neo3,12,トサキント,generated,Pokemon,Common,False,Goldeen,neo3,45,Water,Basic,40,,Lightning×2,,0,,Fin Smack [無] 10×,,,neo3-012
+neo3,13,ヒトデマン,generated,Pokemon,Common,False,Staryu,neo3,56,Water,Basic,40,,Lightning×2,,1,,Tackle [無] 10 / Bubblebeam [水] 10,,,neo3-013
+neo3,14,ヌオー,generated,Pokemon,Common,False,Quagsire,neo3,48,Water,Stage 1,70,Wooper,Grass×2,Lightning-30,2,,Mud Slap [闘闘] 30 / Whirlpool [水水無無] 40,,,neo3-014
+neo3,15,ハリーセン,generated,Pokemon,Common,False,Qwilfish,neo3,49,Water,Basic,60,,Lightning×2,,1,,Poison Sting [水] 10 / Needle Storm [無無] 20×,,,neo3-015
+neo3,16,テッポウオ,generated,Pokemon,Common,False,Remoraid,neo3,50,Water,Basic,40,,Lightning×2,,0,,Sharpshooting [水],,,neo3-016
+neo3,17,アズマオウ,generated,Pokemon,Uncommon,False,Seaking,neo3,37,Water,Stage 1,70,Goldeen,Lightning×2,,1,,Rising Lunge [水] 10+ / Horn Swipe [水水] 20+,,,neo3-017
+neo3,18,ルージュラ,generated,Pokemon,Uncommon,False,Jynx,neo3,31,Water,Basic,60,,Psychic×2,,1,,Freezing Kiss Goodnight [水] / Strange Dance [超超無] 20+,,,neo3-018
+neo3,19,オクタン,generated,Pokemon,Uncommon,False,Octillery,neo3,34,Water,Stage 1,80,Remoraid,Lightning×2,,2,,Constrict [水] 10 / Octazooka [水水水] 40,,,neo3-019
+neo3,20,キングドラ,generated,Pokemon,Holo Rare,True,Kingdra,neo3,19,Water,Stage 2,90,Seadra,,,2,,Genetic Memory [無] / Twister [水水無無] 50,,,neo3-020
+neo3,21,スイクン,generated,Pokemon,Holo Rare,True,Suicune,neo3,14,Water,Basic,70,,Lightning×2,,1,Pokémon Power: Crystal Body,Aurora Wave [水水水] 30,,,neo3-021
+neo3,22,ひかるコイキング,generated,Pokemon,Secret Rare,False,Shining Magikarp,neo3,66,Water,Basic,30,,Lightning×2,,1,,Gold Scale [水] / Dragon Bond [超],,,neo3-022
+neo3,23,ひかるギャラドス,generated,Pokemon,Secret Rare,False,Shining Gyarados,neo3,65,Water,Basic,100,,Grass×2,Fighting-30,3,,Outrage [水闘闘] 30+ / Devastate [水水炎炎] 50,,,neo3-023
+neo3,24,チョンチー,generated,Pokemon,Common,False,Chinchou,neo3,42,Lightning,Basic,50,,Fighting×2,,1,,Positive Ion [雷] 10+ / Negative Ion [水] 10,,,neo3-024
+neo3,25,ライチュウ,generated,Pokemon,Uncommon,False,Raichu,neo3,21,Lightning,Stage 1,80,Pikachu,Fighting×2,,1,,Thundershock [雷無] 20 / Lightning Strike [雷雷雷] 40,,,neo3-025
+neo3,26,ランターン,generated,Pokemon,Uncommon,False,Lanturn,neo3,32,Lightning,Stage 1,80,Chinchou,Fighting×2,,2,Pokémon Power: Submerge,Blinding Light [雷無無] 30,,,neo3-026
+neo3,27,モココ,generated,Pokemon,Uncommon,False,Flaaffy,neo3,28,Lightning,Stage 1,70,Mareep,Fighting×2,,1,,Electric Punch [雷] 20 / Tail Shock [雷無無] 30,,,neo3-027
+neo3,28,デンリュウ,generated,Pokemon,Holo Rare,True,Ampharos,neo3,1,Lightning,Stage 2,90,Flaaffy,Fighting×2,,3,,Attract Current [雷] 20 / Gigavolt [雷雷雷無] 40+,,,neo3-028
+neo3,29,ライコウ,generated,Pokemon,Holo Rare,True,Raikou,neo3,13,Lightning,Basic,80,,Fighting×2,,1,Pokémon Power: Lightning Burst,Lightning Tackle [雷雷雷] 50,,,neo3-029
+neo3,30,アンノーンK,generated,Pokemon,Common,False,Unown [K],neo3,58,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Keep],Hidden Power [超] 10,,,neo3-030
+neo3,31,ムチュール,generated,Pokemon,Common,False,Smoochum,neo3,54,Psychic,Baby,30,,,,0,,Psykiss [無],,,neo3-031
+neo3,32,アンノーンB,generated,Pokemon,Uncommon,False,Unown [B],neo3,39,Psychic,Basic,50,,Psychic×2,,1,Pokémon Power: [Bear],Hidden Power [超] 10,,,neo3-032
+neo3,33,アンノーンY,generated,Pokemon,Uncommon,False,Unown [Y],neo3,40,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Yield],Hidden Power [超] 10,,,neo3-033
+neo3,34,スターミー,generated,Pokemon,Holo Rare,True,Starmie,neo3,25,Psychic,Stage 1,70,Staryu,Psychic×2,,1,,Confuse Ray [水] 10 / Core Stream [超超無],,,neo3-034
+neo3,35,ムウマ,generated,Pokemon,Holo Rare,True,Misdreavus,neo3,11,Psychic,Basic,50,,,Fighting-30,1,,Night Eyes [超] / Perish Song [超超超],,,neo3-035
+neo3,36,セレビィ,generated,Pokemon,Holo Rare,True,Celebi,neo3,3,Psychic,Basic,50,,Psychic×2,,1,Pokémon Power: Time Travel,Psychic Damage [超],,,neo3-036
+neo3,37,イシツブテ,generated,Pokemon,Common,False,Geodude,neo3,44,Fighting,Basic,40,,Grass×2,,1,,Knuckle Punch [闘] 20,,,neo3-037
+neo3,38,ウリムー,generated,Pokemon,Common,False,Swinub,neo3,57,Fighting,Basic,40,,Grass×2,Lightning-30,1,,Tackle [無] 10 / Take Down [闘無] 30,,,neo3-038
+neo3,39,ゴローン,generated,Pokemon,Uncommon,False,Graveler,neo3,30,Fighting,Stage 1,70,Geodude,Grass×2,,2,,Earthquake [闘無] 40 / Rock Tumble [闘闘闘] 50,,,neo3-039
+neo3,40,ツボツボ,generated,Pokemon,Uncommon,False,Shuckle,neo3,51,Fighting,Basic,40,,Grass×2,,1,Pokémon Power: Hard Shell,Toxic Saliva [草草],,,neo3-040
+neo3,41,イノムー,generated,Pokemon,Uncommon,False,Piloswine,neo3,36,Fighting,Stage 1,90,Swinub,Grass×2,Lightning-30,3,,Nap [無無] / High-Speed Charge [闘闘無無] 80,,,neo3-041
+neo3,42,プテラ,generated,Pokemon,Holo Rare,True,Aerodactyl,neo3,15,Fighting,Stage 1,60,Mysterious Fossil,Grass×2,Fighting-30,2,Pokémon Power: Prehistoric Memory,Fly [無無無] 30,,,neo3-042
+neo3,43,ヤミカラス,generated,Pokemon,Common,False,Murkrow,neo3,46,Darkness,Basic,40,,,Psychic-30,0,,Call for Family [無] / Flock Attack [無無] 10+,,,neo3-043
+neo3,44,ヘルガー,generated,Pokemon,Holo Rare,True,Houndoom,neo3,8,Darkness,Stage 1,70,Houndour,,Psychic-30,1,,Dark Flame [炎] 20 / Black Fang [悪無無] 30+,,,neo3-044
+neo3,45,レアコイル,generated,Pokemon,Holo Rare,True,Magneton,neo3,10,Metal,Stage 1,80,Magnemite,Fire×2,Grass-30,2,Pokémon Power: Electromagnetic Power,Plasma [雷雷無] 30,,,neo3-045
+neo3,46,カモネギ,generated,Pokemon,Common,False,Farfetch'd,neo3,43,Colorless,Basic,50,,Lightning×2,Fighting-30,1,,Gust [無] 10 / Leek Jab [無無無] 40,,,neo3-046
+neo3,47,エイパム,generated,Pokemon,Common,False,Aipom,neo3,41,Colorless,Basic,40,,Fighting×2,Psychic-30,0,,Grab [無] / Tail Punch [無無] 20,,,neo3-047
+neo3,48,ブルー,generated,Pokemon,Common,False,Snubbull,neo3,55,Colorless,Basic,50,,Fighting×2,Psychic-30,1,,Bite [無] 10 / Raging Headbutt [無無] 10+,,,neo3-048
+neo3,49,オドシシ,generated,Pokemon,Uncommon,False,Stantler,neo3,38,Colorless,Basic,60,,Fighting×2,Psychic-30,1,,Terrorize [無] / Overhead Toss [無無無] 30,,,neo3-049
+neo3,50,デリバード,generated,Pokemon,Holo Rare,True,Delibird,neo3,5,Colorless,Basic,60,,Lightning×2,Fighting-30,1,,Present [無無],,,neo3-050
+neo3,51,ポリゴン２,generated,Pokemon,Holo Rare,True,Porygon2,neo3,12,Colorless,Stage 1,70,Porygon,Fighting×2,Psychic-30,1,Pokémon Power: Energy Converter,Delta Beam [無無無] 20,,,neo3-051
+neo3,52,ハピナス,generated,Pokemon,Holo Rare,True,Blissey,neo3,2,Colorless,Stage 1,120,Chansey,Fighting×2,Psychic-30,2,Pokémon Power: Softboiled,Body Slam [無無無無] 30,,,neo3-052
+neo3,53,,unknown,Trainer,Common,False,Old Rod,neo3,64,,,,,,,,,,,,neo3-053
+neo3,54,,unknown,Trainer,Uncommon,False,Healing Field,neo3,61,,,,,,,,,,,,neo3-054
+neo3,55,,unknown,Trainer,Uncommon,False,Balloon Berry,neo3,60,,,,,,,,,,,,neo3-055
+neo3,56,,unknown,Trainer,Uncommon,False,Pokémon Breeder Fields,neo3,62,,,,,,,,,,,,neo3-056
+neo3,57,,unknown,Trainer,Uncommon,False,Rocket's Hideout,neo3,63,,,,,,,,,,,,neo3-057
+neo4,1,コンパン,generated,Pokemon,Common,False,Venonat,neo4,90,Grass,Basic,40,,Fire×2,,1,,Gnaw [無] 10 / Poisonpowder [草無] 10,,,neo4-001
+neo4,2,レディバ,generated,Pokemon,Common,False,Ledyba,neo4,71,Grass,Basic,40,,Fire×2,Fighting-30,0,,Swift [草無] 20,,,neo4-002
+neo4,3,ヒマナッツ,generated,Pokemon,Common,False,Sunkern,neo4,83,Grass,Basic,40,,Fire×2,,2,,Rollout [無] 10 / Sunbathe [草草],,,neo4-003
+neo4,4,やさしいキマワリ,generated,Pokemon,Common,False,Light Sunflora,neo4,72,Grass,Stage 1,80,Sunkern,Fire×2,,1,,Reflected Sunlight [無無] / Solarbeam [草草草] 40,,,neo4-004
+neo4,5,クヌギダマ,generated,Pokemon,Common,False,Pineco,neo4,77,Grass,Basic,40,,Fire×2,,2,,Tackle [無無] 20,,,neo4-005
+neo4,6,やさしいモルフォン,generated,Pokemon,Uncommon,False,Light Venomoth,neo4,53,Grass,Stage 1,80,Venonat,Fire×2,Fighting-30,0,,Mysterious Wing [草] / Synchronize [超無] 40,,,neo4-006
+neo4,7,ストライク,generated,Pokemon,Uncommon,False,Scyther,neo4,55,Grass,Basic,60,,Fire×2,Fighting-30,1,,Agility [草無] 10 / Sharp Sickle [草草草] 40,,,neo4-007
+neo4,8,わるいフォレトス,generated,Pokemon,Uncommon,False,Dark Forretress,neo4,35,Grass,Stage 1,60,Pineco,Fire×2,,2,,Armor Up [無] / Explosion [草草] 60,,,neo4-008
+neo4,9,ヘラクロス,generated,Pokemon,Uncommon,False,Heracross,neo4,41,Grass,Basic,60,,Fire×2,,2,,Tackle [草無] 20 / Charging Horn [草草草] 30+,,,neo4-009
+neo4,10,やさしいレディアン,generated,Pokemon,Rare,False,Light Ledian,neo4,24,Grass,Stage 1,70,Ledyba,Fire×2,Fighting-30,0,,Flash Touch [草] / Comet Punch [草無無] 20×,,,neo4-010
+neo4,11,わるいアリアドス,generated,Pokemon,Rare,False,Dark Ariados,neo4,17,Grass,Stage 1,60,Spinarak,Fire×2,,2,,Entangle [草] / Poison Bind [草草草] 30,,,neo4-011
+neo4,12,わるいクロバット,generated,Pokemon,Holo Rare,True,Dark Crobat,neo4,2,Grass,Stage 2,70,Dark Golbat,Psychic×2,Fighting-30,0,Pokémon Power: Surprise Bite,Dark Drain [草草],,,neo4-012
+neo4,13,ひかるセレビィ,generated,Pokemon,Rare,False,Shining Celebi,neo4,106,Grass,Basic,50,,Fire×2,,1,,Healing Water [水] / Miracle Leaf [草超] 10,,,neo4-013
+neo4,14,ロコン,generated,Pokemon,Common,False,Vulpix,neo4,91,Fire,Basic,50,,Water×2,,1,,Ember [炎無] 30,,,neo4-014
+neo4,15,ガーディ,generated,Pokemon,Common,False,Growlithe,neo4,68,Fire,Basic,50,,Water×2,,1,,Bite [無無] 20,,,neo4-015
+neo4,16,ヒノアラシ,generated,Pokemon,Common,False,Cyndaquil,neo4,61,Fire,Basic,40,,Water×2,,1,,Smokescreen [炎] 10,,,neo4-016
+neo4,17,マグマッグ,generated,Pokemon,Common,False,Slugma,neo4,82,Fire,Basic,50,,Water×2,,2,,Combustion [炎炎] 30,,,neo4-017
+neo4,18,やさしいキュウコン,generated,Pokemon,Uncommon,False,Light Ninetales,neo4,50,Fire,Stage 1,90,Vulpix,Water×2,,1,,Guiding Flame [炎] / Fire Blast [炎炎炎] 50,,,neo4-018
+neo4,19,やさしいブースター,generated,Pokemon,Uncommon,False,Light Flareon,neo4,46,Fire,Stage 1,80,Eevee,Water×2,,1,,Warm Up [炎] / Burning Flame [炎炎無] 30+,,,neo4-019
+neo4,20,わるいマグマラシ,generated,Pokemon,Uncommon,False,Dark Quilava,neo4,39,Fire,Stage 1,60,Cyndaquil,Water×2,,1,,Incinerate [炎] / Rushing Magma [炎炎] 20×,,,neo4-020
+neo4,21,やさしいウインディ,generated,Pokemon,Holo Rare,True,Light Arcanine,neo4,12,Fire,Stage 1,100,Growlithe,Water×2,,2,Pokémon Power: Drive Off,Gentle Flames [炎炎無] 50,,,neo4-021
+neo4,22,わるいバクフーン,generated,Pokemon,Holo Rare,True,Dark Typhlosion,neo4,10,Fire,Stage 2,80,Dark Quilava,Water×2,,1,,Claw Swipe [無] 20 / Rushing Flames [炎] 40×,,,neo4-022
+neo4,23,わるいマグカルゴ,generated,Pokemon,Rare,False,Dark Magcargo,neo4,18,Fire,Stage 1,60,Slugma,Water×2,,3,Pokémon Power: Hot Plate,Ball of Flame [炎炎] 20,,,neo4-023
+neo4,24,わるいヘルガー,generated,Pokemon,Holo Rare,True,Dark Houndoom,neo4,7,Fire,Stage 1,60,Houndour,Water×2,,1,,Eerie Howl [無] / Dark Fire [炎無] 30+,,,neo4-229
+neo4,25,ひかるリザードン,generated,Pokemon,Rare,False,Shining Charizard,neo4,107,Fire,Basic,100,,Water×2,Fighting-30,3,,White-hot Flame [炎炎炎雷雷] 100,,,neo4-025
+neo4,26,コダック,generated,Pokemon,Common,False,Psyduck,neo4,79,Water,Basic,50,,Lightning×2,,1,,Flipper Splash [水] 10 / Migraine [超無] 20,,,neo4-026
+neo4,27,パウワウ,generated,Pokemon,Common,False,Seel,neo4,81,Water,Basic,50,,Lightning×2,,1,,Take Down [水無] 30,,,neo4-027
+neo4,28,ワニノコ,generated,Pokemon,Common,False,Totodile,neo4,85,Water,Basic,50,,Grass×2,,1,,Water Gun [水] 10+,,,neo4-028
+neo4,29,ウリムー,generated,Pokemon,Common,False,Swinub,neo4,84,Water,Basic,50,,Grass×2,Lightning-30,1,,Generate Cold [水無] 20,,,neo4-029
+neo4,30,テッポウオ,generated,Pokemon,Common,False,Remoraid,neo4,80,Water,Basic,40,,Lightning×2,,0,,Fury Strikes [水] 10×,,,neo4-030
+neo4,31,マンタイン,generated,Pokemon,Common,False,Mantine,neo4,74,Water,Basic,60,,Lightning×2,Fighting-30,2,,Giant Wave [水水] 40,,,neo4-031
+neo4,32,やさしいゴルダック,generated,Pokemon,Uncommon,False,Light Golduck,neo4,47,Water,Stage 1,80,Psyduck,Lightning×2,,1,,Flipper Stroke [水] / Core Blast [超無無] 30+,,,neo4-032
+neo4,33,やさしいジュゴン,generated,Pokemon,Uncommon,False,Light Dewgong,neo4,45,Water,Stage 1,80,Seel,Lightning×2,,2,,Freezing Breath [水水] 10 / Ice Pillar [水水水] 40,,,neo4-033
+neo4,34,やさしいシャワーズ,generated,Pokemon,Uncommon,False,Light Vaporeon,neo4,52,Water,Stage 1,80,Eevee,Lightning×2,,1,,Wash Away [水] / Hypnoshower [水水無] 30,,,neo4-034
+neo4,35,わるいオムナイト,generated,Pokemon,Uncommon,False,Dark Omanyte,neo4,37,Water,Stage 1,40,Mysterious Fossil,Grass×2,,1,,Water Cannon [水],,,neo4-035
+neo4,36,わるいアリゲイツ,generated,Pokemon,Uncommon,False,Dark Croconaw,neo4,32,Water,Stage 1,60,Totodile,Grass×2,,2,,Clamping Jaw [水水] 20,,,neo4-036
+neo4,37,わるいオクタン,generated,Pokemon,Uncommon,False,Dark Octillery,neo4,62,Water,Stage 1,60,Remoraid,Lightning×2,,2,,Ink Blast [水] 20+ / Tentacle Wrap [水無] 20,,,neo4-037
+neo4,38,わるいオムスター,generated,Pokemon,Rare,False,Dark Omastar,neo4,19,Water,Stage 2,70,Dark Omanyte,Grass×2,,2,,Prehistoric Water [水] / Dark Tentacle [水無] 30,,,neo4-038
+neo4,39,わるいオーダイル,generated,Pokemon,Holo Rare,True,Dark Feraligatr,neo4,5,Water,Stage 2,80,Dark Croconaw,Grass×2,,3,Pokémon Power: Scare,Crushing Blow [水水水] 50,,,neo4-039
+neo4,40,やさしいマリルリ,generated,Pokemon,Holo Rare,True,Light Azumarill,neo4,13,Water,Stage 1,80,Marill,Lightning×2,,1,,Bubble [水] 10 / Bubble Jump [水無無] 30,,,neo4-040
+neo4,41,やさしいイノムー,generated,Pokemon,Rare,False,Light Piloswine,neo4,26,Water,Stage 1,90,Swinub,Grass×2,Lightning-30,3,Pokémon Power: Fluffy Wool,Knock Over [無無無] 30,,,neo4-041
+neo4,42,メリープ,generated,Pokemon,Common,False,Mareep,neo4,75,Lightning,Basic,50,,Fighting×2,,1,,Headbutt [無] 10,,,neo4-042
+neo4,43,やさしいサンダース,generated,Pokemon,Uncommon,False,Light Jolteon,neo4,48,Lightning,Stage 1,70,Eevee,Fighting×2,,0,,Pulse Guard [雷] / Thunder Needle [雷雷無] 20×,,,neo4-043
+neo4,44,わるいモココ,generated,Pokemon,Uncommon,False,Dark Flaaffy,neo4,34,Lightning,Stage 1,60,Mareep,Fighting×2,,1,,High Voltage [雷] 10 / Stun Wave [雷無] 30,,,neo4-044
+neo4,45,やさしいランターン,generated,Pokemon,Rare,False,Light Lanturn,neo4,23,Lightning,Stage 1,80,Chinchou,Fighting×2,,2,,Searchlight [雷] / Spark [雷雷] 30,,,neo4-045
+neo4,46,わるいデンリュウ,generated,Pokemon,Holo Rare,True,Dark Ampharos,neo4,1,Lightning,Stage 2,70,Dark Flaaffy,Fighting×2,,2,Pokémon Power: Conductivity,Shock Bolt [雷無無] 50,,,neo4-046
+neo4,47,ひかるライチュウ,generated,Pokemon,Rare,False,Shining Raichu,neo4,111,Lightning,Basic,70,,Fighting×2,,1,,Thundersquall [雷雷水水] 40,,,neo4-047
+neo4,48,ゴース,generated,Pokemon,Common,False,Gastly,neo4,65,Psychic,Basic,40,,,Fighting-30,0,,Nightmare [超] 10,,,neo4-048
+neo4,49,タマタマ,generated,Pokemon,Common,False,Exeggcute,neo4,64,Psychic,Basic,40,,Psychic×2,,1,,Sleep Powder [草] 10 / Psyshock [超] 10,,,neo4-049
+neo4,50,アンノーンL,generated,Pokemon,Common,False,Unown [L],neo4,86,Psychic,Basic,50,,Psychic×2,,1,Pokémon Power: [Laugh],Hidden Power [超] 10,,,neo4-050
+neo4,51,アンノーンS,generated,Pokemon,Common,False,Unown [S],neo4,87,Psychic,Basic,50,,Psychic×2,,1,Pokémon Power: [Search],Hidden Power [超無] 20,,,neo4-051
+neo4,52,アンノーンT,generated,Pokemon,Common,False,Unown [T],neo4,88,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Tell],Hidden Power [超無] 20,,,neo4-052
+neo4,53,アンノーンV,generated,Pokemon,Common,False,Unown [V],neo4,89,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Vanish],Hidden Power [超] 10,,,neo4-053
+neo4,54,やさしいヤドラン,generated,Pokemon,Uncommon,False,Light Slowbro,neo4,51,Psychic,Stage 1,80,Slowpoke,Psychic×2,,2,,Fish Out [超] / Splash About [水無] 20+,,,neo4-054
+neo4,55,わるいゴースト,generated,Pokemon,Uncommon,False,Dark Haunter,neo4,36,Psychic,Stage 1,50,Gastly,,Fighting-30,0,,Call Back [超] / Surround [超超] 20,,,neo4-055
+neo4,56,わるいナッシー,generated,Pokemon,Uncommon,False,Dark Exeggutor,neo4,33,Psychic,Stage 1,60,Exeggcute,Psychic×2,,2,,Triple Headbutt [無] 10× / MAX Burst [超無] 20×,,,neo4-056
+neo4,57,アンノーンC,generated,Pokemon,Uncommon,False,Unown [C],neo4,57,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Chase],Hidden Power [超] 10,,,neo4-057
+neo4,58,アンノーンP,generated,Pokemon,Uncommon,False,Unown [P],neo4,58,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Perform],Hidden Power [超] 10,,,neo4-058
+neo4,59,アンノーンQ,generated,Pokemon,Uncommon,False,Unown [Q],neo4,59,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Quicken],Hidden Power [超] 10,,,neo4-059
+neo4,60,アンノーンZ,generated,Pokemon,Uncommon,False,Unown [Z],neo4,60,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Zoom],Hidden Power [超] 10,,,neo4-060
+neo4,61,わるいヤドキング,generated,Pokemon,Rare,False,Dark Slowking,neo4,20,Psychic,Stage 1,60,Slowpoke,Psychic×2,,2,Pokémon Power: Cunning,Mind Shock [超超] 30,,,neo4-061
+neo4,62,アンノーンG,generated,Pokemon,Rare,False,Unown [G],neo4,27,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Give],Hidden Power [超] 10,,,neo4-062
+neo4,63,アンノーンH,generated,Pokemon,Rare,False,Unown [H],neo4,28,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Help],Hidden Power [超] 10,,,neo4-063
+neo4,64,アンノーンW,generated,Pokemon,Rare,False,Unown [W],neo4,29,Psychic,Basic,40,,Psychic×2,,1,Pokémon Power: [Want],Hidden Power [超] 10,,,neo4-064
+neo4,65,アンノーンX,generated,Pokemon,Rare,False,Unown [X],neo4,30,Psychic,Basic,50,,Psychic×2,,1,Pokémon Power: [XXXXX],Hidden Power [超] 10,,,neo4-065
+neo4,66,わるいゲンガー,generated,Pokemon,Holo Rare,True,Dark Gengar,neo4,6,Psychic,Stage 2,70,Dark Haunter,,Fighting-30,2,Pokémon Power: Deep Sleep,Pull In [超超超] 30,,,neo4-066
+neo4,67,わるいエーフィ,generated,Pokemon,Holo Rare,True,Dark Espeon,neo4,4,Psychic,Stage 1,60,Eevee,Psychic×2,,0,,Gouge [無] 10+ / Psysplash [超無無],,,neo4-067
+neo4,68,ひかるミュウツー,generated,Pokemon,Rare,False,Shining Mewtwo,neo4,109,Psychic,Basic,70,,Psychic×2,,2,,Reflect Shield [超雷] / Psyburst [超超炎] 40+,,,neo4-068
+neo4,69,ワンリキー,generated,Pokemon,Common,False,Machop,neo4,73,Fighting,Basic,40,,Psychic×2,,1,,Chop [無] 10 / Punch [無無] 20,,,neo4-069
+neo4,70,エビワラー,generated,Pokemon,Common,False,Hitmonchan,neo4,69,Fighting,Basic,60,,Psychic×2,,1,,Dodge [闘] / Supersonic Jab [闘闘闘] 40,,,neo4-070
+neo4,71,グライガー,generated,Pokemon,Common,False,Gligar,neo4,67,Fighting,Basic,50,,Grass×2,Fighting-30,0,,Stun Poison [闘無] 10,,,neo4-071
+neo4,72,ゴマゾウ,generated,Pokemon,Common,False,Phanpy,neo4,76,Fighting,Basic,40,,Grass×2,Lightning-30,1,,Crushing Step [闘] 10+,,,neo4-072
+neo4,73,ヨーギラス,generated,Pokemon,Common,False,Larvitar,neo4,70,Fighting,Basic,40,,Grass×2,Lightning-30,1,,Leer [無] / Rock Throw [闘無] 20,,,neo4-073
+neo4,74,やさしいゴーリキー,generated,Pokemon,Uncommon,False,Light Machoke,neo4,49,Fighting,Stage 1,80,Machop,Psychic×2,,2,,Return Home [闘] / Gentle Kick [闘闘] 40,,,neo4-074
+neo4,75,サワムラー,generated,Pokemon,Uncommon,False,Hitmonlee,neo4,42,Fighting,Basic,60,,Psychic×2,,1,,One-Two Kick [闘闘] 20× / Heel Drop [闘闘闘] 60,,,neo4-075
+neo4,76,わるいサナギラス,generated,Pokemon,Uncommon,False,Dark Pupitar,neo4,38,Fighting,Stage 1,60,Larvitar,Grass×2,Lightning-30,1,,Rock Tackle [闘闘] 40 / Explosive Evolution [無無無],,,neo4-076
+neo4,77,やさしいカイリキー,generated,Pokemon,Rare,False,Light Machamp,neo4,25,Fighting,Stage 2,100,Light Machoke,Psychic×2,,2,Pokémon Power: Tag Team,Beatdown [闘闘闘] 50,,,neo4-077
+neo4,78,わるいドンファン,generated,Pokemon,Holo Rare,True,Dark Donphan,neo4,3,Fighting,Stage 1,60,Phanpy,Grass×2,Lightning-30,3,,Tusk Toss [闘闘] / Giant Tusk [闘闘無] 50,,,neo4-078
+neo4,79,わるいバンギラス,generated,Pokemon,Holo Rare,True,Dark Tyranitar,neo4,11,Fighting,Stage 2,90,Dark Pupitar,Grass×2,Lightning-30,3,,Mountain Smasher [闘] 20× / Fling Away [闘闘闘無] 50,,,neo4-079
+neo4,80,ひかるカブトプス,generated,Pokemon,Rare,False,Shining Kabutops,neo4,108,Fighting,Basic,80,,Grass×2,,2,,Lightning Cut [闘闘雷] 30+ / Water Slash [闘闘水水] 50+,,,neo4-080
+neo4,81,デルビル,generated,Pokemon,Common,False,Houndour,neo4,43,Darkness,Basic,40,,,Psychic-30,1,,Corner [悪] / Lunge [無無] 30,,,neo4-081
+neo4,82,ひかるバンギラス,generated,Pokemon,Rare,False,Shining Tyranitar,neo4,113,Darkness,Basic,80,,,Psychic-30,3,,Mountain Crush [悪闘闘] 30 / Destructive Fire [悪炎炎炎] 50,,,neo4-082
+neo4,83,わるいハッサム,generated,Pokemon,Holo Rare,True,Dark Scizor,neo4,9,Metal,Stage 1,70,Scyther,Fire×2,Grass-30,2,,Threaten [無無] / Slash [無無無] 30,,,neo4-083
+neo4,84,ひかるハガネール,generated,Pokemon,Rare,False,Shining Steelix,neo4,112,Metal,Basic,90,,Fire×2,Grass-30,4,,Crushing Earth [鋼鋼闘闘] 80,,,neo4-084
+neo4,85,プリン,generated,Pokemon,Common,False,Jigglypuff,neo4,44,Colorless,Basic,50,,Fighting×2,Psychic-30,1,,Expand [無無] 10,,,neo4-085
+neo4,86,ポリゴン,generated,Pokemon,Common,False,Porygon,neo4,78,Colorless,Basic,50,,Fighting×2,Psychic-30,1,,Sharpen [無無] 20,,,neo4-086
+neo4,87,ミニリュウ,generated,Pokemon,Common,False,Dratini,neo4,63,Colorless,Basic,40,,,Psychic-30,1,,Shed [無] / Fury Attack [無] 10×,,,neo4-087
+neo4,88,トゲピー,generated,Pokemon,Common,False,Togepi,neo4,56,Colorless,Basic,40,,,Psychic-30,1,,Charm [無] / Spike Ball Tackle [無無] 20,,,neo4-088
+neo4,89,キリンリキ,generated,Pokemon,Common,False,Girafarig,neo4,66,Colorless,Basic,60,,,,1,,Tail Bite [無無] 10+ / Psychic [超超] 10+,,,neo4-089
+neo4,90,やさしいプクリン,generated,Pokemon,Uncommon,False,Light Wigglytuff,neo4,54,Colorless,Stage 1,80,Jigglypuff,Fighting×2,Psychic-30,1,,Evolution Song [無] / Body Slam [無無無] 20,,,neo4-090
+neo4,91,わるいプクリン,generated,Pokemon,Uncommon,False,Dark Wigglytuff,neo4,40,Colorless,Stage 1,60,Jigglypuff,Fighting×2,Psychic-30,2,,Dark Song [無無] / Slap Awake [無無無] 20+,,,neo4-091
+neo4,92,ラッキー,generated,Pokemon,Uncommon,False,Chansey,neo4,31,Colorless,Basic,90,,Fighting×2,Psychic-30,2,,Doubleslap [無無] 20× / Egg Toss [無無無] 80,,,neo4-092
+neo4,93,やさしいハクリュー,generated,Pokemon,Rare,False,Light Dragonair,neo4,22,Colorless,Stage 1,80,Dratini,,Psychic-30,2,,Healing Light [無無] / Protective Wave [無無無] 20,,,neo4-093
+neo4,94,やさしいカイリュー,generated,Pokemon,Holo Rare,True,Light Dragonite,neo4,14,Colorless,Stage 2,100,Light Dragonair,,Fighting-30,2,Pokémon Power: Miraculous Wind,Light Wave [無無無] 40,,,neo4-094
+neo4,95,やさしいトゲチック,generated,Pokemon,Holo Rare,True,Light Togetic,neo4,15,Colorless,Stage 1,60,Togepi,,Fighting-30,0,Pokémon Power: Gift,Sweet Kiss [無無] 30,,,neo4-095
+neo4,96,わるいリングマ,generated,Pokemon,Rare,False,Dark Ursaring,neo4,21,Colorless,Stage 1,60,Teddiursa,Fighting×2,Psychic-30,2,,Provoke [無] / Battle Frenzy [無無],,,neo4-096
+neo4,97,わるいポリゴン２,generated,Pokemon,Holo Rare,True,Dark Porygon2,neo4,8,Colorless,Stage 1,60,Porygon,Fighting×2,Psychic-30,1,Pokémon Power: Spatial Distortion,Curve Attack [無無無] 20,,,neo4-097
+neo4,98,ひかるヨルノズク,generated,Pokemon,Rare,False,Shining Noctowl,neo4,110,Colorless,Basic,60,,Lightning×2,Fighting-30,1,,Flashing Eyes [超雷無] 30,,,neo4-098
+neo4,99,,unknown,Trainer,Common,False,Heal Powder,neo4,104,,,,,,,,,,,,neo4-099
+neo4,100,,unknown,Trainer,Common,False,Mail from Bill,neo4,105,,,,,,,,,,,,neo4-100
+neo4,101,,unknown,Trainer,Uncommon,False,Energy Stadium,neo4,99,,,,,,,,,,,,neo4-101
+neo4,102,,unknown,Trainer,Uncommon,False,Energy Amplifier,neo4,98,,,,,,,,,,,,neo4-102
+neo4,103,,unknown,Trainer,Uncommon,False,Counterattack Claws,neo4,97,,,,,,,,,,,,neo4-103
+neo4,104,,unknown,Trainer,Uncommon,False,Magnifier,neo4,101,,,,,,,,,,,,neo4-104
+neo4,105,,unknown,Trainer,Uncommon,False,Pokémon Personality Test,neo4,102,,,,,,,,,,,,neo4-105
+neo4,106,,unknown,Trainer,Uncommon,False,Lucky Stadium,neo4,100,,,,,,,,,,,,neo4-106
+neo4,107,,unknown,Trainer,Uncommon,False,Team Rocket's Evil Deeds,neo4,103,,,,,,,,,,,,neo4-107
+neo4,108,,unknown,Trainer,Rare,False,Thought Wave Machine,neo4,96,,,,,,,,,,,,neo4-108
+neo4,109,,unknown,Trainer,Rare,False,EXP.ALL,neo4,93,,,,,,,,,,,,neo4-109
+neo4,110,,unknown,Trainer,Rare,False,Broken Ground Gym,neo4,92,,,,,,,,,,,,neo4-110
+neo4,111,,unknown,Trainer,Rare,False,Impostor Professor Oak's Invention,neo4,94,,,,,,,,,,,,neo4-111
+neo4,112,,unknown,Trainer,Rare,False,Radio Tower,neo4,95,,,,,,,,,,,,neo4-112
+neo4,113,,unknown,Energy,Holo Rare,True,Miracle Energy,neo4,16,,,,,,,,,,,,neo4-113
