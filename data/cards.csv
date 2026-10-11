@@ -76,11 +76,11 @@ PMCG1-074,PMCG1,74,trainer,マサキ,Bill,未確認,common,False,base1,91,,,,,,,
 PMCG1-075,PMCG1,75,trainer,いいきずぐすり,Super Potion,未確認,uncommon,False,base1,90,,,,,,,,,,,,Discard 1 Energy card attached to your own Pokémon in order to remove up to 4 damage counters from that Pokémon.,,
 PMCG1-076,PMCG1,76,trainer,エネルギー回収,Energy Retrieval,未確認,uncommon,False,base1,81,,,,,,,,,,,,Trade 1 of the other cards in your hand for up to 2 basic Energy cards from your discard pile.,,
 PMCG1-077,PMCG1,77,trainer,オーキドはかせ,Professor Oak,有力,uncommon,False,base1,88,,,,,,,,,,,,"Discard your hand, then draw 7 cards.",,
-PMCG1-078,PMCG1,78,trainer,げんきのかけら,Revive,未確認,uncommon,False,base1,89,,,,,,,,,,,,Put 1 Basic Pokémon card from your discard pile onto your Bench. Put damage counters on that Pokémon equal to half its HP (rounded down to the nearest 10). (You can't play Revive if your Bench is full.),,
+PMCG1-078,PMCG1,78,trainer,元気のかけら,Revive,有力,uncommon,False,base1,89,,,,,,,,,,,,Put 1 Basic Pokémon card from your discard pile onto your Bench. Put damage counters on that Pokémon equal to half its HP (rounded down to the nearest 10). (You can't play Revive if your Bench is full.),,なぞのばしょの表記による。TCGdex の表記は「げんきのかけら」
 PMCG1-079,PMCG1,79,trainer,ディフェンダー,Defender,未確認,uncommon,False,base1,80,,,,,,,,,,,,"Attach Defender to 1 of your Pokémon. At the end of your opponent's next turn, discard Defender. Damage done to that Pokémon by attacks is reduced by 20 (after applying Weakness and Resistance).",,
 PMCG1-080,PMCG1,80,trainer,なんでもなおし,Full Heal,未確認,uncommon,False,base1,82,,,,,,,,,,,,"Your Active Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned.",,
 PMCG1-081,PMCG1,81,trainer,プラスパワー,PlusPower,有力,uncommon,False,base1,84,,,,,,,,,,,,"Attach PlusPower to your Active Pokémon. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon.",[text] プラスパワーが上乗せするダメージ,
-PMCG1-082,PMCG1,82,trainer,ポケモン図鑑,Pokédex,未確認,uncommon,False,base1,87,,,,,,,,,,,,Look at up to 5 cards from the top of your deck and rearrange them as you like.,,
+PMCG1-082,PMCG1,82,trainer,ポケモン図鑑 HANDY505,Pokédex,有力,uncommon,False,base1,87,,,,,,,,,,,,Look at up to 5 cards from the top of your deck and rearrange them as you like.,,なぞのばしょの表記による。TCGdex の表記は「ポケモン図鑑」
 PMCG1-083,PMCG1,83,trainer,ポケモンセンター,Pokémon Center,未確認,uncommon,False,base1,85,,,,,,,,,,,,"Remove all damage counters from all of your own Pokémon with damage counters on them, then discard all Energy cards attached to those Pokémon.",,
 PMCG1-084,PMCG1,84,trainer,ポケモンの笛,Pokémon Flute,未確認,uncommon,False,base1,86,,,,,,,,,,,,Choose 1 Basic Pokémon card from your opponent's discard pile and put it onto his or her Bench. (You can't play Pokémon Flute if your opponent's Bench is full.),,
 PMCG1-085,PMCG1,85,trainer,メンテナンス,Maintenance,未確認,uncommon,False,base1,83,,,,,,,,,,,,Shuffle 2 of the other cards from your hand into your deck in order to draw a card.,,
@@ -94,8 +94,8 @@ PMCG1-092,PMCG1,92,trainer,ポケモン回収,Scoop Up,未確認,rare,False,base
 PMCG1-093,PMCG1,93,trainer,ポケモン交換おじさん,Pokémon Trader,未確認,rare,False,base1,77,,,,,,,,,,,,Trade 1 of the Basic Pokémon or Evolution cards in your hand for 1 of the Basic Pokémon or Evolution cards from your deck. Show both cards to your opponent. Shuffle your deck afterward.,,
 PMCG1-094,PMCG1,94,trainer,ポケモン育て屋さん,Pokémon Breeder,未確認,rare,False,base1,76,,,,,,,,,,,,Put a Stage 2 Evolution card from your hand on the matching Basic Pokémon. You can only play this card when you would be allowed to evolve that Pokémon anyway.,[errata] サポーター扱いのエラッタ,
 PMCG1-095,PMCG1,95,trainer,ミニスカート,Lass,有力,rare,False,base1,75,,,,,,,,,,,,"You and your opponent show each other your hands, then shuffle all the Trainer cards from your hands into your decks.",,
-PMCG1-096,PMCG1,96,energy,ダブル無色エネルギー,Double Colorless Energy,未確認,uncommon,False,base1,96,,,,,,,,,,special,,"Provides ColorlessColorless energy.
-Doesn't count as a basic Energy card.",,
+PMCG1-096,PMCG1,96,energy,無色2個エネルギー,Double Colorless Energy,有力,uncommon,False,base1,96,,,,,,,,,,special,,"Provides ColorlessColorless energy.
+Doesn't count as a basic Energy card.",,なぞのばしょの表記による。TCGdex の表記は「ダブル無色エネルギー」
 PMCG1-097,PMCG1,97,energy,草エネルギー,Grass Energy,有力,common,False,base1,99,,,,,,,,,,basic,,,,旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）
 PMCG1-098,PMCG1,98,energy,炎エネルギー,Fire Energy,有力,common,False,base1,98,,,,,,,,,,basic,,,,旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）
 PMCG1-099,PMCG1,99,energy,水エネルギー,Water Energy,有力,common,False,base1,102,,,,,,,,,,basic,,,,旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki）

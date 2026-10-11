@@ -85,11 +85,11 @@
 | 75 | いいきずぐすり ※ | トレーナー |  |  |  | ◆ | Super Potion<br>Base Set 90 |  |
 | 76 | エネルギー回収 ※ | トレーナー |  |  |  | ◆ | Energy Retrieval<br>Base Set 81 |  |
 | 77 | オーキドはかせ | トレーナー |  |  |  | ◆ | Professor Oak<br>Base Set 88 |  |
-| 78 | げんきのかけら ※ | トレーナー |  |  |  | ◆ | Revive<br>Base Set 89 |  |
+| 78 | 元気のかけら | トレーナー |  |  |  | ◆ | Revive<br>Base Set 89 | なぞのばしょの表記による。TCGdex の表記は「げんきのかけら」 |
 | 79 | ディフェンダー ※ | トレーナー |  |  |  | ◆ | Defender<br>Base Set 80 |  |
 | 80 | なんでもなおし ※ | トレーナー |  |  |  | ◆ | Full Heal<br>Base Set 82 |  |
 | 81 | プラスパワー | トレーナー |  |  |  | ◆ | PlusPower<br>Base Set 84 | 日英の違い: プラスパワーが上乗せするダメージ |
-| 82 | ポケモン図鑑 ※ | トレーナー |  |  |  | ◆ | Pokédex<br>Base Set 87 |  |
+| 82 | ポケモン図鑑 HANDY505 | トレーナー |  |  |  | ◆ | Pokédex<br>Base Set 87 | なぞのばしょの表記による。TCGdex の表記は「ポケモン図鑑」 |
 | 83 | ポケモンセンター ※ | トレーナー |  |  |  | ◆ | Pokémon Center<br>Base Set 85 |  |
 | 84 | ポケモンの笛 ※ | トレーナー |  |  |  | ◆ | Pokémon Flute<br>Base Set 86 |  |
 | 85 | メンテナンス ※ | トレーナー |  |  |  | ◆ | Maintenance<br>Base Set 83 |  |
@@ -103,7 +103,7 @@
 | 93 | ポケモン交換おじさん ※ | トレーナー |  |  |  | ★ | Pokémon Trader<br>Base Set 77 |  |
 | 94 | ポケモン育て屋さん ※ | トレーナー |  |  |  | ★ | Pokémon Breeder<br>Base Set 76 | 日英の違い: サポーター扱いのエラッタ |
 | 95 | ミニスカート | トレーナー |  |  |  | ★ | Lass<br>Base Set 75 |  |
-| 96 | ダブル無色エネルギー ※ | 特殊エネルギー |  |  |  | ◆ | Double Colorless Energy<br>Base Set 96 |  |
+| 96 | 無色2個エネルギー | 特殊エネルギー |  |  |  | ◆ | Double Colorless Energy<br>Base Set 96 | なぞのばしょの表記による。TCGdex の表記は「ダブル無色エネルギー」 |
 | 97 | 草エネルギー | 基本エネルギー |  |  |  | ● | Grass Energy<br>Base Set 99 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
 | 98 | 炎エネルギー | 基本エネルギー |  |  |  | ● | Fire Energy<br>Base Set 98 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
 | 99 | 水エネルギー | 基本エネルギー |  |  |  | ● | Water Energy<br>Base Set 102 | 旧裏期は「〇エネルギー」。「基本〇エネルギー」への改称は LEGEND 期（ポケモンWiki） |
@@ -940,13 +940,15 @@
 
 - 英語: Discard your hand, then draw 7 cards.
 
-### 78. げんきのかけら / Revive
+### 78. 元気のかけら / Revive
 
 トレーナー／レア ◆
 
 英語版: Base Set 89
 
 - 英語: Put 1 Basic Pokémon card from your discard pile onto your Bench. Put damage counters on that Pokémon equal to half its HP (rounded down to the nearest 10). (You can't play Revive if your Bench is full.)
+
+- 備考: なぞのばしょの表記による。TCGdex の表記は「げんきのかけら」
 
 ### 79. ディフェンダー / Defender
 
@@ -974,13 +976,15 @@
 
 - **日英の違い（プラスパワーが上乗せするダメージ、確度: 有力）** 日本版: 初期の文面では、自分のバトルポケモンが受けるダメージにも 10 加わった。1998年頃にエラッタ（二次資料による） ／ 英語版: 相手のバトルポケモンに与えるダメージだけを 10 増やす
 
-### 82. ポケモン図鑑 / Pokédex
+### 82. ポケモン図鑑 HANDY505 / Pokédex
 
 トレーナー／レア ◆
 
 英語版: Base Set 87
 
 - 英語: Look at up to 5 cards from the top of your deck and rearrange them as you like.
+
+- 備考: なぞのばしょの表記による。TCGdex の表記は「ポケモン図鑑」
 
 ### 83. ポケモンセンター / Pokémon Center
 
@@ -1090,7 +1094,7 @@
 
 - 英語: You and your opponent show each other your hands, then shuffle all the Trainer cards from your hands into your decks.
 
-### 96. ダブル無色エネルギー / Double Colorless Energy
+### 96. 無色2個エネルギー / Double Colorless Energy
 
 特殊エネルギー／レア ◆
 
@@ -1098,6 +1102,8 @@
 
 - 英語: Provides ColorlessColorless energy.
 Doesn't count as a basic Energy card.
+
+- 備考: なぞのばしょの表記による。TCGdex の表記は「ダブル無色エネルギー」
 
 ### 97. 草エネルギー / Grass Energy
 

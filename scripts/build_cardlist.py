@@ -367,7 +367,8 @@ def build_records(args):
                    'jp_en_differences': diffs.get(key, []),
                    'notes': [ov['note']] if ov.get('note') else [],
                    'source_ids': {'tcgdex': key, 'pokemontcg': []},
-                   'ja_text_source': ja_text.get('source')}
+                   'ja_text_source': ja_text.get('source'),
+                   'jp_print': None}
             if jc['category'] == 'Pokemon' and key in jp_only:
                 rec['name']['ja'] = jp_only[key]['ja_name']
                 rec['name_ja_confidence'] = '有力'
@@ -499,8 +500,21 @@ def match_nazonobasho(records, data, manual):
     return pairs, unmatched
 
 
+def none_or(v):
+    return None if v in (None, '', 'n/a') else v
+
+
 def apply_nazonobasho(r, c, report):
     """対応付けたカードの日本語テキストをレコードに入れ、日英の数値の食い違いを report に記録する。"""
+    f = c['fields']
+    lv = f.get('LV.')
+    r['jp_print'] = {
+        'level': int(lv) if lv and lv.isdigit() else None,
+        'rarity': none_or(f.get('レアリティ')),
+        'series': none_or(f.get('シリーズ')),
+        'remarks': [x.lstrip('・').strip() for x in (none_or(f.get('備考')) or '').split('\n') if x.strip()],
+        'source': c['url'],
+    }
     if r['ja_text_source']:  # ja_text.json（手入力）を優先
         return
     r['ja_text_source'] = c['url']
@@ -529,9 +543,6 @@ def apply_nazonobasho(r, c, report):
         retreat = c['fields'].get('にげる')
         if retreat and retreat != 'n/a' and len(ja_cost(retreat)) != p['retreat_cost']:
             report.append((r['id'], 'retreat', p['retreat_cost'], retreat))
-        lv = c['fields'].get('LV.')
-        if lv and lv.isdigit():
-            p['level_ja'] = int(lv)
     else:
         target = r['trainer'] or r['energy']
         if target and target.get('text') is not None:
@@ -661,7 +672,8 @@ def card_detail(r):
     p = r['pokemon']
     if p:
         evo = f"（{both(p['evolves_from'])} から進化）" if p['evolves_from'] else ''
-        head = [f"{STAGE_JA.get(p['stage'], '')}{evo}", types_ja(p['types']), f"HP {p['hp']}",
+        lv = (r['jp_print'] or {}).get('level')  # 英語版データのレベルには誤りがあるため使わない
+        head = [f"{STAGE_JA.get(p['stage'], '')}{evo}"] + ([f"LV.{lv}"] if lv else []) + [types_ja(p['types']), f"HP {p['hp']}",
                 f"弱点 {wr_ja(p['weaknesses'])}", f"抵抗力 {wr_ja(p['resistances'])}",
                 f"にげる {p['retreat_cost'] if p['retreat_cost'] is not None else '?'}"]
     head.append(f"レア {rarity_ja(r)}")
@@ -701,7 +713,12 @@ def card_detail(r):
         lines.append(f"- **日英の違い（{d['summary']}、確度: {d['confidence']}）** 日本版: {d['ja']} ／ 英語版: {d['en']}")
     for n in r['notes']:
         lines.append(f"- 備考: {n}")
-    if r['jp_en_differences'] or r['notes'] or r['ja_text_source']:
+    jpp = r['jp_print'] or {}
+    if jpp.get('series'):
+        lines.append(f"- 日本版の収録商品: {jpp['series']}")
+    for n in jpp.get('remarks', []):
+        lines.append(f"- 日本版の印刷について: {n}")
+    if r['jp_en_differences'] or r['notes'] or r['ja_text_source'] or jpp:
         lines.append('')
     return lines
 

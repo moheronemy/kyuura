@@ -86,7 +86,8 @@ def cell_text(inner):
 
 def table_rows(page_html):
     a = page_html.find('<div class="entry-content')
-    b = page_html.find('</table>', a)
+    ends = [i for i in (page_html.find('シェアする', a), page_html.find('関連記事', a)) if i > 0]
+    b = min(ends) if ends else len(page_html)
     rows = []
     for tr in re.findall(r'<tr[^>]*>(.*?)</tr>', page_html[a:b], re.S):
         cells = []
