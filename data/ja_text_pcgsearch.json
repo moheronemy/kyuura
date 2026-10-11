@@ -1,0 +1,3882 @@
+{
+ "source": "https://pcg-search.com/card/card_list.php",
+ "note": "ポケモンカード 旧シリーズ検索（pcg-search.com）のカードページから scripts/pcg_search.py で抽出。list_number はサイトの並び順で、カードに印刷された番号ではない。",
+ "products": {
+  "拡張シート 第1弾(青版)": [
+   {
+    "list_number": "001/036",
+    "url": "https://pcg-search.com/card/1st/1stex1001.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "フシギダネ",
+    "hp": 50,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "かいふく",
+      "cost": "無",
+      "damage": null,
+      "text": "このカードにダメージカウンターがのっていれば、それを1つ取りのぞく"
+     },
+     {
+      "name": "どくのたね",
+      "cost": "草",
+      "damage": null,
+      "text": "相手を「どく」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "002/036",
+    "url": "https://pcg-search.com/card/1st/1stex1002.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "キャタピー",
+    "hp": 50,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "たいあたり",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     },
+     {
+      "name": "からまるいと",
+      "cost": "草",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手の対戦ポケモンは、次の相手の番が終わるまでバトル場をはなれられない。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Aya Kusube",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "003/036",
+    "url": "https://pcg-search.com/card/1st/1stex1003.php",
+    "kind": "１進化ポケモン",
+    "type": "草",
+    "name": "トランセル",
+    "hp": 70,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [
+     {
+      "name": "グリーンシールド",
+      "text": "このカードが場にいる限り、自分の「草」ポケモンがダメージを受ける時に「弱点」の影響を受けない。このカードが「ねむり・マヒ・こんらん」状態の時、この力は消える。"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "ふしぎなこな",
+      "cost": "草草",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Aya Kusube",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "004/036",
+    "url": "https://pcg-search.com/card/1st/1stex1004.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "ビードル",
+    "hp": 50,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "つつく",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     },
+     {
+      "name": "どくのつの",
+      "cost": "草",
+      "damage": null,
+      "text": "相手を「どく」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "005/036",
+    "url": "https://pcg-search.com/card/1st/1stex1005.php",
+    "kind": "１進化ポケモン",
+    "type": "草",
+    "name": "コクーン",
+    "hp": 60,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [
+     {
+      "name": "どくのたいえき",
+      "text": "この力は、このカードが相手のワザによってダメージを受けた時だけ、使える。このカードにダメージを与えたポケモンを「どく」状態にする。このカードが「ねむり・マヒ・こんらん」状態の時、この力は使えない。"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "ころがる",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "006/036",
+    "url": "https://pcg-search.com/card/1st/1stex1006.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "ニドラン♀",
+    "hp": 50,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "しっぽをふる",
+      "cost": "無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、このワザを受けた相手は、次の相手の番にワザを使えない。"
+     },
+     {
+      "name": "どくばり",
+      "cost": "草",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「どく」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "007/036",
+    "url": "https://pcg-search.com/card/1st/1stex1007.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "ニドラン♂",
+    "hp": 50,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "きあいだめ",
+      "cost": "無",
+      "damage": null,
+      "text": "次の自分の番だけ、このカードがつかう「つのでとっしん」のダメージは2倍になる。"
+     },
+     {
+      "name": "つのでとっしん",
+      "cost": "草無",
+      "damage": "40",
+      "text": "コインを投げて「うら」なら、このワザは失敗する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "008/036",
+    "url": "https://pcg-search.com/card/1st/1stex1008.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "ズバット",
+    "hp": 40,
+    "weakness": "超×2",
+    "resistance": "闘-30",
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "かみつく",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     },
+     {
+      "name": "あやしいおんぱ",
+      "cost": "草無",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Aya Kusube",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "009/036",
+    "url": "https://pcg-search.com/card/1st/1stex1009.php",
+    "kind": "１進化ポケモン",
+    "type": "草",
+    "name": "ゴルバット",
+    "hp": 50,
+    "weakness": "超×2",
+    "resistance": "闘-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "きゅうけつ",
+      "cost": "草草無",
+      "damage": "20",
+      "text": "相手にダメージを与えたら、与えたぶんのダメージカウンターを、このカードから取りのぞいてよい。"
+     },
+     {
+      "name": "きゅうこうか",
+      "cost": "草無無無",
+      "damage": "60",
+      "text": "コインを投げて「うら」なら、自分にも40ダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "010/036",
+    "url": "https://pcg-search.com/card/1st/1stex1010.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "パラス",
+    "hp": 50,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ひっかく",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     },
+     {
+      "name": "ほうしをとばす",
+      "cost": "草",
+      "damage": null,
+      "text": "自分の山札から「パラス」を選び出し、ベンチに出す。その後、その山札をよく切る。(ベンチに空きがない時、このワザは使えない)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "011/036",
+    "url": "https://pcg-search.com/card/1st/1stex1011.php",
+    "kind": "１進化ポケモン",
+    "type": "草",
+    "name": "パラセクト",
+    "hp": 60,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "どくのほうし",
+      "cost": "草草",
+      "damage": "10",
+      "text": "相手を「どく」状態にする。"
+     },
+     {
+      "name": "きゅうけつ",
+      "cost": "草草無",
+      "damage": "20",
+      "text": "相手にダメージを与えたら、与えたぶんのダメージカウンターを、このカードから取りのぞいてよい。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Ken Sugimori",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "012/036",
+    "url": "https://pcg-search.com/card/1st/1stex1012.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "カイロス",
+    "hp": 50,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "はさんでなげる",
+      "cost": "草",
+      "damage": "10+",
+      "text": "コインを投げて「おもて」なら、10ダメージを追加する。"
+     },
+     {
+      "name": "きりさく",
+      "cost": "無無無",
+      "damage": "30",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Ken Sugimori",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "013/036",
+    "url": "https://pcg-search.com/card/1st/1stex1013.php",
+    "kind": "たねポケモン",
+    "type": "炎",
+    "name": "ヒトカゲ",
+    "hp": 50,
+    "weakness": "水×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "なきごえ",
+      "cost": "無",
+      "damage": null,
+      "text": "このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される"
+     },
+     {
+      "name": "ほのおのしっぽ",
+      "cost": "炎炎",
+      "damage": "30",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "014/036",
+    "url": "https://pcg-search.com/card/1st/1stex1014.php",
+    "kind": "１進化ポケモン",
+    "type": "炎",
+    "name": "ギャロップ",
+    "hp": 60,
+    "weakness": "水×2",
+    "resistance": null,
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "かえんじごく",
+      "cost": "炎",
+      "damage": "10+",
+      "text": "のぞむなら、このカードについている「炎」エネルギーカードを最大2枚はがしてトラッシュし、トラッシュした「炎」エネルギーカードの数×20のダメージを追加してよい。"
+     },
+     {
+      "name": "けりとばす",
+      "cost": "無無",
+      "damage": "20",
+      "text": "相手の対戦ポケモンを控えポケモンと入れ替える。入れ替わるポケモンは相手が選ぶ。(相手に控えがいない時、入れ替えはおこらない)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "015/036",
+    "url": "https://pcg-search.com/card/1st/1stex1015.php",
+    "kind": "たねポケモン",
+    "type": "水",
+    "name": "ゼニガメ",
+    "hp": 50,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ウォーターパワー",
+      "cost": "水",
+      "damage": null,
+      "text": "次の自分の番だけ、このカードが使う「はたく」のダメージは3倍になる。"
+     },
+     {
+      "name": "はたく",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "016/036",
+    "url": "https://pcg-search.com/card/1st/1stex1016.php",
+    "kind": "たねポケモン",
+    "type": "水",
+    "name": "ニョロモ",
+    "hp": 50,
+    "weakness": "草×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "あわ",
+      "cost": "水",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "017/036",
+    "url": "https://pcg-search.com/card/1st/1stex1017.php",
+    "kind": "１進化ポケモン",
+    "type": "水",
+    "name": "ニョロゾ",
+    "hp": 70,
+    "weakness": "草×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ぐるぐる",
+      "cost": "水水",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、相手を「こんらん」状態に、「うら」なら「ねむり」状態にする。"
+     },
+     {
+      "name": "のしかかり",
+      "cost": "水無無",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "018/036",
+    "url": "https://pcg-search.com/card/1st/1stex1018.php",
+    "kind": "２進化ポケモン",
+    "type": "水",
+    "name": "ニョロボン",
+    "hp": 80,
+    "weakness": "草×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "メガトンパンチ",
+      "cost": "水水",
+      "damage": "30",
+      "text": null
+     },
+     {
+      "name": "ハイドロポンプ",
+      "cost": "水水水",
+      "damage": "40+",
+      "text": "ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Yuuki Kawamura",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "019/036",
+    "url": "https://pcg-search.com/card/1st/1stex1019.php",
+    "kind": "たねポケモン",
+    "type": "雷",
+    "name": "ピカチュウ",
+    "hp": 30,
+    "weakness": "闘×2",
+    "resistance": null,
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "でんきショック",
+      "cost": "雷",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     },
+     {
+      "name": "こうそくいどう",
+      "cost": "雷雷",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、このカードは次の相手の番で、ワザによるダメージや効果を受けない。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "020/036",
+    "url": "https://pcg-search.com/card/1st/1stex1020.php",
+    "kind": "たねポケモン",
+    "type": "超",
+    "name": "ケーシィ",
+    "hp": 30,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "サイキックビーム",
+      "cost": "超",
+      "damage": null,
+      "text": "相手の場のポケモン1匹を選び、(「弱点・抵抗力」に関係なく)10ダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Aya Kusube",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "021/036",
+    "url": "https://pcg-search.com/card/1st/1stex1021.php",
+    "kind": "たねポケモン",
+    "type": "超",
+    "name": "バリヤード",
+    "hp": 50,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [
+     {
+      "name": "ニュートラルダメージ",
+      "text": "このカードがベンチにいる限り、お互いの対戦ポケモンは、ダメージを受ける時に、「弱点・抵抗力」の影響を受けない。"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "ジャグリング",
+      "cost": "超無",
+      "damage": "10×",
+      "text": "コインを4枚投げ、「おもて」の数×10のダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Kasumi Matsuda",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "022/036",
+    "url": "https://pcg-search.com/card/1st/1stex1022.php",
+    "kind": "たねポケモン",
+    "type": "超",
+    "name": "ミュウツー",
+    "hp": 80,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "サイコクラッシュ",
+      "cost": "超",
+      "damage": "10×",
+      "text": "相手の場のポケモンについている「超」エネルギーカードの数×10のダメージ。"
+     },
+     {
+      "name": "ちょうねんりき",
+      "cost": "超超無",
+      "damage": "50",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "023/036",
+    "url": "https://pcg-search.com/card/1st/1stex1023.php",
+    "kind": "たねポケモン",
+    "type": "闘",
+    "name": "イシツブテ",
+    "hp": 50,
+    "weakness": "草×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "たいあたり",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     },
+     {
+      "name": "かたくなる",
+      "cost": "闘無",
+      "damage": null,
+      "text": "このカードが次の相手の番で受ける20以下のダメージは、0になる。(ダメージ以外の効果はそのまま受ける)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Ai Kurihara",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "024/036",
+    "url": "https://pcg-search.com/card/1st/1stex1024.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "ポッポ",
+    "hp": 50,
+    "weakness": "雷×2",
+    "resistance": "闘-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "かぜおこし",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     },
+     {
+      "name": "でんこうせっか",
+      "cost": "無無",
+      "damage": "10+",
+      "text": "コインを投げて「おもて」なら、20ダメージを追加する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Aya Kusube",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "025/036",
+    "url": "https://pcg-search.com/card/1st/1stex1025.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "コラッタ",
+    "hp": 50,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ひっかく",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     },
+     {
+      "name": "しっぽをふる",
+      "cost": "無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、このワザを受けた相手は、次の相手の番にワザを使えない。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "026/036",
+    "url": "https://pcg-search.com/card/1st/1stex1026.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "ピッピ",
+    "hp": 50,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "このゆびとまれ",
+      "cost": "無",
+      "damage": null,
+      "text": "相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。(相手に控えがいない時、このワザは使えない)"
+     },
+     {
+      "name": "ひかるゆび",
+      "cost": "無無",
+      "damage": "10",
+      "text": "相手を「ねむり」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "027/036",
+    "url": "https://pcg-search.com/card/1st/1stex1027.php",
+    "kind": "１進化ポケモン",
+    "type": "無",
+    "name": "プクリン",
+    "hp": 90,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": "無無無",
+    "powers": [
+     {
+      "name": "てだすけ",
+      "text": "この力は、自分の番ごとに1回、このカードがベンチにいる時にだけ使える。コインを投げて「おもて」なら、自分の対戦ポケモンの「どく・ねむり・マヒ・こんらん」状態のうちの1つを回復させる。"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "ふくらむ",
+      "cost": "無無無無",
+      "damage": "20",
+      "text": "このカードが次の相手に受けるダメージは「-10」される。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "028/036",
+    "url": "https://pcg-search.com/card/1st/1stex1028.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "ドードー",
+    "hp": 40,
+    "weakness": "雷×2",
+    "resistance": "闘-30",
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "なきごえ",
+      "cost": "無",
+      "damage": null,
+      "text": "このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される。"
+     },
+     {
+      "name": "つつく",
+      "cost": "無無",
+      "damage": "20",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "029/036",
+    "url": "https://pcg-search.com/card/1st/1stex1029.php",
+    "kind": "１進化ポケモン",
+    "type": "無",
+    "name": "ドードリオ",
+    "hp": 60,
+    "weakness": "雷×2",
+    "resistance": "闘-30",
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "けとばす",
+      "cost": "無",
+      "damage": "20",
+      "text": null
+     },
+     {
+      "name": "トライアタック",
+      "cost": "無無無",
+      "damage": "20×",
+      "text": "コインを3枚投げ、「おもて」の数×20のダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Ai Kurihara",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "030/036",
+    "url": "https://pcg-search.com/card/1st/1stex1030.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "ベロリンガ",
+    "hp": 60,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "なめる",
+      "cost": "無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     },
+     {
+      "name": "ふみつけ",
+      "cost": "無無",
+      "damage": "20+",
+      "text": "コインを投げて「おもて」なら、10ダメージを追加する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "031/036",
+    "url": "https://pcg-search.com/card/1st/1stex1031.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "ラッキー",
+    "hp": 100,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "うたう",
+      "cost": "無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、相手を「ねむり」状態にする。"
+     },
+     {
+      "name": "おうふくビンタ",
+      "cost": "無無無",
+      "damage": "20×",
+      "text": "コインを2枚投げて「おもて」の数×20のダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "032/036",
+    "url": "https://pcg-search.com/card/1st/1stex1032.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "イーブイ",
+    "hp": 30,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "かじる",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     },
+     {
+      "name": "とびかかる",
+      "cost": "無",
+      "damage": "20",
+      "text": "コインを投げて「うら」なら、このワザは失敗する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "033/036",
+    "url": "https://pcg-search.com/card/1st/1stex1033.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "ポリゴン",
+    "hp": 40,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "3Dアタック",
+      "cost": "無",
+      "damage": "10×",
+      "text": "コインを3枚投げて、「おもて」の数×10ダメージ。"
+     },
+     {
+      "name": "テクスチャー2",
+      "cost": "無無",
+      "damage": null,
+      "text": "このカードの抵抗力を、好きな色(無色以外)に変えてよい。バトル場をはなれた時、このワザの効果は消える。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "034/036",
+    "url": "https://pcg-search.com/card/1st/1stex1034.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "カビゴン",
+    "hp": 90,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": "無無無無",
+    "powers": [
+     {
+      "name": "とおせんぼ",
+      "text": "このカードがバトル場にいる限り、相手の対戦ポケモンは「にげる」ことができない。このカードが「ねむり・マヒ・こんらん」状態の時、このカは消える。"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "ねころぶ",
+      "cost": "無無無無",
+      "damage": "30",
+      "text": "ダメージを与えた後、自分を「ねむり」状態にする。コインを投げて「おもて」なら、相手も「ねむり」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Keita Takahashi",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "035/036",
+    "url": "https://pcg-search.com/card/1st/1stex1035.php",
+    "kind": "トレーナー",
+    "name": "化石の発掘",
+    "powers": [],
+    "attacks": [],
+    "text": "あなたの山札、またはあなたのトラッシュから「なにかの化石」を1枚選び出し、相手プレイヤーに見せてから、手札に加えてよい。その後、あなたの山札をよく切る。",
+    "note": null,
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "036/036",
+    "url": "https://pcg-search.com/card/1st/1stex1036.php",
+    "kind": "トレーナー",
+    "name": "月の石",
+    "powers": [],
+    "attacks": [],
+    "text": "あなたの山札から、「無色」ポケモンへの「進化カード」を1枚選び出し、相手プレイヤーに見せてから、手札に加えてよい。その後、その山札をよく切る。",
+    "note": null,
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "◆",
+    "remarks": null
+   }
+  ],
+  "拡張シート 第2弾(赤版)": [
+   {
+    "list_number": "001/036",
+    "url": "https://pcg-search.com/card/1st/1stex2001.php",
+    "kind": "１進化ポケモン",
+    "type": "草",
+    "name": "モルフォン",
+    "hp": 60,
+    "weakness": "炎×2",
+    "resistance": "闘-30",
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "たつまきおこし",
+      "cost": "草草",
+      "damage": "20",
+      "text": "相手を控えポケモンと入れ替える。入れ替わるポケモンは相手が選ぶ。その後、自分の控えポケモンから1匹を選び、自分と入れ替える。(控えがいない側は、入れ替えをしない)"
+     },
+     {
+      "name": "レインボーパウダー",
+      "cost": "草草無",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態に、「うら」なら「どく」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "002/036",
+    "url": "https://pcg-search.com/card/1st/1stex2002.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "ベトベター",
+    "hp": 50,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ベトベトえき",
+      "cost": "草",
+      "damage": null,
+      "text": "相手に「ベトベトマーカー」がのっていなければ、1つのせる。(「ベトベトマーカー」をのせているポケモンは、「にげる」時トラッシュするエネルギーが、1つぶん多く必要になる)"
+     },
+     {
+      "name": "どくえき",
+      "cost": "草",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「どく」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "003/036",
+    "url": "https://pcg-search.com/card/1st/1stex2003.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "ドガース",
+    "hp": 50,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [
+     {
+      "name": "ぶんれつ",
+      "text": "このカードがワザによるダメージを受けた時、(このカードが「きぜつ」するしないにかかわらず、)自分の山札から「ドガース」を1枚選び出し、ベンチに出してよい。その後、その山札をよく切る。この力は、このカードが「ねむり・マヒ・こんらん」状態でも使えるが、自分のベンチに空きがない時は、使えない。"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "ふしぎなガス",
+      "cost": "草草",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、次の相手の番が終わるまで、相手の場にいるポケモンは、特殊能力を使うことができず、その力も消える。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "004/036",
+    "url": "https://pcg-search.com/card/1st/1stex2004.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "モンジャラ",
+    "hp": 50,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "からみつく",
+      "cost": "草",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、次の相手の番が終わるまで、相手はバトル場をはなれられない。(「きぜつ」した時をのぞく)"
+     },
+     {
+      "name": "つるのムチ",
+      "cost": "草無",
+      "damage": "20",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Miki Tanaka",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "005/036",
+    "url": "https://pcg-search.com/card/1st/1stex2005.php",
+    "kind": "たねポケモン",
+    "type": "炎",
+    "name": "ファイヤー",
+    "hp": 80,
+    "weakness": null,
+    "resistance": "闘-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ドライアップ",
+      "cost": "炎炎",
+      "damage": null,
+      "text": "相手の場のポケモンから1匹を選ぶ。その後、「うら」が出るまでコインを投げ続け、「おもて」の数ぶんの「水」エネルギーカードを、そのポケモンからはがしてトラッシュさせる。"
+     },
+     {
+      "name": "ほのおのつばさ",
+      "cost": "炎炎炎無",
+      "damage": "50",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "006/036",
+    "url": "https://pcg-search.com/card/1st/1stex2006.php",
+    "kind": "たねポケモン",
+    "type": "水",
+    "name": "パウワウ",
+    "hp": 50,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "なきごえ",
+      "cost": "無",
+      "damage": null,
+      "text": "次の相手の番、このワザを受けた相手がこのカードに与えるダメージは「-10」される。"
+     },
+     {
+      "name": "れいとうビーム",
+      "cost": "水水",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "007/036",
+    "url": "https://pcg-search.com/card/1st/1stex2007.php",
+    "kind": "１進化ポケモン",
+    "type": "水",
+    "name": "ジュゴン",
+    "hp": 60,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ねむる",
+      "cost": "無無",
+      "damage": null,
+      "text": "自分にのっているダメージカウンターをすべてとりのぞき、自分の「どく・ねむり・マヒ・こんらん」状態を、すべて回復させる。その後、自分を「ねむり」状態にする。"
+     },
+     {
+      "name": "オーロラウェーブ",
+      "cost": "水水水",
+      "damage": "30",
+      "text": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "008/036",
+    "url": "https://pcg-search.com/card/1st/1stex2008.php",
+    "kind": "たねポケモン",
+    "type": "水",
+    "name": "シェルダー",
+    "hp": 50,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "しおふき",
+      "cost": "水無",
+      "damage": "20+",
+      "text": "ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Nobuyuki Habu",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "009/036",
+    "url": "https://pcg-search.com/card/1st/1stex2009.php",
+    "kind": "たねポケモン",
+    "type": "水",
+    "name": "クラブ",
+    "hp": 40,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "あわ",
+      "cost": "水",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     },
+     {
+      "name": "はさみギロチン",
+      "cost": "水無無",
+      "damage": "30",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "010/036",
+    "url": "https://pcg-search.com/card/1st/1stex2010.php",
+    "kind": "たねポケモン",
+    "type": "水",
+    "name": "ラプラス",
+    "hp": 60,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "うたう",
+      "cost": "無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、相手を「ねむり」状態にする。"
+     },
+     {
+      "name": "なみのり",
+      "cost": "水水",
+      "damage": "30",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "011/036",
+    "url": "https://pcg-search.com/card/1st/1stex2011.php",
+    "kind": "１進化ポケモン",
+    "type": "水",
+    "name": "オムナイト",
+    "hp": 50,
+    "weakness": "草×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [
+     {
+      "name": "げんしのゆめ",
+      "text": "この力は、自分の番ごとに1回使える。コインを投げて「おもて」なら、「なにかの化石」から進化したポケモンのワザが相手に与えるダメージは、この番だけ「+10」される。(控えポケモンへのダメージは、そのまま)"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "ころがりタックル",
+      "cost": "無無",
+      "damage": "20",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "012/036",
+    "url": "https://pcg-search.com/card/1st/1stex2012.php",
+    "kind": "たねポケモン",
+    "type": "水",
+    "name": "フリーザー",
+    "hp": 80,
+    "weakness": null,
+    "resistance": "闘-30",
+    "retreat": "無無",
+    "powers": [
+     {
+      "name": "オーロラヴェール",
+      "text": "このカードがバトル場にいる限り、自分のベンチにいるすべてのポケモンは、ワザによるダメージや効果を受けない。このカードが「ねむり・マヒ・こんらん」状態の時、この力は消える。"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "れいとうビーム",
+      "cost": "水水無無",
+      "damage": "30",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "013/036",
+    "url": "https://pcg-search.com/card/1st/1stex2013.php",
+    "kind": "１進化ポケモン",
+    "type": "雷",
+    "name": "ライチュウ",
+    "hp": 70,
+    "weakness": "闘×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ろうでん",
+      "cost": "雷雷",
+      "damage": null,
+      "text": "相手の場のポケモンから1匹を選び、そのポケモンについている「水」エネルギーの数×10ダメージを、(「弱点・抵抗力」に関係なく)そのポケモンに与える。"
+     },
+     {
+      "name": "ビリビリキック",
+      "cost": "雷雷無",
+      "damage": "30",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "014/036",
+    "url": "https://pcg-search.com/card/1st/1stex2014.php",
+    "kind": "たねポケモン",
+    "type": "雷",
+    "name": "コイル",
+    "hp": 40,
+    "weakness": "闘×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [
+     {
+      "name": "マグネット",
+      "text": "この力は、自分の番ごとに1回使える。コインを投げて「おもて」なら、自分の山札から「コイル」を選び出し、ベンチに出してよい。その後、その山札をよく切る。自分のベンチに空きがない時や、このカードが「ねむり・マヒ・こんらん」状態の時、この力は使えない。"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "ちょうでんどう",
+      "cost": "雷",
+      "damage": null,
+      "text": "相手の場のポケモンから1匹を選び、(「弱点・抵抗力」に関係なく)10ダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "015/036",
+    "url": "https://pcg-search.com/card/1st/1stex2015.php",
+    "kind": "１進化ポケモン",
+    "type": "雷",
+    "name": "レアコイル",
+    "hp": 70,
+    "weakness": "闘×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "マイクロウェーブ",
+      "cost": "雷雷無",
+      "damage": null,
+      "text": "相手の場のポケモンから1匹を選び、(「弱点・抵抗力」に関係なく)20ダメージ。コインを投げて「おもて」なら、そのポケモンについているエネルギーカードを1枚選び、トラッシュさせる。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "016/036",
+    "url": "https://pcg-search.com/card/1st/1stex2016.php",
+    "kind": "たねポケモン",
+    "type": "雷",
+    "name": "ビリリダマ",
+    "hp": 30,
+    "weakness": "闘×2",
+    "resistance": null,
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "でんきショック",
+      "cost": "雷",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     },
+     {
+      "name": "みんなでスパーク",
+      "cost": "雷雷",
+      "damage": "20+",
+      "text": "お互いの場にいる「ビリリダマ」の数×10のダメージを追加する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "017/036",
+    "url": "https://pcg-search.com/card/1st/1stex2017.php",
+    "kind": "たねポケモン",
+    "type": "雷",
+    "name": "エレブー",
+    "hp": 60,
+    "weakness": "闘×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ひらいしん",
+      "cost": "雷",
+      "damage": null,
+      "text": "相手の場のポケモンから1匹を選ぶ。そのポケモンに「ひらいしんマーカー」がのっていなければ、1つのせる。"
+     },
+     {
+      "name": "かみなりショック",
+      "cost": "雷雷",
+      "damage": "10",
+      "text": "「ひらいしんマーカー」をのせているすべてのポケモンに、それぞれ20ダメージ。(このワザのダメージは「弱点・抵抗力」の影響を受ける)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Miki Tanaka",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "018/036",
+    "url": "https://pcg-search.com/card/1st/1stex2018.php",
+    "kind": "たねポケモン",
+    "type": "雷",
+    "name": "サンダー",
+    "hp": 70,
+    "weakness": null,
+    "resistance": "闘-30",
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "らくらい",
+      "cost": "雷雷雷",
+      "damage": "50",
+      "text": "コインを投げて「うら」なら、自分の場のポケモンから1匹を選び、そのポケモンにも、弱点・抵抗力に関係なく30ダメージ。"
+     },
+     {
+      "name": "サンダークラッシュ",
+      "cost": "雷雷無無",
+      "damage": "50+",
+      "text": "コインを投げて「おもて」なら、20ダメージを追加する。「うら」なら、自分にも20ダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "019/036",
+    "url": "https://pcg-search.com/card/1st/1stex2019.php",
+    "kind": "たねポケモン",
+    "type": "超",
+    "name": "ルージュラ",
+    "hp": 50,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "れいとうパンチ",
+      "cost": "水",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     },
+     {
+      "name": "コールドブレス",
+      "cost": "水水",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手を「ねむり」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "020/036",
+    "url": "https://pcg-search.com/card/1st/1stex2020.php",
+    "kind": "たねポケモン",
+    "type": "闘",
+    "name": "サンド",
+    "hp": 40,
+    "weakness": "草×2",
+    "resistance": "雷-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "どくばり",
+      "cost": "闘",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「どく」状態にする。"
+     },
+     {
+      "name": "スピードスター",
+      "cost": "闘",
+      "damage": "20",
+      "text": "このワザのダメージは、相手の持っている「弱点・抵抗カ・特殊能力・その他の効果」の影響を受けない。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Miki Tanaka",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "021/036",
+    "url": "https://pcg-search.com/card/1st/1stex2021.php",
+    "kind": "たねポケモン",
+    "type": "闘",
+    "name": "ワンリキー",
+    "hp": 50,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "きあいいっぱつ",
+      "cost": "無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、次の自分の番、この「ワンリキー」が使う「どつく」のダメージは2倍になる。「うら」なら、次の自分の番、この「ワンリキー」は「どつく」を使えない。"
+     },
+     {
+      "name": "どつく",
+      "cost": "闘無",
+      "damage": "30",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "022/036",
+    "url": "https://pcg-search.com/card/1st/1stex2022.php",
+    "kind": "１進化ポケモン",
+    "type": "闘",
+    "name": "ゴーリキー",
+    "hp": 70,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "メガトンキック",
+      "cost": "闘闘",
+      "damage": "30",
+      "text": null
+     },
+     {
+      "name": "ワンツーパンチ",
+      "cost": "闘闘闘",
+      "damage": "30+",
+      "text": "コインを投げて「おもて」なら、20ダメージを追加する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Nobuyuki Habu",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "023/036",
+    "url": "https://pcg-search.com/card/1st/1stex2023.php",
+    "kind": "１進化ポケモン",
+    "type": "闘",
+    "name": "ゴローン",
+    "hp": 60,
+    "weakness": "草×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "れんぞくいわなげ",
+      "cost": "闘闘",
+      "damage": "20×",
+      "text": "「うら」が出るまでコインを投げ続け、その間に出た「おもて」の数×20ダメージ。"
+     },
+     {
+      "name": "じしん",
+      "cost": "闘闘闘",
+      "damage": "50",
+      "text": "自分の控えポケモン全員にも、(「弱点・抵抗力」に関係なく)それぞれ10ダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "024/036",
+    "url": "https://pcg-search.com/card/1st/1stex2024.php",
+    "kind": "たねポケモン",
+    "type": "闘",
+    "name": "イワーク",
+    "hp": 70,
+    "weakness": "草×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "しめつける",
+      "cost": "闘",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     },
+     {
+      "name": "いわふうじ",
+      "cost": "闘闘",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、このワザを受けた相手は、次の相手の番で「にげる」ことができない。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "025/036",
+    "url": "https://pcg-search.com/card/1st/1stex2025.php",
+    "kind": "１進化ポケモン",
+    "type": "闘",
+    "name": "ガラガラ",
+    "hp": 60,
+    "weakness": "草×2",
+    "resistance": "雷-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ほねさがし",
+      "cost": "無",
+      "damage": null,
+      "text": "このカードに「ほねカウンター」がのっていなければ、1つのせる。"
+     },
+     {
+      "name": "ほねこんぼう",
+      "cost": "闘闘",
+      "damage": "50",
+      "text": "このワザは、このカードに「ほねカウンター」がのっている時だけ、使える。それを1つとりのぞいてコインを投げ、「おもて」なら相手を「マヒ」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "026/036",
+    "url": "https://pcg-search.com/card/1st/1stex2026.php",
+    "kind": "たねポケモン",
+    "type": "闘",
+    "name": "サワムラー",
+    "hp": 50,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "にどげり",
+      "cost": "闘闘",
+      "damage": "30×",
+      "text": "コインを2枚投げ、「おもて」の数×30のダメージ。"
+     },
+     {
+      "name": "まわしげり",
+      "cost": "闘闘無",
+      "damage": "30",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "027/036",
+    "url": "https://pcg-search.com/card/1st/1stex2027.php",
+    "kind": "たねポケモン",
+    "type": "闘",
+    "name": "エビワラー",
+    "hp": 50,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "マッハパンチ",
+      "cost": "闘",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手の控えポケモンから1匹を選び、そのポケモンにも(「弱点・抵抗力」に関係なく)10ダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Nobuyuki Habu",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "028/036",
+    "url": "https://pcg-search.com/card/1st/1stex2028.php",
+    "kind": "１進化ポケモン",
+    "type": "闘",
+    "name": "カブト",
+    "hp": 50,
+    "weakness": "草×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [
+     {
+      "name": "かせきか",
+      "text": "この力は、自分の番ごとに1回使える。自分の場にいる「なにかの化石」から進化したポケモンを、1匹選ぶ。その後、コインを投げて「おもて」なら、選んだポケモンにのっているすべての進化カードを手札にもどす。このカードが「ねむり・マヒ・こんらん」状態の時、この力は使えない。"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "するどいツメ",
+      "cost": "無無",
+      "damage": "10+",
+      "text": "コインを投げて「おもて」なら、30ダメージを追加する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "029/036",
+    "url": "https://pcg-search.com/card/1st/1stex2029.php",
+    "kind": "１進化ポケモン",
+    "type": "闘",
+    "name": "プテラ",
+    "hp": 70,
+    "weakness": "草×2",
+    "resistance": "闘-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ちょうおんぱ",
+      "cost": "無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+     },
+     {
+      "name": "きりもみアタック",
+      "cost": "無無無",
+      "damage": "40",
+      "text": "自分にも、「弱点・抵抗力」に関係なく、10ダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Mitsuhiro Arita",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "030/036",
+    "url": "https://pcg-search.com/card/1st/1stex2030.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "オニスズメ",
+    "hp": 40,
+    "weakness": "雷×2",
+    "resistance": "闘-30",
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "みだれづき",
+      "cost": "無",
+      "damage": "10×",
+      "text": "コインを2枚投げ、「おもて」の数×10のダメージ。"
+     },
+     {
+      "name": "かぜおこし",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Kagemaru Himeno",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "031/036",
+    "url": "https://pcg-search.com/card/1st/1stex2031.php",
+    "kind": "１進化ポケモン",
+    "type": "無",
+    "name": "オニドリル",
+    "hp": 60,
+    "weakness": "雷×2",
+    "resistance": "闘-30",
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "でんこうせっか",
+      "cost": "無無",
+      "damage": "10+",
+      "text": "コインを投げて「おもて」なら、20ダメージを追加する。"
+     },
+     {
+      "name": "ドリルこうか",
+      "cost": "無無無",
+      "damage": "50",
+      "text": "コインを投げて「うら」なら、このワザは失敗する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "032/036",
+    "url": "https://pcg-search.com/card/1st/1stex2032.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "メタモン",
+    "hp": 40,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": "無",
+    "powers": [
+     {
+      "name": "すごいへんしん",
+      "text": "この力は、このカードがバトル場にいる時だけ、自分の番ごとに1回使える。コインを投げて「おもて」なら、場にいるポケモンから1匹を選び、それ以後このカードを、選んだポケモンと同じカードとしてあつかう。(ただし「進化・退化」はできず、この「すごいへんしん」の力は使うことができる)。「うら」なら、このカードはメタモンにもどる。エネルギーカードは、このカードについている限り、どの色のエネルギーとしても使える。このカードがバトル場をはなれた時や、「ねむり・マヒ・こんらん」状態の時、この「すごいへんしん」のカは使えず、このカードはメタモンにもどる。へんしんの元になっていたポケモンが場をはなれた時も、このカードはメタモンにもどる。"
+     }
+    ],
+    "attacks": [],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "033/036",
+    "url": "https://pcg-search.com/card/1st/1stex2033.php",
+    "kind": "トレーナー",
+    "name": "エフェクトガード",
+    "powers": [],
+    "attacks": [],
+    "text": "このカードは、あなたの場にいるポケモンにつけて使い、次の相手の番の終わりにトラッシュする。このカードをつけているポケモンは、相手のワザによる「ダメージ以外の効果」を受けない。(ダメージは、そのまま受ける)",
+    "note": null,
+    "illustrator": "Hikaru Koike",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "034/036",
+    "url": "https://pcg-search.com/card/1st/1stex2034.php",
+    "kind": "トレーナー",
+    "name": "元気のかたまり",
+    "powers": [],
+    "attacks": [],
+    "text": "手札からエネルギーカードを2枚選んでトラッシュしなければ、このカードは使えない。あなたのトラッシュから「たねポケモン」を1枚選び出し、あなたのベンチに出す。(あなたのベンチに空きがない時、このカードは使えない)",
+    "note": null,
+    "illustrator": "Hikaru Koike",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "035/036",
+    "url": "https://pcg-search.com/card/1st/1stex2035.php",
+    "kind": "トレーナー",
+    "name": "フラッシュ",
+    "powers": [],
+    "attacks": [],
+    "text": "お互いのプレイヤーは、それぞれ、自分の山札の上から5枚のカードを見て、好きな順番にならべ替えてから、おもてを上にして山札の上にもどす。(先に相手プレイヤーが、ならべ替えをする)山札を切る時には、おもてが上になっているカードをおもてが下になるようにもどしてから、切る。",
+    "note": null,
+    "illustrator": "Hikaru Koike",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "036/036",
+    "url": "https://pcg-search.com/card/1st/1stex2036.php",
+    "kind": "トレーナー",
+    "name": "マスターボール",
+    "powers": [],
+    "attacks": [],
+    "text": "あなたの山札の上から7枚を見る。その中に「たねポケモン」または「進化カード」があれば、1枚を選び、相手プレイヤーに見せてから、手札に加える。その後、その山札をよく切る。",
+    "note": null,
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "◆",
+    "remarks": null
+   }
+  ],
+  "拡張シート 第3弾(緑版)": [
+   {
+    "list_number": "001/036",
+    "url": "https://pcg-search.com/card/1st/1stex3001.php",
+    "kind": "１進化ポケモン",
+    "type": "草",
+    "name": "アーボック",
+    "hp": 60,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "まきつく",
+      "cost": "草無",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     },
+     {
+      "name": "もうどく",
+      "cost": "草草草",
+      "damage": "30+",
+      "text": "相手を「どく」状態にする。このワザを受ける前から相手が「どく」状態なら、10ダメージを追加する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "002/036",
+    "url": "https://pcg-search.com/card/1st/1stex3002.php",
+    "kind": "１進化ポケモン",
+    "type": "草",
+    "name": "ニドリーナ",
+    "hp": 60,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "なかまのちから",
+      "cost": "草草",
+      "damage": "10+",
+      "text": "自分のベンチにいる「ニドラン♂」「ニドラン♀」「ニドリーノ」「ニドリーナ」「ニドキング」「ニドクイン」の数×10のダメージを追加する。"
+     },
+     {
+      "name": "みだれひっかき",
+      "cost": "草草無",
+      "damage": "30×",
+      "text": "コインを3枚投げ、「おもて」の数×30のダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "003/036",
+    "url": "https://pcg-search.com/card/1st/1stex3003.php",
+    "kind": "１進化ポケモン",
+    "type": "草",
+    "name": "ニドリーノ",
+    "hp": 60,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "こうそくづき",
+      "cost": "草草",
+      "damage": "60",
+      "text": "コインを投げて「うら」なら、相手にダメージを与えられず、自分に20ダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "004/036",
+    "url": "https://pcg-search.com/card/1st/1stex3004.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "コンパン",
+    "hp": 50,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "かなしばり",
+      "cost": "無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、相手のワザを1つ選ぶ。次の相手の番、そのポケモンは、そのワザを使えない。"
+     },
+     {
+      "name": "サイケこうせん",
+      "cost": "草草",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Miki Tanaka",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "005/036",
+    "url": "https://pcg-search.com/card/1st/1stex3005.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "マダツボミ",
+    "hp": 40,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ゆれる",
+      "cost": "無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、このカードは次の相手の番にダメージを受けない。(ダメージ以外の効果はそのまま)"
+     },
+     {
+      "name": "しびれごな",
+      "cost": "草",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Miki Tanaka",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "006/036",
+    "url": "https://pcg-search.com/card/1st/1stex3006.php",
+    "kind": "１進化ポケモン",
+    "type": "草",
+    "name": "ウツドン",
+    "hp": 60,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "さいせい",
+      "cost": "草",
+      "damage": null,
+      "text": "自分にのっているダメージカウンターをすべてとりのぞく。その後、自分についている「進化カード」と「エネルギーカード」をすべてトラッシュして、「たねポケモン」にもどる。"
+     },
+     {
+      "name": "ようかい",
+      "cost": "草草",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手についているエネルギーカードを1枚選び、トラッシュする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Yukiko Baba",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "007/036",
+    "url": "https://pcg-search.com/card/1st/1stex3007.php",
+    "kind": "１進化ポケモン",
+    "type": "草",
+    "name": "マタドガス",
+    "hp": 60,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [
+     {
+      "name": "ポイズンミスト",
+      "text": "この力は、自分の番ごとに1回使える。コインを投げて「おもて」なら、次の自分の番の始めまで、「どく」状態になったポケモンがポケモンチェックで受ける「どく」のダメージは、20ダメージになる。このカードが「ねむり・マヒ・こんらん」状態の時、この力は使えず、その効果も消える。"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "ガスばくはつ",
+      "cost": "草草草",
+      "damage": "40",
+      "text": "自分にも30ダメージ。このワザによって相手が「きぜつ」したなら、そのかわりに出てくる対戦ポケモンを「どく」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "008/036",
+    "url": "https://pcg-search.com/card/1st/1stex3008.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "ストライク",
+    "hp": 60,
+    "weakness": "炎×2",
+    "resistance": "闘-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "スラッシュダウン",
+      "cost": "草草",
+      "damage": "40",
+      "text": "次の自分の番、このカードは「スラッシュダウン」を使えない。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Hironobu Yoshida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "009/036",
+    "url": "https://pcg-search.com/card/1st/1stex3009.php",
+    "kind": "たねポケモン",
+    "type": "炎",
+    "name": "ロコン",
+    "hp": 50,
+    "weakness": "水×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "きつねび",
+      "cost": "炎炎",
+      "damage": "10",
+      "text": "のぞむなら、ダメージを与える前に相手の控えポケモンを1匹選び、相手と入れ替えてよい。(ダメージは、新しい対戦ポケモンに与える)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "010/036",
+    "url": "https://pcg-search.com/card/1st/1stex3010.php",
+    "kind": "たねポケモン",
+    "type": "炎",
+    "name": "ガーディ",
+    "hp": 50,
+    "weakness": "水×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "おつかい",
+      "cost": "無無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、自分の山札から「トレーナーカード」を1枚選び出し、相手プレイヤーに見せてから、手札に加えてよい。その後、その山札をよく切る。"
+     },
+     {
+      "name": "ひのこ",
+      "cost": "炎無",
+      "damage": "30",
+      "text": "自分についている「炎」エネルギーカードを1枚トラッシュしなければ、このワザは使えない。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "011/036",
+    "url": "https://pcg-search.com/card/1st/1stex3011.php",
+    "kind": "たねポケモン",
+    "type": "炎",
+    "name": "ポニータ",
+    "hp": 40,
+    "weakness": "水×2",
+    "resistance": null,
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "けとばす",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     },
+     {
+      "name": "ひばな",
+      "cost": "炎",
+      "damage": "20",
+      "text": "コインを投げて「うら」なら、自分についているエネルギーカードを1枚選び、トラッシュする。(トラッシュできない時、このワザは失敗する)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "012/036",
+    "url": "https://pcg-search.com/card/1st/1stex3012.php",
+    "kind": "たねポケモン",
+    "type": "炎",
+    "name": "ブーバー",
+    "hp": 60,
+    "weakness": "水×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ファイヤーバーン",
+      "cost": "炎",
+      "damage": "10+",
+      "text": "のぞむなら、自分や自分の控えポケモンについている「炎」エネルギーカードを好きなだけトラッシュして、トラッシュした数×10のダメージを追加してよい。"
+     },
+     {
+      "name": "マグマパンチ",
+      "cost": "炎炎無",
+      "damage": "40",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "013/036",
+    "url": "https://pcg-search.com/card/1st/1stex3013.php",
+    "kind": "１進化ポケモン",
+    "type": "水",
+    "name": "ゴルダック",
+    "hp": 70,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "サイコキネシス",
+      "cost": "超無",
+      "damage": "10+",
+      "text": "相手についているエネルギーカード×10のダメージを追加する。"
+     },
+     {
+      "name": "スプラッシュ",
+      "cost": "水水無",
+      "damage": "40",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "014/036",
+    "url": "https://pcg-search.com/card/1st/1stex3014.php",
+    "kind": "１進化ポケモン",
+    "type": "水",
+    "name": "キングラー",
+    "hp": 80,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "しおまねき",
+      "cost": "水",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、自分の山札から「水」エネルギーカードを最大3枚選び出し、このカードにつける。"
+     },
+     {
+      "name": "もろばバサミ",
+      "cost": "水水水水",
+      "damage": "80",
+      "text": "次の相手の番、このカードが受けるダメージは2倍になる。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Masako Yamashita",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "015/036",
+    "url": "https://pcg-search.com/card/1st/1stex3015.php",
+    "kind": "たねポケモン",
+    "type": "水",
+    "name": "タッツー",
+    "hp": 40,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "かくれる",
+      "cost": "無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。"
+     },
+     {
+      "name": "みずでっぽう",
+      "cost": "水",
+      "damage": "10+",
+      "text": "ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "016/036",
+    "url": "https://pcg-search.com/card/1st/1stex3016.php",
+    "kind": "１進化ポケモン",
+    "type": "水",
+    "name": "シードラ",
+    "hp": 70,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ウォーターボム",
+      "cost": "水水",
+      "damage": "20",
+      "text": "ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき10ダメージを、相手の控えポケモンに好きなようにわりふって与える。(控えへのダメージ追加は2つぶんまで。また、控えへのダメージは「弱点・抵抗力」の影響を受けない)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "017/036",
+    "url": "https://pcg-search.com/card/1st/1stex3017.php",
+    "kind": "たねポケモン",
+    "type": "水",
+    "name": "ヒトデマン",
+    "hp": 50,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "なぞのこうせん",
+      "cost": "水",
+      "damage": "10",
+      "text": "次の相手の番、自分の場の「水」ポケモンは「弱点」の影響を受けない。"
+     },
+     {
+      "name": "かいてんアタック",
+      "cost": "水無",
+      "damage": "20",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Miki Tanaka",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "018/036",
+    "url": "https://pcg-search.com/card/1st/1stex3018.php",
+    "kind": "１進化ポケモン",
+    "type": "水",
+    "name": "オムナイト",
+    "hp": 50,
+    "weakness": "草×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [
+     {
+      "name": "かせきのみちびき",
+      "text": "この力は、自分の番ごとに1回使える。コインを投げて「おもて」なら、自分のトラッシュから「なにかの化石」を1枚選び出し、手札に加える。このカードが「ねむり・マヒ・こんらん」状態の時、この力は使えない。"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "なみのり",
+      "cost": "水水",
+      "damage": "30",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Aya Kusube",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "019/036",
+    "url": "https://pcg-search.com/card/1st/1stex3019.php",
+    "kind": "１進化ポケモン",
+    "type": "超",
+    "name": "ユンゲラー",
+    "hp": 60,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "サイコパニック",
+      "cost": "超超",
+      "damage": "30",
+      "text": "このワザを受ける相手が「超」ポケモンなら、このワザのダメージは60になる。"
+     },
+     {
+      "name": "ブリンク",
+      "cost": "超超超",
+      "damage": "30",
+      "text": "次の相手の番、このカードがワザによるダメージを受ける時、コインを投げて「おもて」なら、このカードはそのダメージを受けない。(ダメージ以外の効果は受ける)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Miki Tanaka",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "020/036",
+    "url": "https://pcg-search.com/card/1st/1stex3020.php",
+    "kind": "１進化ポケモン",
+    "type": "超",
+    "name": "ユンゲラー",
+    "hp": 70,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "エナジーさいせい",
+      "cost": "超",
+      "damage": null,
+      "text": "自分のトラッシュから、「特殊エネルギーカード」を1枚選び出し、手札に加える。"
+     },
+     {
+      "name": "エナジーショック",
+      "cost": "超超",
+      "damage": "20",
+      "text": "このワザを受けた相手は、次の相手の番、エネルギーカードがついた時、「マヒ」状態になる。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "021/036",
+    "url": "https://pcg-search.com/card/1st/1stex3021.php",
+    "kind": "１進化ポケモン",
+    "type": "超",
+    "name": "ヤドラン",
+    "hp": 90,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "おおあくび",
+      "cost": "超",
+      "damage": null,
+      "text": "自分と相手を、それぞれ「ねむり」状態にする。"
+     },
+     {
+      "name": "おおいびき",
+      "cost": "超超",
+      "damage": "30",
+      "text": "このワザは、このカードが「ねむり」状態の時だけ、使える。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "022/036",
+    "url": "https://pcg-search.com/card/1st/1stex3022.php",
+    "kind": "たねポケモン",
+    "type": "超",
+    "name": "ゴース",
+    "hp": 40,
+    "weakness": null,
+    "resistance": "闘-30",
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "こわがらせる",
+      "cost": "無",
+      "damage": null,
+      "text": "次の相手の番が終わるまで、相手プレイヤーは「トレーナーカード」を使うことができない。"
+     },
+     {
+      "name": "あんこく",
+      "cost": "超無",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Masako Yamashita",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "023/036",
+    "url": "https://pcg-search.com/card/1st/1stex3023.php",
+    "kind": "１進化ポケモン",
+    "type": "超",
+    "name": "ゴースト",
+    "hp": 60,
+    "weakness": null,
+    "resistance": "闘-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ぶきみなひかり",
+      "cost": "超",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+     },
+     {
+      "name": "おんねん",
+      "cost": "超超",
+      "damage": "20+",
+      "text": "相手プレイヤーがすでに取りおえたサイドカードの数×10のダメージを追加する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Nobuyuki Habu",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "024/036",
+    "url": "https://pcg-search.com/card/1st/1stex3024.php",
+    "kind": "１進化ポケモン",
+    "type": "超",
+    "name": "ゴースト",
+    "hp": 70,
+    "weakness": null,
+    "resistance": "闘-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ポルターガイスト",
+      "cost": "超",
+      "damage": "10×",
+      "text": "相手の手札を見て、その中にある「トレーナーカード」の枚数×10のダメージ。"
+     },
+     {
+      "name": "ナイトメア",
+      "cost": "超超",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手を「ねむり」状態に、「うら」なら「こんらん」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Sumiyoshi Kizuki",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "025/036",
+    "url": "https://pcg-search.com/card/1st/1stex3025.php",
+    "kind": "１進化ポケモン",
+    "type": "超",
+    "name": "スリーパー",
+    "hp": 60,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [
+     {
+      "name": "にんぎょうつかい",
+      "text": "自分のバトル場にいる「ピッピ人形」は、このカードが持っているワザを使ってよい。ただし、そのワザに必要なエネルギーがこのカードについていなければならない。(「ピッピ人形」には、ワザに必要なエネルギーがついていなくてもかまわない)"
+     }
+    ],
+    "attacks": [
+     {
+      "name": "マインドショック",
+      "cost": "超超",
+      "damage": "30",
+      "text": "このワザのダメージは、相手の「弱点・抵抗力」の影響を受けない。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Masako Yamashita",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "026/036",
+    "url": "https://pcg-search.com/card/1st/1stex3026.php",
+    "kind": "たねポケモン",
+    "type": "超",
+    "name": "ミュウツー",
+    "hp": 80,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "かんぜんかいふく",
+      "cost": "超超",
+      "damage": null,
+      "text": "自分についているエネルギーカードをすべてトラッシュする。その後、自分にのっているダメージカウンターやマーカーをすべて取りのぞき、「どく・こんらん」状態のすべてからも回復させる。"
+     },
+     {
+      "name": "サイコブラスト",
+      "cost": "超超無",
+      "damage": "30",
+      "text": "コインを投げて「おもて」なら、相手についているエネルギーカードから1枚を選び、トラッシュさせる。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Kazuhiko Nishihara",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "027/036",
+    "url": "https://pcg-search.com/card/1st/1stex3027.php",
+    "kind": "１進化ポケモン",
+    "type": "闘",
+    "name": "サンドパン",
+    "hp": 70,
+    "weakness": "草×2",
+    "resistance": "雷-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "すながくれ",
+      "cost": "闘",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、このカードは次の相手の番にダメージを受けない。(ダメージ以外の効果はそのまま)"
+     },
+     {
+      "name": "ローリングニードル",
+      "cost": "闘闘闘",
+      "damage": "40+",
+      "text": "コインを3枚投げ、「おもて」の数×10のダメージを追加する。その後、自分にも「おもて」の数×10のダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "028/036",
+    "url": "https://pcg-search.com/card/1st/1stex3028.php",
+    "kind": "１進化ポケモン",
+    "type": "闘",
+    "name": "ゴーリキー",
+    "hp": 60,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "じごくづき",
+      "cost": "闘無",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     },
+     {
+      "name": "きあいだま",
+      "cost": "無無無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、相手の場のポケモンから1匹を選び、20ダメージ。(このワザによる控えへのダメージは「弱点・抵抗力」の影響を受ける)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "029/036",
+    "url": "https://pcg-search.com/card/1st/1stex3029.php",
+    "kind": "１進化ポケモン",
+    "type": "闘",
+    "name": "ゴローン",
+    "hp": 60,
+    "weakness": "草×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "がんせきくだき",
+      "cost": "闘闘無",
+      "damage": "30",
+      "text": "コインを2枚投げ、「おもて」の数×10のダメージを、相手の控えポケモンに好きなようにわりふって与える。(控えへのダメージは「弱点・抵抗カ」の影響を受けない)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Hikaru Koike",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "030/036",
+    "url": "https://pcg-search.com/card/1st/1stex3030.php",
+    "kind": "たねポケモン",
+    "type": "闘",
+    "name": "カラカラ",
+    "hp": 40,
+    "weakness": "草×2",
+    "resistance": "雷-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ほねをなげる",
+      "cost": "闘",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、相手に30ダメージ。「うら」なら、相手の控えポケモンから1匹を選び、「弱点・抵抗力」に関係なく、10ダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Atsuko Nishida",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "031/036",
+    "url": "https://pcg-search.com/card/1st/1stex3031.php",
+    "kind": "１進化ポケモン",
+    "type": "闘",
+    "name": "サイドン",
+    "hp": 80,
+    "weakness": "草×2",
+    "resistance": "雷-30",
+    "retreat": "無無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "やまくずし",
+      "cost": "闘",
+      "damage": "10",
+      "text": "自分の山札の上からカードを5枚トラッシュする。トラッシュした5枚の中に「闘」エネルギーカードがあれば、それらをすべてトラッシュから取り出し、手札に加える。"
+     },
+     {
+      "name": "にだんづき",
+      "cost": "闘闘闘",
+      "damage": "30+",
+      "text": "コインを投げて「おもて」なら、20ダメージを追加する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Tomokazu Komiya",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "032/036",
+    "url": "https://pcg-search.com/card/1st/1stex3032.php",
+    "kind": "１進化ポケモン",
+    "type": "無",
+    "name": "ピジョン",
+    "hp": 60,
+    "weakness": "雷×2",
+    "resistance": "闘-30",
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ツイスター",
+      "cost": "無無",
+      "damage": "20",
+      "text": "相手が「きぜつ」しなかったなら、コインを投げる。「おもて」なら、このワザを受けた相手についているすべてのエネルギーカードとトレーナーカードを、持ち主の手札にもどす。"
+     },
+     {
+      "name": "そらをとぶ",
+      "cost": "無無無",
+      "damage": "30",
+      "text": "コインを投げて「うら」なら、このワザは失敗する。「おもて」なら、次の相手の番、このカードは相手のワザによるダメージや効果を受けない。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Shin-ichi Yoshida",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "033/036",
+    "url": "https://pcg-search.com/card/1st/1stex3033.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "ガルーラ",
+    "hp": 80,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": "無無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "かみつく",
+      "cost": "無無",
+      "damage": "20",
+      "text": null
+     },
+     {
+      "name": "テールドロップ",
+      "cost": "無無無",
+      "damage": "80",
+      "text": "コインを2枚投げ、1つでも「うら」なら、このワザは失敗する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Masako Yamashita",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "034/036",
+    "url": "https://pcg-search.com/card/1st/1stex3034.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "ケンタロス",
+    "hp": 70,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ふんだりけったり",
+      "cost": "無無",
+      "damage": "20+",
+      "text": "コインを投げて「おもて」なら、10ダメージを追加する。「うら」なら、相手を控えポケモンと入れ替える。入れ替わるポケモンは、相手が選ぶ。(相手に控えがいない時、入れ替えはおこらない)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Yukiko Baba",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "035/036",
+    "url": "https://pcg-search.com/card/1st/1stex3035.php",
+    "kind": "トレーナー",
+    "name": "ポケモン再転送",
+    "powers": [],
+    "attacks": [],
+    "text": "あなたのトラッシュから「進化カード」を1枚選び出し、相手プレイヤーに見せてから、自分の山札の上に置く。",
+    "note": null,
+    "illustrator": "Hikaru Koike",
+    "rarity": "●",
+    "remarks": null
+   },
+   {
+    "list_number": "036/036",
+    "url": "https://pcg-search.com/card/1st/1stex3036.php",
+    "kind": "スタジアム",
+    "name": "ポケモンタワー",
+    "powers": [],
+    "attacks": [],
+    "text": "お互いのポケモンやプレイヤーの使う「ワザ・特殊能力・トレーナーカード」の効果のうち、「トラッシュからカードを取り出して手札に加える」効果は、すべて消える。(それ以外の効果は、そのまま)",
+    "note": "このスタジアムカードは、バトル場の横に出して使う。別のスタジアムカードが場に出た時、このカードをトラッシュする。",
+    "illustrator": "Keiji Kinebuchi",
+    "rarity": "◆",
+    "remarks": null
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3037.php",
+    "kind": "EXTRA RULE",
+    "name": "サイドカード4枚戦",
+    "powers": [],
+    "attacks": [],
+    "text": "通常6枚のサイドカードをセットして対戦するところを、4枚にして対戦するルールです。相手のポケモンを4匹「きぜつ」させて、先に4枚のサイドカードを全て取り終えたプレイヤーが勝利します。",
+    "note": "公式トーナメントで採用しているルールだよ。学校の休み時間など、短い時間で対戦しなければならないときに試してみよう!",
+    "illustrator": "Nobuyuki Habu",
+    "rarity": "-",
+    "remarks": "EXTRA RULE"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3038.php",
+    "kind": "EXTRA RULE",
+    "name": "「こんらん」で20ダメージルール",
+    "powers": [],
+    "attacks": [],
+    "text": "「こんらん」状態でワザを使おうとして、コインが「うら」だった時(ワザが「こんらん」した時)の簡単ルールです。ワザが「こんらん」してしまったら、ワザの種類に関係なく、ワザをつかったポケモン自身が20ダメージをうけます。(わけもわからず自分を攻撃した。20ダメージ!)",
+    "note": "ポケモンカード初心者におすすめのルールだよ。公式トーナメントでも、このルールを採用しているんだ。",
+    "illustrator": "Nobuyuki Habu",
+    "rarity": "-",
+    "remarks": "EXTRA RULE"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3039.php",
+    "kind": "EXTRA RULE",
+    "name": "3デッキ戦",
+    "powers": [],
+    "attacks": [],
+    "text": "対戦するプレイヤーは、中味の違うデッキをそれぞれ3つ用意します。次にお互いのデッキを裏にしてバトル場に置き、お互いに対戦するデッキの順番を決めます。そして、決めたデッキで順番通り1回ずつ対戦していきます。最終的に2回勝ったプレイヤーが勝利します。",
+    "note": "デッキをたくさん組んでいて、対戦する時間がたっぷりあるときに試してみよう!",
+    "illustrator": "Nobuyuki Habu",
+    "rarity": "-",
+    "remarks": "EXTRA RULE"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3040.php",
+    "kind": "EXTRA RULE",
+    "name": "ダグトリオチームバトル 3vs3",
+    "powers": [],
+    "attacks": [],
+    "text": "3人が一組のチームとなって、それぞれ内容の違うデッキをもちより、チーム対チームで対戦します。それぞれのチームのなかで対戦の順番を決めて、時間を少しずらして1対1で対戦をはじめます。3人それぞれ対戦が終わった段階で、2勝していたチームが勝利します。",
+    "note": "ポケモンカードで遊んでいる友だちがふえたら、ぜひ試してみよう!",
+    "illustrator": "Nobuyuki Habu",
+    "rarity": "-",
+    "remarks": "EXTRA RULE"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3041.php",
+    "kind": "EXTRA RULE",
+    "name": "デッキ交換戦",
+    "powers": [],
+    "attacks": [],
+    "text": "お互いにデッキを持ちより、3回戦います。1回目は自分のデッキで、2回目はデッキを交換して、3回目はもう一度自分のデッキで戦います。自分のデッキで勝つごとに1点、相手のデッキで勝ったときには2点もらえます。3回の対戦結果で、合計点数が高いプレイヤーが勝利します。",
+    "note": "あまりにも強いデッキを組んでしまうと逆に負けてしまったりするので、どんなデッキを組むかがポイントだよ!",
+    "illustrator": "Nobuyuki Habu",
+    "rarity": "-",
+    "remarks": "EXTRA RULE"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3042.php",
+    "kind": "デッキ",
+    "name": "ポケモンタワーのなぞ?",
+    "powers": [],
+    "attacks": [],
+    "text": null,
+    "note": null,
+    "rarity": "-",
+    "remarks": "デッキ"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3043.php",
+    "kind": "デッキ",
+    "name": "ポケモンやしきでアッチッチ!",
+    "powers": [],
+    "attacks": [],
+    "text": null,
+    "note": null,
+    "rarity": "-",
+    "remarks": "デッキ"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3044.php",
+    "kind": "デッキ",
+    "name": "サファリゾーンでおおあばれ!",
+    "powers": [],
+    "attacks": [],
+    "text": null,
+    "note": null,
+    "rarity": "-",
+    "remarks": "デッキ"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3045.php",
+    "kind": "デッキ",
+    "name": "ふたごじまのタッツー",
+    "powers": [],
+    "attacks": [],
+    "text": null,
+    "note": null,
+    "rarity": "-",
+    "remarks": "デッキ"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3046.php",
+    "kind": "デッキ",
+    "name": "ハナダ!さいごのどうくつ",
+    "powers": [],
+    "attacks": [],
+    "text": null,
+    "note": null,
+    "rarity": "-",
+    "remarks": "デッキ"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3047.php",
+    "kind": "たねポケモン",
+    "type": "雷",
+    "name": "オーヤマのピカチュウ",
+    "hp": 50,
+    "weakness": "闘×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ごあいさつ",
+      "cost": "無",
+      "damage": "10ぐらい",
+      "text": "れいぎはただしいけれど、相手のスキをみてこうげきする。"
+     },
+     {
+      "name": "ねたふり",
+      "cost": "雷雷",
+      "damage": "30",
+      "text": "ねたふりをしていて、やっぱりスキをみてでんきで、こうげきする。ズルい"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "OOYAMA",
+    "rarity": "-",
+    "remarks": "その他"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3048.php",
+    "kind": "その他",
+    "name": "イマクニ?のわるだくみ",
+    "powers": [],
+    "attacks": [],
+    "text": null,
+    "note": null,
+    "illustrator": "Imakuni?",
+    "rarity": "-",
+    "remarks": "その他"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3049.php",
+    "kind": "その他",
+    "name": "-",
+    "powers": [],
+    "attacks": [],
+    "text": null,
+    "note": null,
+    "rarity": "-",
+    "remarks": "その他"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3050.php",
+    "kind": "その他",
+    "name": "-",
+    "powers": [],
+    "attacks": [],
+    "text": null,
+    "note": null,
+    "rarity": "-",
+    "remarks": "その他"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3051.php",
+    "kind": "その他",
+    "name": "-",
+    "powers": [],
+    "attacks": [],
+    "text": null,
+    "note": null,
+    "rarity": "-",
+    "remarks": "その他"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3052.php",
+    "kind": "PASS CARD",
+    "name": "イマクニ?のパソコン",
+    "powers": [],
+    "attacks": [],
+    "text": null,
+    "note": null,
+    "rarity": "-",
+    "remarks": "その他"
+   },
+   {
+    "list_number": "-/-",
+    "url": "https://pcg-search.com/card/1st/1stex3053.php",
+    "kind": "PASS CARD",
+    "name": "マサキのパソコン",
+    "powers": [],
+    "attacks": [],
+    "text": null,
+    "note": null,
+    "rarity": "-",
+    "remarks": "その他"
+   }
+  ],
+  "映画公開記念パック「サザンアイランド」": [
+   {
+    "list_number": "001/003",
+    "url": "https://pcg-search.com/card/1st/1stmv001.php",
+    "kind": "たねポケモン",
+    "type": "草",
+    "name": "レディバ",
+    "hp": 40,
+    "weakness": "炎×2",
+    "resistance": "闘-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "かじる",
+      "cost": "無",
+      "damage": "10",
+      "text": null
+     },
+     {
+      "name": "こうそくいどう",
+      "cost": "草草",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Keiko Fukuyama",
+    "rarity": "-(キラ)",
+    "remarks": "レインボーアイランド お花畑"
+   },
+   {
+    "list_number": "002/003",
+    "url": "https://pcg-search.com/card/1st/1stmv002.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "プリン",
+    "hp": 50,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ひとみでさそう",
+      "cost": "無",
+      "damage": null,
+      "text": "相手の控えポケモンを1匹選び、相手と入れ替える。"
+     },
+     {
+      "name": "うたう",
+      "cost": "無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、相手を「ねむり」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Keiko Fukuyama",
+    "rarity": "-",
+    "remarks": "レインボーアイランド お花畑"
+   },
+   {
+    "list_number": "003/003",
+    "url": "https://pcg-search.com/card/1st/1stmv003.php",
+    "kind": "２進化ポケモン",
+    "type": "草",
+    "name": "バタフリー",
+    "hp": 80,
+    "weakness": "炎×2",
+    "resistance": "闘-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "そらをとぶ",
+      "cost": "無無無",
+      "damage": "30",
+      "text": "コインを投げて「うら」なら、このワザは失敗する。「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。"
+     },
+     {
+      "name": "レインボーパウダー",
+      "cost": "草草無",
+      "damage": "20",
+      "text": "コインを投げる「おもて」なら、相手を「マヒ」状態に、「うら」ならどく状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Keiko Fukuyama",
+    "rarity": "-",
+    "remarks": "レインボーアイランド お花畑"
+   },
+   {
+    "list_number": "001/003",
+    "url": "https://pcg-search.com/card/1st/1stmv004.php",
+    "kind": "たねポケモン",
+    "type": "超",
+    "name": "ミュウ",
+    "hp": 30,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "レインボーウェーブ",
+      "cost": "超",
+      "damage": null,
+      "text": "自分についている「基本エネルギーカード」の色(タイプ)から、1つを選ぶ。相手と相手の控えポケモンのうち、選んだエネルギーと同じ色(タイプ)のポケモン全員に、「弱点・抵抗力」に関係なく、それぞれ20ダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Keiko Fukuyama",
+    "rarity": "-(キラ)",
+    "remarks": "レインボーアイランド 大空"
+   },
+   {
+    "list_number": "002/003",
+    "url": "https://pcg-search.com/card/1st/1stmv005.php",
+    "kind": "２進化ポケモン",
+    "type": "無",
+    "name": "ピジョット",
+    "hp": 70,
+    "weakness": "雷×2",
+    "resistance": "闘-30",
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "マッハひこう",
+      "cost": "無無",
+      "damage": "40",
+      "text": "コインを投げて「うら」なら、このワザは失敗する。"
+     },
+     {
+      "name": "カッターウインド",
+      "cost": "無無無無",
+      "damage": "50",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Keiko Fukuyama",
+    "rarity": "-",
+    "remarks": "レインボーアイランド 大空"
+   },
+   {
+    "list_number": "003/003",
+    "url": "https://pcg-search.com/card/1st/1stmv006.php",
+    "kind": "たねポケモン",
+    "type": "闘",
+    "name": "イワーク",
+    "hp": 90,
+    "weakness": "草×2",
+    "resistance": null,
+    "retreat": "無無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "たたきつける",
+      "cost": "無無",
+      "damage": "20×",
+      "text": "コインを2枚投げ、「おもて」の数×20のダメージ。"
+     },
+     {
+      "name": "のしかかり",
+      "cost": "闘闘闘闘",
+      "damage": "40",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Keiko Fukuyama",
+    "rarity": "-",
+    "remarks": "レインボーアイランド 大空"
+   },
+   {
+    "list_number": "001/003",
+    "url": "https://pcg-search.com/card/1st/1stmv007.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "トゲピー",
+    "hp": 40,
+    "weakness": null,
+    "resistance": "超-30",
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "おおごえでなく",
+      "cost": "無",
+      "damage": "10",
+      "text": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Keiko Fukuyama",
+    "rarity": "-(キラ)",
+    "remarks": "レインボーアイランド 川辺"
+   },
+   {
+    "list_number": "002/003",
+    "url": "https://pcg-search.com/card/1st/1stmv008.php",
+    "kind": "１進化ポケモン",
+    "type": "草",
+    "name": "フシギソウ",
+    "hp": 60,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ふしぎなかおり",
+      "cost": "草",
+      "damage": null,
+      "text": "お互いのプレイヤーは、それぞれコインを投げる。「おもて」を出したプレイヤーは、自分の場のポケモンにのっているダメージカウンターを、最大3つとりのぞく。(合計が3つ以下なら、2匹以上のポケモンから、とりのぞいてもよい)"
+     },
+     {
+      "name": "はっぱカッター",
+      "cost": "草草",
+      "damage": "30",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Keiko Fukuyama",
+    "rarity": "-",
+    "remarks": "レインボーアイランド 川辺"
+   },
+   {
+    "list_number": "003/003",
+    "url": "https://pcg-search.com/card/1st/1stmv009.php",
+    "kind": "１進化ポケモン",
+    "type": "無",
+    "name": "ラッタ",
+    "hp": 60,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": null,
+    "powers": [],
+    "attacks": [
+     {
+      "name": "するどいまえば",
+      "cost": "無無",
+      "damage": "10+",
+      "text": "コインを投げて「おもて」なら、30ダメージを追加する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Keiko Fukuyama",
+    "rarity": "-",
+    "remarks": "レインボーアイランド 川辺"
+   },
+   {
+    "list_number": "001/003",
+    "url": "https://pcg-search.com/card/1st/1stmv010.php",
+    "kind": "たねポケモン",
+    "type": "無",
+    "name": "ベロリンガ",
+    "hp": 70,
+    "weakness": "闘×2",
+    "resistance": "超-30",
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "きずをなめる",
+      "cost": "無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、お互いの場にいるポケモンから1匹を選び、そのポケモンにのっているダメージカウンターを、2つとりのぞく。"
+     },
+     {
+      "name": "のびるべ口",
+      "cost": "無無",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、相手の場のポケモンを1匹選び、「弱点・抵抗力」に関係なく、20ダメージ。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "-",
+    "remarks": "トロピカルアイランド ジャングル"
+   },
+   {
+    "list_number": "002/003",
+    "url": "https://pcg-search.com/card/1st/1stmv011.php",
+    "kind": "２進化ポケモン",
+    "type": "草",
+    "name": "ラフレシア",
+    "hp": 70,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ごくらくかふん",
+      "cost": "草",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、自分の控えポケモンを1匹選び、そのポケモンにのっているダメージカウンター最大2つと、自分にのっているダメージカウンター最大2つを、それぞれ、とりのぞく。"
+     },
+     {
+      "name": "さいあくかふん",
+      "cost": "草草無",
+      "damage": "30",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態に、「うら」なら「こんらん」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "-(キラ)",
+    "remarks": "トロピカルアイランド ジャングル"
+   },
+   {
+    "list_number": "003/003",
+    "url": "https://pcg-search.com/card/1st/1stmv012.php",
+    "kind": "１進化ポケモン",
+    "type": "闘",
+    "name": "オコリザル",
+    "hp": 60,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "けたぐり",
+      "cost": "闘",
+      "damage": "20",
+      "text": null
+     },
+     {
+      "name": "いかりくるう",
+      "cost": "闘闘",
+      "damage": "20+",
+      "text": "自分にのっているダメージカウンターの数×10のダメージを追加する。その後、コインを投げて「うら」なら、自分を「こんらん」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "-",
+    "remarks": "トロピカルアイランド ジャングル"
+   },
+   {
+    "list_number": "001/003",
+    "url": "https://pcg-search.com/card/1st/1stmv013.php",
+    "kind": "１進化ポケモン",
+    "type": "草",
+    "name": "ナッシー",
+    "hp": 70,
+    "weakness": "炎×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ねらいだま",
+      "cost": "草",
+      "damage": null,
+      "text": "相手の場のポケモンを、1匹選ぶ。自分についている「草」エネルギーの数だけコインを投げ、「おもて」の数×10のダメージを、「弱点・抵抗カ」に関係なく、そのポケモンに与える。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "-",
+    "remarks": "トロピカルアイランド 海辺"
+   },
+   {
+    "list_number": "002/003",
+    "url": "https://pcg-search.com/card/1st/1stmv014.php",
+    "kind": "１進化ポケモン",
+    "type": "超",
+    "name": "ヤドキング",
+    "hp": 70,
+    "weakness": "超×2",
+    "resistance": null,
+    "retreat": "無無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "ひらめく",
+      "cost": "超",
+      "damage": null,
+      "text": "コインを投げて「おもて」なら、自分の山札から「トレーナーカード」1枚を選び出し、相手に見せてから、手札に加える。その後、その山札をよく切る。"
+     },
+     {
+      "name": "サイコキネシス",
+      "cost": "超無",
+      "damage": "10+",
+      "text": "相手についているエネルギーカードの数×10のダメージを、追加する。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "-(キラ)",
+    "remarks": "トロピカルアイランド 海辺"
+   },
+   {
+    "list_number": "003/003",
+    "url": "https://pcg-search.com/card/1st/1stmv015.php",
+    "kind": "１進化ポケモン",
+    "type": "水",
+    "name": "カメール",
+    "hp": 60,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "みずでっぽう",
+      "cost": "水水",
+      "damage": "20+",
+      "text": "ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで)"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "-",
+    "remarks": "トロピカルアイランド 海辺"
+   },
+   {
+    "list_number": "001/003",
+    "url": "https://pcg-search.com/card/1st/1stmv016.php",
+    "kind": "１進化ポケモン",
+    "type": "水",
+    "name": "ドククラゲ",
+    "hp": 60,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "しょくしゅをつかう",
+      "cost": "水",
+      "damage": null,
+      "text": "自分についている「水」エネルギーの数だけコインを投げ、「おもて」の数×2枚のカードを、自分の山札から引く。"
+     },
+     {
+      "name": "どくばり",
+      "cost": "水水",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手を「どく」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "-",
+    "remarks": "トロピカルアイランド 海"
+   },
+   {
+    "list_number": "002/003",
+    "url": "https://pcg-search.com/card/1st/1stmv017.php",
+    "kind": "たねポケモン",
+    "type": "水",
+    "name": "マリル",
+    "hp": 40,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "みずとばし",
+      "cost": "水",
+      "damage": null,
+      "text": "相手の場のポケモンを1匹選び、「弱点・抵抗力」に関係なく、10ダメージ。"
+     },
+     {
+      "name": "ころがりタックル",
+      "cost": "無無",
+      "damage": "20",
+      "text": null
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "-(キラ)",
+    "remarks": "トロピカルアイランド 海"
+   },
+   {
+    "list_number": "003/003",
+    "url": "https://pcg-search.com/card/1st/1stmv018.php",
+    "kind": "たねポケモン",
+    "type": "水",
+    "name": "ラプラス",
+    "hp": 70,
+    "weakness": "雷×2",
+    "resistance": null,
+    "retreat": "無",
+    "powers": [],
+    "attacks": [
+     {
+      "name": "やさしいうた",
+      "cost": "無",
+      "damage": null,
+      "text": "自分と相手にのっているダメージカウンターを、それぞれ2つずつ、とりのぞく。その後、相手を「ねむり」状態にする。"
+     },
+     {
+      "name": "れいとうビーム",
+      "cost": "水水",
+      "damage": "20",
+      "text": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     }
+    ],
+    "text": null,
+    "note": null,
+    "illustrator": "Naoyo Kimura",
+    "rarity": "-",
+    "remarks": "トロピカルアイランド 海"
+   }
+  ]
+ }
+}

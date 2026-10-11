@@ -37,6 +37,7 @@
 | J21 | Wikipedia「ポケモンカードゲームの公式大会一覧」 | https://ja.wikipedia.org/wiki/ポケモンカードゲームの公式大会一覧 |
 | J22 | nazonobasho「カメックスメガバトル 1998 レギュレーション」 | https://nazonobasho.com/regulation-kamexmegabattle1998/ |
 | J23 | nazonobasho「2001年 殿堂レギュレーション」 | https://nazonobasho.com/2001dendou-regulation/ |
+| J24 | ポケモンWiki「ポケットモンスターカードゲーム 映画公開記念パック サザンアイランド」（発売日・価格・構成） | https://wiki.xn--rckteqa2e.com/wiki/ポケットモンスターカードゲーム_映画公開記念パック_サザンアイランド |
 
 ## 英語版（WotC）の公式資料の転載
 
@@ -92,6 +93,10 @@
 | X36 | ポケモンWiki「ポケモンカード★web」、Samurai Sword Tokyo「Japanese Pokémon card backs explained」 | https://wiki.pokemonwiki.com/wiki/ポケモンカード★web 、 https://samuraiswordtokyo.com/blogs/news/japanese-pokemon-card-backs-explained |
 | X37 | Bulbapedia「Brock's Ninetales (Gym Challenge 3)」（日本版ははじめ、のせたカードのポケモンパワーを使えたこと） | https://bulbapedia.bulbagarden.net/wiki/Brock%27s_Ninetales_(Gym_Challenge_3) |
 | X38 | Bulbapedia「Koga's Ditto (Gym Challenge 10)」 | https://bulbapedia.bulbagarden.net/wiki/Koga%27s_Ditto_(Gym_Challenge_10) |
+| X39 | Serebii「Vending Machine Series」（拡張シートの価格・構成） | https://serebii.net/card/vendingmachineset2 |
+| X40 | Pokumon「Vending Machine Sheet 1〜3」（拡張シートの発売日・シートの構成・正式名） | https://pokumon.com/vending-machine-sheet-1/ |
+| X41 | Bulbapedia「Wizards Black Star Promos (TCG)」「Pikachu (Wizards Promo 27)」、WikiDex の各プロモのページ（拡張シートのカードの英語版） | https://bulbapedia.bulbagarden.net/wiki/Wizards_Black_Star_Promos_(TCG) 、 https://bulbapedia.bulbagarden.net/wiki/Pikachu_(Wizards_Promo_27) |
+| X42 | Bulbapedia「Tentacruel (Southern Islands 10)」（どくばりの日英の違い） | https://bulbapedia.bulbagarden.net/wiki/Tentacruel_(Southern_Islands_10) |
 
 ## カードテキストの出典
 
@@ -99,6 +104,7 @@
 |---|---|---|
 | N1 | なぞのばしょ（旧裏カードの個別ページ。カード名・レベル・ワザ・特殊能力・効果文・収録商品・印刷上の備考を掲載） | https://nazonobasho.com/ （カードごとの URL は `data/cards.json` の `ja_text_source`） |
 | N2 | ポケモンWiki（旧裏カードの個別ページ。ユーザーがブラウザで保存し、カード名・レベル・ワザ・特殊能力・説明文・レアリティ・収録シリーズを抜き出したもの。版 id 付き） | https://wiki.pokemonwiki.com/ （保存データは `data/raw/`、カードごとの URL は `data/cards.json` の `ja_text_source`） |
+| N3 | ポケモンカード 旧シリーズ検索（pcg-search.com。旧裏の商品ごとのカードリストとカード個別ページ。拡張シートとサザンアイランドの取り込みに使用） | https://pcg-search.com/card/card_list.php （カードごとの URL は `data/ja_text_pcgsearch.json` の `url`） |
 | S1 | Scrydex 由来の日本版カードデータ（第三者のリポジトリにある写し。カード名・コスト・ダメージ・HP・にげる） | https://github.com/MarkHughes88/bindlr-prototype （`data/pokemon/raw/ja/expansions`） |
 
 ## カードリストのデータ
@@ -159,9 +165,13 @@
   - エリカのピッピ: つきのちからで、自分自身も進化させられるか。
   - エネルギーサーキュレート: 手札にもどせるのが基本エネルギーだけか。
   - お上品攻撃: 手札にもどすのが自分の番の終わりか、相手の番の終わりか。
+- 拡張パック以外の商品（拡張シート第1〜3弾、映画公開記念パック「サザンアイランド」）の 143 枚は、pcg-search [N3] から取り込みました（`data/ja_text_pcgsearch.json`、[拡張シートとサザンアイランド](cards/other-products.md)）。
+  - サザンアイランドの 18 枚はなぞのばしょ [N1] の転記とも照合し、食い違いは 3 件（転記の誤り）でした。
+  - 拡張パック 10 弾のデータ（`data/cards.json`）には入れていません。
 - 取得方法:
   - 旧裏 wiki（wikiwiki.jp）とポケモンWiki は、Cloudflare の自動アクセス防止で作成環境から取得できませんでした。回避はしていません。
   - ポケモンWiki のページは、ユーザーがブラウザで保存したもの（`data/raw/`）を使っています。
+  - Bulbapedia と Pokumon は、作成環境のネットワーク設定で接続できませんでした。これらの内容（X30、X39〜X42 など）は検索結果の要約で確かめたものです。
 
 ## まだ確認できていないこと
 
@@ -177,4 +187,5 @@
 - タケシのキュウコンの日本でのエラッタの時期と文面
 - リーダーズスタジアムのエリカのピッピ・エネルギーサーキュレート・お上品攻撃の日英の違い（日本版の文面はポケモンWiki の転記 1 系統だけで確認）
 - なぞのばしょ・ポケモンWiki から取り込んだ効果文の誤字（数値以外は英語版と突き合わせていない）
+- 拡張シート・サザンアイランドについて未確認のこと（[一覧](cards/other-products.md#まだ確認できていないこと)）
 - 英語版の区分 Goldenrod Game Corner（カードめくりゲーム、スロットゲーム）の日本語の区分名。なぞのばしょの分類は「トレーナーカード」だけ

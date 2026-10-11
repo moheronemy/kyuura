@@ -1,0 +1,270 @@
+# 拡張シートとサザンアイランド
+
+<!-- このファイルは scripts/build_other_products.py が data/ja_text_pcgsearch.json と data/curation/other_products.json から生成しています。直接編集しないでください。 -->
+
+拡張パック以外で旧裏期に日本で出た商品のうち、「拡張シート」（第1〜3弾）と映画公開記念パック「サザンアイランド」をまとめたページです。
+これらのカードは、拡張パック 10 弾のデータ（`data/cards.json`）には入れず、`data/ja_text_pcgsearch.json` に収録しています。
+
+- カードの欄（名前・HP・ワザ・効果文など）は、ポケモンカード 旧シリーズ検索（pcg-search.com）[N3] の転記です。カード名から各カードのページにリンクしています。
+- サザンアイランドは、なぞのばしょ [N1] の転記とも突き合わせました。
+- 発売日・販売方法などは検索結果の要約で確かめたもので、各ページを直接は開けていません（[出典と確認状況](../sources.md)）。
+- 確度（確実／有力／未確認）と出典の記号は [出典と確認状況](../sources.md) を参照。
+
+## 1. 拡張シート
+
+### 概要
+
+- 正式な商品名は「拡張シート」。英語圏では Vending Machine cards（自販機カード）と呼ばれますが、これはコレクターの通称です [X30][X40]。**有力**
+- 自動販売機で 1 シート 100 円で売られ、シートからカードをはがして使いました。各弾 18 種のシートがあり、1 シートにカード 3 枚が付いています [X39][X40]。**有力**
+  - 4 つ目の枠には、青版・赤版はダメージカウンターなどのシール、緑版はおまけのカード（下記）が付いていました [X30][X40]。**有力**
+- カードに番号は印刷されていません。下の表の番号は pcg-search の並び順です。
+
+| 弾 | 発売日 | 収録 | レアリティ | 英語版になったカード |
+|---|---|---|---|---|
+| 拡張シート 第1弾（青版） | 1998-03-23 | 36 枚 | ● 18・◆ 18 | 2 枚 |
+| 拡張シート 第2弾（赤版） | 1998-06-17 | 36 枚 | ● 18・◆ 18 | 2 枚 |
+| 拡張シート 第3弾（緑版） | 1998-11-24 | 36 枚＋おまけ 17 種 | ● 18・◆ 18 | 2 枚 |
+
+発売日は [X30][X39][X40]（**有力**）、収録枚数とレアリティは [N3] によります。
+
+### 英語版になったカード
+
+拡張シートのカードの多くは日本でしか出ていません。英語版になったのは、カードの数値・ワザ・ポケモンパワーが一致する次の 6 枚で、どれも Wizards Black Star Promos です [X30][X41]。**有力**
+
+| 日本版 | 英語版 | 英語版の配布 |
+|---|---|---|
+| ピカチュウ（拡張シート 第1弾（青版）） | Wizards Black Star Promos 27（Pikachu） | 2000-11-14 英語版『ルギア爆誕』（Pokémon the Movie 2000: The Power of One）の VHS・DVD に付属 |
+| カビゴン（拡張シート 第1弾（青版）） | Wizards Black Star Promos 49（Snorlax） | 2002-08 ポケモンリーグで配布 |
+| フリーザー（拡張シート 第2弾（赤版）） | Wizards Black Star Promos 48（Articuno） | 2002-07 ポケモンリーグで配布 |
+| エレブー（拡張シート 第2弾（赤版）） | Wizards Black Star Promos 46（Electabuzz） | 2002-05 ポケモンリーグで配布 |
+| ストライク（拡張シート 第3弾（緑版）） | Wizards Black Star Promos 45（Scyther） | 2002-04 ポケモンリーグで配布 |
+| ブーバー（拡張シート 第3弾（緑版）） | Wizards Black Star Promos 44（Magmar） | 2002-03 ポケモンリーグで配布 |
+
+- 6 枚とも、日英の文面の意味に違いは見つかりませんでした（英語版は 2002年の用語「Special Condition」などに直っています）。
+- ほかのカードは、WotC 期の英語版の全セット（e シリーズ、Legendary Collection、プロモを含む）と数値・ワザを突き合わせても対応するものがありませんでした。
+
+### 緑版のおまけカード
+
+- おすすめルール（EXTRA RULE）（5 種）: [サイドカード4枚戦](https://pcg-search.com/card/1st/1stex3037.php)、[「こんらん」で20ダメージルール](https://pcg-search.com/card/1st/1stex3038.php)、[3デッキ戦](https://pcg-search.com/card/1st/1stex3039.php)、[ダグトリオチームバトル 3vs3](https://pcg-search.com/card/1st/1stex3040.php)、[デッキ交換戦](https://pcg-search.com/card/1st/1stex3041.php)
+- デッキ（デッキレシピ）（5 種）: [ポケモンタワーのなぞ?](https://pcg-search.com/card/1st/1stex3042.php)、[ポケモンやしきでアッチッチ!](https://pcg-search.com/card/1st/1stex3043.php)、[サファリゾーンでおおあばれ!](https://pcg-search.com/card/1st/1stex3044.php)、[ふたごじまのタッツー](https://pcg-search.com/card/1st/1stex3045.php)、[ハナダ!さいごのどうくつ](https://pcg-search.com/card/1st/1stex3046.php)
+- ジョークカード（ポケモン）（1 種）: [オーヤマのピカチュウ](https://pcg-search.com/card/1st/1stex3047.php)
+- その他（4 種）: [イマクニ?のわるだくみ](https://pcg-search.com/card/1st/1stex3048.php)、（名前の記載なし）、（名前の記載なし）、（名前の記載なし）
+- パスカード（2 種）: [イマクニ?のパソコン](https://pcg-search.com/card/1st/1stex3052.php)、[マサキのパソコン](https://pcg-search.com/card/1st/1stex3053.php)
+
+- おすすめルールのカードのうち「サイドカード4枚戦」「『こんらん』で20ダメージルール」は、当時の公式トーナメントで採用されていたと書かれています [N3]。ルールの資料では [日本版のルール](../rules/japanese.md) で使っています。
+- オーヤマのピカチュウはジョークカードで、ワザのダメージが「10ぐらい」となっています [N3]。
+
+### 対戦での扱い
+
+- 2001年の殿堂レギュレーションでは、ジム系のカードとともに拡張シートのカードは使えませんでした [J23]。**有力**
+
+### カードリスト: 拡張シート 第1弾（青版）
+
+| 番号 | カード名 | 種類 | タイプ | HP | レア | 英語版 |
+|---|---|---|---|---|---|---|
+| 001/036 | [フシギダネ](https://pcg-search.com/card/1st/1stex1001.php) | たね | 草 | 50 | ◆ |  |
+| 002/036 | [キャタピー](https://pcg-search.com/card/1st/1stex1002.php) | たね | 草 | 50 | ● |  |
+| 003/036 | [トランセル](https://pcg-search.com/card/1st/1stex1003.php) | 1進化 | 草 | 70 | ◆ |  |
+| 004/036 | [ビードル](https://pcg-search.com/card/1st/1stex1004.php) | たね | 草 | 50 | ● |  |
+| 005/036 | [コクーン](https://pcg-search.com/card/1st/1stex1005.php) | 1進化 | 草 | 60 | ● |  |
+| 006/036 | [ニドラン♀](https://pcg-search.com/card/1st/1stex1006.php) | たね | 草 | 50 | ● |  |
+| 007/036 | [ニドラン♂](https://pcg-search.com/card/1st/1stex1007.php) | たね | 草 | 50 | ● |  |
+| 008/036 | [ズバット](https://pcg-search.com/card/1st/1stex1008.php) | たね | 草 | 40 | ● |  |
+| 009/036 | [ゴルバット](https://pcg-search.com/card/1st/1stex1009.php) | 1進化 | 草 | 50 | ● |  |
+| 010/036 | [パラス](https://pcg-search.com/card/1st/1stex1010.php) | たね | 草 | 50 | ● |  |
+| 011/036 | [パラセクト](https://pcg-search.com/card/1st/1stex1011.php) | 1進化 | 草 | 60 | ● |  |
+| 012/036 | [カイロス](https://pcg-search.com/card/1st/1stex1012.php) | たね | 草 | 50 | ◆ |  |
+| 013/036 | [ヒトカゲ](https://pcg-search.com/card/1st/1stex1013.php) | たね | 炎 | 50 | ◆ |  |
+| 014/036 | [ギャロップ](https://pcg-search.com/card/1st/1stex1014.php) | 1進化 | 炎 | 60 | ◆ |  |
+| 015/036 | [ゼニガメ](https://pcg-search.com/card/1st/1stex1015.php) | たね | 水 | 50 | ◆ |  |
+| 016/036 | [ニョロモ](https://pcg-search.com/card/1st/1stex1016.php) | たね | 水 | 50 | ● |  |
+| 017/036 | [ニョロゾ](https://pcg-search.com/card/1st/1stex1017.php) | 1進化 | 水 | 70 | ◆ |  |
+| 018/036 | [ニョロボン](https://pcg-search.com/card/1st/1stex1018.php) | 2進化 | 水 | 80 | ◆ |  |
+| 019/036 | [ピカチュウ](https://pcg-search.com/card/1st/1stex1019.php) | たね | 雷 | 30 | ◆ | Wizards Black Star Promos 27（Pikachu） |
+| 020/036 | [ケーシィ](https://pcg-search.com/card/1st/1stex1020.php) | たね | 超 | 30 | ● |  |
+| 021/036 | [バリヤード](https://pcg-search.com/card/1st/1stex1021.php) | たね | 超 | 50 | ◆ |  |
+| 022/036 | [ミュウツー](https://pcg-search.com/card/1st/1stex1022.php) | たね | 超 | 80 | ◆ |  |
+| 023/036 | [イシツブテ](https://pcg-search.com/card/1st/1stex1023.php) | たね | 闘 | 50 | ● |  |
+| 024/036 | [ポッポ](https://pcg-search.com/card/1st/1stex1024.php) | たね | 無 | 50 | ● |  |
+| 025/036 | [コラッタ](https://pcg-search.com/card/1st/1stex1025.php) | たね | 無 | 50 | ● |  |
+| 026/036 | [ピッピ](https://pcg-search.com/card/1st/1stex1026.php) | たね | 無 | 50 | ◆ |  |
+| 027/036 | [プクリン](https://pcg-search.com/card/1st/1stex1027.php) | 1進化 | 無 | 90 | ◆ |  |
+| 028/036 | [ドードー](https://pcg-search.com/card/1st/1stex1028.php) | たね | 無 | 40 | ● |  |
+| 029/036 | [ドードリオ](https://pcg-search.com/card/1st/1stex1029.php) | 1進化 | 無 | 60 | ● |  |
+| 030/036 | [ベロリンガ](https://pcg-search.com/card/1st/1stex1030.php) | たね | 無 | 60 | ◆ |  |
+| 031/036 | [ラッキー](https://pcg-search.com/card/1st/1stex1031.php) | たね | 無 | 100 | ◆ |  |
+| 032/036 | [イーブイ](https://pcg-search.com/card/1st/1stex1032.php) | たね | 無 | 30 | ● |  |
+| 033/036 | [ポリゴン](https://pcg-search.com/card/1st/1stex1033.php) | たね | 無 | 40 | ● |  |
+| 034/036 | [カビゴン](https://pcg-search.com/card/1st/1stex1034.php) | たね | 無 | 90 | ◆ | Wizards Black Star Promos 49（Snorlax） |
+| 035/036 | [化石の発掘](https://pcg-search.com/card/1st/1stex1035.php) | トレーナー |  |  | ◆ |  |
+| 036/036 | [月の石](https://pcg-search.com/card/1st/1stex1036.php) | トレーナー |  |  | ◆ |  |
+
+### カードリスト: 拡張シート 第2弾（赤版）
+
+| 番号 | カード名 | 種類 | タイプ | HP | レア | 英語版 |
+|---|---|---|---|---|---|---|
+| 001/036 | [モルフォン](https://pcg-search.com/card/1st/1stex2001.php) | 1進化 | 草 | 60 | ● |  |
+| 002/036 | [ベトベター](https://pcg-search.com/card/1st/1stex2002.php) | たね | 草 | 50 | ● |  |
+| 003/036 | [ドガース](https://pcg-search.com/card/1st/1stex2003.php) | たね | 草 | 50 | ● |  |
+| 004/036 | [モンジャラ](https://pcg-search.com/card/1st/1stex2004.php) | たね | 草 | 50 | ● |  |
+| 005/036 | [ファイヤー](https://pcg-search.com/card/1st/1stex2005.php) | たね | 炎 | 80 | ◆ |  |
+| 006/036 | [パウワウ](https://pcg-search.com/card/1st/1stex2006.php) | たね | 水 | 50 | ● |  |
+| 007/036 | [ジュゴン](https://pcg-search.com/card/1st/1stex2007.php) | 1進化 | 水 | 60 | ◆ |  |
+| 008/036 | [シェルダー](https://pcg-search.com/card/1st/1stex2008.php) | たね | 水 | 50 | ● |  |
+| 009/036 | [クラブ](https://pcg-search.com/card/1st/1stex2009.php) | たね | 水 | 40 | ● |  |
+| 010/036 | [ラプラス](https://pcg-search.com/card/1st/1stex2010.php) | たね | 水 | 60 | ● |  |
+| 011/036 | [オムナイト](https://pcg-search.com/card/1st/1stex2011.php) | 1進化 | 水 | 50 | ◆ |  |
+| 012/036 | [フリーザー](https://pcg-search.com/card/1st/1stex2012.php) | たね | 水 | 80 | ◆ | Wizards Black Star Promos 48（Articuno） |
+| 013/036 | [ライチュウ](https://pcg-search.com/card/1st/1stex2013.php) | 1進化 | 雷 | 70 | ◆ |  |
+| 014/036 | [コイル](https://pcg-search.com/card/1st/1stex2014.php) | たね | 雷 | 40 | ● |  |
+| 015/036 | [レアコイル](https://pcg-search.com/card/1st/1stex2015.php) | 1進化 | 雷 | 70 | ◆ |  |
+| 016/036 | [ビリリダマ](https://pcg-search.com/card/1st/1stex2016.php) | たね | 雷 | 30 | ● |  |
+| 017/036 | [エレブー](https://pcg-search.com/card/1st/1stex2017.php) | たね | 雷 | 60 | ● | Wizards Black Star Promos 46（Electabuzz） |
+| 018/036 | [サンダー](https://pcg-search.com/card/1st/1stex2018.php) | たね | 雷 | 70 | ◆ |  |
+| 019/036 | [ルージュラ](https://pcg-search.com/card/1st/1stex2019.php) | たね | 超 | 50 | ◆ |  |
+| 020/036 | [サンド](https://pcg-search.com/card/1st/1stex2020.php) | たね | 闘 | 40 | ● |  |
+| 021/036 | [ワンリキー](https://pcg-search.com/card/1st/1stex2021.php) | たね | 闘 | 50 | ● |  |
+| 022/036 | [ゴーリキー](https://pcg-search.com/card/1st/1stex2022.php) | 1進化 | 闘 | 70 | ● |  |
+| 023/036 | [ゴローン](https://pcg-search.com/card/1st/1stex2023.php) | 1進化 | 闘 | 60 | ◆ |  |
+| 024/036 | [イワーク](https://pcg-search.com/card/1st/1stex2024.php) | たね | 闘 | 70 | ◆ |  |
+| 025/036 | [ガラガラ](https://pcg-search.com/card/1st/1stex2025.php) | 1進化 | 闘 | 60 | ◆ |  |
+| 026/036 | [サワムラー](https://pcg-search.com/card/1st/1stex2026.php) | たね | 闘 | 50 | ◆ |  |
+| 027/036 | [エビワラー](https://pcg-search.com/card/1st/1stex2027.php) | たね | 闘 | 50 | ◆ |  |
+| 028/036 | [カブト](https://pcg-search.com/card/1st/1stex2028.php) | 1進化 | 闘 | 50 | ◆ |  |
+| 029/036 | [プテラ](https://pcg-search.com/card/1st/1stex2029.php) | 1進化 | 闘 | 70 | ◆ |  |
+| 030/036 | [オニスズメ](https://pcg-search.com/card/1st/1stex2030.php) | たね | 無 | 40 | ● |  |
+| 031/036 | [オニドリル](https://pcg-search.com/card/1st/1stex2031.php) | 1進化 | 無 | 60 | ● |  |
+| 032/036 | [メタモン](https://pcg-search.com/card/1st/1stex2032.php) | たね | 無 | 40 | ◆ |  |
+| 033/036 | [エフェクトガード](https://pcg-search.com/card/1st/1stex2033.php) | トレーナー |  |  | ● |  |
+| 034/036 | [元気のかたまり](https://pcg-search.com/card/1st/1stex2034.php) | トレーナー |  |  | ● |  |
+| 035/036 | [フラッシュ](https://pcg-search.com/card/1st/1stex2035.php) | トレーナー |  |  | ◆ |  |
+| 036/036 | [マスターボール](https://pcg-search.com/card/1st/1stex2036.php) | トレーナー |  |  | ◆ |  |
+
+### カードリスト: 拡張シート 第3弾（緑版）
+
+| 番号 | カード名 | 種類 | タイプ | HP | レア | 英語版 |
+|---|---|---|---|---|---|---|
+| 001/036 | [アーボック](https://pcg-search.com/card/1st/1stex3001.php) | 1進化 | 草 | 60 | ◆ |  |
+| 002/036 | [ニドリーナ](https://pcg-search.com/card/1st/1stex3002.php) | 1進化 | 草 | 60 | ◆ |  |
+| 003/036 | [ニドリーノ](https://pcg-search.com/card/1st/1stex3003.php) | 1進化 | 草 | 60 | ◆ |  |
+| 004/036 | [コンパン](https://pcg-search.com/card/1st/1stex3004.php) | たね | 草 | 50 | ● |  |
+| 005/036 | [マダツボミ](https://pcg-search.com/card/1st/1stex3005.php) | たね | 草 | 40 | ● |  |
+| 006/036 | [ウツドン](https://pcg-search.com/card/1st/1stex3006.php) | 1進化 | 草 | 60 | ◆ |  |
+| 007/036 | [マタドガス](https://pcg-search.com/card/1st/1stex3007.php) | 1進化 | 草 | 60 | ◆ |  |
+| 008/036 | [ストライク](https://pcg-search.com/card/1st/1stex3008.php) | たね | 草 | 60 | ◆ | Wizards Black Star Promos 45（Scyther） |
+| 009/036 | [ロコン](https://pcg-search.com/card/1st/1stex3009.php) | たね | 炎 | 50 | ● |  |
+| 010/036 | [ガーディ](https://pcg-search.com/card/1st/1stex3010.php) | たね | 炎 | 50 | ● |  |
+| 011/036 | [ポニータ](https://pcg-search.com/card/1st/1stex3011.php) | たね | 炎 | 40 | ● |  |
+| 012/036 | [ブーバー](https://pcg-search.com/card/1st/1stex3012.php) | たね | 炎 | 60 | ◆ | Wizards Black Star Promos 44（Magmar） |
+| 013/036 | [ゴルダック](https://pcg-search.com/card/1st/1stex3013.php) | 1進化 | 水 | 70 | ◆ |  |
+| 014/036 | [キングラー](https://pcg-search.com/card/1st/1stex3014.php) | 1進化 | 水 | 80 | ◆ |  |
+| 015/036 | [タッツー](https://pcg-search.com/card/1st/1stex3015.php) | たね | 水 | 40 | ● |  |
+| 016/036 | [シードラ](https://pcg-search.com/card/1st/1stex3016.php) | 1進化 | 水 | 70 | ◆ |  |
+| 017/036 | [ヒトデマン](https://pcg-search.com/card/1st/1stex3017.php) | たね | 水 | 50 | ● |  |
+| 018/036 | [オムナイト](https://pcg-search.com/card/1st/1stex3018.php) | 1進化 | 水 | 50 | ◆ |  |
+| 019/036 | [ユンゲラー](https://pcg-search.com/card/1st/1stex3019.php) | 1進化 | 超 | 60 | ◆ |  |
+| 020/036 | [ユンゲラー](https://pcg-search.com/card/1st/1stex3020.php) | 1進化 | 超 | 70 | ● |  |
+| 021/036 | [ヤドラン](https://pcg-search.com/card/1st/1stex3021.php) | 1進化 | 超 | 90 | ● |  |
+| 022/036 | [ゴース](https://pcg-search.com/card/1st/1stex3022.php) | たね | 超 | 40 | ● |  |
+| 023/036 | [ゴースト](https://pcg-search.com/card/1st/1stex3023.php) | 1進化 | 超 | 60 | ◆ |  |
+| 024/036 | [ゴースト](https://pcg-search.com/card/1st/1stex3024.php) | 1進化 | 超 | 70 | ◆ |  |
+| 025/036 | [スリーパー](https://pcg-search.com/card/1st/1stex3025.php) | 1進化 | 超 | 60 | ◆ |  |
+| 026/036 | [ミュウツー](https://pcg-search.com/card/1st/1stex3026.php) | たね | 超 | 80 | ● |  |
+| 027/036 | [サンドパン](https://pcg-search.com/card/1st/1stex3027.php) | 1進化 | 闘 | 70 | ● |  |
+| 028/036 | [ゴーリキー](https://pcg-search.com/card/1st/1stex3028.php) | 1進化 | 闘 | 60 | ● |  |
+| 029/036 | [ゴローン](https://pcg-search.com/card/1st/1stex3029.php) | 1進化 | 闘 | 60 | ● |  |
+| 030/036 | [カラカラ](https://pcg-search.com/card/1st/1stex3030.php) | たね | 闘 | 40 | ● |  |
+| 031/036 | [サイドン](https://pcg-search.com/card/1st/1stex3031.php) | 1進化 | 闘 | 80 | ◆ |  |
+| 032/036 | [ピジョン](https://pcg-search.com/card/1st/1stex3032.php) | 1進化 | 無 | 60 | ◆ |  |
+| 033/036 | [ガルーラ](https://pcg-search.com/card/1st/1stex3033.php) | たね | 無 | 80 | ● |  |
+| 034/036 | [ケンタロス](https://pcg-search.com/card/1st/1stex3034.php) | たね | 無 | 70 | ● |  |
+| 035/036 | [ポケモン再転送](https://pcg-search.com/card/1st/1stex3035.php) | トレーナー |  |  | ● |  |
+| 036/036 | [ポケモンタワー](https://pcg-search.com/card/1st/1stex3036.php) | スタジアム |  |  | ◆ |  |
+| -/- | [サイドカード4枚戦](https://pcg-search.com/card/1st/1stex3037.php) | EXTRA RULE |  |  |  |  |
+| -/- | [「こんらん」で20ダメージルール](https://pcg-search.com/card/1st/1stex3038.php) | EXTRA RULE |  |  |  |  |
+| -/- | [3デッキ戦](https://pcg-search.com/card/1st/1stex3039.php) | EXTRA RULE |  |  |  |  |
+| -/- | [ダグトリオチームバトル 3vs3](https://pcg-search.com/card/1st/1stex3040.php) | EXTRA RULE |  |  |  |  |
+| -/- | [デッキ交換戦](https://pcg-search.com/card/1st/1stex3041.php) | EXTRA RULE |  |  |  |  |
+| -/- | [ポケモンタワーのなぞ?](https://pcg-search.com/card/1st/1stex3042.php) | デッキ |  |  |  |  |
+| -/- | [ポケモンやしきでアッチッチ!](https://pcg-search.com/card/1st/1stex3043.php) | デッキ |  |  |  |  |
+| -/- | [サファリゾーンでおおあばれ!](https://pcg-search.com/card/1st/1stex3044.php) | デッキ |  |  |  |  |
+| -/- | [ふたごじまのタッツー](https://pcg-search.com/card/1st/1stex3045.php) | デッキ |  |  |  |  |
+| -/- | [ハナダ!さいごのどうくつ](https://pcg-search.com/card/1st/1stex3046.php) | デッキ |  |  |  |  |
+| -/- | [オーヤマのピカチュウ](https://pcg-search.com/card/1st/1stex3047.php) | たね | 雷 | 50 |  |  |
+| -/- | [イマクニ?のわるだくみ](https://pcg-search.com/card/1st/1stex3048.php) | その他 |  |  |  |  |
+| -/- | [-](https://pcg-search.com/card/1st/1stex3049.php) | その他 |  |  |  |  |
+| -/- | [-](https://pcg-search.com/card/1st/1stex3050.php) | その他 |  |  |  |  |
+| -/- | [-](https://pcg-search.com/card/1st/1stex3051.php) | その他 |  |  |  |  |
+| -/- | [イマクニ?のパソコン](https://pcg-search.com/card/1st/1stex3052.php) | PASS CARD |  |  |  |  |
+| -/- | [マサキのパソコン](https://pcg-search.com/card/1st/1stex3053.php) | PASS CARD |  |  |  |  |
+
+## 2. 映画公開記念パック「サザンアイランド」
+
+### 概要
+
+- 商品名は映画公開記念パック「サザンアイランド」。発売は 1999-07-17（劇場版『幻のポケモン ルギア爆誕』の公開日）で、3 枚入り 200 円（税別）。夏の期間限定の商品でした [J24]。**有力**
+- 「トロピカルアイランド」と「レインボーアイランド」の 2 つのコレクションがあり、それぞれ 3 つの場所のパックがあります。1 パック 3 枚で、3 枚を並べると 1 枚の風景画になり、そのうち 1 枚がキラです [N3][X31]。**確実**
+- 金・銀の世代のポケモン（トゲピー、マリル、ヤドキング、レディバ）が入っていて、これらには図鑑番号が印刷されていません [N1]。**有力**
+- 英語版 Southern Islands（2001-07-31）は同じ 18 枚で、1〜18 の番号が付いています [X31]。**有力**
+
+| コレクション | 場所 | カード（★ はキラ） | 英語版の番号 |
+|---|---|---|---|
+| レインボーアイランド | お花畑 | レディバ★、プリン、バタフリー | 7・8・9 |
+| レインボーアイランド | 大空 | ミュウ★、ピジョット、イワーク | 1・2・3 |
+| レインボーアイランド | 川辺 | トゲピー★、フシギソウ、ラッタ | 4・5・6 |
+| トロピカルアイランド | ジャングル | ベロリンガ、ラフレシア★、オコリザル | 16・17・18 |
+| トロピカルアイランド | 海辺 | ナッシー、ヤドキング★、カメール | 13・14・15 |
+| トロピカルアイランド | 海 | ドククラゲ、マリル★、ラプラス | 10・11・12 |
+
+### カードリスト
+
+| カード名 | 種類 | LV | タイプ | HP | 弱点 | 抵抗力 | にげる | 英語版 |
+|---|---|---|---|---|---|---|---|---|
+| [レディバ](https://pcg-search.com/card/1st/1stmv001.php) | たね | 12 | 草 | 40 | 炎×2 | 闘-30 | 1 | Southern Islands 7（Ledyba） |
+| [プリン](https://pcg-search.com/card/1st/1stmv002.php) | たね | 39 | 無 | 50 | 闘×2 | 超-30 | 1 | Southern Islands 8（Jigglypuff） |
+| [バタフリー](https://pcg-search.com/card/1st/1stmv003.php) | 2進化 | 37 | 草 | 80 | 炎×2 | 闘-30 | 1 | Southern Islands 9（Butterfree） |
+| [ミュウ](https://pcg-search.com/card/1st/1stmv004.php) | たね | 5 | 超 | 30 | 超×2 |  | 0 | Southern Islands 1（Mew） |
+| [ピジョット](https://pcg-search.com/card/1st/1stmv005.php) | 2進化 | 39 | 無 | 70 | 雷×2 | 闘-30 | 0 | Southern Islands 2（Pidgeot） |
+| [イワーク](https://pcg-search.com/card/1st/1stmv006.php) | たね | 40 | 闘 | 90 | 草×2 |  | 3 | Southern Islands 3（Onix） |
+| [トゲピー](https://pcg-search.com/card/1st/1stmv007.php) | たね | 10 | 無 | 40 |  | 超-30 | 1 | Southern Islands 4（Togepi） |
+| [フシギソウ](https://pcg-search.com/card/1st/1stmv008.php) | 1進化 | 23 | 草 | 60 | 炎×2 |  | 1 | Southern Islands 5（Ivysaur） |
+| [ラッタ](https://pcg-search.com/card/1st/1stmv009.php) | 1進化 | 25 | 無 | 60 | 闘×2 | 超-30 | 0 | Southern Islands 6（Raticate） |
+| [ベロリンガ](https://pcg-search.com/card/1st/1stmv010.php) | たね | 25 | 無 | 70 | 闘×2 | 超-30 | 2 | Southern Islands 16（Lickitung） |
+| [ラフレシア](https://pcg-search.com/card/1st/1stmv011.php) | 2進化 | 30 | 草 | 70 | 炎×2 |  | 2 | Southern Islands 17（Vileplume） |
+| [オコリザル](https://pcg-search.com/card/1st/1stmv012.php) | 1進化 | 26 | 闘 | 60 | 超×2 |  | 1 | Southern Islands 18（Primeape） |
+| [ナッシー](https://pcg-search.com/card/1st/1stmv013.php) | 1進化 | 27 | 草 | 70 | 炎×2 |  | 2 | Southern Islands 13（Exeggutor） |
+| [ヤドキング](https://pcg-search.com/card/1st/1stmv014.php) | 1進化 | 36 | 超 | 70 | 超×2 |  | 2 | Southern Islands 14（Slowking） |
+| [カメール](https://pcg-search.com/card/1st/1stmv015.php) | 1進化 | 20 | 水 | 60 | 雷×2 |  | 1 | Southern Islands 15（Wartortle） |
+| [ドククラゲ](https://pcg-search.com/card/1st/1stmv016.php) | 1進化 | 30 | 水 | 60 | 雷×2 |  | 1 | Southern Islands 10（Tentacruel） |
+| [マリル](https://pcg-search.com/card/1st/1stmv017.php) | たね | 10 | 水 | 40 | 雷×2 |  | 1 | Southern Islands 11（Marill） |
+| [ラプラス](https://pcg-search.com/card/1st/1stmv018.php) | たね | 30 | 水 | 70 | 雷×2 |  | 1 | Southern Islands 12（Lapras） |
+
+LV はなぞのばしょ [N1]、ほかは pcg-search [N3] の記載です。
+
+### 日英の違い
+
+| カード | 種類 | 内容 | 日本版 | 英語版 | 確度 | 出典 |
+|---|---|---|---|---|---|---|
+| ミュウ / Mew | 文面の意味 | ワザ レインボーウェーブ（Rainbow Wave）で選べるタイプ | 「自分についている『基本エネルギーカード』の色(タイプ)から、1つを選ぶ」と、基本エネルギーに限っている | 「Choose a type of Energy other than Colorless attached to Mew」と、特殊エネルギー（レインボーエネルギー、neo の悪・鋼エネルギーなど）のタイプも選べる | 有力 | [N1][N3] |
+| ドククラゲ / Tentacruel | 文面の意味 | ワザ どくばり（Poison Sting）の特殊状態 | 「コインを投げて『おもて』なら、相手を『どく』状態にする。」 | 「Flip a coin. If heads, the Defending Pokémon is now Paralyzed.」と、マヒになっている。英語版での変更とされる | 確実 | [N1][N3][X42] |
+
+### 2 つの転記の食い違い
+
+pcg-search [N3] となぞのばしょ [N1] の転記を、カード名・HP・ワザ名・ダメージで突き合わせた結果です。効果文の細かな表記の揺れ（「受けない」と「うけない」など）は除いています。
+
+| カード | 項目 | なぞのばしょ | pcg-search |
+|---|---|---|---|
+| ベロリンガ | ワザ名 | のびるベロ | のびるべ口 |
+| ラフレシア | さいあくかふん のダメージ | （空欄） | 30 |
+| マリル | ころがりタックル のダメージ | 10 | 20 |
+
+- ダメージは、2 件とも英語版の値（30、20）と pcg-search 側が一致します。
+- ワザ名は「のびるベロ」が正しく、pcg-search 側の誤記です。
+- 弱点・抵抗力・にげるは、3 つの資料（2 つの転記と英語版）で全カード一致しました。
+
+## まだ確認できていないこと
+
+- 拡張シートの各シートに、どの 3 枚が組み合わされていたか（各弾 18 シート × 3 枚 = 54 枠に対してカードは 36 種）
+- 拡張シートの自動販売機の種類（バンダイの「ジャンボカードダス」とする情報があるが未確認）
+- 緑版のおまけカードのうち、名前の記載がない 3 種の内容
+- サザンアイランドの販売場所（映画館だけだったか）

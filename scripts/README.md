@@ -19,12 +19,19 @@ python3 scripts/nazonobasho.py extract --cache "$WORK/nazonobasho" --out data/ja
 # 日本語テキストを変換（ポケモンWiki。ブラウザで保存したデータ data/raw/*.json から。ネットワークは使わない）
 python3 scripts/pokemonwiki.py --raw data/raw --out data/ja_text_pokemonwiki.json
 
+# 拡張パック以外の商品（拡張シート、サザンアイランド）を取得・抽出（pcg-search.com。取得は 2 秒間隔で約 140 ページ）
+python3 scripts/pcg_search.py fetch --cache "$WORK/pcgsearch"
+python3 scripts/pcg_search.py extract --cache "$WORK/pcgsearch" --out data/ja_text_pcgsearch.json
+
 # カードリストを生成（Python 3.9 以降、標準ライブラリのみ）
 python3 scripts/build_cardlist.py --jp "$WORK/jp.json" \
   --en "$WORK/pokemon-tcg-data" --species "$WORK/pokemon_species_names.csv"
 
 # 日米のルールの違いのページを生成（data/rule_differences.json → docs/rules/differences.md）
 python3 scripts/build_rule_differences.py
+
+# 拡張シートとサザンアイランドのページを生成（→ docs/cards/other-products.md）
+python3 scripts/build_other_products.py
 ```
 
 生成されるもの:
@@ -34,6 +41,8 @@ python3 scripts/build_rule_differences.py
 | `build_cardlist.py` | `data/cards.json`、`data/cards.csv`、`data/attacks.csv`、`data/powers.csv`、`docs/cards/` の各弾のページ・`card-differences.md`・`english-only.md` |
 | `build_rule_differences.py` | `docs/rules/differences.md` |
 | `nazonobasho.py extract` | `data/ja_text_nazonobasho.json`（日本語テキスト。カードテキストと印刷情報の欄だけを残す） |
+| `pcg_search.py extract` | `data/ja_text_pcgsearch.json`（拡張シート第1〜3弾とサザンアイランドの 143 枚） |
+| `build_other_products.py` | `docs/cards/other-products.md` |
 | `pokemonwiki.py` | `data/ja_text_pokemonwiki.json`（`data/raw/` のポケモンWiki のデータを、なぞのばしょと同じ形に変換したもの） |
 
 `build_cardlist.py` は、日本語テキストの出典ごとに、カードと英語版データの数値（HP・コスト・ダメージ・にげる）やカード名の食い違いを `data/ja_text_<出典>_report.json`（`nazonobasho`・`pokemonwiki`）に書き出します。`data/curation/<出典>_review.json` に判定のない食い違いがあると、実行時に一覧を表示します。
@@ -59,6 +68,7 @@ python3 scripts/build_rule_differences.py
 | `nazonobasho_review.json` | なぞのばしょと英語版データの数値の食い違いの判定 |
 | `pokemonwiki_map.json` | ポケモンWiki のページとカードの対応を手で決めたもの |
 | `pokemonwiki_review.json` | ポケモンWiki と英語版データの食い違いの判定 |
+| `other_products.json` | 拡張シート・サザンアイランドの発売日、英語版の対応、日英の違い |
 | `en_fixes.json` | 英語版カードデータの誤りの補正 |
 | `sets.json` | 各弾の名前・発売日・収録数 |
 

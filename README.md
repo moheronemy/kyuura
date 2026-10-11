@@ -27,6 +27,7 @@
 - [カードの日英の違い](docs/cards/card-differences.md) — 文面の意味・エラッタ・表記
 - [収録内容・製品の違い](docs/cards/set-differences.md) — 弾の対応、印刷、裏面
 - [英語版のみに見られるカード](docs/cards/english-only.md)
+- [拡張シートとサザンアイランド](docs/cards/other-products.md) — 拡張パック以外の商品のカードリスト（拡張シート第1〜3弾、映画公開記念パック「サザンアイランド」）
 
 ### データ
 
