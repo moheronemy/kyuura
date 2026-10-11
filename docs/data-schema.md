@@ -198,12 +198,12 @@
 | キー | 内容 |
 |---|---|
 | `categories` | 区分: `basic_rule`（基本ルール）、`tournament_regulation`（大会レギュレーション）、`card_ruling`（カード個別の裁定）、`official_errata`（公式エラッタ）、`printed_text_change`（印刷テキストの変更）、`product_change` |
-| `evidence_kinds` | 根拠の種類: `original`、`card_image`、`official_later`、`secondary_direct`、`search_summary` |
+| `evidence_kinds` | 根拠の種類: `original`、`archived_official`（当時の公式サイトのページを Internet Archive の写しで読んだ）、`card_image`、`official_later`、`secondary_direct`、`search_summary` |
 | `confidence_values` | 確度（確実／有力／未確認）の基準 |
 | `events` | 商品の発売・大会・雑誌の発行などの出来事（`id`、`date`、`region`、`type`、`name`、`notes`、`evidence`） |
 | `entries` | ルール・レギュレーションの記録 |
 | `errata` | カード個別のエラッタ・印刷テキストの変更・裁定の記録 |
-| `card_lists` | 読み替えの対象カードの一覧（`supporter`: サポーターとして扱う 15 種、`poke_body`: ポケボディーとして扱うカード）。`ids` はこのリポジトリのカード id |
+| `card_lists` | 読み替えの対象カードの一覧（`supporter`: サポーターとして扱う 15 種、`poke_body`: ポケボディーとして扱うカード）。`ids` はこのリポジトリのカード id、`bulbapedia` は Bulbapedia の表記、`qa`（`poke_body` だけ）は公式 Q&A の原文の表記（`type`・`name`・`series`・`power`） |
 
 `entries`・`errata` の各要素の主な欄:
 

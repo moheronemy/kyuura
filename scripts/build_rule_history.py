@@ -27,8 +27,8 @@ SRC_RE = re.compile(r'\[([A-Z]\d+)\]')
 GENERATED = ('<!-- このファイルは scripts/build_rule_history.py が data/rule_history.json から生成しています。'
              '直接編集しないでください。 -->')
 REGION_JA = {'JP': '日本版', 'EN': '英語版'}
-EVIDENCE_SHORT = {'original': '原本', 'card_image': 'カードの画像', 'official_later': '後年の公式資料',
-                  'secondary_direct': '二次資料（本文を確認）', 'search_summary': '検索結果の要約のみ'}
+EVIDENCE_SHORT = {'original': '原本', 'archived_official': '公式ページの保存版（原文を確認）', 'card_image': 'カードの画像',
+                  'official_later': '後年の公式資料', 'secondary_direct': '二次資料（本文を確認）', 'search_summary': '検索結果の要約のみ'}
 
 
 def md(s):
@@ -116,6 +116,8 @@ def validate(data, cards, codes):
         if lst['entry'] not in known:
             errors.append(f'card_lists.{name}: entry がない: {lst["entry"]}')
         for row in lst['cards']:
+            if 'qa' in row and set(row['qa']) != {'type', 'name', 'series', 'power'}:
+                errors.append(f"card_lists.{name}: qa の欄が不正: {row['bulbapedia']}")
             if not row['ids']:
                 errors.append(f"card_lists.{name}: 対応するカードがない: {row['bulbapedia']}")
             for c in row['ids']:
@@ -177,11 +179,20 @@ def detail(x, data, cards):
     return L
 
 
+def qa_cell(q):
+    return f"{q['type']}・{q['name']}（{q['series']}）「{q['power']}」"
+
+
 def card_list_table(lst, cards):
-    L = ['| Bulbapedia の表記 | このリポジトリのカード | 同じカードのほかの版 |', '|---|---|---|']
+    has_qa = any('qa' in row for row in lst['cards'])
+    head = ['Q&A の表記（属性・カード名（シリーズ）「特殊能力」）'] if has_qa else []
+    head += ['Bulbapedia の表記', 'このリポジトリのカード', '同じカードのほかの版']
+    L = ['| ' + ' | '.join(head) + ' |', '|' + '---|' * len(head)]
     for row in lst['cards']:
         others = [o for i in row['ids'] for o in cards.others(i) if o not in row['ids']]
-        L.append(f"| {md(row['bulbapedia'])} | {card_cell(cards, row['ids'])} | {card_cell(cards, others)} |")
+        cells = [md(qa_cell(row['qa']))] if has_qa else []
+        cells += [md(row['bulbapedia']), card_cell(cards, row['ids']), card_cell(cards, others)]
+        L.append('| ' + ' | '.join(cells) + ' |')
     return L
 
 
@@ -204,8 +215,8 @@ def build(data, cards):
     L += ['', '表の短い名前（各項目の「根拠」で使用）: ' + '、'.join(f'{k} = {v}' for k, v in EVIDENCE_SHORT.items()) + '。',
           '', '| 確度 | 意味 |', '|---|---|']
     L += [f'| {k} | {v} |' for k, v in data['confidence_values'].items()]
-    L += ['', '- 今回の調査では、当時の公式資料（ルールブック・『トレーナーズ』・ファンクラブ会報・公式サイト）の原本は確認できていません。'
-          '二次資料が挙げている当時の資料は [P1] などの記号で示しています。', '',
+    L += ['', '- 当時の公式資料のうち原文を確認できたのは、公式サイトの「ポケモンカードｅシリーズ以前の特殊能力 Ｑ＆Ａ」[P10]（Internet Archive に保存された写し）だけです。'
+          'ルールブック・『トレーナーズ』・ファンクラブ会報の原本は確認できていません。二次資料が挙げている当時の資料は [P1] などの記号で示しています。', '',
           '## 一覧', '',
           '| id | 地域 | 区分 | 対象 | 公表・印刷 | 確度 |', '|---|---|---|---|---|---|']
     for x in errata:

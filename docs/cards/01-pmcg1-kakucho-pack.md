@@ -1327,7 +1327,7 @@
 - 英語: Attach PlusPower to your Active Pokémon. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon.
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/pmcg01-085-pluspower/)
-- **日英の違い（プラスパワーの扱い（日本の初期）、確度: 有力）** 日本版: 日本の当初の扱いは資料で食い違う。(1) Bulbapedia: ワザのダメージすべて（自分自身やベンチへのダメージを含む）に +10 がかかり、エラッタで相手の対戦ポケモンへのダメージだけになった。ポケモンジム第2弾（タマムシシティジム）の再録に新しい文面。出典はファンクラブ会報 Vol.4 p.26 [P1] [X52]。(2) 旧裏 wiki と jklacz: 自分のバトルポケモンが受けるダメージにも 10 加わり、1998年頃にエラッタされた [J1][X1]。なぞのばしょの第1弾の文面は「自分の対戦ポケモンの『ワザ』によって与えるダメージを『+10』できる」[N1]（docs/rules/errata-history.md の ERR-PLUSPOWER） ／ 英語版: 相手のバトルポケモンに与えるダメージだけを 10 増やす
+- **日英の違い（プラスパワーの扱い（日本の初期）、確度: 有力）** 日本版: 日本の当初の扱いは資料で食い違う。(1) Bulbapedia: ワザのダメージすべて（自分自身やベンチへのダメージを含む）に +10 がかかり、エラッタで相手の対戦ポケモンへのダメージだけになった。ポケモンジム第2弾（タマムシシティジム）の再録に新しい文面。出典はファンクラブ会報 Vol.4 p.26 [P1] [X52]。(2) 旧裏 wiki「当時のルール」の本文（Internet Archive の写し）: 会報 vol.4（1998年2月28日発行）でプラスパワーのエラッタが告知され、ベンチへのダメージが加算されなくなった [J1]。(1) と合う。(3) 以前の版は、検索結果の要約から、jklacz と旧裏 wiki が「自分のバトルポケモンが受けるダメージにも 10 加わった」とするとしていた [X1]。旧裏 wiki「当時のルール」の本文にこの記述はなく、jklacz の本文は未確認。なぞのばしょの第1弾の文面は「自分の対戦ポケモンの『ワザ』によって与えるダメージを『+10』できる」[N1]（docs/rules/errata-history.md の ERR-PLUSPOWER） ／ 英語版: 相手のバトルポケモンに与えるダメージだけを 10 増やす
 - 日本版の収録商品: 第1弾拡張パック、スターターパック
 - 日本版の印刷について: 初版はレアリティマークなし
 
