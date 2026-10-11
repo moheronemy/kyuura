@@ -1,3 +1,4 @@
 __pycache__/
 *.pyc
 data/ja_text_nazonobasho_report.json
+data/ja_text_pokemonwiki_report.json

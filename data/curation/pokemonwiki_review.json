@@ -1,0 +1,15 @@
+{
+ "_comment": "ポケモンWiki の記載と英語版データの食い違いの確認結果。キーは「カード id|項目」。verdict の意味は nazonobasho_review.json と同じ。",
+ "PMCG6-034|name": {
+  "verdict": "site_error",
+  "note": "「カツラのウィンディ」と表記（Scrydex 由来のデータは「カツラのウインディ」）"
+ },
+ "neo4-052|cost": {
+  "verdict": "site_error",
+  "note": "アンノーンT のめざめるパワーのコストが超（Scrydex 由来・英語版とも超無）"
+ },
+ "PMCG6-075|name": {
+  "verdict": "site_error",
+  "note": "カード名の空欄（下線）が「_のラッキー」と 1 文字になっている。空欄の長さは未確認"
+ }
+}

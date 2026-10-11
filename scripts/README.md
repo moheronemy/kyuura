@@ -16,6 +16,9 @@ node scripts/ts2json.mjs "$WORK/cards-database" "$WORK/jp.json"
 python3 scripts/nazonobasho.py fetch --cache "$WORK/nazonobasho"
 python3 scripts/nazonobasho.py extract --cache "$WORK/nazonobasho" --out data/ja_text_nazonobasho.json
 
+# 日本語テキストを変換（ポケモンWiki。ブラウザで保存したデータ data/raw/*.json から。ネットワークは使わない）
+python3 scripts/pokemonwiki.py --raw data/raw --out data/ja_text_pokemonwiki.json
+
 # カードリストを生成（Python 3.9 以降、標準ライブラリのみ）
 python3 scripts/build_cardlist.py --jp "$WORK/jp.json" \
   --en "$WORK/pokemon-tcg-data" --species "$WORK/pokemon_species_names.csv"
@@ -31,8 +34,14 @@ python3 scripts/build_rule_differences.py
 | `build_cardlist.py` | `data/cards.json`、`data/cards.csv`、`data/attacks.csv`、`data/powers.csv`、`docs/cards/` の各弾のページ・`card-differences.md`・`english-only.md` |
 | `build_rule_differences.py` | `docs/rules/differences.md` |
 | `nazonobasho.py extract` | `data/ja_text_nazonobasho.json`（日本語テキスト。カードテキストと印刷情報の欄だけを残す） |
+| `pokemonwiki.py` | `data/ja_text_pokemonwiki.json`（`data/raw/` のポケモンWiki のデータを、なぞのばしょと同じ形に変換したもの） |
 
-`build_cardlist.py` は、なぞのばしょのカードと英語版データの数値（HP・コスト・ダメージ・にげる）の食い違いを `data/ja_text_nazonobasho_report.json` に書き出します。`data/curation/nazonobasho_review.json` に判定のない食い違いがあると、実行時に一覧を表示します。
+`build_cardlist.py` は、日本語テキストの出典ごとに、カードと英語版データの数値（HP・コスト・ダメージ・にげる）やカード名の食い違いを `data/ja_text_<出典>_report.json`（`nazonobasho`・`pokemonwiki`）に書き出します。`data/curation/<出典>_review.json` に判定のない食い違いがあると、実行時に一覧を表示します。
+
+- 同じカードが両方の出典にあるときは、なぞのばしょを使います（現在は重なりなし）。
+- ポケモンWiki のデータには、保存した人が付けたカード id の候補（`kyuura_card_id`）があり、照合の手がかりにしています。
+
+`data/raw/` はポケモンWiki のカードページをブラウザで保存し、カードごとの欄を抜き出した JSON です（手で用意する元データ。弾ごとに 1 ファイル）。
 
 `data/rule_differences.json` は手で編集する元データです（生成物ではありません）。
 
@@ -45,9 +54,11 @@ python3 scripts/build_rule_differences.py
 | `naming.json` | 英語版の接頭辞（Light、Rocket's）の日本語表記、アンノーンの表記 |
 | `jp_only.json` | 英語版に対応カードがない日本版カード |
 | `card_differences.json` | カードごとの日英の違い（文面・エラッタ・収録先・表記） |
-| `ja_text.json` | 日本版の公式テキストの手入力用（なぞのばしょより優先）。現在は空 |
+| `ja_text.json` | 日本版の公式テキストの手入力用（なぞのばしょ・ポケモンWiki より優先）。現在は空 |
 | `nazonobasho_map.json` | なぞのばしょのページとカードの対応を手で決めたもの（自動で決まらないもの） |
 | `nazonobasho_review.json` | なぞのばしょと英語版データの数値の食い違いの判定 |
+| `pokemonwiki_map.json` | ポケモンWiki のページとカードの対応を手で決めたもの |
+| `pokemonwiki_review.json` | ポケモンWiki と英語版データの食い違いの判定 |
 | `en_fixes.json` | 英語版カードデータの誤りの補正 |
 | `sets.json` | 各弾の名前・発売日・収録数 |
 

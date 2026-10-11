@@ -61,10 +61,10 @@
 | 51 | ミニリュウ | ポケモン | 無色 | たね | 40 | ● | Dratini<br>Team Rocket 53 |  |
 | 52 | わるいハクリュー | ポケモン | 無色 | 1進化 | 60 | ◆ | Dark Dragonair<br>Team Rocket 33 | 再録: LC 38 |
 | 53 | わるいカイリュー | ポケモン | 無色 | 2進化 | 70 | ★キラ | Dark Dragonite<br>Team Rocket 5・22 | 再録: LC 5 |
-| 54 | ねむれ!ねむれ! | トレーナー（Rocket's Secret Machine） |  |  |  | ● | Sleep!<br>Team Rocket 79 | 「!」の後の空白の有無はデータにより異なる |
-| 55 | バトル場は穴だらけ! | トレーナー（Rocket's Secret Machine） |  |  |  | ● | Digger<br>Team Rocket 75 |  |
+| 54 | ねむれ!ねむれ! | トレーナー（ロケット団秘密メカ） |  |  |  | ● | Sleep!<br>Team Rocket 79 | 「!」の後の空白の有無はデータにより異なる |
+| 55 | バトル場は穴だらけ! | トレーナー（ロケット団秘密メカ） |  |  |  | ● | Digger<br>Team Rocket 75 |  |
 | 56 | まきちらせ!ベトベトガス | トレーナー |  |  |  | ● | Goop Gas Attack<br>Team Rocket 78 | 日英の違い: ポケモンパワーを止める範囲<br>「!」の後の空白の有無はデータにより異なる |
-| 57 | 夜の廃品回収 | トレーナー（Rocket's Secret Machine） |  |  |  | ● | Nightly Garbage Run<br>Team Rocket 77 |  |
+| 57 | 夜の廃品回収 | トレーナー（ロケット団秘密メカ） |  |  |  | ● | Nightly Garbage Run<br>Team Rocket 77 |  |
 | 58 | たたきつけろ!挑戦状 | トレーナー |  |  |  | ◆ | Challenge!<br>Team Rocket 74 | 「!」の後の空白の有無はデータにより異なる |
 | 59 | にせオーキドの逆襲 | トレーナー |  |  |  | ◆ | Imposter Oak's Revenge<br>Team Rocket 76 |  |
 | 60 | ボスのやりかた | トレーナー |  |  |  | ◆ | The Boss's Way<br>Team Rocket 73 |  |
@@ -80,7 +80,7 @@
 
 ## カード詳細
 
-日本語のワザ名・特殊能力名・効果文は、各カードの「日本語テキストの出典」にあるページ（なぞのばしょ）から取り込んだものです（[詳細](README.md#日本語テキストについて)）。数値は英語版データの値で、日本語版の記載と食い違うものは備考に書いています。
+日本語のワザ名・特殊能力名・効果文は、各カードの「日本語テキストの出典」にあるページ（なぞのばしょ）から取り込んだものです（[詳細](README.md#日本語テキストについて)）。数値は英語版データの値で、日本語版の記載と食い違うものは備考に書いています。英語版に対応カードがないものは、数値も日本語の出典の値です。
 
 エネルギーの記号: 草・炎・水・雷・超・闘・悪・鋼、無 = 無色。
 
@@ -865,7 +865,7 @@
 
 ### 54. ねむれ!ねむれ! / Sleep!
 
-トレーナー（Rocket's Secret Machine）／レア ●
+トレーナー（ロケット団秘密メカ）／レア ●
 
 英語版: Team Rocket 79
 
@@ -878,7 +878,7 @@
 
 ### 55. バトル場は穴だらけ! / Digger
 
-トレーナー（Rocket's Secret Machine）／レア ●
+トレーナー（ロケット団秘密メカ）／レア ●
 
 英語版: Team Rocket 75
 
@@ -904,7 +904,7 @@
 
 ### 57. 夜の廃品回収 / Nightly Garbage Run
 
-トレーナー（Rocket's Secret Machine）／レア ●
+トレーナー（ロケット団秘密メカ）／レア ●
 
 英語版: Team Rocket 77
 

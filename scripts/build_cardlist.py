@@ -22,6 +22,7 @@ import argparse
 import csv
 import json
 import re
+import urllib.parse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -66,7 +67,7 @@ TRAINER_KIND_ID = {'Stadium': 'stadium', 'Pokémon Tool': 'pokemon_tool',
                    "Rocket's Secret Machine": 'rockets_secret_machine',
                    'Goldenrod Game Corner': 'goldenrod_game_corner'}
 TRAINER_KIND_JA = {'stadium': 'スタジアム', 'pokemon_tool': 'ポケモンのどうぐ',
-                   'rockets_secret_machine': "Rocket's Secret Machine",
+                   'rockets_secret_machine': 'ロケット団秘密メカ',
                    'goldenrod_game_corner': 'Goldenrod Game Corner'}
 POWER_KIND_ID = {'Pokémon Power': 'pokemon_power', 'Poké-Power': 'poke_power', 'Poké-Body': 'poke_body'}
 POWER_KIND_JA = {'pokemon_power': 'ポケモンパワー', 'poke_power': 'ポケパワー', 'poke_body': 'ポケボディー'}
@@ -85,8 +86,9 @@ PREFIX_HINT = {'Dark ': ['わるい', 'ダーク', '暗い', 'Dark'],
                'Light ': ['軽', 'ライト', 'やさしい', 'Light', '光から'],
                'Shining ': ['輝く', 'ひかる', 'Shining']}
 JA_TEXT_MISSING = 'この弾の日本語のワザ名・特殊能力名・効果文は未収録です（[理由](README.md#日本語テキストについて)）。'
-JA_TEXT_PRESENT = ('日本語のワザ名・特殊能力名・効果文は、各カードの「日本語テキストの出典」にあるページ（なぞのばしょ）から取り込んだものです'
-                   '（[詳細](README.md#日本語テキストについて)）。数値は英語版データの値で、日本語版の記載と食い違うものは備考に書いています。')
+JA_TEXT_PRESENT = ('日本語のワザ名・特殊能力名・効果文は、各カードの「日本語テキストの出典」にあるページ（{sites}）から取り込んだものです'
+                   '（[詳細](README.md#日本語テキストについて)）。数値は英語版データの値で、日本語版の記載と食い違うものは備考に書いています。'
+                   '英語版に対応カードがないものは、数値も日本語の出典の値です。')
 
 
 def load_json(p):
@@ -426,22 +428,24 @@ def build_records(args):
             matched_en.update(c['id'] for c in best)
             records.append(rec)
 
-    nazo_path = ROOT / 'data' / 'ja_text_nazonobasho.json'
-    if nazo_path.exists():
-        pairs, unmatched = match_nazonobasho(records, load_json(nazo_path), load_json(cur / 'nazonobasho_map.json'))
+    for source, label in JA_SOURCES:  # 先に並べた出典ほど優先（手入力の ja_text.json はさらに優先）
+        src_path = ROOT / 'data' / f'ja_text_{source}.json'
+        if not src_path.exists():
+            continue
+        pairs, unmatched = match_ja_source(records, load_json(src_path), load_json(cur / f'{source}_map.json'))
         report = []
         for r, c in pairs:
-            apply_nazonobasho(r, c, report)
-        review = load_json(cur / 'nazonobasho_review.json')
+            apply_ja_source(r, c, report, label)
+        review = load_json(cur / f'{source}_review.json')
         unreviewed = [x for x in report if f'{x[0]}|{x[1]}' not in review]
         if unreviewed:
-            print('nazonobasho: 未確認の食い違い（data/curation/nazonobasho_review.json に判定を追加してください）:')
+            print(f'{source}: 未確認の食い違い（data/curation/{source}_review.json に判定を追加してください）:')
             for x in unreviewed:
                 print('  ', x)
-        with open(ROOT / 'data' / 'ja_text_nazonobasho_report.json', 'w', encoding='utf-8') as f:
+        with open(ROOT / 'data' / f'ja_text_{source}_report.json', 'w', encoding='utf-8') as f:
             json.dump({'unmatched': unmatched, 'differences': report}, f, ensure_ascii=False, indent=1)
             f.write('\n')
-        print(f'nazonobasho: {len(pairs)} matched, {len(unmatched)} unmatched, {len(report)} differences')
+        print(f'{source}: {len(pairs)} matched, {len(unmatched)} unmatched, {len(report)} differences')
 
     unknown = set(diffs) - {r['id'] for r in records} - {'_comment'}
     unknown |= set(ja_texts) - {r['id'] for r in records} - {'_comment', '_example'}
@@ -454,7 +458,10 @@ def build_records(args):
     return records, en_only
 
 
-# ---- 日本語テキスト（なぞのばしょ）の取り込み ------------------------------
+# ---- 日本語テキスト（なぞのばしょ・ポケモンWiki）の取り込み -----------------
+
+# (出典名, 表示名)。data/ja_text_<出典名>.json と data/curation/<出典名>_{map,review}.json を使う
+JA_SOURCES = [('nazonobasho', 'なぞのばしょ'), ('pokemonwiki', 'ポケモンWiki')]
 
 JA_ENERGY = {'草': 'grass', '炎': 'fire', '水': 'water', '雷': 'lightning', '超': 'psychic',
              '闘': 'fighting', '無': 'colorless', '悪': 'darkness', '鋼': 'metal'}
@@ -478,9 +485,11 @@ def attack_sig_ja(c):
 
 
 def match_score(r, c):
-    """なぞのばしょのカード c とレコード r の一致度。サイトには名前・数値とも誤記があるため、
+    """出典のカード c とレコード r の一致度。出典には名前・数値とも誤記があるため、
     名前・HP・ワザの数・コスト・ダメージの一致を合計して判定する。"""
     sc = 2 if norm_name(c['fields'].get('カード名称')) == norm_name(r['name']['ja']) else 0
+    if c.get('hint_id') == r['id']:  # 出典側で付けた対応（ポケモンWiki の保存データ）
+        sc += 3
     p = r['pokemon']
     if not p or not (c['attacks'] or c['powers']):
         return sc
@@ -493,8 +502,8 @@ def match_score(r, c):
     return sc
 
 
-def match_nazonobasho(records, data, manual):
-    """なぞのばしょのカードをレコードに対応付ける。戻り値は [(record, card)] と未対応のリスト。"""
+def match_ja_source(records, data, manual):
+    """出典のカードをレコードに対応付ける。戻り値は [(record, card)] と未対応のリスト。"""
     pairs, unmatched = [], []
     for page, info in data['sets'].items():
         set_id = info['tcgdex_set']
@@ -503,7 +512,7 @@ def match_nazonobasho(records, data, manual):
         pool = [r for r in records if r['jp_set'] == set_id]
         used = set()
         for c in info['cards']:
-            slug = c['url'].rstrip('/').rsplit('/', 1)[-1]
+            slug = urllib.parse.unquote(c['url'].rstrip('/').rsplit('/', 1)[-1])
             unown = re.search(r'unknown-([a-z])$', slug)
             if slug in manual:
                 if manual[slug] is None:
@@ -524,12 +533,40 @@ def match_nazonobasho(records, data, manual):
     return pairs, unmatched
 
 
+def ja_wr(s):
+    """「炎×2」「闘-30」「なし」を構造化する。"""
+    m = re.fullmatch(r'([草炎水雷超闘無悪鋼])\s*([×x+\-－])\s*(\d+)', (s or '').strip())
+    if not m:
+        return []
+    op = {'x': '×', '－': '-'}.get(m.group(2), m.group(2))
+    return [{'type': JA_ENERGY[m.group(1)], 'operator': op, 'value': int(m.group(3))}]
+
+
+def fill_jp_only(p, c):
+    f = c['fields']
+    if str(f.get('HP', '')).isdigit():
+        p['hp'] = int(f['HP'])
+    if f.get('にげる'):
+        p['retreat_cost'] = len([ch for ch in f['にげる'] if ch in JA_ENERGY])
+    p['weaknesses'], p['resistances'] = ja_wr(f.get('弱点')), ja_wr(f.get('抵抗力'))
+    p['powers'] = [{'kind': 'pokemon_power', 'name': {'ja': x['name'], 'en': None},
+                    'text': {'ja': x['text'], 'en': None}} for x in c['powers']]
+    p['attacks'] = []
+    for x in c['attacks']:
+        cost = [JA_ENERGY[ch] for ch in (x['cost'] or '') if ch in JA_ENERGY]
+        dmg = (x['damage'] or '').replace('＋', '+').replace('x', '×').replace('X', '×').strip()
+        p['attacks'].append({'name': {'ja': x['name'], 'en': None}, 'cost': cost, 'cost_total': len(cost),
+                             'damage': parse_damage(dmg), 'text': {'ja': x['text'], 'en': None}})
+
+
 def none_or(v):
     return None if v in (None, '', 'n/a') else v
 
 
-def apply_nazonobasho(r, c, report):
+def apply_ja_source(r, c, report, label):
     """対応付けたカードの日本語テキストをレコードに入れ、日英の数値の食い違いを report に記録する。"""
+    if r['jp_print'] and r['ja_text_source']:  # 先の出典で埋まっている
+        return
     f = c['fields']
     lv = f.get('LV.')
     r['jp_print'] = {
@@ -546,9 +583,12 @@ def apply_nazonobasho(r, c, report):
     if norm_name(jname) != norm_name(r['name']['ja']):
         report.append((r['id'], 'name', r['name']['ja'], jname))
     elif not r['pokemon']:
-        # トレーナー・エネルギーの名前が、別系統の出典（なぞのばしょ）と一致したら確度を一段上げる
+        # トレーナー・エネルギーの名前が、別系統の出典と一致したら確度を一段上げる
         r['name_ja_confidence'] = {'未確認': '有力', '有力': '確実'}.get(r['name_ja_confidence'], r['name_ja_confidence'])
     p = r['pokemon']
+    if p and r['en_print'] is None:  # 英語版のない日本のみのカード: 数値・ワザも日本語の出典から作る
+        fill_jp_only(p, c)
+        return
     if p:
         if len(c['powers']) == len(p['powers']):
             for pw, jp in zip(p['powers'], c['powers']):
@@ -570,6 +610,8 @@ def apply_nazonobasho(r, c, report):
         retreat = c['fields'].get('にげる')
         if retreat and retreat != 'n/a' and len(ja_cost(retreat)) != p['retreat_cost']:
             report.append((r['id'], 'retreat', p['retreat_cost'], retreat))
+        if c.get('rules_text') and p['rules_text']:
+            p['rules_text']['ja'] = c['rules_text']
     else:
         target = r['trainer'] or r['energy']
         if target and target.get('text') is not None:
@@ -715,7 +757,8 @@ def card_detail(r):
             lines.append(f"- {POWER_KIND_JA[pw['kind']]}「{both(pw['name'])}」")
             if pw['text']['ja']:
                 lines.append(f"  - 日本語: {pw['text']['ja']}")
-            lines.append(f"  - 英語: {pw['text']['en']}")
+            if pw['text']['en']:
+                lines.append(f"  - 英語: {pw['text']['en']}")
         if p['powers'] or p['rules_text']:
             lines.append('')
         if p['attacks']:
@@ -731,11 +774,13 @@ def card_detail(r):
         if text:
             if text['ja']:
                 lines.append(f"- 日本語: {text['ja']}")
-            lines.append(f"- 英語: {text['en']}")
+            if text['en']:
+                lines.append(f"- 英語: {text['en']}")
             lines.append('')
     if r['ja_text_source']:
         src = r['ja_text_source']
-        lines.append(f"- 日本語テキストの出典: [{'なぞのばしょ' if 'nazonobasho.com' in src else src}]({src})" if src.startswith('http') else f"- 日本語テキストの出典: {src}")
+        site = 'なぞのばしょ' if 'nazonobasho.com' in src else 'ポケモンWiki' if 'pokemonwiki.com' in src else src
+        lines.append(f"- 日本語テキストの出典: [{site}]({src})" if src.startswith('http') else f"- 日本語テキストの出典: {src}")
     for d in r['jp_en_differences']:
         lines.append(f"- **日英の違い（{d['summary']}、確度: {d['confidence']}）** 日本版: {d['ja']} ／ 英語版: {d['en']}")
     for n in r['notes']:
@@ -791,8 +836,8 @@ def write_set_docs(records, en_only):
         if eo:
             lines += ['', f"{meta['en']} にあって、日本版の本弾に収録されていないカード（基本エネルギー除く）:", '']
             lines += [f"- {c['number']} {c['name']}" for c in eo]
-        has_ja = any(r['ja_text_source'] for r in rs)
-        lines += ['', '## カード詳細', '', JA_TEXT_PRESENT if has_ja else JA_TEXT_MISSING, '',
+        sites = [label for source, label in JA_SOURCES if any(source in (r['ja_text_source'] or '') for r in rs)]
+        lines += ['', '## カード詳細', '', JA_TEXT_PRESENT.format(sites='、'.join(sites)) if sites else JA_TEXT_MISSING, '',
                   'エネルギーの記号: 草・炎・水・雷・超・闘・悪・鋼、無 = 無色。', '']
         for r in rs:
             lines += card_detail(r)
@@ -823,8 +868,8 @@ def write_card_differences(records):
              '<!-- このファイルは scripts/build_cardlist.py が data/curation/card_differences.json から生成しています。直接編集しないでください。 -->', '',
              '日本版と英語版（WotC 版）で、文面の意味・エラッタ・収録先・表記が違うと指摘されているカードの一覧です。',
              'ルールの違いは [日米のルールの違い](../rules/differences.md)、弾ごとの収録内容の違いは [収録内容・製品の違い](set-differences.md) を参照してください。', '',
-             '- 英語版の文面は英語版カードデータ（pokemon-tcg-data）で確認したもの。日本版の文面は、なぞのばしょの転記 [N1] で確認できたものは「」で引用し、それ以外は二次資料の説明によるものです。',
-             '- 日本語テキストを取り込んだ 6 弾（第1〜4弾、neo 第1〜2弾）でも、日英の文面を全カードで突き合わせたわけではありません。ここに挙げたのは、二次資料で指摘されたものと、特殊能力が使えなくなる状態の書き方を機械的に比べて見つかったものです。',
+             '- 英語版の文面は英語版カードデータ（pokemon-tcg-data）で確認したもの。日本版の文面は、なぞのばしょ [N1]・ポケモンWiki [N2] の転記で確認できたものは「」で引用し、それ以外は二次資料の説明によるものです。',
+             '- 日本語テキストを取り込んだ 9 弾（第5弾 リーダーズスタジアム以外）でも、日英の文面を全カードで突き合わせたわけではありません。ここに挙げたのは、二次資料で指摘されたものと、特殊能力が使えなくなる状態の書き方を機械的に比べて見つかったものです。',
              '- jklacz は「WotC 期の約 50 枚が誤訳されており、ほとんどは訂正されないままだった（多くはエネルギー記号の誤りなどの小さなもの）」としています [X3]。ここに挙げたのは、そのうち内容を確認できたものだけです。',
              '- 出典の記号は [出典と確認状況](../sources.md)、データは `data/cards.json` の `jp_en_differences` にあります。', '',
              '| カード | 種類 | 内容 | 日本版 | 英語版 | 確度 | 出典 |', '|---|---|---|---|---|---|---|']
