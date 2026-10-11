@@ -6,11 +6,11 @@
   - docs/printed-sources.md（スキャンで確認した印刷物の巻号・ページごとの記録。documents から）
 
 検査すること:
-  - id（EV-・MIX-・KGR-・EN-・ERR-・TXT-・RUL-）の重複
+  - id（EV-・MIX-・KGR-・EN-・ERR-・TXT-・RUL-・REG-・NEO-）の重複
   - applies_to.events・cards・card_lists のカード id の参照切れ
     （カード id は data/cards.json の id か、data/ja_text_pcgsearch.json のページ名）
   - 出典の記号（source・cites、本文中の [X52] など）が docs/sources.md にあるか
-  - 手書きの docs/rules/mixed-2002.md・kangaskhan-2002.md の中の id が存在するか
+  - 手書きの docs/rules/mixed-2002.md・kangaskhan-2002.md・japanese.md の中の id が存在するか
   - 日付の矛盾:
     - events の date・other_dates・rejected_dates の書式と、期間（開始 ≦ 終了）
     - 記録の announced ≦ effective_from ≦ effective_until（先頭の日付どうし。精度の粗い方に合わせて比べる）
@@ -48,13 +48,13 @@ DATA = ROOT / 'data' / 'rule_history.json'
 OUT = ROOT / 'docs' / 'rules' / 'errata-history.md'
 OUT_EDITIONS = ROOT / 'docs' / 'rules' / 'japanese-editions.md'
 OUT_DOCUMENTS = ROOT / 'docs' / 'printed-sources.md'
-HANDWRITTEN = [ROOT / 'docs' / 'rules' / 'mixed-2002.md', ROOT / 'docs' / 'rules' / 'kangaskhan-2002.md']
+HANDWRITTEN = [ROOT / 'docs' / 'rules' / n for n in ('mixed-2002.md', 'kangaskhan-2002.md', 'japanese.md')]
 # rejected_dates を探す文書（手書き。生成物は元データを検査すれば足りる）
-PROSE = HANDWRITTEN + [ROOT / 'docs' / 'rules' / n for n in ('japanese.md', 'wotc.md', 'README.md')] + [ROOT / 'docs' / 'sources.md']
+PROSE = HANDWRITTEN + [ROOT / 'docs' / 'rules' / n for n in ('wotc.md', 'README.md')] + [ROOT / 'docs' / 'sources.md']
 DATE_RE = re.compile(r'^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?')
 DATE_FULL_RE = re.compile(r'^\d{4}(?:-\d{2}(?:-\d{2})?)?$')
 MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-ID_RE = re.compile(r'\b(?:EV|MIX|KGR|EN|ERR|TXT|RUL)-[A-Z0-9][A-Z0-9-]*[A-Z0-9]\b')
+ID_RE = re.compile(r'\b(?:EV|MIX|KGR|EN|ERR|TXT|RUL|REG|NEO)-[A-Z0-9][A-Z0-9-]*[A-Z0-9]\b')
 SRC_RE = re.compile(r'\[([A-Z]\d+)\]')
 GENERATED = ('<!-- このファイルは scripts/build_rule_history.py が data/rule_history.json から生成しています。'
              '直接編集しないでください。 -->')

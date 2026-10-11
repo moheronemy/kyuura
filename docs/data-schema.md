@@ -212,7 +212,7 @@
 - [日本版のルールの版ごとの比較](rules/japanese-editions.md)（`jp_editions`・`jp_edition_matrix`）
 - [印刷物の照合記録](printed-sources.md)（`documents`）
 
-[旧裏・新裏の混合ルール](rules/mixed-2002.md)・[新ガルーラルール](rules/kangaskhan-2002.md) は手書きでこのファイルの id を参照します（参照切れは同じスクリプトが検査）。
+[旧裏・新裏の混合ルール](rules/mixed-2002.md)・[新ガルーラルール](rules/kangaskhan-2002.md)・[日本版のルールと変遷](rules/japanese.md) は手書きでこのファイルの id を参照します（参照切れは同じスクリプトが検査）。
 
 | キー | 内容 |
 |---|---|
@@ -233,7 +233,7 @@
 
 | 欄 | 内容 |
 |---|---|
-| `id` | ルールの識別 id（`MIX-`: 混合期、`KGR-`: ガルーラルール、`EN-`: 英語版、`ERR-`: エラッタ、`TXT-`: 印刷の変更、`RUL-`: 裁定） |
+| `id` | ルールの識別 id（`MIX-`: 混合期、`KGR-`: ガルーラルール、`REG-`: 2001年より前の日本の大会レギュレーション、`NEO-`: neo 期の基本ルールの追加修正、`EN-`: 英語版、`ERR-`: エラッタ、`TXT-`: 印刷の変更、`RUL-`: 裁定） |
 | `stages` | エラッタの段階ごとの確認状況（任意。`kind`: `stage_kinds` の値、`date`、`text`、`confidence`、`sources`）。公式エラッタ（`official_errata`）に分類した記録には必須で、確認できた `official_notice` がなければエラー（予告や再録の文面の変更だけで公式エラッタとしない）。未確認の `official_notice`・`applied` に日付を書くとエラー（推定した日付を確定日として書かない） |
 | `id_note` | id の文字列と内容がずれている理由（任意）。参照の互換性のため id は変えず、ここで説明する（例: `MIX-SUPPORTER-ERRATA` は公式エラッタではなく大会レギュレーション） |
 | `region` | `JP`（日本版）／`EN`（英語版） |
