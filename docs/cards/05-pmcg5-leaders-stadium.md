@@ -1039,7 +1039,7 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 | ムーンキック / Moon Kick | 無無 | 20 |  |
 
 - 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%AA%E3%82%AB%E3%81%AE%E3%83%94%E3%83%83%E3%83%94LV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0))
-- **日英の違い（ワザ つきのちから（Lunar Power）で進化させられるポケモン、確度: 確実）** 日本版: 「自分または自分の控えポケモンを進化させる『進化カード』」と、ワザを使ったピッピ自身も進化させられる（カードの画像で確認） ／ 英語版: 「a card that evolves from 1 of your Benched Pokémon」と、ベンチのポケモンだけ
+- **日英の違い（ワザ つきのちから（Lunar Power）で進化させられるポケモン、確度: 確実）** 日本版: 「自分または自分の控えポケモンを進化させる『進化カード』」と、ワザを使ったピッピ自身も進化させられる（カードの画像で確認）。『ポケモンカードオフィシャルブック2000』（2000年2月）p.223 の解説も「このワザを使った「エリカのピッピ」自身も進化できます」とする [P43] ／ 英語版: 「a card that evolves from 1 of your Benched Pokémon」と、ベンチのポケモンだけ
 - 日本版の収録商品: リーダーズスタジアム
 
 ### 61. タケシのベロリンガ / Brock's Lickitung
@@ -1138,7 +1138,7 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 - 英語: For each of your Pokémon, you may return any number of Energy cards attached to it to your hand.
 
 - 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E3%82%B5%E3%83%BC%E3%82%AD%E3%83%A5%E3%83%AC%E3%83%BC%E3%83%88)
-- **日英の違い（手札にもどせるエネルギーの種類、確度: 確実）** 日本版: 「あなたの場のポケモンについている『基本エネルギーカード』を好きなだけはがし、手札に戻してよい。」と、基本エネルギーに限っている（カードの画像で確認） ／ 英語版: 「any number of Energy cards」と、特殊エネルギー（無色2個エネルギーなど）も含む
+- **日英の違い（手札にもどせるエネルギーの種類、確度: 確実）** 日本版: 「あなたの場のポケモンについている『基本エネルギーカード』を好きなだけはがし、手札に戻してよい。」と、基本エネルギーに限っている（カードの画像で確認）。『ポケモンカードオフィシャルブック2000』（2000年2月）p.275 の最新の説明も「「基本エネルギーカード」を好きなだけはがし、手札に戻してよい」 [P43] ／ 英語版: 「any number of Energy cards」と、特殊エネルギー（無色2個エネルギーなど）も含む
 
 ### 68. カスミの勝負 / Misty's Duel
 
@@ -1218,7 +1218,7 @@ Gym Heroes にあって、日本版の本弾に収録されていないカード
 - 英語: Attach Charity to your Active Pokémon. Unless that Pokémon gets Knocked Out, return Charity to your hand at the end of your turn. If that Pokémon attacks and does damage to the Defending Pokémon, you may reduce that damage by any amount (rounded to the nearest 10).
 
 - 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%81%8A%E4%B8%8A%E5%93%81%E6%94%BB%E6%92%83)
-- **日英の違い（手札にもどすタイミング、確度: 確実）** 日本版: 「相手の番が終わったら、手札にもどす」と、相手の番のあいだもつけたままにする（カードの画像で確認） ／ 英語版: 「return Charity to your hand at the end of your turn」と、自分の番の終わりにもどす
+- **日英の違い（手札にもどすタイミング、確度: 確実）** 日本版: 「相手の番が終わったら、手札にもどす」と、相手の番のあいだもつけたままにする（カードの画像で確認）。『ポケモンカードオフィシャルブック2000』（2000年2月）p.279 の最新の説明も「相手の番が終わったら、手札にもどす」で、解説は「相手の番の終わりに手札にもどってくる効果があるカードはこれだけです」とする [P43] ／ 英語版: 「return Charity to your hand at the end of your turn」と、自分の番の終わりにもどす
 
 ### 75. カスミのいかり / Misty's Wrath
 

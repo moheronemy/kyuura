@@ -76,7 +76,7 @@
 | -/- | [ヤドン](https://pcg-search.com/card/1st/1stp006.php) | たね | 40 | 1997-05-02 Red, Green & Black Playmats insert（Bulbapedia） |  |  |
 | -/- | [ミュウツー](https://pcg-search.com/card/1st/1stp007.php) | たね | 70 | 1997-05-15 月刊コロコロコミック 1997年6月号の付録 | Wizards Black Star Promos 3（Mewtwo） | プロモ（1997-05-20） |
 | -/- | [ミュウツー](https://pcg-search.com/card/1st/1stp008.php) | たね | 70 | 1997-05-20 『ポケットモンスター ファンブック』の付録 | Wizards Black Star Promos 3（Mewtwo） | プロモ（1997-05-15） |
-| -/- | [超エネルギー回収](https://pcg-search.com/card/1st/1stp009.php) | トレーナー |  | 1997-05-20 小学館『ポケットモンスター公式ファンブック』おまけ<br>（書名は会報 Vol.5 pp.16〜17 [P2] の表記。Bulbapedia は「Pocket Monsters Fan Book insert」[X48]） | Neo Genesis 89（Super Energy Retrieval） | neo 第1弾 金、銀、新世界へ...（2000-02-04） |
+| -/- | [超エネルギー回収](https://pcg-search.com/card/1st/1stp009.php) | トレーナー |  | 1997-05-20 小学館『ポケットモンスター公式ファンブック』おまけ<br>（書名は会報 Vol.5 pp.16〜17 [P2] では『ポケットモンスター公式ファンブック』、『ポケモンカードオフィシャルブック2000』 p.292 [P43] では「ポケットモンスターファンブック」。Bulbapedia は「Pocket Monsters Fan Book insert」[X48]） | Neo Genesis 89（Super Energy Retrieval） | neo 第1弾 金、銀、新世界へ...（2000-02-04） |
 | -/- | [エレブー](https://pcg-search.com/card/1st/1stp010.php) | たね | 60 | 1997-06-13 オフィシャルカードファイルの付録 | Wizards Black Star Promos 2（Electabuzz） |  |
 | -/- | [なみのりピカチュウ](https://pcg-search.com/card/1st/1stp011.php) | たね | 50 | 1997-08 JR東日本 ポケモンスタンプラリー | Wizards Black Star Promos 28（Surfing Pikachu） | プロモ（1997-08-15） |
 | -/- | [ミュウ](https://pcg-search.com/card/1st/1stp012.php) | たね | 40 | 1997-08 JR東日本 ポケモンスタンプラリー | Wizards Black Star Promos 47（Mew） | プロモ（1997-01-15） |
@@ -216,4 +216,4 @@
 
 | カード | 種類 | 内容 | 日本版 | 英語版 | 確度 | 出典 |
 |---|---|---|---|---|---|---|
-| 超エネルギー回収 / Super Energy Retrieval | エラッタ | 拾えるエネルギーカードの種類（日本の当初の文面とエラッタ） | 「自分のトラッシュから最大4枚のエネルギーカードを選び」と、基本エネルギーに限っていない（カードの画像で確認）。『ポケモンカード・ファンクラブ』Vol.5 pp.16〜17（1998年6月10日発行）が、エネルギー回収と一緒に特殊エネルギーを拾えないように変更したと説明した [P2]。ただし 1998年6月10日は会報の発行日で、古いカードへの適用開始日は未確認。neo 第1弾の再録は「「基本エネルギーカード」を最大4枚」 | 「4 basic Energy cards」と、基本エネルギーだけ（日本のエラッタ後と同じ） | 確実 | [N3][P2][X52] |
+| 超エネルギー回収 / Super Energy Retrieval | エラッタ | 拾えるエネルギーカードの種類（日本の当初の文面とエラッタ） | 「自分のトラッシュから最大4枚のエネルギーカードを選び」と、基本エネルギーに限っていない（カードの画像で確認）。『ポケモンカード・ファンクラブ』Vol.5 pp.16〜17（1998年6月10日発行）が、エネルギー回収と一緒に特殊エネルギーを拾えないように変更したと説明した [P2]。ただし 1998年6月10日は会報の発行日で、古いカードへの適用開始日は未確認。『ポケモンカードオフィシャルブック2000』（2000年2月29日発行）p.292 は付録の版も「「基本エネルギーカード」を最大4枚」の最新の説明で載せている [P43]。neo 第1弾の再録は「「基本エネルギーカード」を最大4枚」 | 「4 basic Energy cards」と、基本エネルギーだけ（日本のエラッタ後と同じ） | 確実 | [N3][P2][X52][P43] |

@@ -25,7 +25,7 @@
       （data/rule_history.json・data/rule_differences.json・手書きの docs/rules/*.md・docs/sources.md）。
       正当に違う日付（雑誌の発行日と発売日など）は other_dates に書くので、単純な文字列の一致では検出しない
   - documents: 記号が docs/sources.md にあるか、ページの refs の id があるか。スキャン（kind が scan_image で
-    source が J37）を根拠にした記録が挙げる当時の資料（cites）が、documents にあるか
+    source が documents のスキャンの記号。J37・J38）を根拠にした記録が挙げる当時の資料（cites）が、documents にあるか
   - jp_editions・jp_edition_matrix: 版の出来事の日付、出典の記号、確度・根拠の種類・根拠の性質の値、
     rd_item（data/rule_differences.json の項目）があるか、表のマスの版が jp_editions の版か。
     二次資料だけ・推定だけのマスを「確実」にしていないか。
@@ -386,9 +386,10 @@ def validate_documents(data, codes, known):
             for r in pg['refs']:
                 if r not in known:
                     errors.append(f'documents.{c}: p.{pg["printed"]} の id がない: {r}')
+    scan_sources = {d['scan']['source'] for d in docs.values()}
     for x in all_items(data):
         for e in x.get('evidence', []):
-            if e['kind'] == 'scan_image' and e['source'] == 'J37':
+            if e['kind'] == 'scan_image' and e['source'] in scan_sources:
                 for c in e.get('cites', []):
                     if c not in docs:
                         errors.append(f"{x['id']}: スキャンの資料 {c} が documents にない")
@@ -585,8 +586,8 @@ def build(data, cards):
     L += [f'| {k} | {v} |' for k, v in data['confidence_values'].items()]
     scanned = '、'.join(f"[{d['code']}]" for d in data['documents'])
     L += ['', '- 当時の公式資料のうち原文を確認できたのは、公式サイトのページ（[P10]、[P15]〜[P23]、[P28]。Internet Archive に保存された写し）と、'
-          f"[印刷物の照合記録](../printed-sources.md) の {len(data['documents'])} 冊の誌面（{scanned}。[J37] のスキャンで、実物ではない）です。"
-          'ルールブック（どの版も）の原文は確認できていません。'
+          f"[印刷物の照合記録](../printed-sources.md) の {len(data['documents'])} 冊の誌面（{scanned}。[J37]・[J38] のスキャンで、実物ではない）です。"
+          '1996〜1999年のルールブック（第1〜5版のどれも）の原文は確認できていません（2000年の「公式ルール 2000.02.14版」は [P43] で確認）。'
           '二次資料が挙げている当時の資料も [P1] などの記号で示しています。',
           '- エラッタの記録の一部には「段階ごとの確認状況」を付けています。変更の予告、新しい文面の印刷、既存のカードにも適用する公式の告知、'
           '実際の適用（大会・ふだんの対戦）を分けて、それぞれ確認できたかを書いています。予告や再録の文面の変更だけでは、公式エラッタとはしていません。', '',
@@ -668,8 +669,8 @@ def build_documents(data):
     names = {x['id']: x.get('title') or x.get('name') for x in all_items(data)}
     L = ['# 印刷物の照合記録', '',
          '<!-- このファイルは scripts/build_rule_history.py が data/rule_history.json の documents から生成しています。直接編集しないでください。 -->', '',
-         '当時の印刷物を、スキャン（[出典と確認状況](sources.md) の J37。Elite Fourum のスレッドで公開された Google Drive の PDF）で確認した記録です。'
-         '印刷物の実物を確認したものではありません。ページ番号は誌面に印刷された番号（ノンブル）、PDF のページは Drive のビューアーで数えたページです。', '',
+         '当時の印刷物を、スキャン（[出典と確認状況](sources.md) の J37。Elite Fourum のスレッドで公開された Google Drive の PDF。P43 だけは J38 の Internet Archive の PDF）で確認した記録です。'
+         '印刷物の実物を確認したものではありません。ページ番号は誌面に印刷された番号（ノンブル）、PDF のページは Drive のビューアー（P43 は Internet Archive の PDF）で数えたページです。', '',
          '- スキャンのファイルは第三者が公開したもので、公開が続く保証はありません。',
          '- 確認した刷が初版でないものは、その刷を書いています。初版の文面と同じとは限りません。',
          '- 本文の引用は、それぞれの記録（`data/rule_history.json` の id）にあります。ここにはページの内容の要約だけを置いています。', '',
