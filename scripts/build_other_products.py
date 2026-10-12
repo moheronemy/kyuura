@@ -296,9 +296,11 @@ def page_expansion_sheets(cat):
         rar = Counter(c['rarity'] for c in main_cards)
         en_n = sum(1 for c in cards if page_id(c) in en_prints)
         L.append('| {} | {} | {} 枚{} | ● {}・◆ {} | {} 枚 |'.format(
-            p['name'], p['release_date'], len(main_cards), f'＋おまけ {extra} 種' if extra else '',
+            p['name'], p['release_date'] + (' ※' if p.get('release_note') else ''), len(main_cards), f'＋おまけ {extra} 種' if extra else '',
             rar.get('●', 0), rar.get('◆', 0), en_n))
-    L += ['', '- 発売日・収録枚数は Bulbapedia [X30][X44] と pcg-search [N3] で一致します。**確実**',
+    L += ['', '- 発売日・収録枚数は Bulbapedia [X30][X44] と pcg-search [N3] で一致します。**確実**'] + [
+          f"  - ※ {p['name']}の発売日: {md(p['release_note'])}。どちらが正しいかは**未確認**です。" for p in sheets if p.get('release_note')] + [
+          '  - 『めざせ! ポケモンカードマスター』（1998年）の年表 [P34] の第1弾（青版）の発売日（1998年3月23日）は、上の表と一致します。この本は第3弾（緑版）の発売より前に出ています。',
           '- レアリティは pcg-search [N3] の記号です。Bulbapedia [X30] のコモン・アンコモンとも全カード一致しますが、青版の「化石の発掘」「月の石」だけは、pcg-search が ◆、Bulbapedia が「レアリティなし（拡張シートのトレーナーでこの 2 枚だけ）」としています。', '',
           '## シートの構成', '',
           'Bulbapedia [X43] によります。場所の名前はゲームの日本語名に置き換えたもので、シートの表記そのものではありません。', '']
@@ -604,6 +606,10 @@ def page_promos(cat):
                 c['list_number'], md(c['name']), c['url'], kind_short(c), c.get('hp') or '', dist, cat.en(c),
                 '<br>'.join(cat.appears(c))))
         L.append('')
+    rows = [row for k in keys for row in diff_rows(cat, cat.data[k])]
+    if rows:
+        L += ['## 日英の文面の違い', '',
+              '| カード | 種類 | 内容 | 日本版 | 英語版 | 確度 | 出典 |', '|---|---|---|---|---|---|---|'] + rows + ['']
     return L
 
 
@@ -819,8 +825,14 @@ def page_reprints(cat):
           'pcg-search の並びでは LV.11 の版が 1998 年のカイリューの隣にあります。**確実**',
           '- 再録の文面を比べた結果、拡張パック第1弾の「エネルギー回収」の印刷は「2枚の好きなエネルギーカード」で、英語版（basic Energy cards）と違うことがわかりました'
           '（のちの再録で「基本エネルギーカード」に改められた）。1997 年のプロモの「超エネルギー回収」も同じです。**確実**（印刷の文面）',
-          '  - その後の調査で、1998年に両方を基本エネルギーだけに限る公式エラッタが出ていたとわかりました（Bulbapedia がファンクラブ会報 Vol.5 p.16 を出典に挙げる）[X52]。**有力**'
-          '印刷の違いとエラッタは [エラッタの履歴](../rules/errata-history.md) に分けて記録し、[日英の違い](card-differences.md) はエラッタとして載せています。',
+          '  - 『ポケモンカード・ファンクラブ』Vol.5 pp.16〜17（1998年6月10日発行）は、エネルギー回収を「カードの解釈そのものが変更された」カードとし、'
+          '超エネルギー回収も「一緒に変更された」として、どちらも特殊エネルギーを拾えなくなったと説明しています [P2]。**確実**（誌面のスキャンで確認）',
+          '  - ただし、1998年6月10日は確認した会報の発行日です。古いカード（第1弾の版・1997年のプロモ）への適用開始日まで確定したわけではありません。**未確認**',
+          '  - 印刷の変更と公式エラッタは別の出来事として記録しています。新しい文面の印刷は、エネルギー回収がポケモンジム第1弾（1998年4月26日）で会報より早く、'
+          '超エネルギー回収が neo 第1弾（2000年2月4日）です。経過は [エラッタの履歴](../rules/errata-history.md) の '
+          '[ERR-ENERGY-RETRIEVAL](../rules/errata-history.md#err-energy-retrieval)・[ERR-SUPER-ENERGY-RETRIEVAL](../rules/errata-history.md#err-super-energy-retrieval) に、'
+          '日英の違いは、エネルギー回収を [カードの日英の違い](card-differences.md) に、超エネルギー回収を [プロモーションカード](products/promos.md#日英の文面の違い) に、エラッタとして載せています。',
+          '  - 以前の版は、Bulbapedia の出典表示 [X52] だけをもとに「1998年に公式エラッタが出た」を**有力**としていました。',
           '- 英語版: トレーナー・特殊エネルギーの別のセットへの再録を記録していなかったので、加えました。',
           '- 英語版: 英語版データの誤記のため、Legendary Collection への再録と判定できていなかったカードがありました。`data/curation/en_fixes.json` で直しています。']
     fixes = load('data/curation/en_fixes.json')

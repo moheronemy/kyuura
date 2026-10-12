@@ -13,8 +13,12 @@
   - 手書きの docs/rules/mixed-2002.md・kangaskhan-2002.md・japanese.md の中の id が存在するか
   - 日付の矛盾:
     - events の date・other_dates・rejected_dates の書式と、期間（開始 ≦ 終了）
-    - 記録の announced ≦ effective_from ≦ effective_until（先頭の日付どうし。精度の粗い方に合わせて比べる）
-    - announced_event・effective_event を書いた記録は、その出来事の date か other_dates と日付が合うか
+    - 記録の announced ≦ effective_from ≦ effective_until（先頭の日付どうし。精度の粗い方に合わせて比べる）。
+      printed_from（新しい文面の印刷の開始）は告知より早いことがあるので、この順の検査には入れない
+    - announced_event・printed_event・effective_event を書いた記録は、その出来事の date か other_dates と日付が合うか
+    - 印刷テキストの変更・公式エラッタ（printed_text_change・official_errata）で、適用の開始（effective_from・effective_event）に
+      印刷の日付を書いていないか（商品の出来事を effective_event にしていないか、日付を書いた effective_from が「印刷」の説明でないか）。
+      印刷の開始は printed_from に書く。printed_from の日付と、stages の印刷の変更（printed_change）の日付が合うか
     - applies_to.events の大会（type が tournament）が、記録の適用期間に入っているか
     - events の rejected_dates（資料が挙げるが誤りと判断した日付）が、keywords と同じ文の中で、
       その日付を挙げた資料（claimed_by の記号）や「以前の版」の説明なしに使われていないか
@@ -31,6 +35,8 @@
     公式エラッタ（official_errata）に分類した記録に、確認できた「公式の告知」の段階があるか
     （変更の予告や再録の文面の変更だけで公式エラッタとしていないか）
   - verification に「原本と照合した」などと書いた記録に、根拠の種類 original があるか
+  - カードの日英の違い（data/curation/card_differences.json・other_products.json の differences）で
+    エラッタ（kind が errata）とした記録が、公式エラッタ（official_errata）の記録のカードか
   - --check: 生成結果が上の 3 つのページと同じか（ファイルは書き換えない）
 
 使い方: python3 scripts/build_rule_history.py [--check]
@@ -121,6 +127,12 @@ def lead_date(s):
     return '-'.join(g for g in m.groups() if g) if m else None
 
 
+def lead_text(v):
+    """一覧の表に出す短い日付。先頭が日付ならその日付、「未確認（…）」などは括弧の前まで。"""
+    m = DATE_RE.match(v)
+    return m.group(0) if m else v.split('（')[0]
+
+
 def le(a, b):
     """a ≦ b（精度の粗い方に合わせて比べる）。"""
     n = min(len(a), len(b))
@@ -189,7 +201,7 @@ def validate_dates(data, codes):
         for p, q, label in ((a, f, '公表 ≦ 適用開始'), (f, u, '適用開始 ≦ 適用終了'), (a, u, '公表 ≦ 適用終了')):
             if p and q and not le(p, q):
                 errors.append(f"{x['id']}: 日付の順が逆（{label}）: {p} > {q}")
-        for key, ev_key in (('announced', 'announced_event'), ('effective_from', 'effective_event')):
+        for key, ev_key in (('announced', 'announced_event'), ('printed_from', 'printed_event'), ('effective_from', 'effective_event')):
             if not x.get(ev_key):
                 continue
             ev = events.get(x[ev_key])
@@ -200,6 +212,16 @@ def validate_dates(data, codes):
             known = [event_dates(ev)[0]] + [o['date'] for o in ev.get('other_dates', [])]
             if not mine or not any(compatible(mine, k) for k in known):
                 errors.append(f"{x['id']}: {key}（{x.get(key)}）が {ev['id']} の日付（{'・'.join(known)}）と合わない")
+        if x.get('category') in ('printed_text_change', 'official_errata'):
+            ev = events.get(x.get('effective_event'))
+            if ev and ev['type'] == 'product':
+                errors.append(f"{x['id']}: effective_event が商品の出来事（{ev['id']}）。新しい文面の印刷の開始なら printed_event・printed_from に書く")
+            if f and '印刷' in x['effective_from']:  # 日付を書いた適用の開始が、印刷の日付の説明になっている
+                errors.append(f"{x['id']}: effective_from が印刷の日付になっている。印刷の開始は printed_from に書く: {x['effective_from'][:60]}")
+            p = lead_date(x.get('printed_from'))
+            for st in x.get('stages', []):
+                if st['kind'] == 'printed_change' and st.get('date') and p and not compatible(st['date'], p):
+                    errors.append(f"{x['id']}: printed_from（{p}）と、段階 printed_change の日付（{st['date']}）が合わない")
         for eid in (x.get('applies_to') or {}).get('events', []):
             ev = events.get(eid)
             if not ev or ev['type'] != 'tournament':
@@ -293,6 +315,25 @@ def validate(data, cards, codes):
     errors += validate_dates(data, codes)
     errors += validate_documents(data, codes, known)
     errors += validate_editions(data, codes)
+    errors += validate_card_errata(data)
+    return errors
+
+
+def validate_card_errata(data):
+    """カードの日英の違いで「エラッタ」（kind が errata）とした記録が、公式エラッタの記録（official_errata）のカードか。
+    再録の文面の変更や予告だけのもの（プラスパワーなど）を、カードの側でエラッタとして載せていないかを見る。"""
+    errors = []
+    official = {c for x in all_items(data) if x.get('category') == 'official_errata' for c in x.get('cards', [])}
+    diffs = json.loads((ROOT / 'data' / 'curation' / 'card_differences.json').read_text(encoding='utf-8'))
+    other = json.loads((ROOT / 'data' / 'curation' / 'other_products.json').read_text(encoding='utf-8'))['differences']
+    for where, table in (('card_differences.json', diffs), ('other_products.json の differences', other)):
+        for cid, entries in table.items():
+            if cid.startswith('_'):
+                continue
+            for d in entries:
+                if d['kind'] == 'errata' and cid not in official:
+                    errors.append(f"data/curation/{where}: {cid} の「{d['summary']}」をエラッタとしているが、"
+                                  f"data/rule_history.json に公式エラッタ（official_errata）の記録がない")
     return errors
 
 
@@ -465,7 +506,8 @@ def detail(x, data, cards):
          f"- 地域: {REGION_JA[x['region']]}　区分: {data['categories'][x['category']]}"]
     if x.get('id_note'):
         L.append(f"- id について: {x['id_note']}")
-    for key, label in (('announced', '公表'), ('effective_from', '適用・印刷の開始'), ('effective_until', '適用の終了')):
+    for key, label in (('announced', '公表'), ('printed_from', '新しい文面の印刷の開始'), ('effective_from', '適用の開始'),
+                       ('effective_until', '適用の終了')):
         if x.get(key):
             L.append(f'- {label}: {x[key]}')
     if x.get('applies_to', {}).get('events'):
@@ -549,10 +591,11 @@ def build(data, cards):
           '- エラッタの記録の一部には「段階ごとの確認状況」を付けています。変更の予告、新しい文面の印刷、既存のカードにも適用する公式の告知、'
           '実際の適用（大会・ふだんの対戦）を分けて、それぞれ確認できたかを書いています。予告や再録の文面の変更だけでは、公式エラッタとはしていません。', '',
           '## 一覧', '',
-          '| id | 地域 | 区分 | 対象 | 公表・印刷 | 確度 |', '|---|---|---|---|---|---|']
+          '| id | 地域 | 区分 | 対象 | 公表・印刷・適用 | 確度 |', '|---|---|---|---|---|---|']
     for x in errata:
         target = '、'.join(cards.label(c) for c in x.get('cards', [])) or ('一覧のカード' if x.get('cards_from') else '')
-        when = x.get('announced') or x.get('effective_from') or ''
+        when = '<br>'.join(f"{label} {lead_text(x[key])}" for key, label in
+                           (('announced', '公表'), ('printed_from', '印刷'), ('effective_from', '適用')) if x.get(key))
         L.append(f"| [{x['id']}](#{x['id'].lower()}) | {REGION_JA[x['region']]} | {data['categories'][x['category']].split('（')[0]} | "
                  f"{md(x['title'])}<br>{md(target)} | {md(when)} | {x['confidence']} |")
     L += ['', '## 詳細', '']

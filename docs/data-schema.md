@@ -238,8 +238,9 @@
 | `id_note` | id の文字列と内容がずれている理由（任意）。参照の互換性のため id は変えず、ここで説明する（例: `MIX-SUPPORTER-ERRATA` は公式エラッタではなく大会レギュレーション） |
 | `region` | `JP`（日本版）／`EN`（英語版） |
 | `category` | 上の区分 |
-| `announced`・`effective_from`・`effective_until` | 公表日・適用（印刷）の開始・終了。先頭に日付を書き、続けて説明を書く。わからないものは「未確認」などと文で書く |
-| `announced_event`・`effective_event` | 公表・適用開始に当たる `events` の id（任意）。書いた場合は、日付が合うかを検査する。エラッタは、公表した会報・雑誌の号の出来事を `announced_event` にする（例: `ERR-ENERGY-RETRIEVAL` は `EV-1998-FANCLUB5`）。公表した資料を確認できていないものは書かない |
+| `announced`・`effective_from`・`effective_until` | 公表日・適用の開始・終了。先頭に日付を書き、続けて説明を書く。わからないものは「未確認」などと文で書く。雑誌・会報の発行日は公表日で、適用の開始日とは限らない |
+| `printed_from` | 新しい文面の印刷の開始（任意。印刷テキストの変更・公式エラッタで使う）。再録した商品の発売日などを書く。印刷の開始は、既存のカードに新しい文面を適用し始めた日とは別なので、`effective_from` には書かない（印刷テキストの変更・公式エラッタで、日付を書いた `effective_from` に「印刷」と書くとエラー）。告知より早いことがあるので、公表 ≦ 適用の順の検査には入れない。`stages` の `printed_change` の日付と合わないとエラー |
+| `announced_event`・`printed_event`・`effective_event` | 公表・印刷の開始・適用の開始に当たる `events` の id（任意）。書いた場合は、日付が合うかを検査する。エラッタは、公表した会報・雑誌の号の出来事を `announced_event` にする（例: `ERR-ENERGY-RETRIEVAL` は `EV-1998-FANCLUB5`）。公表した資料を確認できていないものは書かない。印刷テキストの変更・公式エラッタで、商品の出来事（`type` が `product`）を `effective_event` にするとエラー（`printed_event` に書く） |
 | `applies_to.events` | 対象の大会・商品（`events` の id） |
 | `cards`・`cards_from`・`external_cards` | 対象カード（`data/cards.json` の id か `data/ja_text_pcgsearch.json` のページ名）、`card_lists` の名前、このリポジトリにないカード |
 | `printed_text`・`play_text`・`before`・`after` | 印刷された文面、エラッタ後・読み替え後の文面、変更前・変更後のルール |
@@ -260,7 +261,7 @@
 
 | キー | 内容 |
 |---|---|
-| `products` | 商品ごとの名前、まとまり（`group`）、発売日、出典 |
+| `products` | 商品ごとの名前、まとまり（`group`）、発売日、出典。資料によって発売日が違うものは、`release_note` に別の日付とその資料を書く（商品のページで「※」を付けて表示） |
 | `en_prints` | pcg-search のカードページ名 → 対応する英語版カード。ここにないカードで、拡張パックと同じカードは `data/cards.json` の対応を使う |
 | `differences` | 日英の違い（`data/curation/card_differences.json` と同じ形） |
 | `sheets` | 拡張シートの各シートの場所とカード |

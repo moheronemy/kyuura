@@ -644,6 +644,13 @@ def apply_ja_source(r, c, report, label):
         retreat = c['fields'].get('にげる')
         if retreat and retreat != 'n/a' and len(ja_cost(retreat)) != p['retreat_cost']:
             report.append((r['id'], 'retreat', p['retreat_cost'], retreat))
+        # タイプ・弱点・抵抗力は記号だけを比べる（「無色」は無、「n/a」「なし」は空。×2・-30 の値は比べない）
+        for key, labels, en_types in (('type', ('タイプ',), p['types']),
+                                      ('weakness', ('弱点（×2）', '弱点'), [w['type'] for w in p['weaknesses']]),
+                                      ('resistance', ('抵抗力（-30）', '抵抗力'), [w['type'] for w in p['resistances']])):
+            v = next((f[k] for k in labels if k in f), None)
+            if v is not None and ja_cost(v) != sorted(en_types):
+                report.append((r['id'], key, types_ja(en_types) or 'なし', v))
         if c.get('rules_text') and p['rules_text']:
             p['rules_text']['ja'] = c['rules_text']
     else:
@@ -849,7 +856,7 @@ def write_set_docs(records, en_only):
         meta = set_meta[set_id]
         rs = [r for r in records if r['jp_set'] == set_id]
         lines = [f"# {meta['ja']}（{meta['label']}）", '',
-                 f"- 発売日: {meta['release']}",
+                 f"- 発売日: {meta['release']}" + (f"（{meta['release_note']}）" if meta.get('release_note') else ''),
                  f"- 収録枚数: {meta['count']}",
                  f"- 主に対応する英語版: {meta['en']}", '',
                  '## カード一覧', '',

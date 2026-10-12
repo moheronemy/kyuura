@@ -39,4 +39,4 @@
 - 英語版の主な情報源は、Pojo.com に転載された WotC のルールブック（Basic／Expert Rules、Neo Genesis の追加ルール、Advanced Rulebook Version 8・9）と、Jason Klaczynski 氏のサイト（jklaczpokemon.com）などです。
 - 確度が「未確認」の項目は、一般的な知識で穴埋めせず、未確認のまま残しています。
 
-参照先の一覧は [出典と確認状況](../sources.md) にあります。
+参照先の一覧は [出典と確認状況](../sources.md) に、分野ごとの確認状況と件数は [調査の状況](../research-status.md) にあります。

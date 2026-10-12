@@ -40,6 +40,9 @@ python3 scripts/build_other_products.py
 # 生成物が元データと合っているかだけを検査（ファイルは書き換えない。食い違いや参照切れがあれば終了コード 1）
 python3 scripts/build_rule_differences.py --check
 python3 scripts/build_rule_history.py --check
+
+# 調査の状況（docs/research-status.md）の数を数える（読むだけ）
+python3 scripts/research_stats.py
 ```
 
 生成されるもの:
@@ -48,13 +51,14 @@ python3 scripts/build_rule_history.py --check
 |---|---|
 | `build_cardlist.py` | `data/cards.json`、`data/cards.csv`、`data/attacks.csv`、`data/powers.csv`、`docs/cards/` の各弾のページ・`card-differences.md`・`english-only.md` |
 | `build_rule_differences.py` | `docs/rules/differences.md`（あわせて出典の記号・`data/rule_history.json` の id の参照切れと、確度の更新漏れを検査） |
-| `build_rule_history.py` | `docs/rules/errata-history.md`、`docs/rules/japanese-editions.md`（日本版のルールの版ごとの比較）、`docs/printed-sources.md`（スキャンで確認した印刷物の巻号・ページ）。あわせて `data/rule_history.json` と `docs/rules/mixed-2002.md`・`kangaskhan-2002.md`・`japanese.md` の id・カード id・出典の記号の参照切れ、日付の矛盾（公表・適用の順、出来事の日付との食い違い、誤りと判断した日付の使用）、版の日付と出来事の食い違い、比較表の項目と `data/rule_differences.json` の対応と確度の食い違い、比較表で二次資料・推定だけのマスを「確実」にしていないか、公式エラッタに分類した記録に確認できた公式の告知の段階があるか、原本との照合を書いた記録に原本の根拠があるか、スキャンを根拠にした記録の資料が `documents` にあるかを検査 |
+| `build_rule_history.py` | `docs/rules/errata-history.md`、`docs/rules/japanese-editions.md`（日本版のルールの版ごとの比較）、`docs/printed-sources.md`（スキャンで確認した印刷物の巻号・ページ）。あわせて `data/rule_history.json` と `docs/rules/mixed-2002.md`・`kangaskhan-2002.md`・`japanese.md` の id・カード id・出典の記号の参照切れ、日付の矛盾（公表・適用の順、出来事の日付との食い違い、誤りと判断した日付の使用、印刷テキストの変更・公式エラッタで新しい文面の印刷の日付を適用の開始に書いていないか、印刷の開始と段階の日付の食い違い）、版の日付と出来事の食い違い、比較表の項目と `data/rule_differences.json` の対応と確度の食い違い、比較表で二次資料・推定だけのマスを「確実」にしていないか、公式エラッタに分類した記録に確認できた公式の告知の段階があるか、原本との照合を書いた記録に原本の根拠があるか、スキャンを根拠にした記録の資料が `documents` にあるかを検査 |
 | `nazonobasho.py extract` | `data/ja_text_nazonobasho.json`（日本語テキスト。カードテキストと印刷情報の欄だけを残す） |
 | `pcg_search.py extract` | `data/ja_text_pcgsearch.json`（拡張パック以外の商品の 681 枚） |
 | `build_other_products.py` | `docs/cards/other-products.md`（一覧）、`docs/cards/products/*.md`（商品ごと）、`docs/cards/reprints.md`（再録の対応付けと点検の結果） |
 | `pokemonwiki.py` | `data/ja_text_pokemonwiki.json`（`data/raw/` のポケモンWiki のデータを、なぞのばしょと同じ形に変換したもの） |
+| `research_stats.py` | 出力なし（標準出力に表示するだけ）。出典の記号の区分（`docs/sources.md`）、ルールの記録の確度・根拠の種類・エラッタの段階・版の比較表のマス、カードの日本語テキストと数値の出典、日英の違い、再録の組を数える。`docs/research-status.md` の数はこの出力による |
 
-`build_cardlist.py` は、日本語テキストの出典ごとに、カードと英語版データの数値（HP・コスト・ダメージ・にげる）やカード名の食い違いを `data/ja_text_<出典>_report.json`（`nazonobasho`・`pokemonwiki`）に書き出します。`data/curation/<出典>_review.json` に判定のない食い違いがあると、実行時に一覧を表示します。
+`build_cardlist.py` は、日本語テキストの出典ごとに、カードと英語版データの数値（HP・コスト・ダメージ・にげる・タイプ・弱点・抵抗力）やカード名の食い違いを `data/ja_text_<出典>_report.json`（`nazonobasho`・`pokemonwiki`）に書き出します。`data/curation/<出典>_review.json` に判定のない食い違いがあると、実行時に一覧を表示します。
 
 - 同じカードが両方の出典にあるときは、なぞのばしょを使います（現在は重なりなし）。
 - ポケモンWiki のデータには、保存した人が付けたカード id の候補（`kyuura_card_id`）があり、照合の手がかりにしています。
@@ -79,7 +83,7 @@ python3 scripts/build_rule_history.py --check
 | `pokemonwiki_review.json` | ポケモンWiki と英語版データの食い違いの判定 |
 | `other_products.json` | 拡張パック以外の商品の発売日、デッキ・シートの構成、プロモの配布方法、英語版の対応、日英の違い、イントロパックのカードの Bulbapedia のページ、再録の文面の書き換えの分類 |
 | `en_fixes.json` | 英語版カードデータの誤りの補正（ワザのダメージ・効果文・名前・コスト） |
-| `sets.json` | 各弾の名前・発売日・収録数 |
+| `sets.json` | 各弾の名前・発売日・収録数。資料によって発売日が違う弾は `release_note` に別の日付とその資料を書く（各弾のページの発売日の後ろに表示） |
 
 最後に生成したときの出典データ:
 
