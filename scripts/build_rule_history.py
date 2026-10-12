@@ -6,7 +6,7 @@
   - docs/printed-sources.md（スキャンで確認した印刷物の巻号・ページごとの記録。documents から）
 
 検査すること:
-  - id（EV-・MIX-・KGR-・EN-・ERR-・TXT-・RUL-・REG-・NEO-）の重複
+  - id（EV-・MIX-・KGR-・EN-・ERR-・TXT-・RUL-・REG-・NEO-・RB-）の重複
   - applies_to.events・cards・card_lists のカード id の参照切れ
     （カード id は data/cards.json の id か、data/ja_text_pcgsearch.json のページ名）
   - 出典の記号（source・cites、本文中の [X52] など）が docs/sources.md にあるか
@@ -33,7 +33,8 @@
     rule_differences の行が、比較表で未確認の版まで含めていないか
   - errata の stages（予告・印刷の変更・公式の告知・適用の段階）: 段階の種類・確度・日付の書式・出典。
     公式エラッタ（official_errata）に分類した記録に、確認できた「公式の告知」の段階があるか
-    （変更の予告や再録の文面の変更だけで公式エラッタとしていないか）
+    （変更の予告や再録の文面の変更だけで公式エラッタとしていないか）。公式エラッタはこのリポジトリの分類なので、
+    当時の資料での呼び方（term_in_sources）が書かれているか
   - verification に「原本と照合した」などと書いた記録に、根拠の種類 original があるか
   - カードの日英の違い（data/curation/card_differences.json・other_products.json の differences）で
     エラッタ（kind が errata）とした記録が、公式エラッタ（official_errata）の記録のカードか
@@ -60,7 +61,7 @@ PROSE = HANDWRITTEN + [ROOT / 'docs' / 'rules' / n for n in ('wotc.md', 'README.
 DATE_RE = re.compile(r'^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?')
 DATE_FULL_RE = re.compile(r'^\d{4}(?:-\d{2}(?:-\d{2})?)?$')
 MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-ID_RE = re.compile(r'\b(?:EV|MIX|KGR|EN|ERR|TXT|RUL|REG|NEO)-[A-Z0-9][A-Z0-9-]*[A-Z0-9]\b')
+ID_RE = re.compile(r'\b(?:EV|MIX|KGR|EN|ERR|TXT|RUL|REG|NEO|RB)-[A-Z0-9][A-Z0-9-]*[A-Z0-9]\b')
 SRC_RE = re.compile(r'\[([A-Z]\d+)\]')
 GENERATED = ('<!-- このファイルは scripts/build_rule_history.py が data/rule_history.json から生成しています。'
              '直接編集しないでください。 -->')
@@ -353,6 +354,8 @@ def validate_stages(x, data, codes):
             if c not in codes:
                 errors.append(f"{x['id']}: 段階の出典の記号がない: {c}")
     if x.get('category') == 'official_errata':
+        if not x.get('term_in_sources'):
+            errors.append(f"{x['id']}: 公式エラッタに分類しているが、当時の資料での呼び方（term_in_sources）がない")
         notices = [st for st in stages if st['kind'] == 'official_notice']
         if not stages:
             errors.append(f"{x['id']}: 公式エラッタに分類しているが、stages（予告・印刷・告知・適用の区別）がない")
@@ -507,6 +510,8 @@ def detail(x, data, cards):
          f"- 地域: {REGION_JA[x['region']]}　区分: {data['categories'][x['category']]}"]
     if x.get('id_note'):
         L.append(f"- id について: {x['id_note']}")
+    if x.get('term_in_sources'):
+        L.append(f"- 当時の資料での呼び方: {x['term_in_sources']}")
     for key, label in (('announced', '公表'), ('printed_from', '新しい文面の印刷の開始'), ('effective_from', '適用の開始'),
                        ('effective_until', '適用の終了')):
         if x.get(key):
@@ -586,8 +591,8 @@ def build(data, cards):
     L += [f'| {k} | {v} |' for k, v in data['confidence_values'].items()]
     scanned = '、'.join(f"[{d['code']}]" for d in data['documents'])
     L += ['', '- 当時の公式資料のうち原文を確認できたのは、公式サイトのページ（[P10]、[P15]〜[P23]、[P28]。Internet Archive に保存された写し）と、'
-          f"[印刷物の照合記録](../printed-sources.md) の {len(data['documents'])} 冊の誌面（{scanned}。[J37]・[J38] のスキャンで、実物ではない）です。"
-          '1996〜1999年のルールブック（第1〜5版のどれも）の原文は確認できていません（2000年の「公式ルール 2000.02.14版」は [P43] で確認）。'
+          f"[印刷物の照合記録](../printed-sources.md) の {len(data['documents'])} 冊の誌面（{scanned}。[J37]・[J38]・[J39] のスキャンで、実物ではない）です。"
+          '1996〜1999年のルールブックの原文は、第4版の冊子（[P44]。1998年4月ごろ以降の刷とみられる）だけを確認しました。第1〜3版・第5版は確認できていません（2000年の「公式ルール 2000.02.14版」は [P43] で確認）。'
           '二次資料が挙げている当時の資料も [P1] などの記号で示しています。',
           '- エラッタの記録の一部には「段階ごとの確認状況」を付けています。変更の予告、新しい文面の印刷、既存のカードにも適用する公式の告知、'
           '実際の適用（大会・ふだんの対戦）を分けて、それぞれ確認できたかを書いています。予告や再録の文面の変更だけでは、公式エラッタとはしていません。', '',
@@ -627,9 +632,10 @@ def build_editions(data):
          '旧裏期の日本版のルールを、版ごと・項目ごとに並べた表です。ルールの説明と資料の食い違いは [日本版のルールと変遷](japanese.md)、'
          '英語版との比較は [日米のルールの違い](differences.md)、出典の記号は [出典と確認状況](../sources.md)、'
          'スキャンで確認した誌面のページは [印刷物の照合記録](../printed-sources.md) を参照してください。', '',
-         '- 版ごとの文書（ルールブック・遊びかた説明書）の原文は、どの版も確認できていません。表の内容は、各版の時期の公式の雑誌・書籍の説明（スキャン）と二次資料によります。',
+         '- 版ごとの文書（ルールブック・遊びかた説明書）の原文は、第4版の冊子（[P44]。表紙は「ルールブック第4版（ルール改訂あり）」、本文では「遊び方説明書」。1998年4月ごろ以降の刷とみられる）だけを確認しました。第4版の列はこの冊子によります。ほかの版の列は、各版の時期の公式の雑誌・書籍の説明（スキャン）と二次資料によります。',
+         '- 第4版の冊子は発行日・刷の表示がなく、1998年1月1日の発表時の文面と同じかは確認できていません。',
          '- 原文や当時の説明で確認できなかったマスは「未確認」です。ほかの版の内容から推測して埋めていません。',
-         '- 「公式ルール」「ルールブック」「遊びかた説明書」は資料によって呼び方が違います。1997年の会報は、詳しい「公式ルール」は書籍（『大人にもわかるポケモンカード戦略』）に載せ、スターターパックの「遊びかた説明書」は「順次改定される予定」と書いています [P31]。版の番号が同じ文書の系列を指すかは確認できていません。',
+         '- 「公式ルール」「ルールブック」「遊びかた説明書」は資料によって呼び方が違います。1997年の会報は、詳しい「公式ルール」は書籍（『大人にもわかるポケモンカード戦略』）に載せ、スターターパックの「遊びかた説明書」は「順次改定される予定」と書いています [P31]。第4版の冊子は、表紙で「ルールブック第4版」、本文で「遊び方説明書」と名のります [P44]。年表の「公式ルール第4版」[P34] と同じ番号なので同じ系列とみられますが、文面が同じかは確認できていません。',
          '- 発売元のガイドブック [P29] の「公式ルール」は、基本の遊びかたとは別の追加ルールとして書かれています。公式大会の大会専用ルールも、基本ルールとは別のものです。', '',
          '## 版と時期', '',
          '版の日付は発表・告知の日で、ルールが実際に使われ始めた日（適用）とは限りません。', '',
@@ -669,8 +675,8 @@ def build_documents(data):
     names = {x['id']: x.get('title') or x.get('name') for x in all_items(data)}
     L = ['# 印刷物の照合記録', '',
          '<!-- このファイルは scripts/build_rule_history.py が data/rule_history.json の documents から生成しています。直接編集しないでください。 -->', '',
-         '当時の印刷物を、スキャン（[出典と確認状況](sources.md) の J37。Elite Fourum のスレッドで公開された Google Drive の PDF。P43 だけは J38 の Internet Archive の PDF）で確認した記録です。'
-         '印刷物の実物を確認したものではありません。ページ番号は誌面に印刷された番号（ノンブル）、PDF のページは Drive のビューアー（P43 は Internet Archive の PDF）で数えたページです。', '',
+         '当時の印刷物を、スキャン（[出典と確認状況](sources.md) の J37。Elite Fourum のスレッドで公開された Google Drive の PDF。P43 は J38、P44 は J39 の Internet Archive の PDF）で確認した記録です。'
+         '印刷物の実物を確認したものではありません。ページ番号は誌面に印刷された番号（ノンブル）、PDF のページは Drive のビューアー（P43・P44 は Internet Archive の PDF）で数えたページです。', '',
          '- スキャンのファイルは第三者が公開したもので、公開が続く保証はありません。',
          '- 確認した刷が初版でないものは、その刷を書いています。初版の文面と同じとは限りません。',
          '- 本文の引用は、それぞれの記録（`data/rule_history.json` の id）にあります。ここにはページの内容の要約だけを置いています。', '',

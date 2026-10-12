@@ -216,7 +216,7 @@
 
 | キー | 内容 |
 |---|---|
-| `categories` | 区分: `basic_rule`（基本ルール）、`tournament_regulation`（大会レギュレーション）、`card_ruling`（カード個別の裁定）、`official_errata`（公式エラッタ）、`printed_text_change`（印刷テキストの変更）、`product_change` |
+| `categories` | 区分: `basic_rule`（基本ルール）、`tournament_regulation`（大会レギュレーション）、`card_ruling`（カード個別の裁定）、`official_errata`（公式エラッタ。このリポジトリの分類で、当時の資料が「エラッタ」と呼んだとは限らない）、`printed_text_change`（印刷テキストの変更）、`product_change` |
 | `evidence_kinds` | 根拠の種類: `original`、`archived_official`（当時の公式サイトのページを Internet Archive の写しで読んだ）、`scan_image`（当時の印刷物のページの写真・スキャンで文面を確認した）、`card_image`、`official_later`、`secondary_direct`、`search_summary` |
 | `confidence_values` | 確度（確実／有力／未確認）の基準 |
 | `events` | 商品の発売・大会・雑誌の発行などの出来事（`id`、`date`、`region`、`type`、`name`、`notes`、`evidence`）。`date` は `YYYY`・`YYYY-MM`・`YYYY-MM-DD`、期間は `開始/終了`。雑誌は公式の発売日がわかればそれを、なければ表紙の発行日を使う。`other_dates`（`date`・`label`・`sources`）は正当に違う日付（雑誌の発行日など）、`rejected_dates`（`date`・`claimed_by`・`keywords`・`reason`）は資料が挙げるが誤りと判断した日付 |
@@ -233,8 +233,9 @@
 
 | 欄 | 内容 |
 |---|---|
-| `id` | ルールの識別 id（`MIX-`: 混合期、`KGR-`: ガルーラルール、`REG-`: 2001年より前の日本の大会レギュレーション、`NEO-`: neo 期の基本ルールの追加修正、`EN-`: 英語版、`ERR-`: エラッタ、`TXT-`: 印刷の変更、`RUL-`: 裁定） |
+| `id` | ルールの識別 id（`MIX-`: 混合期、`KGR-`: ガルーラルール、`REG-`: 2001年より前の日本の大会レギュレーション、`NEO-`: neo 期の基本ルールの追加修正、`RB-`: 版の番号の付いたルールブック（冊子）の本文、`EN-`: 英語版、`ERR-`: エラッタ、`TXT-`: 印刷の変更、`RUL-`: 裁定） |
 | `stages` | エラッタの段階ごとの確認状況（任意。`kind`: `stage_kinds` の値、`date`、`text`、`confidence`、`sources`）。公式エラッタ（`official_errata`）に分類した記録には必須で、確認できた `official_notice` がなければエラー（予告や再録の文面の変更だけで公式エラッタとしない）。未確認の `official_notice`・`applied` に日付を書くとエラー（推定した日付を確定日として書かない） |
+| `term_in_sources` | 当時の資料での呼び方（「最新の説明」「ルール変更のお知らせ」など）。公式エラッタ（`official_errata`）に分類した記録には必須で、ないとエラー。分類名と当時の呼び方を混同しないために書く |
 | `id_note` | id の文字列と内容がずれている理由（任意）。参照の互換性のため id は変えず、ここで説明する（例: `MIX-SUPPORTER-ERRATA` は公式エラッタではなく大会レギュレーション） |
 | `region` | `JP`（日本版）／`EN`（英語版） |
 | `category` | 上の区分 |

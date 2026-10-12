@@ -21,7 +21,7 @@ OUT = ROOT / 'docs' / 'rules' / 'differences.md'
 STATUS_ORDER = ['違う', '時期により違う', '違う可能性あり', '同じ', '不明']
 CONFIDENCE_RANK = {'未確認': 0, '有力': 1, '確実': 2}
 SRC_RE = re.compile(r'\[([A-Z]\d+)\]')
-ID_RE = re.compile(r'\b(?:EV|MIX|KGR|EN|ERR|TXT|RUL)-[A-Z0-9][A-Z0-9-]*[A-Z0-9]\b')
+ID_RE = re.compile(r'\b(?:EV|MIX|KGR|EN|ERR|TXT|RUL|REG|NEO|RB)-[A-Z0-9][A-Z0-9-]*[A-Z0-9]\b')
 
 
 def refs(sources):
