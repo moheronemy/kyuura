@@ -276,7 +276,7 @@
 
 ## サイドカー（`data/sidecar/`）
 
-`data/cards.json` を変えずに、カード・ワザに出典つきの情報を加えるファイルです。カードの記録とは id（カード id、ワザ・特殊能力の位置）で結びます。検査と生成は `scripts/build_card_rulings.py`（生成するページは [カードの裁定と公式の最新の説明](rules/card-rulings.md)）、テストは `tests/test_card_rulings.py` です。サイドカーの記録がないカードは、どの一覧も空として扱います（`annotations_for`）。
+`data/cards.json` を変えずに、カード・ワザに出典つきの情報を加えるファイルです。カードの記録とは id（カード id、ワザ・特殊能力の位置）で結びます。検査と生成は `scripts/build_card_rulings.py`（生成するページは [カードの裁定と公式の最新の説明](rules/card-rulings.md)。手で編集しない）、テストは `tests/test_card_rulings.py`（v0.13 の取り込み）と `tests/test_engine_imports_v05_v12.py`（v0.5〜v0.12 の取り込み・破壊テスト）です。サイドカーの記録がないカードは、どの一覧も空として扱います（`annotations_for`）。
 
 | ファイル | 内容 | id の書式 |
 |---|---|---|
@@ -291,13 +291,13 @@ id は 3 つのファイルを通して重複しないこと、`data/rule_histor
 | 項目 | 内容 |
 |---|---|
 | `card_id`・`card_name_ja`・`target` | 対象のカードと、ワザ・特殊能力（`kind`: `attack`・`power`、`index`、`name_ja`）。名前が `data/cards.json` と合わないとエラー |
-| `printed_text` | 印刷の文面の場所（`path`）と、照合したときの写し（`text_ja`）。`data/cards.json` が変わって写しと違うとエラー（照合し直す）。`image_check` は書籍の図版の文面との照合（`match`・`consistent_where_legible`・`not_checked`） |
+| `printed_text` | 印刷の文面の場所（`path`）と、照合したときの写し（`text_ja`）。`data/cards.json` が変わって写しと違うとエラー（照合し直す）。`image_check` は書籍の図版の文面との照合（`match`・`consistent_where_legible`・`not_checked`）。図版と kyuura の文面が違うときは最新の説明の記録にせず、`card_checks.json` の `data_error` に書く |
 | `latest_description` | 最新の説明の文面（`text_ja`）、出典の記号（`source`）・スキャン（`scan`）・ページ（`page`。`data/rule_history.json` の `documents` にあるページ）・PDF のページ・位置 |
 | `also_quoted` | 同じ書籍の別のページに同じ文面が引かれている場所 |
 | `book_rule` | 最新の説明の扱いを決めた条項（`GR-P43-P6-LATEST-DESCRIPTION`） |
 | `classification`・`errata_ref` | 分類は `latest_description`（最新の説明）。公式エラッタ・印刷の変更の記録（`data/rule_history.json`）があるカードは、`errata_ref` で結ばないとエラー（最新の説明とエラッタを混同しない） |
 | `differences` | 違い（`printed`・`latest`・`kind`: `wording`・`clarification`・`meaning`）。文字列が印刷の文面・最新の説明の中にそのままないとエラー |
-| `meaning_change`・`meaning_note` | 処理が変わるか（`none_apparent`・`changed`・`unknown`）と、その読み方（推論であることを書く） |
+| `meaning_change`・`meaning_note` | 処理が変わるか（`none_apparent`・`changed`・`ambiguous_in_print`（印刷の文面だけでは処理が決まらず、最新の説明がその読み方を決めた）・`unknown`）と、その読み方（推論であることを書く）。違いの種類に `meaning` があれば `changed` |
 | `verification` | 確かめた記録（`by`: `kyuura`・`kyuura-engine`、日付・方法・結果） |
 
 ### `card_checks.json` の `records`
@@ -307,21 +307,23 @@ id は 3 つのファイルを通して重複しないこと、`data/rule_histor
 | `card_id`・`source`・`page`・`location` | 照合したカードと資料のページ |
 | `checked_fields` | 照合した欄と、そのときの `data/cards.json` の値の写し。今の値と違うとエラー |
 | `fields_not_checked` | 照合していない欄 |
-| `result`・`data_error` | `no_difference`（照合して差異なし）・`printed_vs_latest_only`（違いは印刷の文面と最新の説明の違いだけ）・`data_error`（データの誤り。別の修正として扱う）。照合の記録のないカードは未照合 |
-| `differences` | 違いの欄と、最新の説明の記録（`latest_description_ref`） |
+| `result`・`data_error` | `no_difference`（照合して差異なし）・`printed_vs_latest_only`（違いは印刷の文面と最新の説明の違いだけ）・`data_error`（データの誤り。別の修正として扱う）。照合の記録のないカードは未照合。`no_difference` なら、結んだ最新の説明にも違いがないこと（違いがあるとエラー） |
+| `data_error` の中身 | `result` が `data_error` のときだけ、`[{field, kyuura_value, source_value, evidence, fix_status, note}]`。`kyuura_value` は `checked_fields` の写しと同じ、`fix_status` は `candidate`（この記録ではデータを直さない。修正は別の作業）。ほかの結果では `false` |
+| `differences` | 違いの欄と種類（`printed_vs_latest`: 最新の説明の記録 `latest_description_ref` と結ぶ。`data_error`: データの誤りの欄） |
 
 ### `rulings.json`
 
 | 項目 | 内容 |
 |---|---|
-| `rule_clauses` | 裁定が参照する公式ルールの箇所（資料・ページ・節・要旨）。規則の本体の記録（`rule_history_refs`・`rule_differences_refs`）を必ず挙げる。新しい規則の記録ではなく、参照する位置の索引 |
+| `rule_clauses` | 裁定が参照する公式ルールの箇所（資料・ページ・節・要旨）。規則の本体の記録（`rule_history_refs`・`rule_differences_refs`）を必ず挙げる。新しい規則の記録ではなく、参照する位置の索引。エンジンの裁定が一般の規定をそのまま述べたもの（ベンチのポケモンも特殊能力を使える、など）は、カードごとの裁定を作らずに条項の `engine_refs` に結ぶ（エンジンが CONFIRMED としたものだけ。推論を含むなら裁定 `CR-` にする） |
 | `rulings` の `status` | `CONFIRMED`（公式の資料に書かれている）・`SUPPORTED`（記述・例から読み取れるが、その場面そのものは書かれていない）。未解決の論点は `issues` に書き、裁定には `UNRESOLVED` を使わない |
 | `rulings` の `basis` | 根拠。`kind` は `card_text`（カードの文面）・`card_commentary`（書籍のカードの解説・ワザ解説。関係するカードのものも含む）・`general_rule`（一般の規定がそのまま当てはまる）・`derived`（複数の規定から解釈の選択なしに導かれる。`statement` に書く）。資料のページ（`source`・`page`・`location`・`quote`）か、カードのデータ（`card_ref`・`field`）を指す。`checked` は確かめ方（`kyuura_image`・`kyuura_data`・`engine_report`） |
 | `rulings` の `inference` | 推論。`SUPPORTED` には必須で、`CONFIRMED` にはあってはいけない |
-| `rulings` の `engine_refs` | kyuura-engine の裁定 id との対応（`import`・`engine_version`・`document`・`ruling_id`・`engine_classification`・`engine_note`）。1 つの裁定を分けて記録したときは、それぞれに `part`。エンジンの分類が CONFIRMED でない裁定を `CONFIRMED` の記録に対応させるときは `reclassification`（`from`・`to`・`reason`）が必要 |
-| `issues` | 未解決の論点（`question`・`why_unresolved`・`official_material`・`cases`（事例のカード・ワザとエンジンの裁定 id）・`reachability`・`engine_refs`）。同じ問いのエンジンの裁定は 1 つの論点にまとめる。同じエンジンの裁定を 2 つの論点に対応させるとエラー |
-| `engine_imports` | 取り込んだエンジンのリポジトリ・ブランチ・コミット・読んだ文書。`ruling_sets` の範囲（S1〜S49 など）の id は、どれかの記録か `not_imported`（理由つき）にないとエラー |
-| `engine_unresolved_index` | エンジンの未解決の裁定の一覧と、取り込んだ論点（`kyuura_issue`）。件数は `engine_unresolved_total` と同じ |
+| `rulings` の `cards` | 裁定の対象（カード id とワザ・特殊能力）。同じ問いを複数のカードにまとめるときは並べる（エンジンの複数の版の同じ裁定を 1 つにする。例: 「自分の番の中で何度でも使える」はエナジートランス・あまごい・ダメージスワップの 1 件）。同じ対象・同じ問いの裁定を 2 つ作るとエラー |
+| `rulings` の `engine_refs` | kyuura-engine の裁定 id との対応（`import`・`engine_version`・`document`・`ruling_id`・`engine_classification`（エンジンの表の「分類」の欄の写し）・`part`・`engine_note`）。エンジンの裁定 id は文書ごとの番号で、版が違えば同じ id が別の裁定なので、（`import`・`document`・`ruling_id`）で区別する。1 つの裁定を分けて記録したときは、それぞれに `part`。エンジンの分類が CONFIRMED でない裁定を `CONFIRMED` の記録に対応させるとき、エンジンが CONFIRMED だけとした裁定を `SUPPORTED` の記録に対応させるときは `reclassification`（`from`・`to`・`reason`）が必要。エンジンが「実装上の仮定」だけとした裁定は、裁定・条項に対応させない（`not_imported`） |
+| `issues` | 未解決の論点（`question`・`why_unresolved`・`official_material`・`cases`（事例のカード・ワザとエンジンの裁定 id）・`reachability`・`related_engine_rulings`・`related_issues`・`engine_refs`）。同じ問いのエンジンの裁定は 1 つの論点にまとめる（同じ問いと言える根拠がないときはまとめない）。同じエンジンの裁定を 2 つの論点に対応させる・同じ問いの論点を 2 つ作るとエラー。エンジンの未解決の一覧にない論点（エンジンは処理を決めているが、公式の資料では決められないもの）は `not_in_engine_index: true` |
+| `engine_imports` | エンジンの版ごとに 1 件（`ENGINE-<コミットの先頭 7 桁>`）。`engine_version`・`commit`（その版のコミット）・`parent_version_commit`・`documents_read_at`（文書を読んだコミット）・`kyuura_commit_used_by_engine`・`documents`・`ruling_sets`（文書ごとの範囲 `prefix`・`first`・`last`・`document`・`extra_ids`（T19b のような枝番）・`engine_reported_counts`）・`imported_rulings`（結んだ kyuura の記録の id）・`unresolved_rulings`（結んだ論点の id）・`not_imported`（`ruling_id`・`document`・`engine_classification`・`reason`）・`notes`（取り込みの注記）。範囲の id は、どれかの記録か `not_imported` のどちらか一方にないとエラー。`imported_rulings`・`unresolved_rulings` は対応から求めたものと同じでないとエラー。1 つの取り込みの中で同じ接頭辞を 2 つの文書に使わない |
+| `engine_unresolved_index` | エンジンの未解決の裁定の一覧（22 件）。`disposition` は `issue`（論点 `kyuura_issue` に取り込んだ）・`implementation_only`（歴史上の論点ではない）・`out_of_scope`（取り込みの範囲の外。取り込んだ版のものには使えない）。`issue` 以外は `reason` が必要。`question_kind` は問いの性質（`historical`）。件数は `engine_unresolved_total` と同じ |
 
 結論・論点・推論の文に、エンジンの停止コード・例外の名前（`UNRESOLVED_…`・`RuntimeError` など）を書くとエラーです。エンジンの実装の情報は `engine_refs`・`engine_unresolved_index` にだけ書きます。
 
@@ -336,5 +338,6 @@ notes = bcr.annotations_for(ctx, 'PMCG4-021')
 for ld in notes['latest_descriptions']:
     print(ld['target']['name_ja'], ld['latest_description']['page'], ld['latest_description']['text_ja'])
 print(len(notes['rulings']), 'rulings;', [x['id'] for x in notes['issues']])
-print(bcr.annotations_for(ctx, 'PMCG1-001'))  # 記録のないカード
+print(bcr.annotations_for(ctx, 'PMCG1-002'))  # 記録のないカード
+print(bcr.find_engine_ruling(ctx, 'v0.7', 'S1'))  # エンジンの版と id から kyuura の記録を引く（v0.13 の S1 とは別）
 ```

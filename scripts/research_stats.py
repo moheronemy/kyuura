@@ -264,9 +264,17 @@ def sidecar_stats():
     print('  - 根拠の種類ごとの記録の数（1 件に複数の種類があれば、それぞれに数える）: ' + '、'.join(
         f'{k} {v}' for k, v in Counter(k for x in r['rulings'] for k in {b['kind'] for b in x['basis']}).most_common()))
     print(f"- 未解決の論点: {len(r['issues'])} 件")
+    print(f"- kyuura-engine の取り込み: {len(r['engine_imports'])} 件（版ごと）")
+    total = 0
     for imp in r['engine_imports']:
-        print(f"- kyuura-engine の取り込み: {imp['id']}（{imp['engine_version']}、{imp['commit'][:7]}）。エンジンの未解決の裁定 {imp.get('engine_unresolved_total')} 件のうち、"
-              f"論点に取り込んだもの {sum(1 for u in r['engine_unresolved_index'] if u['kyuura_issue'])}")
+        n = sum(rs['last'] - rs['first'] + 1 + len(rs.get('extra_ids', [])) for rs in imp.get('ruling_sets', []))
+        total += n
+        print(f"  - {imp['id']}（{imp['engine_version']}、{imp['commit'][:7]}）: エンジンの裁定 {n} 件、取り込んでいない {len(imp.get('not_imported', []))} 件、"
+              f"対応する kyuura の記録 {len(imp.get('imported_rulings', []))} 件・未解決の論点 {len(imp.get('unresolved_rulings', []))} 件")
+    idx = r['engine_unresolved_index']
+    print(f"  - 合計: エンジンの裁定 {total} 件")
+    print(f"- エンジンの未解決の裁定の一覧: {len(idx)} 件（" + '、'.join(f'{k} {v}' for k, v in Counter(u.get('disposition') for u in idx).most_common()) +
+          f"。論点に取り込んだもの {sum(1 for u in idx if u['kyuura_issue'])}）")
 
 
 if __name__ == '__main__':
