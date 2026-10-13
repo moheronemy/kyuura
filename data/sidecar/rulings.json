@@ -1,0 +1,3127 @@
+{
+ "schema_version": 1,
+ "description": "カード・ワザごとの裁定（公式の資料からの判断）と未解決の論点。エンジン（kyuura-engine）の裁定 id との対応は engine_refs に書くが、エンジンの実装・停止コード・エラーは公式の裁定として扱わない。生成・検査: scripts/build_card_rulings.py。形式は docs/data-schema.md の「サイドカー」",
+ "status_values": {
+  "CONFIRMED": "公式の資料に書かれている（カードの説明・そのカードの解説・一般の規定がその場面にそのまま当てはまる、またはそれらから解釈の選択なしに導かれる）",
+  "SUPPORTED": "公式の資料の記述・例から読み取れるが、その場面そのものは書かれていない（inference に推論を書く）",
+  "UNRESOLVED": "公式の資料で決められない（issues に記録する）"
+ },
+ "basis_kinds": {
+  "card_text": "カードの文面（最新の説明、または印刷の文面）に書かれている",
+  "card_commentary": "公式の書籍のカードの解説・ワザ解説（そのカード、または関係するカードのもの。location に書く）に書かれている",
+  "general_rule": "公式ルールの一般の規定が、その文言のままその場面に当てはまる",
+  "derived": "複数の規定から、解釈の選択なしに導かれる（statement に書く）"
+ },
+ "checked_values": {
+  "kyuura_image": "kyuura が原典のページの画像で確かめた",
+  "kyuura_data": "kyuura のカードデータ（data/cards.json）の値",
+  "engine_report": "kyuura-engine の照合の記録による（kyuura では確かめていない）"
+ },
+ "rule_clauses": [
+  {
+   "id": "GR-P43-P6-LATEST-DESCRIPTION",
+   "source": "P43",
+   "pages": [
+    "6"
+   ],
+   "section": "この本の使いかた",
+   "summary": "カードの記述は「最新の説明」で、実際のカードの記述と異なる場合がある。「最新の説明」はカード自体のあいまいな表現・判断のむずかしい表現を書き直したもので、わからない内容があればこの記述にしたがう",
+   "rule_history_refs": [
+    "ERR-PLUSPOWER",
+    "TXT-CHARIZARD"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image（2026-10-12。『オフィシャルブック2000』の取り込みのとき）"
+  },
+  {
+   "id": "GR-2000-P308-SAME-NAME",
+   "source": "P43",
+   "pages": [
+    "306〜311"
+   ],
+   "section": "公式ルール p.308「同じ名前のカード」",
+   "summary": "同じ名前のカードは、デッキに 4 枚まで（基本エネルギーは制限なし）",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image（2026-10-12）"
+  },
+  {
+   "id": "GR-2000-P309-ATTACK-PROCEDURE",
+   "source": "P43",
+   "pages": [
+    "306〜311"
+   ],
+   "section": "公式ルール p.309「バトル場にいるポケモンのワザを使う」",
+   "summary": "ワザは自分の番ごとに一度だけで、使うと番が終わる。ワザの説明は書かれた順に処理し、ダメージとそれ以外の効果の両方があるときはダメージの処理が先。途中で処理の対象がいなくなっていたら、その内容は無視して次の内容を処理する",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image"
+  },
+  {
+   "id": "GR-2000-P309-EVOLUTION-BY-NAME",
+   "source": "P43",
+   "pages": [
+    "306〜311",
+    "321〜325"
+   ],
+   "section": "公式ルール p.309「場にいるポケモンを進化させる」・p.324「18 ポケモンの進化」",
+   "summary": "「○○○○から進化」と書いてある進化カードは、「○○○○」という名前のポケモンに重ねる（名前で決まる）",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image"
+  },
+  {
+   "id": "GR-2000-P320-COUNTER-MOVE",
+   "source": "P43",
+   "pages": [
+    "312〜320"
+   ],
+   "section": "公式ルール p.320「ダメージカウンターの移動」",
+   "summary": "ダメージカウンターが移動してダメージが増えても、それは「ダメージを受けた」ことにならない",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image"
+  },
+  {
+   "id": "GR-2000-P321-PREVENTED-ELEMENTS",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.321 冒頭（p.320「7 ポケモンのワザ」の続き）",
+   "summary": "ワザを受けたポケモンが「ダメージを受けない」状態なら、そのポケモンにダメージを与える要素は無効。ほかのポケモンへのダメージの要素・ダメージ以外の効果の要素は有効",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image"
+  },
+  {
+   "id": "GR-2000-P321-ATTACK-DAMAGE",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.321「8 ワザによるダメージと効果」",
+   "summary": "ワザによってもたらされたダメージは「ワザによるダメージ」。ワザの効果がダメージをもたらしたときも、おおもとになったワザによるダメージとしてあつかう（例: わるいカメールが「こうらがえし」で返したダメージは、効果によるダメージではなく「こうらがえし」のダメージ）。ポケモンチェックの「どく」のダメージはワザによるダメージではない",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image"
+  },
+  {
+   "id": "GR-2000-P321-DAMAGE-ORDER",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.321「9 ワザによるダメージ計算の順番」（p.322 冒頭まで）",
+   "summary": "1 基本となる計算 → 2 ワザを使うポケモンの持っている「ダメージを変更する効果」（ここまでで 0 かマイナスなら終わり。「ダメージを与えなかった」）→ 3 弱点 → 4 抵抗力 → 5 ワザを使うポケモンについているトレーナーカード・エネルギーカードなど（プラスパワー・悪エネルギー）→ 6 それ以外の「ダメージを変更する効果」（控えポケモンの特殊能力・スタジアム）→ 7 ワザを受けるポケモンについているカード（ディフェンダー・鋼エネルギー）→ 8 ワザを受けるポケモンの持っている「ダメージを変更する効果」（かたくなる・なぞのかべ）。最終的に 0 かマイナスなら「ダメージを受けなかった」。途中で 0 以下になってもよい。同じ段階で複数の効果が重なるときの順番は、2・5・6 はワザを使うプレイヤー、7・8 はワザを受けるプレイヤーが決める",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES",
+    "NEO-2000-PLAYRULE"
+   ],
+   "rule_differences_refs": [
+    "weakness_resistance"
+   ],
+   "checked": "kyuura_image"
+  },
+  {
+   "id": "GR-2000-P322-PERSISTENT-EFFECTS",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.322「特殊状態と「持続する効果」の重複」・p.322〜p.323「11 特殊状態以外の「持続する効果」」",
+   "summary": "「すなかけ」のようなワザは受けたポケモンに、「まるまる」のようなワザは自分自身に「持続する効果」を与える。持続する効果は、ベンチにもどったら消える（カウンター・マーカーをのせるタイプは除く）、場をはなれたら消える、進化したら消える、一度消えたら復活しない。与えたポケモンが場をはなれても消えない。特殊状態と重複し、持続する効果を受けても特殊状態は消えない",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image"
+  },
+  {
+   "id": "GR-2000-P323-POKEMON-CHECK",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.323「15 ポケモンチェック」",
+   "summary": "ポケモンチェックはどちらのプレイヤーの番でもない。順番は 指示されたこと → どく → ねむり → マヒ",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [
+    "knockout_timing"
+   ],
+   "checked": "kyuura_image"
+  },
+  {
+   "id": "GR-2000-P323-KNOCKOUT",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.323〜p.324「16 ポケモンの「きぜつ」」",
+   "summary": "HP 以上のダメージを受けたポケモンはきぜつしてトラッシュに置かれる。きぜつしたポケモンの相手側のプレイヤーがサイドを 1 枚取る。両方の対戦ポケモンが同時にきぜつしたら、今が自分の番でないプレイヤーが先に新しい対戦ポケモンを出す。1つのワザや特殊能力などによって引き起こされることがらによって複数のポケモンがきぜつしたら、それらは「同時に「きぜつ」した」ことになる",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [
+    "knockout_timing",
+    "sudden_death"
+   ],
+   "checked": "kyuura_image"
+  },
+  {
+   "id": "GR-2000-P324-DEVOLUTION",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.324「19 ポケモンの退化」",
+   "summary": "退化したポケモンは、どく・ねむり・マヒ・こんらん状態や、その他の「持続する効果」から回復する（退化前とは別のポケモンとしてあつかう）",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image"
+  }
+ ],
+ "rulings": [
+  {
+   "id": "CR-SHELL-ATTACK-COST",
+   "topic": "ワザと効果の発生",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "こうらがえしに必要なエネルギーとコイン",
+   "conclusion": "水エネルギー 1 個と無色エネルギー 1 個。コインは投げない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "図版（エネルギーの記号）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "コインの記述がない",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S1",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-NO-DAMAGE-ON-USE",
+   "topic": "ワザと効果の発生",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "こうらがえしを使ったとき、相手にダメージを与えるか",
+   "conclusion": "与えない（ダメージの要素がない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "図版",
+     "quote": "ダメージの数字がない",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "ダメージの記述がない",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S2",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-EFFECT-HOLDER",
+   "topic": "ワザと効果の発生",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "こうらがえしの効果を受けるのはどのポケモンか",
+   "conclusion": "ワザを使ったポケモン自身（わるいカメール）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説のまとめ",
+     "quote": "■効果の対象：ワザを使ったポケモン自身",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [],
+   "notes": [
+    "エンジンの裁定表には独立した行がない（S2・S3 の実装で自分に効果を与える）。kyuura で分けて記録した。"
+   ]
+  },
+  {
+   "id": "CR-SHELL-ATTACK-IS-PERSISTENT-EFFECT",
+   "topic": "ワザと効果の発生",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "こうらがえしの効果は公式ルールの「持続する効果」か",
+   "conclusion": "「まるまる」のように、ワザが自分自身に与える「持続する効果」（p.322「11」）としてあつかう",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説のまとめと図",
+     "quote": "■効果の持続：次の相手の番の最後／図「効果が持続」",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「11 特殊状態以外の「持続する効果」」",
+     "quote": "「ラッキー」の「まるまる」などのようなワザは、自分自身に「持続する効果」を与えます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P322-PERSISTENT-EFFECTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [],
+   "notes": [
+    "p.89 は「持続する効果」という語そのものは使わず、「効果の持続」「効果が持続」と書く。p.89 の図の「ベンチにもどると、効果は消える」は p.322 の持続する効果の規定と同じ。",
+    "エンジンの裁定表には独立した行がない（S26〜S32 の前提）。kyuura で分けて記録した。"
+   ]
+  },
+  {
+   "id": "CR-SHELL-ATTACK-ACTIVE-TURN",
+   "topic": "ワザと効果の発生",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "効果がはたらき始める時点",
+   "conclusion": "使った番の次の番（次の相手の番）にはたらく",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "次の相手の番、",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S3",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-TRIGGER",
+   "topic": "ワザと効果の発生",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG1-057"
+   ],
+   "question": "どのダメージで返すか",
+   "conclusion": "相手のワザによるダメージを受けたときだけ返す。次のものでは返さない: ポケモンチェックの「どく」のダメージ（ワザによるダメージではない）、ダメージカウンターの移動（「ダメージを受けた」ことにならない）、特殊能力によるダメージ（たとえばカイリキーの「はんげき」の 10）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "相手のワザによってダメージを受けたとき",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「8」",
+     "quote": "「どく」のダメージは、「ワザによるダメージ」としてはあつかわれません",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ダメージカウンターの移動」",
+     "quote": "「ダメージを受けた」ことにはなりません",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "derived",
+     "statement": "「はんげき」は特殊能力（p.192 の「特殊能力」欄）で、そのダメージはワザによってもたらされたダメージ（p.321「8」）ではない"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P321-ATTACK-DAMAGE",
+    "GR-2000-P320-COUNTER-MOVE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S5",
+     "engine_classification": "CONFIRMED",
+     "engine_note": "エンジンはこんらんの 20 も条件の外として挙げる。こんらんの 20 は、こんらんしたポケモン自身（ワザを使う側）が受けるダメージで、相手の番にわるいカメールが受けることはない"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-OWN-ATTACK",
+   "topic": "ワザと効果の発生",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "自分のワザのダメージで返すか",
+   "conclusion": "返さない（条件は「相手のワザによって」）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "相手のワザによって",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S6",
+     "engine_classification": "CONFIRMED（到達しない）",
+     "engine_note": "わるいカメールのワザは自分にダメージを与えないので、エンジンの対応カードでは起こらない"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-ONCE-PER-TURN",
+   "topic": "ワザと効果の発生",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "相手の番に何回返すか",
+   "conclusion": "相手は 1 番に 1 回しかワザを使えないので、ワザ 1 回につき 1 回（1 つのワザでダメージを 2 回以上受ける場合は未解決の論点 UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "derived",
+     "statement": "ワザは自分の番ごとに一度だけで、使うと番が終わる（p.309）。効果がはたらくのは次の相手の番だけ（CR-SHELL-ATTACK-ACTIVE-TURN）"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-ACTIVE-TURN",
+    "UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S8",
+     "engine_classification": "CONFIRMED（規定からの帰結）",
+     "engine_note": "エンジンは効果をはたらいたあとも期限まで残す（消費しない）。最新の説明に回数の制限は書かれていない"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-RECEIVED-DAMAGE",
+   "topic": "返すダメージの量（受けたダメージ）",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "「同じダメージ」の基準",
+   "conclusion": "わるいカメールが受けたダメージ（相手のワザのダメージ）を基準にする",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "そのポケモンにも同じダメージを与える",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "解説",
+     "quote": "相手の対戦ポケモンがこの「わるいカメール」に与えたダメージが、そのままその相手に返ってくる",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S9",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-NOT-BASE-DAMAGE",
+   "topic": "返すダメージの量（受けたダメージ）",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "元のワザの基本となるダメージ（ダメージの目安）を返すのか、計算したあとのダメージを返すのか",
+   "conclusion": "計算したあとのダメージ（わるいカメールが実際に受けたダメージ）。元のワザの基本となるダメージではない。「受けたダメージ」と、返したダメージの最終的な量（CR-SHELL-ATTACK-RETURN-IS-ATTACK-DAMAGE）は別のもの",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "解説",
+     "quote": "雷ポケモンが相手の場合は、ワザのダメージが2倍になるため、2倍のまま相手にダメージが返ります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-RECEIVED-DAMAGE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S10",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-OWN-WEAKNESS",
+   "topic": "返すダメージの量（受けたダメージ）",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "受けたダメージに、わるいカメールの弱点で増えた分を含むか",
+   "conclusion": "含む（雷の弱点で 2 倍になったダメージを、2 倍のまま返す）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "解説",
+     "quote": "「わるいカメール」が弱点とする雷ポケモンが相手の場合は、ワザのダメージが2倍になるため、2倍のまま相手にダメージが返ります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S11",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-OWN-RESISTANCE",
+   "topic": "返すダメージの量（受けたダメージ）",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "受けたダメージに、わるいカメール側の抵抗力で減った分を含むか",
+   "conclusion": "含む（減ったあとの量が受けたダメージ）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9」の 4 段階",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "解説",
+     "quote": "2倍のまま相手にダメージが返ります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "p.89 が示すのは弱点の例だけ。「受けたダメージ」は p.321 の順番で計算した最終的なダメージと読み、抵抗力の段階も含むとした",
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-OWN-WEAKNESS"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S12",
+     "engine_classification": "SUPPORTED（到達しない）"
+    }
+   ],
+   "notes": [
+    "わるいカメール（PMCG4-021）に抵抗力はない（p.89 の図版・data/cards.json）。このカードでは起こらない。"
+   ]
+  },
+  {
+   "id": "CR-SHELL-ATTACK-ATTACKER-PLUSPOWER",
+   "topic": "返すダメージの量（受けたダメージ）",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG5-054"
+   ],
+   "question": "受けたダメージに、攻撃側のプラスパワーなどで増えた分を含むか",
+   "conclusion": "含む",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9」の 5 段階",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "279",
+     "location": "お上品攻撃の解説",
+     "quote": "「クロスカウンター」をしている「R団のエビワラー（ジム拡1）」に少しだけダメージを与えたいときとか",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "p.279 は、同じタイプのワザ（クロスカウンター）に対して、与えるダメージを小さくするカードを使う例を挙げる。受けたダメージを変える効果が返す量も変えると読み、「受けたダメージ」は p.321 の計算の最終的なダメージとした",
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S13",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-OWN-DEFENDER",
+   "topic": "返すダメージの量（受けたダメージ）",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "受けたダメージに、わるいカメールについているディフェンダーなどで減った分を含むか",
+   "conclusion": "含む（減ったあとの量を返す）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9」の 7 段階",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "CR-SHELL-ATTACK-ATTACKER-PLUSPOWER と同じ読み方（受けたダメージは p.321 の計算の最終的なダメージ）",
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-ATTACKER-PLUSPOWER"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S14",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-PREVENTED",
+   "topic": "返すダメージの量（受けたダメージ）",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ダメージを受けなかったとき（「ダメージを受けない」状態など）に返すか",
+   "conclusion": "返さない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "ダメージを受けたとき",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321 冒頭",
+     "quote": "「ダメージを受けない」状態だったら、そのポケモンにダメージを与える「ワザの要素」は無効になります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P321-PREVENTED-ELEMENTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S15",
+     "engine_classification": "CONFIRMED（到達しない）",
+     "engine_note": "わるいカメールは、こうらがえしと同時に「ダメージを受けない」状態になる効果を持たない"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-ZERO",
+   "topic": "返すダメージの量（受けたダメージ）",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "計算した結果が 0 以下のとき",
+   "conclusion": "ダメージを受けなかったことになり、返さない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9」",
+     "quote": "計算の結果、ダメージが0やマイナスの数字になったときは、ポケモンは「ダメージを受けなかった」ことになります",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "ダメージを受けたとき",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S16",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-NO-HP-CAP",
+   "topic": "返すダメージの量（受けたダメージ）",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "残りの HP より大きいダメージを受けたとき",
+   "conclusion": "受けたダメージをそのまま返す（残りの HP で上限をつけない。100 ダメージを受けたら 100 返す）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "解説",
+     "quote": "相手のワザのダメージがこの「わるいカメール」のHP以上だったときでも、そのダメージがそのまま返ります。仮に100ダメージを受けたらそのまま100ダメージが返ることになります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S17",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-EVEN-IF-KO",
+   "topic": "返すダメージの量（受けたダメージ）",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいカメールがそのダメージできぜつするとき",
+   "conclusion": "返す",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "（それによってこのカードが「きぜつ」しても、）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PMCG4-021",
+     "field": "pokemon.attacks[1].text.ja",
+     "quote": "(このカードが「きぜつ」するしないにかかわらず、)",
+     "checked": "kyuura_data"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "UQ-RETALIATION-DOUBLE-KO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S18",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-RETURN-TARGET",
+   "topic": "返す相手と返すダメージの計算",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "返す相手",
+   "conclusion": "ダメージを与えたポケモン（そのワザを使った相手のポケモン）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "そのポケモンにも",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説",
+     "quote": "相手の番に受けたワザによるダメージをダメージを与えたポケモンに与えます",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S19",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-RETURN-IS-ATTACK-DAMAGE",
+   "topic": "返す相手と返すダメージの計算",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "返すダメージは何としてあつかうか",
+   "conclusion": "「こうらがえし」のワザによるダメージ（効果によるダメージではない）としてあつかい、返す相手について改めて計算する（受けたダメージと、返したダメージの最終的な量は別のもの）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「8」の例",
+     "quote": "そのダメージは効果によるダメージではなく、「こうらがえし」のダメージとしてあつかいます",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "解説",
+     "quote": "「こうらがえし」で返すダメージは「ワザによるダメージ」なので、2倍になって相手に返ります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P321-ATTACK-DAMAGE",
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S20",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-RETURN-WEAKNESS",
+   "topic": "返す相手と返すダメージの計算",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "返すダメージに、返す相手の弱点を計算するか",
+   "conclusion": "計算する（相手が水を弱点にしていれば 2 倍になって返る）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "解説",
+     "quote": "相手が「わるいカメール」の水を弱点にしていた場合は、「こうらがえし」で返すダメージは「ワザによるダメージ」なので、2倍になって相手に返ります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S21",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-RETURN-RESISTANCE",
+   "topic": "返す相手と返すダメージの計算",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "返すダメージに、返す相手の抵抗力を計算するか",
+   "conclusion": "計算する",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9」の 4 段階",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "返すダメージはワザによるダメージ（CR-SHELL-ATTACK-RETURN-IS-ATTACK-DAMAGE）なので、p.321 の順番がそのまま当てはまると読んだ。誌面の例は弱点だけ",
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-RETURN-IS-ATTACK-DAMAGE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S22",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-RETURN-DEFENDER",
+   "topic": "返す相手と返すダメージの計算",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "返すダメージに、返す相手についているディフェンダーなどを計算するか",
+   "conclusion": "計算する",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9」の 7 段階",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "CR-SHELL-ATTACK-RETURN-RESISTANCE と同じ読み方",
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-RETURN-IS-ATTACK-DAMAGE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S23",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-RETURN-TRANSPARENCY",
+   "topic": "返す相手と返すダメージの計算",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG3-030"
+   ],
+   "question": "返す相手が「とうめい」を持つゴーストのとき",
+   "conclusion": "「とうめい」のコインで、返すダメージを受けないことがある",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「14」に引かれた「とうめい」の最新の説明",
+     "quote": "このカードがワザによってダメージや効果を受けるとき、コインを投げて「おもて」なら、このカードはそのダメージと効果を受けない",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "返すダメージはワザによるダメージ（CR-SHELL-ATTACK-RETURN-IS-ATTACK-DAMAGE）なので、「ワザによってダメージ…を受けるとき」に当たると読んだ",
+   "rule_clause_refs": [
+    "GR-2000-P321-ATTACK-DAMAGE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-RETURN-IS-ATTACK-DAMAGE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S24",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-RETURN-COUNTERATTACK",
+   "topic": "返す相手と返すダメージの計算",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG1-057"
+   ],
+   "question": "返すダメージを受けたカイリキーの「はんげき」がはたらくか",
+   "conclusion": "はたらく（わるいカメールに 10 ダメージ）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "192",
+     "location": "カイリキー（第1弾）の「特殊能力」欄（最新の説明）",
+     "quote": "このカードが相手のワザによってダメージを受けたとき",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "返すダメージは「こうらがえし」（わるいカメールのワザ）によるダメージなので、カイリキーから見て「相手のワザによってダメージを受けた」に当たると読んだ。「はんげき」の 10 は特殊能力のダメージなので、こうらがえしはそれでははたらかない（CR-SHELL-ATTACK-TRIGGER）",
+   "rule_clause_refs": [
+    "GR-2000-P321-ATTACK-DAMAGE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-RETURN-IS-ATTACK-DAMAGE",
+    "CR-SHELL-ATTACK-TRIGGER"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S25",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-EXPIRY",
+   "topic": "効果の期限と消える契機",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "効果の期限",
+   "conclusion": "次の相手の番の最後に消える",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説のまとめと図",
+     "quote": "■効果の持続：次の相手の番の最後／この相手の番の最後に、「こうらがえし」の効果は消える",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S4",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-EXPIRY-BEFORE-CHECK",
+   "topic": "効果の期限と消える契機",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "期限が切れる時点とポケモンチェックの前後",
+   "conclusion": "次の相手の番の最後に消えるので、そのあとのポケモンチェック（どちらの番でもない）ではもうはたらいていない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説のまとめ",
+     "quote": "■効果の持続：次の相手の番の最後",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "derived",
+     "statement": "ポケモンチェックはどちらのプレイヤーの番でもなく（p.323「15」）、番が終わってから行う（p.309「3 対戦の流れ」）"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P323-POKEMON-CHECK"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-EXPIRY"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S33",
+     "part": "番の最後に消えること・ポケモンチェックの前",
+     "engine_classification": "CONFIRMED（番の終わり）。ついているトレーナーのトラッシュとの前後は実装上の仮定",
+     "engine_note": "ついているトレーナーをトラッシュする処理との前後は、エンジンの実装上の仮定（たがいに影響しない）なので、kyuura の裁定には入れていない"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-ENDS-ON-BENCH",
+   "topic": "効果の期限と消える契機",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ベンチにもどったとき",
+   "conclusion": "効果は消える（ふきとばしでベンチにもどった場合も）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説の図と「ふきとばし」の例",
+     "quote": "ベンチにもどると、効果は消える",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「11」",
+     "quote": "「持続する効果」を受けたポケモンがベンチにもどったら、その「持続する効果」は消えてなくなります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P322-PERSISTENT-EFFECTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S26",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-NO-REVIVAL",
+   "topic": "効果の期限と消える契機",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ベンチからバトル場にもどったとき",
+   "conclusion": "一度消えた効果は復活しない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322〜p.323「11」",
+     "quote": "一度消えた「持続する効果」は復活しません",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P322-PERSISTENT-EFFECTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-IS-PERSISTENT-EFFECT"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S27",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-ENDS-ON-EVOLUTION",
+   "topic": "効果の期限と消える契機",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "効果を持つわるいカメールが進化したとき",
+   "conclusion": "効果は消える",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「11」",
+     "quote": "「持続する効果」を受けているポケモンが進化したら、そのポケモンが受けていたすべての「持続する効果」は、消えてなくなります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P322-PERSISTENT-EFFECTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-IS-PERSISTENT-EFFECT"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S28",
+     "engine_classification": "CONFIRMED（到達しない）",
+     "engine_note": "効果を持つ間（相手の番）に持ち主の番は来ないので、進化させる場面はふつう起こらない"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-ENDS-ON-DEVOLUTION",
+   "topic": "効果の期限と消える契機",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "効果を持つわるいカメールが退化したとき",
+   "conclusion": "効果は消える",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324「19」",
+     "quote": "退化したポケモンを、「どく」「ねむり」「マヒ」「こんらん」状態や、その他の「持続する効果」から回復させます",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P324-DEVOLUTION"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-IS-PERSISTENT-EFFECT"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S29",
+     "engine_classification": "到達しない",
+     "engine_note": "エンジンは退化させるカードに対応しておらず、裁定を「未実装・到達しない」としている"
+    }
+   ],
+   "reclassification": {
+    "from": "到達しない（エンジンの分類）",
+    "to": "CONFIRMED",
+    "reason": "エンジンの分類は、退化に対応していないことと対応カードで起こらないことを表すもので、原典の判断材料がないことではない。p.324「19」が退化で「その他の「持続する効果」」から回復すると書いているので、一般規定の当てはめとして CONFIRMED にした"
+   },
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-ENDS-ON-LEAVING-PLAY",
+   "topic": "効果の期限と消える契機",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "効果を持つわるいカメールが手札・山札にもどる（場をはなれる）とき",
+   "conclusion": "効果は消える",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「11」",
+     "quote": "「持続する効果」を受けているポケモンが場をはなれたら、「持続する効果」は消えてなくなります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P322-PERSISTENT-EFFECTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-IS-PERSISTENT-EFFECT"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S30",
+     "engine_classification": "CONFIRMED（到達しない）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-ENDS-ON-KO",
+   "topic": "効果の期限と消える契機",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいカメールがきぜつしたとき",
+   "conclusion": "効果は消える（きぜつしたポケモンはトラッシュに置かれ、場をはなれる）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「11」",
+     "quote": "場をはなれたら、「持続する効果」は消えてなくなります",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「16」",
+     "quote": "「きぜつ」してトラッシュに置かれます",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P322-PERSISTENT-EFFECTS",
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S31",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-WITH-SPECIAL-CONDITIONS",
+   "topic": "効果の期限と消える契機",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいカメールが特殊状態になったとき",
+   "conclusion": "効果は消えない（持続する効果は特殊状態と重複する）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「特殊状態と「持続する効果」の重複」・p.323「「持続する効果」と特殊状態の重複」",
+     "quote": "「持続する効果」は、特殊状態と重複することがあります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P322-PERSISTENT-EFFECTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S32",
+     "engine_classification": "CONFIRMED",
+     "engine_note": "エンジンは p.323 を挙げる。同じ文は p.322 にもある"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-RETURNS-WHILE-AFFECTED",
+   "topic": "効果の期限と消える契機",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ねむり・マヒ・こんらん状態のわるいカメールも返すか",
+   "conclusion": "返す。返すことはワザを使うことではないので、こんらんのコインも投げない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322・p.323（持続する効果と特殊状態は重複する）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309（ワザを使う手順の 3・5）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "ねむり・マヒで宣言できないのはワザ、こんらんのコインはワザを使うときのもの（p.309）。返すことはワザの宣言ではないので、これらの制限に当たらないと読んだ。こうらがえしの説明に特殊状態の条件はない",
+   "rule_clause_refs": [
+    "GR-2000-P322-PERSISTENT-EFFECTS",
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-WITH-SPECIAL-CONDITIONS"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S47",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-TIMING",
+   "topic": "元のワザの効果との順番・きぜつ",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "返す時点と、元のワザのほかの処理との順番",
+   "conclusion": "相手のワザのダメージの処理を行ったあとに返し、相手のワザのダメージ以外の効果は、そのあとに処理する",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説",
+     "quote": "相手のワザによるダメージの処理を行った後で、ダメージを与えます（相手のワザによるダメージ以外の効果の処理は、その後でおこないます）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「7 ポケモンのワザ」（ワザの要素の分類）",
+     "quote": "このワザを使うポケモンへのダメージ",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S34",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "ワザを使うポケモン自身へのダメージも、ワザの要素の「ダメージ」（p.320）なので、「ダメージの処理」に含まれる。"
+   ]
+  },
+  {
+   "id": "CR-SHELL-ATTACK-WHIRLWIND",
+   "topic": "元のワザの効果との順番・きぜつ",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "元のワザが「ふきとばし」のとき",
+   "conclusion": "先に返し、そのあとで「ふきとばし」の効果でわるいカメールがベンチにもどる（効果はそのとき消える）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説の「ふきとばし」の例",
+     "quote": "「こうらがえし」の状態によるダメージを与えた後に「ふきとばし」の効果で「わるいカメール」はベンチにもどることになります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-TIMING",
+    "CR-SHELL-ATTACK-ENDS-ON-BENCH"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S40",
+     "part": "順番（返してからふきとばしの効果）",
+     "engine_classification": "CONFIRMED＋SUPPORTED"
+    }
+   ],
+   "notes": [
+    "p.89 の例は、どのカードの「ふきとばし」かを書いていない（ダメージの目安 10、説明「相手を、控えポケモンと入れ替える。入れ替わるポケモンは、相手が選ぶ。（相手に控えがいないとき、入れ替えはおこらない）」）。kyuura の記録でダメージの目安が 10 の「ふきとばし」はマチスのオニスズメ（PMCG5-057）だけで、ピジョン（PMCG1-066）・バタフリー（PMCG2-007）は 20（推定。図版とは照合していない）。",
+    "kyuura-engine は、この順番をバタフリー（PMCG2-007）の「ふきとばし」で確かめている。"
+   ]
+  },
+  {
+   "id": "CR-SHELL-ATTACK-STAR-BOOMERANG",
+   "topic": "元のワザの効果との順番・きぜつ",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG5-027"
+   ],
+   "question": "元のワザがカスミのヒトデマンの「スターブーメラン」のとき",
+   "conclusion": "「スターブーメラン」のダメージを受けた時点で返す。ヒトデマンがそのダメージできぜつしなければ、そのあとで「スターブーメラン」の効果で手札にもどる。きぜつしたら手札にはもどらない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説の「スターブーメラン」の例",
+     "quote": "その後、相手はそのダメージできぜつしなければ「スターブーメラン」の効果で手札にもどることになります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1",
+    "LD-PMCG5-027-ATK0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-TIMING"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S38",
+     "engine_classification": "CONFIRMED",
+     "engine_note": "エンジンはカスミのヒトデマンを実装しておらず、テスト専用の模擬のワザで確かめている"
+    },
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S35",
+     "part": "スターブーメランの例（CONFIRMED の部分）",
+     "engine_classification": "CONFIRMED＋SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-KO-ATTACKER-OWN-EFFECTS",
+   "topic": "元のワザの効果との順番・きぜつ",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "攻撃側が返すダメージで HP 以上になったとき、元のワザの攻撃側自身への効果（回復・手札や山札にもどる、など）",
+   "conclusion": "処理しない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説の「スターブーメラン」の例",
+     "quote": "そのダメージできぜつしなければ",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309",
+     "quote": "処理の対象がなくなってしまっている場合、その内容は無視して、次の内容の処理をおこなってください",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "p.89 の例（スターブーメラン）を、ほかのワザの攻撃側自身への効果（メガドレインの回復、山札にもどす効果など）に一般化した",
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-STAR-BOOMERANG"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S35",
+     "part": "ほかのワザへの一般化（SUPPORTED の部分）",
+     "engine_classification": "CONFIRMED＋SUPPORTED",
+     "engine_note": "エンジンは一律に効果を省かず、各ワザの実装が確かめる"
+    },
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S39",
+     "part": "攻撃側を山札にもどすワザへの当てはめ",
+     "engine_classification": "到達しない",
+     "engine_note": "エンジンの対応カードにそのワザがない。エンジンは「S35 の一般化（SUPPORTED）にしたがう」とする"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-WARTORTLE-KO",
+   "topic": "元のワザの効果との順番・きぜつ",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいカメールが相手のワザのダメージできぜつするとき",
+   "conclusion": "返したうえで、わるいカメールはきぜつする。サイドはワザを使ったプレイヤー（わるいカメールの相手）が取る",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "（それによってこのカードが「きぜつ」しても、）そのポケモンにも同じダメージを与える",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「16」",
+     "quote": "「きぜつ」したポケモンの相手側のプレイヤー（そのポケモンの持ち主でないプレイヤー）は、そのプレイヤーのサイドカードから1枚を選び",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-EVEN-IF-KO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S36",
+     "engine_classification": "CONFIRMED",
+     "engine_note": "エンジンはきぜつの処理をワザのあとにまとめて行う（実装の時点）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-KO-ATTACKER-EFFECTS-ON-WARTORTLE",
+   "topic": "元のワザの効果との順番・きぜつ",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "攻撃側が返すダメージで HP 以上になったとき、元のワザのわるいカメールへの効果（ふきとばしなど）",
+   "conclusion": "処理する（攻撃側がきぜつしても、相手への効果は残る）。わるいカメールのほうが HP 以上になっていれば、わるいカメールへの効果は処理しない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説",
+     "quote": "相手のワザによるダメージ以外の効果の処理は、その後でおこないます",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309",
+     "quote": "処理の対象がなくなってしまっている場合、その内容は無視して",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "p.89 は、攻撃側がきぜつする場合の相手への効果を書いていない。処理の対象（わるいカメール）が残っていれば処理し、対象がいなくなっていれば無視する（p.309）と読んだ",
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-WHIRLWIND"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S40",
+     "part": "攻撃側がきぜつした場合の相手への効果（SUPPORTED の部分）",
+     "engine_classification": "CONFIRMED＋SUPPORTED",
+     "engine_note": "エンジンの v0.12 の W23 と同じ扱い"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-DAMAGE-ONLY",
+   "topic": "元のワザの効果との順番・きぜつ",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ダメージ以外の効果も返すか",
+   "conclusion": "返さない（返すのはダメージだけ）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "（ダメージ以外の効果は与えない）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S41",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-NO-CHAIN",
+   "topic": "元のワザの効果との順番・きぜつ",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG5-020"
+   ],
+   "question": "返すダメージで、別の「こうらがえし」「ほのおのかべ」がはたらくか",
+   "conclusion": "はたらかない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "derived",
+     "statement": "返すダメージを受けるのは、その番にワザを使ったプレイヤー（番のプレイヤー）のポケモン。こうらがえし・ほのおのかべの効果を持つのは、自分の番にワザを使ったポケモンで（p.309）、はたらくのは次の相手の番だけ（CR-SHELL-ATTACK-ACTIVE-TURN）。番のプレイヤーのポケモンが、今の番にはたらく効果を持つことはない"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-ACTIVE-TURN"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S45",
+     "engine_classification": "CONFIRMED（規定からの帰結）",
+     "engine_note": "起こったらエンジンの不具合として止める（公式の裁定ではない）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-NO-PLUSPOWER-ON-RETURN",
+   "topic": "返す相手と返すダメージの計算",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG1-081"
+   ],
+   "question": "返すとき、わるいカメールについていたプラスパワーは計算するか",
+   "conclusion": "残っていない（プラスパワーは持ち主の番の終わりにトラッシュする）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9」に引かれたプラスパワーの最新の説明",
+     "quote": "このカードはあなたの対戦ポケモンにつけて使い、あなたの番の終わりにトラッシュする",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "derived",
+     "statement": "返すのは相手の番なので、わるいカメールの持ち主の番につけたプラスパワーはもうない"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S48",
+     "engine_classification": "CONFIRMED（到達しない）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-NO-STACKING",
+   "topic": "効果の期限と消える契機",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "効果を持ったまま、もう一度こうらがえしを使うか",
+   "conclusion": "起こらない（効果は持ち主の次の番の前に期限で消えている）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "derived",
+     "statement": "効果は次の相手の番の最後に消える（CR-SHELL-ATTACK-EXPIRY）ので、持ち主の次の番には残っていない"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-EXPIRY"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S49",
+     "engine_classification": "CONFIRMED（規定からの帰結）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-SHELL-ATTACK-RETURN-VS-GUTS",
+   "topic": "返す相手と返すダメージの計算",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG6-061"
+   ],
+   "question": "返すダメージで、ワザを使ったサカキのカイリキーが HP 以上になるとき",
+   "conclusion": "「こんじょう」を使える（使うかは持ち主が決める）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "PMCG6-061",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "この力は、相手のワザによるダメージで、このカードが「きぜつ」する時、使える",
+     "checked": "kyuura_data"
+    }
+   ],
+   "inference": "返すダメージは「こうらがえし」のワザによるダメージ（CR-SHELL-ATTACK-RETURN-IS-ATTACK-DAMAGE）なので、サカキのカイリキーから見て「相手のワザによるダメージ」に当たると読んだ。こんじょうの最新の説明は、この取り込みでは照合していない（印刷の文面による）",
+   "rule_clause_refs": [
+    "GR-2000-P321-ATTACK-DAMAGE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-RETURN-IS-ATTACK-DAMAGE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S46",
+     "engine_classification": "SUPPORTED（到達しない）",
+     "engine_note": "ハリケーンパンチではわるいカメールもきぜつしうるので、エンジンでは未解決の論点（S37）で必ず止まる"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-DOUBLESLAP-COINS",
+   "topic": "おうふくびんた・進化元",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "おうふくびんた"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "おうふくびんたのダメージ",
+   "conclusion": "コインを 2 枚投げ、「おもて」の数 × 10 のダメージ",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "89",
+     "location": "「ワザ」欄（最新の説明）",
+     "quote": "コインを2枚投げ、「おもて」の数×10のダメージ。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S42",
+     "engine_classification": "CONFIRMED（未解決は v0.4b の既存の裁定）",
+     "engine_note": "「ダメージを受けない」相手にコインを投げるかは、エンジンの既存の未解決の裁定（UNRESOLVED_PREVENTED_COIN_DAMAGE。v0.4b）。kyuura にはまだ取り込んでいない"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-DARK-WARTORTLE-EVOLVES-FROM",
+   "topic": "おうふくびんた・進化元",
+   "cards": [
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "card"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG4-018",
+    "PMCG1-023",
+    "PMCG1-027"
+   ],
+   "question": "わるいカメールはどのゼニガメから進化できるか",
+   "conclusion": "「ゼニガメ」という名前のポケモンなら、第4弾（PMCG4-018）・第1弾（PMCG1-023）のどちらからも進化できる。デッキの「ゼニガメ」は合わせて 4 枚まで",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309「場にいるポケモンを進化させる」",
+     "quote": "手札に「○○○○から進化」と記述されている進化カードがあり、その「○○○○」という名前のポケモンが自分の場にいるとき",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "88",
+     "location": "第4弾のゼニガメの解説",
+     "quote": "「カメール（第1弾）」に進化すれば、すぐに「かみつく」が使えます",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.308「同じ名前のカード」",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P309-EVOLUTION-BY-NAME",
+    "GR-2000-P308-SAME-NAME"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S44",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "p.88 の解説は第4弾のゼニガメから第1弾のカメールへの進化の例で、わるいカメールへの進化そのものではない。名前で決まる規定（p.309）の当てはめ。"
+   ]
+  }
+ ],
+ "issues": [
+  {
+   "id": "UQ-RETALIATION-DOUBLE-KO",
+   "status": "UNRESOLVED",
+   "question": "前の番のワザが与えた効果（ほのおのかべ・こうらがえし）のダメージで攻撃側がきぜつし、同じワザのダメージで効果を持つポケモンもきぜつするとき、2 匹は「同時に「きぜつ」した」ことになるか。同時でなければ、どちらを先に処理するか",
+   "why_unresolved": "p.324 は「1つのワザや特殊能力などによって引き起こされることがら」で複数のポケモンがきぜつしたら同時とする。返すダメージは元のワザではなく前の番のワザ（こうらがえし・ほのおのかべ）によるダメージとしてあつかう（p.321「8」）ので、これが「1つのワザ…によって引き起こされることがら」に当たるかが書かれていない。同時でないときの順番の規定もない。どちらかで、サイドを取る順番・バトル場に出す順番・勝ち負け（両方が最後のサイドを取る、両方が出せない → サドン・デス）が変わる（p.311・p.323〜p.325）",
+   "official_material": "none_found",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324「16」の最後の段落・p.321「8」"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P323-KNOCKOUT",
+    "GR-2000-P321-ATTACK-DAMAGE"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     },
+     "engine_ruling": "W24",
+     "note": "R団のファイヤーがワザのダメージで、ワザを使ったポケモンが「ほのおのかべ」の 10 ダメージできぜつする（10 がなければきぜつしない）"
+    },
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     },
+     "engine_ruling": "S37",
+     "note": "わるいカメールがワザのダメージで、ワザを使ったポケモンが返すダメージできぜつする。返す量が受けたダメージと同じなので、起こる場面が多い"
+    }
+   ],
+   "related_engine_rulings": [
+    {
+     "ruling_id": "C18",
+     "engine_version": "v0.10",
+     "document": "docs/counterattack-v0.10.md",
+     "relation": "同じ形の問い（カイリキーの「はんげき」（特殊能力）のダメージによるきぜつ）。エンジンは別のコード（UNRESOLVED_COUNTERATTACK_DOUBLE_KNOCKOUT）で止める。kyuura にはまだ取り込んでいない"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W24",
+     "engine_classification": "UNRESOLVED",
+     "engine_note": "エンジンの停止コード UNRESOLVED_RETALIATION_DOUBLE_KNOCKOUT（ワザの宣言の前に止める）。停止コードは公式の裁定ではない"
+    },
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S37",
+     "engine_classification": "UNRESOLVED（W24 と同じ問い）",
+     "engine_note": "新しい裁定・コードにせず、W24 と同じ停止コードで止める"
+    }
+   ],
+   "notes": [
+    "kyuura では 1 つの論点として記録し、W24（v0.12）と S37（v0.13）は同じ論点の事例として結ぶ（重複した未解決の記録を作らない）。"
+   ]
+  },
+  {
+   "id": "UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK",
+   "status": "UNRESOLVED",
+   "question": "1 つのワザで、ダメージを受けたときにはたらく効果（はんげき・こうらがえしなど）が 2 回以上はたらく場合。(1) 複数のポケモンでそれぞれはたらくときの順番、(2) 同じポケモンが 1 つのワザで 2 回以上ダメージを受けたときに何回はたらくか",
+   "why_unresolved": "「はんげき」（p.192）も「こうらがえし」（p.89）も「ダメージを受けたとき」とだけ書き、1 つのワザで複数回はたらく場合の順番・回数の規定がない。p.325 の「同じタイミング」の規定を当てはめてよいかも書かれていない",
+   "official_material": "none_found",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "192",
+     "location": "カイリキー（第1弾）の「はんげき」"
+    },
+    {
+     "source": "P43",
+     "page": "89",
+     "location": "わるいカメールの「こうらがえし」"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG1-057",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "はんげき"
+     },
+     "engine_ruling": "C34",
+     "note": "同じワザで複数のカイリキーがダメージを受ける（それぞれではたらくが、順番が決められない）"
+    },
+    {
+     "card_id": "PMCG1-057",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "はんげき"
+     },
+     "engine_ruling": "C35",
+     "note": "同じワザで複数の「はんげき」がはたらく。同じカイリキーが 1 つのワザで 2 回ダメージを受ける場合も含む"
+    },
+    {
+     "card_id": "PMCG4-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "こうらがえし"
+     },
+     "engine_ruling": "S7",
+     "note": "同じわるいカメールが 1 つのワザで 2 回以上ダメージを受けたときに何回返すか（(2) の事例）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードでは起こらない（相手の複数のポケモン、または同じポケモンに 2 回ダメージを与えるワザがない）",
+    "all_cards": "旧裏期の全カードで起こりうるかは、kyuura では調べていない"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.10",
+     "document": "docs/counterattack-v0.10.md",
+     "ruling_id": "C34",
+     "engine_classification": "CONFIRMED（それぞれ）・UNRESOLVED（順番）・未到達",
+     "engine_note": "起こったらエンジンの不具合として RuntimeError で止める。これはエンジンが対応していないことを表し、公式の裁定ではない"
+    },
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.10",
+     "document": "docs/counterattack-v0.10.md",
+     "ruling_id": "C35",
+     "engine_classification": "UNRESOLVED・未到達"
+    },
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S7",
+     "engine_classification": "UNRESOLVED・到達しない（C34・C35 と同じ問い）",
+     "engine_note": "エンジンは 2 つ以上はたらいたら RuntimeError（v0.12 から）。新しい未解決の裁定にしない"
+    }
+   ],
+   "notes": [
+    "公式資料に判断材料がないこと（official_material）、エンジンがそのケースに対応していないこと（engine_refs の RuntimeError）、エンジンのカードプールで起こらないこと（reachability）を分けて記録している。"
+   ]
+  }
+ ],
+ "comparisons": [
+  {
+   "id": "CMP-RETURN-DAMAGE-ATTACKS",
+   "title": "相手の番にダメージを受けたら返すワザ（こうらがえし・ほのおのかべ・クロスカウンター）",
+   "columns": [
+    "LD-PMCG4-021-ATK1",
+    "LD-PMCG5-020-ATK0",
+    "LD-PMCG5-054-ATK0"
+   ],
+   "rows": [
+    {
+     "aspect": "はたらく番",
+     "values": [
+      "次の相手の番",
+      "次の相手の番",
+      "次の相手の番"
+     ],
+     "basis": "各カードの最新の説明（p.89・p.82・p.203）"
+    },
+    {
+     "aspect": "はたらく条件",
+     "values": [
+      "相手のワザによってダメージを受けたとき",
+      "相手のワザによるダメージを受けたとき",
+      "相手のワザによるダメージを受けたとき"
+     ],
+     "basis": "同上"
+    },
+    {
+     "aspect": "そのダメージできぜつしたとき",
+     "values": [
+      "返す",
+      "与える",
+      "コインを投げる（おもてなら与える）"
+     ],
+     "basis": "同上（「それによってこのカードが「きぜつ」しても、」）。p.203 の解説も、きぜつさせても効果ははたらくとする"
+    },
+    {
+     "aspect": "与えるダメージの量",
+     "values": [
+      "受けたダメージと同じ",
+      "10",
+      "コインが「おもて」なら、受けたダメージの 2 倍"
+     ],
+     "basis": "同上"
+    },
+    {
+     "aspect": "与えたダメージと弱点・抵抗力",
+     "values": [
+      "弱点で 2 倍になる（p.89 の解説）。抵抗力は SUPPORTED",
+      "影響を受ける（p.82 の解説）",
+      "書かれていない"
+     ],
+     "basis": "p.89・p.82 の解説"
+    },
+    {
+     "aspect": "使ったときのダメージ",
+     "values": [
+      "なし",
+      "40",
+      "なし"
+     ],
+     "basis": "各カードの図版のダメージの目安"
+    },
+    {
+     "aspect": "ダメージ以外の効果",
+     "values": [
+      "与えない（説明に明記）",
+      "書かれていない",
+      "書かれていない"
+     ],
+     "basis": "各カードの最新の説明"
+    },
+    {
+     "aspect": "効果の持続・消える契機",
+     "values": [
+      "次の相手の番の最後。ベンチにもどると消える（p.89 のワザ解説）",
+      "書かれていない",
+      "書かれていない"
+     ],
+     "basis": "p.89 のワザ解説。p.82・p.203 にはない"
+    }
+   ],
+   "notes": [
+    "p.89 は「こうらがえし」と「同じタイプのワザ」として「クロスカウンター」を挙げる。「ほのおのかべ」は挙げていない。",
+    "「決まった量を返す」「受けたダメージを返す」という分け方は、エンジンの設計（Retaliation.basis = fixed／received_damage）で、公式の資料の分類ではない。この表は各カードの文面と解説に書かれていることだけを並べた。",
+    "ほのおのかべ・クロスカウンターの裁定は、この取り込みでは記録していない（ほのおのかべは kyuura-engine v0.12 の対象）。"
+   ]
+  }
+ ],
+ "engine_imports": [
+  {
+   "id": "ENGINE-8FACF3A",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.13-shell-attack",
+   "commit": "8facf3aeac35d3473ab382ad49b77062f86fd492",
+   "engine_version": "v0.13",
+   "parent_version_commit": "b8054af9599b1fc43b40dc84621569382f735bc2",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "imported_on": "2026-10-13",
+   "documents": [
+    "docs/shell-attack-v0.13.md",
+    "docs/dark-wartortle-v0.13.md",
+    "docs/variable-retaliation-v0.13.md",
+    "docs/architecture-v0.13.md",
+    "docs/v0.13-verification.md",
+    "docs/data-provenance.md",
+    "docs/implementation-status.md",
+    "kyuura_engine/data/card_verification.json",
+    "docs/rocket-moltres-v0.12.md",
+    "docs/counterattack-v0.10.md"
+   ],
+   "ruling_sets": [
+    {
+     "prefix": "S",
+     "first": 1,
+     "last": 49,
+     "document": "docs/shell-attack-v0.13.md",
+     "engine_reported_counts": {
+      "CONFIRMED": 33,
+      "SUPPORTED": 9,
+      "CONFIRMED＋SUPPORTED": 2,
+      "CONFIRMED＋実装上の仮定": 1,
+      "UNRESOLVED": 2,
+      "到達しない": 2
+     }
+    }
+   ],
+   "engine_unresolved_total": 22,
+   "not_imported": [],
+   "notes": [
+    "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
+    "確かめたページ: p.82・p.88・p.89・p.111・p.192・p.203・p.279・p.309・p.320〜p.324（2026-10-13）。p.6・p.308 は 2026-10-12 に確かめた。"
+   ]
+  }
+ ],
+ "engine_unresolved_index": [
+  {
+   "engine_key": "MULLIGAN",
+   "engine_version": "v0.1",
+   "document": "docs/rules-2000-02-14.md",
+   "stop_code": "UNRESOLVED_MULLIGAN_COMPENSATION",
+   "summary": "両方が切り直したあと、片方だけがさらに切り直したときの補償",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "POTION-WITHOUT-DAMAGE",
+   "engine_version": "v0.2b",
+   "document": "docs/trainers-v0.2b.md",
+   "stop_code": "UNRESOLVED_POTION_WITHOUT_DAMAGE",
+   "summary": "きずぐすり: ダメージののったポケモンがいないときに使えるか",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "POTION-UNDAMAGED-TARGET",
+   "engine_version": "v0.2b",
+   "document": "docs/trainers-v0.2b.md",
+   "stop_code": "UNRESOLVED_POTION_UNDAMAGED_TARGET",
+   "summary": "きずぐすり: ダメージののっていないポケモンを選べるか",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "SWITCH-WITHOUT-BENCH",
+   "engine_version": "v0.2b",
+   "document": "docs/trainers-v0.2b.md",
+   "stop_code": "UNRESOLVED_SWITCH_WITHOUT_BENCH",
+   "summary": "ポケモンいれかえ: 控えがいないときに使えるか",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "CHECK-DOUBLE-KO",
+   "engine_version": "v0.3a",
+   "document": "docs/pokemon-check-v0.3a.md",
+   "stop_code": "UNRESOLVED_POKEMON_CHECK_DOUBLE_KNOCKOUT",
+   "summary": "ポケモンチェックのどくで両方のポケモンがきぜつする",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "CHECK-SLEEP-COIN-ORDER",
+   "engine_version": "v0.3b",
+   "document": "docs/pokemon-check-v0.3b.md",
+   "stop_code": "UNRESOLVED_POKEMON_CHECK_SLEEP_COIN_ORDER",
+   "summary": "両方の対戦ポケモンがねむりのときのコインの順番",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "REPARALYSIS",
+   "engine_version": "v0.3b",
+   "document": "docs/sleep-paralysis-v0.3b.md",
+   "stop_code": "UNRESOLVED_REPARALYSIS_RECOVERY_TURN",
+   "summary": "マヒの再付与で回復する番が変わる場合",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "CONFUSION-MODIFIERS",
+   "engine_version": "v0.3c",
+   "document": "docs/confusion-attacks-v0.3c.md",
+   "stop_code": "UNRESOLVED_CONFUSION_DAMAGE_MODIFIERS",
+   "summary": "こんらんの 20 にプラスパワー・ディフェンダーを計算するか",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "RETREAT-AFTER-CONFUSION-CLEARED",
+   "engine_version": "v0.3c",
+   "document": "docs/retreat-confusion-v0.3c.md",
+   "stop_code": "UNRESOLVED_RETREAT_AFTER_CONFUSION_CLEARED",
+   "summary": "にげるに失敗したあと同じ番にバトル場にもどったポケモンの再宣言",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "EVOLUTION-HP",
+   "engine_version": "v0.4a",
+   "document": "docs/evolution-rules-v0.4a.md",
+   "stop_code": "UNRESOLVED_EVOLUTION_HP",
+   "summary": "進化したあとの HP がのっているダメージ以下になる場合",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "PREVENTED-COIN-DAMAGE",
+   "engine_version": "v0.4b",
+   "document": "docs/persistent-damage-v0.4b.md",
+   "stop_code": "UNRESOLVED_PREVENTED_COIN_DAMAGE",
+   "summary": "「ダメージを受けない」相手に、コインでダメージを決めるワザのコインを投げるか",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "R13",
+   "engine_version": "v0.6",
+   "document": "docs/rain-dance-v0.6.md",
+   "stop_code": "UNRESOLVED_ATTACH_AFTER_POWER_ATTACH",
+   "summary": "あまごいでつけたあと、その番の通常のエネルギーをつける操作",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "T19b",
+   "engine_version": "v0.9",
+   "document": "docs/transparency-v0.9.md",
+   "stop_code": "UNRESOLVED_EVADED_EFFECT_COIN",
+   "summary": "「とうめい」で受けないと決まったあとの、効果だけを決めるコイン",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "H4",
+   "engine_version": "v0.9",
+   "document": "docs/haunter-line-v0.9.md",
+   "stop_code": "UNRESOLVED_RECOVER_ZERO_ENERGY",
+   "summary": "エナジーへんかんで 0 枚を選べるか",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "C18",
+   "engine_version": "v0.10",
+   "document": "docs/counterattack-v0.10.md",
+   "stop_code": "UNRESOLVED_COUNTERATTACK_DOUBLE_KNOCKOUT",
+   "summary": "カイリキーがワザで、攻撃側が「はんげき」できぜつする場合の同時のきぜつ",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "G37",
+   "engine_version": "v0.11",
+   "document": "docs/guts-v0.11.md",
+   "stop_code": "UNRESOLVED_KO_PREVENTION_ATTACK_EFFECT",
+   "summary": "こんじょうを使えるポケモンが HP 以上になり、同じワザで効果を受ける場合",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "W24",
+   "engine_version": "v0.12",
+   "document": "docs/rocket-moltres-v0.12.md",
+   "stop_code": "UNRESOLVED_RETALIATION_DOUBLE_KNOCKOUT",
+   "summary": "ほのおのかべ（v0.13 からこうらがえしも）のダメージによる同時のきぜつ",
+   "kyuura_issue": "UQ-RETALIATION-DOUBLE-KO"
+  },
+  {
+   "engine_key": "T27",
+   "engine_version": "v0.9",
+   "document": "docs/transparency-v0.9.md",
+   "stop_code": null,
+   "summary": "1 つのワザで複数の「とうめい」のコインの順番",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "C34/C35",
+   "engine_version": "v0.10",
+   "document": "docs/counterattack-v0.10.md",
+   "stop_code": null,
+   "summary": "1 つのワザで複数の「はんげき」がはたらく順番（v0.13 の S7 も同じ問い）",
+   "kyuura_issue": "UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK"
+  },
+  {
+   "engine_key": "G40",
+   "engine_version": "v0.11",
+   "document": "docs/guts-v0.11.md",
+   "stop_code": null,
+   "summary": "同じきぜつの判定でこんじょうを使えるポケモンが 2 匹以上",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "P19",
+   "engine_version": "v0.12",
+   "document": "docs/phoenix-v0.12.md",
+   "stop_code": null,
+   "summary": "かがくへんかガスの発生源も同時にきぜつしたときのふしちょう",
+   "kyuura_issue": null
+  },
+  {
+   "engine_key": "P32",
+   "engine_version": "v0.12",
+   "document": "docs/phoenix-v0.12.md",
+   "stop_code": null,
+   "summary": "ふしちょうの候補が 2 つ以上のときの順番",
+   "kyuura_issue": null
+  }
+ ]
+}

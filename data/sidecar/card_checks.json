@@ -1,0 +1,180 @@
+{
+ "schema_version": 1,
+ "description": "カードの記録（data/cards.json）を公式の資料のページと照合した記録。照合の記録のないカードは「未照合」で、「照合して差異なし」（result: no_difference）と区別する。checked_fields は照合したときの data/cards.json の値の写しで、データが変わると検査で分かる。生成・検査: scripts/build_card_rulings.py",
+ "results": {
+  "no_difference": "照合した欄はすべて同じ（照合して差異なし）",
+  "printed_vs_latest_only": "違いは印刷の文面と最新の説明の違いだけ（データの誤りではない）",
+  "data_error": "データの誤りがある（別の修正として扱う）"
+ },
+ "records": [
+  {
+   "id": "CC-PMCG4-018-P43",
+   "card_id": "PMCG4-018",
+   "card_name_ja": "ゼニガメ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "88",
+   "pdf_page": 90,
+   "location": "p.88 の最初の「たねポケモン ゼニガメ LV.16／HP50」（収録「ポケモンカード第4弾ロケット団」）",
+   "checked_fields": {
+    "name.ja": "ゼニガメ",
+    "jp_print.level": 16,
+    "pokemon.stage": "basic",
+    "pokemon.evolves_from": null,
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "こうらアタック",
+    "pokemon.attacks[0].cost": [
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 水、こうらアタック（無色2個）20、にげる 1（無色）、弱点 雷、抵抗力の欄は空。「ワザ」欄は「●こうらアタック」だけで説明文はない（最新の説明も説明文なし）。",
+    "解説（p.88）: この「ゼニガメ」から「カメール（第1弾）」に進化すれば「かみつく」が使え、「ポケモン育て屋さん」で「わるいカメックス（ロケット団）」に進化すれば「ロケットタックル」が使える、とする。"
+   ],
+   "not_confused_with": [
+    "PMCG1-023（第1弾のゼニガメ。HP40・あわ・からにこもる）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版と「ワザ」欄は 400〜600dpi で拡大）。OCR の文字は位置を探すのに使っただけ",
+     "result": "確かめた欄はすべて同じ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-8FACF3A",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「一致」"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8FACF3A",
+     "engine_version": "v0.13",
+     "document": "docs/shell-attack-v0.13.md",
+     "ruling_id": "S43",
+     "engine_classification": "CONFIRMED",
+     "engine_note": "エンジンは効果のないワザとして登録（DAMAGE_ONLY）"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG4-021-P43",
+   "card_id": "PMCG4-021",
+   "card_name_ja": "わるいカメール",
+   "source": "P43",
+   "scan": "J38",
+   "page": "89",
+   "pdf_page": 91,
+   "location": "p.89 の 2 枚目の「ゼニガメから進化 わるいカメール LV.21／HP60」（収録「ポケモンカード第4弾ロケット団」）",
+   "checked_fields": {
+    "name.ja": "わるいカメール",
+    "jp_print.level": 21,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "ゼニガメ",
+    "pokemon.hp": 60,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "おうふくびんた",
+    "pokemon.attacks[0].cost": [
+     "water"
+    ],
+    "pokemon.attacks[0].damage.display": "10×",
+    "pokemon.attacks[0].text.ja": "コインを2枚投げて「おもて」の数×10のダメージ。",
+    "pokemon.attacks[1].name.ja": "こうらがえし",
+    "pokemon.attacks[1].cost": [
+     "water",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage": null,
+    "pokemon.attacks[1].text.ja": "次の相手の番で、このカードが相手のワザによってダメージを受けた時、(このカードが「きぜつ」するしないにかかわらず、)そのポケモンにも同じダメージを与える。(ダメージ以外の効果は与えない)"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG4-021-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    },
+    {
+     "field": "pokemon.attacks[1].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG4-021-ATK1",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG4-021-ATK0",
+    "LD-PMCG4-021-ATK1"
+   ],
+   "findings": [
+    "図版: 左上に「1進化」の印と「ゼニガメから進化」、水、おうふくびんた（水）10×、こうらがえし（水・無色）ダメージの数字なし、にげる 1（無色）、弱点 雷、抵抗力の欄は空。",
+    "図版のワザの文字は小さくかすれていて、読める範囲で kyuura の文面（印刷の文面）と同じ。"
+   ],
+   "not_confused_with": [
+    "PMCG1-027（第1弾のカメール）",
+    "PMCG4-024（わるいカメックス。わるいカメールから進化）",
+    "PMCG4-008（わるいアーボック）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版と「ワザ」欄は 400〜600dpi で拡大）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。ワザの文面は印刷の文面で、最新の説明と違う"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-8FACF3A",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明の違いを mismatches に 2 件。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "engine_refs": []
+  }
+ ]
+}

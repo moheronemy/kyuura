@@ -34,12 +34,19 @@ python3 scripts/build_rule_differences.py
 # （data/rule_history.json → docs/rules/errata-history.md、docs/rules/japanese-editions.md、docs/printed-sources.md）
 python3 scripts/build_rule_history.py
 
+# カードの最新の説明・照合・裁定（サイドカー）を検査し、ページを生成（data/sidecar/ → docs/rules/card-rulings.md）
+python3 scripts/build_card_rulings.py
+
 # 拡張パック以外の商品のページと、再録の対応付けのページを生成（→ docs/cards/other-products.md、docs/cards/products/*.md、docs/cards/reprints.md）
 python3 scripts/build_other_products.py
 
 # 生成物が元データと合っているかだけを検査（ファイルは書き換えない。食い違いや参照切れがあれば終了コード 1）
 python3 scripts/build_rule_differences.py --check
 python3 scripts/build_rule_history.py --check
+python3 scripts/build_card_rulings.py --check
+
+# サイドカーの検査のテスト（破壊テストを含む。標準ライブラリだけ）
+python3 -m unittest discover -s tests
 
 # 調査の状況（docs/research-status.md）の数を数える（読むだけ）
 python3 scripts/research_stats.py
@@ -52,6 +59,7 @@ python3 scripts/research_stats.py
 | `build_cardlist.py` | `data/cards.json`、`data/cards.csv`、`data/attacks.csv`、`data/powers.csv`、`docs/cards/` の各弾のページ・`card-differences.md`・`english-only.md` |
 | `build_rule_differences.py` | `docs/rules/differences.md`（あわせて出典の記号・`data/rule_history.json` の id の参照切れと、確度の更新漏れを検査） |
 | `build_rule_history.py` | `docs/rules/errata-history.md`、`docs/rules/japanese-editions.md`（日本版のルールの版ごとの比較）、`docs/printed-sources.md`（スキャンで確認した印刷物の巻号・ページ）。あわせて `data/rule_history.json` と `docs/rules/mixed-2002.md`・`kangaskhan-2002.md`・`japanese.md` の id・カード id・出典の記号の参照切れ、日付の矛盾（公表・適用の順、出来事の日付との食い違い、誤りと判断した日付の使用、印刷テキストの変更・公式エラッタで新しい文面の印刷の日付を適用の開始に書いていないか、印刷の開始と段階の日付の食い違い）、版の日付と出来事の食い違い、比較表の項目と `data/rule_differences.json` の対応と確度の食い違い、比較表で二次資料・推定だけのマスを「確実」にしていないか、公式エラッタに分類した記録に確認できた公式の告知の段階と当時の資料での呼び方（`term_in_sources`）があるか、原本との照合を書いた記録に原本の根拠があるか、スキャンを根拠にした記録の資料が `documents` にあるかを検査 |
+| `build_card_rulings.py` | `docs/rules/card-rulings.md`。あわせて `data/sidecar/` の id の書式・重複、カード id とワザの位置・名前、印刷の文面と照合した欄の写しが今の `data/cards.json` と同じか、違いの文字列が文面にあるか、出典の記号とページ（`data/rule_history.json` の `documents`）、公式エラッタの記録との結び付け、CONFIRMED・SUPPORTED の根拠と推論、裁定の文にエンジンの停止コード・例外の名前がないか、エンジンの裁定 id（S1〜S49 など）の対応の漏れ・分けた対応の `part`・未解決の論点の重複、エンジンの未解決の裁定の一覧の件数を検査 |
 | `nazonobasho.py extract` | `data/ja_text_nazonobasho.json`（日本語テキスト。カードテキストと印刷情報の欄だけを残す） |
 | `pcg_search.py extract` | `data/ja_text_pcgsearch.json`（拡張パック以外の商品の 681 枚） |
 | `build_other_products.py` | `docs/cards/other-products.md`（一覧）、`docs/cards/products/*.md`（商品ごと）、`docs/cards/reprints.md`（再録の対応付けと点検の結果） |

@@ -24,7 +24,7 @@
       その日付を挙げた資料（claimed_by の記号）や「以前の版」の説明なしに使われていないか
       （data/rule_history.json・data/rule_differences.json・手書きの docs/rules/*.md・docs/sources.md）。
       正当に違う日付（雑誌の発行日と発売日など）は other_dates に書くので、単純な文字列の一致では検出しない
-  - documents: 記号が docs/sources.md にあるか、ページの refs の id があるか。スキャン（kind が scan_image で
+  - documents: 記号が docs/sources.md にあるか、ページの refs の id（この記録の id か、data/sidecar/ の記録の id）があるか。スキャン（kind が scan_image で
     source が documents のスキャンの記号。J37・J38）を根拠にした記録が挙げる当時の資料（cites）が、documents にあるか
   - jp_editions・jp_edition_matrix: 版の出来事の日付、出典の記号、確度・根拠の種類・根拠の性質の値、
     rd_item（data/rule_differences.json の項目）があるか、表のマスの版が jp_editions の版か。
@@ -55,6 +55,7 @@ DATA = ROOT / 'data' / 'rule_history.json'
 OUT = ROOT / 'docs' / 'rules' / 'errata-history.md'
 OUT_EDITIONS = ROOT / 'docs' / 'rules' / 'japanese-editions.md'
 OUT_DOCUMENTS = ROOT / 'docs' / 'printed-sources.md'
+SIDECAR = ROOT / 'data' / 'sidecar'
 HANDWRITTEN = [ROOT / 'docs' / 'rules' / n for n in ('mixed-2002.md', 'kangaskhan-2002.md', 'japanese.md')]
 # rejected_dates を探す文書（手書き。生成物は元データを検査すれば足りる）
 PROSE = HANDWRITTEN + [ROOT / 'docs' / 'rules' / n for n in ('wotc.md', 'README.md')] + [ROOT / 'docs' / 'sources.md']
@@ -254,6 +255,24 @@ def all_items(data):
     return data['events'] + data['entries'] + data['errata']
 
 
+def sidecar_names():
+    """data/sidecar/ の記録の id → 名前（documents のページの refs に使う。scripts/build_card_rulings.py が中身を検査する）。"""
+    names = {}
+    if not SIDECAR.exists():
+        return names
+    load = lambda n: json.loads((SIDECAR / n).read_text(encoding='utf-8'))
+    for x in load('latest_descriptions.json')['records']:
+        names[x['id']] = f"{x['card_name_ja']}（{x['card_id']}）「{x['target']['name_ja']}」の最新の説明"
+    for x in load('card_checks.json')['records']:
+        names[x['id']] = f"{x['card_name_ja']}（{x['card_id']}）の照合"
+    r = load('rulings.json')
+    for x in r['rule_clauses']:
+        names[x['id']] = x['section']
+    for x in r['rulings'] + r['issues']:
+        names[x['id']] = x['question']
+    return names
+
+
 def validate(data, cards, codes):
     errors = []
     ids = [x['id'] for x in all_items(data)]
@@ -314,7 +333,7 @@ def validate(data, cards, codes):
             if s not in codes:
                 errors.append(f'{path.relative_to(ROOT)}: 出典の記号がない: {s}')
     errors += validate_dates(data, codes)
-    errors += validate_documents(data, codes, known)
+    errors += validate_documents(data, codes, known | set(sidecar_names()))
     errors += validate_editions(data, codes)
     errors += validate_card_errata(data)
     return errors
@@ -595,7 +614,8 @@ def build(data, cards):
           '1996〜1999年のルールブックの原文は、第4版の冊子（[P44]。1998年4月ごろ以降の刷とみられる）だけを確認しました。第1〜3版・第5版は確認できていません（2000年の「公式ルール 2000.02.14版」は [P43] で確認）。'
           '二次資料が挙げている当時の資料も [P1] などの記号で示しています。',
           '- エラッタの記録の一部には「段階ごとの確認状況」を付けています。変更の予告、新しい文面の印刷、既存のカードにも適用する公式の告知、'
-          '実際の適用（大会・ふだんの対戦）を分けて、それぞれ確認できたかを書いています。予告や再録の文面の変更だけでは、公式エラッタとはしていません。', '',
+          '実際の適用（大会・ふだんの対戦）を分けて、それぞれ確認できたかを書いています。予告や再録の文面の変更だけでは、公式エラッタとはしていません。',
+          '- 公式の書籍の「最新の説明」が印刷の文面と書き方だけ違うもの（訂正告知が見つかっていないもの）は、ここではなく [カードの裁定と公式の最新の説明](card-rulings.md)（`data/sidecar/`）に記録しています。', '',
           '## 一覧', '',
           '| id | 地域 | 区分 | 対象 | 公表・印刷・適用 | 確度 |', '|---|---|---|---|---|---|']
     for x in errata:
@@ -673,13 +693,14 @@ def build_editions(data):
 
 def build_documents(data):
     names = {x['id']: x.get('title') or x.get('name') for x in all_items(data)}
+    names.update(sidecar_names())
     L = ['# 印刷物の照合記録', '',
          '<!-- このファイルは scripts/build_rule_history.py が data/rule_history.json の documents から生成しています。直接編集しないでください。 -->', '',
          '当時の印刷物を、スキャン（[出典と確認状況](sources.md) の J37。Elite Fourum のスレッドで公開された Google Drive の PDF。P43 は J38、P44 は J39 の Internet Archive の PDF）で確認した記録です。'
          '印刷物の実物を確認したものではありません。ページ番号は誌面に印刷された番号（ノンブル）、PDF のページは Drive のビューアー（P43・P44 は Internet Archive の PDF）で数えたページです。', '',
          '- スキャンのファイルは第三者が公開したもので、公開が続く保証はありません。',
          '- 確認した刷が初版でないものは、その刷を書いています。初版の文面と同じとは限りません。',
-         '- 本文の引用は、それぞれの記録（`data/rule_history.json` の id）にあります。ここにはページの内容の要約だけを置いています。', '',
+         '- 本文の引用は、それぞれの記録（`data/rule_history.json` の id。カードの最新の説明・照合・裁定は `data/sidecar/` の id で、[カードの裁定と公式の最新の説明](rules/card-rulings.md)）にあります。ここにはページの内容の要約だけを置いています。', '',
          '| 記号 | 資料 | 発行日 | 発売日 | 確認した刷 | スキャン |', '|---|---|---|---|---|---|']
     for doc in data['documents']:
         L.append(f"| [{doc['code']}](#{doc['code'].lower()}) | {md(doc['title'])} | {doc.get('issued') or '—'} | {doc.get('released') or '—'} | "

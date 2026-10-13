@@ -249,8 +249,29 @@ def main():
     print(f'- pcg-search で名前が「-」のカードを特定したもの（identified_cards）: {len([k for k in named if not k.startswith("_")])}')
 
 
+def sidecar_stats():
+    lat = load('data/sidecar/latest_descriptions.json')['records']
+    chk = load('data/sidecar/card_checks.json')['records']
+    r = load('data/sidecar/rulings.json')
+    print('\n## サイドカー（data/sidecar/）\n')
+    print(f"- 公式の最新の説明: {len(lat)} 件（カード {len({x['card_id'] for x in lat})} 枚）。意味の違い: " +
+          '、'.join(f'{k} {v}' for k, v in Counter(x['meaning_change'] for x in lat).most_common()) +
+          '。図版との照合: ' + '、'.join(f'{k} {v}' for k, v in Counter(x['printed_text']['image_check'] for x in lat).most_common()))
+    print(f"- カードの照合: {len(chk)} 件（" + '、'.join(f'{k} {v}' for k, v in Counter(x['result'] for x in chk).most_common()) +
+          f"。データの誤り {sum(1 for x in chk if x['data_error'])}）")
+    print(f"- 公式ルールの条項: {len(r['rule_clauses'])} 件")
+    print(f"- 裁定: {len(r['rulings'])} 件（" + '、'.join(f'{k} {v}' for k, v in Counter(x['status'] for x in r['rulings']).most_common()) + '）')
+    print('  - 根拠の種類ごとの記録の数（1 件に複数の種類があれば、それぞれに数える）: ' + '、'.join(
+        f'{k} {v}' for k, v in Counter(k for x in r['rulings'] for k in {b['kind'] for b in x['basis']}).most_common()))
+    print(f"- 未解決の論点: {len(r['issues'])} 件")
+    for imp in r['engine_imports']:
+        print(f"- kyuura-engine の取り込み: {imp['id']}（{imp['engine_version']}、{imp['commit'][:7]}）。エンジンの未解決の裁定 {imp.get('engine_unresolved_total')} 件のうち、"
+              f"論点に取り込んだもの {sum(1 for u in r['engine_unresolved_index'] if u['kyuura_issue'])}")
+
+
 if __name__ == '__main__':
     source_stats()
     rule_stats()
     main()
     reprint_stats()
+    sidecar_stats()

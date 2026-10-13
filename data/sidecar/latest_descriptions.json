@@ -1,0 +1,333 @@
+{
+ "schema_version": 1,
+ "description": "公式の書籍の「最新の説明」と、カードの印刷の文面（data/cards.json）の違い。data/cards.json の文面は印刷の文面のままにし、ここで別に記録する。生成・検査: scripts/build_card_rulings.py。形式は docs/data-schema.md の「サイドカー」",
+ "classifications": {
+  "latest_description": "公式の書籍がカードごとに載せた「最新の説明」（『オフィシャルブック2000』p.6 によれば、カードのあいまいな表現・判断のむずかしい表現の書き直し）。訂正告知（エラッタ）とは別の分類で、公式エラッタの記録（data/rule_history.json の official_errata）があるときは errata_ref で結ぶ"
+ },
+ "difference_kinds": {
+  "wording": "表記・語順・句読点だけの違い",
+  "clarification": "同じ内容を、より明確な言い方にしたとみられる違い（意味の変化の有無は meaning_change に書く）",
+  "meaning": "処理が変わる違い"
+ },
+ "meaning_change_values": {
+  "none_apparent": "意味の違いは読み取れない（読み方は推論で、公式の説明ではない）",
+  "changed": "処理が変わる",
+  "unknown": "判断していない"
+ },
+ "image_check_values": {
+  "match": "図版の印刷の文面と kyuura の文面が同じ",
+  "consistent_where_legible": "図版の文字がかすれていて全部は読めないが、読める範囲で同じ",
+  "not_checked": "図版の文面は照合していない"
+ },
+ "records": [
+  {
+   "id": "LD-PMCG4-021-ATK0",
+   "card_id": "PMCG4-021",
+   "card_name_ja": "わるいカメール",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "おうふくびんた"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "コインを2枚投げて「おもて」の数×10のダメージ。",
+    "source_of_data": "https://nazonobasho.com/pmcg04-019-warui-kameil/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さくかすれているが、読める範囲で kyuura の文面と同じ。句点の有無は読めない"
+   },
+   "latest_description": {
+    "text_ja": "コインを2枚投げ、「おもて」の数×10のダメージ。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "89",
+    "pdf_page": 91,
+    "location": "左の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "投げて",
+     "latest": "投げ、",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "書き方だけの違い。コイン 2 枚・「おもて」の数×10 のダメージは同じ（ドードーの「みだれづき」の最新の説明と同じ形）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版と「ワザ」欄は 400〜600dpi で拡大）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-8FACF3A",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明の違いを mismatches に 2 件。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG4-021-ATK1",
+   "card_id": "PMCG4-021",
+   "card_name_ja": "わるいカメール",
+   "target": {
+    "kind": "attack",
+    "index": 1,
+    "name_ja": "こうらがえし"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[1].text.ja",
+    "text_ja": "次の相手の番で、このカードが相手のワザによってダメージを受けた時、(このカードが「きぜつ」するしないにかかわらず、)そのポケモンにも同じダメージを与える。(ダメージ以外の効果は与えない)",
+    "source_of_data": "https://nazonobasho.com/pmcg04-019-warui-kameil/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さくかすれているが、「次の相手の番で」「受けた時」「するしないにかかわらず」を含めて、読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読めない"
+   },
+   "latest_description": {
+    "text_ja": "次の相手の番、このカードが相手のワザによってダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）そのポケモンにも同じダメージを与える。（ダメージ以外の効果は与えない）",
+    "source": "P43",
+    "scan": "J38",
+    "page": "89",
+    "pdf_page": 91,
+    "location": "左の「ワザ」欄"
+   },
+   "also_quoted": [
+    {
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説「相手の番ではたらく効果「こうらがえし」」の囲み"
+    },
+    {
+     "source": "P43",
+     "page": "321",
+     "location": "公式ルール「8 ワザによるダメージと効果」の例"
+    }
+   ],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "次の相手の番で",
+     "latest": "次の相手の番",
+     "kind": "wording"
+    },
+    {
+     "printed": "受けた時",
+     "latest": "受けたとき",
+     "kind": "wording"
+    },
+    {
+     "printed": "(このカードが「きぜつ」するしないにかかわらず、)",
+     "latest": "（それによってこのカードが「きぜつ」しても、）",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "どちらの文面も、わるいカメールがきぜつしても返すと読める（この読み方は推論）。最新の説明は「それによって」で、きぜつの原因がそのダメージであることを明示している",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版と「ワザ」欄は 400〜600dpi で拡大）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-8FACF3A",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明の違いを mismatches に 2 件。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG5-027-ATK0",
+   "card_id": "PMCG5-027",
+   "card_name_ja": "カスミのヒトデマン",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "スターブーメラン"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "コインを投げて「おもて」なら、このカードと、このカードについている全てのカードを、持ち主の手札にもどす。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%82%B9%E3%83%9F%E3%81%AE%E3%83%92%E3%83%88%E3%83%87%E3%83%9E%E3%83%B3LV.16_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "not_checked",
+    "image_check_note": "p.111 の図版の文字は、ページ全体の画像では読めない大きさで、照合していない"
+   },
+   "latest_description": {
+    "text_ja": "コインを投げて「おもて」なら、自分と自分についているすべてのカードを手札にもどす。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "111",
+    "pdf_page": 113,
+    "location": "最初のカスミのヒトデマン（LV.16／HP40）の「ワザ」欄"
+   },
+   "also_quoted": [
+    {
+     "source": "P43",
+     "page": "89",
+     "location": "わるいカメールのワザ解説の「「スターブーメラン」を受けた場合」"
+    }
+   ],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "このカードと、このカードについている全てのカードを、持ち主の手札にもどす",
+     "latest": "自分と自分についているすべてのカードを手札にもどす",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "「このカード」を「自分」、「全て」を「すべて」と書き、「持ち主の」を省いた。意味の違いは読み取れない（推論）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版と「ワザ」欄は 400〜600dpi で拡大）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    }
+   ],
+   "notes": [
+    "p.111 は同じ LV.16／HP40 のカード（ポケモンジム第1弾カスミ・ジム拡張第1弾リーダーズスタジアム）と、イラスト違いのプロモーションカードを並べている。kyuura の PMCG5-027 はリーダーズスタジアムの版。",
+    "p.111 の 3 枚目の「カスミのヒトデマン」（LV.20／HP50、スピードスター）は別のカード。"
+   ]
+  },
+  {
+   "id": "LD-PMCG5-054-ATK0",
+   "card_id": "PMCG5-054",
+   "card_name_ja": "R団のエビワラー",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "クロスカウンター"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "次の相手の番、このカードが相手のワザによるダメージを受けた時、(このカードが「きぜつ」するしないにかかわらず、)コインを投げる。「おもて」なら、相手に、このカードが受けた2倍のダメージを与える。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%82%A8%E3%83%93%E3%83%AF%E3%83%A9%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "not_checked",
+    "image_check_note": "p.203 の図版の文字は、ページ全体の画像では読めない大きさで、照合していない"
+   },
+   "latest_description": {
+    "text_ja": "次の相手の番、このカードが相手のワザによるダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）コインを投げる。「おもて」なら、このカードが受けたダメージの2倍のダメージを、相手に与える。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "203",
+    "pdf_page": 205,
+    "location": "R団のエビワラー（LV.29／HP60）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "受けた時",
+     "latest": "受けたとき",
+     "kind": "wording"
+    },
+    {
+     "printed": "(このカードが「きぜつ」するしないにかかわらず、)",
+     "latest": "（それによってこのカードが「きぜつ」しても、）",
+     "kind": "clarification"
+    },
+    {
+     "printed": "相手に、このカードが受けた2倍のダメージを与える",
+     "latest": "このカードが受けたダメージの2倍のダメージを、相手に与える",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "語順と「きぜつ」の書き方の違い。意味の違いは読み取れない（推論）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版と「ワザ」欄は 400〜600dpi で拡大）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    }
+   ],
+   "notes": [
+    "p.89 は「こうらがえし」と「同じタイプのワザ」としてクロスカウンターを挙げる。",
+    "p.203 の解説:「「R団のエビワラー」をきぜつさせても「クロスカウンター」の効果ははたらきます。」「「R団のエビワラー」がダメージを受けなくなるわけではない」。"
+   ]
+  },
+  {
+   "id": "LD-PMCG5-020-ATK0",
+   "card_id": "PMCG5-020",
+   "card_name_ja": "R団のファイヤー",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "ほのおのかべ"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "次の相手の番、このカードが相手のワザによるダメージを受けた時、(このカードが「きぜつ」するしないにかかわらず)相手にも10ダメージ。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%A4%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "not_checked",
+    "image_check_note": "p.82 の図版の文字は、ページ全体の画像では読めない大きさで、照合していない"
+   },
+   "latest_description": {
+    "text_ja": "次の相手の番、このカードが相手のワザによるダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）相手に10ダメージを与える。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "82",
+    "pdf_page": 84,
+    "location": "R団のファイヤー（LV.26／HP60）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "受けた時",
+     "latest": "受けたとき",
+     "kind": "wording"
+    },
+    {
+     "printed": "(このカードが「きぜつ」するしないにかかわらず)",
+     "latest": "（それによってこのカードが「きぜつ」しても、）",
+     "kind": "clarification"
+    },
+    {
+     "printed": "相手にも10ダメージ。",
+     "latest": "相手に10ダメージを与える。",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "「きぜつ」の書き方と文末の違い。意味の違いは読み取れない（推論）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版と「ワザ」欄は 400〜600dpi で拡大）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-8FACF3A",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "result": "v0.12 でワザ「ほのおのかべ」を登録するときに照合した記録（この取り込みでは v0.12 の裁定は取り込んでいない）"
+    }
+   ],
+   "notes": [
+    "こうらがえしとの比較のために照合した（docs/rules/card-rulings.md の比較）。",
+    "p.82 の解説:「この10ダメージは、弱点・抵抗力の影響を受けます。」図版のダメージの目安は 40。"
+   ]
+  }
+ ]
+}

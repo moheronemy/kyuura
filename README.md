@@ -23,9 +23,10 @@
 - [旧裏・新裏の混合ルール（2001〜2003年）](docs/rules/mixed-2002.md) — 裏面の変更後の混合、サポーター・ポケパワー/ポケボディーへの読み替え、殿堂入りカード、バトルロード 2002
 - [新ガルーラルール（2002年）](docs/rules/kangaskhan-2002.md) — 旧裏と新裏の山札を使い分ける 2 人 1 組の対戦と「タッチ世代交代！」
 - [カードの文面の変更とエラッタの履歴](docs/rules/errata-history.md) — 印刷の変更・公式エラッタ・読み替えの区別
+- [カードの裁定と公式の最新の説明](docs/rules/card-rulings.md) — カード・ワザごとの公式の書籍の「最新の説明」（印刷の文面とは別に記録）、照合、裁定（CONFIRMED・SUPPORTED）、未解決の論点、kyuura-engine の裁定 id との対応（わるいカメールの「こうらがえし」など）
 - [出典と確認状況](docs/sources.md)、[印刷物の照合記録](docs/printed-sources.md)（スキャンで確認した会報・雑誌・書籍の巻号とページ）
 - [調査の状況](docs/research-status.md) — 分野ごとにどこまで確かめられたか、件数、未解決の問題、必要な原本
-- [エンジン開発の準備状況](docs/engine-readiness.md) — 最初に再現するルール（2000年2月の公式ルール）、確認済みのルールと未確認の点、最初の対象カード
+- [エンジン開発の準備状況](docs/engine-readiness.md) — 対戦エンジン（別のリポジトリ [kyuura-engine](https://github.com/moheronemy/kyuura-engine)）の基準にしたルールと調査データ。エンジンを作り始める前の計画も記録として残している
 
 ### カード
 
@@ -42,7 +43,20 @@
 - [`data/cards.csv`](data/cards.csv)、[`data/attacks.csv`](data/attacks.csv)、[`data/powers.csv`](data/powers.csv) — 表形式の写し
 - [`data/rule_differences.json`](data/rule_differences.json) — 日米のルールの違い
 - [`data/rule_history.json`](data/rule_history.json) — 旧裏期のルール・大会レギュレーション・エラッタの記録（日付・地域・対象カード・根拠の種類・確度）、日本版のルールの版ごとの比較、スキャンで確認した印刷物の巻号・ページ
-- 生成スクリプト: [`scripts/`](scripts/README.md)
+- [`data/sidecar/`](data/sidecar/) — `data/cards.json` を変えずにカード・ワザに加える出典つきの情報（公式の最新の説明、カードの照合、裁定と未解決の論点）。形式は [docs/data-schema.md の「サイドカー」](docs/data-schema.md#サイドカーdatasidecar)
+- 生成スクリプト: [`scripts/`](scripts/README.md)、テスト: `python3 -m unittest discover -s tests`
+
+サイドカーの参照の例（リポジトリの直下で実行）:
+
+```python
+import sys; sys.path.insert(0, 'scripts')
+import build_card_rulings as bcr
+
+notes = bcr.annotations_for(bcr.load(), 'PMCG4-021')  # わるいカメール
+for ld in notes['latest_descriptions']:
+    print(ld['target']['name_ja'], ld['latest_description']['text_ja'])
+print([x['id'] for x in notes['issues']])
+```
 
 **日本語テキストについて**:
 - カード名は日英とも全件収録しています。
