@@ -17,7 +17,9 @@ docs/rules/card-rulings.md を生成する。
   - 違い（differences）の文字列が、印刷の文面・最新の説明の中にそのままあるか
   - 出典の記号が docs/sources.md にあるか、ページが data/rule_history.json の documents のページの記録にあるか
   - 公式エラッタの記録があるカードの最新の説明は errata_ref で結ぶ（最新の説明とエラッタを混同しない）
-  - カードの照合の結果: 差異なしなら、結んだ最新の説明にも違いがない。データの誤り（data_error）は照合した欄と今の値を書く
+  - カードの照合の結果: 差異なしなら、結んだ最新の説明にも違いがない。データの誤り（data_error）は照合した欄と今の値を書く。
+    照合のあとで直したデータ（corrections）は、直したあとの値が照合した欄の写しと同じか。値の欠け（data_gaps）は、
+    今の data/cards.json でも空か（値が入ったら照合し直す）
   - 裁定の分類: CONFIRMED は推論（inference）なし、SUPPORTED は推論が必要、UNRESOLVED は issues だけ。
     同じ問い（cards と question が同じ）の裁定・論点を 2 つ作らない
   - 結論・論点・推論の文に、エンジンの停止コード・例外の名前（UNRESOLVED_…・RuntimeError・POWER_SUPPRESSED など）を書かない
@@ -384,7 +386,44 @@ def validate(ctx):
                         errors.append(f"{w}: data_error の資料の値がない（または kyuura の値と同じ）: {e.get('field')}")
                     if e.get('fix_status') != 'candidate':
                         errors.append(f"{w}: data_error の fix_status は candidate（この記録ではデータを直さない。修正は別の作業）")
-        same_page = {y['id'] for y in L['records'] if y['card_id'] == x['card_id'] and y['latest_description']['source'] == x['source']
+        corrected = set()
+        for c in x.get('corrections', []):
+            f = c.get('field')
+            corrected.add(f)
+            if f not in x['checked_fields']:
+                errors.append(f'{w}: corrections の欄 {f} が checked_fields にない（直した欄は照合し直して写す）')
+            elif c.get('after') != x['checked_fields'][f]:
+                errors.append(f'{w}: corrections の直したあとの値が、照合した欄 {f} の写しと違う')
+            if c.get('before') == c.get('after'):
+                errors.append(f'{w}: corrections の直す前と直したあとの値が同じ: {f}')
+            if not re.fullmatch(r'[0-9a-f]{7,40}', c.get('commit') or ''):
+                errors.append(f"{w}: corrections の commit（データを直したコミット）がない: {f}")
+            for k in ('evidence', 'method'):
+                if not c.get(k):
+                    errors.append(f'{w}: corrections の {k} がない: {f}')
+        if x.get('data_error') and corrected & {e.get('field') for e in x['data_error']}:
+            errors.append(f'{w}: 同じ欄を data_error（修正の候補）と corrections（直した）の両方に書かない')
+        for g in x.get('data_gaps', []):
+            f = g.get('field')
+            if f in x['checked_fields']:
+                errors.append(f'{w}: data_gaps の欄 {f} を checked_fields に入れない（値がないので照合していない）')
+            try:
+                current = resolve(cards[x['card_id']], f)
+            except (KeyError, TypeError):
+                errors.append(f'{w}: data_gaps の欄 {f} が data/cards.json にない')
+            else:
+                if current not in (None, '', []):
+                    errors.append(f'{w}: data_gaps の欄 {f} に値が入っている（照合し直して、記録を直す）')
+                elif current != g.get('kyuura_value'):
+                    errors.append(f'{w}: data_gaps の kyuura の値が、今の data/cards.json の {f} と違う')
+            if not g.get('source_value'):
+                errors.append(f'{w}: data_gaps の資料の値がない: {f}')
+            if g.get('status') not in C.get('gap_statuses', {}):
+                errors.append(f"{w}: data_gaps の status の値が不正: {g.get('status')}")
+            for k in ('evidence', 'cause'):
+                if not g.get(k):
+                    errors.append(f'{w}: data_gaps の {k} がない: {f}')
+        same_page ={y['id'] for y in L['records'] if y['card_id'] == x['card_id'] and y['latest_description']['source'] == x['source']
                      and y['latest_description']['page'] == x['page']}
         missing = same_page - set(x.get('latest_description_refs', []))
         if missing:
@@ -793,6 +832,10 @@ def build(ctx):
         de = 'なし'
         if x['data_error']:
             de = 'あり（修正の候補）: ' + '、'.join(f"{e['field']} 「{e['kyuura_value']}」→ 資料「{e['source_value']}」" for e in x['data_error'])
+        elif x.get('corrections'):
+            de = 'なし（照合のあとで直した: ' + '、'.join(c['field'] for c in x['corrections']) + '）'
+        if x.get('data_gaps'):
+            de += '。値の欠け（調査課題）: ' + '、'.join(g['field'] for g in x['data_gaps'])
         out.append(f"| {x['id']} | {md(card_label(cards, x['card_id']))} | [{x['source']}] p.{x['page']}（{md(x['location'])}） | "
                    f"{md('、'.join(x['checked_fields']))} | {md(C['results'][x['result']])} | {md(de)} | "
                    f"{md(' '.join(x['findings']))} |")
@@ -804,6 +847,22 @@ def build(ctx):
             for e in x['data_error']:
                 out.append(f"- {x['id']}（{md(card_label(cards, x['card_id']))}）: `{e['field']}` は「{md(e['kyuura_value'])}」、"
                            f"資料は「{md(e['source_value'])}」（{md(e['evidence'])}）。{md(e.get('note', ''))}")
+        out.append('')
+    corrs = [x for x in C['records'] if x.get('corrections')]
+    if corrs:
+        out += ['照合のあとで直したデータ（`data/cards.json` の今の値と、照合した欄の写しは、直したあとの値）:', '']
+        for x in corrs:
+            for c in x['corrections']:
+                out.append(f"- {x['id']}（{md(card_label(cards, x['card_id']))}）: `{c['field']}` を「{md(c['before'])}」から「{md(c['after'])}」に直した"
+                           f"（{md(c['evidence'])}。{md(c['method'])}。コミット {c['commit'][:7]}）。{md(c.get('note', ''))}")
+        out.append('')
+    gaps = [x for x in C['records'] if x.get('data_gaps')]
+    if gaps:
+        out += ['値が欠けている欄（調査課題。値を入れていない。照合した欄には含めない）:', '']
+        for x in gaps:
+            for g in x['data_gaps']:
+                out.append(f"- {x['id']}（{md(card_label(cards, x['card_id']))}）: `{g['field']}` は空。資料は「{md(g['source_value'])}」（{md(g['evidence'])}）。"
+                           f"空の原因: {md(g['cause'])}。扱い: {md(C['gap_statuses'][g['status']])}。{md(g.get('note', ''))}")
         out.append('')
 
     # 3. 条項

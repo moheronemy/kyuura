@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "description": "カードの記録（data/cards.json）を公式の資料のページと照合した記録。照合の記録のないカードは「未照合」で、「照合して差異なし」（result: no_difference）と区別する。checked_fields は照合したときの data/cards.json の値の写しで、データが変わると検査で分かる。データの誤り（result: data_error）は data_error に [{field, kyuura_value, source_value, evidence, fix_status: candidate, note}] を書き、この記録ではデータを直さない。生成・検査: scripts/build_card_rulings.py",
+ "description": "カードの記録（data/cards.json）を公式の資料のページと照合した記録。照合の記録のないカードは「未照合」で、「照合して差異なし」（result: no_difference）と区別する。checked_fields は照合したときの data/cards.json の値の写しで、データが変わると検査で分かる。データの誤り（result: data_error）は data_error に [{field, kyuura_value, source_value, evidence, fix_status: candidate, note}] を書き、この記録ではデータを直さない。照合のあとで data/cards.json を直したときは、corrections に [{field, before, after, evidence, method, commit, note}] を書く（直したあとの値は checked_fields の写しと同じ。直すのはカードのデータの生成の手順で、この記録ではない）。値が空の欄（照合していない）は data_gaps に [{field, kyuura_value, source_value, evidence, cause, status, note}] を書き、checked_fields に入れない（status は gap_statuses）。生成・検査: scripts/build_card_rulings.py",
  "results": {
   "no_difference": "照合した欄はすべて同じ（照合して差異なし）",
   "printed_vs_latest_only": "違いは印刷の文面と最新の説明の違いだけ（データの誤りではない）",
@@ -2386,7 +2386,8 @@
     "だつりょくえきの文面は印刷の文面で、最新の説明と書き方が違う（LD-PMCG6-023-PWR0）。ヘドロのうずは説明文なし。",
     "進化元のキョウのベトベターは kyuura では PMCG6-007（エンジンの docs/kogas-muk-event-design-v0.17c.md 6 章は「PMCG6-020」と書くが、kyuura の PMCG6-020 はサカキのニドクイン）。",
     "英語版の文面（kyuura の text.en）には「If heads and if it has any, choose 1 Energy card」と、エネルギーカードがついていないときの条件がある。日本語版の印刷の文面・最新の説明にはない（日英の文面の違い。日本版の処理の根拠にしない。UQ-ENERGY-DRAIN-NO-ENERGY）。",
-    "kyuura のエラッタの記録（docs/rules/errata-history.md）は、だつりょくえきを 2002年の「ポケボディーとして扱う旧裏・neo の特殊能力」の一覧に挙げている。後年の扱いで、2000年の処理の根拠にしない。"
+    "kyuura のエラッタの記録（docs/rules/errata-history.md）は、だつりょくえきを 2002年の「ポケボディーとして扱う旧裏・neo の特殊能力」の一覧に挙げている。後年の扱いで、2000年の処理の根拠にしない。",
+    "日英の文面の違いは、data/curation/card_differences.json にも記録した（カードの jp_en_differences。2026-10-14）。"
    ],
    "not_confused_with": [
     "PMCG3-007（化石の秘密のベトベトン）",
@@ -2407,10 +2408,208 @@
     }
    ],
    "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG2-041-P234",
+   "card_id": "PMCG2-041",
+   "card_name_ja": "ベロリンガ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "234",
+   "pdf_page": 236,
+   "location": "p.234 の 3 枚目「たねポケモン ベロリンガ LV.26／HP90」（ポケモンカード第2弾ポケモンジャングル）",
+   "checked_fields": {
+    "name.ja": "ベロリンガ",
+    "jp_print.level": 26,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 90,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "psychic",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "まきつくベロ",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
+    "pokemon.attacks[1].name.ja": "ちょうおんぱ",
+    "pokemon.attacks[1].cost": [
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage": null,
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.rarity",
+    "jp_print.series",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 無色、LV.26 HP90、まきつくベロ（無）10「コインを投げて「おもて」なら 相手を「マヒ」状態にする」、ちょうおんぱ（無無。ダメージの数字なし）「コインを投げて「おもて」なら 相手を「こんらん」状態にする」、にげる 3、弱点 闘、抵抗力 超 −30。",
+    "「ワザ」欄の最新の説明は、どちらのワザも kyuura の文面と同じ（ワザ名は「まきつくベロ」「ちょうおんぱ」）。",
+    "解説: 「まきつくベロ」は、10ダメージに加えコイントスで表を出せば相手の対戦ポケモンをマヒ状態にさせます。",
+    "kyuura の値は、直す前（bcf38c7）はワザ 1 の名前「したでなめる」・レベル 29 で、日本語テキストの出典（なぞのばしょ。https://nazonobasho.com/pmcg02-043-beroringa/）の記載のままだった。見出し・図版・「ワザ」欄・英語版（Jungle 38 Lickitung。LV.26・Tongue Wrap）がどれも合うので、出典の誤記と判断して直した（corrections）。「したでなめる」は、効果文が同じ別のカードのワザ名。印刷の版の違いを示す資料は見つかっていない。",
+    "エンジン v0.17 の報告（docs/card-selection-v0.17a.md 7 章）は、kyuura の転記元を「ポケモンWiki」と書くが、このカードの日本語テキストの出典はなぞのばしょ。",
+    "同じページの上のベロリンガ（LV.20／HP60。拡張シート第1弾青版・クイックスターターギフトパック。なめる・ふみつけ）と真ん中のベロリンガ（LV.25／HP70。サザンアイランド／トロピカルアイランド。きずをなめる・のびるベロ）は別のカードで、kyuura の data/cards.json にはない。"
+   ],
+   "not_confused_with": [
+    "PMCG5-061（タケシのベロリンガ）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "直したあとの照合した欄はすべて同じ（直す前は、ワザ 1 の名前とレベルが図版と違った。corrections）"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "docs/card-selection-v0.17a.md",
+     "result": "「不一致」（ワザ 1 の名前。kyuura の作業として報告した。エンジンは登録していない）"
+    }
+   ],
+   "engine_refs": [],
+   "corrections": [
+    {
+     "field": "pokemon.attacks[0].name.ja",
+     "before": "したでなめる",
+     "after": "まきつくベロ",
+     "evidence": "p.234 の図版と「ワザ」欄のワザ名（600dpi）。英語版の Tongue Wrap とも合う",
+     "method": "data/curation/ja_text.json の PMCG2-041（attacks）を加え、scripts/build_cardlist.py で data/cards.json を作り直した",
+     "commit": "f52a8e2e9d65055727f7b8bc3165e0fd15b96967",
+     "note": "直す前の値は、日本語テキストの出典（なぞのばしょ）の記載。効果文・エネルギー・ダメージは直す前から同じ"
+    },
+    {
+     "field": "jp_print.level",
+     "before": 29,
+     "after": 26,
+     "evidence": "p.234 の見出し「LV.26／HP90」と図版の「LV.26」（600dpi）。英語版の LV.26 とも合う",
+     "method": "data/curation/ja_text.json の PMCG2-041 に jp_print.level を加え、scripts/build_cardlist.py が当てはめて data/cards.json を作り直した",
+     "commit": "f52a8e2e9d65055727f7b8bc3165e0fd15b96967",
+     "note": "直す前の値は、日本語テキストの出典（なぞのばしょ）の記載。jp_print の補正は、このカードだけ"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG5-048-P200",
+   "card_id": "PMCG5-048",
+   "card_name_ja": "タケシのイワーク",
+   "source": "P43",
+   "scan": "J38",
+   "page": "200",
+   "pdf_page": 202,
+   "location": "p.200 の 1 枚目「たねポケモン タケシのイワーク LV.41／HP100」（ポケモンジム第1弾タケシ・ジム拡張第1弾リーダーズスタジアム）",
+   "checked_fields": {
+    "name.ja": "タケシのイワーク",
+    "jp_print.level": 41,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 100,
+    "pokemon.types": [
+     "fighting"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "grass",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "うなりごえ",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
+    "pokemon.attacks[1].name.ja": "いわおとし",
+    "pokemon.attacks[1].cost": [
+     "fighting",
+     "fighting",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "30",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.rarity",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 闘、LV.41 HP100、うなりごえ（無。ダメージの数字なし）「コインを投げて「おもて」なら、相手を「マヒ」状態にする。」、いわおとし（闘闘無）30、にげる 3、弱点 草、抵抗力の欄は空。",
+    "「ワザ」欄の最新の説明は kyuura の文面と同じ（うなりごえ「コインを投げて「おもて」なら、相手を「マヒ」状態にする。」。いわおとしは説明文なし）。",
+    "見出しの収録は 2 行（「ポケモンジム第1弾タケシ」「ジム拡張第1弾リーダーズスタジアム」）。kyuura の jp_print.series は空（data_gaps。値は入れていない）。",
+    "jp_print.rarity も空。スキャンの図版では、レアリティのマークが読めないので照合していない。",
+    "同じページの真ん中のタケシのイワーク（LV.41／HP100。プロモーションカード 小学館「月刊コロコロコミック98年3月号」おまけカード。解説「上記のカードのイラストちがい」）はイラスト違いのカードで、kyuura の data/cards.json（拡張パック）にはない。",
+    "エンジン v0.17 は 110dpi の画像で「一致」、jp_print.series が空と報告した（docs/card-selection-v0.17a.md 7 章）。kyuura は 600dpi の画像で別に読んだ。"
+   ],
+   "not_confused_with": [
+    "PMCG1-054（第1弾のイワーク）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "照合した欄はすべて同じ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "docs/card-selection-v0.17a.md",
+     "result": "「一致」（110dpi。kyuura の jp_print.series が空と報告した。エンジンは登録していない）"
+    }
+   ],
+   "engine_refs": [],
+   "data_gaps": [
+    {
+     "field": "jp_print.series",
+     "kyuura_value": null,
+     "source_value": "ポケモンジム第1弾タケシ／ジム拡張第1弾リーダーズスタジアム（p.200 の見出しの 2 行）",
+     "evidence": "p.200 の 1 枚目の見出し（600dpi）",
+     "cause": "日本語テキストの出典（ポケモンWiki）の保存データ data/raw/リーダーズスタジアム.json で、このカードの set_name が空（warnings「Set name missing」。rarity_raw も空）。scripts/pokemonwiki.py は空の set_name を null にする。同じ原因で series が空のカードは 50 枚（PMCG5 31・PMCG6 10・neo3 5・neo4 4。どれも warnings「Set name missing」）で、このカードだけの誤りではない",
+     "status": "open",
+     "note": "jp_print.series は出典（ポケモンWiki）の「シリーズ」の写しで、同じタケシのカードの値は「リーダーズスタジアム」「ニビシティジム タケシ・リーダーズスタジアム」のような出典の書き方。p.200 の見出しは書き方が違う（「ポケモンジム第1弾タケシ」）。どの書き方で、どの印刷（出典のページの名前は「(ポケモンジム)」）の値を入れるかが決まっていないので、推測で埋めない。50 枚の欠けをまとめて扱う作業として残す"
+    }
+   ]
   }
  ],
  "difference_kinds": {
   "printed_vs_latest": "kyuura の文面は印刷の文面で、公式の書籍の最新の説明と違う（データの誤りではない。latest_description_ref で結ぶ）",
   "data_error": "kyuura の値が、照合した資料（図版・最新の説明）と違う（data_error に、欄・kyuura の値・資料の値・根拠を書く。修正は別の作業）"
+ },
+ "gap_statuses": {
+  "open": "値を入れていない（調査課題。どの資料の、どの書き方の値を入れるかが決まっていない。推測で埋めない）"
  }
 }

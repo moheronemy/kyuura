@@ -310,6 +310,8 @@ id は 3 つのファイルを通して重複しないこと、`data/rule_histor
 | `result`・`data_error` | `no_difference`（照合して差異なし）・`printed_vs_latest_only`（違いは印刷の文面と最新の説明の違いだけ）・`data_error`（データの誤り。別の修正として扱う）。照合の記録のないカードは未照合。`no_difference` なら、結んだ最新の説明にも違いがないこと（違いがあるとエラー） |
 | `data_error` の中身 | `result` が `data_error` のときだけ、`[{field, kyuura_value, source_value, evidence, fix_status, note}]`。`kyuura_value` は `checked_fields` の写しと同じ、`fix_status` は `candidate`（この記録ではデータを直さない。修正は別の作業）。ほかの結果では `false` |
 | `differences` | 違いの欄と種類（`printed_vs_latest`: 最新の説明の記録 `latest_description_ref` と結ぶ。`data_error`: データの誤りの欄） |
+| `corrections` | 照合のあとで `data/cards.json` を直した欄（あるときだけ）。`[{field, before, after, evidence, method, commit, note}]`。`after` は `checked_fields` の写し（直したあとの値）と同じ、`before` とは違う、`commit` はデータを直したコミット。直すのはカードのデータの生成の手順（`data/curation/` と `scripts/build_cardlist.py`）で、この記録ではない。同じ欄を `data_error`（修正の候補）と両方に書かない。例: ベロリンガ（PMCG2-041）のワザ名とレベル（`CC-PMCG2-041-P234`） |
+| `data_gaps` | 値が空の欄（あるときだけ。調査課題）。`[{field, kyuura_value, source_value, evidence, cause, status, note}]`。`kyuura_value` は今の `data/cards.json` の値（空）と同じで、値が入るとエラー（照合し直す）。`checked_fields` には入れない（値がないので照合していない）。`cause` は空になった原因、`status` は見出しの `gap_statuses`（`open`: 値を入れていない。推測で埋めない）。例: タケシのイワーク（PMCG5-048）の `jp_print.series`（`CC-PMCG5-048-P200`） |
 
 ### `rulings.json`
 

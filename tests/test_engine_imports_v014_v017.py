@@ -320,5 +320,92 @@ class V017BreakageTest(Base):
         self.assert_detected(ctx, '2 つ以上の未解決の論点')
 
 
+class DataMismatchTest(Base):
+    """エンジン v0.17 が報告したデータの食い違い（段階 F）。
+
+    - ベロリンガ（PMCG2-041）: 『オフィシャルブック2000』p.234 [P43] の見出し・図版・「ワザ」欄で、ワザ 1 の名前（まきつくベロ）と
+      レベル（26）を確かめ、カードのデータの生成の手順（data/curation/ja_text.json → scripts/build_cardlist.py）で直した。
+      照合の記録 CC-PMCG2-041-P234 は、直したあとの値を写し、直す前の値を corrections に書く。
+    - タケシのイワーク（PMCG5-048）: p.200 の見出しに収録が 2 行あるが、jp_print.series は空のまま（推測で埋めない）。
+      空の原因（ポケモンWiki の保存データの set_name が空）を data_gaps に書く（CC-PMCG5-048-P200）。
+    """
+
+    def check(self, ctx, cid):
+        return next(x for x in ctx['checks']['records'] if x['id'] == cid)
+
+    def test_lickitung_is_corrected_with_the_previous_values_recorded(self):
+        x = self.check(self.ctx, 'CC-PMCG2-041-P234')
+        self.assertEqual((x['source'], x['page'], x['result']), ('P43', '234', 'no_difference'))
+        self.assertEqual(x['checked_fields']['pokemon.attacks[0].name.ja'], 'まきつくベロ')
+        self.assertEqual(x['checked_fields']['jp_print.level'], 26)
+        before = {c['id']: c for c in base_json('data/cards.json')['cards']}['PMCG2-041']
+        corr = {c['field']: c for c in x['corrections']}
+        self.assertEqual(set(corr), {'pokemon.attacks[0].name.ja', 'jp_print.level'})
+        self.assertEqual(corr['pokemon.attacks[0].name.ja']['before'], before['pokemon']['attacks'][0]['name']['ja'])
+        self.assertEqual(corr['jp_print.level']['before'], before['jp_print']['level'])
+        # 効果文・エネルギー・ダメージは直す前から同じ（ワザ名とレベルだけを直した）
+        for f in ('text', 'cost', 'damage'):
+            self.assertEqual(before['pokemon']['attacks'][0][f], self.ctx['cards']['PMCG2-041']['pokemon']['attacks'][0][f], f)
+        self.assertTrue(all(c['commit'].startswith('f52a8e2') for c in x['corrections']))
+
+    def test_onix_series_is_left_empty_as_an_open_gap(self):
+        x = self.check(self.ctx, 'CC-PMCG5-048-P200')
+        self.assertIsNone(self.ctx['cards']['PMCG5-048']['jp_print']['series'])
+        self.assertNotIn('jp_print.series', x['checked_fields'])
+        (gap,) = x['data_gaps']
+        self.assertEqual((gap['field'], gap['kyuura_value'], gap['status']), ('jp_print.series', None, 'open'))
+        self.assertIn('ポケモンジム第1弾タケシ', gap['source_value'])
+        self.assertIn('Set name missing', gap['cause'])
+
+    def test_the_gap_is_systemic_as_recorded(self):
+        # data_gaps の cause に書いた数（series が空のカードは 50 枚。どれもポケモンWiki の保存データの set_name が空で warnings「Set name missing」）
+        empty = sorted(cid for cid, c in self.ctx['cards'].items() if c.get('jp_print') and c['jp_print'].get('series') is None)
+        self.assertEqual(len(empty), 50)
+        self.assertIn('PMCG5-048', empty)
+        raw = {}  # 出典のページ（jp_print.source）→ 保存データの記録
+        for path in sorted((ROOT / 'data' / 'raw').glob('*.json')):
+            for item in json.loads(path.read_text(encoding='utf-8')):
+                raw.setdefault(item['card']['source_url'], []).append(item['card'])
+        for cid in empty:
+            (c,) = raw[self.ctx['cards'][cid]['jp_print']['source']]
+            self.assertEqual(c['set_name'], '', cid)
+            self.assertIn('Set name missing', c['warnings'], cid)
+        self.assertEqual(sum(1 for lst in raw.values() for c in lst if not c.get('set_name')), 50)
+
+    def test_filling_the_gap_requires_a_new_check(self):
+        ctx = self.copy()
+        ctx['cards']['PMCG5-048']['jp_print']['series'] = 'リーダーズスタジアム'
+        self.assert_detected(ctx, 'data_gaps の欄 jp_print.series に値が入っている')
+
+    def test_gap_field_is_not_a_checked_field(self):
+        ctx = self.copy()
+        self.check(ctx, 'CC-PMCG5-048-P200')['checked_fields']['jp_print.series'] = None
+        self.assert_detected(ctx, 'data_gaps の欄 jp_print.series を checked_fields に入れない')
+
+    def test_gap_needs_a_known_status_and_a_cause(self):
+        ctx = self.copy()
+        gap = self.check(ctx, 'CC-PMCG5-048-P200')['data_gaps'][0]
+        gap['status'] = 'filled'
+        del gap['cause']
+        self.assert_detected(ctx, 'data_gaps の status の値が不正')
+        self.assert_detected(ctx, 'data_gaps の cause がない')
+
+    def test_correction_must_match_the_checked_value(self):
+        ctx = self.copy()
+        corr = self.check(ctx, 'CC-PMCG2-041-P234')['corrections'][0]
+        corr['after'] = 'したでなめる'
+        self.assert_detected(ctx, '直したあとの値が、照合した欄 pokemon.attacks[0].name.ja の写しと違う')
+
+    def test_correction_needs_the_commit(self):
+        ctx = self.copy()
+        del self.check(ctx, 'CC-PMCG2-041-P234')['corrections'][1]['commit']
+        self.assert_detected(ctx, 'corrections の commit')
+
+    def test_reverting_the_data_is_detected(self):
+        ctx = self.copy()
+        ctx['cards']['PMCG2-041']['pokemon']['attacks'][0]['name']['ja'] = 'したでなめる'
+        self.assert_detected(ctx, 'CC-PMCG2-041-P234: 照合した欄 pokemon.attacks[0].name.ja の写しが今の data/cards.json と違う')
+
+
 if __name__ == '__main__':
     unittest.main()
