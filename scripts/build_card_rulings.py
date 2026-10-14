@@ -546,6 +546,29 @@ def validate(ctx):
         for e in x.get('engine_refs', []):
             if e.get('import') not in imports:
                 errors.append(f"{w}: engine_refs の import がない: {e.get('import')}")
+        a = x.get('audit')
+        if not isinstance(a, dict):
+            errors.append(f'{w}: audit（結果への影響・解決に要る資料・調べた範囲・新しく読んだ資料）がない')
+            continue
+        if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', a.get('audited_on') or ''):
+            errors.append(f"{w}: audit の audited_on（日付）がない")
+        if a.get('game_effect') not in r.get('game_effect_values', {}):
+            errors.append(f"{w}: audit の game_effect の値が不正: {a.get('game_effect')}")
+        for k in ('game_effect_note', 'resolution_needs', 'searched'):
+            if not a.get(k):
+                errors.append(f'{w}: audit の {k} がない')
+        check_engine_text(errors, w, a.get('game_effect_note'), a.get('resolution_needs'))
+        if not isinstance(a.get('new_sources'), list):
+            errors.append(f'{w}: audit の new_sources はリスト（新しく読んだ資料がなければ空）')
+        for ns in a.get('new_sources') or []:
+            check_source(errors, w, ctx, ns.get('source'), ns.get('page'))
+            if not ns.get('what'):
+                errors.append(f"{w}: audit の new_sources に、読んで分かったことがない: p.{ns.get('page')}")
+            if ns.get('resolves') is not False:
+                errors.append(f"{w}: audit の new_sources で論点が決まるなら、論点のままにせず裁定にする（resolves は false）: p.{ns.get('page')}")
+            if not any(str(src['page']) == str(ns.get('page')) or str(ns.get('page')) in str(src['page']).split('・')
+                       for src in x.get('sources', [])):
+                errors.append(f"{w}: audit の new_sources のページ p.{ns.get('page')} が sources にない")
 
     # ---- エンジンの裁定 id との対応（取り込み, 文書, id で区別する）
     uses = engine_uses(ctx)
@@ -716,6 +739,79 @@ def annotations_for(ctx, card_id):
         'related_rulings': [x for x in r['rulings'] if not in_cards(x) and card_id in x.get('related_cards', [])],
         'issues': [x for x in r['issues'] if any(c['card_id'] == card_id for c in x.get('cases', []))],
     }
+
+
+def version_key(v):
+    """'v0.17'・'v0.2b' などの版を比べるためのキー（数字の並び）。"""
+    return tuple(int(x) for x in re.findall(r'\d+', v))
+
+
+def unresolved_counts(ctx):
+    """未解決の数を、kyuura の調査の論点とエンジンの数え方に分けて求める（同じ数として扱わない）。
+
+    - research_issues: kyuura の未解決の論点（issues）の数
+    - engine_total: 最新の版でエンジンが数える未解決の裁定の数（engine_unresolved_index で in_engine_count が false でないもの）
+    - engine_stop_codes: そのうち停止コードのあるもの
+    - by_import: 取り込みごとの engine_unresolved_total（その版までの数）
+    - v013_items・v017_additions・not_in_engine_count・out_of_scope: 一覧の項目の内訳（engine_key）
+    - instances: 既存の項目の、あとの版の事例（新しい項目にしない）
+    - issues_without_stop_code: 結んだ一覧の項目に停止コードがない論点（一覧にない論点も含む）
+    - issues_not_in_index: エンジンの一覧の項目と結んでいない論点
+    """
+    r = ctx['rulings']
+    idx = r['engine_unresolved_index']
+    counted = [u for u in idx if u.get('in_engine_count', True)]
+    latest = max((imp['engine_version'] for imp in r['engine_imports']), key=version_key)
+    by_issue = defaultdict(list)
+    for u in idx:
+        if u.get('kyuura_issue'):
+            by_issue[u['kyuura_issue']].append(u)
+    return {
+        'research_issues': len(r['issues']),
+        'latest_version': latest,
+        'engine_total': len(counted),
+        'engine_stop_codes': sum(1 for u in counted if u.get('stop_code')),
+        'by_import': [(imp['engine_version'], imp['engine_unresolved_total']) for imp in r['engine_imports'] if 'engine_unresolved_total' in imp],
+        'v013_items': [u['engine_key'] for u in counted if version_key(u['engine_version']) <= version_key('v0.13')],
+        'v017_additions': [u['engine_key'] for u in counted if u['engine_version'] == 'v0.17'],
+        'not_in_engine_count': [u['engine_key'] for u in idx if not u.get('in_engine_count', True)],
+        'out_of_scope': [u['engine_key'] for u in idx if u.get('disposition') == 'out_of_scope'],
+        'instances': [(u['engine_key'], i['engine_version'], i['ruling_id']) for u in idx for i in u.get('instances', [])],
+        'issues_without_stop_code': [x['id'] for x in r['issues'] if not any(u.get('stop_code') for u in by_issue.get(x['id'], []))],
+        'issues_not_in_index': [x['id'] for x in r['issues'] if x['id'] not in by_issue],
+        'stop_codes_by_issue': {x['id']: sorted({u['stop_code'] for u in by_issue.get(x['id'], []) if u.get('stop_code')}) for x in r['issues']},
+        'game_effect': Counter(x.get('audit', {}).get('game_effect') for x in r['issues']),
+    }
+
+
+def kyuura_status_by_engine_id(ctx):
+    """取り込みごとに、エンジンの裁定 id を kyuura の分類で数える（{版: Counter}）。
+
+    分類: CONFIRMED・SUPPORTED（その id に対応する裁定がそれだけ。条項・照合が加わってもよい）・CONFIRMED+SUPPORTED（部分ごとに違う）・
+    UNRESOLVED（未解決の論点に対応する部分がある）・clause_or_check（条項・照合だけ）・not_imported:<status>。
+    """
+    r = ctx['rulings']
+    uses = engine_uses(ctx)
+    status = {x['id']: x['status'] for x in r['rulings']}
+    out = {}
+    for imp in r['engine_imports']:
+        tally = Counter()
+        ni = {(x['document'], x['ruling_id']): x['status'] for x in imp.get('not_imported', [])}
+        for rs in imp.get('ruling_sets', []):
+            for rid in ruling_set_ids(rs):
+                lst = uses.get((imp['id'], rs['document'], rid), [])
+                if not lst:
+                    tally['not_imported:' + ni.get((rs['document'], rid), '?')] += 1
+                    continue
+                kinds = {status[xid] if kind == 'ruling' else 'UNRESOLVED' if kind == 'issue' else 'clause_or_check' for kind, xid, _ in lst}
+                if 'UNRESOLVED' in kinds:
+                    tally['UNRESOLVED'] += 1
+                elif {'CONFIRMED', 'SUPPORTED'} <= kinds:
+                    tally['CONFIRMED+SUPPORTED'] += 1
+                else:
+                    tally[next((k for k in ('CONFIRMED', 'SUPPORTED') if k in kinds), 'clause_or_check')] += 1
+        out[imp['engine_version']] = tally
+    return out
 
 
 def engine_mapping(ctx, import_id, document=None):
@@ -918,6 +1014,7 @@ def build(ctx):
             out.append('')
 
     # 5. 論点
+    uc = unresolved_counts(ctx)
     out += ['## 5. 未解決の論点', '',
             '公式の資料で決められない論点です。同じ問いのエンジンの裁定はまとめて 1 つの論点にし、事例（cases）として結びます。', '']
     for x in r['issues']:
@@ -941,6 +1038,14 @@ def build(ctx):
             out.append('- エンジンの未解決の裁定の一覧（8 章）には入っていない（エンジンは処理を決めている）')
         for n in x.get('notes', []):
             out.append(f'- 注: {md(n)}')
+        a = x['audit']
+        codes = uc['stop_codes_by_issue'][x['id']]
+        out += [f"- 監査（{a['audited_on']}）:",
+                f"  - 結果への影響: {md(r['game_effect_values'][a['game_effect']].split('（')[0])}。{md(a['game_effect_note'])}",
+                f"  - 解決に要る資料: {md(a['resolution_needs'])}",
+                f"  - 調べた範囲: {md(a['searched'])}",
+                '  - この監査で新しく読んだ資料: ' + ('、'.join(f"[{n['source']}] p.{n['page']}（{md(n['what'])}）" for n in a['new_sources']) or 'なし'),
+                '  - エンジンの停止: ' + ('、'.join(f'`{c}`' for c in codes) + '（8 章。停止コードは公式の裁定ではない）' if codes else 'なし（停止コードのない問い、またはエンジンの一覧にない）')]
         out.append('')
 
     # 6. 比較
@@ -1042,6 +1147,20 @@ def build(ctx):
     out.append('')
     tally = Counter(u.get('disposition') for u in idx)
     out += ['扱いの集計: ' + '、'.join(f'{DISPOSITION_SHORT.get(k, k)} {v}' for k, v in tally.items()) + '。', '']
+    out += ['### 未解決の数の区別', '',
+            'kyuura の調査の未解決（論点の数）と、エンジンの数え方（未解決の裁定・停止コード）は別の数です。どれも、ほかの数の代わりにしません。', '',
+            f"- kyuura の未解決の論点: {uc['research_issues']} 件（5 章。結果への影響: " +
+            '、'.join(f"{r['game_effect_values'][k].split('（')[0]} {v}" for k, v in uc['game_effect'].most_common()) + '）',
+            f"- エンジンが数える未解決の裁定（{uc['latest_version']} まで）: {uc['engine_total']} 件。そのうち停止コードのあるもの {uc['engine_stop_codes']} 件。"
+            '取り込みごとの数: ' + '、'.join(f'{v} {n} 件' for v, n in uc['by_import']),
+            f"  - v0.13 までの項目: {len(uc['v013_items'])} 件（{'・'.join(uc['v013_items'])}）",
+            f"  - v0.17 で加わった項目: {len(uc['v017_additions'])} 件（{'・'.join(uc['v017_additions'])}）",
+            f"- エンジンが数に入れていない項目: {len(uc['not_in_engine_count'])} 件（{'・'.join(uc['not_in_engine_count'])}。カードを延期した設計の表の問い。kyuura では論点にした）",
+            f"- 既存の項目の、あとの版の事例（新しい項目にしない）: {len(uc['instances'])} 件（" +
+            '、'.join(f'{k} → {v} の {rid}' for k, v, rid in uc['instances']) + '）',
+            f"- 取り込みの範囲の外（v0.1〜v0.4b。kyuura では論点にしていない）: {len(uc['out_of_scope'])} 件（{'・'.join(uc['out_of_scope'])}）",
+            f"- 停止コードのない論点: {len(uc['issues_without_stop_code'])} 件（{'・'.join(uc['issues_without_stop_code'])}）",
+            f"- エンジンの一覧の項目と結んでいない論点: {len(uc['issues_not_in_index'])} 件（{'・'.join(uc['issues_not_in_index'])}）", '']
     return '\n'.join(out)
 
 

@@ -275,7 +275,23 @@ def sidecar_stats():
     idx = r['engine_unresolved_index']
     print(f"  - 合計: エンジンの裁定 {total} 件")
     print(f"- エンジンの未解決の裁定の一覧: {len(idx)} 件（" + '、'.join(f'{k} {v}' for k, v in Counter(u.get('disposition') for u in idx).most_common()) +
-          f"。論点に取り込んだもの {sum(1 for u in idx if u['kyuura_issue'])}）")
+          f"。論点に結んだ項目 {sum(1 for u in idx if u['kyuura_issue'])}）")
+    import build_card_rulings as bcr  # 未解決の数の区別（kyuura の論点の数とエンジンの数を分ける）
+    ctx = bcr.load()
+    uc = bcr.unresolved_counts(ctx)
+    total = Counter()
+    print('- エンジンの裁定 id ごとの kyuura の分類（対応する記録の分類。部分ごとに違えば CONFIRMED+SUPPORTED）:')
+    for v, tally in bcr.kyuura_status_by_engine_id(ctx).items():
+        total.update(tally)
+        if tally:
+            print(f'  - {v}: ' + '、'.join(f'{k} {n}' for k, n in sorted(tally.items())))
+    print('  - 合計: ' + '、'.join(f'{k} {n}' for k, n in sorted(total.items())) + f'（{sum(total.values())} 件）')
+    print(f"- 未解決の数の区別: kyuura の論点 {uc['research_issues']} 件（結果への影響: " +
+          '、'.join(f'{k} {v}' for k, v in uc['game_effect'].most_common()) + '）。'
+          f"エンジンが数える未解決の裁定（{uc['latest_version']} まで）{uc['engine_total']} 件・そのうち停止コード {uc['engine_stop_codes']} 件"
+          f"（v0.13 まで {len(uc['v013_items'])}・v0.17 で加わった {len(uc['v017_additions'])}）。エンジンが数えていない項目 {len(uc['not_in_engine_count'])} 件、"
+          f"あとの版の事例 {len(uc['instances'])} 件、取り込みの範囲の外 {len(uc['out_of_scope'])} 件。停止コードのない論点 {len(uc['issues_without_stop_code'])} 件、"
+          f"エンジンの一覧と結んでいない論点 {len(uc['issues_not_in_index'])} 件")
 
 
 if __name__ == '__main__':

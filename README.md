@@ -71,10 +71,13 @@ for ref in notes['rulings'][0]['rule_clause_refs']:
     print(ref, clauses[ref]['section'])
 # 5. 未解決の論点（公式の資料で決められない問い）
 for q in notes['issues']:
-    print(q['id'], q['question'])
+    print(q['id'], q['question'], q['audit']['game_effect'])   # 結果への影響（監査）
 # 6. kyuura-engine の版と裁定の id から、kyuura の記録を引く（版が違えば同じ id でも別の裁定）
 print(bcr.find_engine_ruling(ctx, 'v0.6', 'R13'))   # あまごいのあとの通常のエネルギー → 未解決の論点
 print(bcr.find_engine_ruling(ctx, 'v0.13', 'S1'))   # こうらがえし（v0.7 の S1 はダメージスワップ）
+# 7. 未解決の数（kyuura の論点の数と、エンジンの未解決の裁定・停止コードの数は別の数）
+uc = bcr.unresolved_counts(ctx)
+print(uc['research_issues'], uc['engine_total'], uc['engine_stop_codes'])
 ```
 
 7. **エンジンの新しい版を取り込むとき**: `data/sidecar/rulings.json` の `engine_imports` に版ごとの記録を 1 件加え（`ENGINE-<コミットの先頭 7 桁>`。`commit`・`documents`・文書ごとの `ruling_sets`）、範囲のすべての id を記録の `engine_refs` か `not_imported`（理由つき）に結びます。最新の説明・照合・裁定は、原典のページの画像で確かめてから記録します。形式は [docs/data-schema.md の「サイドカー」](docs/data-schema.md#サイドカーdatasidecar)。

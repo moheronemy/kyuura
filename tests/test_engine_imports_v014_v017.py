@@ -407,5 +407,84 @@ class DataMismatchTest(Base):
         self.assert_detected(ctx, 'CC-PMCG2-041-P234: 照合した欄 pokemon.attacks[0].name.ja の写しが今の data/cards.json と違う')
 
 
+class UnresolvedAuditTest(Base):
+    """未解決の論点の監査（段階 G）: 論点ごとの audit と、未解決の数の区別。
+
+    kyuura の調査の未解決（論点の数）と、エンジンの数え方（未解決の裁定・停止コード）を別の数として求める。
+    22（v0.13 までのエンジンの数）を全体の数として固定しない。停止コードは公式の裁定ではないので、論点の文に書かない。
+    """
+
+    def issue(self, ctx, iid):
+        return next(x for x in ctx['rulings']['issues'] if x['id'] == iid)
+
+    def test_every_issue_is_audited(self):
+        values = self.ctx['rulings']['game_effect_values']
+        for x in self.ctx['rulings']['issues']:
+            a = x['audit']
+            self.assertIn(a['game_effect'], values, x['id'])
+            for k in ('game_effect_note', 'resolution_needs', 'searched'):
+                self.assertTrue(a[k], (x['id'], k))
+            self.assertTrue(all(n['resolves'] is False for n in a['new_sources']), x['id'])
+
+    def test_counts_are_kept_apart(self):
+        uc = bcr.unresolved_counts(self.ctx)
+        self.assertEqual(uc['research_issues'], 19)
+        self.assertEqual((uc['engine_total'], uc['engine_stop_codes']), (24, 18))  # docs/card-extensibility-verification-v0.17d.md 8 章
+        self.assertEqual(uc['by_import'], [('v0.13', 22), ('v0.17', 24)])
+        self.assertEqual(len(uc['v013_items']), 22)
+        self.assertEqual(uc['v017_additions'], ['Z9', 'Z23'])
+        self.assertEqual(uc['not_in_engine_count'], ['DR1', 'DR6', 'DR8', 'DR13'])
+        self.assertEqual(sorted(r for _, v, r in uc['instances'] if v == 'v0.17'), ['DR18', 'Z13', 'Z18', 'Z22', 'Z29'])
+        self.assertEqual(uc['issues_not_in_index'], ['UQ-PHOENIX-KO-PROCESS-ORDER'])
+        self.assertNotEqual(uc['research_issues'], uc['engine_total'])
+
+    def test_z9_result_and_ruling_are_separate(self):
+        # Z9: 今のデータで結果が変わらないこと（わるいねぞうは無色、無色の弱点・抵抗力がない）と、裁定が決まらないことを分ける（p.245・p.138・p.321）
+        a = self.issue(self.ctx, 'UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE')['audit']
+        self.assertEqual(a['game_effect'], 'game_result')
+        self.assertIn('今のデータでは結果が変わらない', a['game_effect_note'])
+        self.assertIn('裁定が決まったことではない', a['game_effect_note'])
+        self.assertEqual(bcr.unresolved_counts(self.ctx)['stop_codes_by_issue']['UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE'], [])
+
+    def test_z23_stop_code_is_only_in_the_index(self):
+        # Z23 の停止コードは一覧（engine_unresolved_index）にだけあり、論点の文（question・why_unresolved・audit）にはない（p.245・p.155）
+        x = self.issue(self.ctx, 'UQ-EFFECT-AFTER-NO-DAMAGE')
+        self.assertEqual(bcr.unresolved_counts(self.ctx)['stop_codes_by_issue'][x['id']], ['UNRESOLVED_EFFECT_AFTER_NO_DAMAGE'])
+        text = json.dumps({k: x[k] for k in ('question', 'why_unresolved', 'audit')}, ensure_ascii=False)
+        self.assertNotIn('UNRESOLVED_', text)
+
+    def test_coin_only_issues(self):
+        # 盤面が変わらないとみられる（コインの有無・順番だけ）論点。どれも論点のまま（裁定にしない）
+        rng = sorted(x['id'] for x in self.ctx['rulings']['issues'] if x['audit']['game_effect'] == 'rng_only')
+        self.assertEqual(rng, ['UQ-COIN-IN-NULLIFIED-ELEMENT', 'UQ-ENERGY-DRAIN-NO-ENERGY',
+                               'UQ-POKEMON-CHECK-SLEEP-COIN-ORDER', 'UQ-TRANSPARENCY-COIN-ORDER'])
+
+    def test_missing_audit_is_detected(self):
+        ctx = self.copy()
+        del self.issue(ctx, 'UQ-ENERGY-DRAIN-TIMING')['audit']
+        self.assert_detected(ctx, 'UQ-ENERGY-DRAIN-TIMING: audit')
+
+    def test_bad_game_effect_is_detected(self):
+        ctx = self.copy()
+        self.issue(ctx, 'UQ-ENERGY-DRAIN-TIMING')['audit']['game_effect'] = 'none'
+        self.assert_detected(ctx, 'game_effect の値が不正')
+
+    def test_resolving_source_is_rejected(self):
+        ctx = self.copy()
+        self.issue(ctx, 'UQ-EFFECT-AFTER-NO-DAMAGE')['audit']['new_sources'][0]['resolves'] = True
+        self.assert_detected(ctx, 'resolves は false')
+
+    def test_new_source_must_be_in_sources(self):
+        ctx = self.copy()
+        self.issue(ctx, 'UQ-EFFECT-AFTER-NO-DAMAGE')['audit']['new_sources'].append(
+            {'source': 'P43', 'page': '200', 'what': 'x', 'resolves': False})
+        self.assert_detected(ctx, 'new_sources のページ p.200 が sources にない')
+
+    def test_stop_code_in_resolution_needs_is_rejected(self):
+        ctx = self.copy()
+        self.issue(ctx, 'UQ-EFFECT-AFTER-NO-DAMAGE')['audit']['resolution_needs'] += '（UNRESOLVED_EFFECT_AFTER_NO_DAMAGE）'
+        self.assert_detected(ctx, 'エンジンの停止コード')
+
+
 if __name__ == '__main__':
     unittest.main()
