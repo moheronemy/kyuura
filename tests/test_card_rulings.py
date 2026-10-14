@@ -254,8 +254,9 @@ class RulingTest(Base):
         self.assertEqual(imported['C34/C35'], 'UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK')
         versions = {imp['engine_version'] for imp in self.ctx['rulings']['engine_imports']}
         for u in idx:
-            if u['engine_version'] not in versions and u['disposition'] != 'out_of_scope':
-                self.assertEqual(u['disposition'], 'not_yet_imported', u['engine_key'])  # その版を取り込む前
+            # その版を取り込む前の項目だけが not_yet_imported（取り込んだ版の項目は、論点・実装だけ・範囲外のどれか）
+            self.assertEqual(u['disposition'] == 'not_yet_imported', u['engine_version'] not in versions
+                             and u['disposition'] not in ('out_of_scope', 'issue'), u['engine_key'])
         if 'v0.10' in versions:
             self.assertEqual(imported['C18'], 'UQ-COUNTERATTACK-DOUBLE-KO')  # W24 の論点にはまとめない
         for key, version in (('G37', 'v0.11'), ('G40', 'v0.11'), ('T27', 'v0.9')):

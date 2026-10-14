@@ -914,6 +914,302 @@
    "notes": [
     "エンジンはこのカードを、ベトベトンの進化元が 2 枚あることを確かめる参照カードとしてだけ使い、ワザは実装していない。"
    ]
+  },
+  {
+   "id": "LD-PMCG3-030-PWR0",
+   "card_id": "PMCG3-030",
+   "card_name_ja": "ゴースト",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "とうめい"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "このカードがワザによるダメージや効果を受ける時、コインを投げ、「おもて」ならこのカードはダメージや効果を受けない。「ねむり・マヒ・こんらん」状態の時、この力は消える。",
+    "source_of_data": "https://nazonobasho.com/pmcg03-030-ghost/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は光沢でかすれていて全文は読めないが、600dpi・1200dpi で読める範囲で kyuura の文面と同じ。「投げ」のあとの「、」は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "このカードがワザによってダメージや効果を受けるとき、コインを投げて「おもて」なら、このカードはそのダメージと効果を受けない。このカードが「ねむり・マヒ・こんらん」状態のとき、この力は消える。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "160",
+    "pdf_page": 162,
+    "location": "ゴースト（LV.17／HP50。ポケモンカード第3弾化石の秘密。p.160 の 2 枚目）の「特殊能力」欄"
+   },
+   "also_quoted": [
+    {
+     "source": "P43",
+     "page": "159",
+     "location": "特殊能力解説「とうめい」の引用"
+    },
+    {
+     "source": "P43",
+     "page": "323",
+     "location": "公式ルール「14 ポケモンの特殊能力」の例「［とうめい］の説明」"
+    }
+   ],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "このカードがワザによるダメージや効果を受ける時、コインを投げ、",
+     "latest": "このカードがワザによってダメージや効果を受けるとき、コインを投げて",
+     "kind": "wording"
+    },
+    {
+     "printed": "「おもて」ならこのカードはダメージや効果を受けない。",
+     "latest": "「おもて」なら、このカードはそのダメージと効果を受けない。",
+     "kind": "clarification"
+    },
+    {
+     "printed": "「ねむり・マヒ・こんらん」状態の時、この力は消える。",
+     "latest": "このカードが「ねむり・マヒ・こんらん」状態のとき、この力は消える。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "ambiguous_in_print",
+   "meaning_note": "印刷の文面の「ダメージや効果を受けない」は、コインを投げたときのダメージ・効果だけか、そのワザのダメージと効果のすべてかを決めない。最新の説明は「そのダメージと効果を受けない」と書く（1 つのワザでコインを 1 回とする読み方は CR-TRANSPARENCY-ONE-COIN-PER-ATTACK。推論）。また、印刷の文面は「ねむり・マヒ・こんらん」状態がどのポケモンの状態かを書かない",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-995504E",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（「ダメージや効果を受けない」と「そのダメージと効果を受けない」）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG3-029-ATK1",
+   "card_id": "PMCG3-029",
+   "card_name_ja": "ゴース",
+   "target": {
+    "kind": "attack",
+    "index": 1,
+    "name_ja": "エナジーへんかん"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[1].text.ja",
+    "text_ja": "自分のトラッシュから最大2枚のエネルギーカードを選び、手札に加える。その後、自分に10ダメージ。",
+    "source_of_data": "https://nazonobasho.com/pmcg03-029-ghos/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "自分のトラッシュから、「エネルギーカード」を最大2枚選び出し、手札に加える。その後、自分に10ダメージ。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "158",
+    "pdf_page": 160,
+    "location": "ゴース（LV.17／HP50。ポケモンカード第3弾化石の秘密。p.158 の 1 枚目）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "自分のトラッシュから最大2枚のエネルギーカードを選び、",
+     "latest": "自分のトラッシュから、「エネルギーカード」を最大2枚選び出し、",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "語順と「エネルギーカード」のかぎかっこの違い。どちらも 0 枚を選べるかは書かない（UQ-ENERGY-CONVERSION-ZERO）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-995504E",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（言い回し。意味は同じ）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-047-ATK1",
+   "card_id": "PMCG1-047",
+   "card_name_ja": "ゴースト",
+   "target": {
+    "kind": "attack",
+    "index": 1,
+    "name_ja": "ゆめくい"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[1].text.ja",
+    "text_ja": "相手が「ねむり」状態のときだけ、ダメージをあたえる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-047-ghost/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "相手が「ねむり」状態でないとき、このワザは失敗する。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "160",
+    "pdf_page": 162,
+    "location": "ゴースト（LV.22／HP60。ポケモンカード第1弾。p.160 の 3 枚目）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "相手が「ねむり」状態のときだけ、ダメージをあたえる。",
+     "latest": "相手が「ねむり」状態でないとき、このワザは失敗する。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "unknown",
+   "meaning_note": "印刷の文面は「ダメージをあたえる」条件、最新の説明は「ワザの失敗」（p.323「12」: 失敗してもワザを使ったことになる）。このワザにはダメージ以外の要素がなく、処理が変わる場面があるかは kyuura では調べていない",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-995504E",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（実装していない。エンジンは参照カードとしてだけ使う）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-057-PWR0",
+   "card_id": "PMCG1-057",
+   "card_name_ja": "カイリキー",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "はんげき"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "カイリキーがダメージをうけたときには、かならず10ダメージを相手にあたえる。このダメージは、弱点・抵抗力の影響を受けず、常に「10」である。「ねむり・マヒ・こんらん」状態のときにはつかえない。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-056-kairiky/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない。特殊能力の見出しの「特殊／特種」（kyuura の jp_print.remarks）は、この本の図版では読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "このカードが相手のワザによってダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）ダメージを与えたポケモンに、「弱点・抵抗力」に関係なく、10ダメージ。ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は、はたらかない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "192",
+    "pdf_page": 194,
+    "location": "カイリキー（LV.67／HP100。ポケモンカード第1弾。p.192 の 2 枚目）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "カイリキーがダメージをうけたときには、かならず10ダメージを相手にあたえる。",
+     "latest": "このカードが相手のワザによってダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）ダメージを与えたポケモンに、",
+     "kind": "meaning"
+    },
+    {
+     "printed": "このダメージは、弱点・抵抗力の影響を受けず、常に「10」である。",
+     "latest": "「弱点・抵抗力」に関係なく、10ダメージ。",
+     "kind": "wording"
+    },
+    {
+     "printed": "「ねむり・マヒ・こんらん」状態のときにはつかえない。",
+     "latest": "ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は、はたらかない。",
+     "kind": "meaning"
+    }
+   ],
+   "meaning_change": "changed",
+   "meaning_note": "印刷の文面では、どのダメージ（ワザ以外のダメージ、自分のワザのダメージを含む）でもはたらき、10 ダメージを与える相手は「相手」。最新の説明は「相手のワザによって」受けたダメージに限り、「ダメージを与えたポケモン」に与え、きぜつしてもはたらき、特殊状態を「ダメージを受けるとき」に見る。印刷の文面のままでは、カイリキーどうしではんげきが終わらない（エンジンの報告）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-43EC8BA",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（発生源・きぜつ・与える相手・特殊状態を判定する時点。意味が違う。最新の説明にしたがう）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-055-ATK0",
+   "card_id": "PMCG1-055",
+   "card_name_ja": "ゴーリキー",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "からてチョップ"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "自分のダメージカウンター×10だけ、相手にあたえるダメージがへる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-055-goriky/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "このワザのダメージは、自分にのっているダメージカウンターの数×10だけ、小さくなる。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "190",
+    "pdf_page": 192,
+    "location": "ゴーリキー（LV.40／HP80。ポケモンカード第1弾。p.190 の 3 枚目）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "自分のダメージカウンター×10だけ、相手にあたえるダメージがへる。",
+     "latest": "このワザのダメージは、自分にのっているダメージカウンターの数×10だけ、小さくなる。",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "どちらも、のっているダメージカウンターの数×10 を引く。どの計算の段階で引くかは、どちらの文面も書かない（CR-KARATE-CHOP-DAMAGE）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-43EC8BA",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（言い回し。意味は同じ）"
+    }
+   ],
+   "notes": []
   }
  ]
 }
