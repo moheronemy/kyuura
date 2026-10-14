@@ -356,5 +356,18 @@
     "P43"
    ]
   }
+ ],
+ "PMCG6-023": [
+  {
+   "kind": "text",
+   "summary": "ポケモンパワー だつりょくえき（Energy Drain）: ダメージを与えたポケモンにエネルギーカードがないときの扱いを、英語版だけが書いている",
+   "ja": "印刷の文面（ポケモンWiki の転記）と『ポケモンカードオフィシャルブック2000』p.49 の最新の説明は「コインを投げて「おもて」なら、ダメージを与えたポケモンについている「エネルギーカード」を1枚選び、トラッシュする」で、エネルギーカードがないときの記述がない。そのときにコインを投げるかは、日本版の資料では決まっていない（kyuura の未解決の論点 UQ-ENERGY-DRAIN-NO-ENERGY）",
+   "en": "「flip a coin. If heads and if it has any, choose 1 Energy card attached to the attacking Pokémon and discard it.」と、エネルギーカードがあるときだけ選んでトラッシュすると書く。英語版の文面は、日本版の処理の根拠にしていない",
+   "confidence": "確実",
+   "sources": [
+    "N2",
+    "P43"
+   ]
+  }
  ]
 }

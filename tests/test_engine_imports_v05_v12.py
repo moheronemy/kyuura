@@ -360,11 +360,42 @@ class BreakageTest(Base):
 class ProtectedDataTest(Base):
     """取り込みで変えないファイル（L 段階）と、エンジンの写しとの比較。"""
 
+    # v0.17 の取り込みのデータの調査（2026-10-14）で、data/curation/ から作り直して直したカードと欄だけ。ほかは bcf38c7 と同じ
+    CORRECTED = {
+        'PMCG2-041': {'.pokemon.attacks[0].name.ja', '.jp_print.level', '.ja_text_source', '.notes'},  # ベロリンガ（p.234。CC-PMCG2-041-P234）
+        'PMCG6-023': {'.jp_en_differences'},  # キョウのベトベトンの日英の文面の違い（英語版の「if it has any」）
+    }
+
     def test_protected_files_are_unchanged_since_v013_import(self):
-        # v0.13 の取り込みのコミット（bcf38c7）と同じであること
+        # v0.13 の取り込みのコミット（bcf38c7）と同じであること（カードのデータは、CORRECTED の欄だけが違う）
         for path in PROTECTED:
+            if path in ('data/cards.json', 'data/cards.csv', 'data/attacks.csv'):
+                continue
             out = subprocess.run(['git', '-C', str(ROOT), 'diff', '--quiet', 'bcf38c7', '--', path])
             self.assertEqual(out.returncode, 0, path)
+        old = json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', 'bcf38c7:data/cards.json'], capture_output=True, text=True, check=True).stdout)
+        new = json.loads((ROOT / 'data' / 'cards.json').read_text(encoding='utf-8'))
+        self.assertEqual({k: v for k, v in old.items() if k != 'cards'}, {k: v for k, v in new.items() if k != 'cards'})
+        before = {c['id']: c for c in old['cards']}
+        after = {c['id']: c for c in new['cards']}
+        self.assertEqual(sorted(before), sorted(after))
+
+        def changed(x, y, path=''):
+            if isinstance(x, dict) and isinstance(y, dict):
+                for k in set(x) | set(y):
+                    yield from changed(x.get(k), y.get(k), f'{path}.{k}')
+            elif isinstance(x, list) and isinstance(y, list) and len(x) == len(y) and x and isinstance(x[0], dict):
+                for i, (a, b) in enumerate(zip(x, y)):
+                    yield from changed(a, b, f'{path}[{i}]')
+            elif x != y:
+                yield path
+        for cid in before:
+            self.assertEqual(set(changed(before[cid], after[cid])), self.CORRECTED.get(cid, set()), cid)
+        for path in ('data/cards.csv', 'data/attacks.csv'):
+            old_lines = set(subprocess.run(['git', '-C', str(ROOT), 'show', f'bcf38c7:{path}'], capture_output=True, text=True, check=True).stdout.splitlines())
+            new_lines = set((ROOT / path).read_text(encoding='utf-8').splitlines())
+            for line in old_lines ^ new_lines:
+                self.assertIn(line.split(',')[0], self.CORRECTED, (path, line[:60]))
 
     def test_card_json_has_no_sidecar_fields(self):
         text = (ROOT / 'data' / 'cards.json').read_text(encoding='utf-8')

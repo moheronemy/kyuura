@@ -50,7 +50,7 @@
 | 38 | オニドリル | ポケモン | 無色 | 1進化 | 70 | ◆ | Fearow<br>Jungle 36 | 再録: BS2 41、LC 42 |
 | 39 | ペルシアン | ポケモン | 無色 | 1進化 | 70 | ◆ | Persian<br>Jungle 42 | 再録: BS2 56 |
 | 40 | ドードリオ | ポケモン | 無色 | 1進化 | 70 | ◆ | Dodrio<br>Jungle 34 | 再録: BS2 37、LC 41 |
-| 41 | ベロリンガ | ポケモン | 無色 | たね | 90 | ◆ | Lickitung<br>Jungle 38 | 再録: BS2 48 |
+| 41 | ベロリンガ | ポケモン | 無色 | たね | 90 | ◆ | Lickitung<br>Jungle 38 | なぞのばしょは 1 つめのワザ名を「したでなめる」、レベルを「29」と誤記している。『ポケモンカードオフィシャルブック2000』p.234 の見出し・図版は「LV.26」、図版と「ワザ」欄のワザ名は「まきつくベロ」（英語版 Jungle 38 も LV.26・Tongue Wrap）。kyuura で 600dpi の画像で確かめた（data/sidecar/card_checks.json の CC-PMCG2-041-P234）<br>再録: BS2 48 |
 | 42 | ケンタロス | ポケモン | 無色 | たね | 60 | ◆ | Tauros<br>Jungle 47 | 再録: BS2 62、LC 65 |
 | 43 | ピジョット | ポケモン | 無色 | 2進化 | 80 | ★キラ | Pidgeot<br>Jungle 8・24 | 再録: BS2 14、LC 33 |
 | 44 | ピクシー | ポケモン | 無色 | 1進化 | 70 | ★キラ | Clefable<br>Jungle 1・17 | 日英の違い: ワザ ゆびをふる（Metronome）でコピーしたワザの条件<br>再録: BS2 5 |
@@ -645,16 +645,17 @@
 
 ### 41. ベロリンガ / Lickitung
 
-たね／LV.29／無色／HP 90／弱点 闘×2／抵抗力 超-30／にげる 3／レア ◆
+たね／LV.26／無色／HP 90／弱点 闘×2／抵抗力 超-30／にげる 3／レア ◆
 
 英語版: Jungle 38
 
 | ワザ | エネルギー | ダメージ | 効果 |
 |---|---|---:|---|
-| したでなめる / Tongue Wrap | 無 | 10 | 日本語: コインを投げて「おもて」なら、相手を「マヒ」状態にする。 英語: Flip a coin. If heads, the Defending Pokémon is now Paralyzed. |
+| まきつくベロ / Tongue Wrap | 無 | 10 | 日本語: コインを投げて「おもて」なら、相手を「マヒ」状態にする。 英語: Flip a coin. If heads, the Defending Pokémon is now Paralyzed. |
 | ちょうおんぱ / Supersonic | 無無 |  | 日本語: コインを投げて「おもて」なら、相手を「こんらん」状態にする。 英語: Flip a coin. If heads, the Defending Pokémon is now Confused. |
 
-- 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/pmcg02-043-beroringa/)
+- 日本語テキストの出典: 『ポケモンカードオフィシャルブック2000』p.234 [P43]（スキャン [J38]）の図版と「ワザ」欄（ワザ名・LV）。効果文は なぞのばしょ（https://nazonobasho.com/pmcg02-043-beroringa/）と同じで、同じページの図版・最新の説明とも合う
+- 備考: なぞのばしょは 1 つめのワザ名を「したでなめる」、レベルを「29」と誤記している。『ポケモンカードオフィシャルブック2000』p.234 の見出し・図版は「LV.26」、図版と「ワザ」欄のワザ名は「まきつくベロ」（英語版 Jungle 38 も LV.26・Tongue Wrap）。kyuura で 600dpi の画像で確かめた（data/sidecar/card_checks.json の CC-PMCG2-041-P234）
 - 日本版の収録商品: ポケモンジャングル
 
 ### 42. ケンタロス / Tauros

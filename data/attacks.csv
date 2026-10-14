@@ -185,7 +185,7 @@ PMCG2-038,2,ドリルくちばし,Drill Peck,colorless colorless colorless color
 PMCG2-039,1,ひっかく,Scratch,colorless colorless,2,20,,20,,
 PMCG2-039,2,かみつく,Pounce,colorless colorless colorless,3,30,,30,「かみつく」を受けた【相手】は、このカードにワザを使う時、あたえるダメージが10へる。この状態は次の自分の番の始めに消える。,"If the Defending Pokémon attacks Persian during your next turn, any damage done by the attack is reduced by 10 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)"
 PMCG2-040,1,いかり,Rage,colorless colorless colorless,3,10,+,10+,自分にのっているダメージカウンター×10のダメージを追加する。,Does 10 damage plus 10 more damage for each damage counter on Dodrio.
-PMCG2-041,1,したでなめる,Tongue Wrap,colorless,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PMCG2-041,1,まきつくベロ,Tongue Wrap,colorless,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
 PMCG2-041,2,ちょうおんぱ,Supersonic,colorless colorless,2,,,,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
 PMCG2-042,1,ふみつけ,Stomp,colorless colorless,2,20,+,20+,コインを投げて「おもて」なら、10ダメージ追加する。,"Flip a coin. If heads, this attack does 20 damage plus 10 more damage; if tails, this attack does 20 damage."
 PMCG2-042,2,いかりくるう,Rampage,colorless colorless colorless,3,20,+,20+,自分にのっているダメージカウンター×10のダメージを追加する。その後、コインを投げて「うら」なら、【自分】は「こんらん」状態になる。,"Does 20 damage plus 10 more damage for each damage counter on Tauros. Flip a coin. If tails, Tauros is now Confused (after doing damage)."

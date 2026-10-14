@@ -32,7 +32,7 @@
 | 20 | サカキのニドクイン | ポケモン | 草 | 2進化 | 100 | ★ | Giovanni's Nidoqueen<br>Gym Challenge 23 |  |
 | 21 | サカキのニドキング | ポケモン | 草 | 2進化 | 120 | ★キラ | Giovanni's Nidoking<br>Gym Challenge 7 |  |
 | 22 | ナツメのモルフォン | ポケモン | 草 | 1進化 | 60 | ★ | Sabrina's Venomoth<br>Gym Heroes 34 ⚠ |  |
-| 23 | キョウのベトベトン | ポケモン | 草 | 1進化 | 80 | ★ | Koga's Muk<br>Gym Challenge 26 |  |
+| 23 | キョウのベトベトン | ポケモン | 草 | 1進化 | 80 | ★ | Koga's Muk<br>Gym Challenge 26 | 日英の違い: ポケモンパワー だつりょくえき（Energy Drain）: ダメージを与えたポケモンにエネルギーカードがないときの扱いを、英語版だけが書いている |
 | 24 | サカキのカイロス | ポケモン | 草 | たね | 70 | ★ | Giovanni's Pinsir<br>Gym Challenge 24 |  |
 | 25 | カツラのヒトカゲ | ポケモン | 炎 | たね | 50 | ● | Blaine's Charmander<br>Gym Heroes 61 ⚠ |  |
 | 26 | カツラのロコン | ポケモン | 炎 | たね | 40 | ● | Blaine's Vulpix<br>Gym Heroes 65 ⚠ |  |
@@ -495,6 +495,7 @@ Gym Challenge にあって、日本版の本弾に収録されていないカー
 | ヘドロのうず / Sludge Whirlpool | 草草無 | 40 |  |
 
 - 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%82%AD%E3%83%A7%E3%82%A6%E3%81%AE%E3%83%99%E3%83%88%E3%83%99%E3%83%88%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0))
+- **日英の違い（ポケモンパワー だつりょくえき（Energy Drain）: ダメージを与えたポケモンにエネルギーカードがないときの扱いを、英語版だけが書いている、確度: 確実）** 日本版: 印刷の文面（ポケモンWiki の転記）と『ポケモンカードオフィシャルブック2000』p.49 の最新の説明は「コインを投げて「おもて」なら、ダメージを与えたポケモンについている「エネルギーカード」を1枚選び、トラッシュする」で、エネルギーカードがないときの記述がない。そのときにコインを投げるかは、日本版の資料では決まっていない（kyuura の未解決の論点 UQ-ENERGY-DRAIN-NO-ENERGY） ／ 英語版: 「flip a coin. If heads and if it has any, choose 1 Energy card attached to the attacking Pokémon and discard it.」と、エネルギーカードがあるときだけ選んでトラッシュすると書く。英語版の文面は、日本版の処理の根拠にしていない
 - 日本版の収録商品: 闇からの挑戦
 
 ### 24. サカキのカイロス / Giovanni's Pinsir
