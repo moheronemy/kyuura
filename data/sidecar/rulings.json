@@ -101,6 +101,14 @@
      "ruling_id": "M12",
      "part": "サカキのカイリキーは「サカキのゴーリキーから進化」なので、ゴーリキーからは進化できない",
      "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L14",
+     "part": "サカキのワンリキー → サカキのゴーリキー → サカキのカイリキー。第1弾のワンリキー系統とはたがいに進化できない",
+     "engine_classification": "CONFIRMED"
     }
    ]
   },
@@ -482,6 +490,14 @@
      "part": "エナジートランス・あまごいと同じ番に使える",
      "engine_classification": "CONFIRMED（ディフェンダー・とりのぞく）・SUPPORTED（ほかのパワーとの関係）",
      "engine_note": "エンジンはこの部分を SUPPORTED とするが、p.311 の「1回の自分の番の中で、複数のポケモンが特殊能力の使用を宣言してもかまいません」がそのまま当てはまる"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P33",
+     "part": "ふしちょうの使用を決めている間は、ほかのことはできない（宣言したら、すべてすませてからでないと他のことはできない）",
+     "engine_classification": "CONFIRMED"
     }
    ]
   },
@@ -541,6 +557,14 @@
      "document": "docs/machamp-line-v0.10.md",
      "ruling_id": "M3",
      "part": "説明文のないワザ（ちきゅうなげ・けたぐり）は、目安の数字ぶんのダメージだけ",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L2",
+     "part": "チョップは説明文のないワザ（10）",
      "engine_classification": "CONFIRMED"
     }
    ]
@@ -3517,6 +3541,22 @@
       "index": 0,
       "name_ja": "はんげき"
      }
+    },
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    },
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
     }
    ],
    "related_cards": [],
@@ -3584,7 +3624,9 @@
     "LD-PMCG1-049-PWR0",
     "LD-PMCG3-007-PWR0",
     "LD-PMCG3-030-PWR0",
-    "LD-PMCG1-057-PWR0"
+    "LD-PMCG1-057-PWR0",
+    "LD-PMCG6-061-PWR0",
+    "LD-PMCG5-020-PWR0"
    ],
    "related_rulings": [
     "CR-POWER-STATUS-BY-DESCRIPTION"
@@ -3632,6 +3674,20 @@
      "engine_version": "v0.10",
      "document": "docs/counterattack-v0.10.md",
      "ruling_id": "C22",
+     "engine_classification": "SUPPORTED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G28",
+     "engine_classification": "SUPPORTED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P16",
      "engine_classification": "SUPPORTED"
     }
    ],
@@ -3690,6 +3746,22 @@
       "index": 0,
       "name_ja": "はんげき"
      }
+    },
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    },
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
     }
    ],
    "related_cards": [],
@@ -3724,7 +3796,9 @@
     "LD-PMCG1-049-PWR0",
     "LD-PMCG3-007-PWR0",
     "LD-PMCG3-030-PWR0",
-    "LD-PMCG1-057-PWR0"
+    "LD-PMCG1-057-PWR0",
+    "LD-PMCG6-061-PWR0",
+    "LD-PMCG5-020-PWR0"
    ],
    "related_rulings": [
     "CR-POWER-POISON-ONLY",
@@ -4753,6 +4827,14 @@
       "index": 0,
       "name_ja": "あくむ"
      }
+    },
+    {
+     "card_id": "PMCG6-059",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "じごくがため"
+     }
     }
    ],
    "related_cards": [],
@@ -4843,11 +4925,19 @@
      "ruling_id": "H12",
      "part": "ダメージできぜつしたら、ねむりにしない",
      "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L11",
+     "part": "きぜつした相手はマヒにしない",
+     "engine_classification": "CONFIRMED"
     }
    ],
    "notes": [],
    "reclassification": {
-    "from": "CONFIRMED（エンジンの I4・K1・K9・M8・H1・H12）",
+    "from": "CONFIRMED（エンジンの I4・K1・K9・M8・H1・H12・L11）",
     "to": "SUPPORTED",
     "reason": "きぜつの時点（HP 以上のダメージを受けた時点で「処理の対象がなくなって」いるか）が規定に書かれておらず、読み方の選択がある。v0.13 の取り込みでも同じ読み方を SUPPORTED にした（CR-SHELL-ATTACK-KO-ATTACKER-OWN-EFFECTS など）ので、分類をそろえた"
    }
@@ -5608,7 +5698,9 @@
      }
     }
    ],
-   "related_cards": [],
+   "related_cards": [
+    "PMCG5-020"
+   ],
    "question": "移動先のポケモンがきぜつするようにのせかえられるか",
    "conclusion": "のせかえられない。のせたあとのダメージがそのポケモンの HP と同じか大きくなるのせかえはできない（残り HP が 10 のポケモンには 1 個ものせられない）。HP はいまそのポケモンを表すカード（進化しているならいちばん上の進化カード）の HP。この力ではきぜつしないので、使ったあとにきぜつ・サイドの処理は起こらない",
    "status": "CONFIRMED",
@@ -5702,6 +5794,14 @@
      "ruling_id": "S24",
      "part": "この力ではきぜつしないので、きぜつ・サイドの処理はない",
      "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P10",
+     "part": "ダメージスワップで R団のファイヤーがきぜつすることはない（ふしちょうの原因にならない）",
+     "engine_classification": "CONFIRMED（v0.7。p.153「この力によってポケモンが「きぜつ」しないかぎり」）"
     }
    ],
    "notes": []
@@ -6941,6 +7041,22 @@
       "index": 0,
       "name_ja": "ダメージスワップ"
      }
+    },
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    },
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
     }
    ],
    "related_cards": [],
@@ -6963,7 +7079,9 @@
     "LD-PMCG3-007-PWR0",
     "LD-PMCG1-011-PWR0",
     "LD-PMCG1-032-PWR0",
-    "LD-PMCG1-049-PWR0"
+    "LD-PMCG1-049-PWR0",
+    "LD-PMCG6-061-PWR0",
+    "LD-PMCG5-020-PWR0"
    ],
    "related_rulings": [],
    "engine_refs": [
@@ -6986,6 +7104,20 @@
      "engine_version": "v0.8",
      "document": "docs/chemical-gas-v0.8.md",
      "ruling_id": "G24",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G31",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P18",
      "engine_classification": "CONFIRMED"
     }
    ],
@@ -8842,6 +8974,14 @@
       "index": 1,
       "name_ja": "じごくぐるま"
      }
+    },
+    {
+     "card_id": "PMCG6-059",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "いちかばちか"
+     }
     }
    ],
    "related_cards": [],
@@ -8863,9 +9003,17 @@
      "location": "p.320「ワザの要素」",
      "quote": "(3) このワザを使うポケモンへのダメージ。",
      "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "191",
+     "location": "サカキのゴーリキーの解説（いちかばちか）",
+     "quote": "きぜつしないためには「ディフェンダー」を2枚つけてようやくですから",
+     "checked": "kyuura_image"
     }
    ],
-   "inference": "p.321 の計算の順番は、ワザを受けるポケモンへのダメージについて書かれている。ワザを使うポケモン自身へのダメージも「ワザによるダメージ」（CR-SELF-DAMAGE-IS-ATTACK-DAMAGE）なので、同じ順番で、受けるポケモン（自分自身）の弱点・抵抗力などを計算すると読んだ。自分へのダメージの計算をそのまま書いた文は、kyuura が確かめたページにはない",
+   "inference": "p.321 の計算の順番は、ワザを受けるポケモンへのダメージについて書かれている。ワザを使うポケモン自身へのダメージも「ワザによるダメージ」（CR-SELF-DAMAGE-IS-ATTACK-DAMAGE）なので、同じ順番で、受けるポケモン（自分自身）の弱点・抵抗力などを計算すると読んだ。p.191 の解説（いちかばちかで自分が受ける 100 ダメージは、ディフェンダー 2 枚でようやくきぜつしない）は、自分へのダメージにディフェンダーを計算する例だが、弱点・抵抗力を計算する例は kyuura が確かめたページには見つかっていない",
    "rule_clause_refs": [
     "GR-2000-P321-DAMAGE-ORDER"
    ],
@@ -8889,6 +9037,13 @@
      "ruling_id": "M9",
      "part": "計算（自分の弱点・抵抗力・プラスパワー・ディフェンダー）",
      "engine_classification": "CONFIRMED（ワザによるダメージ）・SUPPORTED（計算。v0.2f・v0.3d のまま）"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L8",
+     "engine_classification": "SUPPORTED"
     }
    ],
    "notes": [
@@ -10199,6 +10354,3328 @@
     }
    ],
    "notes": []
+  },
+  {
+   "id": "CR-POWER-DECLARED-BY-USE-WORDING",
+   "topic": "決められたときに使う特殊能力（こんじょう・ふしちょうに共通）",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    },
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "「…とき、使える」と書かれたこんじょう・ふしちょうは、使用を宣言して使う特殊能力か",
+   "conclusion": "宣言して使う特殊能力。使えるのは説明に書かれたとき（こんじょうは相手のワザによるダメージできぜつするとき、ふしちょうはきぜつしたとき）だけ",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "この力は、相手のワザによるダメージで、このカードが「きぜつ」するとき、使える。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "この力は、このカードが「きぜつ」したとき、使える。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.311「ポケモンの特殊能力を使う」",
+     "quote": "特殊能力の中には、決められたときにしか使用を宣言できないものもあります。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "192",
+     "location": "カイリキーの最新の説明（自動的にはたらく特殊能力の書き方の例）",
+     "quote": "この力は、はたらかない。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "2 つの説明は「使える」「使えない」と書き、自動的にはたらく特殊能力（はんげき・とうめい）は「はたらく」「はたらかない」「消える」と書く。そこで、決められたときにしか使用を宣言できない特殊能力（p.311）と読んだ。どちらの種類かを直接書いた文はない",
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0",
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [
+    "CR-POWER-OPTIONAL-DECLARATION"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G1",
+     "engine_classification": "SUPPORTED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P1",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": [
+    "エンジンは p.100［にげこむ］・p.188 の解説も挙げる。kyuura ではこれらのページを確かめていない（根拠にしていない）。"
+   ]
+  },
+  {
+   "id": "CR-POWER-OPTIONAL-DECLARATION",
+   "topic": "決められたときに使う特殊能力（こんじょう・ふしちょうに共通）",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    },
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "こんじょう・ふしちょうを使える場面で、使わないことを選べるか",
+   "conclusion": "選べる（使うかは持ち主が決める）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.311「ポケモンの特殊能力を使う」",
+     "quote": "かならずしも特殊能力の使用を宣言する必要はありません。特殊能力の使用を宣言するかどうかは、プレイヤーの判断で決めることができます。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "82",
+     "location": "R団のファイヤーの解説",
+     "quote": "きぜつしたときに使うことのできる特殊能力です。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "こんじょう・ふしちょうを、使用を宣言して使う特殊能力と読む（CR-POWER-DECLARED-BY-USE-WORDING。推論）ことを前提に、p.311 の「宣言するかどうかは、プレイヤーの判断で決める」を当てはめた。強制と読む記述は見つからない",
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0",
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [
+    "CR-POWER-DECLARED-BY-USE-WORDING"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G10",
+     "engine_classification": "SUPPORTED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P2",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": [
+    "公式の資料に新しい根拠が見つかるまで SUPPORTED のままにする（p.311 の規定は宣言して使う特殊能力の規定で、こんじょう・ふしちょうがそれにあたるかが推論）。"
+   ]
+  },
+  {
+   "id": "CR-GUTS-ONLY-WHEN",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "説明に書かれたとき以外に、こんじょうを使えるか",
+   "conclusion": "使えない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "この力は、相手のワザによるダメージで、このカードが「きぜつ」するとき、使える。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.311「ポケモンの特殊能力を使う」",
+     "quote": "特殊能力の中には、決められたときにしか使用を宣言できないものもあります。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G41",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-SOURCE",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "どのダメージできぜつするときに使えるか",
+   "conclusion": "相手のワザによるダメージできぜつするときだけ。自分のワザ（自分へのダメージ・こんらんの 20）、ポケモンチェックの「どく」のダメージでは使えない。ダメージカウンターの移動は「ダメージを受けた」ことにならない（そもそも、きぜつさせる移動はできない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "相手のワザによるダメージで、このカードが「きぜつ」するとき",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "193",
+     "location": "解説",
+     "quote": "［こんじょう］の効果はワザのダメージできぜつした場合にのみはたらきますので、どくのダメージによる場合などには効果ありません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ダメージカウンターの移動」",
+     "quote": "ダメージカウンターが移動してダメージが増えても、それは「ダメージを受けた」ことにはなりません。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P321-ATTACK-DAMAGE",
+    "GR-2000-P320-COUNTER-MOVE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [
+    "CR-DAMAGE-SWAP-NO-KNOCKOUT"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G3",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G4",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G6",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G7",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-VS-COUNTERATTACK",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG1-057"
+   ],
+   "question": "はんげき（特殊能力）のダメージできぜつするときに使えるか",
+   "conclusion": "使えない（はんげきのダメージは相手のワザによるダメージではない）。ワザでカイリキーが、はんげきでサカキのカイリキーがきぜつする場合の同時のきぜつの問い（UQ-COUNTERATTACK-DOUBLE-KO）は、こんじょうでは解決しない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "相手のワザによるダメージで",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "はんげきのダメージを、ワザによるダメージではなく特殊能力によるダメージと読む（CR-COUNTERATTACK-IS-POWER-DAMAGE。推論）ことを前提にした",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0",
+    "LD-PMCG1-057-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-IS-POWER-DAMAGE",
+    "UQ-COUNTERATTACK-DOUBLE-KO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G5",
+     "engine_classification": "SUPPORTED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G39",
+     "engine_classification": "SUPPORTED（G5）・UNRESOLVED（C18 のまま）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-BENCH",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ベンチのサカキのカイリキーが、相手のワザのダメージできぜつするときも使えるか",
+   "conclusion": "使える（場所の制限はない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「14 ポケモンの特殊能力」",
+     "quote": "特に記述されていないかぎり、ベンチにいるポケモンも特殊能力を使うことができます。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "この力は、相手のワザによるダメージで、このカードが「きぜつ」するとき、使える。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G8",
+     "engine_classification": "SUPPORTED（規定）・未到達",
+     "engine_note": "エンジンの対応カードには、ベンチにダメージを与えるワザがない（未到達）"
+    }
+   ],
+   "notes": [],
+   "reclassification": {
+    "from": "SUPPORTED（エンジンの G8）",
+    "to": "CONFIRMED",
+    "reason": "p.311・p.323 の「特に記述されていないかぎり、ベンチにいるポケモンも特殊能力を使うことができます」がそのまま当てはまり、説明に場所の制限がない（エンジンもはんげき（C9）では同じ理由で CONFIRMED にしている）"
+   }
+  },
+  {
+   "id": "CR-GUTS-ANY-NUMBER",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "1 つの番・1 つの対戦で何回使えるか",
+   "conclusion": "回数の制限はない。相手のワザのダメージできぜつするたびに使える",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "193",
+     "location": "解説",
+     "quote": "うまくいけば何回もきぜつをまぬがれることができるかもしれません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「14 ポケモンの特殊能力」",
+     "quote": "特に記述されていないかぎり、特殊能力はいつでも、何度でも使用を宣言することができます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "解説の「何回も」と、特殊能力は特に指示されていないかぎり何度でも使えること（p.323）から読んだ。1 つの番に相手のワザは 1 回なので、1 つの番に使うのは 1 回まで",
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G9",
+     "engine_classification": "SUPPORTED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G24",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-TIMING",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "こんじょうを使う（使うかを決める）時点",
+   "conclusion": "ワザの要素（相手へのダメージ・ワザを使うポケモンのコインや自分へのダメージ・はんげき）をすべて処理したあとの、きぜつの判定（HP 以上のダメージ）のとき。きぜつの処理（トラッシュ・サイド・バトル場に出す）の前で、こんじょうのコインはワザのコインのあと",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "「きぜつ」するとき、使える。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309「ワザを使う」",
+     "quote": "ワザを使っている最中に、トレーナーカードを使ったり、特殊能力の使用を宣言してはいけません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324「16 ポケモンの「きぜつ」」の続き",
+     "quote": "1つのワザや特殊能力などによって引き起こされることがらによって複数のポケモンが「きぜつ」した場合、それらのポケモンは「同時に『きぜつ』した」ことになります。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "「きぜつ」する「とき」を、きぜつしたあと（トラッシュのあと）ではなく、きぜつの処理の前と読んだ。ワザの最中は特殊能力の使用を宣言できない（p.309）ので、ワザの要素をすべて処理したあとと読んだ。ワザのダメージを受けた直後に使う読み方は採らない（この選択が UQ-GUTS-ATTACK-EFFECT に関わる）",
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE",
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [
+    "UQ-GUTS-ATTACK-EFFECT"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G2",
+     "engine_classification": "SUPPORTED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G12",
+     "engine_classification": "SUPPORTED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G32",
+     "engine_classification": "SUPPORTED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G42",
+     "engine_classification": "SUPPORTED（G2）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-NOT-USED",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "こんじょうを使わないとき",
+   "conclusion": "宣言せず、コインも投げない。ふつうにきぜつする（トラッシュ・サイド・バトル場に出す）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.311「ポケモンの特殊能力を使う」（使うときの順番 1〜3）",
+     "quote": "特殊能力を使うポケモンを相手プレイヤーに示し、特殊能力の名前を相手プレイヤーに伝えることで、特殊能力の使用を宣言します。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「16 ポケモンの「きぜつ」」",
+     "quote": "ポケモンがもっているHP以上のダメージを受けると、ポケモンは「きぜつ」してトラッシュに置かれます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS",
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [
+    "CR-POWER-OPTIONAL-DECLARATION"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G11",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-PROCEDURE",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "こんじょうを使うときの手順",
+   "conclusion": "サカキのカイリキーの持ち主（ワザを使われた側のプレイヤー）が使用を宣言し、そのあとでコインを 1 枚投げる（宣言 → 条件 → 処理。宣言はコインの前）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.311「ポケモンの特殊能力を使う」（使うときの順番 1〜3）",
+     "quote": "使用を宣言した特殊能力の説明にしたがって、その内容を処理します。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "コインを投げて「おもて」なら",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [
+    "CR-GUTS-WHO-FLIPS"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G13",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G17",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G15",
+     "part": "宣言するのは持ち主",
+     "engine_classification": "CONFIRMED（宣言）・SUPPORTED（コイン）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-WHO-FLIPS",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "こんじょうのコインはだれが投げるか",
+   "conclusion": "サカキのカイリキーの持ち主（ワザを使われた側のプレイヤー）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "コインを投げて「おもて」なら",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "160",
+     "location": "ゴーストの解説（とうめい）",
+     "quote": "コイントスは［とうめい］を使う「ゴースト」側のプレイヤーがします。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "コインをだれが投げるかはこんじょうについて書かれておらず、p.160 のとうめいの例（特殊能力を持つ側のプレイヤーが投げる）を当てはめた",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [
+    "CR-TRANSPARENCY-WHO-FLIPS",
+    "CR-GUTS-PROCEDURE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G15",
+     "part": "コインを投げるのも持ち主",
+     "engine_classification": "CONFIRMED（宣言）・SUPPORTED（コイン）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-ONCE-PER-KO",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "使わなかった・「うら」が出たあと、同じきぜつの判定でもう一度使えるか",
+   "conclusion": "使えない（1 回のきぜつの判定で 1 回）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "193",
+     "location": "解説",
+     "quote": "コイントスをして表ならきぜつしなくてすむのです。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.311「ポケモンの特殊能力を使う」",
+     "quote": "特殊能力の使用を宣言したら、それによって起こることをすべてすませてからでないと、他のことはできません。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "決められたとき（そのきぜつ）は、1 回決めたら過ぎていると読んだ。解説も 1 回のコインを書く",
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G14",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-COIN-RESULT",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "こんじょうのコインの結果",
+   "conclusion": "「おもて」なら、きぜつせず、残り HP が 10 になる（HP をどれだけ超えるダメージでも 10）。「うら」なら何も起こらず、ふつうにきぜつする（トラッシュ・サイド・バトル場に出す）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "コインを投げて「おもて」なら、このカードは「きぜつ」せず、このカードの残りHPが「10」になる。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「16 ポケモンの「きぜつ」」",
+     "quote": "ポケモンがもっているHP以上のダメージを受けると、ポケモンは「きぜつ」してトラッシュに置かれます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G18",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G19",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G23",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G34",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-REMAINING-HP",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "「残りHPが「10」になる」とき、ダメージはどうなるか",
+   "conclusion": "ダメージを 0 にするのではなく、残り HP が 10 になる（のっているダメージは HP − 10、ダメージカウンターは (HP − 10) ÷ 10 個。HP 100 なら 9 個）。HP は、いまそのポケモンを表すカード（いちばん上の進化カード）の HP",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "このカードの残りHPが「10」になる。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.319「ダメージカウンター」",
+     "quote": "ダメージカウンター1個につき、10ダメージを受けていることを表します。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.310「場にいるポケモンを進化させる」の手順 2",
+     "quote": "進化前のポケモンのカードに書かれている内容のすべては無効となり、進化カードに書かれている内容が、そのポケモンを表す内容となります。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P319-HP-AND-DAMAGE",
+    "GR-2000-P310-EVOLUTION"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G20",
+     "engine_classification": "CONFIRMED（残り HP = HP − ダメージ）・SUPPORTED（いちばん上のカード。v0.4a）"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G21",
+     "engine_classification": "CONFIRMED",
+     "engine_note": "エンジンは p.285 の解説も挙げる。kyuura では p.285 を確かめていない。残り HP を 10 にすることを、ダメージカウンターを「とりのぞく」（回復）とみなすかは、kyuura では判断していない"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-DAMAGE-STILL-RECEIVED",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "「おもて」できぜつしなかったとき、そのワザのダメージを受けたことになるか",
+   "conclusion": "なる（こんじょうはダメージを無効にするのではない）。そのワザの「与えたダメージ」も変わらない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "193",
+     "location": "解説",
+     "quote": "きぜつするだけのダメージを受けてもコイントスをして表ならきぜつしなくてすむのです。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321 冒頭（「ダメージを受けない」状態の規定）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "解説は「ダメージを受けても」と書き、説明も「「きぜつ」せず」と書く。「ダメージを受けない」効果（p.321）とは書き方が違うので、ダメージは受けたうえできぜつしないと読んだ",
+   "rule_clause_refs": [
+    "GR-2000-P321-PREVENTED-ELEMENTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G22",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-STATUS",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "サカキのカイリキーが「ねむり・マヒ・こんらん」状態のとき。どの時点の状態で決めるか",
+   "conclusion": "ダメージを受けるとき、すでに「ねむり・マヒ・こんらん」状態なら使えない。その前に回復していれば使える。同じワザの効果でダメージのあとにその状態になっても、この条件にはあたらない（そのワザの効果を受けるかは UQ-GUTS-ATTACK-EFFECT）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [
+    "CR-POWER-POISON-ONLY",
+    "UQ-GUTS-ATTACK-EFFECT"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G25",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G26",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G27",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G29",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G30",
+     "part": "ダメージのあとにその状態になっても、特殊状態の条件にはあたらない",
+     "engine_classification": "CONFIRMED（条件）・UNRESOLVED（効果を受けるか）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GUTS-AFTERMATH",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "「おもて」できぜつしなかったときと、「うら」・使わなかったときの、サイド・バトル場に出す・勝ち負け",
+   "conclusion": "「おもて」なら、きぜつしていないので相手はサイドを取らず、バトル場に出す処理もなく、対戦は続く。「うら」・使わなかったときは、ふつうにきぜつして相手がサイドを取る。最後のポケモンだったなら、出せるポケモンがいないので負け",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「16 ポケモンの「きぜつ」」",
+     "quote": "ポケモンがもっているHP以上のダメージを受けると、ポケモンは「きぜつ」してトラッシュに置かれます。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.311「5 勝ち負けが決まるとき」",
+     "quote": "ベンチから、代わりの対戦ポケモンをすぐに出さなければなりません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "82",
+     "location": "R団のファイヤーの解説",
+     "quote": "きぜつすることに変わりはありませんので、相手はサイドカードを1枚とることができます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G33",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G35",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G36",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "p.82 の解説はふしちょうについてのもので、きぜつしたならサイドを取ることの対比として挙げた（エンジンの G33 と同じ）。"
+   ]
+  },
+  {
+   "id": "CR-GUTS-SIMULTANEOUS-SELF-KO",
+   "topic": "こんじょう",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "同じワザで、ワザを使った相手のポケモンも自分へのダメージで HP 以上になったとき",
+   "conclusion": "きぜつの判定は同時。こんじょうを使うかを決めてから、そのとき HP 以上のポケモンをきぜつさせる。「おもて」ならワザを使ったポケモンだけがきぜつし、「うら」・使わないなら 2 匹が同時にきぜつする",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324「16 ポケモンの「きぜつ」」の続き",
+     "quote": "1つのワザや特殊能力などによって引き起こされることがらによって複数のポケモンが「きぜつ」した場合、それらのポケモンは「同時に『きぜつ』した」ことになります。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "この力は、相手のワザによるダメージで、このカードが「きぜつ」するとき、使える。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "こんじょうをきぜつの判定のときに使う（CR-GUTS-TIMING。推論）ことを前提に、p.324 の同時のきぜつに当てはめた",
+   "rule_clause_refs": [
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [
+    "CR-GUTS-TIMING"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G38",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-RAGE-SUPER-PUNCH",
+   "topic": "いかりのスーパーパンチ",
+   "cards": [
+    {
+     "card_id": "PMCG6-057",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "いかりのスーパーパンチ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "いかりのスーパーパンチのダメージ",
+   "conclusion": "コインが「おもて」なら、自分にのっているダメージカウンターの数 × 20 が基本となるダメージ。「うら」、またはダメージカウンターがのっていないなら、基本となるダメージは 0 で、ダメージを与えない（2 段階までで 0 以下なので計算を終え、プラスパワーも計算しない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "189",
+     "location": "最新の説明",
+     "quote": "コインを投げて「おもて」なら、自分にのっているダメージカウンターの数×20のダメージ。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "189",
+     "location": "解説",
+     "quote": "ダメージカウンターが「サカキのワンリキー」にのっていなければ、「いかりのスーパーパンチ」は相手にダメージを与えることができません",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ワザのダメージの目安」",
+     "quote": "「×」がある場合、ダメージはその数字の倍数になります（0倍になり、ダメージがなくなってしまうこともあります）。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.319「ダメージ」",
+     "quote": "その段階でダメージの計算を終え、「ダメージを受けなかった（与えなかった）」ことにしてください。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P320-DAMAGE-FIGURE",
+    "GR-2000-P319-HP-AND-DAMAGE",
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L3",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L4",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GAMBLE",
+   "topic": "いちかばちか",
+   "cards": [
+    {
+     "card_id": "PMCG6-059",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "いちかばちか"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "いちかばちかの処理",
+   "conclusion": "コインを投げ、「おもて」なら相手の対戦ポケモンに 60 ダメージ（目安の数字。自分へのダメージはない）。「うら」なら相手にはダメージを与えず、自分に 100 ダメージ（ワザによるダメージ）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "191",
+     "location": "最新の説明",
+     "quote": "コインを投げて「うら」なら、相手にはダメージを与えず、自分に100ダメージ。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ワザのダメージの目安」",
+     "quote": "「ワザの説明」の最初に書かれているはずの「相手（太字）に○○ダメージ。」ということばが省略されています。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ワザの要素」",
+     "quote": "(3) このワザを使うポケモンへのダメージ。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P320-DAMAGE-FIGURE"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-SELF-DAMAGE-IS-ATTACK-DAMAGE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L6",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L7",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GAMBLE-TAILS-NO-TRIGGER",
+   "topic": "いちかばちか",
+   "cards": [
+    {
+     "card_id": "PMCG6-059",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "いちかばちか"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG3-030",
+    "PMCG1-057"
+   ],
+   "question": "「うら」のとき、相手の対戦ポケモンのとうめい・はんげきは関係するか",
+   "conclusion": "関係しない（相手はダメージを受けないので、とうめいのコインも、はんげきもない）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "191",
+     "location": "最新の説明",
+     "quote": "相手にはダメージを与えず",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "160",
+     "location": "ゴーストの最新の説明",
+     "quote": "このカードがワザによってダメージや効果を受けるとき",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "192",
+     "location": "カイリキーの最新の説明",
+     "quote": "このカードが相手のワザによってダメージを受けたとき",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "「うら」のときは相手へのダメージの要素がなく、相手はダメージを受けないので、受けるときにはたらく特殊能力の条件を満たさないと読んだ",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG3-030-PWR0",
+    "LD-PMCG1-057-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L9",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-GAMBLE-VS-PREVENTED",
+   "topic": "いちかばちか",
+   "cards": [
+    {
+     "card_id": "PMCG6-059",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "いちかばちか"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "「ダメージを受けない」状態の相手にいちかばちかを使ったとき、コインを投げるか",
+   "conclusion": "投げる（コインは、自分へのダメージの要素（有効）も決める）。「おもて」なら相手へのダメージの要素は無効、「うら」なら自分に 100 ダメージ",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "191",
+     "location": "最新の説明",
+     "quote": "コインを投げて「うら」なら、相手にはダメージを与えず、自分に100ダメージ。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321 冒頭（ほかのポケモンへのダメージの要素は有効）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "コインが無効な要素（相手へのダメージ）だけでなく、有効な要素（自分へのダメージ）も決めるので、投げると読んだ（CR-STICKY-VS-PREVENTED と同じ読み方）",
+   "rule_clause_refs": [
+    "GR-2000-P321-PREVENTED-ELEMENTS"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-STICKY-VS-PREVENTED",
+    "UQ-COIN-IN-NULLIFIED-ELEMENT"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L10",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-HELL-HOLD",
+   "topic": "じごくがため",
+   "cards": [
+    {
+     "card_id": "PMCG6-059",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "じごくがため"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "じごくがためのダメージとコイン",
+   "conclusion": "ねばりつくと同じ説明。ダメージを計算する前にコインを投げ、「おもて」なら目安の 20 に 20 を加えた 40 が基本となるダメージで、ダメージのあと相手をマヒ状態にする。「うら」なら 20 だけで、マヒにしない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "191",
+     "location": "最新の説明",
+     "quote": "コインを投げて「おもて」なら、20ダメージを追加して、相手を「マヒ」状態にする。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "191",
+     "location": "解説",
+     "quote": "コイントスで表を出せば、さらに20ダメージが追加され相手をマヒ状態にできます",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ワザのダメージの目安」",
+     "quote": "「＋」がある場合、書かれている数字よりもダメージが大きくなることがあります。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309 ワザを使う手順 6",
+     "quote": "まず、ダメージの処理をおこない、次に「それ以外の効果」を処理してください。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P320-DAMAGE-FIGURE",
+    "GR-2000-P321-DAMAGE-ORDER",
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-STICKY-DAMAGE",
+    "CR-EFFECTS-AFTER-KO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L11",
+     "part": "じごくがため（ねばりつくと同じ説明）",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-HURRICANE-PUNCH",
+   "topic": "ハリケーンパンチ",
+   "cards": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ハリケーンパンチ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ハリケーンパンチのダメージ",
+   "conclusion": "コインを 4 枚投げ、「おもて」の数 × 30 が基本となるダメージ（0〜120）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "コインを4枚投げ、「おもて」の数×30のダメージ。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "193",
+     "location": "解説",
+     "quote": "最大で120ダメージも与えられる",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P320-DAMAGE-FIGURE"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L12",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-PHOENIX-OWNER",
+   "topic": "ふしちょう",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ふしちょうを使うかを決めるのはだれか",
+   "conclusion": "R団のファイヤーの持ち主（手札に加えるのは持ち主の手札）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "このカードをトラッシュからとり出し、相手プレイヤーに見せてから、手札に加える。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "derived",
+     "statement": "特殊能力の使用を宣言するのは、そのポケモンを持つプレイヤー（p.311 の「自分の場にいるポケモンが持っている特殊能力」）"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P3",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "ふしちょうを使うときこのカードはトラッシュにあり、p.311 の「自分の場にいるポケモンが持っている特殊能力」の文言にはそのまま当てはまらない。カードの説明が使えるときを書いている（p.307 によりカードの記述を優先する）と読める。"
+   ]
+  },
+  {
+   "id": "CR-PHOENIX-TIMING",
+   "topic": "ふしちょう",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ふしちょうを使える時点",
+   "conclusion": "このカードがきぜつして、トラッシュに置かれたあと（きぜつの処理の中で、トラッシュに置かれる）。こんじょう（きぜつする「とき」）とは違い、きぜつしたあとに使う。サイド・バトル場に出す・勝ち負けとの順番は UQ-PHOENIX-KO-PROCESS-ORDER",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "この力は、このカードが「きぜつ」したとき、使える。このカードをトラッシュからとり出し",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「16 ポケモンの「きぜつ」」",
+     "quote": "ポケモンがもっているHP以上のダメージを受けると、ポケモンは「きぜつ」してトラッシュに置かれます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [
+    "CR-GUTS-TIMING",
+    "UQ-PHOENIX-KO-PROCESS-ORDER"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P4",
+     "engine_classification": "CONFIRMED（トラッシュのあと）。サイド・バトル場に出す・勝ち負けとの順番は P27〜P30"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P20",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P21",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-PHOENIX-ANY-CAUSE",
+   "topic": "ふしちょう",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "どんな原因できぜつしたときに使えるか",
+   "conclusion": "きぜつの原因の制限はない。相手のワザ、自分のワザ（自分へのダメージ）、特殊能力のダメージ（相手のはんげき）、ポケモンチェックの「どく」のどれできぜつしても使える（「ねむり・マヒ・こんらん」状態のままきぜつするときは使えない。CR-PHOENIX-STATUS）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "この力は、このカードが「きぜつ」したとき、使える。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "82",
+     "location": "R団のファイヤーの解説",
+     "quote": "きぜつしたときに使うことのできる特殊能力です。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [
+    "CR-PHOENIX-STATUS"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P5",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P6",
+     "engine_classification": "SUPPORTED（原因の制限がない）"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P8",
+     "engine_classification": "SUPPORTED（原因の制限がない）"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P9",
+     "engine_classification": "SUPPORTED（原因の制限がない。どくは条件に挙げられていない。P16）"
+    }
+   ],
+   "notes": [],
+   "reclassification": {
+    "from": "SUPPORTED（エンジンの P6・P8・P9。「原因の制限がない」）",
+    "to": "CONFIRMED",
+    "reason": "最新の説明は「このカードが「きぜつ」したとき、使える」と書き、原因を限っていない（こんじょうは「相手のワザによるダメージで」と限っている）。エンジンも同じ理由で相手のワザによるきぜつ（P5）を CONFIRMED にしており、自分のワザ・はんげき・どくの場合も文言がそのまま当てはまる（解釈の選択がない）"
+   }
+  },
+  {
+   "id": "CR-PHOENIX-BENCH",
+   "topic": "ふしちょう",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ベンチできぜつしたときも使えるか",
+   "conclusion": "使える（場所の制限はない）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「14 ポケモンの特殊能力」",
+     "quote": "特に記述されていないかぎり、ベンチにいるポケモンも特殊能力を使うことができます。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "この力は、このカードが「きぜつ」したとき、使える。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "ふしちょうを使うときこのカードはトラッシュにあるので、「ベンチにいるポケモンも使える」の規定がそのまま当てはまるのではない。説明に場所の制限がないことから、ベンチできぜつしても使えると読んだ",
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P11",
+     "engine_classification": "SUPPORTED",
+     "engine_note": "エンジンの対応カードでは、ベンチのポケモンがきぜつすることはない（未到達）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-PHOENIX-ONCE-PER-KO",
+   "topic": "ふしちょう",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "何回使えるか",
+   "conclusion": "きぜつ 1 回につき、使うかを 1 回決める（使ったらカードはトラッシュにない）。再び場に出て、またきぜつしたら、また使える",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "この力は、このカードが「きぜつ」したとき、使える。このカードをトラッシュからとり出し、相手プレイヤーに見せてから、手札に加える。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「14 ポケモンの特殊能力」",
+     "quote": "特に記述されていないかぎり、特殊能力はいつでも、何度でも使用を宣言することができます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "使えるのは「きぜつ」したときで、使えばカードは手札にもどるので、同じきぜつで 2 回は使えないと読んだ。回数の制限は書かれていない",
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P12",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-PHOENIX-STATUS",
+   "topic": "ふしちょう",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "「ねむり・マヒ・こんらん」状態のままきぜつするとき",
+   "conclusion": "使えない（こんらんしたワザの 20 ダメージでこんらんのままきぜつするときも）。きぜつするときの特殊状態で決める（トラッシュに置かれたあとは場をはなれていて特殊状態はない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "このカードが「ねむり・マヒ・こんらん」状態のまま「きぜつ」するとき、この力は使えない。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "82",
+     "location": "R団のファイヤーの解説",
+     "quote": "マヒ・ねむり・こんらん状態のままきぜつしたときは、この能力は使うことはできません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「10 ポケモンの特殊状態」",
+     "quote": "特殊状態になっているポケモンがバトル場をはなれたら、そのポケモンが受けていたすべての特殊状態は消えてなくなります。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P322-SPECIAL-CONDITIONS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [
+    "CR-POWER-POISON-ONLY"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P7",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P13",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P14",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P15",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P17",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-PHOENIX-RETURN",
+   "topic": "ふしちょう",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ふしちょうで手札にもどすもの",
+   "conclusion": "このカード（R団のファイヤー）だけを、トラッシュからとり出して相手プレイヤーに見せてから手札に加える。ついていたエネルギーカード・トレーナーカードはトラッシュに残る。手札にもどったカードに、ダメージ・特殊状態・持続する効果はない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "このカードをトラッシュからとり出し、相手プレイヤーに見せてから、手札に加える。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「16 ポケモンの「きぜつ」」",
+     "quote": "そのポケモンと、それについていたすべてのカード（エネルギーカードなど）をトラッシュします。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「11」",
+     "quote": "場をはなれたら、「持続する効果」は消えてなくなります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P323-KNOCKOUT",
+    "GR-2000-P322-PERSISTENT-EFFECTS",
+    "GR-2000-P322-SPECIAL-CONDITIONS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P22",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P23",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P24",
+     "part": "同じカード（エンジンの番号の付け方は取り込まない）",
+     "engine_classification": "CONFIRMED（同じカード）・実装上の仮定（uid で表す）"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P25",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P31",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-PHOENIX-REPLAY",
+   "topic": "ふしちょう",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "手札にもどしたカードを、いつ場に出せるか",
+   "conclusion": "持ち主の番に、たねポケモンとしてふつうにベンチに出せる（特別な制限はない）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "このカードをトラッシュからとり出し、相手プレイヤーに見せてから、手札に加える。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "82",
+     "location": "R団のファイヤーの解説",
+     "quote": "きぜつしてトラッシュから手札に直接もどってくる能力はまさに不死鳥といえます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "説明・解説に、手札にもどしたあとの制限が書かれていないことから、ほかのたねポケモンのカードと同じに扱うと読んだ",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P26",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-PHOENIX-PRIZE",
+   "topic": "ふしちょう",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ふしちょうで手札にもどしても、相手はサイドを取るか",
+   "conclusion": "取る（きぜつしたことは変わらない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "82",
+     "location": "R団のファイヤーの解説",
+     "quote": "トラッシュからもどってくるとはいっても、きぜつすることに変わりはありませんので、相手はサイドカードを1枚とることができます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [
+    "UQ-PHOENIX-KO-PROCESS-ORDER"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P27",
+     "part": "相手はサイドを取る",
+     "engine_classification": "CONFIRMED（サイドを取る）・UNRESOLVED（順番）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-PHOENIX-LAST-POKEMON",
+   "topic": "ふしちょう",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "R団のファイヤーが最後のポケモン（ベンチにポケモンがいない）だったとき",
+   "conclusion": "出せるポケモンがいないので負け。ふしちょうで手札にもどしても変わらない（手札のカードはバトル場に出せない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.311「5 勝ち負けが決まるとき」",
+     "quote": "ベンチから、代わりの対戦ポケモンをすぐに出さなければなりません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "derived",
+     "statement": "ベンチにポケモンがいなければ代わりの対戦ポケモンを出せない。手札にもどしたカードはベンチのポケモンではない"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P29",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-IS-PERSISTENT-EFFECT",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほのおのかべの効果は何か",
+   "conclusion": "ワザを使った R団のファイヤー自身に与える「持続する効果」（p.322「11」の「まるまる」のようなもの）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "次の相手の番、このカードが相手のワザによるダメージを受けたとき、",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「11 特殊状態以外の「持続する効果」」",
+     "quote": "「ラッキー」の「まるまる」などのようなワザは、自分自身に「持続する効果」を与えます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "説明は、次の相手の番にはたらく、自分自身への効果を書く。p.89 が「こうらがえし」の効果を持続する効果として説明していること（CR-SHELL-ATTACK-IS-PERSISTENT-EFFECT）を、同じ形のほのおのかべに当てはめた。ほのおのかべについて書いた解説はない",
+   "rule_clause_refs": [
+    "GR-2000-P322-PERSISTENT-EFFECTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-IS-PERSISTENT-EFFECT"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "エンジンの W6〜W10 は、この読み方を前提にしている（エンジンの文書は持続する効果としてあつかう）。"
+   ]
+  },
+  {
+   "id": "CR-FIRE-WALL-ACTIVE-TURN",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほのおのかべの効果がはたらき始めるのはいつか",
+   "conclusion": "次の相手の番（ワザを使った番の次の番）の始まりから",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "次の相手の番、",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W4",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-EXPIRY",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほのおのかべの効果はいつ終わるか",
+   "conclusion": "次の相手の番の終わり。続けて使っても、前の効果は期限で消えているので重ならない（新しい効果になる）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "次の相手の番、",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説のまとめと図",
+     "quote": "■効果の持続：次の相手の番の最後／この相手の番の最後に、「こうらがえし」の効果は消える",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "最新の説明は「次の相手の番」とだけ書く。同じ形の「こうらがえし」の解説（p.89）が次の相手の番の最後に消えるとしているので、ほのおのかべにも当てはめた",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-EXPIRY"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W5",
+     "engine_classification": "SUPPORTED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W27",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [],
+   "reclassification": {
+    "from": "CONFIRMED（エンジンの W27）",
+    "to": "SUPPORTED",
+    "reason": "W27（続けて使っても重ならない）は、効果が次の相手の番の終わりに消える（W5。エンジンも SUPPORTED）ことを前提にしているので、まとめて SUPPORTED にした"
+   }
+  },
+  {
+   "id": "CR-FIRE-WALL-ENDS",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほのおのかべの効果が消える契機",
+   "conclusion": "R団のファイヤーがベンチにもどったら（にげる・入れ替え）、きぜつしたら（場をはなれたら）消える。ふしちょうで手札にもどったカードに効果はなく、再び場に出しても効果は復活しない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「11」",
+     "quote": "「持続する効果」を受けたポケモンがベンチにもどったら、その「持続する効果」は消えてなくなります",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「11」",
+     "quote": "場をはなれたら、「持続する効果」は消えてなくなります",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322〜p.323「11」",
+     "quote": "一度消えた「持続する効果」は復活しません",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P322-PERSISTENT-EFFECTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0",
+    "LD-PMCG5-020-PWR0"
+   ],
+   "related_rulings": [
+    "CR-FIRE-WALL-IS-PERSISTENT-EFFECT",
+    "CR-SHELL-ATTACK-ENDS-ON-BENCH",
+    "CR-SHELL-ATTACK-NO-REVIVAL"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W6",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W8",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W9",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W10",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "ほのおのかべの効果が「持続する効果」であること（CR-FIRE-WALL-IS-PERSISTENT-EFFECT）は推論。そのうえで、p.322 の持続する効果の規定がそのまま当てはまる。"
+   ]
+  },
+  {
+   "id": "CR-FIRE-WALL-WITH-SPECIAL-CONDITIONS",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほのおのかべを使ったあと、R団のファイヤーが特殊状態になったとき",
+   "conclusion": "効果は消えない（特殊状態でもはたらく）。ワザの効果で特殊能力ではないので、「ねむり・マヒ・こんらん」で使えない・消えるという制限もない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「特殊状態と「持続する効果」の重複」・p.323「「持続する効果」と特殊状態の重複」",
+     "quote": "「持続する効果」は、特殊状態と重複することがあります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P322-PERSISTENT-EFFECTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-WITH-SPECIAL-CONDITIONS"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W7",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-TRIGGER",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "どのダメージを受けたときにはたらくか",
+   "conclusion": "相手のワザによるダメージを受けたときだけ。こんらんの 20・ポケモンチェックの「どく」・特殊能力のダメージ（はんげき）・ダメージカウンターの移動でははたらかない。最終的なダメージが 0 以下ならはたらかない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "次の相手の番、このカードが相手のワザによるダメージを受けたとき、",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「8 ワザによるダメージと効果」（どくのダメージはワザによるダメージではない）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ダメージカウンターの移動」",
+     "quote": "ダメージカウンターが移動してダメージが増えても、それは「ダメージを受けた」ことにはなりません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.319「ダメージ」",
+     "quote": "「ダメージを受けなかった（与えなかった）」ことになります。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P321-ATTACK-DAMAGE",
+    "GR-2000-P320-COUNTER-MOVE",
+    "GR-2000-P319-HP-AND-DAMAGE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-TRIGGER"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W11",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W13",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "はんげきのダメージでははたらかないことは、はんげきのダメージが特殊能力によるダメージであること（CR-COUNTERATTACK-IS-POWER-DAMAGE。推論）による。"
+   ]
+  },
+  {
+   "id": "CR-FIRE-WALL-EFFECT-DAMAGE",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ワザの説明（効果）によるダメージ（こうらがえしで返すダメージなど）でもはたらくか",
+   "conclusion": "はたらく（ワザによるダメージなら、基本となるダメージか説明によるダメージかを区別しない）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「8」の例",
+     "quote": "そのダメージは効果によるダメージではなく、「こうらがえし」のダメージとしてあつかいます",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "相手のワザによるダメージを受けたとき",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "p.321 は、ワザの効果がもたらしたダメージも「ワザによるダメージ」とする。ほのおのかべの条件の「相手のワザによるダメージ」にも含まれると読んだ",
+   "rule_clause_refs": [
+    "GR-2000-P321-ATTACK-DAMAGE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W12",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-DAMAGE",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほのおのかべのダメージの量と計算",
+   "conclusion": "相手（ダメージを与えたワザを使ったポケモン）に 10 ダメージ。弱点・抵抗力を計算する（R団のファイヤーのタイプは炎）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "相手に10ダメージを与える。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "82",
+     "location": "R団のファイヤーの解説",
+     "quote": "この10ダメージは、弱点・抵抗力の影響を受けます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-DAMAGE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W14",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W15",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W16",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-TRAINERS",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほのおのかべの 10 ダメージに、プラスパワー・ディフェンダーを計算するか",
+   "conclusion": "R団のファイヤーのワザによるダメージとして計算する。受けるポケモン（ワザを使った相手のポケモン）についているディフェンダーは計算する。R団のファイヤーにつけたプラスパワーは、そのとき（相手の番）にはもうない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9 ワザによるダメージ計算の順番」",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「8」の例",
+     "quote": "そのダメージは効果によるダメージではなく、「こうらがえし」のダメージとしてあつかいます",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "257",
+     "location": "プラスパワーの最新の説明",
+     "quote": "あなたの番の終わりにトラッシュする",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "ほのおのかべのダメージを、こうらがえしの例（p.321）と同じく R団のファイヤーのワザによるダメージとして、p.321 の順番で計算すると読んだ。ほのおのかべについて書いた例はない",
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER",
+    "GR-2000-P321-ATTACK-DAMAGE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-RETURN-DEFENDER",
+    "CR-SHELL-ATTACK-NO-PLUSPOWER-ON-RETURN"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W17",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-NOT-A-POWER",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG3-007"
+   ],
+   "question": "かがくへんかガスがはたらいているとき、ほのおのかべの効果は止まるか",
+   "conclusion": "止まらない（ほのおのかべはワザの効果で、特殊能力ではない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "48",
+     "location": "ベトベトンの最新の説明",
+     "quote": "「かがくへんかガス」以外のすべての「特殊能力」は使えず、その力も消える。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0",
+    "LD-PMCG3-007-PWR0"
+   ],
+   "related_rulings": [
+    "CR-CHEMICAL-GAS-POWERS-ONLY"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W18",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-VS-AUTO-POWERS",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG3-030",
+    "PMCG1-057"
+   ],
+   "question": "ほのおのかべのダメージと、とうめい・はんげきの関係",
+   "conclusion": "ほのおのかべのダメージは R団のファイヤーのワザによるダメージなので、受けるゴーストのとうめいがはたらく（コインはゴースト側のプレイヤー）。ほのおのかべのダメージを受けたカイリキーのはんげきもはたらく。はんげきのダメージ（特殊能力のダメージ）では、ほのおのかべははたらかない（連鎖しない）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「8」の例",
+     "quote": "そのダメージは効果によるダメージではなく、「こうらがえし」のダメージとしてあつかいます",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "160",
+     "location": "ゴーストの最新の説明",
+     "quote": "このカードがワザによってダメージや効果を受けるとき",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "192",
+     "location": "カイリキーの最新の説明",
+     "quote": "このカードが相手のワザによってダメージを受けたとき、",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "ほのおのかべのダメージがワザによるダメージであること（CR-FIRE-WALL-EFFECT-DAMAGE と同じ読み方）と、はんげきのダメージが特殊能力によるダメージであること（CR-COUNTERATTACK-IS-POWER-DAMAGE）を前提にした",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0",
+    "LD-PMCG3-030-PWR0",
+    "LD-PMCG1-057-PWR0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-RETURN-TRANSPARENCY",
+    "CR-SHELL-ATTACK-RETURN-COUNTERATTACK"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W19",
+     "engine_classification": "SUPPORTED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W20",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-TIMING",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほのおのかべの 10 ダメージを与える時点",
+   "conclusion": "相手のワザのダメージの処理（ワザを使ったポケモンの自分へのダメージ・はんげきを含む）のあと、ダメージ以外の効果（コイン・特殊状態・入れ替え・回復）の前",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説",
+     "quote": "相手のワザによるダメージの処理を行った後で、ダメージを与えます（相手のワザによるダメージ以外の効果の処理は、その後でおこないます）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "同じ形の「こうらがえし」の解説（p.89。CR-SHELL-ATTACK-TIMING）をほのおのかべに当てはめた",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-TIMING",
+    "CR-COUNTERATTACK-TIMING"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W21",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-EVEN-IF-KO",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "R団のファイヤーが、ワザのダメージできぜつするとき",
+   "conclusion": "10 ダメージを与える",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "（それによってこのカードが「きぜつ」しても、）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-EVEN-IF-KO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W22",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-KO-ATTACKER",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほのおのかべのダメージで、ワザを使った相手のポケモンが HP 以上のダメージを受けたとき",
+   "conclusion": "ワザのあとのきぜつの判定できぜつする（サイドは R団のファイヤーの持ち主が取る）。きぜつしたポケモン自身へのそのあとの効果（回復）は処理しない。R団のファイヤーへの効果（ふきとばし）は処理する。ワザを使ったポケモンが、同じワザの自分へのダメージですでに HP 以上なら、10 ダメージは与えない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説の「スターブーメラン」の例",
+     "quote": "そのダメージできぜつしなければ",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309 ワザを使う手順 6",
+     "quote": "処理の対象がなくなってしまっている場合、その内容は無視して、次の内容の処理をおこなってください。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "v0.13 の取り込みの CR-SHELL-ATTACK-KO-ATTACKER-OWN-EFFECTS・CR-SHELL-ATTACK-KO-ATTACKER-EFFECTS-ON-WARTORTLE と、はんげきの CR-COUNTERATTACK-ATTACKER-GONE と同じ読み方",
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE",
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-KO-ATTACKER-OWN-EFFECTS",
+    "CR-COUNTERATTACK-ATTACKER-GONE",
+    "UQ-RETALIATION-DOUBLE-KO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W23",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-ONCE",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "次の相手の番に、ほのおのかべは何回はたらくか",
+   "conclusion": "ワザは 1 つの番に 1 回なので、1 回まで（1 つのワザで 2 回ダメージを受ける場合は UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309「バトル場にいるポケモンのワザを使う」",
+     "quote": "自分の番ごとに一度だけ、あなたの対戦ポケモン（バトル場にいるポケモン）は、ワザを使うことができます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-ONCE-PER-TURN",
+    "UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W25",
+     "engine_classification": "CONFIRMED（ワザは 1 回）・未到達（1 つのワザで 2 回）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-VS-GUTS",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    },
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほのおのかべのダメージで、ワザを使ったサカキのカイリキーが HP 以上になるとき",
+   "conclusion": "こんじょうを使える（使うかはサカキのカイリキーの持ち主が決める）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "最新の説明",
+     "quote": "この力は、相手のワザによるダメージで、このカードが「きぜつ」するとき、使える。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「8」の例",
+     "quote": "そのダメージは効果によるダメージではなく、「こうらがえし」のダメージとしてあつかいます",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "ほのおのかべのダメージは、サカキのカイリキーから見て「相手のワザによるダメージ」（R団のファイヤーのワザによるダメージ）と読んだ（CR-SHELL-ATTACK-RETURN-VS-GUTS と同じ読み方）",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0",
+    "LD-PMCG6-061-PWR0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-RETURN-VS-GUTS",
+    "CR-POWER-OPTIONAL-DECLARATION"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W26",
+     "engine_classification": "SUPPORTED（未到達）",
+     "engine_note": "エンジンの対応カードでは起こらない（未到達）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-WITHOUT-DAMAGE",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほのおのかべで相手にダメージを与えなかったとき（相手が「ダメージを受けない」状態・とうめいの「おもて」・最終的なダメージ 0）、自分への効果は与えるか",
+   "conclusion": "与える（説明に「ダメージを与えたら」がない）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "最新の説明",
+     "quote": "次の相手の番、このカードが相手のワザによるダメージを受けたとき、",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "説明は、自分への効果の条件として相手にダメージを与えることを書いていない（やどりぎのタネの「相手にダメージを与えたら」とは違う）と読んだ",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0"
+   ],
+   "related_rulings": [
+    "CR-LEECH-SEED-CONDITION"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W28",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-FIRE-WALL-COUNTERATTACKED",
+   "topic": "ほのおのかべ",
+   "cards": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ほのおのかべ"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG1-057"
+   ],
+   "question": "ほのおのかべを使ったあと、相手のカイリキーのはんげきで R団のファイヤーが HP 以上になったとき",
+   "conclusion": "R団のファイヤーはきぜつするので、効果を与えない（与えても、きぜつで消える）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説の「スターブーメラン」の例",
+     "quote": "そのダメージできぜつしなければ",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309 ワザを使う手順 6",
+     "quote": "処理の対象がなくなってしまっている場合、その内容は無視して、次の内容の処理をおこなってください。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「11」",
+     "quote": "場をはなれたら、「持続する効果」は消えてなくなります",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "HP 以上になった R団のファイヤーを処理の対象がいないと読み（CR-EFFECTS-AFTER-KO と同じ読み方）、どちらにしてもきぜつで効果は消える",
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE",
+    "GR-2000-P322-PERSISTENT-EFFECTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-ATK0",
+    "LD-PMCG1-057-PWR0"
+   ],
+   "related_rulings": [
+    "CR-EFFECTS-AFTER-KO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W29",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
   }
  ],
  "issues": [
@@ -10246,12 +13723,12 @@
      "ruling_id": "C18",
      "engine_version": "v0.10",
      "document": "docs/counterattack-v0.10.md",
-     "relation": "同じ形の問い（カイリキーの「はんげき」（特殊能力）のダメージによるきぜつ）。エンジンは別のコード（UNRESOLVED_COUNTERATTACK_DOUBLE_KNOCKOUT）で止める。kyuura にはまだ取り込んでいない"
+     "relation": "同じ形の問い（カイリキーの「はんげき」（特殊能力）のダメージによるきぜつ）。v0.5〜v0.12 の取り込みで、別の未解決の論点 UQ-COUNTERATTACK-DOUBLE-KO にした（攻撃側へのダメージが、こちらはワザによるダメージ、はんげきは特殊能力によるダメージで、まとめる根拠が公式の資料にない）"
     }
    ],
    "engine_refs": [
     {
-     "import": "ENGINE-8FACF3A",
+     "import": "ENGINE-B8054AF",
      "engine_version": "v0.12",
      "document": "docs/rocket-moltres-v0.12.md",
      "ruling_id": "W24",
@@ -10269,6 +13746,9 @@
    ],
    "notes": [
     "kyuura では 1 つの論点として記録し、W24（v0.12）と S37（v0.13）は同じ論点の事例として結ぶ（重複した未解決の記録を作らない）。"
+   ],
+   "related_issues": [
+    "UQ-COUNTERATTACK-DOUBLE-KO"
    ]
   },
   {
@@ -10487,6 +13967,26 @@
      },
      "engine_ruling": "T19b",
      "note": "「どくばり」のダメージでとうめいが「おもて」になったあとの、どくにするかのコイン"
+    },
+    {
+     "card_id": "PMCG6-057",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "いかりのスーパーパンチ"
+     },
+     "engine_ruling": "L5",
+     "note": "「ダメージを受けない」相手への、いかりのスーパーパンチのコイン（ダメージの量だけを決める）"
+    },
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ハリケーンパンチ"
+     },
+     "engine_ruling": "L13",
+     "note": "「ダメージを受けない」相手への、ハリケーンパンチのコイン 4 枚"
     }
    ],
    "reachability": {
@@ -10515,12 +14015,29 @@
      "ruling_id": "T19b",
      "engine_classification": "UNRESOLVED",
      "engine_note": "エンジンは、この場合になりうるワザを宣言の前（こんらんのコインの前）に止める。これはエンジンの実装で、公式の裁定ではない"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L5",
+     "engine_classification": "UNRESOLVED（既存のコード）",
+     "engine_note": "エンジンは v0.4b の既存の停止で止める"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L13",
+     "engine_classification": "UNRESOLVED（既存のコード）",
+     "engine_note": "エンジンは v0.4b の既存の停止で止める"
     }
    ],
    "notes": [
     "どちらに決めても、場の状態（ダメージ・特殊状態など）は変わらない（無効な要素のコインの結果は使われない）。変わるのは、コインを投げるかどうか（エンジンでは乱数の続き）だけ。コインを投げたことそのものが意味を持つカードがあるかは、kyuura では調べていない。",
     "コインが有効な要素も決める場合（ねばりつく。CR-STICKY-VS-PREVENTED）は、この問いにあたらない。",
-    "エンジンの T19b（v0.9）と PREVENTED-COIN-DAMAGE（v0.4b）は別の停止だが、エンジンの文書は同じ問いとしている（docs/transparency-v0.9.md の T19b）。kyuura では 1 つの論点にした。"
+    "エンジンの T19b（v0.9）と PREVENTED-COIN-DAMAGE（v0.4b）は別の停止だが、エンジンの文書は同じ問いとしている（docs/transparency-v0.9.md の T19b）。kyuura では 1 つの論点にした。",
+    "v0.11 の L5・L13（いかりのスーパーパンチ・ハリケーンパンチ）も同じ問いとして結んだ。いちかばちか（CR-GAMBLE-VS-PREVENTED）は、コインが有効な要素も決めるので、この問いにあたらない。"
    ]
   },
   {
@@ -10679,6 +14196,356 @@
     "UQ-RETALIATION-DOUBLE-KO（ほのおのかべ・こうらがえし）と似た形だが、そちらの攻撃側へのダメージは前の番のワザの効果による「ワザによるダメージ」（p.321）で、こちらは特殊能力によるダメージ（CR-COUNTERATTACK-IS-POWER-DAMAGE。推論）。同じ論点にまとめる根拠が公式の資料にないので、別の論点にした。",
     "(a) 同じワザの自分へのダメージで両方がきぜつする場合は、1 つのワザによる同時のきぜつ（CR-COUNTERATTACK-SELF-DAMAGE-DOUBLE-KO）。"
    ]
+  },
+  {
+   "id": "UQ-GUTS-ATTACK-EFFECT",
+   "status": "UNRESOLVED",
+   "question": "こんじょうを使えるサカキのカイリキーが、相手のワザのダメージで HP 以上になり、同じワザでそのポケモンに効果（特殊状態にする・入れ替えるなど）も与えられるとき、こんじょうの「おもて」できぜつしなかったサカキのカイリキーは、その効果を受けるか",
+   "why_unresolved": "HP 以上のダメージを受けたポケモンにはそのあとの効果を処理しないと読む（p.309・p.89 のスターブーメランの例。CR-EFFECTS-AFTER-KO。推論）と、こんじょうをワザのあとのきぜつの判定で使う（CR-GUTS-TIMING。推論）ことと合わせて、「おもて」のポケモンが効果を受けないまま場に残る。ダメージを受けた直後にこんじょうを使うと読めば、効果を受ける。どちらの読み方も p.193 の説明・解説、p.309・p.311・p.321〜p.324 に書かれていない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "193",
+     "location": "サカキのカイリキーの「こんじょう」の最新の説明と解説"
+    },
+    {
+     "source": "P43",
+     "page": "89",
+     "location": "わるいカメールのワザ解説（スターブーメランの例）"
+    },
+    {
+     "source": "P43",
+     "page": "309",
+     "location": "公式ルール「ワザを使う」の手順 6"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE",
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     },
+     "engine_ruling": "G37",
+     "note": "ダメージのあとに特殊状態・入れ替えの効果があるワザを受けて、HP 以上になる"
+    },
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     },
+     "engine_ruling": "G30",
+     "note": "ワザの効果でダメージのあとに特殊状態になる場合（特殊状態の条件にはあたらないが、効果を受けるかが決められない）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードで起こる",
+    "all_cards": "起こる"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G37",
+     "engine_classification": "UNRESOLVED",
+     "engine_note": "エンジンは、この場合になりうるワザを宣言の前（こんらんのコインの前）に止める。これはエンジンの実装で、公式の裁定ではない"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G30",
+     "part": "ワザの効果を受けるか（特殊状態の条件にあたらないことは CR-GUTS-STATUS）",
+     "engine_classification": "CONFIRMED（条件）・UNRESOLVED（効果を受けるか）"
+    }
+   ],
+   "notes": [
+    "こんじょうを使う時点（CR-GUTS-TIMING）と、HP 以上になったポケモンへの効果（CR-EFFECTS-AFTER-KO）の 2 つの推論の組み合わせから生じる問い。"
+   ]
+  },
+  {
+   "id": "UQ-KO-PREVENTION-ORDER",
+   "status": "UNRESOLVED",
+   "question": "同じワザのきぜつの判定で、こんじょうを使えるポケモンが 2 匹以上いるとき、またはこんじょうとほかの特殊能力が同じ時点で使えるとき、宣言・処理の順番",
+   "why_unresolved": "p.325「23」は同じタイミングで起こったことがらの順番を番をおこなっているプレイヤーが決めるとするが、相手プレイヤーが宣言する特殊能力どうしに当てはめてよいかは書かれていない。p.311 も複数の特殊能力を同じ時点で使う場合の順番を書かない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "325",
+     "location": "公式ルール「23 同じタイミングで起こったことの順番」"
+    },
+    {
+     "source": "P43",
+     "page": "311",
+     "location": "公式ルール「ポケモンの特殊能力を使う」"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P325-SAME-TIMING",
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     },
+     "engine_ruling": "G40",
+     "note": "1 つのワザで、こんじょうを使えるポケモンが 2 匹以上きぜつの条件を満たす"
+    },
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     },
+     "engine_ruling": "G16",
+     "note": "きぜつの判定の時点で使える特殊能力が、こんじょうのほかにもある"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードでは起こらない（ワザのダメージを受ける相手のポケモンはバトル場の 1 匹だけ）",
+    "all_cards": "起こりうる（ベンチや複数のポケモンにダメージを与えるワザ）。kyuura では例を調べていない"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G40",
+     "engine_classification": "UNRESOLVED・未到達"
+    },
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/guts-v0.11.md",
+     "ruling_id": "G16",
+     "engine_classification": "UNRESOLVED（順番）・未到達"
+    }
+   ],
+   "notes": [
+    "UQ-TRANSPARENCY-COIN-ORDER・UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK・UQ-POST-KO-POWERS-ORDER と同じく、p.325 を当てはめてよいかの問い。時点（きぜつの判定）が違うので別の論点にした。"
+   ]
+  },
+  {
+   "id": "UQ-PHOENIX-GAS-SOURCE-KO",
+   "status": "UNRESOLVED",
+   "question": "R団のファイヤーと、かがくへんかガスを持つベトベトン（はたらいているもの）が同時にきぜつしたとき、ふしちょうを使えるか",
+   "why_unresolved": "かがくへんかガスは「このカードが場にいるかぎり」はたらく（p.48）。ふしちょうはきぜつしてトラッシュに置かれたあとに使う（p.82）。同時にきぜつしたベトベトンがトラッシュに置かれた時点でガスが消えているのか、きぜつの時点ではたらいていたので使えないのかが、p.48・p.82・p.323・p.324 に書かれていない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "82",
+     "location": "R団のファイヤーの「ふしちょう」の最新の説明"
+    },
+    {
+     "source": "P43",
+     "page": "48",
+     "location": "ベトベトンの「かがくへんかガス」の最新の説明"
+    },
+    {
+     "source": "P43",
+     "page": "324",
+     "location": "公式ルール「16 ポケモンの「きぜつ」」（同時のきぜつ）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P323-KNOCKOUT",
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     },
+     "engine_ruling": "P19",
+     "note": "ガスの発生源のベトベトンも同時にきぜつする"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードでは起こらない（同時のきぜつになる場面はエンジンが先に止めている）",
+    "all_cards": "起こりうる"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P19",
+     "engine_classification": "UNRESOLVED（未到達）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "UQ-PHOENIX-KO-PROCESS-ORDER",
+   "status": "UNRESOLVED",
+   "question": "R団のファイヤーがきぜつしたとき、ふしちょうの使用（宣言と処理）と、相手がサイドを取ること・代わりの対戦ポケモンを出すこと・勝ち負けを決めることの順番",
+   "why_unresolved": "p.82 の解説は相手がサイドを取ることを書くが、ふしちょうとの順番を書かない。p.323 のきぜつの手順、p.311 の勝ち負け（「そこで…対戦は終了します」）、p.325「23」（同じタイミングで起こったことがら）のどれにも、ふしちょうがどこに入るかが書かれていない。勝ち負けの場面では、どちらの順番でも勝ち負けは変わらない（エンジンの P30）",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "82",
+     "location": "R団のファイヤーの解説"
+    },
+    {
+     "source": "P43",
+     "page": "323",
+     "location": "公式ルール「16 ポケモンの「きぜつ」」"
+    },
+    {
+     "source": "P43",
+     "page": "311",
+     "location": "公式ルール「5 勝ち負けが決まるとき」"
+    },
+    {
+     "source": "P43",
+     "page": "325",
+     "location": "公式ルール「23 同じタイミングで起こったことの順番」"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P323-KNOCKOUT",
+    "GR-2000-P325-SAME-TIMING"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     },
+     "engine_ruling": "P27",
+     "note": "サイドを取ることとの順番"
+    },
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     },
+     "engine_ruling": "P28",
+     "note": "代わりの対戦ポケモンを出すこととの順番"
+    },
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     },
+     "engine_ruling": "P30",
+     "note": "勝ち負けが決まる場面（どちらでも勝ち負けは変わらない）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードで起こる",
+    "all_cards": "起こる"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P27",
+     "part": "宣言とサイドの順番（相手がサイドを取ることは CR-PHOENIX-PRIZE）",
+     "engine_classification": "CONFIRMED（サイドを取る）・UNRESOLVED（順番）",
+     "engine_note": "エンジンは順番を決めて（正規化して）処理しているが、これはエンジンの処理の決め方で、公式の裁定ではない"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P28",
+     "engine_classification": "UNRESOLVED（順番）"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P30",
+     "engine_classification": "UNRESOLVED（順番）・結果は変わらない"
+    }
+   ],
+   "not_in_engine_index": true,
+   "notes": [
+    "P27・P28・P30 は同じ問い（きぜつの処理の中のふしちょうの位置）なので、1 つの論点にまとめた。",
+    "エンジンはこの順番を決めて（正規化して）処理しており、エンジンの未解決の裁定の一覧（22 件）には入っていない。kyuura では公式の資料で決められない問いとして論点にした。"
+   ]
+  },
+  {
+   "id": "UQ-POST-KO-POWERS-ORDER",
+   "status": "UNRESOLVED",
+   "question": "同じきぜつで、きぜつしたときに使える特殊能力（ふしちょうなど）が 2 つ以上あるとき、使う順番",
+   "why_unresolved": "p.325「23」は、同じタイミングで起こったことがらの順番を、そのとき番をおこなっているプレイヤーが決めるとする（エンジンもそう読めるとする）が、きぜつしたあとに使う特殊能力（両方のプレイヤーのものがありうる）に当てはめてよいかは書かれていない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "325",
+     "location": "公式ルール「23 同じタイミングで起こったことの順番」"
+    },
+    {
+     "source": "P43",
+     "page": "82",
+     "location": "R団のファイヤーの「ふしちょう」の最新の説明"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P325-SAME-TIMING"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG5-020",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ふしちょう"
+     },
+     "engine_ruling": "P32",
+     "note": "2 匹の R団のファイヤーが同時にきぜつする"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードでは起こらない（2 匹が同時にきぜつする場面は、エンジンが先に止めている）",
+    "all_cards": "起こりうる"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/phoenix-v0.12.md",
+     "ruling_id": "P32",
+     "engine_classification": "未到達",
+     "engine_note": "エンジンは「番のプレイヤーが決める（p.325）と読めるが、未到達」とする（裁定にしていない）"
+    }
+   ],
+   "notes": []
   }
  ],
  "comparisons": [
@@ -10767,7 +14634,8 @@
    "notes": [
     "p.89 は「こうらがえし」と「同じタイプのワザ」として「クロスカウンター」を挙げる。「ほのおのかべ」は挙げていない。",
     "「決まった量を返す」「受けたダメージを返す」という分け方は、エンジンの設計（Retaliation.basis = fixed／received_damage）で、公式の資料の分類ではない。この表は各カードの文面と解説に書かれていることだけを並べた。",
-    "ほのおのかべ・クロスカウンターの裁定は、この取り込みでは記録していない（ほのおのかべは kyuura-engine v0.12 の対象）。"
+    "ほのおのかべ・クロスカウンターの裁定は、この取り込みでは記録していない（ほのおのかべは kyuura-engine v0.12 の対象）。",
+    "ほのおのかべの裁定は、v0.5〜v0.12 の取り込みで CR-FIRE-WALL-* として記録した（v0.12 の W1〜W30）。"
    ]
   }
  ],
@@ -11396,6 +15264,221 @@
    ]
   },
   {
+   "id": "ENGINE-8BD1E5B",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.13-shell-attack",
+   "commit": "8bd1e5bccd1a533bdd398f779a94a98b5e0a4cd5",
+   "engine_version": "v0.11",
+   "parent_version_commit": "43ec8ba9a1b66d847bb5ae468e00cbb3e595f928",
+   "documents_read_at": "8facf3aeac35d3473ab382ad49b77062f86fd492",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "imported_on": "2026-10-13",
+   "documents": [
+    "docs/guts-v0.11.md",
+    "docs/giovanni-machamp-line-v0.11.md",
+    "docs/ko-prevention-v0.11.md",
+    "docs/architecture-v0.11.md",
+    "docs/v0.11-verification.md",
+    "docs/data-provenance.md",
+    "kyuura_engine/data/card_verification.json"
+   ],
+   "ruling_sets": [
+    {
+     "prefix": "G",
+     "first": 1,
+     "last": 42,
+     "document": "docs/guts-v0.11.md",
+     "engine_reported_counts": {
+      "SUPPORTED": 14,
+      "CONFIRMED": 21,
+      "複数の分類": 2,
+      "UNRESOLVED を含む": 5
+     }
+    },
+    {
+     "prefix": "L",
+     "first": 1,
+     "last": 14,
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "engine_reported_counts": {
+      "CONFIRMED": 9,
+      "UNRESOLVED を含む": 2,
+      "SUPPORTED": 3
+     }
+    }
+   ],
+   "imported_rulings": [
+    "CC-PMCG6-057-P189",
+    "CC-PMCG6-059-P191",
+    "CC-PMCG6-061-P193",
+    "CR-CHEMICAL-GAS-DECLARED-POWERS",
+    "CR-EFFECTS-AFTER-KO",
+    "CR-GAMBLE",
+    "CR-GAMBLE-TAILS-NO-TRIGGER",
+    "CR-GAMBLE-VS-PREVENTED",
+    "CR-GUTS-AFTERMATH",
+    "CR-GUTS-ANY-NUMBER",
+    "CR-GUTS-BENCH",
+    "CR-GUTS-COIN-RESULT",
+    "CR-GUTS-DAMAGE-STILL-RECEIVED",
+    "CR-GUTS-NOT-USED",
+    "CR-GUTS-ONCE-PER-KO",
+    "CR-GUTS-ONLY-WHEN",
+    "CR-GUTS-PROCEDURE",
+    "CR-GUTS-REMAINING-HP",
+    "CR-GUTS-SIMULTANEOUS-SELF-KO",
+    "CR-GUTS-SOURCE",
+    "CR-GUTS-STATUS",
+    "CR-GUTS-TIMING",
+    "CR-GUTS-VS-COUNTERATTACK",
+    "CR-GUTS-WHO-FLIPS",
+    "CR-HELL-HOLD",
+    "CR-HURRICANE-PUNCH",
+    "CR-POWER-DECLARED-BY-USE-WORDING",
+    "CR-POWER-OPTIONAL-DECLARATION",
+    "CR-POWER-POISON-ONLY",
+    "CR-RAGE-SUPER-PUNCH",
+    "CR-SELF-DAMAGE-CALCULATION",
+    "GR-2000-P309-EVOLUTION-BY-NAME",
+    "GR-2000-P320-DAMAGE-FIGURE"
+   ],
+   "unresolved_rulings": [
+    "UQ-COIN-IN-NULLIFIED-ELEMENT",
+    "UQ-GUTS-ATTACK-EFFECT",
+    "UQ-KO-PREVENTION-ORDER"
+   ],
+   "not_imported": [],
+   "notes": [
+    "サカキのワンリキー・サカキのゴーリキー・サカキのカイリキー（こんじょう）。G37（ワザの効果との順番）・G40（複数のこんじょうの順番）は未解決の論点に残した。使うかを選べること（G10）は、新しい資料がないので SUPPORTED のまま（CR-POWER-OPTIONAL-DECLARATION）。",
+    "L5・L13（「ダメージを受けない」相手へのコイン）は、v0.4b の未解決の項目と v0.9 の T19b と同じ問いとして UQ-COIN-IN-NULLIFIED-ELEMENT に結んだ。",
+    "docs/ko-prevention-v0.11.md は処理の仕組みの文書で、裁定の表がない。取り込みの id の G・L は v0.11 のもので、v0.8 の G（かがくへんかガス）・v0.5 の L（フシギダネ）とは別のもの。",
+    "文書は v0.13 のコミット 8facf3a の木から読んだ。v0.11 のコミット 8bd1e5b から 8facf3a までに、取り込んだ文書（docs/*-v0.11.md）は変わっていない（git diff で確かめた）。",
+    "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
+    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。"
+   ]
+  },
+  {
+   "id": "ENGINE-B8054AF",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.13-shell-attack",
+   "commit": "b8054af9599b1fc43b40dc84621569382f735bc2",
+   "engine_version": "v0.12",
+   "parent_version_commit": "8bd1e5bccd1a533bdd398f779a94a98b5e0a4cd5",
+   "documents_read_at": "8facf3aeac35d3473ab382ad49b77062f86fd492",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "imported_on": "2026-10-13",
+   "documents": [
+    "docs/phoenix-v0.12.md",
+    "docs/rocket-moltres-v0.12.md",
+    "docs/post-knockout-powers-v0.12.md",
+    "docs/temporary-attack-effects-v0.12.md",
+    "docs/architecture-v0.12.md",
+    "docs/v0.12-verification.md",
+    "docs/data-provenance.md",
+    "kyuura_engine/data/card_verification.json"
+   ],
+   "ruling_sets": [
+    {
+     "prefix": "P",
+     "first": 1,
+     "last": 35,
+     "document": "docs/phoenix-v0.12.md",
+     "engine_reported_counts": {
+      "SUPPORTED": 9,
+      "CONFIRMED": 18,
+      "UNRESOLVED を含む": 4,
+      "複数の分類": 2,
+      "実装上の仮定": 2
+     }
+    },
+    {
+     "prefix": "W",
+     "first": 1,
+     "last": 30,
+     "document": "docs/rocket-moltres-v0.12.md",
+     "engine_reported_counts": {
+      "CONFIRMED": 18,
+      "SUPPORTED": 10,
+      "UNRESOLVED を含む": 1,
+      "実装上の仮定": 1
+     }
+    }
+   ],
+   "imported_rulings": [
+    "CC-PMCG5-020-P82",
+    "CR-CHEMICAL-GAS-DECLARED-POWERS",
+    "CR-DAMAGE-SWAP-NO-KNOCKOUT",
+    "CR-FIRE-WALL-ACTIVE-TURN",
+    "CR-FIRE-WALL-COUNTERATTACKED",
+    "CR-FIRE-WALL-DAMAGE",
+    "CR-FIRE-WALL-EFFECT-DAMAGE",
+    "CR-FIRE-WALL-ENDS",
+    "CR-FIRE-WALL-EVEN-IF-KO",
+    "CR-FIRE-WALL-EXPIRY",
+    "CR-FIRE-WALL-KO-ATTACKER",
+    "CR-FIRE-WALL-NOT-A-POWER",
+    "CR-FIRE-WALL-ONCE",
+    "CR-FIRE-WALL-TIMING",
+    "CR-FIRE-WALL-TRAINERS",
+    "CR-FIRE-WALL-TRIGGER",
+    "CR-FIRE-WALL-VS-AUTO-POWERS",
+    "CR-FIRE-WALL-VS-GUTS",
+    "CR-FIRE-WALL-WITH-SPECIAL-CONDITIONS",
+    "CR-FIRE-WALL-WITHOUT-DAMAGE",
+    "CR-PHOENIX-ANY-CAUSE",
+    "CR-PHOENIX-BENCH",
+    "CR-PHOENIX-LAST-POKEMON",
+    "CR-PHOENIX-ONCE-PER-KO",
+    "CR-PHOENIX-OWNER",
+    "CR-PHOENIX-PRIZE",
+    "CR-PHOENIX-REPLAY",
+    "CR-PHOENIX-RETURN",
+    "CR-PHOENIX-STATUS",
+    "CR-PHOENIX-TIMING",
+    "CR-POWER-DECLARED-BY-USE-WORDING",
+    "CR-POWER-OPTIONAL-DECLARATION",
+    "CR-POWER-POISON-ONLY",
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "unresolved_rulings": [
+    "UQ-PHOENIX-GAS-SOURCE-KO",
+    "UQ-PHOENIX-KO-PROCESS-ORDER",
+    "UQ-POST-KO-POWERS-ORDER",
+    "UQ-RETALIATION-DOUBLE-KO"
+   ],
+   "not_imported": [
+    {
+     "ruling_id": "P34",
+     "document": "docs/phoenix-v0.12.md",
+     "engine_classification": "実装上の仮定（「ふしちょう」はコインを使わない）",
+     "status": "excluded",
+     "reason": "実装上の仮定（決定を出す時点で乱数を使わない）"
+    },
+    {
+     "ruling_id": "P35",
+     "document": "docs/phoenix-v0.12.md",
+     "engine_classification": "実装上の仮定",
+     "status": "excluded",
+     "reason": "実装上の仮定（決定を待つ間の保存・復元）"
+    },
+    {
+     "ruling_id": "W30",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "engine_classification": "実装上の仮定（説明にコインがない）",
+     "status": "excluded",
+     "reason": "実装上の仮定（乱数の使い方）。ほのおのかべはコインを使わない（説明にコインがない）"
+    }
+   ],
+   "notes": [
+    "R団のファイヤー（ふしちょう・ほのおのかべ）。W24 は v0.13 の取り込みで UQ-RETALIATION-DOUBLE-KO に結んであったものを、この取り込みに移した（論点は増やしていない）。",
+    "P27・P28・P30 は 1 つの論点（UQ-PHOENIX-KO-PROCESS-ORDER）、P19・P32 はそれぞれ別の論点にした。",
+    "docs/post-knockout-powers-v0.12.md・docs/temporary-attack-effects-v0.12.md は処理の仕組みの文書で、裁定の表がない。取り込みの id の P は v0.12 のもので、v0.5 の P（特殊能力の一般の規定）とは別のもの。",
+    "文書は v0.13 のコミット 8facf3a の木から読んだ。v0.12 のコミット b8054af から 8facf3a までに、取り込んだ文書（docs/*-v0.12.md）は変わっていない（git diff で確かめた）。",
+    "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
+    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。"
+   ]
+  },
+  {
    "id": "ENGINE-8FACF3A",
    "repository": "moheronemy/kyuura-engine",
    "branch": "claude/v0.13-shell-attack",
@@ -11436,7 +15519,8 @@
    "not_imported": [],
    "notes": [
     "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
-    "確かめたページ: p.82・p.88・p.89・p.111・p.192・p.203・p.279・p.309・p.320〜p.324（2026-10-13）。p.6・p.308 は 2026-10-12 に確かめた。"
+    "確かめたページ: p.82・p.88・p.89・p.111・p.192・p.203・p.279・p.309・p.320〜p.324（2026-10-13）。p.6・p.308 は 2026-10-12 に確かめた。",
+    "v0.10 の C34・C35、v0.12 の W24 は、この取り込みでは仮に ENGINE-8FACF3A に結んでいた。v0.5〜v0.12 の取り込み（2026-10-13）で、版ごとの取り込み（ENGINE-43EC8BA・ENGINE-B8054AF）に移した。docs/rocket-moltres-v0.12.md・docs/counterattack-v0.10.md は、v0.13 の裁定を読むためにも読んだので documents に残している。"
    ],
    "imported_rulings": [
     "CC-PMCG4-018-P43",
@@ -11660,9 +15744,9 @@
    "document": "docs/guts-v0.11.md",
    "stop_code": "UNRESOLVED_KO_PREVENTION_ATTACK_EFFECT",
    "summary": "こんじょうを使えるポケモンが HP 以上になり、同じワザで効果を受ける場合",
-   "kyuura_issue": null,
-   "disposition": "not_yet_imported",
-   "reason": "v0.11 の取り込みの前（この段階で取り込んだのは v0.5〜v0.10）。"
+   "kyuura_issue": "UQ-GUTS-ATTACK-EFFECT",
+   "disposition": "issue",
+   "question_kind": "historical"
   },
   {
    "engine_key": "W24",
@@ -11671,8 +15755,8 @@
    "stop_code": "UNRESOLVED_RETALIATION_DOUBLE_KNOCKOUT",
    "summary": "ほのおのかべ（v0.13 からこうらがえしも）のダメージによる同時のきぜつ",
    "kyuura_issue": "UQ-RETALIATION-DOUBLE-KO",
-   "disposition": "not_yet_imported",
-   "reason": "v0.12 の取り込みの前（この段階で取り込んだのは v0.5〜v0.10）。"
+   "disposition": "issue",
+   "question_kind": "historical"
   },
   {
    "engine_key": "T27",
@@ -11700,9 +15784,9 @@
    "document": "docs/guts-v0.11.md",
    "stop_code": null,
    "summary": "同じきぜつの判定でこんじょうを使えるポケモンが 2 匹以上",
-   "kyuura_issue": null,
-   "disposition": "not_yet_imported",
-   "reason": "v0.11 の取り込みの前（この段階で取り込んだのは v0.5〜v0.10）。"
+   "kyuura_issue": "UQ-KO-PREVENTION-ORDER",
+   "disposition": "issue",
+   "question_kind": "historical"
   },
   {
    "engine_key": "P19",
@@ -11710,9 +15794,9 @@
    "document": "docs/phoenix-v0.12.md",
    "stop_code": null,
    "summary": "かがくへんかガスの発生源も同時にきぜつしたときのふしちょう",
-   "kyuura_issue": null,
-   "disposition": "not_yet_imported",
-   "reason": "v0.12 の取り込みの前（この段階で取り込んだのは v0.5〜v0.10）。"
+   "kyuura_issue": "UQ-PHOENIX-GAS-SOURCE-KO",
+   "disposition": "issue",
+   "question_kind": "historical"
   },
   {
    "engine_key": "P32",
@@ -11720,9 +15804,9 @@
    "document": "docs/phoenix-v0.12.md",
    "stop_code": null,
    "summary": "ふしちょうの候補が 2 つ以上のときの順番",
-   "kyuura_issue": null,
-   "disposition": "not_yet_imported",
-   "reason": "v0.12 の取り込みの前（この段階で取り込んだのは v0.5〜v0.10）。"
+   "kyuura_issue": "UQ-POST-KO-POWERS-ORDER",
+   "disposition": "issue",
+   "question_kind": "historical"
   }
  ]
 }

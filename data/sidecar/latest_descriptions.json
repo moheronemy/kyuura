@@ -277,8 +277,8 @@
     "path": "pokemon.attacks[0].text.ja",
     "text_ja": "次の相手の番、このカードが相手のワザによるダメージを受けた時、(このカードが「きぜつ」するしないにかかわらず)相手にも10ダメージ。",
     "source_of_data": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%A4%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
-    "image_check": "not_checked",
-    "image_check_note": "p.82 の図版の文字は、ページ全体の画像では読めない大きさで、照合していない"
+    "image_check": "consistent_where_legible",
+    "image_check_note": "v0.13 の取り込みでは照合していなかった。v0.5〜v0.12 の取り込みで、図版を 600dpi で拡大して照合した。文字はかすれているが、「受けた時」「するしないにかかわらず」「相手にも10ダメージ」を含めて、読める範囲で kyuura の文面と同じ"
    },
    "latest_description": {
     "text_ja": "次の相手の番、このカードが相手のワザによるダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）相手に10ダメージを与える。",
@@ -320,9 +320,15 @@
     },
     {
      "by": "kyuura-engine",
-     "import": "ENGINE-8FACF3A",
-     "document": "docs/rocket-moltres-v0.12.md",
-     "result": "v0.12 でワザ「ほのおのかべ」を登録するときに照合した記録（この取り込みでは v0.12 の裁定は取り込んでいない）"
+     "import": "ENGINE-B8054AF",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "v0.12 でワザ「ほのおのかべ」を登録するときに照合した記録（card_verification.json の PMCG5-020。「不一致あり」）"
+    },
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版と「ワザ」欄は 400〜600dpi で拡大）。OCR の文字は位置を探すのに使っただけ",
+     "result": "図版の印刷の文面を 600dpi で照合した（v0.5〜v0.12 の取り込み）"
     }
    ],
    "notes": [
@@ -1207,6 +1213,132 @@
      "import": "ENGINE-43EC8BA",
      "document": "kyuura_engine/data/card_verification.json",
      "result": "「不一致あり」（言い回し。意味は同じ）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG6-061-PWR0",
+   "card_id": "PMCG6-061",
+   "card_name_ja": "サカキのカイリキー",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "こんじょう"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "この力は、相手のワザによるダメージで、このカードが「きぜつ」する時、使える。コインを投げて「おもて」なら、このカードは「きぜつ」せず、このカードの残りHPは「10」になる。ダメージを受ける時、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/%E3%82%B5%E3%82%AB%E3%82%AD%E3%81%AE%E3%82%AB%E3%82%A4%E3%83%AA%E3%82%AD%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は光沢でかすれていて全文は読めないが、読める範囲で kyuura の文面と同じ（kyuura の文面の出典は Pokémon Wiki）"
+   },
+   "latest_description": {
+    "text_ja": "この力は、相手のワザによるダメージで、このカードが「きぜつ」するとき、使える。コインを投げて「おもて」なら、このカードは「きぜつ」せず、このカードの残りHPが「10」になる。ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "193",
+    "pdf_page": 195,
+    "location": "サカキのカイリキー（LV.50／HP100。ジム拡張第2弾闇からの挑戦）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "「きぜつ」する時、使える。",
+     "latest": "「きぜつ」するとき、使える。",
+     "kind": "wording"
+    },
+    {
+     "printed": "このカードの残りHPは「10」になる。",
+     "latest": "このカードの残りHPが「10」になる。",
+     "kind": "wording"
+    },
+    {
+     "printed": "ダメージを受ける時、",
+     "latest": "ダメージを受けるとき、",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "「時／とき」「は／が」の表記だけの違い",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-8BD1E5B",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（こんじょうの「時／とき」「残りHPは／が」の表記だけ。意味は同じ）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG5-020-PWR0",
+   "card_id": "PMCG5-020",
+   "card_name_ja": "R団のファイヤー",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "ふしちょう"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "この力は、このカードが「きぜつ」した時だけ、使える。このカードをトラッシュからとり出し、手札に加える。このカードが「ねむり・マヒ・こんらん」状態のまま「きぜつ」する時、この力は使えない。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%A4%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない。「とり出し」の「と／取」は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "この力は、このカードが「きぜつ」したとき、使える。このカードをトラッシュからとり出し、相手プレイヤーに見せてから、手札に加える。このカードが「ねむり・マヒ・こんらん」状態のまま「きぜつ」するとき、この力は使えない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "82",
+    "pdf_page": 84,
+    "location": "R団のファイヤー（LV.26／HP60。ジム拡張第1弾リーダーズスタジアム）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "「きぜつ」した時だけ、使える。",
+     "latest": "「きぜつ」したとき、使える。",
+     "kind": "wording"
+    },
+    {
+     "printed": "このカードをトラッシュからとり出し、手札に加える。",
+     "latest": "このカードをトラッシュからとり出し、相手プレイヤーに見せてから、手札に加える。",
+     "kind": "clarification"
+    },
+    {
+     "printed": "「きぜつ」する時、この力は使えない。",
+     "latest": "「きぜつ」するとき、この力は使えない。",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "最新の説明は「相手プレイヤーに見せてから」を加え、「だけ」を書かない。トラッシュは公開されているので、とり出すカードは相手にも分かる（推論）。「だけ」がなくても、使えるのは「きぜつ」したときと読める（CR-POWER-DECLARED-BY-USE-WORDING）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-B8054AF",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（文面。最新の説明にしたがう）"
     }
    ],
    "notes": []
