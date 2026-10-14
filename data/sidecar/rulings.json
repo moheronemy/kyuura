@@ -6412,7 +6412,9 @@
    ],
    "related_cards": [
     "PMCG3-030",
-    "PMCG1-057"
+    "PMCG1-057",
+    "PMCG6-073",
+    "PMCG6-023"
    ],
    "question": "常にはたらく・自動的にはたらく特殊能力にも影響するか",
    "conclusion": "影響する（その力も消える）",
@@ -6458,6 +6460,22 @@
      "ruling_id": "C24",
      "part": "はんげきの力も消える（どちらのプレイヤーのベトベトンでも）",
      "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z14",
+     "part": "わるいねぞうの力も消える（どちらの場のベトベトンでも）",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR16",
+     "part": "だつりょくえきの力も消える",
+     "engine_classification": "CONFIRMED（消える）・SUPPORTED（時点）"
     }
    ],
    "notes": []
@@ -7876,6 +7894,14 @@
      "document": "docs/transparency-v0.9.md",
      "ruling_id": "T24",
      "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z27",
+     "part": "ワザを使ったポケモン自身への効果（自分をねむりにする）も、とうめいを持つポケモンなら効果を与える直前に評価する（今のカードでは起こらない）",
+     "engine_classification": "CONFIRMED（p.159 の T8）・未到達"
     }
    ],
    "notes": []
@@ -8385,7 +8411,9 @@
      }
     }
    ],
-   "related_cards": [],
+   "related_cards": [
+    "PMCG6-073"
+   ],
    "question": "ワザ以外（トレーナーカード・エネルギーカード・特殊能力・ポケモンチェックの「どく」）のダメージや効果にもはたらくか",
    "conclusion": "はたらかない（受ける）。ダメージスワップでのせられるダメージカウンター、エナジートランスでつけかえられるエネルギーも受ける",
    "status": "CONFIRMED",
@@ -8451,6 +8479,14 @@
      "document": "docs/transparency-v0.9.md",
      "ruling_id": "T35",
      "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z8",
+     "part": "「とうめい」（ワザを使ったゴーストも、わるいねぞうの 20 を受ける）",
+     "engine_classification": "SUPPORTED（「とうめい」は CONFIRMED）"
     }
    ],
    "notes": []
@@ -9783,7 +9819,9 @@
      }
     }
    ],
-   "related_cards": [],
+   "related_cards": [
+    "PMCG6-073"
+   ],
    "question": "はんげきの 10 ダメージを与える時点",
    "conclusion": "そのワザのダメージの処理（ワザを使ったポケモン自身へのダメージを含む）を計算してすべてのせたあと、ダメージ以外の効果（効果を決めるコインを含む）の前。きぜつ・サイド・バトル場に出す・勝ち負けの処理は、そのあと",
    "status": "SUPPORTED",
@@ -9883,6 +9921,14 @@
      "document": "docs/counterattack-v0.10.md",
      "ruling_id": "C33",
      "engine_classification": "SUPPORTED"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z21",
+     "part": "窓の位置（たおれこむの自分をねむりにする効果は、はんげき・ほのおのかべ・こうらがえしのダメージのあと）",
+     "engine_classification": "CONFIRMED（要素の順）・SUPPORTED（窓の位置）"
     }
    ],
    "notes": []
@@ -13676,6 +13722,1898 @@
     }
    ],
    "notes": []
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-AUTOMATIC",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいねぞうは、使用を宣言して使う特殊能力か",
+   "conclusion": "宣言しない。条件を満たしてダメージを受けたときに、自動的にはたらく",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "245",
+     "location": "最新の説明（「特殊能力」欄）",
+     "quote": "このカードが「ねむり」状態で、相手のワザによるダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）ダメージを与えたポケモンに、20ダメージ。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "245",
+     "location": "解説",
+     "quote": "そのダメージを与えたポケモンに20ダメージを与えます。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「14 ポケモンの特殊能力」",
+     "quote": "決められたときに自動的にはたらくため、使用を宣言しない特殊能力もあります。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "最新の説明の発動の文に「使える」がなく（宣言して使う特殊能力の書き方「…とき、使える」はこんじょう・ふしちょう）、解説も「20ダメージを与えます」と書くので、p.323 の「決められたときに自動的にはたらくため、使用を宣言しない特殊能力」にあたると読んだ（宣言しないことを直接書いた文はない）",
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-AUTOMATIC",
+    "CR-POWER-DECLARED-BY-USE-WORDING"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z4",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-ONLY-ASLEEP",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいねぞうは、どの特殊状態のときにはたらくか",
+   "conclusion": "ねむり状態のときだけ。マヒ・こんらん状態（ねむりと重ならない）や、ポケモンチェックで目がさめたあとは、はたらかない。どく状態は関係しない（どくとねむりの両方なら、はたらく）。ベンチのポケモンは特殊状態にならないので、ベンチの R団のカビゴンでは、はたらかない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "245",
+     "location": "最新の説明（「特殊能力」欄）",
+     "quote": "このカードが「ねむり」状態で、相手のワザによるダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）ダメージを与えたポケモンに、20ダメージ。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "245",
+     "location": "解説",
+     "quote": "特殊能力［わるいねぞう］は、ねむり状態でしかはたらかない、めずらしい特殊能力です。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「特殊状態の重複」",
+     "quote": "「ねむり」「マヒ」「こんらん」状態が重複することはありません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「特殊状態の重複」",
+     "quote": "どく状態は、他の特殊状態と重複します。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「特殊状態」（特殊状態になるのはバトル場のポケモンだけ）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P322-SPECIAL-CONDITIONS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z3",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z15",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z20",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-STATUS-TIME",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ねむり状態かどうかを、どの時点の状態で決めるか",
+   "conclusion": "ダメージを受けるとき（そのダメージを受ける直前）の状態で決める",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "245",
+     "location": "最新の説明（「特殊能力」欄）",
+     "quote": "このカードが「ねむり」状態で、相手のワザによるダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）ダメージを与えたポケモンに、20ダメージ。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "最新の説明「「ねむり」状態で、相手のワザによるダメージを受けたとき」を、ダメージを受けるときにねむり状態であることを条件にした文と読んだ。同じワザでダメージのあとに特殊状態が変わっても、ダメージを受けたときの状態で決まる（カイリキーのはんげき・だつりょくえきの「ダメージを受けるとき、すでに」と同じ時点。CR-COUNTERATTACK-STATUS）",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-STATUS"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z2",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-TRIGGER",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいねぞうは、どのダメージを受けたときにはたらくか",
+   "conclusion": "相手のワザによるダメージを受けたときだけ。ポケモンチェックの「どく」のダメージ、自分のワザのダメージ（こんらんの 20 を含む）、特殊能力のダメージ、ダメージカウンターの移動（ダメージスワップ）では、はたらかない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "245",
+     "location": "最新の説明",
+     "quote": "相手のワザによるダメージを受けたとき",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「8 ワザによるダメージと効果」（ワザがもたらしたダメージ・ワザの効果がもたらしたダメージは「ワザによるダメージ」。ポケモンチェックの「どく」のダメージは違う）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ダメージカウンターの移動」",
+     "quote": "ダメージカウンターが移動してダメージが増えても、それは「ダメージを受けた」ことにはなりません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ダメージを与えたポケモン」",
+     "quote": "そのような力は、ポケモン以外のもの（トレーナーカードなど）からダメージを受けた場合には、使うことができません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「4. こんらん状態」",
+     "quote": "ワザを使ったポケモン自身に、20ダメージを与えます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P321-ATTACK-DAMAGE",
+    "GR-2000-P320-COUNTER-MOVE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-NOT-OTHER-SOURCES"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z16",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-ZERO",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "受けた最終的なダメージが 0 以下のとき、また「ダメージを受けない」状態でダメージの要素が無効になったとき",
+   "conclusion": "ダメージを受けていないので、はたらかない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.319「ダメージ」",
+     "quote": "たとえば「ダメージを受けたら、それを与えたポケモンを『マヒ』状態にする」といった能力を持ったポケモンは、受けたダメージが0になってしまったら、それを与えたポケモンをマヒ状態にすることができません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321 冒頭（「ダメージを受けない」状態のポケモンにダメージを与える「ワザの要素」は無効。ダメージ以外の効果の要素は有効）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "245",
+     "location": "最新の説明（「特殊能力」欄）",
+     "quote": "このカードが「ねむり」状態で、相手のワザによるダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）ダメージを与えたポケモンに、20ダメージ。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P319-HP-AND-DAMAGE",
+    "GR-2000-P321-PREVENTED-ELEMENTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-ZERO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z17",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": [],
+   "reclassification": {
+    "from": "SUPPORTED（エンジンの分類）",
+    "to": "CONFIRMED",
+    "reason": "p.319 が、最終的なダメージが 0 なら「ダメージを受けなかった」ことになると書き、「ダメージを受けたら、それを与えたポケモンを…」という能力はダメージが 0 ならはたらかない例をそのまま挙げている。「ダメージを受けない」状態でダメージの要素が無効なら（p.321）、ダメージを受けていない。解釈の選択なしに導かれるので CONFIRMED にした（カイリキーの CR-COUNTERATTACK-ZERO と同じ）"
+   }
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-IS-POWER-DAMAGE",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいねぞうの 20 ダメージは何によるダメージか。ワザを使ったポケモンについているディフェンダーで減るか",
+   "conclusion": "特殊能力によるダメージ（ワザによるダメージではない）。ディフェンダーでは減らない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "245",
+     "location": "解説",
+     "quote": "このダメージは特殊能力によるダメージなので「ディフェンダー」ではふせげません。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-IS-POWER-DAMAGE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z6",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z7",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-NOT-ATTACK-CALCULATION",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいねぞうの 20 ダメージに、ワザによるダメージの計算（p.321。プラスパワー・「ダメージを受けない」状態）を当てはめるか",
+   "conclusion": "当てはめない。20 のまま与える（プラスパワーはワザを使うポケモン側の効果で、相手の番の R団のカビゴンにはついていない。受けるポケモンの「ダメージを受けない」状態は、ワザの要素を無効にするもので、この 20 には関係しない）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "245",
+     "location": "解説",
+     "quote": "このダメージは特殊能力によるダメージなので「ディフェンダー」ではふせげません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321 冒頭（「ダメージを受けない」状態のポケモンにダメージを与える「ワザの要素」は無効。ダメージ以外の効果の要素は有効）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9 ワザによるダメージ計算の順番」（ワザによるダメージの計算の手順）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "p.245 の解説はディフェンダーで防げないことだけを書く。p.321 の計算の手順と「ダメージを受けない」状態の規定は、ワザによるダメージ・ワザの要素について書いたものなので、特殊能力によるダメージには当てはめないと読んだ（はんげきの CR-COUNTERATTACK-IS-POWER-DAMAGE と同じ読み方）。弱点・抵抗力は別の論点（UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE）",
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER",
+    "GR-2000-P321-PREVENTED-ELEMENTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-IS-POWER-DAMAGE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z8",
+     "part": "プラスパワー・「ダメージを受けない」状態（「とうめい」は CR-TRANSPARENCY-ONLY-ATTACKS）",
+     "engine_classification": "SUPPORTED（「とうめい」は CONFIRMED）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-NO-CHAIN",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいねぞうの 20 ダメージで、受けたポケモンの「ダメージを受けたとき」の効果（はんげき・ほのおのかべ・こうらがえし・だつりょくえき・わるいねぞう）がはたらくか",
+   "conclusion": "はたらかない（どれも相手のワザによるダメージを受けたときの効果で、わるいねぞうの 20 は特殊能力によるダメージ）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "245",
+     "location": "解説",
+     "quote": "このダメージは特殊能力によるダメージなので「ディフェンダー」ではふせげません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "192",
+     "location": "カイリキーの「はんげき」の最新の説明",
+     "quote": "このカードが相手のワザによってダメージを受けたとき、",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "49",
+     "location": "キョウのベトベトンの「だつりょくえき」の最新の説明",
+     "quote": "このカードが相手のワザによってダメージを受けるとき、",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "82",
+     "location": "R団のファイヤーの「ほのおのかべ」の最新の説明",
+     "quote": "次の相手の番、このカードが相手のワザによるダメージを受けたとき、",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "138",
+     "location": "マチスのマルマインの解説",
+     "quote": "［ショックボム］のダメージは特殊能力のダメージなので効果がはたらかないというわけです。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-NO-CHAIN",
+    "CR-RESTLESS-SLEEP-IS-POWER-DAMAGE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z10",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": [],
+   "reclassification": {
+    "from": "SUPPORTED（エンジンの分類）",
+    "to": "CONFIRMED",
+    "reason": "p.245 の解説がこの 20 を「特殊能力によるダメージ」と明記し、受けたときの効果の最新の説明はどれも「相手のワザによる（よって）ダメージ」を条件にしているので、解釈の選択なしに導かれる。p.138 の解説も、同じ形の特殊能力（ショックボム）について、特殊能力のダメージでは相手の同じ特殊能力の効果がはたらかないと書く。はんげきの CR-COUNTERATTACK-NO-CHAIN（SUPPORTED）は、はんげきのダメージを特殊能力によるダメージとする根拠が推論（CR-COUNTERATTACK-IS-POWER-DAMAGE）なので SUPPORTED のまま"
+   }
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-ATTACKER-GONE",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいねぞうの 20 ダメージを与える前に、ワザを使ったポケモンが同じワザの自分へのダメージなどですでに HP 以上のダメージを受けていたとき",
+   "conclusion": "与えない（処理の対象がいない）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309 ワザを使う手順 6",
+     "quote": "処理の対象がなくなってしまっている場合",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "245",
+     "location": "最新の説明（「特殊能力」欄）",
+     "quote": "このカードが「ねむり」状態で、相手のワザによるダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）ダメージを与えたポケモンに、20ダメージ。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "p.309 の「処理の対象がなくなってしまっている場合」は、ワザの説明の処理について書いたもの。HP 以上のダメージを受けたポケモン（きぜつの処理はワザのあと）を、わるいねぞうの対象がいない場合にあたると読んだ（はんげきの CR-COUNTERATTACK-ATTACKER-GONE と同じ読み方）",
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-ATTACKER-GONE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z11",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-KO-ATTACKER",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいねぞうの 20 ダメージで、ワザを使ったポケモンが HP 以上のダメージを受けたとき",
+   "conclusion": "ワザを使ったポケモン自身へのそのあとの効果（与えたダメージによる回復など）は処理しない。相手への効果（ふきとばしの入れ替えなど）は処理する。きぜつの処理はワザの処理のあと",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309 ワザを使う手順 6",
+     "quote": "処理の対象がなくなってしまっている場合",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「16 ポケモンの「きぜつ」」（HP 以上のダメージを受けたポケモンはきぜつする）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "はんげきの CR-COUNTERATTACK-KO-ATTACKER と同じく、HP 以上のダメージを受けたポケモンへのそのあとの効果は、p.309 の対象がない場合にあたると読んだ（CR-EFFECTS-AFTER-KO）",
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE",
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-KO-ATTACKER",
+    "CR-EFFECTS-AFTER-KO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z12",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-EVEN-IF-KO",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "R団のカビゴンが、そのワザのダメージできぜつするとき",
+   "conclusion": "20 ダメージを与える（きぜつの処理より先）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "245",
+     "location": "最新の説明",
+     "quote": "（それによってこのカードが「きぜつ」しても、）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-EVEN-IF-KO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z5",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-VS-GUTS",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    },
+    {
+     "card_id": "PMCG6-061",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "こんじょう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいねぞうの 20 ダメージで、ワザを使ったサカキのカイリキーが HP 以上になるとき、こんじょうを使えるか",
+   "conclusion": "使えない（わるいねぞうの 20 は相手のワザによるダメージではない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "245",
+     "location": "解説",
+     "quote": "このダメージは特殊能力によるダメージなので「ディフェンダー」ではふせげません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "193",
+     "location": "サカキのカイリキーの「こんじょう」の最新の説明",
+     "quote": "相手のワザによるダメージで、このカードが「きぜつ」するとき",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [
+    "CR-GUTS-VS-COUNTERATTACK",
+    "CR-GUTS-SOURCE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z19",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": [
+    "ワザで R団のカビゴンがきぜつし、わるいねぞうの 20 でサカキのカイリキーがきぜつする場合の同時のきぜつの問い（UQ-COUNTERATTACK-DOUBLE-KO）は、こんじょうでは解決しない。"
+   ],
+   "reclassification": {
+    "from": "SUPPORTED（エンジンの分類）",
+    "to": "CONFIRMED",
+    "reason": "こんじょうの最新の説明は「相手のワザによるダメージで…きぜつするとき」に限り、p.245 の解説はわるいねぞうの 20 を「特殊能力によるダメージ」と明記しているので、解釈の選択なしに導かれる。はんげきの CR-GUTS-VS-COUNTERATTACK（SUPPORTED）は、はんげきのダメージの分類が推論なので SUPPORTED のまま"
+   }
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-TIMING",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "わるいねぞうの 20 ダメージを与える時点",
+   "conclusion": "そのワザのダメージの処理（ワザを使ったポケモン自身へのダメージを含む）をすべてのせたあと、ダメージ以外の効果（効果を決めるコインを含む）の前。きぜつの処理は、そのあと",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説「相手の番ではたらく効果「こうらがえし」」",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309 ワザを使う手順 6",
+     "quote": "まず、ダメージの処理をおこない、次に「それ以外の効果」を処理してください。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "245",
+     "location": "最新の説明",
+     "quote": "相手のワザによるダメージを受けたとき",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "同じ「ダメージを受けたとき」の形の「こうらがえし」の解説（p.89）を当てはめた。はんげき（CR-COUNTERATTACK-TIMING）と同じ時点。わるいねぞうについて書いた例はない",
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-TIMING",
+    "CR-SHELL-ATTACK-TIMING"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z1",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-RESTLESS-SLEEP-WITH-COLLAPSE",
+   "topic": "わるいねぞう",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     }
+    },
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "たおれこむ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "たおれこむで自分をねむり状態にしたあとの、わるいねぞう",
+   "conclusion": "相手の番に、ねむり状態のまま相手のワザのダメージを受ければ、わるいねぞうがはたらく。相手の番の終わりのポケモンチェックで目がさめれば、自分の番にワザを使える",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "245",
+     "location": "解説",
+     "quote": "「たおれこむ」は、ワザを使ったこの「R団のカビゴン」自身をねむり状態にしてしまいますが、［わるいねぞう］があるので気にせずに使えます。相手の番の終わりのポケモンチェックでねむりからさめれば、また自分の番にワザを使えます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0",
+    "LD-PMCG6-073-ATK0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z30",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-COLLAPSE-ORDER",
+   "topic": "たおれこむ",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "たおれこむ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "たおれこむの処理の順番",
+   "conclusion": "相手に 20 ダメージを与えてから、自分をねむり状態にする（書かれた順。ダメージの処理が先）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "245",
+     "location": "最新の説明（「ワザ」欄）",
+     "quote": "ダメージを与えた後、自分を「ねむり」状態にする。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ワザの要素」",
+     "quote": "その順番のとおりにおこなわなくてはなりません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309 ワザを使う手順 6",
+     "quote": "まず、ダメージの処理をおこない、次に「それ以外の効果」を処理してください。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ワザの要素」（効果の (3) このワザを使うポケモンへの効果）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE",
+    "GR-2000-P320-DAMAGE-FIGURE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-ATK0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z21",
+     "part": "要素の順番（相手へのダメージ → 自分をねむり）",
+     "engine_classification": "CONFIRMED（要素の順）・SUPPORTED（窓の位置）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-COLLAPSE-SELF-KO",
+   "topic": "たおれこむ",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "たおれこむ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "自分をねむり状態にする前に、R団のカビゴンがはんげき・ほのおのかべ・こうらがえしのダメージで HP 以上になったとき",
+   "conclusion": "ねむり状態にしない（処理の対象がいない。きぜつの処理はワザのあと）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309 ワザを使う手順 6",
+     "quote": "処理の対象がなくなってしまっている場合",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "245",
+     "location": "最新の説明（「ワザ」欄）",
+     "quote": "ダメージを与えた後、自分を「ねむり」状態にする。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "HP 以上のダメージを受けたポケモンへのそのあとの効果を、p.309 の対象がない場合にあたると読んだ（CR-COUNTERATTACK-KO-ATTACKER・CR-FIRE-WALL-COUNTERATTACKED と同じ読み方）。こんじょうを使えるポケモンだった場合は UQ-GUTS-ATTACK-EFFECT",
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-ATK0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-KO-ATTACKER",
+    "CR-FIRE-WALL-COUNTERATTACKED",
+    "UQ-GUTS-ATTACK-EFFECT"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z22",
+     "part": "こんじょうを使えないポケモン（R団のカビゴン）の場合",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-COLLAPSE-AFTER-KO-DEFENDER",
+   "topic": "たおれこむ",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "たおれこむ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "たおれこむのダメージで、相手の対戦ポケモンをきぜつさせたとき",
+   "conclusion": "自分をねむり状態にする（ダメージを与えている。自分への効果の対象は自分）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "245",
+     "location": "最新の説明（「ワザ」欄）",
+     "quote": "ダメージを与えた後、自分を「ねむり」状態にする。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ワザの要素」（効果の (3) このワザを使うポケモンへの効果）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "相手がきぜつしても、自分への効果の要素の対象（R団のカビゴン自身）はいる。ダメージを与えているので、「ダメージを与えた後」の読み方（UQ-EFFECT-AFTER-NO-DAMAGE）によらない",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-073-ATK0"
+   ],
+   "related_rulings": [
+    "CR-EFFECTS-AFTER-KO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z24",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-COLLAPSE-SPECIAL-CONDITIONS",
+   "topic": "たおれこむ",
+   "cards": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "たおれこむ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "R団のカビゴンが特殊状態のときのたおれこむ",
+   "conclusion": "ねむり・マヒ状態のときは、ワザを使えない。こんらん状態なら、ワザを使うときにコインを投げ、「おもて」ならたおれこむを処理し、ねむり状態がこんらん状態に置きかわる（「うら」なら自分に 20 ダメージで、たおれこむの効果はない）。どく状態なら、どくとねむりの両方になる",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「2. ねむり状態」",
+     "quote": "ねむり状態のポケモンは、ワザを使うことができません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「3. マヒ状態」",
+     "quote": "マヒ状態のポケモンは、ワザを使うことができません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「4. こんらん状態」",
+     "quote": "「うら」が出たら、そのワザの内容がどのようなものであっても、ワザを使ったポケモン自身に、20ダメージを与えます。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「特殊状態の重複」",
+     "quote": "「ねむり」「マヒ」「こんらん」状態が重複することはありません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322「特殊状態の重複」",
+     "quote": "どく状態は、他の特殊状態と重複します。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P322-SPECIAL-CONDITIONS",
+    "GR-2000-P322-CONFUSION"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-ATK0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z25",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z26",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z28",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-TRIGGER",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "だつりょくえきは、どのダメージを受けるときにはたらくか",
+   "conclusion": "相手のワザによってダメージを受けるときだけ。ポケモンチェックの「どく」のダメージ、自分のワザのダメージ（こんらんの 20 を含む）、ダメージカウンターの移動、わるいねぞうの 20（特殊能力によるダメージ）では、はたらかない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "49",
+     "location": "最新の説明",
+     "quote": "相手のワザによってダメージを受けるとき",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「8 ワザによるダメージと効果」（ワザがもたらしたダメージ・ワザの効果がもたらしたダメージは「ワザによるダメージ」。ポケモンチェックの「どく」のダメージは違う）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ダメージカウンターの移動」",
+     "quote": "ダメージカウンターが移動してダメージが増えても、それは「ダメージを受けた」ことにはなりません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.320「ダメージを与えたポケモン」",
+     "quote": "そのような力は、ポケモン以外のもの（トレーナーカードなど）からダメージを受けた場合には、使うことができません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "245",
+     "location": "解説",
+     "quote": "このダメージは特殊能力によるダメージなので「ディフェンダー」ではふせげません。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P321-ATTACK-DAMAGE",
+    "GR-2000-P320-COUNTER-MOVE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-NOT-OTHER-SOURCES",
+    "CR-RESTLESS-SLEEP-TRIGGER"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR2",
+     "part": "「相手のワザによって」（説明に書かれた範囲）",
+     "engine_classification": "CONFIRMED（「相手のワザによって」）・SUPPORTED（分類）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-POWER-DAMAGE",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "カイリキーのはんげきの 10 ダメージで、だつりょくえきがはたらくか",
+   "conclusion": "はたらかない（はんげきの 10 は特殊能力によるダメージで、相手のワザによるダメージではない）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "49",
+     "location": "最新の説明",
+     "quote": "相手のワザによってダメージを受けるとき",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "192",
+     "location": "カイリキーの「はんげき」の最新の説明",
+     "quote": "このカードが相手のワザによってダメージを受けたとき、",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "はんげきの 10 を特殊能力によるダメージとする読み方（CR-COUNTERATTACK-IS-POWER-DAMAGE。SUPPORTED）による。はんげきの説明・解説は、このダメージの分類を直接書かない",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-IS-POWER-DAMAGE"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR2",
+     "part": "特殊能力のダメージの分類（はんげき）",
+     "engine_classification": "CONFIRMED（「相手のワザによって」）・SUPPORTED（分類）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-RETURN-DAMAGE",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほのおのかべ・こうらがえしで返されたダメージを受けたときにはたらくか。「ダメージを与えたポケモン」はどれか",
+   "conclusion": "はたらく。ダメージを与えたポケモンは、返す効果を持つポケモン（ほのおのかべを使った R団のファイヤー、こうらがえしを使ったわるいカメール）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「8 ワザによるダメージと効果」",
+     "quote": "「こうらがえし」のダメージとしてあつかいます。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "49",
+     "location": "最新の説明",
+     "quote": "ダメージを与えたポケモンについている「エネルギーカード」",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "返すダメージは、前の番に効果を与えたワザによるダメージ（p.321「8」。CR-SHELL-ATTACK-RETURN-IS-ATTACK-DAMAGE）なので「相手のワザによって」受けたダメージにあたり、そのダメージを与えたのは返す効果を持つポケモンだと読んだ",
+   "rule_clause_refs": [
+    "GR-2000-P321-ATTACK-DAMAGE"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [
+    "CR-SHELL-ATTACK-RETURN-IS-ATTACK-DAMAGE",
+    "CR-FIRE-WALL-VS-AUTO-POWERS"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR3",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-ZERO",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "受けた最終的なダメージが 0 以下のとき、また「ダメージを受けない」状態でダメージの要素が無効になったとき",
+   "conclusion": "ダメージを受けていないので、はたらかない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.319「ダメージ」",
+     "quote": "たとえば「ダメージを受けたら、それを与えたポケモンを『マヒ』状態にする」といった能力を持ったポケモンは、受けたダメージが0になってしまったら、それを与えたポケモンをマヒ状態にすることができません。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321 冒頭（「ダメージを受けない」状態のポケモンにダメージを与える「ワザの要素」は無効。ダメージ以外の効果の要素は有効）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "49",
+     "location": "最新の説明（「特殊能力」欄）",
+     "quote": "このカードが相手のワザによってダメージを受けるとき、（それによってこのカードが「きぜつ」しても、）コインを投げて「おもて」なら、ダメージを与えたポケモンについている「エネルギーカード」を1枚選び、トラッシュする。ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P319-HP-AND-DAMAGE",
+    "GR-2000-P321-PREVENTED-ELEMENTS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-ZERO",
+    "CR-RESTLESS-SLEEP-ZERO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR4",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": [],
+   "reclassification": {
+    "from": "SUPPORTED（エンジンの分類）",
+    "to": "CONFIRMED",
+    "reason": "p.319 が、最終的なダメージが 0 なら「ダメージを受けなかった」ことになると書き、ダメージを受けたときにはたらく能力がダメージ 0 ではたらかない例を挙げている。解釈の選択なしに導かれる（CR-RESTLESS-SLEEP-ZERO と同じ）"
+   }
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-AFTER-DAMAGE",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "だつりょくえきは、ダメージを受ける前にはたらく（ダメージを置きかえる）か、受けたあとにはたらくか",
+   "conclusion": "ダメージを受けた（ダメージをのせた）あとにはたらく。ダメージを受けないようにする効果（とうめいのような置きかえ）ではない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "49",
+     "location": "解説",
+     "quote": "特殊能力［だつりょくえき］は、自分自身がダメージを受けてはじめて効果がはたらきます。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "49",
+     "location": "最新の説明",
+     "quote": "（それによってこのカードが「きぜつ」しても、）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR5",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-WHO-FLIPS",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "だつりょくえきのコインを投げるのはだれか",
+   "conclusion": "キョウのベトベトンの持ち主",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "49",
+     "location": "最新の説明（「特殊能力」欄）",
+     "quote": "このカードが相手のワザによってダメージを受けるとき、（それによってこのカードが「きぜつ」しても、）コインを投げて「おもて」なら、ダメージを与えたポケモンについている「エネルギーカード」を1枚選び、トラッシュする。ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "49",
+     "location": "解説",
+     "quote": "「キョウのベトベトン」がダメージを受けるたびにコイントスをして、表ならダメージを与えたポケモンのエネルギーカードを選んで１枚トラッシュできるのです。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "説明の「コインを投げて」は、説明を持つカード（キョウのベトベトン）の持ち主の行為と読んだ。自動的にはたらくとうめいのコインはゴースト側のプレイヤーが投げる（CR-TRANSPARENCY-WHO-FLIPS）のと同じ形。だつりょくえきが宣言する特殊能力かどうか（UQ-ENERGY-DRAIN-DECLARATION）によらない",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [
+    "CR-TRANSPARENCY-WHO-FLIPS"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR7",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-EVEN-IF-KO",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "キョウのベトベトンが、そのダメージできぜつするとき",
+   "conclusion": "はたらく（きぜつの処理はワザの処理のあと）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "49",
+     "location": "最新の説明",
+     "quote": "（それによってこのカードが「きぜつ」しても、）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309 ワザを使う手順（きぜつの処理はワザを使って起こることのあと）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR9",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-WHO-CHOOSES",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "トラッシュするエネルギーカードを選ぶのはだれか",
+   "conclusion": "キョウのベトベトンの持ち主",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "49",
+     "location": "解説",
+     "quote": "「キョウのベトベトン」がダメージを受けるたびにコイントスをして、表ならダメージを与えたポケモンのエネルギーカードを選んで１枚トラッシュできるのです。",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "49",
+     "location": "最新の説明（「特殊能力」欄）",
+     "quote": "このカードが相手のワザによってダメージを受けるとき、（それによってこのカードが「きぜつ」しても、）コインを投げて「おもて」なら、ダメージを与えたポケモンについている「エネルギーカード」を1枚選び、トラッシュする。ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "解説「表ならダメージを与えたポケモンのエネルギーカードを選んで1枚トラッシュできるのです」は、キョウのベトベトンを使う側の行為として書いている。説明の「選び」に主語はないが、相手が選ぶ効果は説明にそう書く（ふきとばしの最新の説明など）ので、持ち主が選ぶと読んだ",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR10",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-CHOICE",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "選べるエネルギーカード",
+   "conclusion": "ダメージを与えたポケモンについているエネルギーカード（基本エネルギー・特殊エネルギーのどちらでも、タイプを問わない）から 1 枚",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "49",
+     "location": "最新の説明",
+     "quote": "ダメージを与えたポケモンについている「エネルギーカード」を1枚選び、トラッシュする。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR11",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-STATUS",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "キョウのベトベトンが特殊状態のとき。どの時点の状態で決めるか",
+   "conclusion": "ダメージを受けるときに、すでに「ねむり・マヒ・こんらん」状態なら使えない。どく状態は関係しない。同じワザの効果で、ダメージを受けたあとにその状態になっても使える",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "49",
+     "location": "最新の説明",
+     "quote": "ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-STATUS",
+    "CR-POWER-POISON-ONLY"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR15",
+     "engine_classification": "CONFIRMED・SUPPORTED（あとで特殊状態になる場合）"
+    }
+   ],
+   "notes": [],
+   "reclassification": {
+    "from": "CONFIRMED・SUPPORTED（あとで特殊状態になる場合。エンジンの分類）",
+    "to": "CONFIRMED",
+    "reason": "最新の説明が判定の時点を「ダメージを受けるとき、すでに」と書いているので、あとで特殊状態になる場合も、処理する時点（UQ-ENERGY-DRAIN-TIMING）によらず解釈の選択なしに決まる（同じ書き方のはんげきの CR-COUNTERATTACK-STATUS と同じ）"
+   }
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-GAS-TIMING",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "かがくへんかガスで消えているかを、どの時点で決めるか",
+   "conclusion": "ダメージを受けるとき（そのときにガスがはたらいていれば、だつりょくえきは使えない）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "48",
+     "location": "ベトベトンの「かがくへんかガス」の最新の説明（「かがくへんかガス」以外のすべての「特殊能力」は使えず、その力も消える）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "49",
+     "location": "最新の説明（「特殊能力」欄）",
+     "quote": "このカードが相手のワザによってダメージを受けるとき、（それによってこのカードが「きぜつ」しても、）コインを投げて「おもて」なら、ダメージを与えたポケモンについている「エネルギーカード」を1枚選び、トラッシュする。ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "だつりょくえきは「ダメージを受けるとき」の条件で決まる特殊能力なので、その時点で力が消えていれば使えないと読んだ（特殊状態の判定と同じ時点）。受けてから処理するまでのあいだにガスの有無が変わる場合の規定はない",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [
+    "CR-CHEMICAL-GAS-ALL-POWERS",
+    "CR-CHEMICAL-GAS-LEAVES"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR16",
+     "part": "判定の時点",
+     "engine_classification": "CONFIRMED（消える）・SUPPORTED（時点）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-BENCH",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ベンチのキョウのベトベトンでもはたらくか",
+   "conclusion": "はたらく（ベンチのポケモンにダメージを与える相手のワザのダメージを受けるとき）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "49",
+     "location": "解説",
+     "quote": "バトル場でもベンチでも使うことができます。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [
+    "CR-COUNTERATTACK-BENCH"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR17",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "CR-ENERGY-DRAIN-EVERY-TIME",
+   "topic": "だつりょくえき",
+   "cards": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "何回はたらくか（1 つのワザで 2 回以上ダメージを受けるときを含む）",
+   "conclusion": "ダメージを受けるたびにはたらく",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "49",
+     "location": "解説",
+     "quote": "「キョウのベトベトン」がダメージを受けるたびにコイントスをして、表ならダメージを与えたポケモンのエネルギーカードを選んで１枚トラッシュできるのです。",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "解説「ダメージを受けるたびにコイントスをして」による。1 つのワザで 2 回以上ダメージを受ける場面を直接書いた例はない。はんげき・こうらがえし（UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK の (2)）は、説明・解説にこの書き方がないので論点のまま",
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "related_rulings": [
+    "UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR19",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": []
   }
  ],
  "issues": [
@@ -13767,6 +15705,16 @@
      "source": "P43",
      "page": "89",
      "location": "わるいカメールの「こうらがえし」"
+    },
+    {
+     "source": "P43",
+     "page": "245",
+     "location": "R団のカビゴンの「わるいねぞう」"
+    },
+    {
+     "source": "P43",
+     "page": "49",
+     "location": "キョウのベトベトンの「だつりょくえき」"
     }
    ],
    "rule_clause_refs": [
@@ -13802,6 +15750,26 @@
      },
      "engine_ruling": "S7",
      "note": "同じわるいカメールが 1 つのワザで 2 回以上ダメージを受けたときに何回返すか（(2) の事例）"
+    },
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     },
+     "engine_ruling": "Z18",
+     "note": "1 つのワザで、わるいねぞうとほかの「受けたとき」の効果が 2 つ以上はたらく（今のカードでは起こらない）"
+    },
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     },
+     "engine_ruling": "DR18",
+     "note": "1 つのワザで、だつりょくえきとほかの「受けたとき」の効果が重なる（複数のポケモンにダメージを与えるワザのとき）"
     }
    ],
    "reachability": {
@@ -13832,10 +15800,27 @@
      "ruling_id": "S7",
      "engine_classification": "UNRESOLVED・到達しない（C34・C35 と同じ問い）",
      "engine_note": "エンジンは 2 つ以上はたらいたら RuntimeError（v0.12 から）。新しい未解決の裁定にしない"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z18",
+     "engine_classification": "UNRESOLVED（起こらない）",
+     "engine_note": "コードのない問い（今のカードでは起こらない）。公式の裁定ではない"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR18",
+     "engine_classification": "UNRESOLVED（C34/C35 と同じ問い）",
+     "engine_note": "エンジンは C34/C35 と同じ問いとする。カードは延期"
     }
    ],
    "notes": [
-    "公式資料に判断材料がないこと（official_material）、エンジンがそのケースに対応していないこと（engine_refs の RuntimeError）、エンジンのカードプールで起こらないこと（reachability）を分けて記録している。"
+    "公式資料に判断材料がないこと（official_material）、エンジンがそのケースに対応していないこと（engine_refs の RuntimeError）、エンジンのカードプールで起こらないこと（reachability）を分けて記録している。",
+    "(2) 同じポケモンが 1 つのワザで 2 回以上受ける場合について、だつりょくえきは解説が「ダメージを受けるたびに」と書くので、kyuura では「そのたびにはたらく」を SUPPORTED にした（CR-ENERGY-DRAIN-EVERY-TIME）。はんげき・こうらがえしには同じ書き方がないので、(2) はそれらについて論点のまま。"
    ]
   },
   {
@@ -14141,7 +16126,7 @@
   {
    "id": "UQ-COUNTERATTACK-DOUBLE-KO",
    "status": "UNRESOLVED",
-   "question": "相手のワザのダメージでカイリキーがきぜつし、そのワザを使ったポケモンが「はんげき」の 10 ダメージで HP 以上になる（はんげきがなければきぜつしない）とき、2 匹は「同時に「きぜつ」した」ことになるか。同時でなければ、どちらを先に処理するか",
+   "question": "ダメージを受けたときに、ダメージを与えたポケモンに特殊能力のダメージを与える特殊能力（カイリキーの「はんげき」・R団のカビゴンの「わるいねぞう」）を持つポケモンが、相手のワザのダメージできぜつし、そのワザを使ったポケモンがその特殊能力のダメージで HP 以上になる（その特殊能力がなければきぜつしない）とき、2 匹は「同時に「きぜつ」した」ことになるか。同時でなければ、どちらを先に処理するか",
    "why_unresolved": "p.324 は「1つのワザや特殊能力などによって引き起こされることがらによって複数のポケモンが「きぜつ」した場合」を同時とする。1 匹はワザのダメージ、もう 1 匹はそのワザで自動的にはたらいた特殊能力のダメージできぜつするので、これが 1 つのワザによって引き起こされることがらにあたるか（ワザと特殊能力の 2 つのことがらか）が書かれていない。同時でないなら、どちらを先に処理するかの規定もない。サイドを取る順番、バトル場に出す順番（今が自分の番でないプレイヤーが先）、勝ち負け（両方が最後のサイドを取る・出せない → サドン・デス）が変わる",
    "official_material": "insufficient",
    "sources": [
@@ -14159,6 +16144,11 @@
      "source": "P43",
      "page": "311",
      "location": "公式ルール「5 勝ち負けが決まるとき」"
+    },
+    {
+     "source": "P43",
+     "page": "245",
+     "location": "R団のカビゴンの「わるいねぞう」の最新の説明と解説"
     }
    ],
    "rule_clause_refs": [
@@ -14174,6 +16164,16 @@
      },
      "engine_ruling": "C18",
      "note": "(b) ワザでカイリキーがきぜつし、ワザを使ったポケモンがはんげきのダメージできぜつする"
+    },
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     },
+     "engine_ruling": "Z13",
+     "note": "ワザで R団のカビゴンがきぜつし、ワザを使ったポケモンがわるいねぞうの 20 できぜつする"
     }
    ],
    "reachability": {
@@ -14190,17 +16190,26 @@
      "part": "(b) はんげきのダメージで攻撃側がきぜつする場合",
      "engine_classification": "(a) CONFIRMED・(b) **UNRESOLVED**",
      "engine_note": "エンジンは、この場合になりうるワザを、宣言の前（こんらんのコインの前）に止める。これはエンジンの実装で、公式の裁定ではない"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z13",
+     "engine_classification": "UNRESOLVED（C18）",
+     "engine_note": "エンジンは C18 と同じ問いとして、同じ停止コードで止める（新しい裁定にしていない）。公式の裁定ではない"
     }
    ],
    "notes": [
     "UQ-RETALIATION-DOUBLE-KO（ほのおのかべ・こうらがえし）と似た形だが、そちらの攻撃側へのダメージは前の番のワザの効果による「ワザによるダメージ」（p.321）で、こちらは特殊能力によるダメージ（CR-COUNTERATTACK-IS-POWER-DAMAGE。推論）。同じ論点にまとめる根拠が公式の資料にないので、別の論点にした。",
-    "(a) 同じワザの自分へのダメージで両方がきぜつする場合は、1 つのワザによる同時のきぜつ（CR-COUNTERATTACK-SELF-DAMAGE-DOUBLE-KO）。"
+    "(a) 同じワザの自分へのダメージで両方がきぜつする場合は、1 つのワザによる同時のきぜつ（CR-COUNTERATTACK-SELF-DAMAGE-DOUBLE-KO）。",
+    "わるいねぞう（v0.17 の Z13）も同じ問い。わるいねぞうの 20 が特殊能力によるダメージであることは CONFIRMED（CR-RESTLESS-SLEEP-IS-POWER-DAMAGE）だが、特殊能力のダメージによるきぜつが「1つのワザ…によって引き起こされることがら」にあたるかは、はんげきと同じく書かれていない。"
    ]
   },
   {
    "id": "UQ-GUTS-ATTACK-EFFECT",
    "status": "UNRESOLVED",
-   "question": "こんじょうを使えるサカキのカイリキーが、相手のワザのダメージで HP 以上になり、同じワザでそのポケモンに効果（特殊状態にする・入れ替えるなど）も与えられるとき、こんじょうの「おもて」できぜつしなかったサカキのカイリキーは、その効果を受けるか",
+   "question": "こんじょうを使えるサカキのカイリキーが、相手のワザのダメージで HP 以上になり、同じワザでそのポケモンに効果（特殊状態にする・入れ替えるなど）も与えられるとき、こんじょうの「おもて」できぜつしなかったサカキのカイリキーは、その効果を受けるか（ワザを使ったポケモン自身が、返すダメージ（ほのおのかべ・こうらがえし）で HP 以上になり、こんじょうを使えるときの、そのワザの自分への効果も同じ問い）",
    "why_unresolved": "HP 以上のダメージを受けたポケモンにはそのあとの効果を処理しないと読む（p.309・p.89 のスターブーメランの例。CR-EFFECTS-AFTER-KO。推論）と、こんじょうをワザのあとのきぜつの判定で使う（CR-GUTS-TIMING。推論）ことと合わせて、「おもて」のポケモンが効果を受けないまま場に残る。ダメージを受けた直後にこんじょうを使うと読めば、効果を受ける。どちらの読み方も p.193 の説明・解説、p.309・p.311・p.321〜p.324 に書かれていない",
    "official_material": "insufficient",
    "sources": [
@@ -14244,6 +16253,16 @@
      },
      "engine_ruling": "G30",
      "note": "ワザの効果でダメージのあとに特殊状態になる場合（特殊状態の条件にはあたらないが、効果を受けるかが決められない）"
+    },
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "たおれこむ"
+     },
+     "engine_ruling": "Z22",
+     "note": "たおれこむを使ったポケモンが、こんじょうを使えるポケモンだった場合（kyuura のカードで、こんじょうを持つポケモンに自分への効果のワザはないので、今は起こらない）"
     }
    ],
    "reachability": {
@@ -14267,6 +16286,15 @@
      "ruling_id": "G30",
      "part": "ワザの効果を受けるか（特殊状態の条件にあたらないことは CR-GUTS-STATUS）",
      "engine_classification": "CONFIRMED（条件）・UNRESOLVED（効果を受けるか）"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z22",
+     "part": "こんじょうを使えるポケモンの場合",
+     "engine_classification": "SUPPORTED",
+     "engine_note": "エンジンは G37 と同じ形の、コードのない問いとする（今のカードでは起こらない）"
     }
    ],
    "notes": [
@@ -14547,6 +16575,480 @@
     }
    ],
    "notes": []
+  },
+  {
+   "id": "UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE",
+   "status": "UNRESOLVED",
+   "question": "説明に「弱点・抵抗力」に関係なく、と書かれていない特殊能力のダメージ（わるいねぞうの 20、ショックボムの 20）に、受けるポケモンの弱点・抵抗力を計算するか",
+   "why_unresolved": "公式ルールは弱点・抵抗力を「9 ワザによるダメージ計算の順番」（p.321）の中でだけ定め、ワザ以外のダメージは個別に書く（どくは「弱点」「抵抗力」に関係なく 10、こんらんの 20 は弱点・抵抗力の影響を受ける。p.322）。特殊能力のダメージの一般の規定はない。はんげき（p.192）は最新の説明に「弱点・抵抗力」に関係なく、と明記するが、わるいねぞう（p.245）・ショックボム（p.138）の最新の説明と解説には、弱点・抵抗力の記述がない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "245",
+     "location": "R団のカビゴンの「わるいねぞう」の最新の説明と解説"
+    },
+    {
+     "source": "P43",
+     "page": "138",
+     "location": "マチスのマルマインの「ショックボム」の最新の説明と解説"
+    },
+    {
+     "source": "P43",
+     "page": "192",
+     "location": "カイリキーの「はんげき」の最新の説明（「弱点・抵抗力」に関係なく）"
+    },
+    {
+     "source": "P43",
+     "page": "321",
+     "location": "公式ルール「9 ワザによるダメージ計算の順番」"
+    },
+    {
+     "source": "P43",
+     "page": "322",
+     "location": "公式ルール「1. どく状態」「4. こんらん状態」"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER",
+    "GR-2000-P322-SPECIAL-CONDITIONS",
+    "GR-2000-P322-CONFUSION"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいねぞう"
+     },
+     "engine_ruling": "Z9",
+     "note": "わるいねぞうの 20 を受けるポケモン（ワザを使ったポケモン）の弱点・抵抗力が無色のとき"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードでは起こらない（R団のカビゴンは無色で、無色の弱点・抵抗力のカードがない）",
+    "all_cards": "わるいねぞうでは起こらない（kyuura の data/cards.json の 780 枚に、無色の弱点・抵抗力を持つポケモンはない）。ショックボム（マチスのマルマイン。雷）は、雷の弱点・抵抗力を持つポケモンで起こる（マチスのマルマインは data/cards.json になく、ジムデッキの記録 data/ja_text_pcgsearch.json にある）"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z9",
+     "engine_classification": "UNRESOLVED",
+     "engine_note": "エンジンは、計算するかで結果が変わる場合（今は起こらない）だけを止める。これはエンジンの実装で、公式の裁定ではない"
+    }
+   ],
+   "notes": [
+    "わるいねぞうについては、今のデータでは結果が変わらない（無色の弱点・抵抗力がない）。これはデータの事情で、裁定が決まったことではない。",
+    "わるいねぞうの 20 が特殊能力によるダメージであることは CONFIRMED（CR-RESTLESS-SLEEP-IS-POWER-DAMAGE）。ディフェンダー・プラスパワーなど p.321 のほかの段階は CR-RESTLESS-SLEEP-NOT-ATTACK-CALCULATION。"
+   ]
+  },
+  {
+   "id": "UQ-EFFECT-AFTER-NO-DAMAGE",
+   "status": "UNRESOLVED",
+   "question": "「ダメージを与えた後、…」と書かれたワザの効果（たおれこむ・ぐうたらこうげきの「自分を「ねむり」状態にする」など）は、そのダメージの要素がダメージを与えなかったとき（ディフェンダーで最終的なダメージが 0、「ダメージを受けない」状態でダメージの要素が無効、とうめいの「おもて」で受けない）にも処理するか",
+   "why_unresolved": "「ダメージを与えた後」を、要素の順番の記述と読むか（p.320 は要素を書かれた順に処理するとし、p.321 は「ダメージを受けない」状態でもダメージ以外の効果の要素は有効とする）、ダメージを与えたことを条件にした記述と読むか（p.155 の同じ文面の解説は「相手にダメージを与えたら、自分がねむり状態になってしまいます」と書き、p.319 は最終的なダメージが 0 なら「与えなかった」ことになるとする）が、公式の資料から決まらない。p.245 の解説は、ダメージを与えなかった場面を書かない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "245",
+     "location": "R団のカビゴンの「たおれこむ」の最新の説明と解説"
+    },
+    {
+     "source": "P43",
+     "page": "155",
+     "location": "ナツメのヤドンの「ぐうたらこうげき」の最新の説明と解説"
+    },
+    {
+     "source": "P43",
+     "page": "319",
+     "location": "公式ルール「6 HPとダメージ」（ダメージを与えなかった）"
+    },
+    {
+     "source": "P43",
+     "page": "320",
+     "location": "公式ルール「ワザの要素」"
+    },
+    {
+     "source": "P43",
+     "page": "321",
+     "location": "公式ルール p.321 冒頭（「ダメージを受けない」状態）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P319-HP-AND-DAMAGE",
+    "GR-2000-P321-PREVENTED-ELEMENTS",
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "たおれこむ"
+     },
+     "engine_ruling": "Z23",
+     "note": "たおれこむの相手へのダメージが 0（ディフェンダー）・無効（かたまる）・受けない（とうめい）のとき、自分をねむりにするか"
+    },
+    {
+     "card_id": "PMCG6-044",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ぐうたらこうげき"
+     },
+     "note": "ナツメのヤドンの「ぐうたらこうげき」（p.155 の最新の説明はたおれこむと同じ文面）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードで起こる（ディフェンダー・かたまる・とうめい）",
+    "all_cards": "起こる。kyuura の印刷の文面で「ダメージを与えた後（あと）」と書くワザは、ほかに わるいフーディンの「テレポートブラスト」・わるいオコリザルの「あばれくるう」・キョウのドガースの「くもがくれガス」・カツラのファイヤーの「ひのとり」がある（kyuura のデータで探した。これらの最新の説明は確かめていない）"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z23",
+     "engine_classification": "UNRESOLVED（新規）",
+     "engine_note": "エンジンは、この場合になりうるワザを宣言の前に止める（停止コードあり）。これはエンジンの実装で、公式の裁定ではない"
+    }
+   ],
+   "notes": [
+    "同じ問いでない記録: ほのおのかべの自分への効果は、説明に「ダメージを与えたら」「ダメージを与えた後」がないので、ダメージを与えなくても与える（CR-FIRE-WALL-WITHOUT-DAMAGE）。相手を特殊状態にする効果の要素は、最終的なダメージが 0 でも処理する（CR-STATUS-AFTER-DAMAGE）。どちらも「ダメージを与えた後」の書き方ではない。",
+    "やどりぎのタネ（PMCG1-001）は最新の説明が「相手にダメージを与えたら」で、条件として書いている（LD-PMCG1-001-ATK0）。"
+   ]
+  },
+  {
+   "id": "UQ-ENERGY-DRAIN-DECLARATION",
+   "status": "UNRESOLVED",
+   "question": "だつりょくえきは、自動的にはたらく特殊能力か、使用を宣言する（使うかを持ち主が選べる）特殊能力か",
+   "why_unresolved": "2000.02.14 版のルールには、宣言する特殊能力（p.311）と自動的にはたらく特殊能力（p.323）があり、どちらかは説明の書き方で読む。だつりょくえきの最新の説明は、発動の文が自動的にはたらく特殊能力の形（「…受けるとき、…コインを投げて「おもて」なら、…トラッシュする」。「使える」がない）で、最後が宣言する特殊能力の形（「この力は使えない」）。はんげき・とうめい・かがくへんかガスは「はたらかない」「消える」、こんじょう・ふしちょうは「使える」「使えない」と書き分けているが、だつりょくえきは 1 つの説明の中で食い違う。解説も「効果がはたらきます」「ダメージを受けるたびにコイントスをして」と、「トラッシュできるのです」「使うことができます」の両方を書く",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "49",
+     "location": "キョウのベトベトンの「だつりょくえき」の最新の説明と解説"
+    },
+    {
+     "source": "P43",
+     "page": "311",
+     "location": "公式ルール「ポケモンの特殊能力を使う」"
+    },
+    {
+     "source": "P43",
+     "page": "323",
+     "location": "公式ルール「14 ポケモンの特殊能力」"
+    },
+    {
+     "source": "P43",
+     "page": "192",
+     "location": "はんげきの最新の説明（「はたらかない」）"
+    },
+    {
+     "source": "P43",
+     "page": "193",
+     "location": "こんじょうの最新の説明（「使える」「使えない」）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     },
+     "engine_ruling": "DR1",
+     "note": "キョウのベトベトンが相手のワザによってダメージを受けるたびに起こる"
+    },
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     },
+     "engine_ruling": "DR12",
+     "note": "「おもて」のあと、トラッシュしないことを選べるか（自動なら「トラッシュする」で義務、宣言するなら使うかを選べる）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンはキョウのベトベトンを未対応のまま延期している",
+    "all_cards": "キョウのベトベトンが相手のワザのダメージを受けるたびに起こる"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [
+    "UQ-ENERGY-DRAIN-TIMING"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR1",
+     "engine_classification": "UNRESOLVED",
+     "engine_note": "エンジンは、この問いが決まらないのでカードを未対応のまま延期した（停止コードはない）。これはエンジンの実装の判断で、公式の裁定ではない"
+    },
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR12",
+     "part": "「おもて」のあと選べるか（DR1 に含める）",
+     "engine_classification": "DR1 に含める"
+    }
+   ],
+   "notes": [
+    "後年の資料: kyuura の docs/rules/errata-history.md の 2002年の「ポケボディーとして扱う旧裏・neo の特殊能力」の一覧に、だつりょくえきがある。2002年の扱いで、2000.02.14 版の解釈には当てはめない。",
+    "英語版の文面（「If an opponent's attack does damage to Koga's Muk …, flip a coin.」「This power can't be used if …」）も日本版の処理の根拠にしない。",
+    "結果の違い: 宣言するなら持ち主は使わないことを選べ（コインを投げない）、処理する時点はワザの要素のあと（p.309 でワザの最中は宣言できない）になる。自動的にはたらくなら、必ずコインを投げる。"
+   ]
+  },
+  {
+   "id": "UQ-ENERGY-DRAIN-TIMING",
+   "status": "UNRESOLVED",
+   "question": "だつりょくえきのコイン・エネルギーカードの選択・トラッシュを、いつ処理するか（(a) ダメージを受けた直後、(b) そのワザのダメージの要素をすべて処理したあと・ダメージ以外の効果の前、(c) ワザの要素をすべて処理したあと・きぜつの処理の前）",
+   "why_unresolved": "だつりょくえきを判定する時点（ダメージを受けたとき）は決まる（CR-ENERGY-DRAIN-AFTER-DAMAGE）が、処理する時点は書かれていない。自動的にはたらくなら、p.89 の「こうらがえし」の解説（ダメージの処理のあと・ダメージ以外の効果の前）の類推で (b) と読めるが、p.89 はダメージを返す効果について書いたもので、ダメージを与えないだつりょくえきには類推だけになる。宣言するなら p.309（ワザの最中は宣言できない）で (c)。だつりょくえきが宣言する特殊能力か（UQ-ENERGY-DRAIN-DECLARATION）と結びついている",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "49",
+     "location": "キョウのベトベトンの「だつりょくえき」の最新の説明と解説"
+    },
+    {
+     "source": "P43",
+     "page": "89",
+     "location": "ワザ解説「相手の番ではたらく効果「こうらがえし」」"
+    },
+    {
+     "source": "P43",
+     "page": "309",
+     "location": "公式ルール「ワザを使う」"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     },
+     "engine_ruling": "DR6",
+     "note": "ダメージのあとにコインを投げるワザ（しめつける・どくばり・でんげき）では、だつりょくえきのコインとワザのコインの順番が変わる"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンはキョウのベトベトンを未対応のまま延期している",
+    "all_cards": "起こる（ダメージのあとにコイン・自分へのダメージ・入れ替えがあるワザを、キョウのベトベトンに使うとき）"
+   },
+   "related_engine_rulings": [
+    {
+     "ruling_id": "DR14",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "relation": "処理する前に、ダメージを与えたポケモンが場をはなれる・エネルギーが変わる場合（今のカードでは起こらないとエンジンは書く。取り込んでいない）。処理する時点によって起こる"
+    }
+   ],
+   "related_issues": [
+    "UQ-ENERGY-DRAIN-DECLARATION",
+    "UQ-ENERGY-DRAIN-ATTACKER-KO"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR6",
+     "engine_classification": "UNRESOLVED",
+     "engine_note": "エンジンは、この問いが決まらないのでカードを未対応のまま延期した。これはエンジンの実装の判断で、公式の裁定ではない"
+    }
+   ],
+   "notes": [
+    "ダメージだけのワザ（ダメージの要素が 1 つで、そのあとに何もない）では、(a)〜(c) の結果は同じ。",
+    "入れ替える効果（ふきとばし）のあるワザでは、(b) と (c) で決定の順番が変わるが、結果の盤面は同じ（エンジンの報告）。"
+   ]
+  },
+  {
+   "id": "UQ-ENERGY-DRAIN-ATTACKER-KO",
+   "status": "UNRESOLVED",
+   "question": "だつりょくえきを処理する時点で、ダメージを与えたポケモンがすでに HP 以上のダメージを受けていたとき（同じワザの自分へのダメージ、ほかの返すダメージなど）、コインを投げ、エネルギーカードを選んでトラッシュするか",
+   "why_unresolved": "説明に書かれていない。p.309 の「処理の対象がなくなってしまっている場合」はワザの説明の処理についての規定で、HP 以上のダメージを受けたポケモン（きぜつの処理はワザのあと）を対象がないとみるかは類推になる。はんげきの同じ場面（CR-COUNTERATTACK-ATTACKER-GONE）はダメージを与えないだけで結果が同じだが、だつりょくえきはコインとエネルギーカード（きぜつでトラッシュに置かれるカード）にかかわる",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "49",
+     "location": "キョウのベトベトンの「だつりょくえき」の最新の説明"
+    },
+    {
+     "source": "P43",
+     "page": "309",
+     "location": "公式ルール「ワザを使う」（処理の対象がなくなってしまっている場合）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     },
+     "engine_ruling": "DR8",
+     "note": "ゴーリキーのじごくぐるまなど、自分へのダメージで攻撃側が HP 以上になるワザ。処理する時点が (b)・(c) なら起こる"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンはキョウのベトベトンを未対応のまま延期している",
+    "all_cards": "処理する時点（UQ-ENERGY-DRAIN-TIMING）が (b)・(c) なら起こる"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [
+    "UQ-ENERGY-DRAIN-TIMING"
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR8",
+     "engine_classification": "UNRESOLVED",
+     "engine_note": "エンジンは延期した（実装するときは、この場面を宣言の前に止める問いを加える予定）。公式の裁定ではない"
+    }
+   ],
+   "notes": [
+    "トラッシュするエネルギーカードは、きぜつの処理でどちらにしてもトラッシュに置かれる。コインを投げるか・どちらのプレイヤーのどのカードをいつトラッシュするか（ログ・乱数）が変わる。"
+   ]
+  },
+  {
+   "id": "UQ-ENERGY-DRAIN-NO-ENERGY",
+   "status": "UNRESOLVED",
+   "question": "ダメージを与えたポケモンにエネルギーカードがついていないとき、だつりょくえきのコインを投げるか",
+   "why_unresolved": "日本版の印刷の文面・最新の説明（p.49）に、エネルギーカードがないときの記述がない。英語版の文面には「If heads and if it has any」とあるが、日本版の処理の根拠にしない",
+   "official_material": "none_found",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "49",
+     "location": "キョウのベトベトンの「だつりょくえき」の最新の説明"
+    }
+   ],
+   "rule_clause_refs": [],
+   "cases": [
+    {
+     "card_id": "PMCG6-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "だつりょくえき"
+     },
+     "engine_ruling": "DR13",
+     "note": "返す効果（ほのおのかべ・こうらがえし）を持つポケモンのエネルギーカードが、相手の番にトラッシュされていた場合など"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードでは起こらない（エンジンの報告）",
+    "all_cards": "起こりうる（kyuura の 780 枚に、エネルギーのいらないワザはない。返すダメージの発生源のエネルギーカードが、エネルギーリムーブなどで先にトラッシュされていた場合）"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "ruling_id": "DR13",
+     "engine_classification": "UNRESOLVED",
+     "engine_note": "エンジンは延期した（今のカードでは起こらないとする）。公式の裁定ではない"
+    }
+   ],
+   "notes": [
+    "日英の文面の違い（英語版の「if it has any」）は、カードの日英の違い（data/curation/card_differences.json）にも記録する。",
+    "どちらに決めても、場の状態（トラッシュするカードがない）は変わらない。変わるのはコインを投げるかどうか（エンジンでは乱数の続き）だけとみられる（kyuura の推論）。"
+   ]
+  },
+  {
+   "id": "UQ-POKEMON-CHECK-SLEEP-COIN-ORDER",
+   "status": "UNRESOLVED",
+   "question": "ポケモンチェックで、おたがいの対戦ポケモンがねむり状態のとき、ねむりからさめるかのコインを、どちらのプレイヤーが先に投げるか",
+   "why_unresolved": "p.323 のポケモンチェックの順番（1 指示されたこと → 2 どく → 3 ねむり → 4 マヒ）は、1 の中の順番（前に番をおこなったプレイヤーが決める）は書くが、3 の中の 2 匹の順番は書かない。ポケモンチェックはどちらのプレイヤーの番でもない（p.323）ので、p.325 の「そのとき番をおこなっているプレイヤーが決める」をそのまま当てはめられない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "323",
+     "location": "公式ルール「15 ポケモンチェック」"
+    },
+    {
+     "source": "P43",
+     "page": "322",
+     "location": "公式ルール「2. ねむり状態」"
+    },
+    {
+     "source": "P43",
+     "page": "325",
+     "location": "公式ルール「23 同じタイミングで起こったことの順番」"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P323-POKEMON-CHECK",
+    "GR-2000-P325-SAME-TIMING"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG6-073",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "たおれこむ"
+     },
+     "engine_ruling": "Z29",
+     "note": "たおれこむで自分がねむりになり、相手の対戦ポケモンもねむりのとき"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードで起こる（R団のカビゴン）",
+    "all_cards": "起こる"
+   },
+   "related_engine_rulings": [
+    {
+     "ruling_id": "CHECK-SLEEP-COIN-ORDER",
+     "engine_version": "v0.3b",
+     "document": "docs/pokemon-check-v0.3b.md",
+     "relation": "同じ問い（エンジンの未解決の一覧の項目。v0.3b の文書は取り込んでいないが、v0.17 の Z29 が同じ問いとしているので、この論点に結んだ）"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-D90BCE1",
+     "engine_version": "v0.17",
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "ruling_id": "Z29",
+     "engine_classification": "UNRESOLVED（既存）",
+     "engine_note": "エンジンは、両方の対戦ポケモンがねむりのとき、ポケモンチェックのコインの前に対戦を止める（v0.3b からの停止コード）。公式の裁定ではない"
+    }
+   ],
+   "notes": [
+    "それぞれのコインは、それぞれのポケモンがさめるかを決め、結果はたがいに関係しない。順番で場の状態は変わらないとみられ、変わるのはコインを投げる順番（エンジンでは乱数の割り当て）だけ（kyuura の推論。UQ-TRANSPARENCY-COIN-ORDER と同じ性質）。"
+   ]
   }
  ],
  "comparisons": [
@@ -15675,6 +18177,133 @@
     "エンジンの記録は調査の履歴を追うための参照で、原典ではない。"
    ],
    "no_ruling_tables": true
+  },
+  {
+   "id": "ENGINE-D90BCE1",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.17-card-extensibility",
+   "commit": "d90bce183fde925ed61d83f26e16856a0af6a0f8",
+   "engine_version": "v0.17",
+   "parent_version_commit": "15770c6686dd5dc54380058b7a53c0276e5c6172",
+   "documents_read_at": "d90bce183fde925ed61d83f26e16856a0af6a0f8",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "imported_on": "2026-10-14",
+   "documents": [
+    "docs/rocket-snorlax-v0.17b.md",
+    "docs/kogas-muk-event-design-v0.17c.md",
+    "docs/card-selection-v0.17a.md",
+    "docs/card-implementation-v0.17a.md",
+    "docs/card-extensibility-verification-v0.17d.md",
+    "docs/data-provenance.md",
+    "docs/rules-2000-02-14.md",
+    "docs/implementation-status.md",
+    "kyuura_engine/data/card_verification.json",
+    "kyuura_engine/resolution/questions.py"
+   ],
+   "ruling_sets": [
+    {
+     "prefix": "Z",
+     "first": 1,
+     "last": 30,
+     "document": "docs/rocket-snorlax-v0.17b.md",
+     "engine_reported_counts": {
+      "SUPPORTED": 10,
+      "CONFIRMED": 13,
+      "複数の分類": 2,
+      "UNRESOLVED を含む": 5
+     }
+    },
+    {
+     "prefix": "DR",
+     "first": 1,
+     "last": 20,
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "engine_reported_counts": {
+      "UNRESOLVED を含む": 5,
+      "複数の分類": 3,
+      "SUPPORTED": 5,
+      "CONFIRMED": 4,
+      "分類なし": 2,
+      "実装の設計": 1
+     }
+    }
+   ],
+   "imported_rulings": [
+    "CR-CHEMICAL-GAS-ALL-POWERS",
+    "CR-COLLAPSE-AFTER-KO-DEFENDER",
+    "CR-COLLAPSE-ORDER",
+    "CR-COLLAPSE-SELF-KO",
+    "CR-COLLAPSE-SPECIAL-CONDITIONS",
+    "CR-COUNTERATTACK-TIMING",
+    "CR-ENERGY-DRAIN-AFTER-DAMAGE",
+    "CR-ENERGY-DRAIN-BENCH",
+    "CR-ENERGY-DRAIN-CHOICE",
+    "CR-ENERGY-DRAIN-EVEN-IF-KO",
+    "CR-ENERGY-DRAIN-EVERY-TIME",
+    "CR-ENERGY-DRAIN-GAS-TIMING",
+    "CR-ENERGY-DRAIN-POWER-DAMAGE",
+    "CR-ENERGY-DRAIN-RETURN-DAMAGE",
+    "CR-ENERGY-DRAIN-STATUS",
+    "CR-ENERGY-DRAIN-TRIGGER",
+    "CR-ENERGY-DRAIN-WHO-CHOOSES",
+    "CR-ENERGY-DRAIN-WHO-FLIPS",
+    "CR-ENERGY-DRAIN-ZERO",
+    "CR-RESTLESS-SLEEP-ATTACKER-GONE",
+    "CR-RESTLESS-SLEEP-AUTOMATIC",
+    "CR-RESTLESS-SLEEP-EVEN-IF-KO",
+    "CR-RESTLESS-SLEEP-IS-POWER-DAMAGE",
+    "CR-RESTLESS-SLEEP-KO-ATTACKER",
+    "CR-RESTLESS-SLEEP-NO-CHAIN",
+    "CR-RESTLESS-SLEEP-NOT-ATTACK-CALCULATION",
+    "CR-RESTLESS-SLEEP-ONLY-ASLEEP",
+    "CR-RESTLESS-SLEEP-STATUS-TIME",
+    "CR-RESTLESS-SLEEP-TIMING",
+    "CR-RESTLESS-SLEEP-TRIGGER",
+    "CR-RESTLESS-SLEEP-VS-GUTS",
+    "CR-RESTLESS-SLEEP-WITH-COLLAPSE",
+    "CR-RESTLESS-SLEEP-ZERO",
+    "CR-TRANSPARENCY-ONLY-ATTACKS",
+    "CR-TRANSPARENCY-OWN-ATTACKS"
+   ],
+   "unresolved_rulings": [
+    "UQ-COUNTERATTACK-DOUBLE-KO",
+    "UQ-EFFECT-AFTER-NO-DAMAGE",
+    "UQ-ENERGY-DRAIN-ATTACKER-KO",
+    "UQ-ENERGY-DRAIN-DECLARATION",
+    "UQ-ENERGY-DRAIN-NO-ENERGY",
+    "UQ-ENERGY-DRAIN-TIMING",
+    "UQ-GUTS-ATTACK-EFFECT",
+    "UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK",
+    "UQ-POKEMON-CHECK-SLEEP-COIN-ORDER",
+    "UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE"
+   ],
+   "not_imported": [
+    {
+     "ruling_id": "DR14",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "engine_classification": "—",
+     "status": "deferred",
+     "reason": "エンジンは分類していない（「—」）。処理する前に、ダメージを与えたポケモンが場をはなれる・エネルギーが変わる場合で、今のカードでは起こらないとする。起こるかは処理する時点（UQ-ENERGY-DRAIN-TIMING）による。kyuura では、この場面の資料を調べていない"
+    },
+    {
+     "ruling_id": "DR20",
+     "document": "docs/kogas-muk-event-design-v0.17c.md",
+     "engine_classification": "実装の設計",
+     "status": "excluded",
+     "reason": "実装の設計（先読みの範囲）。エンジンの処理の決め方で、公式の裁定ではない"
+    }
+   ],
+   "notes": [
+    "v0.17 は、v0.16 で一本化した処理の仕組みに、実在のカードを加えた版（v0.17a〜v0.17d）。v0.17a のモンジャラ・サカキのニャースは既存の裁定の当てはめだけで、裁定の表がない（照合は CC-PMCG1-007-P55・CC-PMCG6-063-P229）。",
+    "裁定の表は Z1〜Z30（R団のカビゴン。docs/rocket-snorlax-v0.17b.md）と DR1〜DR20（キョウのベトベトン。docs/kogas-muk-event-design-v0.17c.md。エンジンは設計だけで、カードを未対応のまま延期した）。ほかの表（card-selection の H1〜H3 は仮説、kogas-muk-event-design の Q1〜Q10 は処理の仕組みの制約、card-extensibility-verification の S01〜S11 は変異試験）は実装の記録で、ruling_sets に入れない。",
+    "エンジンの未解決の裁定の数え方（docs/card-extensibility-verification-v0.17d.md 8 章）: v0.16 までの 22 件に Z9・Z23 を加えて 24 件、停止コードは UNRESOLVED_EFFECT_AFTER_NO_DAMAGE（Z23）を加えて 18 件。キョウのベトベトンの DR1・DR6・DR8・DR13・DR18 は、エンジンの数に入っていない（カードを延期したため）。kyuura の数え方は engine_unresolved_index と論点（issues）による。",
+    "エンジンの報告事項（kyuura の作業）: ベロリンガ（PMCG2-041）のワザの名前、タケシのイワーク（PMCG5-048）の jp_print.series、R団のカビゴン・キョウのベトベトンの最新の説明の記録、英語版の「if it has any」、Z9・Z23・DR1・DR6 の記録。前の 2 つはデータの調査（CC-PMCG2-041-P234・CC-PMCG5-048-P200）、残りはこの取り込みの記録。",
+    "エンジンの文書の誤り（報告。エンジンは変えていない）: docs/kogas-muk-event-design-v0.17c.md 6 章と docs/data-provenance.md は、キョウのベトベターを「PMCG6-020」と書くが、kyuura の PMCG6-020 はサカキのニドクインで、キョウのベトベターは PMCG6-007。",
+    "エンジンは、p.138 の［ショックボム］のカード（マチスのマルマイン）を kyuura の写しの元データで見つけられなかったと書く（docs/card-extensibility-verification-v0.17d.md 10 章）。マチスのマルマインは kyuura の data/cards.json（拡張パックの 780 枚）にはないが、ジムデッキの記録（data/ja_text_pcgsearch.json の「ポケモンジム第2弾「クチバシティジム マチス」」009/025）にある。",
+    "エンジンの記録（400dpi の画像による照合、card_verification.json）は調査の履歴を追うための参照で、原典ではない。kyuura の記録の根拠は、kyuura が 2026-10-14 に画像で読み直したページ（pp.49・55・138・155・229・245。600dpi）と、前に読んだページ（pp.82・89・159・160・192・193・306〜325）。",
+    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。"
+   ],
+   "engine_unresolved_total": 24
   }
  ],
  "engine_unresolved_index": [
@@ -15739,10 +18368,15 @@
    "document": "docs/pokemon-check-v0.3b.md",
    "stop_code": "UNRESOLVED_POKEMON_CHECK_SLEEP_COIN_ORDER",
    "summary": "両方の対戦ポケモンがねむりのときのコインの順番",
-   "kyuura_issue": null,
-   "disposition": "out_of_scope",
+   "kyuura_issue": "UQ-POKEMON-CHECK-SLEEP-COIN-ORDER",
+   "disposition": "issue",
    "question_kind": "historical",
-   "reason": "v0.1〜v0.4b の文書の裁定で、この取り込み（v0.5〜v0.13）の範囲の外。問いの内容は公式の資料の読み方の問題（歴史上の論点）とみられるが、kyuura では原典のページを確かめておらず、論点にしていない（今後の作業）。ポケモンチェックの「ねむり」のコインを投げる順番の問い。それぞれのプレイヤーが自分のポケモンについて投げ、結果はたがいに関係しないので、順番で場の状態は変わらないとみられる（v0.9 の T27・UQ-TRANSPARENCY-COIN-ORDER と同じ性質）。"
+   "instances": [
+    {
+     "engine_version": "v0.17",
+     "ruling_id": "Z29"
+    }
+   ]
   },
   {
    "engine_key": "REPARALYSIS",
@@ -15816,7 +18450,17 @@
    "summary": "「とうめい」で受けないと決まったあとの、効果だけを決めるコイン",
    "kyuura_issue": "UQ-COIN-IN-NULLIFIED-ELEMENT",
    "disposition": "issue",
-   "question_kind": "historical"
+   "question_kind": "historical",
+   "instances": [
+    {
+     "engine_version": "v0.11",
+     "ruling_id": "L5"
+    },
+    {
+     "engine_version": "v0.11",
+     "ruling_id": "L13"
+    }
+   ]
   },
   {
    "engine_key": "H4",
@@ -15836,7 +18480,13 @@
    "summary": "カイリキーがワザで、攻撃側が「はんげき」できぜつする場合の同時のきぜつ",
    "kyuura_issue": "UQ-COUNTERATTACK-DOUBLE-KO",
    "disposition": "issue",
-   "question_kind": "historical"
+   "question_kind": "historical",
+   "instances": [
+    {
+     "engine_version": "v0.17",
+     "ruling_id": "Z13"
+    }
+   ]
   },
   {
    "engine_key": "G37",
@@ -15846,7 +18496,13 @@
    "summary": "こんじょうを使えるポケモンが HP 以上になり、同じワザで効果を受ける場合",
    "kyuura_issue": "UQ-GUTS-ATTACK-EFFECT",
    "disposition": "issue",
-   "question_kind": "historical"
+   "question_kind": "historical",
+   "instances": [
+    {
+     "engine_version": "v0.17",
+     "ruling_id": "Z22"
+    }
+   ]
   },
   {
    "engine_key": "W24",
@@ -15856,7 +18512,13 @@
    "summary": "ほのおのかべ（v0.13 からこうらがえしも）のダメージによる同時のきぜつ",
    "kyuura_issue": "UQ-RETALIATION-DOUBLE-KO",
    "disposition": "issue",
-   "question_kind": "historical"
+   "question_kind": "historical",
+   "instances": [
+    {
+     "engine_version": "v0.13",
+     "ruling_id": "S37"
+    }
+   ]
   },
   {
    "engine_key": "T27",
@@ -15876,7 +18538,21 @@
    "summary": "1 つのワザで複数の「はんげき」がはたらく順番（v0.13 の S7 も同じ問い）",
    "kyuura_issue": "UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK",
    "disposition": "issue",
-   "question_kind": "historical"
+   "question_kind": "historical",
+   "instances": [
+    {
+     "engine_version": "v0.13",
+     "ruling_id": "S7"
+    },
+    {
+     "engine_version": "v0.17",
+     "ruling_id": "Z18"
+    },
+    {
+     "engine_version": "v0.17",
+     "ruling_id": "DR18"
+    }
+   ]
   },
   {
    "engine_key": "G40",
@@ -15905,6 +18581,70 @@
    "stop_code": null,
    "summary": "ふしちょうの候補が 2 つ以上のときの順番",
    "kyuura_issue": "UQ-POST-KO-POWERS-ORDER",
+   "disposition": "issue",
+   "question_kind": "historical"
+  },
+  {
+   "engine_key": "Z9",
+   "engine_version": "v0.17",
+   "document": "docs/rocket-snorlax-v0.17b.md",
+   "stop_code": null,
+   "summary": "わるいねぞう（特殊能力のダメージ）の 20 に弱点・抵抗力を計算するか",
+   "kyuura_issue": "UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE",
+   "disposition": "issue",
+   "question_kind": "historical"
+  },
+  {
+   "engine_key": "Z23",
+   "engine_version": "v0.17",
+   "document": "docs/rocket-snorlax-v0.17b.md",
+   "stop_code": "UNRESOLVED_EFFECT_AFTER_NO_DAMAGE",
+   "summary": "「ダメージを与えた後」の効果を、ダメージを与えなかったときに与えるか",
+   "kyuura_issue": "UQ-EFFECT-AFTER-NO-DAMAGE",
+   "disposition": "issue",
+   "question_kind": "historical"
+  },
+  {
+   "engine_key": "DR1",
+   "engine_version": "v0.17",
+   "document": "docs/kogas-muk-event-design-v0.17c.md",
+   "stop_code": null,
+   "in_engine_count": false,
+   "summary": "だつりょくえきは宣言する特殊能力か（カードは延期）",
+   "kyuura_issue": "UQ-ENERGY-DRAIN-DECLARATION",
+   "disposition": "issue",
+   "question_kind": "historical"
+  },
+  {
+   "engine_key": "DR6",
+   "engine_version": "v0.17",
+   "document": "docs/kogas-muk-event-design-v0.17c.md",
+   "stop_code": null,
+   "in_engine_count": false,
+   "summary": "だつりょくえきを処理する時点（カードは延期）",
+   "kyuura_issue": "UQ-ENERGY-DRAIN-TIMING",
+   "disposition": "issue",
+   "question_kind": "historical"
+  },
+  {
+   "engine_key": "DR8",
+   "engine_version": "v0.17",
+   "document": "docs/kogas-muk-event-design-v0.17c.md",
+   "stop_code": null,
+   "in_engine_count": false,
+   "summary": "だつりょくえきの処理の時点で、ダメージを与えたポケモンがすでに HP 以上（カードは延期）",
+   "kyuura_issue": "UQ-ENERGY-DRAIN-ATTACKER-KO",
+   "disposition": "issue",
+   "question_kind": "historical"
+  },
+  {
+   "engine_key": "DR13",
+   "engine_version": "v0.17",
+   "document": "docs/kogas-muk-event-design-v0.17c.md",
+   "stop_code": null,
+   "in_engine_count": false,
+   "summary": "ダメージを与えたポケモンにエネルギーカードがないときのだつりょくえきのコイン（カードは延期）",
+   "kyuura_issue": "UQ-ENERGY-DRAIN-NO-ENERGY",
    "disposition": "issue",
    "question_kind": "historical"
   }

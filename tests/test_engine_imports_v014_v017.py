@@ -1,8 +1,10 @@
-"""kyuura-engine v0.13〜v0.17 の取り込みの整合と、破壊テスト。
+"""kyuura-engine v0.13〜v0.17 の取り込みの整合と、v0.17 の取り込み（Z1〜Z30・DR1〜DR20）の網羅・分類、破壊テスト。
 
 - v0.13 の取り込み（ENGINE-8FACF3A。わるいカメールの S1〜S49）は作り直さず、そのまま保つ。
 - v0.14〜v0.16 は実装の履歴（イベントの仕組み・先読み・旧経路の撤去）で、裁定の表がない。読んだ文書と、ルールに関わる記述の
   注記だけを持つ（no_ruling_tables）。エンジンの実装の判断を公式の裁定として加えない。
+- v0.17 の原典は p.245（R団のカビゴン）・p.49（キョウのベトベトン）・p.55（モンジャラ）・p.229（サカキのニャース）・p.138（マチスの
+  マルマインのショックボム）・p.155（ナツメのヤドンのぐうたらこうげき）と、公式ルール pp.309〜325（kyuura が画像で確かめた）。
 - エンジンの文書は調査の履歴で、原典ではない。原典は『ポケモンカードオフィシャルブック2000』[P43]（スキャン [J38]）。
 
 使い方: python3 -m unittest discover -s tests（リポジトリの直下。標準ライブラリだけ）
@@ -160,6 +162,162 @@ class TransitionalStateTest(Base):
         n = next(n for n in self.imp(ctx, 'v0.5')['not_imported'] if n['ruling_id'] == 'P17')  # 該当なし（エンジンは判断していない）
         n['status'] = 'excluded'
         self.assert_detected(ctx, '対象外（excluded）にしているが')
+
+
+class V017CoverageTest(Base):
+    """v0.17 の裁定 Z1〜Z30・DR1〜DR20 の網羅と、4 枚のカードの照合。"""
+
+    def test_all_v017_rulings_are_mapped_or_not_imported(self):
+        imp = self.imp(self.ctx, 'v0.17')
+        self.assertEqual(imp['id'], 'ENGINE-D90BCE1')
+        self.assertEqual(imp['commit'], ENGINE_HEAD)
+        uses = bcr.engine_uses(self.ctx)
+        skipped = {n['ruling_id'] for n in imp['not_imported']}
+        self.assertEqual(skipped, {'DR14', 'DR20'})
+        for doc, ids in (('docs/rocket-snorlax-v0.17b.md', [f'Z{n}' for n in range(1, 31)]),
+                         ('docs/kogas-muk-event-design-v0.17c.md', [f'DR{n}' for n in range(1, 21)])):
+            for rid in ids:
+                self.assertTrue(('ENGINE-D90BCE1', doc, rid) in uses or rid in skipped, rid)
+
+    def test_four_cards_are_checked_against_the_book(self):
+        checks = {x['card_id']: x for x in self.ctx['checks']['records']}
+        expect = {'PMCG1-007': ('55', 'no_difference'), 'PMCG6-063': ('229', 'no_difference'),
+                  'PMCG6-073': ('245', 'printed_vs_latest_only'), 'PMCG6-023': ('49', 'printed_vs_latest_only')}
+        for cid, (page, result) in expect.items():
+            self.assertEqual(checks[cid]['page'], page, cid)
+            self.assertEqual(checks[cid]['result'], result, cid)
+            # kyuura が自分で画像を読んだ記録と、エンジンの記録が分けて書かれている
+            by = [v['by'] for v in checks[cid]['verification']]
+            self.assertEqual(by, ['kyuura', 'kyuura-engine'], cid)
+            self.assertEqual(checks[cid]['verification'][0]['date'], '2026-10-14')
+
+    def test_latest_descriptions_do_not_overwrite_printed_text(self):
+        cards = self.ctx['cards']
+        lds = {x['id']: x for x in self.ctx['latest']['records']}
+        for ld_id, path in (('LD-PMCG6-073-PWR0', ('powers', 0)), ('LD-PMCG6-073-ATK0', ('attacks', 0)), ('LD-PMCG6-023-PWR0', ('powers', 0))):
+            ld = lds[ld_id]
+            printed = cards[ld['card_id']]['pokemon'][path[0]][path[1]]['text']['ja']
+            self.assertEqual(ld['printed_text']['text_ja'], printed)  # data/cards.json の印刷の文面のまま
+            self.assertNotEqual(ld['latest_description']['text_ja'], printed)
+            self.assertIsNone(ld['errata_ref'])  # 最新の説明は公式エラッタではない
+        # モンジャラ・サカキのニャースは最新の説明と印刷の文面が同じなので、最新の説明の記録を作らない
+        self.assertFalse([x for x in lds.values() if x['card_id'] in ('PMCG1-007', 'PMCG6-063')])
+
+
+class V017ClassificationTest(Base):
+    """Z9・Z23・DR1・DR6 などを、根拠なしに解決済みにしない。エンジンの停止コードを公式の裁定にしない。"""
+
+    def issue(self, issue_id):
+        return next(x for x in self.ctx['rulings']['issues'] if x['id'] == issue_id)
+
+    def test_z9_and_z23_are_unresolved_issues(self):
+        mapping = bcr.engine_mapping(self.ctx, 'ENGINE-D90BCE1', 'docs/rocket-snorlax-v0.17b.md')
+        self.assertEqual([(k, i) for k, i, _ in mapping['Z9']], [('issue', 'UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE')])
+        self.assertEqual([(k, i) for k, i, _ in mapping['Z23']], [('issue', 'UQ-EFFECT-AFTER-NO-DAMAGE')])
+        idx = {u['engine_key']: u for u in self.ctx['rulings']['engine_unresolved_index']}
+        self.assertIsNone(idx['Z9']['stop_code'])  # コードのない問い（結果が変わる場合だけ止める）
+        self.assertEqual(idx['Z23']['stop_code'], 'UNRESOLVED_EFFECT_AFTER_NO_DAMAGE')  # 停止コードは対応の記録だけに書く
+        z9 = self.issue('UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE')
+        # 「今のデータでは結果が変わらない」ことと、裁定が未解決であることを分けて書く
+        self.assertIn('裁定が決まったことではない', ' '.join(z9['notes']))
+        self.assertIn('無色の弱点・抵抗力', z9['reachability']['all_cards'])
+
+    def test_no_colorless_weakness_or_resistance_in_the_data(self):
+        # Z9 の「結果が変わらない」の根拠（kyuura のデータ）
+        for c in self.ctx['cards'].values():
+            if c.get('pokemon'):
+                types = [w['type'] for w in c['pokemon']['weaknesses'] + c['pokemon']['resistances']]
+                self.assertNotIn('colorless', types, c['id'])
+
+    def test_energy_drain_questions_are_separate_issues(self):
+        idx = {u['engine_key']: u for u in self.ctx['rulings']['engine_unresolved_index']}
+        expect = {'DR1': 'UQ-ENERGY-DRAIN-DECLARATION', 'DR6': 'UQ-ENERGY-DRAIN-TIMING', 'DR8': 'UQ-ENERGY-DRAIN-ATTACKER-KO',
+                  'DR13': 'UQ-ENERGY-DRAIN-NO-ENERGY'}
+        for key, issue_id in expect.items():
+            self.assertEqual(idx[key]['kyuura_issue'], issue_id, key)
+            self.assertFalse(idx[key]['in_engine_count'], key)  # エンジンの 24 件には入らない（カードを延期）
+        self.assertIn('UQ-ENERGY-DRAIN-TIMING', self.issue('UQ-ENERGY-DRAIN-DECLARATION')['related_issues'])
+        # DR18 は C34/C35 と同じ論点（新しい論点にしない）
+        self.assertIn(('v0.17', 'DR18'), {(i['engine_version'], i['ruling_id']) for i in idx['C34/C35']['instances']})
+
+    def test_later_rules_and_english_text_are_not_used_as_basis(self):
+        decl = self.issue('UQ-ENERGY-DRAIN-DECLARATION')
+        notes = ' '.join(decl['notes'])
+        self.assertIn('2002年', notes)  # 後年の「ポケボディーとして扱う」一覧は当てはめないと書く
+        self.assertIn('当てはめない', notes)
+        for x in self.ctx['rulings']['rulings']:
+            if any(c['card_id'] == 'PMCG6-023' for c in x['cards']):
+                for b in x['basis']:
+                    self.assertEqual(b.get('source', 'P43'), 'P43', x['id'])  # 根拠は『オフィシャルブック2000』だけ
+                    self.assertNotIn('if it has any', b.get('quote', ''), x['id'])
+
+    def test_confirmed_energy_drain_items(self):
+        rul = {x['id']: x for x in self.ctx['rulings']['rulings']}
+        for rid, engine_id in (('CR-ENERGY-DRAIN-AFTER-DAMAGE', 'DR5'), ('CR-ENERGY-DRAIN-EVEN-IF-KO', 'DR9'),
+                               ('CR-ENERGY-DRAIN-CHOICE', 'DR11'), ('CR-ENERGY-DRAIN-BENCH', 'DR17')):
+            self.assertEqual(rul[rid]['status'], 'CONFIRMED', rid)
+            self.assertIn(engine_id, {e['ruling_id'] for e in rul[rid]['engine_refs']})
+        for rid in ('CR-ENERGY-DRAIN-WHO-FLIPS', 'CR-ENERGY-DRAIN-WHO-CHOOSES', 'CR-ENERGY-DRAIN-RETURN-DAMAGE', 'CR-ENERGY-DRAIN-EVERY-TIME'):
+            self.assertEqual(rul[rid]['status'], 'SUPPORTED', rid)
+            self.assertTrue(rul[rid]['inference'], rid)
+
+    def test_same_question_instances_are_not_new_issues(self):
+        idx = {u['engine_key']: u for u in self.ctx['rulings']['engine_unresolved_index']}
+        self.assertEqual(idx['C18']['instances'], [{'engine_version': 'v0.17', 'ruling_id': 'Z13'}])
+        self.assertEqual(idx['G37']['instances'], [{'engine_version': 'v0.17', 'ruling_id': 'Z22'}])
+        self.assertEqual(idx['CHECK-SLEEP-COIN-ORDER']['kyuura_issue'], 'UQ-POKEMON-CHECK-SLEEP-COIN-ORDER')
+        # わるいねぞうの同時のきぜつは、はんげきの論点（C18）と同じ論点で、ほのおのかべの論点（W24）とは別
+        ca = self.issue('UQ-COUNTERATTACK-DOUBLE-KO')
+        self.assertEqual({c['engine_ruling'] for c in ca['cases']}, {'C18', 'Z13'})
+
+    def test_counts(self):
+        idx = self.ctx['rulings']['engine_unresolved_index']
+        codes = {u['stop_code'] for u in idx if u['stop_code']}
+        self.assertEqual(len(codes), 18)  # エンジンの停止コード（v0.17）
+        counted = [u for u in idx if u.get('in_engine_count', True)]
+        self.assertEqual(len(counted), 24)  # エンジンの数え方の未解決の裁定（v0.17）
+        issues = self.ctx['rulings']['issues']
+        self.assertEqual(len({x['id'] for x in issues}), len(issues))
+
+
+class V017BreakageTest(Base):
+    """v0.17 の取り込みで加えた検査が、壊したデータを見つけること。"""
+
+    def test_mapping_z23_to_a_confirmed_ruling_needs_a_reason(self):
+        ctx = self.copy()
+        rul = next(x for x in ctx['rulings']['rulings'] if x['id'] == 'CR-COLLAPSE-ORDER')
+        z23 = next(e for x in ctx['rulings']['issues'] if x['id'] == 'UQ-EFFECT-AFTER-NO-DAMAGE' for e in x['engine_refs'])
+        rul['engine_refs'].append(dict(z23, part='ダメージを与えなかったとき'))
+        rul['engine_refs'][0]['part'] = '要素の順番'
+        self.assert_detected(ctx, 'reclassification')
+
+    def test_stop_code_in_a_ruling_text_is_rejected(self):
+        ctx = self.copy()
+        issue = next(x for x in ctx['rulings']['issues'] if x['id'] == 'UQ-EFFECT-AFTER-NO-DAMAGE')
+        issue['why_unresolved'] += '（UNRESOLVED_EFFECT_AFTER_NO_DAMAGE）'
+        self.assert_detected(ctx, 'UQ-EFFECT-AFTER-NO-DAMAGE')
+
+    def test_instance_must_be_linked_to_the_issue(self):
+        ctx = self.copy()
+        issue = next(x for x in ctx['rulings']['issues'] if x['id'] == 'UQ-COUNTERATTACK-DOUBLE-KO')
+        issue['engine_refs'] = [e for e in issue['engine_refs'] if e['ruling_id'] != 'Z13']
+        issue['cases'] = [c for c in issue['cases'] if c.get('engine_ruling') != 'Z13']
+        self.assert_detected(ctx, 'C18 の事例 Z13（v0.17）が、論点 UQ-COUNTERATTACK-DOUBLE-KO の engine_refs にない')
+
+    def test_engine_count_mismatch_is_detected(self):
+        ctx = self.copy()
+        u = next(x for x in ctx['rulings']['engine_unresolved_index'] if x['engine_key'] == 'DR1')
+        u['in_engine_count'] = True  # エンジンが数えていない項目を数える
+        self.assert_detected(ctx, 'v0.17 までの項目（エンジンが数えるもの）が 25 件')
+
+    def test_duplicate_issue_for_z13_is_rejected(self):
+        ctx = self.copy()
+        dup = copy.deepcopy(next(x for x in ctx['rulings']['issues'] if x['id'] == 'UQ-COUNTERATTACK-DOUBLE-KO'))
+        dup['id'] = 'UQ-RESTLESS-SLEEP-DOUBLE-KO'
+        dup['engine_refs'] = [e for e in dup['engine_refs'] if e['ruling_id'] == 'Z13']
+        dup['cases'] = [c for c in dup['cases'] if c.get('engine_ruling') == 'Z13']
+        ctx['rulings']['issues'].append(dup)
+        self.assert_detected(ctx, '2 つ以上の未解決の論点')
 
 
 if __name__ == '__main__':

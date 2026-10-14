@@ -1342,6 +1342,185 @@
     }
    ],
    "notes": []
+  },
+  {
+   "id": "LD-PMCG6-073-PWR0",
+   "card_id": "PMCG6-073",
+   "card_name_ja": "R団のカビゴン",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "わるいねぞう"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "このカードが「ねむり」状態で、相手のワザによるダメージを受けた時、（このカードが「きぜつ」するしないにかかわらず、）ダメージを与えたポケモンに20ダメージ。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%82%AB%E3%83%93%E3%82%B4%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、読める範囲で kyuura の文面と同じ。読点・句点の位置と括弧の幅は読めない"
+   },
+   "latest_description": {
+    "text_ja": "このカードが「ねむり」状態で、相手のワザによるダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）ダメージを与えたポケモンに、20ダメージ。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "245",
+    "pdf_page": 247,
+    "location": "R団のカビゴン（LV.40／HP90。ジム拡張第2弾闇からの挑戦。p.245 の 2 枚目）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "受けた時",
+     "latest": "受けたとき",
+     "kind": "wording"
+    },
+    {
+     "printed": "（このカードが「きぜつ」するしないにかかわらず、）",
+     "latest": "（それによってこのカードが「きぜつ」しても、）",
+     "kind": "wording"
+    },
+    {
+     "printed": "ポケモンに20ダメージ",
+     "latest": "ポケモンに、20ダメージ",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "書き方の違いだけ。どちらも、ダメージの弱点・抵抗力を書かない（UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE。カイリキーの「はんげき」の最新の説明は「「弱点・抵抗力」に関係なく」と書く）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明の違い。kyuura の写しの文面は印刷の文面）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG6-073-ATK0",
+   "card_id": "PMCG6-073",
+   "card_name_ja": "R団のカビゴン",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "たおれこむ"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "ダメージを与えたあと、自分を「ねむり」状態にする。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%82%AB%E3%83%93%E3%82%B4%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、読める範囲で kyuura の文面と同じ。読点・句点の位置と括弧の幅は読めない"
+   },
+   "latest_description": {
+    "text_ja": "ダメージを与えた後、自分を「ねむり」状態にする。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "245",
+    "pdf_page": 247,
+    "location": "R団のカビゴン（p.245 の 2 枚目）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "与えたあと",
+     "latest": "与えた後",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "書き方の違いだけ。どちらの文面でも、「ダメージを与えた後」が順番の記述か条件かは決まらない（UQ-EFFECT-AFTER-NO-DAMAGE）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（「あと」と「後」）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG6-023-PWR0",
+   "card_id": "PMCG6-023",
+   "card_name_ja": "キョウのベトベトン",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "だつりょくえき"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "このカードが相手のワザによってダメージを受ける時、(このカードが「きぜつ」するしないにかかわらず、)コインを投げて「おもて」なら、ダメージを与えたポケモンについているエネルギーカードを1枚選び、トラッシュする。ダメージを受ける時、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/%E3%82%AD%E3%83%A7%E3%82%A6%E3%81%AE%E3%83%99%E3%83%88%E3%83%99%E3%83%88%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、読める範囲で kyuura の文面と同じ。読点・句点の位置と括弧の幅は読めない。kyuura の文面の括弧は半角（転記元のポケモンWiki のまま）"
+   },
+   "latest_description": {
+    "text_ja": "このカードが相手のワザによってダメージを受けるとき、（それによってこのカードが「きぜつ」しても、）コインを投げて「おもて」なら、ダメージを与えたポケモンについている「エネルギーカード」を1枚選び、トラッシュする。ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "49",
+    "pdf_page": 51,
+    "location": "キョウのベトベトン（LV.38／HP80。ジム拡張第2弾闇からの挑戦。p.49 の 1 枚目）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "受ける時",
+     "latest": "受けるとき",
+     "kind": "wording"
+    },
+    {
+     "printed": "(このカードが「きぜつ」するしないにかかわらず、)",
+     "latest": "（それによってこのカードが「きぜつ」しても、）",
+     "kind": "wording"
+    },
+    {
+     "printed": "ついているエネルギーカードを",
+     "latest": "ついている「エネルギーカード」を",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "書き方の違いだけ。どちらの文面も、発動の文に「使える」がなく、最後が「この力は使えない」で、宣言する特殊能力かが決まらない（UQ-ENERGY-DRAIN-DECLARATION）。エネルギーカードがついていないときの記述もない（UQ-ENERGY-DRAIN-NO-ENERGY。英語版の文面には「if it has any」がある）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「一致」（図版の文面は kyuura の写しと同じ。最新の説明は別に記録）"
+    }
+   ],
+   "notes": []
   }
  ]
 }

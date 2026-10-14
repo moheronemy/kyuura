@@ -90,7 +90,7 @@ class CoverageTest(Base):
         for imp in self.ctx['rulings']['engine_imports']:
             for x in imp['not_imported']:
                 self.assertTrue(x['reason'], x['ruling_id'])
-                n += 1
+                n += imp['engine_version'] in IMPORTS
         self.assertEqual(n, 16)  # 実装上の仮定・該当なし・到達しない・実装上の扱い（v0.5〜v0.12）
 
     def test_same_id_in_different_versions_is_distinct(self):
@@ -113,11 +113,11 @@ class CoverageTest(Base):
 
     def test_engine_unresolved_index_dispositions(self):
         idx = {u['engine_key']: u for u in self.ctx['rulings']['engine_unresolved_index']}
-        self.assertEqual(len(idx), 22)
+        self.assertEqual(len([u for u in idx.values() if u['engine_version'] not in ('v0.17',)]), 22)  # v0.13 までの 22 件
         for key in ('R13', 'T19b', 'H4', 'C18', 'G37', 'W24', 'T27', 'C34/C35', 'G40', 'P19', 'P32'):
             self.assertEqual(idx[key]['disposition'], 'issue', key)
         for key in ('MULLIGAN', 'POTION-WITHOUT-DAMAGE', 'POTION-UNDAMAGED-TARGET', 'SWITCH-WITHOUT-BENCH', 'CHECK-DOUBLE-KO',
-                    'CHECK-SLEEP-COIN-ORDER', 'REPARALYSIS', 'CONFUSION-MODIFIERS', 'RETREAT-AFTER-CONFUSION-CLEARED', 'EVOLUTION-HP'):
+                    'REPARALYSIS', 'CONFUSION-MODIFIERS', 'RETREAT-AFTER-CONFUSION-CLEARED', 'EVOLUTION-HP'):
             self.assertEqual(idx[key]['disposition'], 'out_of_scope', key)
             self.assertTrue(idx[key]['reason'], key)
         self.assertEqual(idx['PREVENTED-COIN-DAMAGE']['kyuura_issue'], idx['T19b']['kyuura_issue'])
@@ -176,7 +176,8 @@ class ClassificationTest(Base):
         w = self.rec(self.ctx, 'issues', 'UQ-RETALIATION-DOUBLE-KO')
         c = self.rec(self.ctx, 'issues', 'UQ-COUNTERATTACK-DOUBLE-KO')
         self.assertEqual({e['ruling_id'] for e in w['engine_refs']}, {'W24', 'S37'})
-        self.assertEqual({e['ruling_id'] for e in c['engine_refs']}, {'C18'})
+        self.assertEqual({e['ruling_id'] for e in c['engine_refs']} & {'W24', 'S37'}, set())  # W24・S37 とは別の論点
+        self.assertIn('C18', {e['ruling_id'] for e in c['engine_refs']})
         self.assertIn('まとめる根拠', ' '.join(c['notes']))
 
     def test_optional_use_stays_supported(self):
@@ -189,7 +190,7 @@ class ClassificationTest(Base):
         self.assertEqual({c['engine_ruling'] for c in order['cases']}, {'P27', 'P28', 'P30'})
         self.assertEqual({e['ruling_id'] for e in self.rec(self.ctx, 'issues', 'UQ-PHOENIX-GAS-SOURCE-KO')['engine_refs']}, {'P19'})
         self.assertEqual({e['ruling_id'] for e in self.rec(self.ctx, 'issues', 'UQ-POST-KO-POWERS-ORDER')['engine_refs']}, {'P32'})
-        self.assertEqual({e['ruling_id'] for e in self.rec(self.ctx, 'issues', 'UQ-GUTS-ATTACK-EFFECT')['engine_refs']}, {'G37', 'G30'})
+        self.assertTrue({'G37', 'G30'} <= {e['ruling_id'] for e in self.rec(self.ctx, 'issues', 'UQ-GUTS-ATTACK-EFFECT')['engine_refs']})
         self.assertEqual({e['ruling_id'] for e in self.rec(self.ctx, 'issues', 'UQ-KO-PREVENTION-ORDER')['engine_refs']}, {'G40', 'G16'})
 
     def test_fire_wall_latest_description_is_not_duplicated(self):
@@ -348,7 +349,7 @@ class BreakageTest(Base):
     def test_18_unresolved_index_omission(self):
         ctx = self.copy()
         ctx['rulings']['engine_unresolved_index'] = [u for u in ctx['rulings']['engine_unresolved_index'] if u['engine_key'] != 'G37']
-        self.assert_detected(ctx, '件数が 21')
+        self.assert_detected(ctx, 'v0.13 までの項目（エンジンが数えるもの）が 21 件')
         self.assert_detected(ctx, 'UQ-GUTS-ATTACK-EFFECT: engine_unresolved_index のどの項目からも結ばれていない')
         ctx = self.copy()
         u = next(u for u in ctx['rulings']['engine_unresolved_index'] if u['engine_key'] == 'P19')

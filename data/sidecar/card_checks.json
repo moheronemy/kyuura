@@ -2070,6 +2070,343 @@
      "engine_classification": "CONFIRMED"
     }
    ]
+  },
+  {
+   "id": "CC-PMCG1-007-P55",
+   "card_id": "PMCG1-007",
+   "card_name_ja": "モンジャラ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "55",
+   "pdf_page": 57,
+   "location": "p.55 の 1 枚目「たねポケモン モンジャラ LV.8／HP50」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "モンジャラ",
+    "jp_print.level": 8,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 2,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "しめつける",
+    "pokemon.attacks[0].cost": [
+     "grass",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
+    "pokemon.attacks[1].name.ja": "どくのこな",
+    "pokemon.attacks[1].cost": [
+     "grass",
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[1].damage.display": "20",
+    "pokemon.attacks[1].text.ja": "相手を「どく」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 草、しめつける（草無）20、どくのこな（草草草）20、にげる 2、弱点 炎、抵抗力の欄は空。",
+    "「ワザ」欄の最新の説明は、どちらのワザも kyuura の文面と同じ（しめつける「コインを投げて「おもて」なら、相手を「マヒ」状態にする。」、どくのこな「相手を「どく」状態にする。」）。",
+    "解説: 「どくのこな」は、20ダメージに加えて、確実に相手をどく状態にする効果があります（ダメージ → 効果。どくはコインなし。CR-STATUS-AFTER-DAMAGE の当てはめ）。",
+    "収録の書き方は kyuura（jp_print.series「第1弾拡張パック、スターターパック」）と、この本の見出し（「ポケモンカード第1弾」）で違う（書き方の違いで、照合した欄ではない）。",
+    "同じページの真ん中のモンジャラ（LV.15／HP50。拡張シート第2弾赤版。からみつく・つるのムチ）は別のカードで、kyuura の data/cards.json にはない。"
+   ],
+   "not_confused_with": [
+    "PMCG5-006（エリカのモンジャラ。p.55 の 3 枚目）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "照合した欄はすべて同じ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「一致」（v0.17a。既存のワザの型で登録した）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG6-063-P229",
+   "card_id": "PMCG6-063",
+   "card_name_ja": "サカキのニャース",
+   "source": "P43",
+   "scan": "J38",
+   "page": "229",
+   "pdf_page": 231,
+   "location": "p.229 の 1 枚目「たねポケモン サカキのニャース LV.17／HP50」（ジム拡張第2弾闇からの挑戦）",
+   "checked_fields": {
+    "name.ja": "サカキのニャース",
+    "jp_print.level": 17,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "psychic",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 2,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "ねこノミ",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。",
+    "pokemon.attacks[1].name.ja": "ねこキック",
+    "pokemon.attacks[1].cost": [
+     "colorless",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "30",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 無色、ねこノミ（無。ダメージの数字なし）、ねこキック（無無無）30（説明文なし）、にげる 2、弱点 闘、抵抗力 超 −30。",
+    "「ワザ」欄の最新の説明は kyuura の文面と同じ（ねこノミ「コインを投げて「おもて」なら、相手を「こんらん」状態にする。」）。",
+    "解説: 「ねこノミ」は、コイントスで表を出せば相手の対戦ポケモンをこんらん状態にできます（ダメージの要素はない。p.320 のダメージの目安）。",
+    "同じページの真ん中のロケット団のニャース（LV.11／HP40。プロモーションカード）は別のカードで、kyuura の data/cards.json にはない。"
+   ],
+   "not_confused_with": [
+    "PMCG2-039（ペルシアン。p.229 の 3 枚目）",
+    "PMCG2-036（第2弾のニャース）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "照合した欄はすべて同じ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「一致」（v0.17a。既存の要素の新しい並びで登録した）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG6-073-P245",
+   "card_id": "PMCG6-073",
+   "card_name_ja": "R団のカビゴン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "245",
+   "pdf_page": 247,
+   "location": "p.245 の 2 枚目「たねポケモン R団のカビゴン LV.40／HP90」（ジム拡張第2弾闇からの挑戦）",
+   "checked_fields": {
+    "name.ja": "R団のカビゴン",
+    "jp_print.level": 40,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 90,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "psychic",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 4,
+    "pokemon.powers[0].name.ja": "わるいねぞう",
+    "pokemon.powers[0].text.ja": "このカードが「ねむり」状態で、相手のワザによるダメージを受けた時、（このカードが「きぜつ」するしないにかかわらず、）ダメージを与えたポケモンに20ダメージ。",
+    "pokemon.attacks[0].name.ja": "たおれこむ",
+    "pokemon.attacks[0].cost": [
+     "colorless",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": "ダメージを与えたあと、自分を「ねむり」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG6-073-PWR0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    },
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG6-073-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0",
+    "LD-PMCG6-073-ATK0"
+   ],
+   "findings": [
+    "図版: 無色、［特殊能力］わるいねぞう、たおれこむ（無無無）20、にげる 4、弱点 闘、抵抗力 超 −30。",
+    "わるいねぞう・たおれこむの文面は印刷の文面で、最新の説明と書き方が違う（LD-PMCG6-073-PWR0・LD-PMCG6-073-ATK0）。",
+    "名前は「R団のカビゴン」（見出し・図版とも）。",
+    "同じページの上のカビゴン（LV.35／HP90。拡張シート第1弾青版・クイックスターターギフトパック。とおせんぼ・ねころぶ）と下のくいしんぼカビゴン（LV.50／HP100。プロモーションカード）は別のカードで、kyuura の data/cards.json にはない。"
+   ],
+   "not_confused_with": [
+    "PMCG2-047（第2弾のカビゴン）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明の違い）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG6-023-P49",
+   "card_id": "PMCG6-023",
+   "card_name_ja": "キョウのベトベトン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "49",
+   "pdf_page": 51,
+   "location": "p.49 の 1 枚目「キョウのベトベターから進化 キョウのベトベトン LV.38／HP80」（ジム拡張第2弾闇からの挑戦）",
+   "checked_fields": {
+    "name.ja": "キョウのベトベトン",
+    "jp_print.level": 38,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "キョウのベトベター",
+    "pokemon.hp": 80,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers[0].name.ja": "だつりょくえき",
+    "pokemon.powers[0].text.ja": "このカードが相手のワザによってダメージを受ける時、(このカードが「きぜつ」するしないにかかわらず、)コインを投げて「おもて」なら、ダメージを与えたポケモンについているエネルギーカードを1枚選び、トラッシュする。ダメージを受ける時、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+    "pokemon.attacks[0].name.ja": "ヘドロのうず",
+    "pokemon.attacks[0].cost": [
+     "grass",
+     "grass",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "40",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG6-023-PWR0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "findings": [
+    "図版: 1進化（キョウのベトベターから進化）、草、［特殊能力］だつりょくえき、ヘドロのうず（草草無）40、にげる 3、弱点 超、抵抗力の欄は空。",
+    "だつりょくえきの文面は印刷の文面で、最新の説明と書き方が違う（LD-PMCG6-023-PWR0）。ヘドロのうずは説明文なし。",
+    "進化元のキョウのベトベターは kyuura では PMCG6-007（エンジンの docs/kogas-muk-event-design-v0.17c.md 6 章は「PMCG6-020」と書くが、kyuura の PMCG6-020 はサカキのニドクイン）。",
+    "英語版の文面（kyuura の text.en）には「If heads and if it has any, choose 1 Energy card」と、エネルギーカードがついていないときの条件がある。日本語版の印刷の文面・最新の説明にはない（日英の文面の違い。日本版の処理の根拠にしない。UQ-ENERGY-DRAIN-NO-ENERGY）。",
+    "kyuura のエラッタの記録（docs/rules/errata-history.md）は、だつりょくえきを 2002年の「ポケボディーとして扱う旧裏・neo の特殊能力」の一覧に挙げている。後年の扱いで、2000年の処理の根拠にしない。"
+   ],
+   "not_confused_with": [
+    "PMCG3-007（化石の秘密のベトベトン）",
+    "PMCG2-006（タマタマ。p.49 の 2 枚目）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「一致」（参照カード。実装は登録していない）"
+    }
+   ],
+   "engine_refs": []
   }
  ],
  "difference_kinds": {

@@ -602,10 +602,16 @@ def validate(ctx):
     for k, n in keys.items():
         if n > 1:
             errors.append(f'engine_unresolved_index: 重複: {k}')
-    totals = {imp.get('engine_unresolved_total') for imp in r['engine_imports'] if 'engine_unresolved_total' in imp}
-    for t in totals:
-        if t != len(idx):
-            errors.append(f'engine_unresolved_index: 件数が {len(idx)} で、engine_unresolved_total の {t} と違う')
+    def vkey(v):
+        return tuple(int(x) for x in re.findall(r'\d+', v))
+    for imp in r['engine_imports']:
+        if 'engine_unresolved_total' not in imp:
+            continue
+        # その版までの項目のうち、エンジンが数えているもの（in_engine_count が false でないもの）。エンジンの数え方の件数と同じか
+        n = sum(1 for u in idx if vkey(u['engine_version']) <= vkey(imp['engine_version']) and u.get('in_engine_count', True))
+        if n != imp['engine_unresolved_total']:
+            errors.append(f"engine_unresolved_index: {imp['engine_version']} までの項目（エンジンが数えるもの）が {n} 件で、"
+                          f"{imp['id']} の engine_unresolved_total の {imp['engine_unresolved_total']} と違う")
     imported_versions = {imp['engine_version'] for imp in r['engine_imports']}
     indexed_issues = set()
     for u in idx:
@@ -624,6 +630,16 @@ def validate(ctx):
             errors.append(f'engine_unresolved_index: {k} を論点にしない理由（reason）がない')
         if disp == 'out_of_scope' and u.get('engine_version') in imported_versions:
             errors.append(f"engine_unresolved_index: {k} は取り込んだ版 {u['engine_version']} のものなので、out_of_scope にしない")
+        for inst in u.get('instances', []):
+            # 同じ問いの、あとの版の事例。その版の取り込みがあり、同じ論点に結ばれている
+            if inst['engine_version'] not in imported_versions:
+                errors.append(f"engine_unresolved_index: {k} の事例 {inst['ruling_id']} の版 {inst['engine_version']} の取り込みがない")
+            elif u.get('kyuura_issue') in issues and not any(
+                    e['ruling_id'] == inst['ruling_id'] and e['engine_version'] == inst['engine_version']
+                    for e in issues[u['kyuura_issue']].get('engine_refs', [])):
+                errors.append(f"engine_unresolved_index: {k} の事例 {inst['ruling_id']}（{inst['engine_version']}）が、論点 {u['kyuura_issue']} の engine_refs にない")
+            elif disp != 'issue':
+                errors.append(f'engine_unresolved_index: {k} は論点に取り込んでいないのに、事例（instances）がある')
         if u.get('kyuura_issue'):
             if u['kyuura_issue'] not in issues:
                 errors.append(f"engine_unresolved_index: {k} の論点がない: {u['kyuura_issue']}")
@@ -852,7 +868,8 @@ def build(ctx):
                 f"- 公式の資料: {OFFICIAL_MATERIAL[x['official_material']]}（" + '、'.join(f"[{s['source']}] p.{s['page']} {s['location']}" for s in x['sources']) + '）',
                 f"- 参照する条項: {'・'.join(x['rule_clause_refs'])}"]
         for c in x['cases']:
-            out.append(f"- 事例: {card_label(cards, c['card_id'])}・{target_label(c['target'])}（エンジンの {c['engine_ruling']}）: {md(c['note'])}")
+            eng = f"エンジンの {c['engine_ruling']}" if c.get('engine_ruling') else 'エンジンの裁定はない'
+            out.append(f"- 事例: {card_label(cards, c['card_id'])}・{target_label(c['target'])}（{eng}）: {md(c['note'])}")
         if x.get('reachability'):
             out.append(f"- 起こるか: エンジンの対応カード — {md(x['reachability']['engine_card_pool'])}。旧裏期の全カード — {md(x['reachability']['all_cards'])}")
         for e in x.get('related_engine_rulings', []):

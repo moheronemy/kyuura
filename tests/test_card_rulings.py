@@ -17,6 +17,12 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'scripts'))
 import build_card_rulings as bcr  # noqa: E402
 
+
+def bcr_vkey(v):
+    """エンジンの版の並び（v0.2b・v0.13 など。枝番の文字は無視する）。"""
+    import re
+    return tuple(int(x) for x in re.findall(r'\d+', v))
+
 # 印刷の文面（data/cards.json）と、p.89 の「ワザ」欄の最新の説明
 PRINTED_SHELL_ATTACK = ('次の相手の番で、このカードが相手のワザによってダメージを受けた時、'
                         '(このカードが「きぜつ」するしないにかかわらず、)そのポケモンにも同じダメージを与える。(ダメージ以外の効果は与えない)')
@@ -210,7 +216,8 @@ class RulingTest(Base):
 
     def test_s7_is_tied_to_c34_c35(self):
         issue = self.find(self.ctx, 'issues', 'UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK')
-        self.assertEqual({e['ruling_id'] for e in issue['engine_refs']}, {'C34', 'C35', 'S7'})
+        # v0.13 の S7 は C34・C35 と同じ論点（v0.17 の Z18・DR18 も同じ問いとして加わる）
+        self.assertTrue({'C34', 'C35', 'S7'} <= {e['ruling_id'] for e in issue['engine_refs']})
         self.assertIn('engine_card_pool', issue['reachability'])
         self.assertEqual(issue['official_material'], 'none_found')
 
@@ -246,8 +253,10 @@ class RulingTest(Base):
 
     def test_engine_unresolved_index(self):
         idx = self.ctx['rulings']['engine_unresolved_index']
-        self.assertEqual(len(idx), 22)
-        self.assertEqual(sum(1 for u in idx if u['stop_code']), 17)
+        # v0.13 までの項目は 22 件（停止コード 17 件）。あとの版の項目はこの数に足す（過去の件数を総数として固定しない）
+        old = [u for u in idx if bcr_vkey(u['engine_version']) <= (0, 13)]
+        self.assertEqual(len(old), 22)
+        self.assertEqual(sum(1 for u in old if u['stop_code']), 17)
         imported = {u['engine_key']: u['kyuura_issue'] for u in idx if u['kyuura_issue']}
         # v0.13 の取り込みの 2 件はどの段階でも同じ論点に結ぶ
         self.assertEqual(imported['W24'], 'UQ-RETALIATION-DOUBLE-KO')
@@ -263,8 +272,8 @@ class RulingTest(Base):
             if version in versions:
                 self.assertTrue(imported[key].startswith('UQ-'), key)
         ctx = self.copy()
-        ctx['rulings']['engine_unresolved_index'].pop()
-        self.assert_detected(ctx, '件数が 21')
+        ctx['rulings']['engine_unresolved_index'] = [u for u in ctx['rulings']['engine_unresolved_index'] if u['engine_key'] != 'MULLIGAN']
+        self.assert_detected(ctx, 'v0.13 までの項目（エンジンが数えるもの）が 21 件')
 
 
 class RuleReferenceTest(Base):
