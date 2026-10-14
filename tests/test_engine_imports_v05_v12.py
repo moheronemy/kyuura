@@ -57,8 +57,9 @@ class CoverageTest(Base):
 
     def test_one_import_per_version(self):
         imps = {x['engine_version']: x for x in self.ctx['rulings']['engine_imports']}
-        self.assertEqual(sorted(imps, key=lambda v: [int(n) for n in v[1:].split('.')]),
-                         ['v0.5', 'v0.6', 'v0.7', 'v0.8', 'v0.9', 'v0.10', 'v0.11', 'v0.12', 'v0.13'])
+        order = sorted(imps, key=lambda v: [int(n) for n in v[1:].split('.')])
+        self.assertEqual(order[:9], ['v0.5', 'v0.6', 'v0.7', 'v0.8', 'v0.9', 'v0.10', 'v0.11', 'v0.12', 'v0.13'])
+        self.assertEqual(len(order), len(self.ctx['rulings']['engine_imports']))  # 版ごとに 1 つ（v0.14 からは test_engine_imports_v014_v017）
         for v, (imp_id, commit, docs) in IMPORTS.items():
             imp = imps[v]
             self.assertEqual(imp['id'], imp_id)

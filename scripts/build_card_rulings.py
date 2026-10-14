@@ -526,6 +526,14 @@ def validate(ctx):
                 errors.append(f'{w}: 文書 {doc} の接頭辞 {pre} の範囲が 2 つある')
         if len({rs['prefix'] for rs in imp.get('ruling_sets', [])}) != len(imp.get('ruling_sets', [])):
             errors.append(f'{w}: 1 つの取り込みの中で、同じ接頭辞を 2 つの文書に使っている（engine_mapping が区別できない）')
+        if imp.get('no_ruling_tables'):
+            # 裁定の表のない版（実装の履歴）。読んだ文書と、ルールに関わる記述の注記だけを持つ
+            if imp.get('ruling_sets') or imp.get('not_imported'):
+                errors.append(f'{w}: no_ruling_tables の取り込みに ruling_sets・not_imported がある')
+            if not imp.get('notes'):
+                errors.append(f'{w}: no_ruling_tables の取り込みに、裁定の表がないことと読んだ内容の注記（notes）がない')
+        elif not imp.get('ruling_sets'):
+            errors.append(f'{w}: ruling_sets がない（裁定の表のない版なら no_ruling_tables: true と注記を書く）')
         for rs in imp.get('ruling_sets', []):
             if rs['document'] not in imp['documents']:
                 errors.append(f"{w}: ruling_sets の文書 {rs['document']} が documents にない")
@@ -883,6 +891,8 @@ def build(ctx):
         ids = [(rs['document'], rid) for rs in imp.get('ruling_sets', []) for rid in ruling_set_ids(rs)]
         skipped = {(n.get('document'), n['ruling_id']) for n in imp.get('not_imported', [])}
         docs = list(dict.fromkeys(rs['document'] for rs in imp.get('ruling_sets', [])))
+        if imp.get('no_ruling_tables'):
+            docs = ['裁定の表なし（実装の履歴）']
         out.append(f"| {imp['id']} | {imp['engine_version']} | `{imp['commit'][:7]}` | {md('、'.join(docs))} | "
                    f"{len(ids)} | {len(ids) - len(skipped)} | {len(skipped)} | {len(imp.get('imported_rulings', []))} | {len(imp.get('unresolved_rulings', []))} |")
     out.append('')

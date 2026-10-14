@@ -14494,7 +14494,8 @@
    "not_in_engine_index": true,
    "notes": [
     "P27・P28・P30 は同じ問い（きぜつの処理の中のふしちょうの位置）なので、1 つの論点にまとめた。",
-    "エンジンはこの順番を決めて（正規化して）処理しており、エンジンの未解決の裁定の一覧（22 件）には入っていない。kyuura では公式の資料で決められない問いとして論点にした。"
+    "エンジンはこの順番を決めて（正規化して）処理しており、エンジンの未解決の裁定の一覧（22 件）には入っていない。kyuura では公式の資料で決められない問いとして論点にした。",
+    "エンジンの v0.14（docs/event-model-v0.14.md 3 章）も、この順番を「正規化」（ルールの裁定ではない実装の順番）に分類している。エンジンの処理の順番は公式の裁定ではないので、論点のまま残す。"
    ]
   },
   {
@@ -14772,7 +14773,8 @@
     "docs/energy-transfer-v0.5.md は処理の手順（コマンドの形・確かめる順番・ログ）の文書で、裁定の表がない。",
     "文書は v0.13 のコミット 8facf3a の木から読んだ。v0.5 のコミット 0fbc3ab から 8facf3a までに、取り込んだ文書（docs/*-v0.5.md）は変わっていない（git diff で確かめた）。",
     "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
-    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。"
+    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。",
+    "v0.17.0 のコミット d90bce1（この作業で参照したエンジンのコミット）でも、この版の文書（docs/*-v0.5.md）は変わっていない（2026-10-14 に git diff で確かめた。d90bce1 までに変わったのは v0.14〜v0.17 の新しい文書と docs/data-provenance.md・docs/implementation-status.md・docs/rules-2000-02-14.md への追記だけ）。"
    ]
   },
   {
@@ -14858,7 +14860,8 @@
     "ゼニガメ・カメール・カメックス（あまごい・ハイドロポンプ）。R13 は、エンジンが止めること（実装）と、公式の資料で決められない問い（UQ-RAIN-DANCE-ATTACH-COUNT）を分けて記録した。",
     "文書は v0.13 のコミット 8facf3a の木から読んだ。v0.6 のコミット 787fff9 から 8facf3a までに、取り込んだ文書（docs/*-v0.6.md）は変わっていない（git diff で確かめた）。",
     "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
-    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。"
+    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。",
+    "v0.17.0 のコミット d90bce1（この作業で参照したエンジンのコミット）でも、この版の文書（docs/*-v0.6.md）は変わっていない（2026-10-14 に git diff で確かめた。d90bce1 までに変わったのは v0.14〜v0.17 の新しい文書と docs/data-provenance.md・docs/implementation-status.md・docs/rules-2000-02-14.md への追記だけ）。"
    ]
   },
   {
@@ -14952,7 +14955,8 @@
     "取り込みの id の S は v0.7 のダメージスワップの裁定で、v0.13 の S（こうらがえし）とは別のもの（取り込み・文書で区別する）。",
     "文書は v0.13 のコミット 8facf3a の木から読んだ。v0.7 のコミット 22cbe24 から 8facf3a までに、取り込んだ文書（docs/*-v0.7.md）は変わっていない（git diff で確かめた）。",
     "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
-    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。"
+    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。",
+    "v0.17.0 のコミット d90bce1（この作業で参照したエンジンのコミット）でも、この版の文書（docs/*-v0.7.md）は変わっていない（2026-10-14 に git diff で確かめた。d90bce1 までに変わったのは v0.14〜v0.17 の新しい文書と docs/data-provenance.md・docs/implementation-status.md・docs/rules-2000-02-14.md への追記だけ）。"
    ]
   },
   {
@@ -15048,7 +15052,8 @@
     "取り込みの id の G・M は v0.8 のもので、v0.11 の G（こんじょう）・v0.10 の M（ゴーリキー・カイリキー）とは別のもの。",
     "文書は v0.13 のコミット 8facf3a の木から読んだ。v0.8 のコミット d057f57 から 8facf3a までに、取り込んだ文書（docs/*-v0.8.md）は変わっていない（git diff で確かめた）。",
     "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
-    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。"
+    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。",
+    "v0.17.0 のコミット d90bce1（この作業で参照したエンジンのコミット）でも、この版の文書（docs/*-v0.8.md）は変わっていない（2026-10-14 に git diff で確かめた。d90bce1 までに変わったのは v0.14〜v0.17 の新しい文書と docs/data-provenance.md・docs/implementation-status.md・docs/rules-2000-02-14.md への追記だけ）。"
    ]
   },
   {
@@ -15169,7 +15174,8 @@
     "docs/automatic-powers-v0.9.md は処理の仕組みの文書で、裁定の表がない。取り込みの id の H は v0.9 のゴース・ゴーストの裁定で、v0.6 の H（ハイドロポンプ）とは別のもの。",
     "文書は v0.13 のコミット 8facf3a の木から読んだ。v0.9 のコミット 995504e から 8facf3a までに、取り込んだ文書（docs/*-v0.9.md）は変わっていない（git diff で確かめた）。",
     "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
-    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。"
+    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。",
+    "v0.17.0 のコミット d90bce1（この作業で参照したエンジンのコミット）でも、この版の文書（docs/*-v0.9.md）は変わっていない（2026-10-14 に git diff で確かめた。d90bce1 までに変わったのは v0.14〜v0.17 の新しい文書と docs/data-provenance.md・docs/implementation-status.md・docs/rules-2000-02-14.md への追記だけ）。"
    ]
   },
   {
@@ -15260,7 +15266,8 @@
     "取り込みの id の M は v0.10 のゴーリキー・カイリキーの裁定で、v0.8 の M（ベトベター・ベトベトン）とは別のもの。",
     "文書は v0.13 のコミット 8facf3a の木から読んだ。v0.10 のコミット 43ec8ba から 8facf3a までに、取り込んだ文書（docs/*-v0.10.md）は変わっていない（git diff で確かめた）。",
     "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
-    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。"
+    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。",
+    "v0.17.0 のコミット d90bce1（この作業で参照したエンジンのコミット）でも、この版の文書（docs/*-v0.10.md）は変わっていない（2026-10-14 に git diff で確かめた。d90bce1 までに変わったのは v0.14〜v0.17 の新しい文書と docs/data-provenance.md・docs/implementation-status.md・docs/rules-2000-02-14.md への追記だけ）。"
    ]
   },
   {
@@ -15354,7 +15361,8 @@
     "docs/ko-prevention-v0.11.md は処理の仕組みの文書で、裁定の表がない。取り込みの id の G・L は v0.11 のもので、v0.8 の G（かがくへんかガス）・v0.5 の L（フシギダネ）とは別のもの。",
     "文書は v0.13 のコミット 8facf3a の木から読んだ。v0.11 のコミット 8bd1e5b から 8facf3a までに、取り込んだ文書（docs/*-v0.11.md）は変わっていない（git diff で確かめた）。",
     "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
-    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。"
+    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。",
+    "v0.17.0 のコミット d90bce1（この作業で参照したエンジンのコミット）でも、この版の文書（docs/*-v0.11.md）は変わっていない（2026-10-14 に git diff で確かめた。d90bce1 までに変わったのは v0.14〜v0.17 の新しい文書と docs/data-provenance.md・docs/implementation-status.md・docs/rules-2000-02-14.md への追記だけ）。"
    ]
   },
   {
@@ -15475,7 +15483,8 @@
     "docs/post-knockout-powers-v0.12.md・docs/temporary-attack-effects-v0.12.md は処理の仕組みの文書で、裁定の表がない。取り込みの id の P は v0.12 のもので、v0.5 の P（特殊能力の一般の規定）とは別のもの。",
     "文書は v0.13 のコミット 8facf3a の木から読んだ。v0.12 のコミット b8054af から 8facf3a までに、取り込んだ文書（docs/*-v0.12.md）は変わっていない（git diff で確かめた）。",
     "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
-    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。"
+    "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。",
+    "v0.17.0 のコミット d90bce1（この作業で参照したエンジンのコミット）でも、この版の文書（docs/*-v0.12.md）は変わっていない（2026-10-14 に git diff で確かめた。d90bce1 までに変わったのは v0.14〜v0.17 の新しい文書と docs/data-provenance.md・docs/implementation-status.md・docs/rules-2000-02-14.md への追記だけ）。"
    ]
   },
   {
@@ -15520,7 +15529,8 @@
    "notes": [
     "エンジンの記録は調査の履歴を追うための参照で、原典ではない。kyuura の裁定の根拠（basis）は、kyuura が原典のページの画像で確かめたもの（checked: kyuura_image）か、kyuura のデータ（kyuura_data）。",
     "確かめたページ: p.82・p.88・p.89・p.111・p.192・p.203・p.279・p.309・p.320〜p.324（2026-10-13）。p.6・p.308 は 2026-10-12 に確かめた。",
-    "v0.10 の C34・C35、v0.12 の W24 は、この取り込みでは仮に ENGINE-8FACF3A に結んでいた。v0.5〜v0.12 の取り込み（2026-10-13）で、版ごとの取り込み（ENGINE-43EC8BA・ENGINE-B8054AF）に移した。docs/rocket-moltres-v0.12.md・docs/counterattack-v0.10.md は、v0.13 の裁定を読むためにも読んだので documents に残している。"
+    "v0.10 の C34・C35、v0.12 の W24 は、この取り込みでは仮に ENGINE-8FACF3A に結んでいた。v0.5〜v0.12 の取り込み（2026-10-13）で、版ごとの取り込み（ENGINE-43EC8BA・ENGINE-B8054AF）に移した。docs/rocket-moltres-v0.12.md・docs/counterattack-v0.10.md は、v0.13 の裁定を読むためにも読んだので documents に残している。",
+    "v0.17.0 のコミット d90bce1（この作業で参照したエンジンのコミット）でも、この版の文書（docs/*-v0.13.md）は変わっていない（2026-10-14 に git diff で確かめた。d90bce1 までに変わったのは v0.14〜v0.17 の新しい文書と docs/data-provenance.md・docs/implementation-status.md・docs/rules-2000-02-14.md への追記だけ）。"
    ],
    "imported_rulings": [
     "CC-PMCG4-018-P43",
@@ -15575,6 +15585,96 @@
     "UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK",
     "UQ-RETALIATION-DOUBLE-KO"
    ]
+  },
+  {
+   "id": "ENGINE-0900209",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.17-card-extensibility",
+   "commit": "0900209ca14f761cb85b9dbb8bde11d5dd8e314b",
+   "engine_version": "v0.14",
+   "parent_version_commit": "8facf3aeac35d3473ab382ad49b77062f86fd492",
+   "documents_read_at": "d90bce183fde925ed61d83f26e16856a0af6a0f8",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "imported_on": "2026-10-14",
+   "documents": [
+    "docs/event-model-v0.14.md",
+    "docs/event-prototype-verification-v0.14.md",
+    "docs/event-architecture-options-v0.14.md",
+    "docs/event-architecture-audit-v0.14.md",
+    "docs/event-migration-plan-v0.14.md"
+   ],
+   "ruling_sets": [],
+   "imported_rulings": [],
+   "unresolved_rulings": [],
+   "not_imported": [],
+   "notes": [
+    "最初の文書（依頼で挙げられた文書）は本文を読み、ほかの文書は「原典」「裁定」「ページ」「未解決」「正規化」「UNRESOLVED」の語で、ルールに関わる記述を探して読んだ。",
+    "docs/event-model-v0.14.md 3 章の「窓の中の順番の扱い」は、処理の順番を「規定」（原典か既存の版で確かめた裁定）・「未解決」・「正規化」（ルールの裁定ではない実装の順番）に分けている。挙げているのは既存の裁定だけで（p.321・T21・p.89・C34/C35・G40・C18/W24/S37・P27〜P30・P32・p.325 のサイドの順番）、新しい裁定はない。P27〜P30（ふしちょうとサイド・勝ち負け・交代の順番）を「正規化」に分類していることは、kyuura の UQ-PHOENIX-KO-PROCESS-ORDER（公式の資料では決まらない。エンジンは順番を決めて処理している）と合う。",
+    "docs/event-model-v0.14.md 7 章・docs/event-prototype-verification-v0.14.md 4 章: v0.13 の 17 の停止コード・22 の未解決の裁定を変えていない。コードのない問い（C34/C35・G40・P32・P19・T27）は、今の対応カードでは起こらない。",
+    "この版はエンジンの実装の履歴（処理の仕組み・先読み・旧経路の撤去・テスト・性能）で、裁定の表（ルールの判断の id）がない。表の id（v0.14 の H1〜H5 は設計の仮説、M01〜M27・M01〜M20 は変異試験）はルールの裁定ではないので、ruling_sets に入れない。",
+    "イベントの仕組み・先読み・旧経路の削除・テストの件数・性能は、公式のカードの裁定として記録しない。",
+    "エンジンの記録は調査の履歴を追うための参照で、原典ではない。"
+   ],
+   "no_ruling_tables": true
+  },
+  {
+   "id": "ENGINE-AA551AB",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.17-card-extensibility",
+   "commit": "aa551ab0601e916c3fae3195780eb0aa07761deb",
+   "engine_version": "v0.15",
+   "parent_version_commit": "0900209ca14f761cb85b9dbb8bde11d5dd8e314b",
+   "documents_read_at": "d90bce183fde925ed61d83f26e16856a0af6a0f8",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "imported_on": "2026-10-14",
+   "documents": [
+    "docs/event-integration-verification-v0.15d.md",
+    "docs/integration-dependencies-v0.15a.md",
+    "docs/kernel-integration-v0.15b.md",
+    "docs/preflight-optimization-v0.15c.md"
+   ],
+   "ruling_sets": [],
+   "imported_rulings": [],
+   "unresolved_rulings": [],
+   "not_imported": [],
+   "notes": [
+    "最初の文書（依頼で挙げられた文書）は本文を読み、ほかの文書は「原典」「裁定」「ページ」「未解決」「正規化」「UNRESOLVED」の語で、ルールに関わる記述を探して読んだ。",
+    "docs/event-integration-verification-v0.15d.md 1 章: 裁定・止める条件・停止コード（17 件）・未解決の裁定（22 件）・書き出しの形式 9 を変えていない（標準の処理の経路を KERNEL に切り替えた版）。新しい裁定はない。",
+    "この版はエンジンの実装の履歴（処理の仕組み・先読み・旧経路の撤去・テスト・性能）で、裁定の表（ルールの判断の id）がない。表の id（v0.14 の H1〜H5 は設計の仮説、M01〜M27・M01〜M20 は変異試験）はルールの裁定ではないので、ruling_sets に入れない。",
+    "イベントの仕組み・先読み・旧経路の削除・テストの件数・性能は、公式のカードの裁定として記録しない。",
+    "エンジンの記録は調査の履歴を追うための参照で、原典ではない。"
+   ],
+   "no_ruling_tables": true
+  },
+  {
+   "id": "ENGINE-15770C6",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.17-card-extensibility",
+   "commit": "15770c6686dd5dc54380058b7a53c0276e5c6172",
+   "engine_version": "v0.16",
+   "parent_version_commit": "aa551ab0601e916c3fae3195780eb0aa07761deb",
+   "documents_read_at": "d90bce183fde925ed61d83f26e16856a0af6a0f8",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "imported_on": "2026-10-14",
+   "documents": [
+    "docs/kernel-consolidation-verification-v0.16e.md",
+    "docs/preflight-consolidation-v0.16c.md",
+    "docs/legacy-removal-audit-v0.16a.md",
+    "docs/kernel-consolidation-v0.16b.md",
+    "docs/legacy-test-migration-v0.16d.md"
+   ],
+   "ruling_sets": [],
+   "imported_rulings": [],
+   "unresolved_rulings": [],
+   "not_imported": [],
+   "notes": [
+    "最初の文書（依頼で挙げられた文書）は本文を読み、ほかの文書は「原典」「裁定」「ページ」「未解決」「正規化」「UNRESOLVED」の語で、ルールに関わる記述を探して読んだ。",
+    "docs/preflight-consolidation-v0.16c.md・docs/kernel-consolidation-verification-v0.16e.md 8 章: 裁定・止める条件・停止コード・書き出しの形式 9 を変えていない（v0.13 の旧経路を外した版）。中止の条件「原典で確認できない新しい裁定が必要になる」に当たらない（T27・C34/C35 などの既存の問いは止める処理のまま）。新しい裁定はない。",
+    "この版はエンジンの実装の履歴（処理の仕組み・先読み・旧経路の撤去・テスト・性能）で、裁定の表（ルールの判断の id）がない。表の id（v0.14 の H1〜H5 は設計の仮説、M01〜M27・M01〜M20 は変異試験）はルールの裁定ではないので、ruling_sets に入れない。",
+    "イベントの仕組み・先読み・旧経路の削除・テストの件数・性能は、公式のカードの裁定として記録しない。",
+    "エンジンの記録は調査の履歴を追うための参照で、原典ではない。"
+   ],
+   "no_ruling_tables": true
   }
  ],
  "engine_unresolved_index": [
