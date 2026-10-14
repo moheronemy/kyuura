@@ -141,6 +141,75 @@
 - 基準にするルールの版を上げ、変わった項目に対応するテストを直します。基準にした調査データのコミットを記録しておけば、どの資料の状態に基づくテストかを追えます。
 - 第4版・第5版のルールの組は、版の文書や同じ時期の公式資料で確かめられた項目から加えます。
 
+## 9. kyuura-engine の研究成果の取り込み（2026-10-14 の監査）
+
+エンジンの開発で分かったことを kyuura に取り込む前に、両方のリポジトリの状態と、エンジンの裁定の表の一覧を確かめた記録です。取り込むのは、公式資料で確かめた事実・資料からの推論・未解決の論点だけで、エンジンの実装の判断（実装上の仮定・停止コード・テストの結果）は公式の裁定として扱いません。
+
+### 9.1 監査した時点
+
+| 項目 | kyuura | kyuura-engine |
+|---|---|---|
+| コミット | `bcf38c70a263b04dde9c25b602b65f5bad8f04dc`（ブランチ `claude/eloquent-lamport-5xyv5r`。作業ツリーに変更なし） | `d90bce183fde925ed61d83f26e16856a0af6a0f8`（v0.17.0。ブランチ `claude/v0.17-card-extensibility`） |
+| 参照のしかた | この作業のブランチ `claude/engine-findings-through-v0.17` で変更する | 読むだけ（別に取得した写しから、固定したコミットの木を読む。エンジンのコードと履歴は変えない） |
+| エンジンが写している kyuura のデータ | — | `ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691`（`scripts/extract_kyuura_cards.py` の `KYUURA_COMMIT`。v0.17 でも変わっていない） |
+| エンジンの結果を取り込んだ範囲 | v0.13 のわるいカメール（S1〜S49。`ENGINE-8FACF3A`）だけ | — |
+
+v0.5〜v0.13 の文書（`docs/*-v0.5.md` 〜 `docs/*-v0.13.md`）は、v0.13 のコミット `8facf3a` から `d90bce1` までに変わっていません（git diff で確かめた）。`d90bce1` までに変わったのは、v0.14〜v0.17 の新しい文書と `docs/data-provenance.md`・`docs/implementation-status.md`・`docs/rules-2000-02-14.md` の追記です。
+
+### 9.2 エンジンの裁定の表（v0.5〜v0.17）
+
+「件数」は表の行の id の数です。エンジンの裁定の id は文書ごとの番号で、版が違えば同じ id（S1・G1・P1・H1・M1・L1 など）が別の裁定です。
+
+| 版 | コミット | 裁定の表（文書と id） | 件数 | bcf38c7 の時点の kyuura |
+|---|---|---|---|---|
+| v0.5 | `0fbc3ab` | venusaur（V1〜V13）・bulbasaur-line（L1〜L6・I1〜I6）・pokemon-powers（P1〜P18） | 43 | 取り込んでいない |
+| v0.6 | `787fff9` | rain-dance（R1〜R15・H1〜H5） | 20 | 取り込んでいない |
+| v0.7 | `22cbe24` | damage-swap（S1〜S25）・alakazam-line（K1〜K10） | 35 | 取り込んでいない |
+| v0.8 | `d057f57` | chemical-gas（G1〜G33）・grimer-line（M1〜M9） | 42 | 取り込んでいない |
+| v0.9 | `995504e` | transparency（T1〜T42・T19b）・haunter-line（H1〜H13） | 56 | 取り込んでいない |
+| v0.10 | `43ec8ba` | counterattack（C1〜C43）・machamp-line（M1〜M12） | 55 | 取り込んでいない（C34・C35 は v0.13 の論点に結んでいた） |
+| v0.11 | `8bd1e5b` | guts（G1〜G42）・giovanni-machamp-line（L1〜L14） | 56 | 取り込んでいない |
+| v0.12 | `b8054af` | phoenix（P1〜P35）・rocket-moltres（W1〜W30） | 65 | 取り込んでいない（W24 は v0.13 の論点に結んでいた） |
+| v0.13 | `8facf3a` | shell-attack（S1〜S49） | 49 | 取り込み済み |
+| v0.14 | `0900209` | なし（H1〜H5 は設計の仮説、M01〜M27 は変異試験） | 0 | — |
+| v0.15 | `aa551ab` | なし（M01〜M20 は変異試験） | 0 | — |
+| v0.16 | `15770c6` | なし | 0 | — |
+| v0.17 | `d90bce1` | rocket-snorlax（Z1〜Z30）・kogas-muk-event-design（DR1〜DR20） | 50 | 取り込んでいない |
+| 計 | | | 471 | 49 |
+
+- v0.5〜v0.12 の文書のうち、裁定の表のない文書（energy-transfer・continuous-effects・automatic-powers・post-damage-powers・ko-prevention・post-knockout-powers・temporary-attack-effects）は、処理の手順と設計の文書で、裁定はそれぞれの版の表にあります。
+- v0.14〜v0.16 は、イベントの仕組み（KERNEL）・宣言の前の先読み・旧経路の撤去の版です。文書の表は設計の仮説と変異試験で、ルールの裁定ではありません。エンジンの文書は、v0.13 の 17 の停止コード・22 の未解決の裁定を変えていないと書いています。
+- v0.17 の文書のほかの表（card-selection の H1〜H3 は仮説、kogas-muk-event-design の Q1〜Q10 は KERNEL の制約、card-extensibility-verification の S01〜S11 は変異試験）も実装の記録です。
+- v0.17 の裁定の表の分類（エンジンの表の欄を数えたもの）: Z は CONFIRMED 13・SUPPORTED 10・UNRESOLVED を含む 5（Z9・Z13・Z18・Z23・Z29）・複数の分類 2。DR は CONFIRMED 4・SUPPORTED 5・UNRESOLVED 5（DR1・DR6・DR8・DR13・DR18）・複数の分類 3・分類なし 3（DR12 は「DR1 に含める」、DR14 は「—」、DR20 は「実装の設計」）。
+
+### 9.3 エンジンの未解決の裁定と停止コード（v0.17）
+
+- エンジンの数え方では、v0.16 までの未解決の裁定は 22 件、停止コード（`UNRESOLVED_…`）は 17 件。v0.17 で Z9・Z23 が加わって 24 件、停止コードは `UNRESOLVED_EFFECT_AFTER_NO_DAMAGE`（Z23）が加わって 18 件です（docs/card-extensibility-verification-v0.17d.md 8 章）。Z9 はコードのない問い（`power_damage_weakness_resistance`。結果が変わる場合だけ止める）です。
+- キョウのベトベトン（DR1・DR6・DR8・DR13・DR18）は、カードを未対応のまま延期していて、エンジンの数には入っていません。
+- kyuura の `engine_unresolved_index`（bcf38c7）は v0.13 の時点の 22 件です。この件数は過去の時点の数で、総数として固定しません。
+
+### 9.4 エンジンが報告した kyuura の記録との違い（v0.17）
+
+エンジンの docs/data-provenance.md・docs/card-selection-v0.17a.md 7 章による報告で、kyuura で確かめる事項です。
+
+- ベロリンガ（PMCG2-041）の 1 つめのワザの名前（kyuura「したでなめる」、p.234 の図版と「ワザ」欄は「まきつくベロ」）。
+- タケシのイワーク（PMCG5-048）の `jp_print.series` が空。
+- R団のカビゴン（PMCG6-073）・キョウのベトベトン（PMCG6-023）の文面は印刷の文面で、最新の説明（p.245・p.49）の記録がない。
+- キョウのベトベトンの英語版の文面の「if it has any」が日本語版にない。
+- 特殊能力のダメージの弱点・抵抗力（Z9）、「ダメージを与えた後」の効果（Z23）、だつりょくえきが宣言する特殊能力か・処理する時点（DR1・DR6）の記録がない。
+
+### 9.5 取り込みの段階
+
+| 段階 | 内容 |
+|---|---|
+| A | この監査と一覧 |
+| B | v0.5〜v0.8、v0.9〜v0.10 の裁定（2 つのコミット。v0.9 と v0.10 は「とうめい」と「はんげき」、自分へのダメージの記録を共有するので、v0.9 と v0.10 の間では分けない） |
+| C | v0.11〜v0.12 の裁定 |
+| D | v0.13〜v0.16 の整合（v0.13 の記録を保つ。v0.14〜v0.16 は実装の履歴として記録する） |
+| E | v0.17 の新しいカードと論点（Z1〜Z30・DR1〜DR20） |
+| F | データの食い違いの調査（ベロリンガ・タケシのイワーク） |
+| G | 未解決の論点の全体の監査、検査、文書の更新 |
+
 ## 関連するページ
 
 - [日本版のルールと変遷](rules/japanese.md)、[日本版のルールの版ごとの比較](rules/japanese-editions.md)、[日米のルールの違い](rules/differences.md)
