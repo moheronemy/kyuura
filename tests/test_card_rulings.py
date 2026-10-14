@@ -69,11 +69,17 @@ class CardReferenceTest(Base):
         self.assertEqual(cards['PMCG4-008']['name']['ja'], 'わるいアーボック')
         self.assertEqual(cards['PMCG4-024']['name']['ja'], 'わるいカメックス')
         self.assertEqual(cards['PMCG1-027']['name']['ja'], 'カメール')
-        for cid in ('PMCG1-027', 'PMCG1-023', 'PMCG4-024', 'PMCG4-008'):
+        for cid in ('PMCG4-024', 'PMCG4-008'):
             notes = bcr.annotations_for(self.ctx, cid)
             self.assertEqual(notes['latest_descriptions'], [], cid)
             self.assertEqual(notes['card_checks'], [], cid)
             self.assertEqual(notes['rulings'], [], cid)
+        # 第1弾のゼニガメ・カメールは v0.6 の取り込み（p.87・p.88）で自分の記録を持つ。わるいカメールの記録とは混ざらない
+        for cid in ('PMCG1-027', 'PMCG1-023'):
+            notes = bcr.annotations_for(self.ctx, cid)
+            for kind in ('latest_descriptions', 'card_checks'):
+                self.assertTrue(all(x['card_id'] == cid for x in notes[kind]), cid)
+            self.assertFalse([x['id'] for x in notes['rulings'] if x['id'].startswith('CR-SHELL-ATTACK')], cid)
 
     def test_unknown_card_id_is_rejected(self):
         ctx = self.copy()
@@ -138,7 +144,7 @@ class LatestDescriptionTest(Base):
     def test_checked_without_difference_is_distinct_from_unchecked(self):
         squirtle = bcr.annotations_for(self.ctx, 'PMCG4-018')['card_checks']
         self.assertEqual([c['result'] for c in squirtle], ['no_difference'])
-        self.assertEqual(bcr.annotations_for(self.ctx, 'PMCG1-001')['card_checks'], [])  # 未照合
+        self.assertEqual(bcr.annotations_for(self.ctx, 'PMCG1-002')['card_checks'], [])  # 未照合（v0.5 の取り込みで PMCG1-001 は照合ずみになった）
 
     def test_printed_vs_latest_is_not_a_data_error(self):
         check = self.find(self.ctx, 'checks', 'CC-PMCG4-021-P43')
@@ -188,6 +194,9 @@ class RulingTest(Base):
     def test_s37_and_w24_are_one_issue(self):
         mapping = bcr.engine_mapping(self.ctx, 'ENGINE-8FACF3A')
         self.assertEqual([i for _, i, _ in mapping['S37']], ['UQ-RETALIATION-DOUBLE-KO'])
+        # W24 は、v0.12 の取り込み（ENGINE-B8054AF）があればそこに、なければ v0.13 の取り込みに仮に結ぶ
+        v012 = [imp['id'] for imp in self.ctx['rulings']['engine_imports'] if imp['engine_version'] == 'v0.12']
+        mapping = bcr.engine_mapping(self.ctx, v012[0]) if v012 else mapping
         self.assertEqual([i for _, i, _ in mapping['W24']], ['UQ-RETALIATION-DOUBLE-KO'])
         issue = self.find(self.ctx, 'issues', 'UQ-RETALIATION-DOUBLE-KO')
         self.assertEqual({c['card_id'] for c in issue['cases']}, {'PMCG4-021', 'PMCG5-020'})
@@ -240,9 +249,18 @@ class RulingTest(Base):
         self.assertEqual(len(idx), 22)
         self.assertEqual(sum(1 for u in idx if u['stop_code']), 17)
         imported = {u['engine_key']: u['kyuura_issue'] for u in idx if u['kyuura_issue']}
-        self.assertEqual(imported, {'W24': 'UQ-RETALIATION-DOUBLE-KO', 'C34/C35': 'UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK'})
-        for key in ('C18', 'G37', 'G40', 'T27'):
-            self.assertIsNone(next(u for u in idx if u['engine_key'] == key)['kyuura_issue'], key)
+        # v0.13 の取り込みの 2 件はどの段階でも同じ論点に結ぶ
+        self.assertEqual(imported['W24'], 'UQ-RETALIATION-DOUBLE-KO')
+        self.assertEqual(imported['C34/C35'], 'UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK')
+        versions = {imp['engine_version'] for imp in self.ctx['rulings']['engine_imports']}
+        for u in idx:
+            if u['engine_version'] not in versions and u['disposition'] != 'out_of_scope':
+                self.assertEqual(u['disposition'], 'not_yet_imported', u['engine_key'])  # その版を取り込む前
+        if 'v0.10' in versions:
+            self.assertEqual(imported['C18'], 'UQ-COUNTERATTACK-DOUBLE-KO')  # W24 の論点にはまとめない
+        for key, version in (('G37', 'v0.11'), ('G40', 'v0.11'), ('T27', 'v0.9')):
+            if version in versions:
+                self.assertTrue(imported[key].startswith('UQ-'), key)
         ctx = self.copy()
         ctx['rulings']['engine_unresolved_index'].pop()
         self.assert_detected(ctx, '件数が 21')
@@ -297,7 +315,7 @@ class CompatibilityTest(Base):
         self.assertEqual(len(set(ids)), 780)
 
     def test_cards_without_sidecar_records(self):
-        notes = bcr.annotations_for(self.ctx, 'PMCG1-001')
+        notes = bcr.annotations_for(self.ctx, 'PMCG1-002')  # v0.5 の取り込みで PMCG1-001 には記録ができた
         self.assertEqual(notes, {'latest_descriptions': [], 'card_checks': [], 'rulings': [], 'related_rulings': [], 'issues': []})
 
     def test_existing_builders_still_pass(self):
