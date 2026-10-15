@@ -430,7 +430,8 @@ class UnresolvedAuditTest(Base):
         uc = bcr.unresolved_counts(self.ctx)
         self.assertEqual(uc['research_issues'], 19)
         self.assertEqual((uc['engine_total'], uc['engine_stop_codes']), (24, 18))  # docs/card-extensibility-verification-v0.17d.md 8 章
-        self.assertEqual(uc['by_import'], [('v0.13', 22), ('v0.17', 24)])
+        # v0.18（ENGINE-46A3E2E。2026-10-15 に取り込んだ。新しい未解決の裁定はない）も 24
+        self.assertEqual(uc['by_import'], [('v0.13', 22), ('v0.17', 24), ('v0.18', 24)])
         self.assertEqual(len(uc['v013_items']), 22)
         self.assertEqual(uc['v017_additions'], ['Z9', 'Z23'])
         self.assertEqual(uc['not_in_engine_count'], ['DR1', 'DR6', 'DR8', 'DR13'])

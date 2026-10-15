@@ -18554,6 +18554,44 @@
     "engine_reported_counts は、エンジンの表の「分類」の欄を kyuura が数えたもの（「複数の分類」は、1 つの欄に CONFIRMED と SUPPORTED などが並ぶもの）。"
    ],
    "engine_unresolved_total": 24
+  },
+  {
+   "id": "ENGINE-46A3E2E",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.18-source-aligned-extension",
+   "commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+   "engine_version": "v0.18",
+   "parent_version_commit": "d90bce183fde925ed61d83f26e16856a0af6a0f8",
+   "documents_read_at": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "imported_on": "2026-10-15",
+   "documents": [
+    "docs/research-alignment-v0.18a.md",
+    "docs/unresolved-research-v0.18b.md",
+    "docs/kernel-reuse-v0.18c.md",
+    "docs/mid-window-decisions-v0.18d.md",
+    "docs/verification-reproducibility-v0.18e.md",
+    "docs/v0.18-verification.md",
+    "kyuura_engine/data/card_verification.json",
+    "kyuura_engine/data/research_links.json"
+   ],
+   "ruling_sets": [],
+   "imported_rulings": [],
+   "unresolved_rulings": [],
+   "not_imported": [],
+   "engine_unresolved_total": 24,
+   "notes": [
+    "v0.18 は研究データとの照合・未解決の裁定の再調査・既存の実装の型によるカードの追加（ナツメのヤドン）・窓の途中の決定の設計の見直し・検証の道具の版です。裁定の表（新しい裁定 id）はない（docs/unresolved-research-v0.18b.md の表は v0.17 の Z9・Z23・DR1・DR6 の再調査で、新しい id ではない。docs/verification-reproducibility-v0.18e.md の M01〜V04 は変異試験）。",
+    "エンジンは研究の基準を kyuura adf9710（kyuura_engine/data/research_links.json の research_commit）に固定し、カードの写しの元は ecb2d69 のまま（kyuura_commit_used_by_engine）。エンジンの未解決の裁定 24 件・停止コード 18 件は v0.17 と同じ（docs/v0.18-verification.md）。",
+    "docs/unresolved-research-v0.18b.md: Z9・Z23・DR1・DR6 はどれも UNRESOLVED のまま。Z23 は、ダメージを与えなかった場合を a（要素が無効。p.321）・b（計算の結果が 0。ディフェンダー・抵抗力。p.319）・c（「とうめい」。p.159・p.160）・d（対象がいない。今のワザでは起こらない）に分けた（UQ-EFFECT-AFTER-NO-DAMAGE の場合の区別。kyuura の論点の分類は変えていない）。",
+    "エンジンが v0.18b で新しく読んだページ: p.314〜p.316（カードの見かたの弱点・抵抗力。Z9）、p.100（［にげこむ］）・p.104（［シェルアーマー］）（DR1・DR6）。エンジンの結論はどれも論点を決めない。kyuura はこれらのページを読み直していないので、論点の audit の new_sources には加えていない。",
+    "docs/kernel-reuse-v0.18c.md: ナツメのヤドン（PMCG6-044。p.155）のぐうたらこうげきは、R団のカビゴンのたおれこむと同じ実装の型で登録。エンジンの照合の記録（card_verification.json の cards.PMCG6-044。原典の確認 2026-10-14）を、2026-10-15 に CC-PMCG6-044-P155 として取り込んだ（kyuura は画像を読み直していない）。",
+    "docs/mid-window-decisions-v0.18d.md: 窓の途中の決定は DEFER（キョウのベトベトンは未対応のまま）。実装の設計で、公式の裁定ではない。",
+    "docs/verification-reproducibility-v0.18e.md・research_links.json: 変異試験と研究の対応表は検証の道具で、公式の裁定ではない。",
+    "2026-10-15 の取り込みで、エンジンの照合の記録（v0.1〜v0.4 のカードなど 34 枚。cards.* の記録は v0.17 の d90bce1 の文書と同じ）を、kyuura の照合の記録（CC-）34 件・最新の説明の記録（LD-）5 件として取り込んだ（import_provenance。原典の確認日はエンジンの記録の日付）。",
+    "エンジンの記録は調査の履歴を追うための参照で、原典ではない。"
+   ],
+   "no_ruling_tables": true
   }
  ],
  "engine_unresolved_index": [

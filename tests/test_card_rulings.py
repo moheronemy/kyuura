@@ -150,7 +150,8 @@ class LatestDescriptionTest(Base):
     def test_checked_without_difference_is_distinct_from_unchecked(self):
         squirtle = bcr.annotations_for(self.ctx, 'PMCG4-018')['card_checks']
         self.assertEqual([c['result'] for c in squirtle], ['no_difference'])
-        self.assertEqual(bcr.annotations_for(self.ctx, 'PMCG1-002')['card_checks'], [])  # 未照合（v0.5 の取り込みで PMCG1-001 は照合ずみになった）
+        # 未照合（v0.5 の取り込みで PMCG1-001、2026-10-15 のエンジンの照合の記録の取り込みで PMCG1-002 は照合の記録ができた）
+        self.assertEqual(bcr.annotations_for(self.ctx, 'PMCG1-005')['card_checks'], [])
 
     def test_printed_vs_latest_is_not_a_data_error(self):
         check = self.find(self.ctx, 'checks', 'CC-PMCG4-021-P43')
@@ -334,7 +335,7 @@ class CompatibilityTest(Base):
         self.assertEqual(len(set(ids)), 780)
 
     def test_cards_without_sidecar_records(self):
-        notes = bcr.annotations_for(self.ctx, 'PMCG1-002')  # v0.5 の取り込みで PMCG1-001 には記録ができた
+        notes = bcr.annotations_for(self.ctx, 'PMCG1-005')  # PMCG1-001（v0.5）・PMCG1-002（2026-10-15 の取り込み）には記録ができた
         self.assertEqual(notes, {'latest_descriptions': [], 'card_checks': [], 'rulings': [], 'related_rulings': [], 'issues': []})
 
     def test_existing_builders_still_pass(self):

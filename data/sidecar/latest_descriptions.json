@@ -1521,6 +1521,311 @@
     }
    ],
    "notes": []
+  },
+  {
+   "id": "LD-PMCG1-003-ATK0",
+   "card_id": "PMCG1-003",
+   "card_name_ja": "トランセル",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "かたまる"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-005-transel/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "エンジンの記録（300dpi の画像）: 図版「コインを投げて「おもて」なら 次の相手の番にうけるダメージが0になる。」は kyuura と同じ印刷の文面。「なら」のあとの読点は読み取れない。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+    "source": "P43",
+    "scan": "J38",
+    "page": "18",
+    "pdf_page": 20,
+    "location": "トランセル（LV.21／HP70。ポケモンカード第1弾）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "次の相手の番にうけるダメージが0になる。",
+     "latest": "次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "ゼニガメの「からにこもる」（LD-PMCG1-023-ATK1。kyuura が p.87 で確かめた）と同じ書きかえ。「ダメージが0になる」と「ダメージを受けない」は、ダメージを計算するか（p.319・p.321）が違うが、結果が変わる場面は kyuura では見つけていない（推論）。最新の説明は「ダメージ以外の効果は受ける」を加えた",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-003",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches の pokemon.attacks[0].text.ja。印刷の文面と最新の説明の違い）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録（card_verification.json の latest_description_ja・card_image_text_ja・mismatches・notes）による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-009-ATK0",
+   "card_id": "PMCG1-009",
+   "card_name_ja": "コクーン",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "かたまる"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-007-cocoon/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "エンジンの記録（300dpi の画像）: 図版の文面は kyuura と同じ印刷の文面（エンジンの転記は「なら、次の」と「なら 次の」の 2 とおりで、読点の有無は記録からは決まらない）。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+    "source": "P43",
+    "scan": "J38",
+    "page": "21",
+    "pdf_page": 23,
+    "location": "コクーン（LV.23／HP80。ポケモンカード第1弾）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "次の相手の番にうけるダメージが0になる。",
+     "latest": "次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "トランセルの「かたまる」（LD-PMCG1-003-ATK0）・ゼニガメの「からにこもる」（LD-PMCG1-023-ATK1）と同じ書きかえ。結果が変わる場面は kyuura では見つけていない（推論）",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-009",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches の pokemon.attacks[0].text.ja。印刷の文面と最新の説明の違い）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録（card_verification.json の latest_description_ja・card_image_text_ja・mismatches・notes）による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-012-ATK0",
+   "card_id": "PMCG1-012",
+   "card_name_ja": "スピアー",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "ダブルニードル"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "コインを2枚投げて「おもて」の出た数×30のダメージ。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-008-spear/",
+    "image_check": "match",
+    "image_check_note": "エンジンの記録（300dpi の画像）: 図版「コインを2枚投げて「おもて」の出た数×30のダメージ。」は kyuura と同じ印刷の文面。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "コインを2枚投げ、「おもて」の数×30のダメージ。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "21",
+    "pdf_page": 23,
+    "location": "スピアー（LV.32／HP80。ポケモンカード第1弾）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "投げて",
+     "latest": "投げ、",
+     "kind": "wording"
+    },
+    {
+     "printed": "出た数",
+     "latest": "数",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "書き方だけの違い。コイン 2 枚・「おもて」の数×30 のダメージは同じ（わるいカメールの「おうふくびんた」（LD-PMCG4-021-ATK0）と同じ形の書きかえ）",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-012",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches の pokemon.attacks[0].text.ja。印刷の文面と最新の説明の違い）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録（card_verification.json の latest_description_ja・card_image_text_ja・mismatches・notes）による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG2-007-ATK0",
+   "card_id": "PMCG2-007",
+   "card_name_ja": "バタフリー",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "ふきとばし"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "相手を控えポケモンと入れ替える。控えポケモンは相手プレイヤーがえらぶ。相手プレイヤーに控えポケモンがいないときには入れ替えはおこらない。",
+    "source_of_data": "https://nazonobasho.com/pmcg02-001-butterfree/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "エンジンの記録（400dpi の画像）: 図版の文面は kyuura と同じ印刷の文面（文字が小さく、「入れ替える」のあとの句読点は読みきれない）。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "相手を控えポケモンと入れ替える。入れ替わるポケモンは、相手が選ぶ。（相手に控えがいないとき、入れ替えはおこらない）",
+    "source": "P43",
+    "scan": "J38",
+    "page": "19",
+    "pdf_page": 21,
+    "location": "バタフリー（LV.28／HP70。ポケモンカード第2弾ポケモンジャングル）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "控えポケモンは相手プレイヤーがえらぶ。",
+     "latest": "入れ替わるポケモンは、相手が選ぶ。",
+     "kind": "clarification"
+    },
+    {
+     "printed": "相手プレイヤーに控えポケモンがいないときには入れ替えはおこらない。",
+     "latest": "（相手に控えがいないとき、入れ替えはおこらない）",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "相手の対戦ポケモンを控えと入れ替える・入れ替わる控えは相手が選ぶ・控えがいなければ入れ替えない、は同じと読める（推論）。「控えポケモン」を「入れ替わるポケモン」と書き直した",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-007",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 400dpi の画像にして目で読み、v0.4b・v0.4c の低い解像度の画像の読み取りを確かめ直した（エンジンの記録の notes）。印刷物の実物ではない",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches の pokemon.attacks[0].text.ja。印刷の文面と最新の説明の違い）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録（card_verification.json の latest_description_ja・card_image_text_ja・mismatches・notes）による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG2-007-ATK1",
+   "card_id": "PMCG2-007",
+   "card_name_ja": "バタフリー",
+   "target": {
+    "kind": "attack",
+    "index": 1,
+    "name_ja": "メガドレイン"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[1].text.ja",
+    "text_ja": "相手に与えたダメージの半分(切り上げ)のダメージカウンターを自分からとりのぞく。",
+    "source_of_data": "https://nazonobasho.com/pmcg02-001-butterfree/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "エンジンの記録（400dpi の画像）: 図版「相手に与えたダメージの半分（切り上げ）のダメージカウンターを自分からとりのぞく」は kyuura と同じ印刷の文面（括弧は図版では全角、kyuura は半角。句読点は読みきれない）。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "相手にダメージを与えたら、その半分（切り上げ）のダメージカウンターを、自分からとりのぞく。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "19",
+    "pdf_page": 21,
+    "location": "バタフリー（LV.28／HP70。ポケモンカード第2弾ポケモンジャングル）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "相手に与えたダメージの半分(切り上げ)のダメージカウンターを自分から",
+     "latest": "相手にダメージを与えたら、その半分（切り上げ）のダメージカウンターを、自分から",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "最新の説明は「相手にダメージを与えたら」と、とりのぞく条件を書いた。印刷の文面でも、与えたダメージが 0 なら半分は 0 なので、とりのぞく数は同じと読める（推論）。「与えたダメージ」は最終ダメージ（p.319）",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-007",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 400dpi の画像にして目で読み、v0.4b・v0.4c の低い解像度の画像の読み取りを確かめ直した（エンジンの記録の notes）。印刷物の実物ではない",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches の pokemon.attacks[1].text.ja。印刷の文面と最新の説明の違い）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録（card_verification.json の latest_description_ja・card_image_text_ja・mismatches・notes）による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
   }
  ]
 }
