@@ -80,7 +80,7 @@ uc = bcr.unresolved_counts(ctx)
 print(uc['research_issues'], uc['engine_total'], uc['engine_stop_codes'])
 ```
 
-7. **エンジンの新しい版を取り込むとき**: `data/sidecar/rulings.json` の `engine_imports` に版ごとの記録を 1 件加え（`ENGINE-<コミットの先頭 7 桁>`。`commit`・`documents`・文書ごとの `ruling_sets`）、範囲のすべての id を記録の `engine_refs` か `not_imported`（理由つき）に結びます。最新の説明・照合・裁定は、[照合済みの記録の再利用手順](docs/engine-readiness.md#10-照合済みの記録の再利用2026-10-15)に従って記録します。原典の確認者と範囲が追えるエンジンの記録は、出所を保って取り込めます。不足する範囲だけ画像を確認します。形式は [docs/data-schema.md の「サイドカー」](docs/data-schema.md#サイドカーdatasidecar)。
+7. **エンジンの新しい版を取り込むとき**: `data/sidecar/rulings.json` の `engine_imports` に版ごとの記録を 1 件加え（`ENGINE-<コミットの先頭 7 桁>`。`commit`・`documents`・文書ごとの `ruling_sets`）、範囲のすべての id を記録の `engine_refs` か `not_imported`（理由つき）に結びます。最新の説明・照合・裁定は、[照合済みの記録の再利用手順](docs/engine-readiness.md#10-照合済みの記録の再利用2026-10-15)に従って記録します。原典の確認者と範囲が追えるエンジンの記録は、出所を保って取り込めます。不足する範囲は不足として記録し、画像の確認には自動で進みません（ガイドブックの読み直しは明示的に依頼されたときだけ。2026-10-15 からの方針）。エンジンが kyuura のデータを採用した記録と pcg-search.com との照合は、原典の照合ではないので、照合の記録（`CC-`）として取り込みません（[エンジン開発の準備状況](docs/engine-readiness.md#12-カードデータの信頼と照合の方針2026-10-15) の 12 章）。形式は [docs/data-schema.md の「サイドカー」](docs/data-schema.md#サイドカーdatasidecar)。
 8. **検査**: `python3 scripts/build_card_rulings.py --check`（データの検査と、生成したページ [docs/rules/card-rulings.md](docs/rules/card-rulings.md) が最新か）、`python3 -m unittest discover -s tests`。生成したページは手で編集しません（`python3 scripts/build_card_rulings.py` で作り直す）。
 
 **日本語テキストについて**:
