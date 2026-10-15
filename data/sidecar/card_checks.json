@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "description": "カードの記録（data/cards.json）を公式の資料のページと照合した記録。照合の記録のないカードは「未照合」で、「照合して差異なし」（result: no_difference）と区別する。checked_fields は照合したときの data/cards.json の値の写しで、データが変わると検査で分かる。生成・検査: scripts/build_card_rulings.py",
+ "description": "カードの記録（data/cards.json）を公式の資料のページと照合した記録。照合の記録のないカードは「未照合」で、「照合して差異なし」（result: no_difference）と区別する。checked_fields は照合したときの data/cards.json の値の写しで、データが変わると検査で分かる。データの誤り（result: data_error）は data_error に [{field, kyuura_value, source_value, evidence, fix_status: candidate, note}] を書き、この記録ではデータを直さない。照合のあとで data/cards.json を直したときは、corrections に [{field, before, after, evidence, method, commit, note}] を書く（直したあとの値は checked_fields の写しと同じ。直すのはカードのデータの生成の手順で、この記録ではない）。値が空の欄（照合していない）は data_gaps に [{field, kyuura_value, source_value, evidence, cause, status, note}] を書き、checked_fields に入れない（status は gap_statuses）。生成・検査: scripts/build_card_rulings.py",
  "results": {
   "no_difference": "照合した欄はすべて同じ（照合して差異なし）",
   "printed_vs_latest_only": "違いは印刷の文面と最新の説明の違いだけ（データの誤りではない）",
@@ -175,6 +175,5218 @@
     }
    ],
    "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-001-P43",
+   "card_id": "PMCG1-001",
+   "card_name_ja": "フシギダネ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "13",
+   "pdf_page": 15,
+   "location": "p.13 の 2 枚目「たねポケモン フシギダネ LV.13／HP40」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "フシギダネ",
+    "jp_print.level": 13,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "やどりぎのタネ",
+    "pokemon.attacks[0].cost": [
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": "相手にダメージをあたえることができたら、その時点で自分のダメージカウンターを1つとりのぞくことができる。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-001-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-001-ATK0"
+   ],
+   "findings": [
+    "図版: 草、やどりぎのタネ（草草）20、にげる 1、弱点 炎、抵抗力の欄は空。",
+    "やどりぎのタネの文面は印刷の文面で、最新の説明とは書き方と「とりのぞくことができる／とりのぞく」が違う（LD-PMCG1-001-ATK0）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-0FBC3AB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（文面。印刷の文面は図版と同じ）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-008-P43",
+   "card_id": "PMCG1-008",
+   "card_name_ja": "フシギソウ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "14",
+   "pdf_page": 16,
+   "location": "p.14 の 3 枚目「フシギダネから進化 フシギソウ LV.20／HP60」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "フシギソウ",
+    "jp_print.level": 20,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "フシギダネ",
+    "pokemon.hp": 60,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "つるのムチ",
+    "pokemon.attacks[0].cost": [
+     "grass",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "30",
+    "pokemon.attacks[0].text.ja": null,
+    "pokemon.attacks[1].name.ja": "どくのこな",
+    "pokemon.attacks[1].cost": [
+     "grass",
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[1].damage.display": "20",
+    "pokemon.attacks[1].text.ja": "相手を「どく」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "data_error",
+   "data_error": [
+    {
+     "field": "pokemon.attacks[0].name.ja",
+     "kyuura_value": "つるのムチ",
+     "source_value": "つるのむち",
+     "evidence": "p.14 の図版（600dpi）と「ワザ」欄の最新の説明（●つるのむち）",
+     "fix_status": "candidate",
+     "note": "kyuura の値の出典（nazonobasho）の表記と思われる。この取り込みでは data/cards.json を直さない（修正の候補として報告）"
+    }
+   ],
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].name.ja",
+     "kind": "data_error",
+     "note": "ワザ名の表記（つるのムチ／つるのむち）"
+    }
+   ],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 1進化、草、つるのむち（草・無色・無色）30（説明文なし）、どくのこな（草草草）20「相手を「どく」状態にする。」、にげる 1、弱点 炎。",
+    "図版と最新の説明のワザの名前は「つるのむち」で、kyuura の「つるのムチ」と違う。",
+    "どくのこなの最新の説明は印刷の文面と同じ（「相手を「どく」状態にする。」）。"
+   ],
+   "not_confused_with": [
+    "PMCG1-009（コクーン。同じ名前のワザ「どくのこな」はコインを投げる（kyuura のデータ。p.21 は kyuura では確かめていない））"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "kyuura のデータに、図版と違う値がある（修正の候補。この記録では直さない）"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-0FBC3AB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（ワザ名: kyuura「つるのムチ」、本「つるのむち」）"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-0FBC3AB",
+     "engine_version": "v0.5",
+     "document": "docs/bulbasaur-line-v0.5.md",
+     "ruling_id": "I1",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-0FBC3AB",
+     "engine_version": "v0.5",
+     "document": "docs/bulbasaur-line-v0.5.md",
+     "ruling_id": "I6",
+     "engine_classification": "CONFIRMED"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-011-P43",
+   "card_id": "PMCG1-011",
+   "card_name_ja": "フシギバナ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "16",
+   "pdf_page": 18,
+   "location": "p.16 の 2 枚目「フシギソウから進化 フシギバナ LV.67／HP100」（ポケモンカード第1弾。3 枚目はイラスト違いのプロモーションカード）",
+   "checked_fields": {
+    "name.ja": "フシギバナ",
+    "jp_print.level": 67,
+    "pokemon.stage": "stage2",
+    "pokemon.evolves_from.ja": "フシギソウ",
+    "pokemon.hp": 100,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 2,
+    "pokemon.powers[0].name.ja": "エナジートランス",
+    "pokemon.powers[0].text.ja": "フシギバナは自分の場にある「草」エネルギーを好きなだけ移動させることができる。「ねむり・マヒ・こんらん」状態の時には使えない。",
+    "pokemon.attacks[0].name.ja": "ソーラービーム",
+    "pokemon.attacks[0].cost": [
+     "grass",
+     "grass",
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[0].damage.display": "60",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.remarks（「特種能力」の表記・図鑑ナンバーの誤表記。この本の図版の解像度では読めない）",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-011-PWR0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-011-PWR0"
+   ],
+   "findings": [
+    "図版: 2進化、草、特殊能力 エナジートランス、ソーラービーム（草草草草）60（説明文なし）、にげる 2、弱点 炎。",
+    "エナジートランスの文面は印刷の文面で、最新の説明と違う（LD-PMCG1-011-PWR0）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-0FBC3AB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（文面。印刷の文面は図版と同じ）"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-0FBC3AB",
+     "engine_version": "v0.5",
+     "document": "docs/venusaur-v0.5.md",
+     "ruling_id": "V13",
+     "engine_classification": "CONFIRMED"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-023-P43",
+   "card_id": "PMCG1-023",
+   "card_name_ja": "ゼニガメ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "87",
+   "pdf_page": 89,
+   "location": "p.87 の 1 枚目「たねポケモン ゼニガメ LV.8／HP40」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "ゼニガメ",
+    "jp_print.level": 8,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "あわ",
+    "pokemon.attacks[0].cost": [
+     "water"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
+    "pokemon.attacks[1].name.ja": "からにこもる",
+    "pokemon.attacks[1].cost": [
+     "water",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage": null,
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、次の相手の番に受けるダメージが0になる。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[1].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-023-ATK1",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-023-ATK1"
+   ],
+   "findings": [
+    "図版: 水、あわ（水）10、からにこもる（水・無色）ダメージの数字なし、にげる 1、弱点 雷。",
+    "あわの最新の説明は印刷の文面と同じ。からにこもるは最新の説明と違う（LD-PMCG1-023-ATK1）。"
+   ],
+   "not_confused_with": [
+    "PMCG4-018（第4弾のゼニガメ。p.88）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-787FFF9",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（からにこもるの文面）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-027-P43",
+   "card_id": "PMCG1-027",
+   "card_name_ja": "カメール",
+   "source": "P43",
+   "scan": "J38",
+   "page": "88",
+   "pdf_page": 90,
+   "location": "p.88 の 3 枚目「ゼニガメから進化 カメール LV.22／HP70」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "カメール",
+    "jp_print.level": 22,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "ゼニガメ",
+    "pokemon.hp": 70,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "からにこもる",
+    "pokemon.attacks[0].cost": [
+     "water",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、次の相手の番に受けるダメージが0になる。",
+    "pokemon.attacks[1].name.ja": "かみつく",
+    "pokemon.attacks[1].cost": [
+     "water",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "40",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-027-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-027-ATK0"
+   ],
+   "findings": [
+    "図版: 1進化、水、からにこもる（水・無色）ダメージの数字なし、かみつく（水・無色・無色）40（説明文なし）、にげる 1、弱点 雷。",
+    "からにこもるは最新の説明と違う（LD-PMCG1-027-ATK0）。",
+    "p.88 の 2 枚目のカメール（LV.20／HP60）は別のカードで、kyuura の data/cards.json にない（照合の対象にしていない）。"
+   ],
+   "not_confused_with": [
+    "PMCG4-021（わるいカメール。p.89）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-787FFF9",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（からにこもるの文面）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-032-P43",
+   "card_id": "PMCG1-032",
+   "card_name_ja": "カメックス",
+   "source": "P43",
+   "scan": "J38",
+   "page": "90",
+   "pdf_page": 92,
+   "location": "p.90 の 1 枚目「カメールから進化 カメックス LV.52／HP100」（ポケモンカード第1弾。2 枚目はイラスト違い）",
+   "checked_fields": {
+    "name.ja": "カメックス",
+    "jp_print.level": 52,
+    "pokemon.stage": "stage2",
+    "pokemon.evolves_from.ja": "カメール",
+    "pokemon.hp": 100,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers[0].name.ja": "あまごい",
+    "pokemon.powers[0].text.ja": "カメックスは自分の「水」ポケモンに対して、手札の「水」エネルギーを1度に何枚でもつけることができる。「ねむり・マヒ・こんらん」状態の時は使えない。",
+    "pokemon.attacks[0].name.ja": "ハイドロポンプ",
+    "pokemon.attacks[0].cost": [
+     "water",
+     "water",
+     "water"
+    ],
+    "pokemon.attacks[0].damage.display": "40+",
+    "pokemon.attacks[0].text.ja": "「水」エネルギーを1つ追加すると、10ダメージ追加できる。(追加は2つまで)"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.remarks（「特種能力」の表記。この本の図版では読めない）",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-032-PWR0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    },
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-032-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-032-PWR0",
+    "LD-PMCG1-032-ATK0"
+   ],
+   "findings": [
+    "図版: 2進化、水、特殊能力 あまごい、ハイドロポンプ（水水水）40+、にげる 3、弱点 雷。",
+    "あまごい・ハイドロポンプの文面は印刷の文面で、最新の説明と違う（LD-PMCG1-032-PWR0・LD-PMCG1-032-ATK0）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-787FFF9",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（文面。印刷の文面は図版と同じと読める）"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-787FFF9",
+     "engine_version": "v0.6",
+     "document": "docs/rain-dance-v0.6.md",
+     "ruling_id": "H4",
+     "engine_classification": "—"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-043-P43",
+   "card_id": "PMCG1-043",
+   "card_name_ja": "ケーシィ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "149",
+   "pdf_page": 151,
+   "location": "p.149 の 2 枚目「たねポケモン ケーシィ LV.10／HP30」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "ケーシィ",
+    "jp_print.level": 10,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 30,
+    "pokemon.types": [
+     "psychic"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 0,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "ねんりき",
+    "pokemon.attacks[0].cost": [
+     "psychic"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": "コインを投げて、「おもて」なら、相手を「マヒ」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "data_error",
+   "data_error": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kyuura_value": "コインを投げて、「おもて」なら、相手を「マヒ」状態にする。",
+     "source_value": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
+     "evidence": "p.149 の図版（600dpi）と「ワザ」欄の最新の説明。図版の文末の句点は読めない",
+     "fix_status": "candidate",
+     "note": "kyuura の値の出典（nazonobasho）の表記と思われる。意味は同じ。この取り込みでは data/cards.json を直さない（修正の候補として報告）"
+    }
+   ],
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "data_error",
+     "note": "読点 1 つ（印刷の文面の写しの誤り。最新の説明との違いではない）"
+    }
+   ],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 超、ねんりき（超）10、にげる（エネルギーなし）、弱点 超。",
+    "図版（600dpi）と最新の説明のどちらも、ねんりきの「投げて」のあとに読点がない。kyuura の文面には読点がある。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "kyuura のデータに、図版と違う値がある（修正の候補。この記録では直さない）"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-22CBE24",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（読点 1 つ。意味は同じ）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-046-P43",
+   "card_id": "PMCG1-046",
+   "card_name_ja": "ユンゲラー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "151",
+   "pdf_page": 153,
+   "location": "p.151 の 2 枚目「ケーシィから進化 ユンゲラー LV.38／HP60」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "ユンゲラー",
+    "jp_print.level": 38,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "ケーシィ",
+    "pokemon.hp": 60,
+    "pokemon.types": [
+     "psychic"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "じこさいせい",
+    "pokemon.attacks[0].cost": [
+     "psychic",
+     "psychic"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "自分の「超」エネルギーカードを1枚はがしてすてることによってダメージカウンターを全てとりのぞく。",
+    "pokemon.attacks[1].name.ja": "ちょうねんりき",
+    "pokemon.attacks[1].cost": [
+     "psychic",
+     "psychic",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "50",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-046-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-046-ATK0"
+   ],
+   "findings": [
+    "図版: 1進化、超、じこさいせい（超超）ダメージの数字なし、ちょうねんりき（超・超・無色）50（説明文なし）、にげる 3、弱点 超。",
+    "じこさいせいの文面は印刷の文面で、最新の説明と違う（LD-PMCG1-046-ATK0）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-22CBE24",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（文面。印刷の文面は図版と同じと読める）"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-22CBE24",
+     "engine_version": "v0.7",
+     "document": "docs/alakazam-line-v0.7.md",
+     "ruling_id": "K8",
+     "engine_classification": "CONFIRMED"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-049-P43",
+   "card_id": "PMCG1-049",
+   "card_name_ja": "フーディン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "153",
+   "pdf_page": 155,
+   "location": "p.153 の 1 枚目「ユンゲラーから進化 フーディン LV.42／HP80」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "フーディン",
+    "jp_print.level": 42,
+    "pokemon.stage": "stage2",
+    "pokemon.evolves_from.ja": "ユンゲラー",
+    "pokemon.hp": 80,
+    "pokemon.types": [
+     "psychic"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers[0].name.ja": "ダメージスワップ",
+    "pokemon.powers[0].text.ja": "自分の場に出ているポケモンのダメージカウンターを、ポケモンが「きぜつ」しない範囲で自由に移動できる。「ねむり・マヒ・こんらん」状態の時は使えない。",
+    "pokemon.attacks[0].name.ja": "あやしいひかり",
+    "pokemon.attacks[0].cost": [
+     "psychic",
+     "psychic",
+     "psychic"
+    ],
+    "pokemon.attacks[0].damage.display": "30",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.remarks（「特種能力」の表記。この本の図版では読めない）",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-049-PWR0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-049-PWR0"
+   ],
+   "findings": [
+    "図版: 2進化、超、特殊能力 ダメージスワップ、あやしいひかり（超超超）30、にげる 3、弱点 超。",
+    "ダメージスワップの文面は印刷の文面で、最新の説明と違う（LD-PMCG1-049-PWR0）。あやしいひかりの最新の説明は印刷の文面と同じ。",
+    "p.153 の 2 枚目のフーディン（LV.45／HP90。プロモーションカード「通信進化キャンペーン」）は別のカードで、kyuura の data/cards.json にない。"
+   ],
+   "not_confused_with": [
+    "PMCG4-035（わるいフーディン。p.153 の 3 枚目）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-22CBE24",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（ダメージスワップの文面）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG4-004-P45",
+   "card_id": "PMCG4-004",
+   "card_name_ja": "ベトベター",
+   "source": "P43",
+   "scan": "J38",
+   "page": "45",
+   "pdf_page": 47,
+   "location": "p.45 の 3 枚目「たねポケモン ベトベター LV.10／HP40」（ポケモンカード第4弾ロケット団）",
+   "checked_fields": {
+    "name.ja": "ベトベター",
+    "jp_print.level": 10,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "どくガス",
+    "pokemon.attacks[0].cost": [
+     "grass"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "相手を「どく」状態にする。",
+    "pokemon.attacks[1].name.ja": "ねばりつく",
+    "pokemon.attacks[1].cost": [
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[1].damage.display": "10+",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、20ダメージを追加して、相手を「マヒ」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 草、どくガス（草）ダメージの数字なし、ねばりつく（草草）10+、にげる 1、弱点 超。",
+    "どくガス・ねばりつくの最新の説明は印刷の文面と同じ。"
+   ],
+   "not_confused_with": [
+    "PMCG3-003（化石の秘密のベトベター。p.47）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "照合した欄はすべて同じ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D057F57",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「一致」"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG3-003-P47",
+   "card_id": "PMCG3-003",
+   "card_name_ja": "ベトベター",
+   "source": "P43",
+   "scan": "J38",
+   "page": "47",
+   "pdf_page": 49,
+   "location": "p.47 の「たねポケモン ベトベター LV.17／HP50」（ポケモンカード第3弾化石の秘密）",
+   "checked_fields": {
+    "name.ja": "ベトベター",
+    "jp_print.level": 17,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "ベトベト",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
+    "pokemon.attacks[1].name.ja": "ちいさくなる",
+    "pokemon.attacks[1].cost": [
+     "grass"
+    ],
+    "pokemon.attacks[1].damage": null,
+    "pokemon.attacks[1].text.ja": "次の相手の番でこのカードが受けるダメージは20へる。(ダメージ以外の効果はそのまま)"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[1].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG3-003-ATK1",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG3-003-ATK1"
+   ],
+   "findings": [
+    "図版: 草、ベトベト（無色）10、ちいさくなる（草）ダメージの数字なし、にげる 1、弱点 超。",
+    "ベトベトの最新の説明は印刷の文面と同じ。ちいさくなるは最新の説明と違う（LD-PMCG3-003-ATK1）。"
+   ],
+   "not_confused_with": [
+    "PMCG4-004（ロケット団のベトベター。p.45）",
+    "PMCG6-007（キョウのベトベター。p.48 の 1 枚目）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D057F57",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（ちいさくなるの文面。実装は登録していない）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG3-007-P48",
+   "card_id": "PMCG3-007",
+   "card_name_ja": "ベトベトン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "48",
+   "pdf_page": 50,
+   "location": "p.48 の 2 枚目「ベトベターから進化 ベトベトン LV.34／HP70」（ポケモンカード第3弾化石の秘密）",
+   "checked_fields": {
+    "name.ja": "ベトベトン",
+    "jp_print.level": 34,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "ベトベター",
+    "pokemon.hp": 70,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 2,
+    "pokemon.powers[0].name.ja": "かがくへんかガス",
+    "pokemon.powers[0].text.ja": "ベトベトンが場にいる限り、場にいるすべてのポケモンの特殊能力は使えず、その力も消える。(ただし、この「かがくへんかガス」という特殊能力は除く)「ねむり・マヒ・こんらん」状態の時、この「かがくへんかガス」の力は消える。",
+    "pokemon.attacks[0].name.ja": "ヘドロこうげき",
+    "pokemon.attacks[0].cost": [
+     "grass",
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[0].damage.display": "30",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「どく」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG3-007-PWR0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG3-007-PWR0"
+   ],
+   "findings": [
+    "図版: 1進化、草、特殊能力 かがくへんかガス、ヘドロこうげき（草草草）30、にげる 2、弱点 超。",
+    "かがくへんかガスの文面は印刷の文面で、最新の説明と違う（LD-PMCG3-007-PWR0）。ヘドロこうげきの最新の説明は印刷の文面と同じ。",
+    "図版のかがくへんかガスの「すべて」は漢字の「全て」に見えるが、かすれていて確かではない（データの誤りとは決めない）。"
+   ],
+   "not_confused_with": [
+    "PMCG4-007（わるいベトベトン。p.48 の 3 枚目）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D057F57",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（かがくへんかガスの文面。図版の「すべての」は「全ての」と読める）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG3-029-P158",
+   "card_id": "PMCG3-029",
+   "card_name_ja": "ゴース",
+   "source": "P43",
+   "scan": "J38",
+   "page": "158",
+   "pdf_page": 160,
+   "location": "p.158 の 1 枚目「たねポケモン ゴース LV.17／HP50」（ポケモンカード第3弾化石の秘密）",
+   "checked_fields": {
+    "name.ja": "ゴース",
+    "jp_print.level": 17,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "psychic"
+    ],
+    "pokemon.weaknesses": [],
+    "pokemon.resistances": [
+     {
+      "type": "fighting",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 0,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "したでなめる",
+    "pokemon.attacks[0].cost": [
+     "psychic"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
+    "pokemon.attacks[1].name.ja": "エナジーへんかん",
+    "pokemon.attacks[1].cost": [
+     "psychic",
+     "psychic"
+    ],
+    "pokemon.attacks[1].damage": null,
+    "pokemon.attacks[1].text.ja": "自分のトラッシュから最大2枚のエネルギーカードを選び、手札に加える。その後、自分に10ダメージ。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[1].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG3-029-ATK1",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG3-029-ATK1"
+   ],
+   "findings": [
+    "図版: 超、したでなめる（超）10、エナジーへんかん（超超）ダメージの数字なし、にげる（エネルギーなし）、弱点の欄は空、抵抗力 闘 −30。",
+    "したでなめるの最新の説明は印刷の文面と同じ。エナジーへんかんは書き方が違う（LD-PMCG3-029-ATK1）。"
+   ],
+   "not_confused_with": [
+    "PMCG1-044（第1弾のゴース）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-995504E",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（言い回し。意味は同じ）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG3-030-P160",
+   "card_id": "PMCG3-030",
+   "card_name_ja": "ゴースト",
+   "source": "P43",
+   "scan": "J38",
+   "page": "160",
+   "pdf_page": 162,
+   "location": "p.160 の 2 枚目「ゴースから進化 ゴースト LV.17／HP50」（ポケモンカード第3弾化石の秘密）",
+   "checked_fields": {
+    "name.ja": "ゴースト",
+    "jp_print.level": 17,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "ゴース",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "psychic"
+    ],
+    "pokemon.weaknesses": [],
+    "pokemon.resistances": [
+     {
+      "type": "fighting",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 0,
+    "pokemon.powers[0].name.ja": "とうめい",
+    "pokemon.powers[0].text.ja": "このカードがワザによるダメージや効果を受ける時、コインを投げ、「おもて」ならこのカードはダメージや効果を受けない。「ねむり・マヒ・こんらん」状態の時、この力は消える。",
+    "pokemon.attacks[0].name.ja": "あくむ",
+    "pokemon.attacks[0].cost": [
+     "psychic",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": "相手を「ねむり」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG3-030-PWR0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG3-030-PWR0"
+   ],
+   "findings": [
+    "図版: 1進化、ゴースから進化、超、特殊能力 とうめい、あくむ（超・無色）10、にげる（エネルギーなし）、弱点の欄は空、抵抗力 闘 −30。",
+    "とうめいの文面は印刷の文面で、最新の説明と違う（LD-PMCG3-030-PWR0）。あくむの最新の説明は印刷の文面と同じ。"
+   ],
+   "not_confused_with": [
+    "PMCG1-047（第1弾のゴースト。p.160 の 3 枚目）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-995504E",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（「ダメージや効果を受けない」と「そのダメージと効果を受けない」）"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-995504E",
+     "engine_version": "v0.9",
+     "document": "docs/haunter-line-v0.9.md",
+     "ruling_id": "H13",
+     "engine_classification": "CONFIRMED"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-047-P160",
+   "card_id": "PMCG1-047",
+   "card_name_ja": "ゴースト",
+   "source": "P43",
+   "scan": "J38",
+   "page": "160",
+   "pdf_page": 162,
+   "location": "p.160 の 3 枚目「ゴースから進化 ゴースト LV.22／HP60」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "ゴースト",
+    "jp_print.level": 22,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "ゴース",
+    "pokemon.hp": 60,
+    "pokemon.types": [
+     "psychic"
+    ],
+    "pokemon.weaknesses": [],
+    "pokemon.resistances": [
+     {
+      "type": "fighting",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "さいみんじゅつ",
+    "pokemon.attacks[0].cost": [
+     "psychic"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "相手を「ねむり」状態にする。",
+    "pokemon.attacks[1].name.ja": "ゆめくい",
+    "pokemon.attacks[1].cost": [
+     "psychic",
+     "psychic"
+    ],
+    "pokemon.attacks[1].damage.display": "50",
+    "pokemon.attacks[1].text.ja": "相手が「ねむり」状態のときだけ、ダメージをあたえる。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[1].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-047-ATK1",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-047-ATK1"
+   ],
+   "findings": [
+    "図版: 1進化、超、さいみんじゅつ（超）ダメージの数字なし、ゆめくい（超超）50、にげる 1、弱点の欄は空、抵抗力 闘 −30。",
+    "さいみんじゅつの最新の説明は印刷の文面と同じ。ゆめくいは最新の説明と違う（LD-PMCG1-047-ATK1）。特殊能力を持たない。"
+   ],
+   "not_confused_with": [
+    "PMCG3-030（化石の秘密のゴースト。p.160 の 2 枚目）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-995504E",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（実装していない）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-053-P189",
+   "card_id": "PMCG1-053",
+   "card_name_ja": "ワンリキー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "189",
+   "pdf_page": 191,
+   "location": "p.189 の 1 枚目「たねポケモン ワンリキー LV.20／HP50」（ポケモンカード第1弾・イントロパック）",
+   "checked_fields": {
+    "name.ja": "ワンリキー",
+    "jp_print.level": 20,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "fighting"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "けたぐり",
+    "pokemon.attacks[0].cost": [
+     "fighting"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 闘、けたぐり（闘）20（説明文なし）、にげる 1、弱点 超。"
+   ],
+   "not_confused_with": [
+    "PMCG4-040（第4弾のワンリキー。p.189 の 2 枚目）",
+    "PMCG6-057（サカキのワンリキー。p.189 の 3 枚目）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "照合した欄はすべて同じ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-43EC8BA",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "進化元として v0.1 から写している（v0.10 で p.189 の 1 枚目と照合した記録は card_verification.json にない。kyuura が照合した）"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-43EC8BA",
+     "engine_version": "v0.10",
+     "document": "docs/machamp-line-v0.10.md",
+     "ruling_id": "M3",
+     "part": "けたぐりは説明文のないワザ（目安の数字ぶんのダメージ）",
+     "engine_classification": "CONFIRMED"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-055-P43",
+   "card_id": "PMCG1-055",
+   "card_name_ja": "ゴーリキー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "190",
+   "pdf_page": 192,
+   "location": "p.190 の 3 枚目「ワンリキーから進化 ゴーリキー LV.40／HP80」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "ゴーリキー",
+    "jp_print.level": 40,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "ワンリキー",
+    "pokemon.hp": 80,
+    "pokemon.types": [
+     "fighting"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "からてチョップ",
+    "pokemon.attacks[0].cost": [
+     "fighting",
+     "fighting",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "50-",
+    "pokemon.attacks[0].text.ja": "自分のダメージカウンター×10だけ、相手にあたえるダメージがへる。",
+    "pokemon.attacks[1].name.ja": "じごくぐるま",
+    "pokemon.attacks[1].cost": [
+     "fighting",
+     "fighting",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "60",
+    "pokemon.attacks[1].text.ja": "自分にも20ダメージ。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-055-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-055-ATK0"
+   ],
+   "findings": [
+    "図版: 1進化、闘、からてチョップ（闘闘・無色）50−、じごくぐるま（闘闘・無色無色）60、にげる 3、弱点 超。",
+    "からてチョップは最新の説明と書き方が違う（LD-PMCG1-055-ATK0）。じごくぐるまの最新の説明は印刷の文面と同じ。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-43EC8BA",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（言い回し。意味は同じ）"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-43EC8BA",
+     "engine_version": "v0.10",
+     "document": "docs/machamp-line-v0.10.md",
+     "ruling_id": "M1",
+     "part": "からてチョップは最新の説明にしたがう（kyuura の文面は印刷の文面）",
+     "engine_classification": "CONFIRMED",
+     "engine_note": "エンジンの効果の登録（実装）の記述で、登録のしかたは取り込んでいない"
+    },
+    {
+     "import": "ENGINE-43EC8BA",
+     "engine_version": "v0.10",
+     "document": "docs/machamp-line-v0.10.md",
+     "ruling_id": "M2",
+     "part": "じごくぐるまの文面（最新の説明と同じ）",
+     "engine_classification": "CONFIRMED",
+     "engine_note": "エンジンの効果の登録（実装）の記述で、登録のしかたは取り込んでいない"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-057-P43",
+   "card_id": "PMCG1-057",
+   "card_name_ja": "カイリキー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "192",
+   "pdf_page": 194,
+   "location": "p.192 の 2 枚目「ゴーリキーから進化 カイリキー LV.67／HP100」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "カイリキー",
+    "jp_print.level": 67,
+    "pokemon.stage": "stage2",
+    "pokemon.evolves_from.ja": "ゴーリキー",
+    "pokemon.hp": 100,
+    "pokemon.types": [
+     "fighting"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers[0].name.ja": "はんげき",
+    "pokemon.powers[0].text.ja": "カイリキーがダメージをうけたときには、かならず10ダメージを相手にあたえる。このダメージは、弱点・抵抗力の影響を受けず、常に「10」である。「ねむり・マヒ・こんらん」状態のときにはつかえない。",
+    "pokemon.attacks[0].name.ja": "ちきゅうなげ",
+    "pokemon.attacks[0].cost": [
+     "fighting",
+     "fighting",
+     "fighting",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "60",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.remarks（「特種能力」の表記。この本の図版では読めない）",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-057-PWR0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-057-PWR0"
+   ],
+   "findings": [
+    "図版: 2進化、闘、特殊能力 はんげき、ちきゅうなげ（闘闘闘・無色）60（説明文なし）、にげる 3、弱点 超。",
+    "はんげきの文面は印刷の文面で、最新の説明と意味が違う（LD-PMCG1-057-PWR0）。データの誤りではない。",
+    "p.192 の 1 枚目のカイリキー（LV.54／HP90。プロモーションカード「通信進化キャンペーン」）は別のカードで、kyuura の data/cards.json にない。"
+   ],
+   "not_confused_with": [
+    "PMCG6-061（サカキのカイリキー。p.193）",
+    "PMCG4-044（わるいカイリキー。p.192 の 3 枚目）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-43EC8BA",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（意味が違う。最新の説明にしたがう）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG6-057-P189",
+   "card_id": "PMCG6-057",
+   "card_name_ja": "サカキのワンリキー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "189",
+   "pdf_page": 191,
+   "location": "p.189 の 3 枚目「たねポケモン サカキのワンリキー LV.18／HP50」（ジム拡張第2弾闇からの挑戦）",
+   "checked_fields": {
+    "name.ja": "サカキのワンリキー",
+    "jp_print.level": 18,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "fighting"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "チョップ",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": null,
+    "pokemon.attacks[1].name.ja": "いかりのスーパーパンチ",
+    "pokemon.attacks[1].cost": [
+     "fighting",
+     "fighting"
+    ],
+    "pokemon.attacks[1].damage.display": "20×",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、自分にのっているダメージカウンターの数×20のダメージ。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 闘、チョップ（無色）10（説明文なし）、いかりのスーパーパンチ（闘闘）20×、にげる 1、弱点 超。",
+    "いかりのスーパーパンチの最新の説明は印刷の文面と同じ。"
+   ],
+   "not_confused_with": [
+    "PMCG1-053（第1弾のワンリキー）",
+    "PMCG4-040（第4弾のワンリキー）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "照合した欄はすべて同じ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-8BD1E5B",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「一致」"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L1",
+     "part": "サカキのワンリキーの値",
+     "engine_classification": "CONFIRMED"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG6-059-P191",
+   "card_id": "PMCG6-059",
+   "card_name_ja": "サカキのゴーリキー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "191",
+   "pdf_page": 193,
+   "location": "p.191 の 2 枚目「サカキのワンリキーから進化 サカキのゴーリキー LV.36／HP80」（ジム拡張第2弾闇からの挑戦）",
+   "checked_fields": {
+    "name.ja": "サカキのゴーリキー",
+    "jp_print.level": 36,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "サカキのワンリキー",
+    "pokemon.hp": 80,
+    "pokemon.types": [
+     "fighting"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 2,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "いちかばちか",
+    "pokemon.attacks[0].cost": [
+     "fighting"
+    ],
+    "pokemon.attacks[0].damage.display": "60",
+    "pokemon.attacks[0].text.ja": "コインを投げて「うら」なら、相手にはダメージを与えず、自分に100ダメージ。",
+    "pokemon.attacks[1].name.ja": "じごくがため",
+    "pokemon.attacks[1].cost": [
+     "fighting",
+     "fighting",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "20+",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、20ダメージを追加して、相手を「マヒ」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 1進化、闘、いちかばちか（闘）60、じごくがため（闘闘・無色）20+、にげる 2、弱点 超。",
+    "いちかばちか・じごくがための最新の説明は印刷の文面と同じ。"
+   ],
+   "not_confused_with": [
+    "PMCG1-055（第1弾のゴーリキー）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "照合した欄はすべて同じ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-8BD1E5B",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「一致」"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L1",
+     "part": "サカキのゴーリキーの値",
+     "engine_classification": "CONFIRMED"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG6-061-P193",
+   "card_id": "PMCG6-061",
+   "card_name_ja": "サカキのカイリキー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "193",
+   "pdf_page": 195,
+   "location": "p.193 の 1 枚目「サカキのゴーリキーから進化 サカキのカイリキー LV.50／HP100」（ジム拡張第2弾闇からの挑戦）",
+   "checked_fields": {
+    "name.ja": "サカキのカイリキー",
+    "jp_print.level": 50,
+    "pokemon.stage": "stage2",
+    "pokemon.evolves_from.ja": "サカキのゴーリキー",
+    "pokemon.hp": 100,
+    "pokemon.types": [
+     "fighting"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers[0].name.ja": "こんじょう",
+    "pokemon.powers[0].text.ja": "この力は、相手のワザによるダメージで、このカードが「きぜつ」する時、使える。コインを投げて「おもて」なら、このカードは「きぜつ」せず、このカードの残りHPは「10」になる。ダメージを受ける時、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+    "pokemon.attacks[0].name.ja": "ハリケーンパンチ",
+    "pokemon.attacks[0].cost": [
+     "fighting",
+     "fighting",
+     "fighting",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "30×",
+    "pokemon.attacks[0].text.ja": "コインを4枚投げ、「おもて」の数×30のダメージ。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG6-061-PWR0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-061-PWR0"
+   ],
+   "findings": [
+    "図版: 2進化、闘、特殊能力 こんじょう、ハリケーンパンチ（闘闘闘・無色）30×、にげる 3、弱点 超。",
+    "こんじょうの文面は印刷の文面で、最新の説明と表記が違う（LD-PMCG6-061-PWR0）。ハリケーンパンチの最新の説明は印刷の文面と同じ。"
+   ],
+   "not_confused_with": [
+    "PMCG1-057（第1弾のカイリキー）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-8BD1E5B",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（こんじょうの表記だけ）"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-8BD1E5B",
+     "engine_version": "v0.11",
+     "document": "docs/giovanni-machamp-line-v0.11.md",
+     "ruling_id": "L1",
+     "part": "サカキのカイリキーの値",
+     "engine_classification": "CONFIRMED"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG5-020-P82",
+   "card_id": "PMCG5-020",
+   "card_name_ja": "R団のファイヤー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "82",
+   "pdf_page": 84,
+   "location": "p.82 の 2 枚目「たねポケモン R団のファイヤー LV.26／HP60」（ジム拡張第1弾リーダーズスタジアム）",
+   "checked_fields": {
+    "name.ja": "R団のファイヤー",
+    "jp_print.level": 26,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 60,
+    "pokemon.types": [
+     "fire"
+    ],
+    "pokemon.weaknesses": [],
+    "pokemon.resistances": [
+     {
+      "type": "fighting",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 2,
+    "pokemon.powers[0].name.ja": "ふしちょう",
+    "pokemon.powers[0].text.ja": "この力は、このカードが「きぜつ」した時だけ、使える。このカードをトラッシュからとり出し、手札に加える。このカードが「ねむり・マヒ・こんらん」状態のまま「きぜつ」する時、この力は使えない。",
+    "pokemon.attacks[0].name.ja": "ほのおのかべ",
+    "pokemon.attacks[0].cost": [
+     "fire",
+     "fire",
+     "fire"
+    ],
+    "pokemon.attacks[0].damage.display": "40",
+    "pokemon.attacks[0].text.ja": "次の相手の番、このカードが相手のワザによるダメージを受けた時、(このカードが「きぜつ」するしないにかかわらず)相手にも10ダメージ。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG5-020-PWR0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    },
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG5-020-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG5-020-PWR0",
+    "LD-PMCG5-020-ATK0"
+   ],
+   "findings": [
+    "図版: 炎、特殊能力 ふしちょう、ほのおのかべ（炎炎炎）40、にげる 2、弱点の欄は空、抵抗力 闘 −30。",
+    "ふしちょう・ほのおのかべの文面は印刷の文面で、最新の説明と違う（LD-PMCG5-020-PWR0・LD-PMCG5-020-ATK0）。",
+    "p.82 の 1 枚目のファイヤー（LV.37／HP80。拡張シート第2弾赤版・クイックスターターギフトパック）は別のカード。"
+   ],
+   "not_confused_with": [
+    "PMCG3-009（化石の秘密のファイヤー。LV.35／HP70）",
+    "PMCG6-035（カツラのファイヤー。p.82 の 3 枚目）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-B8054AF",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（文面。最新の説明にしたがう）"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W1",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W2",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-B8054AF",
+     "engine_version": "v0.12",
+     "document": "docs/rocket-moltres-v0.12.md",
+     "ruling_id": "W3",
+     "part": "ほのおのかべは最新の説明にしたがう（kyuura の文面は印刷の文面）",
+     "engine_classification": "CONFIRMED"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-007-P55",
+   "card_id": "PMCG1-007",
+   "card_name_ja": "モンジャラ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "55",
+   "pdf_page": 57,
+   "location": "p.55 の 1 枚目「たねポケモン モンジャラ LV.8／HP50」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "モンジャラ",
+    "jp_print.level": 8,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 2,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "しめつける",
+    "pokemon.attacks[0].cost": [
+     "grass",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
+    "pokemon.attacks[1].name.ja": "どくのこな",
+    "pokemon.attacks[1].cost": [
+     "grass",
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[1].damage.display": "20",
+    "pokemon.attacks[1].text.ja": "相手を「どく」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 草、しめつける（草無）20、どくのこな（草草草）20、にげる 2、弱点 炎、抵抗力の欄は空。",
+    "「ワザ」欄の最新の説明は、どちらのワザも kyuura の文面と同じ（しめつける「コインを投げて「おもて」なら、相手を「マヒ」状態にする。」、どくのこな「相手を「どく」状態にする。」）。",
+    "解説: 「どくのこな」は、20ダメージに加えて、確実に相手をどく状態にする効果があります（ダメージ → 効果。どくはコインなし。CR-STATUS-AFTER-DAMAGE の当てはめ）。",
+    "収録の書き方は kyuura（jp_print.series「第1弾拡張パック、スターターパック」）と、この本の見出し（「ポケモンカード第1弾」）で違う（書き方の違いで、照合した欄ではない）。",
+    "同じページの真ん中のモンジャラ（LV.15／HP50。拡張シート第2弾赤版。からみつく・つるのムチ）は別のカードで、kyuura の data/cards.json にはない。"
+   ],
+   "not_confused_with": [
+    "PMCG5-006（エリカのモンジャラ。p.55 の 3 枚目）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "照合した欄はすべて同じ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「一致」（v0.17a。既存のワザの型で登録した）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG6-063-P229",
+   "card_id": "PMCG6-063",
+   "card_name_ja": "サカキのニャース",
+   "source": "P43",
+   "scan": "J38",
+   "page": "229",
+   "pdf_page": 231,
+   "location": "p.229 の 1 枚目「たねポケモン サカキのニャース LV.17／HP50」（ジム拡張第2弾闇からの挑戦）",
+   "checked_fields": {
+    "name.ja": "サカキのニャース",
+    "jp_print.level": 17,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "psychic",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 2,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "ねこノミ",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。",
+    "pokemon.attacks[1].name.ja": "ねこキック",
+    "pokemon.attacks[1].cost": [
+     "colorless",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "30",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 無色、ねこノミ（無。ダメージの数字なし）、ねこキック（無無無）30（説明文なし）、にげる 2、弱点 闘、抵抗力 超 −30。",
+    "「ワザ」欄の最新の説明は kyuura の文面と同じ（ねこノミ「コインを投げて「おもて」なら、相手を「こんらん」状態にする。」）。",
+    "解説: 「ねこノミ」は、コイントスで表を出せば相手の対戦ポケモンをこんらん状態にできます（ダメージの要素はない。p.320 のダメージの目安）。",
+    "同じページの真ん中のロケット団のニャース（LV.11／HP40。プロモーションカード）は別のカードで、kyuura の data/cards.json にはない。"
+   ],
+   "not_confused_with": [
+    "PMCG2-039（ペルシアン。p.229 の 3 枚目）",
+    "PMCG2-036（第2弾のニャース）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "照合した欄はすべて同じ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「一致」（v0.17a。既存の要素の新しい並びで登録した）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG6-073-P245",
+   "card_id": "PMCG6-073",
+   "card_name_ja": "R団のカビゴン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "245",
+   "pdf_page": 247,
+   "location": "p.245 の 2 枚目「たねポケモン R団のカビゴン LV.40／HP90」（ジム拡張第2弾闇からの挑戦）",
+   "checked_fields": {
+    "name.ja": "R団のカビゴン",
+    "jp_print.level": 40,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 90,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "psychic",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 4,
+    "pokemon.powers[0].name.ja": "わるいねぞう",
+    "pokemon.powers[0].text.ja": "このカードが「ねむり」状態で、相手のワザによるダメージを受けた時、（このカードが「きぜつ」するしないにかかわらず、）ダメージを与えたポケモンに20ダメージ。",
+    "pokemon.attacks[0].name.ja": "たおれこむ",
+    "pokemon.attacks[0].cost": [
+     "colorless",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": "ダメージを与えたあと、自分を「ねむり」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG6-073-PWR0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    },
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG6-073-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-073-PWR0",
+    "LD-PMCG6-073-ATK0"
+   ],
+   "findings": [
+    "図版: 無色、［特殊能力］わるいねぞう、たおれこむ（無無無）20、にげる 4、弱点 闘、抵抗力 超 −30。",
+    "わるいねぞう・たおれこむの文面は印刷の文面で、最新の説明と書き方が違う（LD-PMCG6-073-PWR0・LD-PMCG6-073-ATK0）。",
+    "名前は「R団のカビゴン」（見出し・図版とも）。",
+    "同じページの上のカビゴン（LV.35／HP90。拡張シート第1弾青版・クイックスターターギフトパック。とおせんぼ・ねころぶ）と下のくいしんぼカビゴン（LV.50／HP100。プロモーションカード）は別のカードで、kyuura の data/cards.json にはない。"
+   ],
+   "not_confused_with": [
+    "PMCG2-047（第2弾のカビゴン）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明の違い）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG6-023-P49",
+   "card_id": "PMCG6-023",
+   "card_name_ja": "キョウのベトベトン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "49",
+   "pdf_page": 51,
+   "location": "p.49 の 1 枚目「キョウのベトベターから進化 キョウのベトベトン LV.38／HP80」（ジム拡張第2弾闇からの挑戦）",
+   "checked_fields": {
+    "name.ja": "キョウのベトベトン",
+    "jp_print.level": 38,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "キョウのベトベター",
+    "pokemon.hp": 80,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers[0].name.ja": "だつりょくえき",
+    "pokemon.powers[0].text.ja": "このカードが相手のワザによってダメージを受ける時、(このカードが「きぜつ」するしないにかかわらず、)コインを投げて「おもて」なら、ダメージを与えたポケモンについているエネルギーカードを1枚選び、トラッシュする。ダメージを受ける時、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+    "pokemon.attacks[0].name.ja": "ヘドロのうず",
+    "pokemon.attacks[0].cost": [
+     "grass",
+     "grass",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "40",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG6-023-PWR0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG6-023-PWR0"
+   ],
+   "findings": [
+    "図版: 1進化（キョウのベトベターから進化）、草、［特殊能力］だつりょくえき、ヘドロのうず（草草無）40、にげる 3、弱点 超、抵抗力の欄は空。",
+    "だつりょくえきの文面は印刷の文面で、最新の説明と書き方が違う（LD-PMCG6-023-PWR0）。ヘドロのうずは説明文なし。",
+    "進化元のキョウのベトベターは kyuura では PMCG6-007（エンジンの docs/kogas-muk-event-design-v0.17c.md 6 章は「PMCG6-020」と書くが、kyuura の PMCG6-020 はサカキのニドクイン）。",
+    "英語版の文面（kyuura の text.en）には「If heads and if it has any, choose 1 Energy card」と、エネルギーカードがついていないときの条件がある。日本語版の印刷の文面・最新の説明にはない（日英の文面の違い。日本版の処理の根拠にしない。UQ-ENERGY-DRAIN-NO-ENERGY）。",
+    "kyuura のエラッタの記録（docs/rules/errata-history.md）は、だつりょくえきを 2002年の「ポケボディーとして扱う旧裏・neo の特殊能力」の一覧に挙げている。後年の扱いで、2000年の処理の根拠にしない。",
+    "日英の文面の違いは、data/curation/card_differences.json にも記録した（カードの jp_en_differences。2026-10-14）。"
+   ],
+   "not_confused_with": [
+    "PMCG3-007（化石の秘密のベトベトン）",
+    "PMCG2-006（タマタマ。p.49 の 2 枚目）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "数値・名前・エネルギー・ダメージは同じ。文面の違いは印刷の文面と最新の説明の違いだけ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「一致」（参照カード。実装は登録していない）"
+    }
+   ],
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG2-041-P234",
+   "card_id": "PMCG2-041",
+   "card_name_ja": "ベロリンガ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "234",
+   "pdf_page": 236,
+   "location": "p.234 の 3 枚目「たねポケモン ベロリンガ LV.26／HP90」（ポケモンカード第2弾ポケモンジャングル）",
+   "checked_fields": {
+    "name.ja": "ベロリンガ",
+    "jp_print.level": 26,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 90,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "psychic",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "まきつくベロ",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
+    "pokemon.attacks[1].name.ja": "ちょうおんぱ",
+    "pokemon.attacks[1].cost": [
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage": null,
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.rarity",
+    "jp_print.series",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 無色、LV.26 HP90、まきつくベロ（無）10「コインを投げて「おもて」なら 相手を「マヒ」状態にする」、ちょうおんぱ（無無。ダメージの数字なし）「コインを投げて「おもて」なら 相手を「こんらん」状態にする」、にげる 3、弱点 闘、抵抗力 超 −30。",
+    "「ワザ」欄の最新の説明は、どちらのワザも kyuura の文面と同じ（ワザ名は「まきつくベロ」「ちょうおんぱ」）。",
+    "解説: 「まきつくベロ」は、10ダメージに加えコイントスで表を出せば相手の対戦ポケモンをマヒ状態にさせます。",
+    "kyuura の値は、直す前（bcf38c7）はワザ 1 の名前「したでなめる」・レベル 29 で、日本語テキストの出典（なぞのばしょ。https://nazonobasho.com/pmcg02-043-beroringa/）の記載のままだった。見出し・図版・「ワザ」欄・英語版（Jungle 38 Lickitung。LV.26・Tongue Wrap）がどれも合うので、出典の誤記と判断して直した（corrections）。「したでなめる」は、効果文が同じ別のカードのワザ名。印刷の版の違いを示す資料は見つかっていない。",
+    "エンジン v0.17 の報告（docs/card-selection-v0.17a.md 7 章）は、kyuura の転記元を「ポケモンWiki」と書くが、このカードの日本語テキストの出典はなぞのばしょ。",
+    "同じページの上のベロリンガ（LV.20／HP60。拡張シート第1弾青版・クイックスターターギフトパック。なめる・ふみつけ）と真ん中のベロリンガ（LV.25／HP70。サザンアイランド／トロピカルアイランド。きずをなめる・のびるベロ）は別のカードで、kyuura の data/cards.json にはない。"
+   ],
+   "not_confused_with": [
+    "PMCG5-061（タケシのベロリンガ）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "直したあとの照合した欄はすべて同じ（直す前は、ワザ 1 の名前とレベルが図版と違った。corrections）"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "docs/card-selection-v0.17a.md",
+     "result": "「不一致」（ワザ 1 の名前。kyuura の作業として報告した。エンジンは登録していない）"
+    }
+   ],
+   "engine_refs": [],
+   "corrections": [
+    {
+     "field": "pokemon.attacks[0].name.ja",
+     "before": "したでなめる",
+     "after": "まきつくベロ",
+     "evidence": "p.234 の図版と「ワザ」欄のワザ名（600dpi）。英語版の Tongue Wrap とも合う",
+     "method": "data/curation/ja_text.json の PMCG2-041（attacks）を加え、scripts/build_cardlist.py で data/cards.json を作り直した",
+     "commit": "f52a8e2e9d65055727f7b8bc3165e0fd15b96967",
+     "note": "直す前の値は、日本語テキストの出典（なぞのばしょ）の記載。効果文・エネルギー・ダメージは直す前から同じ"
+    },
+    {
+     "field": "jp_print.level",
+     "before": 29,
+     "after": 26,
+     "evidence": "p.234 の見出し「LV.26／HP90」と図版の「LV.26」（600dpi）。英語版の LV.26 とも合う",
+     "method": "data/curation/ja_text.json の PMCG2-041 に jp_print.level を加え、scripts/build_cardlist.py が当てはめて data/cards.json を作り直した",
+     "commit": "f52a8e2e9d65055727f7b8bc3165e0fd15b96967",
+     "note": "直す前の値は、日本語テキストの出典（なぞのばしょ）の記載。jp_print の補正は、このカードだけ"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG5-048-P200",
+   "card_id": "PMCG5-048",
+   "card_name_ja": "タケシのイワーク",
+   "source": "P43",
+   "scan": "J38",
+   "page": "200",
+   "pdf_page": 202,
+   "location": "p.200 の 1 枚目「たねポケモン タケシのイワーク LV.41／HP100」（ポケモンジム第1弾タケシ・ジム拡張第1弾リーダーズスタジアム）",
+   "checked_fields": {
+    "name.ja": "タケシのイワーク",
+    "jp_print.level": 41,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 100,
+    "pokemon.types": [
+     "fighting"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "grass",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "うなりごえ",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
+    "pokemon.attacks[1].name.ja": "いわおとし",
+    "pokemon.attacks[1].cost": [
+     "fighting",
+     "fighting",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "30",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.rarity",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 闘、LV.41 HP100、うなりごえ（無。ダメージの数字なし）「コインを投げて「おもて」なら、相手を「マヒ」状態にする。」、いわおとし（闘闘無）30、にげる 3、弱点 草、抵抗力の欄は空。",
+    "「ワザ」欄の最新の説明は kyuura の文面と同じ（うなりごえ「コインを投げて「おもて」なら、相手を「マヒ」状態にする。」。いわおとしは説明文なし）。",
+    "見出しの収録は 2 行（「ポケモンジム第1弾タケシ」「ジム拡張第1弾リーダーズスタジアム」）。kyuura の jp_print.series は空（data_gaps。値は入れていない）。",
+    "jp_print.rarity も空。スキャンの図版では、レアリティのマークが読めないので照合していない。",
+    "同じページの真ん中のタケシのイワーク（LV.41／HP100。プロモーションカード 小学館「月刊コロコロコミック98年3月号」おまけカード。解説「上記のカードのイラストちがい」）はイラスト違いのカードで、kyuura の data/cards.json（拡張パック）にはない。",
+    "エンジン v0.17 は 110dpi の画像で「一致」、jp_print.series が空と報告した（docs/card-selection-v0.17a.md 7 章）。kyuura は 600dpi の画像で別に読んだ。"
+   ],
+   "not_confused_with": [
+    "PMCG1-054（第1弾のイワーク）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "照合した欄はすべて同じ"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "docs/card-selection-v0.17a.md",
+     "result": "「一致」（110dpi。kyuura の jp_print.series が空と報告した。エンジンは登録していない）"
+    }
+   ],
+   "engine_refs": [],
+   "data_gaps": [
+    {
+     "field": "jp_print.series",
+     "kyuura_value": null,
+     "source_value": "ポケモンジム第1弾タケシ／ジム拡張第1弾リーダーズスタジアム（p.200 の見出しの 2 行）",
+     "evidence": "p.200 の 1 枚目の見出し（600dpi）",
+     "cause": "日本語テキストの出典（ポケモンWiki）の保存データ data/raw/リーダーズスタジアム.json で、このカードの set_name が空（warnings「Set name missing」。rarity_raw も空）。scripts/pokemonwiki.py は空の set_name を null にする。同じ原因で series が空のカードは 50 枚（PMCG5 31・PMCG6 10・neo3 5・neo4 4。どれも warnings「Set name missing」）で、このカードだけの誤りではない",
+     "status": "open",
+     "note": "jp_print.series は出典（ポケモンWiki）の「シリーズ」の写しで、同じタケシのカードの値は「リーダーズスタジアム」「ニビシティジム タケシ・リーダーズスタジアム」のような出典の書き方。p.200 の見出しは書き方が違う（「ポケモンジム第1弾タケシ」）。どの書き方で、どの印刷（出典のページの名前は「(ポケモンジム)」）の値を入れるかが決まっていないので、推測で埋めない。50 枚の欠けをまとめて扱う作業として残す"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-002-P17",
+   "card_id": "PMCG1-002",
+   "card_name_ja": "キャタピー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "17",
+   "pdf_page": 19,
+   "location": "p.17「たねポケモン キャタピー LV.13／HP40」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "キャタピー",
+    "jp_print.level": 13,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "いとをはく",
+    "pokemon.attacks[0].cost": [
+     "grass"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 草、いとをはく（草）10「コインを投げて「おもて」なら 相手を「マヒ」状態にする」（エンジンの転記。句読点は転記にない）、にげる（無）1、弱点 炎、抵抗力の欄は空。",
+    "「ワザ」欄の最新の説明「コインを投げて「おもて」なら、相手を「マヒ」状態にする。」は kyuura の文面と同じ（ワザは 1 つ）。",
+    "解説: いとをはくはコイントスで表なら相手の対戦ポケモンをマヒ状態にする、マヒ状態のポケモンはワザも逃げることもできない。",
+    "図版の右下のマーク（レアリティマークの有無）は画像で読めず、第1弾の初版の図版かは決めていない（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-002",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-003-P18",
+   "card_id": "PMCG1-003",
+   "card_name_ja": "トランセル",
+   "source": "P43",
+   "scan": "J38",
+   "page": "18",
+   "pdf_page": 20,
+   "location": "p.18「キャタピーから進化 トランセル LV.21／HP70」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "トランセル",
+    "jp_print.level": 21,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "キャタピー",
+    "pokemon.hp": 70,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 2,
+    "pokemon.attacks[0].name.ja": "かたまる",
+    "pokemon.attacks[0].cost": [
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。",
+    "pokemon.attacks[1].name.ja": "しびれごな",
+    "pokemon.attacks[1].cost": [
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[1].damage.display": "20",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-003-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-003-ATK0"
+   ],
+   "findings": [
+    "図版: 「1進化」「キャタピーから進化」、草、かたまる（無無。ダメージの目安なし）、しびれごな（草草）20、にげる（無無）2、弱点 炎、抵抗力の欄は空。",
+    "「ワザ」欄の最新の説明: かたまる「コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）」（LD-PMCG1-003-ATK0）、しびれごな「コインを投げて「おもて」なら、相手を「マヒ」状態にする。」（kyuura の文面と同じ）。",
+    "図版のかたまるの文面は kyuura の文面と同じ印刷の文面（「なら」のあとの読点は読み取れない。エンジンの記録）。",
+    "同じページの LV.20 のトランセル（拡張シート第1弾青版・クイックスターターギフトパック。特殊能力「グリーンシールド」）は別のカード。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-003",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches: pokemon.attacks[0].text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-004-P19",
+   "card_id": "PMCG1-004",
+   "card_name_ja": "ビードル",
+   "source": "P43",
+   "scan": "J38",
+   "page": "19",
+   "pdf_page": 21,
+   "location": "p.19「たねポケモン ビードル LV.12／HP40」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "ビードル",
+    "jp_print.level": 12,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "どくばり",
+    "pokemon.attacks[0].cost": [
+     "grass"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「どく」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 草、どくばり（草）10「コインを投げて「おもて」なら 相手を「どく」状態にする」（エンジンの転記。句読点は転記にない）、にげる（無）1、弱点 炎、抵抗力の欄は空。",
+    "「ワザ」欄の最新の説明「コインを投げて「おもて」なら、相手を「どく」状態にする。」は kyuura の文面と同じ（ワザは 1 つ）。",
+    "図版の右下にレアリティマーク（●）があり、kyuura の jp_print.remarks「初版はレアリティマークなし」によれば第1弾の初版の図版ではない（文面は最新の説明と同じ。エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-004",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-009-P21",
+   "card_id": "PMCG1-009",
+   "card_name_ja": "コクーン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "21",
+   "pdf_page": 23,
+   "location": "p.21「ビードルから進化 コクーン LV.23／HP80」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "コクーン",
+    "jp_print.level": 23,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "ビードル",
+    "pokemon.hp": 80,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 2,
+    "pokemon.attacks[0].name.ja": "かたまる",
+    "pokemon.attacks[0].cost": [
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。",
+    "pokemon.attacks[1].name.ja": "どくのこな",
+    "pokemon.attacks[1].cost": [
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[1].damage.display": "20",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「どく」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-009-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-009-ATK0"
+   ],
+   "findings": [
+    "図版: 「1進化」「ビードルから進化」、草、かたまる（無無。ダメージの目安なし）、どくのこな（草草）20、にげる（無無）2、弱点 炎、抵抗力の欄は空。",
+    "「ワザ」欄の最新の説明: かたまる「コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）」（LD-PMCG1-009-ATK0。トランセルの同じ名前のワザと同じ文面であることを、このページで照合した）、どくのこな「コインを投げて「おもて」なら、相手を「どく」状態にする。」（kyuura の文面と同じ）。",
+    "同じページの「キョウのコクーン」（ジム拡張第2弾）は別の名前のカード。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-009",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches: pokemon.attacks[0].text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-012-P21",
+   "card_id": "PMCG1-012",
+   "card_name_ja": "スピアー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "21",
+   "pdf_page": 23,
+   "location": "p.21「コクーンから進化 スピアー LV.32／HP80」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "スピアー",
+    "jp_print.level": 32,
+    "pokemon.stage": "stage2",
+    "pokemon.evolves_from.ja": "コクーン",
+    "pokemon.hp": 80,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "fighting",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 0,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "ダブルニードル",
+    "pokemon.attacks[0].cost": [
+     "colorless",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "30×",
+    "pokemon.attacks[0].text.ja": "コインを2枚投げて「おもて」の出た数×30のダメージ。",
+    "pokemon.attacks[1].name.ja": "どくばり",
+    "pokemon.attacks[1].cost": [
+     "grass",
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[1].damage.display": "40",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「どく」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-012-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-012-ATK0"
+   ],
+   "findings": [
+    "図版: 「2進化」「コクーンから進化」、草、ダブルニードル（無無無）30×、どくばり（草草草）40、にげるの欄は空（0）、弱点 炎、抵抗力 闘 -30。",
+    "「ワザ」欄の最新の説明: ダブルニードル「コインを2枚投げ、「おもて」の数×30のダメージ。」（LD-PMCG1-012-ATK0）、どくばり「コインを投げて「おもて」なら、相手を「どく」状態にする。」（kyuura の文面と同じ）。",
+    "図版のダブルニードルの文面は kyuura の文面と同じ印刷の文面（エンジンの記録）。",
+    "解説: 最大で60ダメージを与えられる（コイン 2 枚がどちらも「おもて」）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-012",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches: pokemon.attacks[0].text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-014-P63",
+   "card_id": "PMCG1-014",
+   "card_name_ja": "ヒトカゲ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "63",
+   "pdf_page": 65,
+   "location": "p.63「ヒトカゲ LV.10／HP50」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "jp_print.level": 10,
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "fire"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "water",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "ひっかく",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": null,
+    "pokemon.attacks[1].name.ja": "ひのこ",
+    "pokemon.attacks[1].cost": [
+     "fire",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "30"
+   },
+   "fields_not_checked": [
+    "name.ja（エンジンの記録に見出しの名前の記述がない）",
+    "pokemon.stage（同）",
+    "pokemon.attacks[1].text.ja（ひのこ。印刷の文面と最新の説明の違いは記録したが、図版の文面の照合の記録がない）",
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 炎、ひっかく（無）10・ひのこ（炎無）30、にげる 1、弱点 水、抵抗力なし（エンジンの記録）。",
+    "「ワザ」欄のひっかくは説明文なし。ひのこの最新の説明「自分についている「炎」エネルギーカードを1枚トラッシュする。トラッシュできないとき、このワザのダメージはなくなる。」は kyuura の文面（印刷の文面）と書き方が違う（RUL-ENERGY-DISCARD-ATTACKS の変更。エンジンの記録）。",
+    "ひのこの最新の説明の記録（LD-）は作っていない（エンジンは図版の文面を記録しておらず、ひのこを登録していない）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-014",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-015-P67",
+   "card_id": "PMCG1-015",
+   "card_name_ja": "ロコン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "67",
+   "pdf_page": 69,
+   "location": "p.67 の上「たねポケモン ロコン LV.11／HP50」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "ロコン",
+    "jp_print.level": 11,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "fire"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "water",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "あやしいひかり",
+    "pokemon.attacks[0].cost": [
+     "fire",
+     "fire"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 炎、あやしいひかり（炎炎）10「コインを投げて「おもて」なら 相手を「こんらん」状態にする。」、にげる（無）1、弱点 水、抵抗力の欄は空。",
+    "「ワザ」欄の最新の説明「コインを投げて「おもて」なら、相手を「こんらん」状態にする。」は kyuura の文面と同じ（ワザは 1 つ）。",
+    "図版の右下のマークは画像で読めず、第1弾の初版の図版かは決めていない（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-015",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-016-P75",
+   "card_id": "PMCG1-016",
+   "card_name_ja": "ポニータ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "75",
+   "pdf_page": 77,
+   "location": "p.75「ポニータ LV.10／HP40」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "jp_print.level": 10,
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "fire"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "water",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "けりとばす",
+    "pokemon.attacks[0].cost": [
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": null,
+    "pokemon.attacks[1].name.ja": "ほのおのしっぽ",
+    "pokemon.attacks[1].cost": [
+     "fire",
+     "fire"
+    ],
+    "pokemon.attacks[1].damage.display": "30",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "name.ja（v0.1 の照合の項目に名前がない）",
+    "pokemon.stage（同）",
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "data_error",
+   "data_error": [
+    {
+     "field": "pokemon.attacks[0].name.ja",
+     "kyuura_value": "けりとばす",
+     "source_value": "けとばす",
+     "evidence": "p.75 の図版・「ワザ」欄「●けとばす ●ほのおのしっぽ」・解説「「けとばす」は、エネルギーの色を選ばないので」（エンジンの記録）",
+     "fix_status": "candidate",
+     "note": "kyuura の値の出典（なぞのばしょ）の表記と思われる。この本の図版が第1弾の初版の図版かは確かめていない（エンジンの記録）。この取り込みでは data/cards.json を直さない（修正の候補）"
+    }
+   ],
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].name.ja",
+     "kind": "data_error",
+     "note": "ワザ名の表記（けりとばす／けとばす）"
+    }
+   ],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 炎、けとばす（無無）20・ほのおのしっぽ（炎炎）30、にげる 1、弱点 水、抵抗力なし。「ワザ」欄は「●けとばす ●ほのおのしっぽ」で説明文なし（エンジンの記録）。",
+    "1 つめのワザの名前が kyuura（けりとばす）と違う（data_error）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-016",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力、「ワザ」欄の最新の説明（効果の説明文がないこと）（v0.1 のファイルの checked_fields）",
+     "result": "「不一致あり」（mismatches: pokemon.attacks[0].name.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-018-P72",
+   "card_id": "PMCG1-018",
+   "card_name_ja": "ガーディ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "72",
+   "pdf_page": 74,
+   "location": "p.72「ガーディ LV.18／HP60」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "jp_print.level": 18,
+    "pokemon.hp": 60,
+    "pokemon.types": [
+     "fire"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "water",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "ほのお",
+    "pokemon.attacks[0].cost": [
+     "fire",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "name.ja（v0.1 の照合の項目に名前がない）",
+    "pokemon.stage（同）",
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 炎、ほのお（炎無）20、にげる 1、弱点 水。「ワザ」欄は「●ほのお」で説明文なし（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-018",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力、「ワザ」欄の最新の説明（効果の説明文がないこと）（v0.1 のファイルの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-025-P110",
+   "card_id": "PMCG1-025",
+   "card_name_ja": "ヒトデマン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "110",
+   "pdf_page": 112,
+   "location": "p.110「ヒトデマン LV.15／HP40」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "jp_print.level": 15,
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "ひらてうち",
+    "pokemon.attacks[0].cost": [
+     "water"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "name.ja（v0.1 の照合の項目に名前がない）",
+    "pokemon.stage（同）",
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 水、ひらてうち（水）20、にげる 1、弱点 雷。「ワザ」欄は「●ひらてうち」で説明文なし（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-025",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力、「ワザ」欄の最新の説明（効果の説明文がないこと）（v0.1 のファイルの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-029-P101",
+   "card_id": "PMCG1-029",
+   "card_name_ja": "パウワウ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "101",
+   "pdf_page": 103,
+   "location": "p.101「パウワウ LV.12／HP60」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "jp_print.level": 12,
+    "pokemon.hp": 60,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "ずつき",
+    "pokemon.attacks[0].cost": [
+     "water"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "name.ja（v0.1 の照合の項目に名前がない）",
+    "pokemon.stage（同）",
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 水、ずつき（水）10、にげる 1、弱点 雷。「ワザ」欄は「●ずつき」で説明文なし（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-029",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力、「ワザ」欄の最新の説明（効果の説明文がないこと）（v0.1 のファイルの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-030-P102",
+   "card_id": "PMCG1-030",
+   "card_name_ja": "ジュゴン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "102",
+   "pdf_page": 104,
+   "location": "p.102「パウワウから進化 ジュゴン LV.42／HP80」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "ジュゴン",
+    "jp_print.level": 42,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "パウワウ",
+    "pokemon.hp": 80,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 3,
+    "pokemon.attacks[0].name.ja": "オーロラビーム",
+    "pokemon.attacks[0].cost": [
+     "water",
+     "water",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "50",
+    "pokemon.attacks[0].text.ja": null,
+    "pokemon.attacks[1].name.ja": "れいとうビーム",
+    "pokemon.attacks[1].cost": [
+     "water",
+     "water",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "30",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 「パウワウから進化」、水、オーロラビーム（水水無）50（説明文なし）、れいとうビーム（水水無無）30「コインを投げて「おもて」なら、相手を「マヒ」状態にする。」、にげる（無無無）3、弱点 雷、抵抗力の欄は空。",
+    "「ワザ」欄の最新の説明「●オーロラビーム」「●れいとうビーム コインを投げて「おもて」なら、相手を「マヒ」状態にする。」は kyuura の文面と同じ。",
+    "同じページの LV.24 のジュゴン（拡張シート第2弾赤版など）は別のカード。図版の右下のマークは画像で読めない（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-030",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-035-P125",
+   "card_id": "PMCG1-035",
+   "card_name_ja": "ピカチュウ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "125",
+   "pdf_page": 127,
+   "location": "p.125 の 3 番目「たねポケモン ピカチュウ LV.12／HP40」（ポケモンカード第1弾・イントロパック）",
+   "checked_fields": {
+    "name.ja": "ピカチュウ",
+    "jp_print.level": 12,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "lightning"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "かじる",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": null,
+    "pokemon.attacks[1].name.ja": "でんげき",
+    "pokemon.attacks[1].cost": [
+     "lightning",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "30",
+    "pokemon.attacks[1].text.ja": "コインを投げて「うら」なら、自分にも10ダメージ。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 雷、かじる（無）10、でんげき（雷無）30「コインを投げて「うら」なら 自分にも10ダメージ」（エンジンの転記。句読点は転記にない）、にげる（無）1、弱点 闘、抵抗力なし。",
+    "「ワザ」欄の最新の説明「●かじる」（説明文なし）「●でんげき コインを投げて「うら」なら、自分にも10ダメージ。」は kyuura の文面と同じ。",
+    "p.125 には 3 種類のピカチュウがあり、照合したのは第1弾の LV.12（エンジンの記録）。図版の右下に○の中の数字「13」があり、第1弾の初版の図版かは決めていない。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-035",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-037-P136",
+   "card_id": "PMCG1-037",
+   "card_name_ja": "ビリリダマ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "136",
+   "pdf_page": 138,
+   "location": "p.136「ビリリダマ LV.10／HP40」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "jp_print.level": 10,
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "lightning"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "たいあたり",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "name.ja（v0.1 の照合の項目に名前がない）",
+    "pokemon.stage（同）",
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 雷、たいあたり（無）10、にげる 1、弱点 闘。「ワザ」欄は「●たいあたり」で説明文なし（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-037",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力、「ワザ」欄の最新の説明（効果の説明文がないこと）（v0.1 のファイルの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-052-P182",
+   "card_id": "PMCG1-052",
+   "card_name_ja": "ディグダ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "182",
+   "pdf_page": 184,
+   "location": "p.182「ディグダ LV.8／HP30」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "jp_print.level": 8,
+    "pokemon.hp": 30,
+    "pokemon.types": [
+     "fighting"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "grass",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "lightning",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 0,
+    "pokemon.attacks[0].name.ja": "あなをほる",
+    "pokemon.attacks[0].cost": [
+     "fighting"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": null,
+    "pokemon.attacks[1].name.ja": "どろかけ",
+    "pokemon.attacks[1].cost": [
+     "fighting",
+     "fighting"
+    ],
+    "pokemon.attacks[1].damage.display": "30",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "name.ja（v0.1 の照合の項目に名前がない）",
+    "pokemon.stage（同）",
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 闘、あなをほる（闘）10・どろかけ（闘闘）30、にげる 0（記載なし）、弱点 草、抵抗力 雷 -30。「ワザ」欄は「●あなをほる ●どろかけ」で説明文なし（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-052",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力、「ワザ」欄の最新の説明（効果の説明文がないこと）（v0.1 のファイルの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-058-P203",
+   "card_id": "PMCG1-058",
+   "card_name_ja": "エビワラー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "203",
+   "pdf_page": 205,
+   "location": "p.203「エビワラー LV.33／HP70」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "jp_print.level": 33,
+    "pokemon.hp": 70,
+    "pokemon.types": [
+     "fighting"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 2,
+    "pokemon.attacks[0].name.ja": "ジャブ",
+    "pokemon.attacks[0].cost": [
+     "fighting"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": null,
+    "pokemon.attacks[1].name.ja": "スペシャルパンチ",
+    "pokemon.attacks[1].cost": [
+     "fighting",
+     "fighting",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "40",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "name.ja（v0.1 の照合の項目に名前がない）",
+    "pokemon.stage（同）",
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 闘、ジャブ（闘）20・スペシャルパンチ（闘闘無）40、にげる 2、弱点 超。「ワザ」欄は「●ジャブ ●スペシャルパンチ」で説明文なし（エンジンの記録）。"
+   ],
+   "not_confused_with": [
+    "PMCG5-054（R団のエビワラー。同じ p.203）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-058",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力、「ワザ」欄の最新の説明（効果の説明文がないこと）（v0.1 のファイルの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-060-P217",
+   "card_id": "PMCG1-060",
+   "card_name_ja": "コラッタ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "217",
+   "pdf_page": 219,
+   "location": "p.217「コラッタ LV.9／HP30」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "jp_print.level": 9,
+    "pokemon.hp": 30,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "psychic",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 0,
+    "pokemon.attacks[0].name.ja": "かみつく",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "name.ja（v0.1 の照合の項目に名前がない）",
+    "pokemon.stage（同）",
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 無色、かみつく（無）20、にげる 0（記載なし）、弱点 闘、抵抗力 超 -30。「ワザ」欄は「●かみつく」で説明文なし（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-060",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力、「ワザ」欄の最新の説明（効果の説明文がないこと）（v0.1 のファイルの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-061-P231",
+   "card_id": "PMCG1-061",
+   "card_name_ja": "ドードー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "231",
+   "pdf_page": 233,
+   "location": "p.231「たねポケモン ドードー LV.10／HP50」（ポケモンカード第1弾・イントロパック）",
+   "checked_fields": {
+    "name.ja": "ドードー",
+    "jp_print.level": 10,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "fighting",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 0,
+    "pokemon.attacks[0].name.ja": "みだれづき",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "10×"
+   },
+   "fields_not_checked": [
+    "pokemon.attacks[0].text.ja（みだれづき。図版の文面が kyuura の文面と違い、図版の版が決まらないので照合した欄に入れない）",
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 無色、みだれづき（無）10×「コインを2枚投げて「おもて」の数×10のダメージ」、にげる 記載なし（0）、弱点 雷、抵抗力 闘 -30（エンジンの記録）。",
+    "「ワザ」欄の最新の説明「コインを2枚投げ、「おもて」の数×10のダメージ。」。",
+    "kyuura の文面「コインを2枚投げて「おもて」の数×10のダメージをあたえる。」は、図版（「…ダメージ」まで）とも最新の説明とも違う。図版の右下に○の中の数字「30」があり、第1弾の初版の図版かは決められない（エンジンの記録）。kyuura の文面が第1弾の印刷どおりか、転記の違いかは決めていないので、最新の説明の記録（LD-）にも、データの誤り（data_error）にもしていない（調査課題）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-061",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches: pokemon.attacks[0].text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-065-P246",
+   "card_id": "PMCG1-065",
+   "card_name_ja": "ミニリュウ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "246",
+   "pdf_page": 248,
+   "location": "p.246「ミニリュウ LV.10／HP40」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "jp_print.level": 10,
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [],
+    "pokemon.resistances": [
+     {
+      "type": "psychic",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "はたく",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "name.ja（v0.1 の照合の項目に名前がない）",
+    "pokemon.stage（同）",
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 無色、はたく（無）10、にげる 1、弱点なし、抵抗力 超 -30。「ワザ」欄は「●はたく」で説明文なし（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-065",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力、「ワザ」欄の最新の説明（効果の説明文がないこと）（v0.1 のファイルの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-071-P254",
+   "card_id": "PMCG1-071",
+   "card_name_ja": "きずぐすり",
+   "source": "P43",
+   "scan": "J38",
+   "page": "254",
+   "pdf_page": 256,
+   "location": "p.254 のトレーナーカード「きずぐすり」",
+   "checked_fields": {
+    "name.ja": "きずぐすり"
+   },
+   "fields_not_checked": [
+    "trainer.text.ja（図版はジムシリーズ以降の版とみられ（番号⑦）、第1弾の版ではない。最新の説明との違いは、トレーナーの最新の説明を記録する形式（LD-）がないので differences に入れていない）",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版「あなたの場のポケモン1匹を選び、そのポケモンにのっているダメージカウンターを最大2個、とりのぞいてよい。」（番号⑦のある版。エンジンの記録）。",
+    "最新の説明「あなたの場にいるポケモンを1匹選び、そのポケモンにのっているダメージカウンターを、2個とりのぞく。」。kyuura の文面（第1弾の印刷の転記）とは違う。",
+    "解説: ダメージカウンターが 2 個のっているのに 1 個だけとることはできない。",
+    "収録はポケモンカード第1弾・ポケモンジム第1弾タケシ／カスミ・第2弾エリカ・第3弾ナツメ／カツラ・クイックスターターギフトパック・イントロパック（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-071",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しの名前・収録商品、図版のカードの文面（図版の版は収録商品のどれかで、第1弾の版とは限らない）、カードの記述（最新の説明）、解説文のうち処理に関わる記述（エンジンの checked_fields_trainer）",
+     "result": "「不一致あり」（mismatches: trainer.text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-073-P254",
+   "card_id": "PMCG1-073",
+   "card_name_ja": "ポケモンいれかえ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "254",
+   "pdf_page": 256,
+   "location": "p.254 のトレーナーカード「ポケモンいれかえ」",
+   "checked_fields": {
+    "name.ja": "ポケモンいれかえ"
+   },
+   "fields_not_checked": [
+    "trainer.text.ja（図版は番号⑲のある版で、第1弾の版ではない可能性が高い。最新の説明との違いは、トレーナーの最新の説明を記録する形式（LD-）がないので differences に入れていない）",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版「あなたのベンチから控えポケモンを1匹選び、あなたの対戦ポケモンと入れ替える。」（番号⑲のある版。エンジンの記録）。",
+    "最新の説明「あなたの控えポケモンを1匹選び、あなたの対戦ポケモンと入れ替える。」。kyuura の文面（第1弾の印刷の転記）とは書き方が違う。",
+    "解説: 対戦ポケモンがベンチにもどればどく・ねむり・マヒ・こんらんから回復し、持続効果も消える。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-073",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しの名前・収録商品、図版のカードの文面（図版の版は収録商品のどれかで、第1弾の版とは限らない）、カードの記述（最新の説明）、解説文のうち処理に関わる記述（エンジンの checked_fields_trainer）",
+     "result": "「不一致あり」（mismatches: trainer.text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-074-P254",
+   "card_id": "PMCG1-074",
+   "card_name_ja": "マサキ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "254",
+   "pdf_page": 256,
+   "location": "p.254 のトレーナーカード「マサキ」",
+   "checked_fields": {
+    "name.ja": "マサキ",
+    "trainer.text.ja": "山札からカードを2枚引いて、手札に加える。"
+   },
+   "fields_not_checked": [
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版の文面と最新の説明「山札からカードを2枚引いて、手札に加える。」は kyuura の文面と同じ（エンジンの記録）。収録はポケモンカード第1弾だけ。",
+    "山札が足りないとき・ないときの扱いはカードのページには書かれていない（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-074",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しの名前・収録商品、図版のカードの文面（図版の版は収録商品のどれかで、第1弾の版とは限らない）、カードの記述（最新の説明）、解説文のうち処理に関わる記述（エンジンの checked_fields_trainer）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-079-P257",
+   "card_id": "PMCG1-079",
+   "card_name_ja": "ディフェンダー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "257",
+   "pdf_page": 259,
+   "location": "p.257 のトレーナーカード「ディフェンダー」",
+   "checked_fields": {
+    "name.ja": "ディフェンダー"
+   },
+   "fields_not_checked": [
+    "trainer.text.ja（図版は記号のある版で、第1弾の版（kyuura の文面）ではない。最新の説明との違いは、トレーナーの最新の説明を記録する形式（LD-）がないので differences に入れていない）",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版「…ワザによるダメージを受ける時、そのダメージは「-20」される。」（記号のある版。文面は最新の説明とほぼ同じ。エンジンの記録）。",
+    "最新の説明「このカードは、あなたの場にいるポケモンにつけて使い、次の相手の番の終わりにトラッシュする。このカードをつけているポケモンがワザによるダメージを受けるとき、そのダメージは「-20」される。」（公式ルール p.321 の 7 段階にも引用）。kyuura の文面（第1弾の印刷の転記）とは、効果の終わり・はがす時点・「できる」が違う。",
+    "kyuura には、プラスパワーの ERR-PLUSPOWER にあたるディフェンダーの記録（印刷の文面と最新の説明の区別）がない（エンジンの報告。調査課題）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-079",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しの名前・収録商品、図版のカードの文面（図版の版は収録商品のどれかで、第1弾の版とは限らない）、カードの記述（最新の説明）、解説文のうち処理に関わる記述（エンジンの checked_fields_trainer）",
+     "result": "「不一致あり」（mismatches: trainer.text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-081-P257",
+   "card_id": "PMCG1-081",
+   "card_name_ja": "プラスパワー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "257",
+   "pdf_page": 259,
+   "location": "p.257 のトレーナーカード「プラスパワー」",
+   "checked_fields": {
+    "name.ja": "プラスパワー"
+   },
+   "fields_not_checked": [
+    "trainer.text.ja（図版は記号のある版で、第1弾の版（kyuura の文面）ではない。最新の説明は ERR-PLUSPOWER に記録済み）",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "最新の説明「このカードはあなたの対戦ポケモンにつけて使い、あなたの番の終わりにトラッシュする。このカードをつけているポケモンのワザが、対戦ポケモンにダメージを与えるとき、そのダメージは「+10」される。(控えポケモンへのダメージは、そのまま)」は、ERR-PLUSPOWER の最新の説明（play_text）と同じ（エンジンの記録）。",
+    "図版は記号のある版で、第1弾の版ではない（ジムシリーズ以降の文面）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-081",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "見出しの名前・収録商品、図版のカードの文面（図版の版は収録商品のどれかで、第1弾の版とは限らない）、カードの記述（最新の説明）、解説文のうち処理に関わる記述（エンジンの checked_fields_trainer）",
+     "result": "「不一致あり」（mismatches: trainer.text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-097-P318",
+   "card_id": "PMCG1-097",
+   "card_name_ja": "草エネルギー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "318",
+   "pdf_page": 320,
+   "location": "p.318（公式ルール）の「エネルギーカード」の項",
+   "checked_fields": {
+    "energy.kind": "basic",
+    "energy.provides": [
+     "grass"
+    ]
+   },
+   "fields_not_checked": [
+    "name.ja（カードごとのページはない）",
+    "energy.text（同。公式ルールは基本エネルギーカードに名前と説明が書かれていないとする）",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "公式ルール p.318: 基本エネルギーカードは草・炎・水・雷・超・闘の 6 種類で、名前と説明が書かれていない（エンジンの記録）。草の基本エネルギーカードがあることだけを照合した。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-097",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "公式ルール p.318 の「エネルギーカード」の項の、基本エネルギーカードの種類だけ（カードごとのページはない。エンジンの記録の notes）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-098-P318",
+   "card_id": "PMCG1-098",
+   "card_name_ja": "炎エネルギー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "318",
+   "pdf_page": 320,
+   "location": "p.318（公式ルール）の「エネルギーカード」の項",
+   "checked_fields": {
+    "energy.kind": "basic",
+    "energy.provides": [
+     "fire"
+    ]
+   },
+   "fields_not_checked": [
+    "name.ja（カードごとのページはない）",
+    "energy.text（同。公式ルールは基本エネルギーカードに名前と説明が書かれていないとする）",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "公式ルール p.318: 基本エネルギーカードは草・炎・水・雷・超・闘の 6 種類で、名前と説明が書かれていない（エンジンの記録）。炎の基本エネルギーカードがあることだけを照合した。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-098",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "公式ルール p.318 の「エネルギーカード」の項の、基本エネルギーカードの種類だけ（カードごとのページはない。エンジンの記録の notes）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-099-P318",
+   "card_id": "PMCG1-099",
+   "card_name_ja": "水エネルギー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "318",
+   "pdf_page": 320,
+   "location": "p.318（公式ルール）の「エネルギーカード」の項",
+   "checked_fields": {
+    "energy.kind": "basic",
+    "energy.provides": [
+     "water"
+    ]
+   },
+   "fields_not_checked": [
+    "name.ja（カードごとのページはない）",
+    "energy.text（同。公式ルールは基本エネルギーカードに名前と説明が書かれていないとする）",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "公式ルール p.318: 基本エネルギーカードは草・炎・水・雷・超・闘の 6 種類で、名前と説明が書かれていない（エンジンの記録）。水の基本エネルギーカードがあることだけを照合した。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-099",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "公式ルール p.318 の「エネルギーカード」の項の、基本エネルギーカードの種類だけ（カードごとのページはない。エンジンの記録の notes）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-100-P318",
+   "card_id": "PMCG1-100",
+   "card_name_ja": "雷エネルギー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "318",
+   "pdf_page": 320,
+   "location": "p.318（公式ルール）の「エネルギーカード」の項",
+   "checked_fields": {
+    "energy.kind": "basic",
+    "energy.provides": [
+     "lightning"
+    ]
+   },
+   "fields_not_checked": [
+    "name.ja（カードごとのページはない）",
+    "energy.text（同。公式ルールは基本エネルギーカードに名前と説明が書かれていないとする）",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "公式ルール p.318: 基本エネルギーカードは草・炎・水・雷・超・闘の 6 種類で、名前と説明が書かれていない（エンジンの記録）。雷の基本エネルギーカードがあることだけを照合した。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-100",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "公式ルール p.318 の「エネルギーカード」の項の、基本エネルギーカードの種類だけ（カードごとのページはない。エンジンの記録の notes）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-101-P318",
+   "card_id": "PMCG1-101",
+   "card_name_ja": "超エネルギー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "318",
+   "pdf_page": 320,
+   "location": "p.318（公式ルール）の「エネルギーカード」の項",
+   "checked_fields": {
+    "energy.kind": "basic",
+    "energy.provides": [
+     "psychic"
+    ]
+   },
+   "fields_not_checked": [
+    "name.ja（カードごとのページはない）",
+    "energy.text（同。公式ルールは基本エネルギーカードに名前と説明が書かれていないとする）",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "公式ルール p.318: 基本エネルギーカードは草・炎・水・雷・超・闘の 6 種類で、名前と説明が書かれていない（エンジンの記録）。超の基本エネルギーカードがあることだけを照合した。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-101",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "公式ルール p.318 の「エネルギーカード」の項の、基本エネルギーカードの種類だけ（カードごとのページはない。エンジンの記録の notes）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-102-P318",
+   "card_id": "PMCG1-102",
+   "card_name_ja": "闘エネルギー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "318",
+   "pdf_page": 320,
+   "location": "p.318（公式ルール）の「エネルギーカード」の項",
+   "checked_fields": {
+    "energy.kind": "basic",
+    "energy.provides": [
+     "fighting"
+    ]
+   },
+   "fields_not_checked": [
+    "name.ja（カードごとのページはない）",
+    "energy.text（同。公式ルールは基本エネルギーカードに名前と説明が書かれていないとする）",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "公式ルール p.318: 基本エネルギーカードは草・炎・水・雷・超・闘の 6 種類で、名前と説明が書かれていない（エンジンの記録）。闘の基本エネルギーカードがあることだけを照合した。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-102",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "カードの記録に日付がない。v0.1 のコミット 03766e0 のファイルの checked_on（2026-10-12）と、エンジンの docs/data-provenance.md の「照合は…画像で読んで行いました（2026-10-12）」による",
+     "method": "Internet Archive のスキャン [J38] の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（エンジンの card_verification.json の method）",
+     "scope": "公式ルール p.318 の「エネルギーカード」の項の、基本エネルギーカードの種類だけ（カードごとのページはない。エンジンの記録の notes）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG2-003-P38",
+   "card_id": "PMCG2-003",
+   "card_name_ja": "パラス",
+   "source": "P43",
+   "scan": "J38",
+   "page": "38",
+   "pdf_page": 40,
+   "location": "p.38「たねポケモン パラス LV.8／HP40」（ポケモンカード第2弾ポケモンジャングル）",
+   "checked_fields": {
+    "name.ja": "パラス",
+    "jp_print.level": 8,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "ひっかく",
+    "pokemon.attacks[0].cost": [
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": null,
+    "pokemon.attacks[1].name.ja": "キノコのほうし",
+    "pokemon.attacks[1].cost": [
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[1].damage": null,
+    "pokemon.attacks[1].text.ja": "相手を「ねむり」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 草、ひっかく（無無）20（説明文なし）、キノコのほうし（草草。ダメージの目安なし）「相手を「ねむり」状態にする。」、にげる（無）1、弱点 炎、抵抗力の欄は空。",
+    "「ワザ」欄の最新の説明「●ひっかく」「●キノコのほうし 相手を「ねむり」状態にする。」は kyuura の文面と同じ。",
+    "解説: キノコのほうしは相手の対戦ポケモンを確実にねむり状態にできるが、ダメージを与えることはできない。図版の右下のマークは画像で読めない（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-003",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG2-007-P19",
+   "card_id": "PMCG2-007",
+   "card_name_ja": "バタフリー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "19",
+   "pdf_page": 21,
+   "location": "p.19「トランセルから進化 バタフリー LV.28／HP70」（ポケモンカード第2弾ポケモンジャングル）",
+   "checked_fields": {
+    "name.ja": "バタフリー",
+    "jp_print.level": 28,
+    "pokemon.stage": "stage2",
+    "pokemon.evolves_from.ja": "トランセル",
+    "pokemon.hp": 70,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "fighting",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 0,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "ふきとばし",
+    "pokemon.attacks[0].cost": [
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": "相手を控えポケモンと入れ替える。控えポケモンは相手プレイヤーがえらぶ。相手プレイヤーに控えポケモンがいないときには入れ替えはおこらない。",
+    "pokemon.attacks[1].name.ja": "メガドレイン",
+    "pokemon.attacks[1].cost": [
+     "grass",
+     "grass",
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[1].damage.display": "40",
+    "pokemon.attacks[1].text.ja": "相手に与えたダメージの半分(切り上げ)のダメージカウンターを自分からとりのぞく。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG2-007-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    },
+    {
+     "field": "pokemon.attacks[1].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG2-007-ATK1",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG2-007-ATK0",
+    "LD-PMCG2-007-ATK1"
+   ],
+   "findings": [
+    "図版: 「2進化」「トランセルから進化」、草、ふきとばし（無無）20、メガドレイン（草草草草）40、にげるの欄は空（0）、弱点 炎、抵抗力 闘 -30。ポケモンパワーの欄はない。",
+    "「ワザ」欄の最新の説明: ふきとばし「相手を控えポケモンと入れ替える。入れ替わるポケモンは、相手が選ぶ。（相手に控えがいないとき、入れ替えはおこらない）」（LD-PMCG2-007-ATK0）、メガドレイン「相手にダメージを与えたら、その半分（切り上げ）のダメージカウンターを、自分からとりのぞく。」（LD-PMCG2-007-ATK1）。",
+    "図版の説明文は kyuura の文面と同じ印刷の文面（文字が小さく、句読点は読みきれない。メガドレインの括弧は図版では全角、kyuura は半角。エンジンの記録）。",
+    "解説: 入れ替える相手のポケモンは自分で選べない。メガドレインは与えたダメージの半分のダメージをこのバタフリー自身からとりのぞく。",
+    "同じページの LV.37／HP80 のバタフリー（サザンアイランド）は別のカード。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-007",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 400dpi の画像にして目で読み、v0.4b・v0.4c の低い解像度の画像の読み取りを確かめ直した（エンジンの記録の notes）。印刷物の実物ではない",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches: pokemon.attacks[0].text.ja・pokemon.attacks[1].text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG2-010-P39",
+   "card_id": "PMCG2-010",
+   "card_name_ja": "パラセクト",
+   "source": "P43",
+   "scan": "J38",
+   "page": "39",
+   "pdf_page": 41,
+   "location": "p.39「パラスから進化 パラセクト LV.28／HP60」（ポケモンカード第2弾ポケモンジャングル）",
+   "checked_fields": {
+    "name.ja": "パラセクト",
+    "jp_print.level": 28,
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "パラス",
+    "pokemon.hp": 60,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "キノコのほうし",
+    "pokemon.attacks[0].cost": [
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "相手を「ねむり」状態にする。",
+    "pokemon.attacks[1].name.ja": "きりさく",
+    "pokemon.attacks[1].cost": [
+     "colorless",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "30",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 「1進化」「パラスから進化」、草、キノコのほうし（草草。ダメージの目安なし）「相手を「ねむり」状態にする。」、きりさく（無無無）30（説明文なし）、にげる（無）1、弱点 炎、抵抗力の欄は空。",
+    "「ワザ」欄の最新の説明「●キノコのほうし 相手を「ねむり」状態にする。」「●きりさく」は kyuura の文面と同じ。",
+    "解説: キノコのほうしはパラス（p.38）とまったく同じ。同じページの LV.29 のパラセクト（拡張シート第1弾青版）は別のカード（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-010",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG6-044-P155",
+   "card_id": "PMCG6-044",
+   "card_name_ja": "ナツメのヤドン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "155",
+   "pdf_page": 157,
+   "location": "p.155 の下「たねポケモン ナツメのヤドン LV.15／HP50」（ジム拡張第2弾闇からの挑戦）",
+   "checked_fields": {
+    "name.ja": "ナツメのヤドン",
+    "jp_print.level": 15,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "psychic"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers": [],
+    "pokemon.attacks[0].name.ja": "ぐうたらこうげき",
+    "pokemon.attacks[0].cost": [
+     "psychic",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "30",
+    "pokemon.attacks[0].text.ja": "ダメージを与えた後、自分を「ねむり」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "図版: 超、ぐうたらこうげき（超無）30「ダメージを与えた後 自分を「ねむり」状態にする。」（「後」のあとの読点は読めない）、にげる（無）1、弱点 超、抵抗力の欄は空。ポケモンパワーの欄はない。",
+    "「ワザ」欄の最新の説明「ダメージを与えた後、自分を「ねむり」状態にする。」は kyuura の文面と同じ（R団のカビゴンの「たおれこむ」（p.245）の最新の説明と同じ文面）。",
+    "解説:「相手にダメージを与えたら、自分がねむり状態になってしまいます」。ダメージを与えなかった場面は書いていない（UQ-EFFECT-AFTER-NO-DAMAGE は決まらない）。",
+    "同じページの上の LV.16 のヤドン（第4弾ロケット団）・真ん中の LV.18 のヤドン（第3弾化石の秘密）は別のカード（エンジンの記録）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-46A3E2E",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG6-044",
+     "source_checked_on": "2026-10-14",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページ全体を 110dpi で位置を確かめ、見出し・図版・「ワザ」欄・解説は 600dpi の画像で読んだ。OCR の文字は使っていない（エンジンの記録の notes）。印刷物の実物ではない",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-077-P255",
+   "card_id": "PMCG1-077",
+   "card_name_ja": "オーキドはかせ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "255",
+   "pdf_page": 257,
+   "location": "オーキドはかせの見出し・図版・最新の説明・解説",
+   "checked_fields": {
+    "name.ja": "オーキドはかせ",
+    "trainer.text.ja": "自分の手札を全部すてて、新たに7枚のカードを自分の山札から引いて手札にする。"
+   },
+   "fields_not_checked": [
+    "name.en と英語の文面",
+    "rarity_jp",
+    "jp_print の刷・版の特定",
+    "trainer.kinds"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "trainer.text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-077-TRAINER"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-077-TRAINER"
+   ],
+   "findings": [
+    "v0.19 で、既存のトレーナーの登録・使用中のカード・ドローの処理で加えるトレーナーとして照合した。照合の前に既存の記録を探し、このファイル・kyuura のサイドカー（LD-・CC-）・kyuura の P43 のページの記録のどれにも、このカードのページの記録がないことを確かめた（トレーナーの使いかた p.310・効果で引くとき p.312・トラッシュ p.312 の規定は既存の記録を再利用した。docs/professor-oak-v0.19.md 1 章）。読んだのは p.255 だけ（ページ全体は 110dpi で位置を確かめ、見出し・収録・図版・最新の説明・解説は 400dpi の画像で読んだ。OCR の文字はページの位置を探すのに使っただけ）。p.255 には突風・エネルギー・リムーブ・オーキドはかせがあり、照合したのはいちばん下のオーキドはかせ。見出し「オーキドはかせ」、収録「ポケモンカード第1弾」だけ。図版: TRAINER、オーキドはかせ、文面「自分の手札を全部すてて、新たに 7枚のカードを自分の山札から引 いて手札にする。」（kyuura の写しと同じ。図版が第1弾のどの刷かは確かめていない）。最新の説明に使うための条件はない。解説のうち処理に関わる記述:「もちろん手札が「オーキドはかせ」1枚になったときが最高の場合ですが……。」「手札を全部トラッシュして7枚とるのですから、7枚以上にはなりません。」「手札をトラッシュするために「オーキドはかせ」を使うという方法もあります。」「多く入れすぎると使いすぎて、山札切れになったり、必要なカードがすべてトラッシュに置かれたりしますからね。」山札が足りないとき・ないときの扱いはカードのページには書かれていない（公式ルール p.312 で決まる。マサキと同じ。docs/trainers-v0.2b.md 3 章）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-A09FF9B",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-077",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-077 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-072-P255",
+   "card_id": "PMCG1-072",
+   "card_name_ja": "突風",
+   "source": "P43",
+   "scan": "J38",
+   "page": "255",
+   "pdf_page": 257,
+   "location": "突風の見出し・図版・最新の説明・解説",
+   "checked_fields": {
+    "name.ja": "突風"
+   },
+   "fields_not_checked": [
+    "name.en と英語の文面",
+    "rarity_jp",
+    "jp_print の刷・版の特定",
+    "trainer.kinds",
+    "trainer.text.ja（図版の文面が転記と異なり、図版の版は未特定。LDのimage_text_jaに別に保存）"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "trainer.text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-072-TRAINER"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-072-TRAINER"
+   ],
+   "findings": [
+    "v0.21 で、既存のトレーナーの登録・使用中のカード・トレーナーの決定・ポケモンいれかえの入れ替えの処理で加えるトレーナーとして照合した。照合の前に既存の記録を探し、このファイル・kyuura のサイドカー（LD-・CC-・CR-・UQ-）・kyuura の P43 のページの記録（rule_history.json の refs）のどれにも、このカードのページの記録がないことを確かめた（入れ替えたときの特殊状態・持続する効果・ついているカード・ダメージ・にげるとの違い（p.311・p.322・p.325）、「とうめい」とトレーナーの効果（p.159。T29）、トレーナーの使いかた（p.310）は既存の記録を再利用した。docs/gust-v0.21.md 1 章）。読んだのは p.255 の上の突風だけ（v0.19 で 400dpi にしたページの画像から、見出し・収録・最新の説明、図版、解説を切り出して読んだ。OCR の文字は使っていない）。見出し「突風」、収録「ポケモンカード第1弾」「ポケモンジム第1弾カスミ」「ポケモンジム第2弾マチス」「クイックスターターギフトパック」「イントロパック」。図版: TRAINER、突風、文面「相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。」（最新の説明と同じ）。図版の右下に番号㉘とマークがあり、第1弾の版ではない可能性が高い（kyuura の docs/cards/products/intro-packs.md のイントロパック（フシギダネデッキ）028/040 と番号は合うが、版は確かめていない）。最新の説明に使うための条件はない。解説のうち処理に関わる記述:「相手のベンチからポケモンを選んでバトル場に呼んできます。呼んでくるポケモンは、自分の対戦ポケモンが倒せそうなポケモンがよいでしょう。」「相手のベンチのポケモンにエネルギーカードがついてなくて、逃げることができないような大きなポケモンがいたらバトル場に呼んで、時間をかせぎます。」相手に控えポケモンがいないときに使えるかは、最新の説明・図版・解説のどれにも書かれていない（docs/gust-v0.21.md の GW5。UNRESOLVED）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-36E3630",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-072",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-072 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW1",
+     "engine_classification": "CONFLICT（違いは「どの控えポケモンを出させるかは、自分が自由に選ぶ」の書き方と、控えがいないときの一文。GW5）"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-090-P260",
+   "card_id": "PMCG1-090",
+   "card_name_ja": "パソコン通信",
+   "source": "P43",
+   "scan": "J38",
+   "page": "260",
+   "pdf_page": 262,
+   "location": "パソコン通信の見出し・図版・最新の説明・解説",
+   "checked_fields": {
+    "name.ja": "パソコン通信",
+    "trainer.text.ja": "手札から2枚カードをすてることによって、山札から好きなカードを1枚選んで手札にすることができる。そのあとで山札をよくきってもとに戻す。"
+   },
+   "fields_not_checked": [
+    "name.en と英語の文面",
+    "rarity_jp",
+    "jp_print の刷・版の特定",
+    "trainer.kinds"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "trainer.text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-090-TRAINER"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "findings": [
+    "v0.22 で、既存のトレーナーの登録・使用中のカード・トレーナーの決定（2 段階）・ゾーンの共通の関数で加えるトレーナーとして照合した。照合の前に既存の記録を探し、このファイル・kyuura のサイドカー（LD-・CC-・CR-・UQ-）・kyuura の P43 のページの記録のどれにも、このカードのページの記録がないことを確かめた（トレーナーの使いかた p.310 の手順・使うための条件の一般の規定・使いすて、効果で引くとき p.312、トラッシュに順番がない p.312、デッキを切る実装上の仮定は既存の記録を再利用した。docs/computer-search-v0.22.md 1 章）。ページは推測せず、本の「シリーズ別カードさくいん」（p.354。PDF 356。第1弾のトレーナーカードの「パソコン通信 260」）で探した。読んだのは p.260 のいちばん上のパソコン通信（ページ全体は 110dpi で位置を確かめ、見出し・収録・最新の説明・図版・解説は 400dpi の画像で読んだ。OCR の文字はページの位置を探すのに使っただけ）と、既存の記録で範囲の足りなかった p.310 の「使うための条件」の例・p.312 の「山札」「手札」「トラッシュ」の項。p.260 には、ほかにダウジングマシーン・ポケモン回収がある（照合していない）。見出し「パソコン通信」、収録「ポケモンカード第1弾」だけ。図版: TRAINER、パソコン通信、文面「手札から2枚カードをすてることによって、山札から好きなカードを1枚選んで手札にすることができる。そのあとで山札をよくきってもとに戻す。」（kyuura の写しと同じ）。解説のうち処理に関わる記述:「「パソコン通信」は、何でも好きなカードを1枚、自分の山札から持ってくることができるからです。そのかわりに手札からカードを2枚トラッシュしなければいけませんが、これはなかなか選ぶのがたいへんです。」「必要なカードをとにかく山札から持ってきて」「しかし使いどころがなかったら、使わないという判断も大切です。」。p.310 の例:「たとえば「パソコン通信」には、手札からカードを2枚トラッシュしなければならないという条件が記述されています。2枚トラッシュできないときには、「パソコン通信」を使うことはできません。」と、p.260 と同じ最新の説明（「：最新の説明」）。山札が 0 枚のときの記述はカードのページ・p.310 の例のどちらにもない（docs/computer-search-v0.22.md の CS6。UNRESOLVED）。選んだカードを相手に見せる指示は最新の説明にない（同じページのダウジングマシーンの最新の説明には「相手プレイヤーに見せてから、手札に加える」がある）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-5844FCF",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-090",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-090 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS1",
+     "engine_classification": "CONFLICT（書き方の違い。「すてることによって…できる」→「選んでトラッシュしなければ、このカードは使えない」（使うための条件）、「選んで手札にすることができる」→「選び出し、手札に加える」、「よくきってもとに戻す」→「その後、その山札をよく切る」）"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-076-P257",
+   "card_id": "PMCG1-076",
+   "card_name_ja": "エネルギー回収",
+   "source": "P43",
+   "scan": "J38",
+   "page": "257",
+   "pdf_page": 259,
+   "location": "エネルギー回収の見出し・図版・最新の説明・解説",
+   "checked_fields": {
+    "name.ja": "エネルギー回収"
+   },
+   "fields_not_checked": [
+    "name.en と英語の文面",
+    "rarity_jp",
+    "jp_print の刷・版の特定",
+    "trainer.kinds",
+    "trainer.text.ja（図版の文面が転記と異なり、図版の版は未特定。LDのimage_text_jaに別に保存）"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "trainer.text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-076-TRAINER"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-076-TRAINER"
+   ],
+   "findings": [
+    "v0.23 で、既存のトレーナーの登録・使用中のカード・トレーナーの決定（2 段階）・手札のトラッシュとトラッシュから手札に加える共通の関数で加えるトレーナーとして照合した。照合の前に既存の記録を探した（docs/energy-retrieval-v0.23.md 1 章）: このファイルにこのカードの記録はない。kyuura のサイドカー（LD-・CC-・CR-・UQ-）にもない。kyuura の rule_history.json の ERR-ENERGY-RETRIEVAL（notes の 8 番目。根拠 J38 の p.257 のスキャン）に p.257 の最新の説明と、解説の特殊エネルギーの 1 文が kyuura の読み取りとしてある（最新の説明は再利用。下で読んだ文と同じ）。P43 の p.257 のページの記録（documents の P43 の pages）は、このカードについて「「基本エネルギーカード」を最大2枚。特殊エネルギーは手札に加えられない」だけ（照合の記録はプラスパワー・ディフェンダーだけ）。足りなかったのは、図版の文面（写しとの照合）・見出しと収録・解説のうち処理に関わるほかの記述（手札の枚数・対象がないとき・0 枚の選択）で、それだけを読んだ。トレーナーの使いかた（p.310 の手順・使うための条件・使いすて・何枚でも）・トラッシュは表を上にして置く（p.312）は既存の記録を再利用した。ページは推測せず、本の「シリーズ別カードさくいん」（p.354。PDF 356。第1弾のトレーナーカードの「エネルギー回収 257」）で探した。読んだのは p.257 のいちばん下のエネルギー回収（ページ全体は 110dpi で位置を確かめ、見出し・収録・最新の説明・図版・解説は 400dpi の画像で読んだ）。同じページのプラスパワー・ディフェンダーは読み直していない。見出し「エネルギー回収」、収録「ポケモンカード第1弾」「ポケモンジム第1弾タケシ」「ポケモンジム第2弾エリカ」「ポケモンジム第3弾ナツメ」「クイックスターターギフトパック」。図版: TRAINER、エネルギー回収、文面「手札からカードを1枚選んでトラッシュしなければ、このカードは使えない。あなたのトラッシュから基本エネルギーカードを最大2枚選び、手札に加えてよい。(ただし、このカードを使うためにトラッシュしたカードを選ぶことはできない)」（第1弾の印刷（kyuura の写し）ではない版。どの商品の版かは決めていない）。解説のうち処理に関わる記述:「「エネルギー回収」を使うとき、「手札のカードを1枚トラッシュしないといけない、さてどのカードをトラッシュしようか？」けっこう悩むところです。」「注意する点としては、「エネルギー回収」を使うときにトラッシュしたエネルギーカードは回収できないことです。それ以外にも、「エネルギー回収」では、「無色2個エネルギー」や「なんでもなおし配合エネルギー」などの特殊エネルギーカードは手札に加えることはできません。」。トラッシュに基本エネルギーカードがないとき・選べるものがあるのに 0 枚を選べるかの記述はない（docs/energy-retrieval-v0.23.md の ER9・ER10。UNRESOLVED）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-CD641E6",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-076",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-076 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER1",
+     "engine_classification": "CONFLICT（エラッタ。第1弾の印刷は「好きなエネルギーカード」「すてることによって…できる」。図版は別の版の文面）"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-093-P259",
+   "card_id": "PMCG1-093",
+   "card_name_ja": "ポケモン交換おじさん",
+   "source": "P43",
+   "scan": "J38",
+   "page": "259",
+   "pdf_page": 261,
+   "location": "ポケモン交換おじさんの見出し・図版・最新の説明・解説",
+   "checked_fields": {
+    "name.ja": "ポケモン交換おじさん",
+    "trainer.text.ja": "自分の山札から好きなポケモンカードか進化カードを1枚選んで、手札のポケモンカードか進化カードと交換することができる。そのあとで、自分の山札をよくきる。交換するカードは相手に見せなければならない。"
+   },
+   "fields_not_checked": [
+    "name.en と英語の文面",
+    "rarity_jp",
+    "jp_print の刷・版の特定",
+    "trainer.kinds"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "trainer.text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-093-TRAINER"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "findings": [
+    "v0.24 で、既存のトレーナーの登録・使用中のカード・トレーナーの決定（2 段階）と、手札から山札にもどす・山札から選び出して見せる共通の関数で加えるトレーナーとして照合した。照合の前に既存の記録を探した（docs/pokemon-trader-v0.24.md 1 章）: このファイル・kyuura のサイドカー（LD-・CC-・CR-・UQ-）・kyuura の P43 のページの記録に、このカードの記録はない（kyuura にあるのは第1弾の印刷の文面・再録の書き方の違い（docs/cards/reprints.md）・2002 年の「サポーター適用カード」（2000.02.14 版のあとの規定なので使わない）だけ）。トレーナーの使いかた（p.310 の手順・使うための条件・使いすて・何枚でも）・山札の中を見て選ぶ・山札を切る（p.312。docs/computer-search-v0.22.md）・トラッシュの規定は既存の記録を再利用した。ページは推測せず、本の「シリーズ別カードさくいん」（p.354。PDF 356。第1弾のトレーナーカードの「ポケモン交換おじさん 259」）で探した。読んだのは p.259 の真ん中のポケモン交換おじさん（ページ全体は 110dpi で位置を確かめ、見出し・収録・最新の説明・図版・解説は 400dpi の画像で読んだ）と、同じページのポケモン育て屋さんの解説のうちポケモン交換おじさんを使う 1 段落（処理の順番の確かめ。ポケモン育て屋さんのカードは照合していない）。メンテナンスは読んでいない。見出し「ポケモン交換おじさん」、収録「ポケモンカード第1弾」「クイックスターターギフトパック」。図版: TRAINER、ポケモン交換おじさん、文面「自分の山札から好きなポケモンカードか進化カードを1枚選んで、手札のポケモンカードか進化カードと交換することができる。そのあとで、自分の山札をよくきる。交換するカードは相手に見せなければならない。」（kyuura の写しと同じ）。解説のうち処理に関わる記述:「もちろん、山札から持ってこられるのは、進化ポケモンだけでなくたねポケモンも持ってこられるので、たねポケモンだけのデッキでも力を発揮します。」「「ポケモン交換おじさん」を使ったときに、「山札の中にポケモンのカードが1枚も残っていなかったら？」という質問をよく聞きますが、山札の中にポケモンのカードがなかったら、交換のために入れたポケモンカードを持ってくることになります。」。ポケモン育て屋さんの解説:「場にたねポケモンが出ていて、手札にポケモンのカードがあれば、そのポケモンのカードを「ポケモン交換おじさん」で山札にもどし、2進化ポケモンカードを山札から持ってきて「ポケモン育て屋さん」で2進化ポケモンにします。」。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-6EE7C40",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-093",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-093 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT1",
+     "engine_classification": "CONFLICT（書き方。図版・第1弾の印刷は「交換することができる」「ポケモンカード」）"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-094-P259",
+   "card_id": "PMCG1-094",
+   "card_name_ja": "ポケモン育て屋さん",
+   "source": "P43",
+   "scan": "J38",
+   "page": "259",
+   "pdf_page": 261,
+   "location": "ポケモン育て屋さんの見出し・図版・最新の説明・解説",
+   "checked_fields": {
+    "name.ja": "ポケモン育て屋さん",
+    "trainer.text.ja": "ポケモンを進化させるときに使う。2進化カードをいきなりつけることができる。"
+   },
+   "fields_not_checked": [
+    "name.en と英語の文面",
+    "rarity_jp",
+    "jp_print の刷・版の特定",
+    "trainer.kinds"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "trainer.text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-094-TRAINER"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "findings": [
+    "v0.25 で、既存のトレーナーの登録・使用中のカード・トレーナーの決定（2 段階）と、進化の手順の共通の関数（evolution.place_evolution_card）で加えるトレーナーとして照合した。照合の前に既存の記録を探した（docs/pokemon-breeder-v0.25.md 1 章）: このファイル・kyuura のサイドカー（LD-・CC-・CR-・UQ-）・kyuura の P43 のページの記録に、このカードの記録はない（kyuura にあるのは第1弾の印刷の文面（cards.json）・2002 年の「サポーター適用カード」（MIX-SUPPORTER-ERRATA。2000.02.14 版のあとの規定なので使わない）・p.88 の第4弾のゼニガメの解説の照合の記録（CC-PMCG4-018-P43。エンジンの記録の取り込み。「ポケモン育て屋さん」で「わるいカメックス」に進化する例）だけ）。v0.24 の PMCG1-093 の記録で読んだのは、このカードの解説のうちポケモン交換おじさんを使う 1 段落だけで、このカードの照合の記録としては扱わない。進化の規定（p.309・p.310・p.313・p.316・p.319・p.322〜p.324。docs/evolution-rules-v0.4a.md・docs/stage2-evolution-v0.4c.md）・トレーナーの使いかた（p.310）は既存の記録を再利用した。ページは v0.24 で索引（p.354「シリーズ別カードさくいん」の「ポケモン育て屋さん 259」）から確かめた p.259 で、読んだのは p.259 のいちばん下のポケモン育て屋さん（見出し・収録・図版・最新の説明・解説。v0.24 で作った 400dpi の画像を切り出して読んだ）だけ。同じページのメンテナンス・ポケモン交換おじさんは読み直していない。見出し「ポケモン育て屋さん」、収録「ポケモンカード第1弾」。図版: TRAINER、ポケモン育て屋さん、文面「ポケモンを進化させるときに使う。2進化カードをいきなりつけることができる。」（kyuura の写しと同じ）。解説のうち処理に関わる記述:「「ポケモン育て屋さん」を使えば、対戦開始2回めの自分の番で「ゼニガメ」が「カメックス」に、「ヒトカゲ」が「リザードン」へと一気に進化することができます。」「2種類の2進化ポケモンを育てようとしている大型デッキを使う場合などは、1進化ポケモンカードをかなり減らして「ポケモン育て屋さん」を多めに入れると進化が完成しやすくなります。」「ただし、急いで2進化ポケモンにしても、ワザも使えない、逃げられないということになることもあるのでエネルギーの数には注意してください。」「場にたねポケモンが出ていて、手札にポケモンのカードがあれば、そのポケモンのカードを「ポケモン交換おじさん」で山札にもどし、2進化ポケモンカードを山札から持ってきて「ポケモン育て屋さん」で2進化ポケモンにします。」。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-548DD65",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-094",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-094 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR1",
+     "engine_classification": "CONFLICT（書き方）"
+    }
+   ]
   }
- ]
+ ],
+ "difference_kinds": {
+  "printed_vs_latest": "kyuura の文面は印刷の文面で、公式の書籍の最新の説明と違う（データの誤りではない。latest_description_ref で結ぶ）",
+  "data_error": "kyuura の値が、照合した資料（図版・最新の説明）と違う（data_error に、欄・kyuura の値・資料の値・根拠を書く。修正は別の作業）"
+ },
+ "gap_statuses": {
+  "open": "値を入れていない（調査課題。どの資料の、どの書き方の値を入れるかが決まっていない。推測で埋めない）"
+ }
 }

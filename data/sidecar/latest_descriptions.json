@@ -12,12 +12,14 @@
  "meaning_change_values": {
   "none_apparent": "意味の違いは読み取れない（読み方は推論で、公式の説明ではない）",
   "changed": "処理が変わる",
-  "unknown": "判断していない"
+  "unknown": "判断していない",
+  "ambiguous_in_print": "印刷の文面だけでは処理が決まらず、最新の説明がその読み方を決めた（意味が変わったかは判断しない。meaning_note に、何が決まらないかを書く）"
  },
  "image_check_values": {
   "match": "図版の印刷の文面と kyuura の文面が同じ",
   "consistent_where_legible": "図版の文字がかすれていて全部は読めないが、読める範囲で同じ",
-  "not_checked": "図版の文面は照合していない"
+  "not_checked": "図版の文面は照合していない",
+  "different_text": "図版の文面が転記と異なる。図版の版は未特定で、転記の誤りとは断定しない"
  },
  "records": [
   {
@@ -276,8 +278,8 @@
     "path": "pokemon.attacks[0].text.ja",
     "text_ja": "次の相手の番、このカードが相手のワザによるダメージを受けた時、(このカードが「きぜつ」するしないにかかわらず)相手にも10ダメージ。",
     "source_of_data": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%A4%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
-    "image_check": "not_checked",
-    "image_check_note": "p.82 の図版の文字は、ページ全体の画像では読めない大きさで、照合していない"
+    "image_check": "consistent_where_legible",
+    "image_check_note": "v0.13 の取り込みでは照合していなかった。v0.5〜v0.12 の取り込みで、図版を 600dpi で拡大して照合した。文字はかすれているが、「受けた時」「するしないにかかわらず」「相手にも10ダメージ」を含めて、読める範囲で kyuura の文面と同じ"
    },
    "latest_description": {
     "text_ja": "次の相手の番、このカードが相手のワザによるダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）相手に10ダメージを与える。",
@@ -319,14 +321,1879 @@
     },
     {
      "by": "kyuura-engine",
-     "import": "ENGINE-8FACF3A",
-     "document": "docs/rocket-moltres-v0.12.md",
-     "result": "v0.12 でワザ「ほのおのかべ」を登録するときに照合した記録（この取り込みでは v0.12 の裁定は取り込んでいない）"
+     "import": "ENGINE-B8054AF",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "v0.12 でワザ「ほのおのかべ」を登録するときに照合した記録（card_verification.json の PMCG5-020。「不一致あり」）"
+    },
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版と「ワザ」欄は 400〜600dpi で拡大）。OCR の文字は位置を探すのに使っただけ",
+     "result": "図版の印刷の文面を 600dpi で照合した（v0.5〜v0.12 の取り込み）"
     }
    ],
    "notes": [
     "こうらがえしとの比較のために照合した（docs/rules/card-rulings.md の比較）。",
     "p.82 の解説:「この10ダメージは、弱点・抵抗力の影響を受けます。」図版のダメージの目安は 40。"
+   ]
+  },
+  {
+   "id": "LD-PMCG1-001-ATK0",
+   "card_id": "PMCG1-001",
+   "card_name_ja": "フシギダネ",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "やどりぎのタネ"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "相手にダメージをあたえることができたら、その時点で自分のダメージカウンターを1つとりのぞくことができる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-001-fushigidane/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "相手にダメージを与えたら、自分にのっているダメージカウンターを1個とりのぞく。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "13",
+    "pdf_page": 15,
+    "location": "フシギダネ（LV.13／HP40。ポケモンカード第1弾）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "相手にダメージをあたえることができたら、その時点で",
+     "latest": "相手にダメージを与えたら、",
+     "kind": "wording"
+    },
+    {
+     "printed": "自分のダメージカウンターを1つ",
+     "latest": "自分にのっているダメージカウンターを1個",
+     "kind": "wording"
+    },
+    {
+     "printed": "とりのぞくことができる。",
+     "latest": "とりのぞく。",
+     "kind": "meaning"
+    }
+   ],
+   "meaning_change": "changed",
+   "meaning_note": "印刷の文面は「とりのぞくことができる」（とりのぞくかを選べると読める）、最新の説明は「とりのぞく」（選ばない）。自分のダメージカウンターをとりのぞくことが不利になる場面があるかは、kyuura では調べていない",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-0FBC3AB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録がないことを報告。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-011-PWR0",
+   "card_id": "PMCG1-011",
+   "card_name_ja": "フシギバナ",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "エナジートランス"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "フシギバナは自分の場にある「草」エネルギーを好きなだけ移動させることができる。「ねむり・マヒ・こんらん」状態の時には使えない。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-003-fushigibana/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない。特殊能力の見出しの「特殊／特種」（kyuura の jp_print.remarks）は、この本の図版では読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "この力は、自分の番の中で何度でも使える。自分の場にいるポケモンについている「草」エネルギーを、自分の場にいる別のポケモンにつけかえる。このカードが「ねむり・マヒ・こんらん」状態のとき、この力は使えない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "16",
+    "pdf_page": 18,
+    "location": "フシギバナ（LV.67／HP100。ポケモンカード第1弾）の「特殊能力」欄"
+   },
+   "also_quoted": [
+    {
+     "source": "P43",
+     "page": "323",
+     "location": "公式ルール「14 ポケモンの特殊能力」の例「［エナジートランス］の説明」"
+    }
+   ],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "フシギバナは自分の場にある「草」エネルギーを好きなだけ移動させることができる。",
+     "latest": "この力は、自分の番の中で何度でも使える。自分の場にいるポケモンについている「草」エネルギーを、自分の場にいる別のポケモンにつけかえる。",
+     "kind": "clarification"
+    },
+    {
+     "printed": "「ねむり・マヒ・こんらん」状態の時には使えない。",
+     "latest": "このカードが「ねむり・マヒ・こんらん」状態のとき、この力は使えない。",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "ambiguous_in_print",
+   "meaning_note": "印刷の文面は使える時（自分の番の中）を書かず、「好きなだけ移動」が 1 回の使用か何度もの使用かも書かない。最新の説明は「自分の番の中で何度でも」「別のポケモンにつけかえる」と書く。印刷の文面だけでは同じ処理に決まらない（意味が変わったかは判断しない）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-0FBC3AB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録がないことを報告。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-023-ATK1",
+   "card_id": "PMCG1-023",
+   "card_name_ja": "ゼニガメ",
+   "target": {
+    "kind": "attack",
+    "index": 1,
+    "name_ja": "からにこもる"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[1].text.ja",
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番に受けるダメージが0になる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-023-zenigame/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない。図版の文末の句点は読めない"
+   },
+   "latest_description": {
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+    "source": "P43",
+    "scan": "J38",
+    "page": "87",
+    "pdf_page": 89,
+    "location": "ゼニガメ（LV.8／HP40。ポケモンカード第1弾）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "次の相手の番に受けるダメージが0になる。",
+     "latest": "次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "「ダメージが0になる」と「ダメージを受けない」は、ダメージを計算するか（p.319・p.321）が違うが、結果が変わる場面は kyuura では見つけていない（推論）。最新の説明は「ダメージ以外の効果は受ける」を加えた",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-787FFF9",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録がないことを報告。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-027-ATK0",
+   "card_id": "PMCG1-027",
+   "card_name_ja": "カメール",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "からにこもる"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番に受けるダメージが0になる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-024-kameil/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない。図版の文末の句点は読めない"
+   },
+   "latest_description": {
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+    "source": "P43",
+    "scan": "J38",
+    "page": "88",
+    "pdf_page": 90,
+    "location": "カメール（LV.22／HP70。ポケモンカード第1弾。p.88 の 3 枚目）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "次の相手の番に受けるダメージが0になる。",
+     "latest": "次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "ゼニガメ（LD-PMCG1-023-ATK1）と同じ",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-787FFF9",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録がないことを報告。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-032-PWR0",
+   "card_id": "PMCG1-032",
+   "card_name_ja": "カメックス",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "あまごい"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "カメックスは自分の「水」ポケモンに対して、手札の「水」エネルギーを1度に何枚でもつけることができる。「ねむり・マヒ・こんらん」状態の時は使えない。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-025-kamex/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は光沢で一部がかすれていて全文は読めないが、読める範囲で kyuura の文面と同じ"
+   },
+   "latest_description": {
+    "text_ja": "この力は、自分の番の中で何度でも使える。自分の手札から「水」エネルギーカードを出して、自分の場の「水」ポケモンにつける。このカードが「ねむり・マヒ・こんらん」状態のとき、この力は使えない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "90",
+    "pdf_page": 92,
+    "location": "カメックス（LV.52／HP100。ポケモンカード第1弾。p.90 の 1 枚目）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "カメックスは自分の「水」ポケモンに対して、手札の「水」エネルギーを1度に何枚でもつけることができる。",
+     "latest": "この力は、自分の番の中で何度でも使える。自分の手札から「水」エネルギーカードを出して、自分の場の「水」ポケモンにつける。",
+     "kind": "clarification"
+    },
+    {
+     "printed": "「ねむり・マヒ・こんらん」状態の時は使えない。",
+     "latest": "このカードが「ねむり・マヒ・こんらん」状態のとき、この力は使えない。",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "ambiguous_in_print",
+   "meaning_note": "印刷の文面は使える時（自分の番の中）を書かず「1度に何枚でも」、最新の説明は「自分の番の中で何度でも使える」で 1 回につける枚数を書かない。どちらの文面も、つけたカードを p.310 の「1回の自分の番ごとに1枚」に数えるかを書かない（UQ-RAIN-DANCE-ATTACH-COUNT）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-787FFF9",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録がないことを報告。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-032-ATK0",
+   "card_id": "PMCG1-032",
+   "card_name_ja": "カメックス",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "ハイドロポンプ"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "「水」エネルギーを1つ追加すると、10ダメージ追加できる。(追加は2つまで)",
+    "source_of_data": "https://nazonobasho.com/pmcg01-025-kamex/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "ワザに必要なエネルギーよりも多く「水」エネルギーがついているとき、多い「水」エネルギー1個につき、10ダメージを追加する。ダメージ追加は2個ぶんまで。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "90",
+    "pdf_page": 92,
+    "location": "カメックス（LV.52／HP100）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "「水」エネルギーを1つ追加すると、10ダメージ追加できる。(追加は2つまで)",
+     "latest": "ワザに必要なエネルギーよりも多く「水」エネルギーがついているとき、多い「水」エネルギー1個につき、10ダメージを追加する。ダメージ追加は2個ぶんまで。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "ambiguous_in_print",
+   "meaning_note": "印刷の文面は、何に対して「追加」した「水」エネルギーを数えるか（ワザに必要なエネルギーより多い分か）を書かない。最新の説明がそれを決めた",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-787FFF9",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録がないことを報告。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-046-ATK0",
+   "card_id": "PMCG1-046",
+   "card_name_ja": "ユンゲラー",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "じこさいせい"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "自分の「超」エネルギーカードを1枚はがしてすてることによってダメージカウンターを全てとりのぞく。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-044-yungerer/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "自分についている「超」エネルギーカードを1枚トラッシュして、自分にのっているダメージカウンターを、すべてとりのぞく。トラッシュできないとき、このワザの効果はなくなる。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "151",
+    "pdf_page": 153,
+    "location": "ユンゲラー（LV.38／HP60。ポケモンカード第1弾。p.151 の 2 枚目）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "自分の「超」エネルギーカードを1枚はがしてすてることによって",
+     "latest": "自分についている「超」エネルギーカードを1枚トラッシュして、",
+     "kind": "wording"
+    },
+    {
+     "printed": "ダメージカウンターを全てとりのぞく。",
+     "latest": "自分にのっているダメージカウンターを、すべてとりのぞく。トラッシュできないとき、このワザの効果はなくなる。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "印刷の文面の「すてることによって」は、すてることがとりのぞく手段であることを表し、すてられなければとりのぞけないと読める（推論）。最新の説明はそれを明示した",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-22CBE24",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録がないことを報告。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-049-PWR0",
+   "card_id": "PMCG1-049",
+   "card_name_ja": "フーディン",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "ダメージスワップ"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "自分の場に出ているポケモンのダメージカウンターを、ポケモンが「きぜつ」しない範囲で自由に移動できる。「ねむり・マヒ・こんらん」状態の時は使えない。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-045-foodin/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は光沢で一部がかすれていて全文は読めないが、読める範囲で kyuura の文面と同じ"
+   },
+   "latest_description": {
+    "text_ja": "この力は、自分の番の中で何度でも使える。この力によってポケモンが「きぜつ」しないかぎり、自分の場にいるポケモンにのっているダメージカウンターを、自分の場にいる別のポケモンにのせかえる。このカードが「ねむり・マヒ・こんらん」状態のとき、この力は使えない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "153",
+    "pdf_page": 155,
+    "location": "フーディン（LV.42／HP80。ポケモンカード第1弾。p.153 の 1 枚目）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "自分の場に出ているポケモンのダメージカウンターを、ポケモンが「きぜつ」しない範囲で自由に移動できる。",
+     "latest": "この力は、自分の番の中で何度でも使える。この力によってポケモンが「きぜつ」しないかぎり、自分の場にいるポケモンにのっているダメージカウンターを、自分の場にいる別のポケモンにのせかえる。",
+     "kind": "clarification"
+    },
+    {
+     "printed": "「ねむり・マヒ・こんらん」状態の時は使えない。",
+     "latest": "このカードが「ねむり・マヒ・こんらん」状態のとき、この力は使えない。",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "ambiguous_in_print",
+   "meaning_note": "印刷の文面は使える時（自分の番の中）と使える回数を書かない。最新の説明は「自分の番の中で何度でも」と書く（1 回に移す数はどちらも書かない）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-22CBE24",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録がないことを報告。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG3-007-PWR0",
+   "card_id": "PMCG3-007",
+   "card_name_ja": "ベトベトン",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "かがくへんかガス"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "ベトベトンが場にいる限り、場にいるすべてのポケモンの特殊能力は使えず、その力も消える。(ただし、この「かがくへんかガス」という特殊能力は除く)「ねむり・マヒ・こんらん」状態の時、この「かがくへんかガス」の力は消える。",
+    "source_of_data": "https://nazonobasho.com/pmcg03-006-betbeton/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は光沢で一部がかすれていて全文は読めないが、読める範囲で kyuura の文面と同じ。ただし図版の「すべて」は漢字の「全て」に見える（かすれていて確かではない。CC-PMCG3-007-P48）"
+   },
+   "latest_description": {
+    "text_ja": "このカードが場にいるかぎり、「かがくへんかガス」以外のすべての「特殊能力」は使えず、その力も消える。このカードが「ねむり・マヒ・こんらん」状態のとき、この力は消える。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "48",
+    "pdf_page": 50,
+    "location": "ベトベトン（LV.34／HP70。ポケモンカード第3弾化石の秘密。p.48 の 2 枚目）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "ベトベトンが場にいる限り、場にいるすべてのポケモンの特殊能力は使えず、その力も消える。(ただし、この「かがくへんかガス」という特殊能力は除く)",
+     "latest": "このカードが場にいるかぎり、「かがくへんかガス」以外のすべての「特殊能力」は使えず、その力も消える。",
+     "kind": "clarification"
+    },
+    {
+     "printed": "「ねむり・マヒ・こんらん」状態の時、この「かがくへんかガス」の力は消える。",
+     "latest": "このカードが「ねむり・マヒ・こんらん」状態のとき、この力は消える。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "ambiguous_in_print",
+   "meaning_note": "印刷の文面の「この「かがくへんかガス」という特殊能力は除く」は、このカードのものだけを除くのか、名前が「かがくへんかガス」の特殊能力すべてを除くのかを決めない（ベトベトンが 2 匹いるとき、たがいに消し合うかが変わる）。また「「ねむり・マヒ・こんらん」状態の時」が、どのポケモンの状態かを書かない。最新の説明は「「かがくへんかガス」以外の」「このカードが」と書く",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D057F57",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録がないことを報告。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "notes": [
+    "p.323「14 ポケモンの特殊能力」の例も「最新の説明」として同じ内容を引くが、「このカードが場にあるかぎり」「すべての特殊能力」「状態の時」と書き方が少し違う（意味の違いは読み取れない）。そのため also_quoted（同じ文面の引用）には入れていない。"
+   ]
+  },
+  {
+   "id": "LD-PMCG3-003-ATK1",
+   "card_id": "PMCG3-003",
+   "card_name_ja": "ベトベター",
+   "target": {
+    "kind": "attack",
+    "index": 1,
+    "name_ja": "ちいさくなる"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[1].text.ja",
+    "text_ja": "次の相手の番でこのカードが受けるダメージは20へる。(ダメージ以外の効果はそのまま)",
+    "source_of_data": "https://nazonobasho.com/pmcg03-005-betbeter/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "次の相手の番、このカードがワザによって受けるダメージは「-20」される。（ダメージ以外の効果は受ける）",
+    "source": "P43",
+    "scan": "J38",
+    "page": "47",
+    "pdf_page": 49,
+    "location": "ベトベター（LV.17／HP50。ポケモンカード第3弾化石の秘密）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "次の相手の番で",
+     "latest": "次の相手の番、",
+     "kind": "wording"
+    },
+    {
+     "printed": "このカードが受けるダメージは20へる。",
+     "latest": "このカードがワザによって受けるダメージは「-20」される。",
+     "kind": "meaning"
+    },
+    {
+     "printed": "(ダメージ以外の効果はそのまま)",
+     "latest": "（ダメージ以外の効果は受ける）",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "changed",
+   "meaning_note": "印刷の文面は「受けるダメージ」で、ワザ以外（トレーナーカードなど）から受けるダメージを除いていない。最新の説明は「ワザによって受けるダメージ」に限る（読み方は推論）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D057F57",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録がないことを報告。エンジンは最新の説明にしたがい、kyuura の文面は照合にだけ使う）"
+    }
+   ],
+   "notes": [
+    "エンジンはこのカードを、ベトベトンの進化元が 2 枚あることを確かめる参照カードとしてだけ使い、ワザは実装していない。"
+   ]
+  },
+  {
+   "id": "LD-PMCG3-030-PWR0",
+   "card_id": "PMCG3-030",
+   "card_name_ja": "ゴースト",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "とうめい"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "このカードがワザによるダメージや効果を受ける時、コインを投げ、「おもて」ならこのカードはダメージや効果を受けない。「ねむり・マヒ・こんらん」状態の時、この力は消える。",
+    "source_of_data": "https://nazonobasho.com/pmcg03-030-ghost/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は光沢でかすれていて全文は読めないが、600dpi・1200dpi で読める範囲で kyuura の文面と同じ。「投げ」のあとの「、」は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "このカードがワザによってダメージや効果を受けるとき、コインを投げて「おもて」なら、このカードはそのダメージと効果を受けない。このカードが「ねむり・マヒ・こんらん」状態のとき、この力は消える。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "160",
+    "pdf_page": 162,
+    "location": "ゴースト（LV.17／HP50。ポケモンカード第3弾化石の秘密。p.160 の 2 枚目）の「特殊能力」欄"
+   },
+   "also_quoted": [
+    {
+     "source": "P43",
+     "page": "159",
+     "location": "特殊能力解説「とうめい」の引用"
+    },
+    {
+     "source": "P43",
+     "page": "323",
+     "location": "公式ルール「14 ポケモンの特殊能力」の例「［とうめい］の説明」"
+    }
+   ],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "このカードがワザによるダメージや効果を受ける時、コインを投げ、",
+     "latest": "このカードがワザによってダメージや効果を受けるとき、コインを投げて",
+     "kind": "wording"
+    },
+    {
+     "printed": "「おもて」ならこのカードはダメージや効果を受けない。",
+     "latest": "「おもて」なら、このカードはそのダメージと効果を受けない。",
+     "kind": "clarification"
+    },
+    {
+     "printed": "「ねむり・マヒ・こんらん」状態の時、この力は消える。",
+     "latest": "このカードが「ねむり・マヒ・こんらん」状態のとき、この力は消える。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "ambiguous_in_print",
+   "meaning_note": "印刷の文面の「ダメージや効果を受けない」は、コインを投げたときのダメージ・効果だけか、そのワザのダメージと効果のすべてかを決めない。最新の説明は「そのダメージと効果を受けない」と書く（1 つのワザでコインを 1 回とする読み方は CR-TRANSPARENCY-ONE-COIN-PER-ATTACK。推論）。また、印刷の文面は「ねむり・マヒ・こんらん」状態がどのポケモンの状態かを書かない",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-995504E",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（「ダメージや効果を受けない」と「そのダメージと効果を受けない」）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG3-029-ATK1",
+   "card_id": "PMCG3-029",
+   "card_name_ja": "ゴース",
+   "target": {
+    "kind": "attack",
+    "index": 1,
+    "name_ja": "エナジーへんかん"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[1].text.ja",
+    "text_ja": "自分のトラッシュから最大2枚のエネルギーカードを選び、手札に加える。その後、自分に10ダメージ。",
+    "source_of_data": "https://nazonobasho.com/pmcg03-029-ghos/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "自分のトラッシュから、「エネルギーカード」を最大2枚選び出し、手札に加える。その後、自分に10ダメージ。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "158",
+    "pdf_page": 160,
+    "location": "ゴース（LV.17／HP50。ポケモンカード第3弾化石の秘密。p.158 の 1 枚目）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "自分のトラッシュから最大2枚のエネルギーカードを選び、",
+     "latest": "自分のトラッシュから、「エネルギーカード」を最大2枚選び出し、",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "語順と「エネルギーカード」のかぎかっこの違い。どちらも 0 枚を選べるかは書かない（UQ-ENERGY-CONVERSION-ZERO）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-995504E",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（言い回し。意味は同じ）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-047-ATK1",
+   "card_id": "PMCG1-047",
+   "card_name_ja": "ゴースト",
+   "target": {
+    "kind": "attack",
+    "index": 1,
+    "name_ja": "ゆめくい"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[1].text.ja",
+    "text_ja": "相手が「ねむり」状態のときだけ、ダメージをあたえる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-047-ghost/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "相手が「ねむり」状態でないとき、このワザは失敗する。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "160",
+    "pdf_page": 162,
+    "location": "ゴースト（LV.22／HP60。ポケモンカード第1弾。p.160 の 3 枚目）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "相手が「ねむり」状態のときだけ、ダメージをあたえる。",
+     "latest": "相手が「ねむり」状態でないとき、このワザは失敗する。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "unknown",
+   "meaning_note": "印刷の文面は「ダメージをあたえる」条件、最新の説明は「ワザの失敗」（p.323「12」: 失敗してもワザを使ったことになる）。このワザにはダメージ以外の要素がなく、処理が変わる場面があるかは kyuura では調べていない",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-995504E",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（実装していない。エンジンは参照カードとしてだけ使う）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-057-PWR0",
+   "card_id": "PMCG1-057",
+   "card_name_ja": "カイリキー",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "はんげき"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "カイリキーがダメージをうけたときには、かならず10ダメージを相手にあたえる。このダメージは、弱点・抵抗力の影響を受けず、常に「10」である。「ねむり・マヒ・こんらん」状態のときにはつかえない。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-056-kairiky/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない。特殊能力の見出しの「特殊／特種」（kyuura の jp_print.remarks）は、この本の図版では読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "このカードが相手のワザによってダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）ダメージを与えたポケモンに、「弱点・抵抗力」に関係なく、10ダメージ。ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は、はたらかない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "192",
+    "pdf_page": 194,
+    "location": "カイリキー（LV.67／HP100。ポケモンカード第1弾。p.192 の 2 枚目）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "カイリキーがダメージをうけたときには、かならず10ダメージを相手にあたえる。",
+     "latest": "このカードが相手のワザによってダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）ダメージを与えたポケモンに、",
+     "kind": "meaning"
+    },
+    {
+     "printed": "このダメージは、弱点・抵抗力の影響を受けず、常に「10」である。",
+     "latest": "「弱点・抵抗力」に関係なく、10ダメージ。",
+     "kind": "wording"
+    },
+    {
+     "printed": "「ねむり・マヒ・こんらん」状態のときにはつかえない。",
+     "latest": "ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は、はたらかない。",
+     "kind": "meaning"
+    }
+   ],
+   "meaning_change": "changed",
+   "meaning_note": "印刷の文面では、どのダメージ（ワザ以外のダメージ、自分のワザのダメージを含む）でもはたらき、10 ダメージを与える相手は「相手」。最新の説明は「相手のワザによって」受けたダメージに限り、「ダメージを与えたポケモン」に与え、きぜつしてもはたらき、特殊状態を「ダメージを受けるとき」に見る。印刷の文面のままでは、カイリキーどうしではんげきが終わらない（エンジンの報告）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-43EC8BA",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（発生源・きぜつ・与える相手・特殊状態を判定する時点。意味が違う。最新の説明にしたがう）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-055-ATK0",
+   "card_id": "PMCG1-055",
+   "card_name_ja": "ゴーリキー",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "からてチョップ"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "自分のダメージカウンター×10だけ、相手にあたえるダメージがへる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-055-goriky/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "このワザのダメージは、自分にのっているダメージカウンターの数×10だけ、小さくなる。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "190",
+    "pdf_page": 192,
+    "location": "ゴーリキー（LV.40／HP80。ポケモンカード第1弾。p.190 の 3 枚目）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "自分のダメージカウンター×10だけ、相手にあたえるダメージがへる。",
+     "latest": "このワザのダメージは、自分にのっているダメージカウンターの数×10だけ、小さくなる。",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "どちらも、のっているダメージカウンターの数×10 を引く。どの計算の段階で引くかは、どちらの文面も書かない（CR-KARATE-CHOP-DAMAGE）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-43EC8BA",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（言い回し。意味は同じ）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG6-061-PWR0",
+   "card_id": "PMCG6-061",
+   "card_name_ja": "サカキのカイリキー",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "こんじょう"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "この力は、相手のワザによるダメージで、このカードが「きぜつ」する時、使える。コインを投げて「おもて」なら、このカードは「きぜつ」せず、このカードの残りHPは「10」になる。ダメージを受ける時、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/%E3%82%B5%E3%82%AB%E3%82%AD%E3%81%AE%E3%82%AB%E3%82%A4%E3%83%AA%E3%82%AD%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は光沢でかすれていて全文は読めないが、読める範囲で kyuura の文面と同じ（kyuura の文面の出典は Pokémon Wiki）"
+   },
+   "latest_description": {
+    "text_ja": "この力は、相手のワザによるダメージで、このカードが「きぜつ」するとき、使える。コインを投げて「おもて」なら、このカードは「きぜつ」せず、このカードの残りHPが「10」になる。ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "193",
+    "pdf_page": 195,
+    "location": "サカキのカイリキー（LV.50／HP100。ジム拡張第2弾闇からの挑戦）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "「きぜつ」する時、使える。",
+     "latest": "「きぜつ」するとき、使える。",
+     "kind": "wording"
+    },
+    {
+     "printed": "このカードの残りHPは「10」になる。",
+     "latest": "このカードの残りHPが「10」になる。",
+     "kind": "wording"
+    },
+    {
+     "printed": "ダメージを受ける時、",
+     "latest": "ダメージを受けるとき、",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "「時／とき」「は／が」の表記だけの違い",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-8BD1E5B",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（こんじょうの「時／とき」「残りHPは／が」の表記だけ。意味は同じ）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG5-020-PWR0",
+   "card_id": "PMCG5-020",
+   "card_name_ja": "R団のファイヤー",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "ふしちょう"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "この力は、このカードが「きぜつ」した時だけ、使える。このカードをトラッシュからとり出し、手札に加える。このカードが「ねむり・マヒ・こんらん」状態のまま「きぜつ」する時、この力は使えない。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%A4%E3%83%BC_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、光沢で一部がかすれているが、600dpi で読める範囲で kyuura の文面と同じ。句読点・括弧の全角半角は読み分けられない。「とり出し」の「と／取」は読み分けられない"
+   },
+   "latest_description": {
+    "text_ja": "この力は、このカードが「きぜつ」したとき、使える。このカードをトラッシュからとり出し、相手プレイヤーに見せてから、手札に加える。このカードが「ねむり・マヒ・こんらん」状態のまま「きぜつ」するとき、この力は使えない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "82",
+    "pdf_page": 84,
+    "location": "R団のファイヤー（LV.26／HP60。ジム拡張第1弾リーダーズスタジアム）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "「きぜつ」した時だけ、使える。",
+     "latest": "「きぜつ」したとき、使える。",
+     "kind": "wording"
+    },
+    {
+     "printed": "このカードをトラッシュからとり出し、手札に加える。",
+     "latest": "このカードをトラッシュからとり出し、相手プレイヤーに見せてから、手札に加える。",
+     "kind": "clarification"
+    },
+    {
+     "printed": "「きぜつ」する時、この力は使えない。",
+     "latest": "「きぜつ」するとき、この力は使えない。",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "最新の説明は「相手プレイヤーに見せてから」を加え、「だけ」を書かない。トラッシュは公開されているので、とり出すカードは相手にも分かる（推論）。「だけ」がなくても、使えるのは「きぜつ」したときと読める（CR-POWER-DECLARED-BY-USE-WORDING）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-13",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 150dpi、カードの図版・「特殊能力」「ワザ」欄・最新の説明は 600dpi で拡大。公式ルールのページは 250dpi）。OCR の文字は位置を探すのに使っただけ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-B8054AF",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（文面。最新の説明にしたがう）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG6-073-PWR0",
+   "card_id": "PMCG6-073",
+   "card_name_ja": "R団のカビゴン",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "わるいねぞう"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "このカードが「ねむり」状態で、相手のワザによるダメージを受けた時、（このカードが「きぜつ」するしないにかかわらず、）ダメージを与えたポケモンに20ダメージ。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%82%AB%E3%83%93%E3%82%B4%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、読める範囲で kyuura の文面と同じ。読点・句点の位置と括弧の幅は読めない"
+   },
+   "latest_description": {
+    "text_ja": "このカードが「ねむり」状態で、相手のワザによるダメージを受けたとき、（それによってこのカードが「きぜつ」しても、）ダメージを与えたポケモンに、20ダメージ。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "245",
+    "pdf_page": 247,
+    "location": "R団のカビゴン（LV.40／HP90。ジム拡張第2弾闇からの挑戦。p.245 の 2 枚目）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "受けた時",
+     "latest": "受けたとき",
+     "kind": "wording"
+    },
+    {
+     "printed": "（このカードが「きぜつ」するしないにかかわらず、）",
+     "latest": "（それによってこのカードが「きぜつ」しても、）",
+     "kind": "wording"
+    },
+    {
+     "printed": "ポケモンに20ダメージ",
+     "latest": "ポケモンに、20ダメージ",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "書き方の違いだけ。どちらも、ダメージの弱点・抵抗力を書かない（UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE。カイリキーの「はんげき」の最新の説明は「「弱点・抵抗力」に関係なく」と書く）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（印刷の文面と最新の説明の違い。kyuura の写しの文面は印刷の文面）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG6-073-ATK0",
+   "card_id": "PMCG6-073",
+   "card_name_ja": "R団のカビゴン",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "たおれこむ"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "ダメージを与えたあと、自分を「ねむり」状態にする。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/R%E5%9B%A3%E3%81%AE%E3%82%AB%E3%83%93%E3%82%B4%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、読める範囲で kyuura の文面と同じ。読点・句点の位置と括弧の幅は読めない"
+   },
+   "latest_description": {
+    "text_ja": "ダメージを与えた後、自分を「ねむり」状態にする。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "245",
+    "pdf_page": 247,
+    "location": "R団のカビゴン（p.245 の 2 枚目）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "与えたあと",
+     "latest": "与えた後",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "書き方の違いだけ。どちらの文面でも、「ダメージを与えた後」が順番の記述か条件かは決まらない（UQ-EFFECT-AFTER-NO-DAMAGE）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「不一致あり」（「あと」と「後」）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG6-023-PWR0",
+   "card_id": "PMCG6-023",
+   "card_name_ja": "キョウのベトベトン",
+   "target": {
+    "kind": "power",
+    "index": 0,
+    "name_ja": "だつりょくえき"
+   },
+   "printed_text": {
+    "path": "pokemon.powers[0].text.ja",
+    "text_ja": "このカードが相手のワザによってダメージを受ける時、(このカードが「きぜつ」するしないにかかわらず、)コインを投げて「おもて」なら、ダメージを与えたポケモンについているエネルギーカードを1枚選び、トラッシュする。ダメージを受ける時、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+    "source_of_data": "https://wiki.pokemonwiki.com/wiki/%E3%82%AD%E3%83%A7%E3%82%A6%E3%81%AE%E3%83%99%E3%83%88%E3%83%99%E3%83%88%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "図版の文字は小さく、読める範囲で kyuura の文面と同じ。読点・句点の位置と括弧の幅は読めない。kyuura の文面の括弧は半角（転記元のポケモンWiki のまま）"
+   },
+   "latest_description": {
+    "text_ja": "このカードが相手のワザによってダメージを受けるとき、（それによってこのカードが「きぜつ」しても、）コインを投げて「おもて」なら、ダメージを与えたポケモンについている「エネルギーカード」を1枚選び、トラッシュする。ダメージを受けるとき、すでにこのカードが「ねむり・マヒ・こんらん」状態だったなら、この力は使えない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "49",
+    "pdf_page": 51,
+    "location": "キョウのベトベトン（LV.38／HP80。ジム拡張第2弾闇からの挑戦。p.49 の 1 枚目）の「特殊能力」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "受ける時",
+     "latest": "受けるとき",
+     "kind": "wording"
+    },
+    {
+     "printed": "(このカードが「きぜつ」するしないにかかわらず、)",
+     "latest": "（それによってこのカードが「きぜつ」しても、）",
+     "kind": "wording"
+    },
+    {
+     "printed": "ついているエネルギーカードを",
+     "latest": "ついている「エネルギーカード」を",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "書き方の違いだけ。どちらの文面も、発動の文に「使える」がなく、最後が「この力は使えない」で、宣言する特殊能力かが決まらない（UQ-ENERGY-DRAIN-DECLARATION）。エネルギーカードがついていないときの記述もない（UQ-ENERGY-DRAIN-NO-ENERGY。英語版の文面には「if it has any」がある）",
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-14",
+     "method": "Internet Archive のスキャン [J38] の PDF を画像にして読んだ（ページ全体 110dpi で位置を確かめ、カードの図版・「特殊能力」「ワザ」欄・最新の説明・解説は 600dpi で拡大）。OCR の文字は使っていない。エンジンの 400dpi の照合の記録とは別に、kyuura で読んだ",
+     "result": "最新の説明の文面を画像で確かめた"
+    },
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "result": "「一致」（図版の文面は kyuura の写しと同じ。最新の説明は別に記録）"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-003-ATK0",
+   "card_id": "PMCG1-003",
+   "card_name_ja": "トランセル",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "かたまる"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-005-transel/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "エンジンの記録（300dpi の画像）: 図版「コインを投げて「おもて」なら 次の相手の番にうけるダメージが0になる。」は kyuura と同じ印刷の文面。「なら」のあとの読点は読み取れない。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+    "source": "P43",
+    "scan": "J38",
+    "page": "18",
+    "pdf_page": 20,
+    "location": "トランセル（LV.21／HP70。ポケモンカード第1弾）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "次の相手の番にうけるダメージが0になる。",
+     "latest": "次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "ゼニガメの「からにこもる」（LD-PMCG1-023-ATK1。kyuura が p.87 で確かめた）と同じ書きかえ。「ダメージが0になる」と「ダメージを受けない」は、ダメージを計算するか（p.319・p.321）が違うが、結果が変わる場面は kyuura では見つけていない（推論）。最新の説明は「ダメージ以外の効果は受ける」を加えた",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-003",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches の pokemon.attacks[0].text.ja。印刷の文面と最新の説明の違い）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録（card_verification.json の latest_description_ja・card_image_text_ja・mismatches・notes）による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-009-ATK0",
+   "card_id": "PMCG1-009",
+   "card_name_ja": "コクーン",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "かたまる"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-007-cocoon/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "エンジンの記録（300dpi の画像）: 図版の文面は kyuura と同じ印刷の文面（エンジンの転記は「なら、次の」と「なら 次の」の 2 とおりで、読点の有無は記録からは決まらない）。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+    "source": "P43",
+    "scan": "J38",
+    "page": "21",
+    "pdf_page": 23,
+    "location": "コクーン（LV.23／HP80。ポケモンカード第1弾）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "次の相手の番にうけるダメージが0になる。",
+     "latest": "次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "トランセルの「かたまる」（LD-PMCG1-003-ATK0）・ゼニガメの「からにこもる」（LD-PMCG1-023-ATK1）と同じ書きかえ。結果が変わる場面は kyuura では見つけていない（推論）",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-009",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches の pokemon.attacks[0].text.ja。印刷の文面と最新の説明の違い）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録（card_verification.json の latest_description_ja・card_image_text_ja・mismatches・notes）による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-012-ATK0",
+   "card_id": "PMCG1-012",
+   "card_name_ja": "スピアー",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "ダブルニードル"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "コインを2枚投げて「おもて」の出た数×30のダメージ。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-008-spear/",
+    "image_check": "match",
+    "image_check_note": "エンジンの記録（300dpi の画像）: 図版「コインを2枚投げて「おもて」の出た数×30のダメージ。」は kyuura と同じ印刷の文面。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "コインを2枚投げ、「おもて」の数×30のダメージ。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "21",
+    "pdf_page": 23,
+    "location": "スピアー（LV.32／HP80。ポケモンカード第1弾）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "投げて",
+     "latest": "投げ、",
+     "kind": "wording"
+    },
+    {
+     "printed": "出た数",
+     "latest": "数",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "書き方だけの違い。コイン 2 枚・「おもて」の数×30 のダメージは同じ（わるいカメールの「おうふくびんた」（LD-PMCG4-021-ATK0）と同じ形の書きかえ）",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-012",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 300dpi の画像にして目で読んだ（エンジンの記録の notes）。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない（同 method）",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches の pokemon.attacks[0].text.ja。印刷の文面と最新の説明の違い）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録（card_verification.json の latest_description_ja・card_image_text_ja・mismatches・notes）による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG2-007-ATK0",
+   "card_id": "PMCG2-007",
+   "card_name_ja": "バタフリー",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "ふきとばし"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "相手を控えポケモンと入れ替える。控えポケモンは相手プレイヤーがえらぶ。相手プレイヤーに控えポケモンがいないときには入れ替えはおこらない。",
+    "source_of_data": "https://nazonobasho.com/pmcg02-001-butterfree/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "エンジンの記録（400dpi の画像）: 図版の文面は kyuura と同じ印刷の文面（文字が小さく、「入れ替える」のあとの句読点は読みきれない）。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "相手を控えポケモンと入れ替える。入れ替わるポケモンは、相手が選ぶ。（相手に控えがいないとき、入れ替えはおこらない）",
+    "source": "P43",
+    "scan": "J38",
+    "page": "19",
+    "pdf_page": 21,
+    "location": "バタフリー（LV.28／HP70。ポケモンカード第2弾ポケモンジャングル）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "控えポケモンは相手プレイヤーがえらぶ。",
+     "latest": "入れ替わるポケモンは、相手が選ぶ。",
+     "kind": "clarification"
+    },
+    {
+     "printed": "相手プレイヤーに控えポケモンがいないときには入れ替えはおこらない。",
+     "latest": "（相手に控えがいないとき、入れ替えはおこらない）",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "相手の対戦ポケモンを控えと入れ替える・入れ替わる控えは相手が選ぶ・控えがいなければ入れ替えない、は同じと読める（推論）。「控えポケモン」を「入れ替わるポケモン」と書き直した",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-007",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 400dpi の画像にして目で読み、v0.4b・v0.4c の低い解像度の画像の読み取りを確かめ直した（エンジンの記録の notes）。印刷物の実物ではない",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches の pokemon.attacks[0].text.ja。印刷の文面と最新の説明の違い）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録（card_verification.json の latest_description_ja・card_image_text_ja・mismatches・notes）による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG2-007-ATK1",
+   "card_id": "PMCG2-007",
+   "card_name_ja": "バタフリー",
+   "target": {
+    "kind": "attack",
+    "index": 1,
+    "name_ja": "メガドレイン"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[1].text.ja",
+    "text_ja": "相手に与えたダメージの半分(切り上げ)のダメージカウンターを自分からとりのぞく。",
+    "source_of_data": "https://nazonobasho.com/pmcg02-001-butterfree/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "エンジンの記録（400dpi の画像）: 図版「相手に与えたダメージの半分（切り上げ）のダメージカウンターを自分からとりのぞく」は kyuura と同じ印刷の文面（括弧は図版では全角、kyuura は半角。句読点は読みきれない）。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "相手にダメージを与えたら、その半分（切り上げ）のダメージカウンターを、自分からとりのぞく。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "19",
+    "pdf_page": 21,
+    "location": "バタフリー（LV.28／HP70。ポケモンカード第2弾ポケモンジャングル）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "相手に与えたダメージの半分(切り上げ)のダメージカウンターを自分から",
+     "latest": "相手にダメージを与えたら、その半分（切り上げ）のダメージカウンターを、自分から",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "最新の説明は「相手にダメージを与えたら」と、とりのぞく条件を書いた。印刷の文面でも、与えたダメージが 0 なら半分は 0 なので、とりのぞく数は同じと読める（推論）。「与えたダメージ」は最終ダメージ（p.319）",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-D90BCE1",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-007",
+     "source_checked_on": "2026-10-12",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive のスキャン [J38] の PDF のページを 400dpi の画像にして目で読み、v0.4b・v0.4c の低い解像度の画像の読み取りを確かめ直した（エンジンの記録の notes）。印刷物の実物ではない",
+     "scope": "見出しのレベル・HP・収録商品、図版のタイプ・ワザの名前・必要なエネルギー・ダメージの目安・ワザの説明・にげる・弱点・抵抗力、「ワザ」欄の最新の説明、解説文のうち処理に関わる記述（エンジンの checked_fields_attack_text）",
+     "result": "「不一致あり」（mismatches の pokemon.attacks[1].text.ja。印刷の文面と最新の説明の違い）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録（card_verification.json の latest_description_ja・card_image_text_ja・mismatches・notes）による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-077-TRAINER",
+   "card_id": "PMCG1-077",
+   "card_name_ja": "オーキドはかせ",
+   "target": {
+    "kind": "trainer",
+    "name_ja": "オーキドはかせ"
+   },
+   "printed_text": {
+    "path": "trainer.text.ja",
+    "text_ja": "自分の手札を全部すてて、新たに7枚のカードを自分の山札から引いて手札にする。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-073-ookidohakase/",
+    "image_check": "match",
+    "image_check_note": "エンジンの記録では図版の文面と転記が一致。印刷の刷までは確認していない。kyuuraは画像を再読していない。"
+   },
+   "latest_description": {
+    "text_ja": "あなたの手札をすべてトラッシュする。その後、山札からカードを7枚引いて、手札にする。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "255",
+    "pdf_page": 257,
+    "location": "オーキドはかせの最新の説明（エンジンの照合記録の取り込み）"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "自分の手札を全部すてて、新たに7枚のカードを自分の山札から引いて手札にする。",
+     "latest": "あなたの手札をすべてトラッシュする。その後、山札からカードを7枚引いて、手札にする。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "エンジンの記録では、トラッシュ後に7枚引く順を明示した書き直しで、意味は矛盾しないとする。その解釈を再利用した。",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-A09FF9B",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-077",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-077 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "notes": [
+    "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は印刷の転記（なぞのばしょ）で、図版と同じ。最新の説明は「手札を全部すてて」を「手札をすべてトラッシュする」に、「新たに…引いて手札にする」を「その後、…引いて、手札にする」に改めている（意味は矛盾しない。トラッシュしてから引く順を明示する）。p.6 により最新の説明にしたがう。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。kyuura に、このカードの照合の記録（CC-）・最新の説明・p.255 のページの記録がないことを報告事項とする（誤りとは決めない。kyuura のサイドカーの最新の説明の記録はワザ・特殊能力だけで、トレーナーの形式はない）"
+   ]
+  },
+  {
+   "id": "LD-PMCG1-072-TRAINER",
+   "card_id": "PMCG1-072",
+   "card_name_ja": "突風",
+   "target": {
+    "kind": "trainer",
+    "name_ja": "突風"
+   },
+   "printed_text": {
+    "path": "trainer.text.ja",
+    "text_ja": "相手の場の対戦ポケモンと控えポケモンを入れ替える。どの控えポケモンを出させるかは、自分が自由に選ぶことができる。相手に控えがいない場合は使えない。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-080-toppu/",
+    "image_check": "different_text",
+    "image_check_note": "図版の文面は転記と異なる。図版が第1弾初版の文面とは確かめられておらず、版の相違とデータ誤りを区別して保留する。kyuuraは画像を再読していない。",
+    "image_text_ja": "相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。"
+   },
+   "latest_description": {
+    "text_ja": "相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "255",
+    "pdf_page": 257,
+    "location": "突風の最新の説明（エンジンの照合記録の取り込み）"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "相手の場の対戦ポケモンと控えポケモンを入れ替える。どの控えポケモンを出させるかは、自分が自由に選ぶことができる。相手に控えがいない場合は使えない。",
+     "latest": "相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "unknown",
+   "meaning_note": "エンジンの照合記録にある印刷の文面と最新の説明の相違を保存。書き方だけか、処理が変わるかを今回の取り込みで新たに確定しない。",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-36E3630",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-072",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-072 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "notes": [
+    "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は第1弾の印刷の転記（なぞのばしょ）。p.255 の図版（第1弾の版ではない可能性が高い）と最新の説明には、「どの控えポケモンを出させるかは、自分が自由に選ぶことができる」「相手に控えがいない場合は使えない」がない。選ぶのが使ったプレイヤーであることは最新の説明と解説で決まる（GW2）。控えがいないときの一文は最新の説明にないので、p.6 により最新の説明にしたがい、印刷の文面で補わない。一文がなくなったことを「使える」と読むこともできないので、控えがいないときは UNRESOLVED（UNRESOLVED_GUST_WITHOUT_OPPONENT_BENCH）。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。kyuura に、このカードの照合の記録（CC-）・最新の説明・p.255 のページの記録がないこと、kyuura のdocs/cards/reprints.md（data/curation/other_products.json の reprint_text）が文面の変更を「書き方だけ」（wording）と分類しているが、控えがいないときの一文がなくなったことの根拠を書いていないことを報告事項とする（誤りとは決めない）"
+   ]
+  },
+  {
+   "id": "LD-PMCG1-090-TRAINER",
+   "card_id": "PMCG1-090",
+   "card_name_ja": "パソコン通信",
+   "target": {
+    "kind": "trainer",
+    "name_ja": "パソコン通信"
+   },
+   "printed_text": {
+    "path": "trainer.text.ja",
+    "text_ja": "手札から2枚カードをすてることによって、山札から好きなカードを1枚選んで手札にすることができる。そのあとで山札をよくきってもとに戻す。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-083-pasokontsuushin/",
+    "image_check": "match",
+    "image_check_note": "エンジンの記録では図版の文面と転記が一致。印刷の刷までは確認していない。kyuuraは画像を再読していない。"
+   },
+   "latest_description": {
+    "text_ja": "手札からカードを2枚選んでトラッシュしなければ、このカードは使えない。あなたの山札からカードを1枚選び出し、手札に加える。その後、その山札をよく切る。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "260",
+    "pdf_page": 262,
+    "location": "パソコン通信の最新の説明（エンジンの照合記録の取り込み）"
+   },
+   "also_quoted": [
+    {
+     "source": "P43",
+     "page": "310",
+     "location": "使うための条件の例"
+    }
+   ],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "手札から2枚カードをすてることによって、山札から好きなカードを1枚選んで手札にすることができる。そのあとで山札をよくきってもとに戻す。",
+     "latest": "手札からカードを2枚選んでトラッシュしなければ、このカードは使えない。あなたの山札からカードを1枚選び出し、手札に加える。その後、その山札をよく切る。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "unknown",
+   "meaning_note": "エンジンの照合記録にある印刷の文面と最新の説明の相違を保存。書き方だけか、処理が変わるかを今回の取り込みで新たに確定しない。",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-5844FCF",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-090",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-090 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "notes": [
+    "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は印刷の転記（なぞのばしょ）で、図版と同じ。最新の説明は「すてることによって…できる」を「選んでトラッシュしなければ、このカードは使えない」（使うための条件。p.310）に、「好きなカードを1枚選んで手札にすることができる」を「カードを1枚選び出し、手札に加える」に、「よくきってもとに戻す」を「その後、その山札をよく切る」に改めている。p.6 により最新の説明にしたがう（選び出すのは省略できない形・トラッシュは使うための条件）。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。kyuura に、このカードの照合の記録（CC-）・最新の説明・p.260 のページの記録と、山札が 0 枚のときの論点がないことを報告事項とする（誤りとは決めない）"
+   ]
+  },
+  {
+   "id": "LD-PMCG1-076-TRAINER",
+   "card_id": "PMCG1-076",
+   "card_name_ja": "エネルギー回収",
+   "target": {
+    "kind": "trainer",
+    "name_ja": "エネルギー回収"
+   },
+   "printed_text": {
+    "path": "trainer.text.ja",
+    "text_ja": "手札から1枚のカードをすてることによって、トラッシュから2枚の好きなエネルギーカードをひろって、手札に加えることができる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-071-energykaishu/",
+    "image_check": "different_text",
+    "image_check_note": "図版の文面は転記と異なる。図版が第1弾初版の文面とは確かめられておらず、版の相違とデータ誤りを区別して保留する。kyuuraは画像を再読していない。",
+    "image_text_ja": "手札からカードを1枚選んでトラッシュしなければ、このカードは使えない。あなたのトラッシュから基本エネルギーカードを最大2枚選び、手札に加えてよい。(ただし、このカードを使うためにトラッシュしたカードを選ぶことはできない)"
+   },
+   "latest_description": {
+    "text_ja": "手札からカードを1枚選んでトラッシュしなければ、このカードは使えない。あなたのトラッシュから「基本エネルギーカード」を最大2枚選び出し、手札に加える。ただし、このカードを使うためにトラッシュしたカードを選ぶことはできない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "257",
+    "pdf_page": 259,
+    "location": "エネルギー回収の最新の説明（エンジンの照合記録の取り込み）"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": "ERR-ENERGY-RETRIEVAL",
+   "differences": [
+    {
+     "printed": "手札から1枚のカードをすてることによって、トラッシュから2枚の好きなエネルギーカードをひろって、手札に加えることができる。",
+     "latest": "手札からカードを1枚選んでトラッシュしなければ、このカードは使えない。あなたのトラッシュから「基本エネルギーカード」を最大2枚選び出し、手札に加える。ただし、このカードを使うためにトラッシュしたカードを選ぶことはできない。",
+     "kind": "meaning"
+    }
+   ],
+   "meaning_change": "changed",
+   "meaning_note": "公式エラッタ ERR-ENERGY-RETRIEVAL と対応。基本エネルギー限定・支払ったカードの除外を記す。",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-CD641E6",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-076",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-076 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "notes": [
+    "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は第1弾の印刷の転記（なぞのばしょ）で、「好きなエネルギーカード」（基本エネルギーに限らない）・「すてることによって…できる」。最新の説明は「「基本エネルギーカード」を最大2枚」・「選んでトラッシュしなければ、このカードは使えない」（使うための条件。p.310）・「このカードを使うためにトラッシュしたカードを選ぶことはできない」。kyuura の ERR-ENERGY-RETRIEVAL（公式のエラッタ。会報 Vol.5・p.257）と同じ違いで、誤りではない。p.6 により最新の説明にしたがう。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。図版は「手札に加えてよい」と書くが、処理の根拠にはしない。kyuura に、このカードの照合の記録（CC-）・最新の説明（LD-）と、ER9・ER10 の論点がないことを報告事項とする"
+   ]
+  },
+  {
+   "id": "LD-PMCG1-093-TRAINER",
+   "card_id": "PMCG1-093",
+   "card_name_ja": "ポケモン交換おじさん",
+   "target": {
+    "kind": "trainer",
+    "name_ja": "ポケモン交換おじさん"
+   },
+   "printed_text": {
+    "path": "trainer.text.ja",
+    "text_ja": "自分の山札から好きなポケモンカードか進化カードを1枚選んで、手札のポケモンカードか進化カードと交換することができる。そのあとで、自分の山札をよくきる。交換するカードは相手に見せなければならない。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-088-pokemonkoukanojisan/",
+    "image_check": "match",
+    "image_check_note": "エンジンの記録では図版の文面と転記が一致。印刷の刷までは確認していない。kyuuraは画像を再読していない。"
+   },
+   "latest_description": {
+    "text_ja": "手札から「たねポケモン」または「進化カード」を1枚選び、相手プレイヤーに見せてから、あなたの山札にもどす。それができないとき、このカードは使えない。あなたの山札から「たねポケモン」または「進化カード」を1枚選び出し、相手プレイヤーに見せてから、手札に加える。その後、その山札をよく切る。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "259",
+    "pdf_page": 261,
+    "location": "ポケモン交換おじさんの最新の説明（エンジンの照合記録の取り込み）"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "自分の山札から好きなポケモンカードか進化カードを1枚選んで、手札のポケモンカードか進化カードと交換することができる。そのあとで、自分の山札をよくきる。交換するカードは相手に見せなければならない。",
+     "latest": "手札から「たねポケモン」または「進化カード」を1枚選び、相手プレイヤーに見せてから、あなたの山札にもどす。それができないとき、このカードは使えない。あなたの山札から「たねポケモン」または「進化カード」を1枚選び出し、相手プレイヤーに見せてから、手札に加える。その後、その山札をよく切る。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "unknown",
+   "meaning_note": "エンジンの照合記録にある印刷の文面と最新の説明の相違を保存。書き方だけか、処理が変わるかを今回の取り込みで新たに確定しない。",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-6EE7C40",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-093",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-093 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "notes": [
+    "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は第1弾の印刷の転記（なぞのばしょ）で、図版と同じ。最新の説明は「交換することができる」を、手札のカードを見せて先に山札にもどす（使うための条件。「それができないとき、このカードは使えない」）→ 山札から選び出して見せて手札に加える → その山札をよく切る、の順番に書き、「ポケモンカード」を「たねポケモン」に改めている（kyuura の docs/cards/reprints.md がクイックスターターギフトの再録の書き方の違いとして挙げるものと同じ向き）。p.6 により最新の説明にしたがう。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。kyuura にこのカードの照合の記録（CC-）・最新の説明（LD-）がないことを報告事項とする（誤りとは決めない）"
+   ]
+  },
+  {
+   "id": "LD-PMCG1-094-TRAINER",
+   "card_id": "PMCG1-094",
+   "card_name_ja": "ポケモン育て屋さん",
+   "target": {
+    "kind": "trainer",
+    "name_ja": "ポケモン育て屋さん"
+   },
+   "printed_text": {
+    "path": "trainer.text.ja",
+    "text_ja": "ポケモンを進化させるときに使う。2進化カードをいきなりつけることができる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-091-pokemonsodateyasan/",
+    "image_check": "match",
+    "image_check_note": "エンジンの記録では図版の文面と転記が一致。印刷の刷までは確認していない。kyuuraは画像を再読していない。"
+   },
+   "latest_description": {
+    "text_ja": "このカードは、あなたが自分の場にいるポケモンを進化させるときにだけ、使える。そのポケモンの上に「2進化カード」を直接のせ、1進化をとばして「2進化ポケモン」に進化させる。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "259",
+    "pdf_page": 261,
+    "location": "ポケモン育て屋さんの最新の説明（エンジンの照合記録の取り込み）"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "ポケモンを進化させるときに使う。2進化カードをいきなりつけることができる。",
+     "latest": "このカードは、あなたが自分の場にいるポケモンを進化させるときにだけ、使える。そのポケモンの上に「2進化カード」を直接のせ、1進化をとばして「2進化ポケモン」に進化させる。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "unknown",
+   "meaning_note": "エンジンの照合記録にある印刷の文面と最新の説明の相違を保存。書き方だけか、処理が変わるかを今回の取り込みで新たに確定しない。",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-548DD65",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-094",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-094 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "notes": [
+    "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は第1弾の印刷の転記（なぞのばしょ）で、図版と同じ。最新の説明は「進化させるときに使う」を「進化させるときにだけ、使える」（使うための条件）に、「2進化カードをいきなりつけることができる」を「そのポケモンの上に「2進化カード」を直接のせ、1進化をとばして「2進化ポケモン」に進化させる」（重ねる相手と、1 進化を飛ばすこと）に書いている。p.6 により最新の説明にしたがう。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。kyuura にこのカードの照合の記録（CC-）・最新の説明（LD-）がないことを報告事項とする（誤りとは決めない）"
    ]
   }
  ]

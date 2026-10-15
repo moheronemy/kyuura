@@ -481,6 +481,16 @@ def build_records(args):
             f.write('\n')
         print(f'{source}: {len(pairs)} matched, {len(unmatched)} unmatched, {len(report)} differences')
 
+    for r in records:  # 日本語テキストの出典の印刷の情報を、公式資料で確かめた値に直す（ja_text.json の jp_print。直す欄だけ）
+        fix = ja_texts.get(r['id'], {}).get('jp_print')
+        if fix:
+            if not r['jp_print']:
+                raise SystemExit(f"jp_print の補正の対象がない（日本語テキストの出典の印刷の情報がない）: {r['id']}")
+            unknown_keys = set(fix) - set(r['jp_print'])
+            if unknown_keys:
+                raise SystemExit(f"jp_print の補正に知らない欄がある: {r['id']} {sorted(unknown_keys)}")
+            r['jp_print'].update(fix)
+
     unknown = set(diffs) - {r['id'] for r in records} - {'_comment'}
     unknown |= set(ja_texts) - {r['id'] for r in records} - {'_comment', '_example'}
     if unknown:

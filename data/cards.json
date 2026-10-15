@@ -14824,7 +14824,7 @@
     "attacks": [
      {
       "name": {
-       "ja": "したでなめる",
+       "ja": "まきつくベロ",
        "en": "Tongue Wrap"
       },
       "cost": [
@@ -14862,16 +14862,18 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "なぞのばしょは 1 つめのワザ名を「したでなめる」、レベルを「29」と誤記している。『ポケモンカードオフィシャルブック2000』p.234 の見出し・図版は「LV.26」、図版と「ワザ」欄のワザ名は「まきつくベロ」（英語版 Jungle 38 も LV.26・Tongue Wrap）。kyuura で 600dpi の画像で確かめた（data/sidecar/card_checks.json の CC-PMCG2-041-P234）"
+   ],
    "source_ids": {
     "tcgdex": "PMCG2-041",
     "pokemontcg": [
      "base2-38"
     ]
    },
-   "ja_text_source": "https://nazonobasho.com/pmcg02-043-beroringa/",
+   "ja_text_source": "『ポケモンカードオフィシャルブック2000』p.234 [P43]（スキャン [J38]）の図版と「ワザ」欄（ワザ名・LV）。効果文は なぞのばしょ（https://nazonobasho.com/pmcg02-043-beroringa/）と同じで、同じページの図版・最新の説明とも合う",
    "jp_print": {
-    "level": 29,
+    "level": 26,
     "rarity": "◆(U)",
     "series": "ポケモンジャングル",
     "remarks": [],
@@ -38027,7 +38029,19 @@
    },
    "trainer": null,
    "energy": null,
-   "jp_en_differences": [],
+   "jp_en_differences": [
+    {
+     "kind": "text",
+     "summary": "ポケモンパワー だつりょくえき（Energy Drain）: ダメージを与えたポケモンにエネルギーカードがないときの扱いを、英語版だけが書いている",
+     "ja": "印刷の文面（ポケモンWiki の転記）と『ポケモンカードオフィシャルブック2000』p.49 の最新の説明は「コインを投げて「おもて」なら、ダメージを与えたポケモンについている「エネルギーカード」を1枚選び、トラッシュする」で、エネルギーカードがないときの記述がない。そのときにコインを投げるかは、日本版の資料では決まっていない（kyuura の未解決の論点 UQ-ENERGY-DRAIN-NO-ENERGY）",
+     "en": "「flip a coin. If heads and if it has any, choose 1 Energy card attached to the attacking Pokémon and discard it.」と、エネルギーカードがあるときだけ選んでトラッシュすると書く。英語版の文面は、日本版の処理の根拠にしていない",
+     "confidence": "確実",
+     "sources": [
+      "N2",
+      "P43"
+     ]
+    }
+   ],
    "notes": [],
    "source_ids": {
     "tcgdex": "PMCG6-023",

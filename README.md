@@ -23,7 +23,7 @@
 - [旧裏・新裏の混合ルール（2001〜2003年）](docs/rules/mixed-2002.md) — 裏面の変更後の混合、サポーター・ポケパワー/ポケボディーへの読み替え、殿堂入りカード、バトルロード 2002
 - [新ガルーラルール（2002年）](docs/rules/kangaskhan-2002.md) — 旧裏と新裏の山札を使い分ける 2 人 1 組の対戦と「タッチ世代交代！」
 - [カードの文面の変更とエラッタの履歴](docs/rules/errata-history.md) — 印刷の変更・公式エラッタ・読み替えの区別
-- [カードの裁定と公式の最新の説明](docs/rules/card-rulings.md) — カード・ワザごとの公式の書籍の「最新の説明」（印刷の文面とは別に記録）、照合、裁定（CONFIRMED・SUPPORTED）、未解決の論点、kyuura-engine の裁定 id との対応（わるいカメールの「こうらがえし」など）
+- [カードの裁定と公式の最新の説明](docs/rules/card-rulings.md) — カード・ワザごとの公式の書籍の「最新の説明」（印刷の文面とは別に記録）、照合、裁定（CONFIRMED・SUPPORTED）、未解決の論点、kyuura-engine v0.25までの裁定 id との対応（エナジートランス・あまごい・ダメージスワップ・かがくへんかガス・とうめい・はんげき・こんじょう・ふしちょう・ほのおのかべ・こうらがえし・わるいねぞう・たおれこむ・だつりょくえきなど）
 - [出典と確認状況](docs/sources.md)、[印刷物の照合記録](docs/printed-sources.md)（スキャンで確認した会報・雑誌・書籍の巻号とページ）
 - [調査の状況](docs/research-status.md) — 分野ごとにどこまで確かめられたか、件数、未解決の問題、必要な原本
 - [エンジン開発の準備状況](docs/engine-readiness.md) — 対戦エンジン（別のリポジトリ [kyuura-engine](https://github.com/moheronemy/kyuura-engine)）の基準にしたルールと調査データ。エンジンを作り始める前の計画も記録として残している
@@ -46,17 +46,42 @@
 - [`data/sidecar/`](data/sidecar/) — `data/cards.json` を変えずにカード・ワザに加える出典つきの情報（公式の最新の説明、カードの照合、裁定と未解決の論点）。形式は [docs/data-schema.md の「サイドカー」](docs/data-schema.md#サイドカーdatasidecar)
 - 生成スクリプト: [`scripts/`](scripts/README.md)、テスト: `python3 -m unittest discover -s tests`
 
-サイドカーの参照の例（リポジトリの直下で実行）:
+### サイドカーの使いかた（リポジトリの直下で実行）
+
+印刷の文面は `data/cards.json`、公式の書籍の最新の説明・照合・裁定・未解決の論点は `data/sidecar/` にあります（最新の説明は印刷の文面を書きかえず、公式エラッタとも別に記録しています）。どれも `scripts/build_card_rulings.py` の関数で引けます。
 
 ```python
 import sys; sys.path.insert(0, 'scripts')
 import build_card_rulings as bcr
 
-notes = bcr.annotations_for(bcr.load(), 'PMCG4-021')  # わるいカメール
+ctx = bcr.load()
+card = ctx['cards']['PMCG1-032']                                   # カメックス
+# 1. 印刷の文面（data/cards.json）
+print(card['pokemon']['powers'][0]['text']['ja'])
+# 2. 公式の最新の説明（『オフィシャルブック2000』のページつき）と、印刷の文面との違い
+notes = bcr.annotations_for(ctx, 'PMCG1-032')
 for ld in notes['latest_descriptions']:
-    print(ld['target']['name_ja'], ld['latest_description']['text_ja'])
-print([x['id'] for x in notes['issues']])
+    print(ld['id'], ld['latest_description']['page'], ld['latest_description']['text_ja'], ld['meaning_change'])
+# 3. そのカードの裁定（CONFIRMED・SUPPORTED）。複数のカードに共通の裁定も入る
+for x in notes['rulings']:
+    print(x['id'], x['status'], x['conclusion'])
+# 4. 裁定の根拠の一般の規定（条項）
+clauses = {c['id']: c for c in ctx['rulings']['rule_clauses']}
+for ref in notes['rulings'][0]['rule_clause_refs']:
+    print(ref, clauses[ref]['section'])
+# 5. 未解決の論点（公式の資料で決められない問い）
+for q in notes['issues']:
+    print(q['id'], q['question'], q['audit']['game_effect'])   # 結果への影響（監査）
+# 6. kyuura-engine の版と裁定の id から、kyuura の記録を引く（版が違えば同じ id でも別の裁定）
+print(bcr.find_engine_ruling(ctx, 'v0.6', 'R13'))   # あまごいのあとの通常のエネルギー → 未解決の論点
+print(bcr.find_engine_ruling(ctx, 'v0.13', 'S1'))   # こうらがえし（v0.7 の S1 はダメージスワップ）
+# 7. 未解決の数（kyuura の論点の数と、エンジンの未解決の裁定・停止コードの数は別の数）
+uc = bcr.unresolved_counts(ctx)
+print(uc['research_issues'], uc['engine_total'], uc['engine_stop_codes'])
 ```
+
+7. **エンジンの新しい版を取り込むとき**: `data/sidecar/rulings.json` の `engine_imports` に版ごとの記録を 1 件加え（`ENGINE-<コミットの先頭 7 桁>`。`commit`・`documents`・文書ごとの `ruling_sets`）、範囲のすべての id を記録の `engine_refs` か `not_imported`（理由つき）に結びます。最新の説明・照合・裁定は、[照合済みの記録の再利用手順](docs/engine-readiness.md#10-照合済みの記録の再利用2026-10-15)に従って記録します。原典の確認者と範囲が追えるエンジンの記録は、出所を保って取り込めます。不足する範囲だけ画像を確認します。形式は [docs/data-schema.md の「サイドカー」](docs/data-schema.md#サイドカーdatasidecar)。
+8. **検査**: `python3 scripts/build_card_rulings.py --check`（データの検査と、生成したページ [docs/rules/card-rulings.md](docs/rules/card-rulings.md) が最新か）、`python3 -m unittest discover -s tests`。生成したページは手で編集しません（`python3 scripts/build_card_rulings.py` で作り直す）。
 
 **日本語テキストについて**:
 - カード名は日英とも全件収録しています。

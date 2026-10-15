@@ -258,15 +258,44 @@ def sidecar_stats():
           '、'.join(f'{k} {v}' for k, v in Counter(x['meaning_change'] for x in lat).most_common()) +
           '。図版との照合: ' + '、'.join(f'{k} {v}' for k, v in Counter(x['printed_text']['image_check'] for x in lat).most_common()))
     print(f"- カードの照合: {len(chk)} 件（" + '、'.join(f'{k} {v}' for k, v in Counter(x['result'] for x in chk).most_common()) +
-          f"。データの誤り {sum(1 for x in chk if x['data_error'])}）")
+          f"。データの誤り {sum(1 for x in chk if x['data_error'])}、照合のあとで直したもの {sum(1 for x in chk if x.get('corrections'))}、"
+          f"値の欠け（調査課題） {sum(len(x.get('data_gaps', [])) for x in chk)}）")
+    imp_lat = [x for x in lat if x.get('import_provenance')]
+    imp_chk = [x for x in chk if x.get('import_provenance')]
+    print(f"  - 原典を確かめた人: kyuura が画像を読んだもの 最新の説明 {len(lat) - len(imp_lat)}・カードの照合 {len(chk) - len(imp_chk)}、"
+          f"kyuura-engine の照合の記録の取り込み（import_provenance。kyuura は読み直していない） 最新の説明 {len(imp_lat)}・カードの照合 {len(imp_chk)}")
     print(f"- 公式ルールの条項: {len(r['rule_clauses'])} 件")
     print(f"- 裁定: {len(r['rulings'])} 件（" + '、'.join(f'{k} {v}' for k, v in Counter(x['status'] for x in r['rulings']).most_common()) + '）')
     print('  - 根拠の種類ごとの記録の数（1 件に複数の種類があれば、それぞれに数える）: ' + '、'.join(
         f'{k} {v}' for k, v in Counter(k for x in r['rulings'] for k in {b['kind'] for b in x['basis']}).most_common()))
     print(f"- 未解決の論点: {len(r['issues'])} 件")
+    print(f"- kyuura-engine の取り込み: {len(r['engine_imports'])} 件（版ごと）")
+    total = 0
     for imp in r['engine_imports']:
-        print(f"- kyuura-engine の取り込み: {imp['id']}（{imp['engine_version']}、{imp['commit'][:7]}）。エンジンの未解決の裁定 {imp.get('engine_unresolved_total')} 件のうち、"
-              f"論点に取り込んだもの {sum(1 for u in r['engine_unresolved_index'] if u['kyuura_issue'])}")
+        n = sum(rs['last'] - rs['first'] + 1 + len(rs.get('extra_ids', [])) for rs in imp.get('ruling_sets', []))
+        total += n
+        print(f"  - {imp['id']}（{imp['engine_version']}、{imp['commit'][:7]}）: エンジンの裁定 {n} 件、取り込んでいない {len(imp.get('not_imported', []))} 件、"
+              f"対応する kyuura の記録 {len(imp.get('imported_rulings', []))} 件・未解決の論点 {len(imp.get('unresolved_rulings', []))} 件")
+    idx = r['engine_unresolved_index']
+    print(f"  - 合計: エンジンの裁定 {total} 件")
+    print(f"- エンジンの未解決の裁定の一覧: {len(idx)} 件（" + '、'.join(f'{k} {v}' for k, v in Counter(u.get('disposition') for u in idx).most_common()) +
+          f"。論点に結んだ項目 {sum(1 for u in idx if u['kyuura_issue'])}）")
+    import build_card_rulings as bcr  # 未解決の数の区別（kyuura の論点の数とエンジンの数を分ける）
+    ctx = bcr.load()
+    uc = bcr.unresolved_counts(ctx)
+    total = Counter()
+    print('- エンジンの裁定 id ごとの kyuura の分類（対応する記録の分類。部分ごとに違えば CONFIRMED+SUPPORTED）:')
+    for v, tally in bcr.kyuura_status_by_engine_id(ctx).items():
+        total.update(tally)
+        if tally:
+            print(f'  - {v}: ' + '、'.join(f'{k} {n}' for k, n in sorted(tally.items())))
+    print('  - 合計: ' + '、'.join(f'{k} {n}' for k, n in sorted(total.items())) + f'（{sum(total.values())} 件）')
+    print(f"- 未解決の数の区別: kyuura の論点 {uc['research_issues']} 件（結果への影響: " +
+          '、'.join(f'{k} {v}' for k, v in uc['game_effect'].most_common()) + '）。'
+          f"エンジンが数える未解決の裁定（{uc['latest_version']} まで）{uc['engine_total']} 件・そのうち停止コード {uc['engine_stop_codes']} 件"
+          f"（v0.13 まで {len(uc['v013_items'])}・v0.17 で加わった {len(uc['v017_additions'])}）。エンジンが数えていない項目 {len(uc['not_in_engine_count'])} 件、"
+          f"あとの版の事例 {len(uc['instances'])} 件、取り込みの範囲の外 {len(uc['out_of_scope'])} 件。停止コードのない論点 {len(uc['issues_without_stop_code'])} 件、"
+          f"エンジンの一覧と結んでいない論点 {len(uc['issues_not_in_index'])} 件")
 
 
 if __name__ == '__main__':
