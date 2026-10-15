@@ -4998,6 +4998,388 @@
     "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ（scope）。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
    },
    "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-077-P255",
+   "card_id": "PMCG1-077",
+   "card_name_ja": "オーキドはかせ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "255",
+   "pdf_page": 257,
+   "location": "オーキドはかせの見出し・図版・最新の説明・解説",
+   "checked_fields": {
+    "name.ja": "オーキドはかせ",
+    "trainer.text.ja": "自分の手札を全部すてて、新たに7枚のカードを自分の山札から引いて手札にする。"
+   },
+   "fields_not_checked": [
+    "name.en と英語の文面",
+    "rarity_jp",
+    "jp_print の刷・版の特定",
+    "trainer.kinds"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "trainer.text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-077-TRAINER"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-077-TRAINER"
+   ],
+   "findings": [
+    "v0.19 で、既存のトレーナーの登録・使用中のカード・ドローの処理で加えるトレーナーとして照合した。照合の前に既存の記録を探し、このファイル・kyuura のサイドカー（LD-・CC-）・kyuura の P43 のページの記録のどれにも、このカードのページの記録がないことを確かめた（トレーナーの使いかた p.310・効果で引くとき p.312・トラッシュ p.312 の規定は既存の記録を再利用した。docs/professor-oak-v0.19.md 1 章）。読んだのは p.255 だけ（ページ全体は 110dpi で位置を確かめ、見出し・収録・図版・最新の説明・解説は 400dpi の画像で読んだ。OCR の文字はページの位置を探すのに使っただけ）。p.255 には突風・エネルギー・リムーブ・オーキドはかせがあり、照合したのはいちばん下のオーキドはかせ。見出し「オーキドはかせ」、収録「ポケモンカード第1弾」だけ。図版: TRAINER、オーキドはかせ、文面「自分の手札を全部すてて、新たに 7枚のカードを自分の山札から引 いて手札にする。」（kyuura の写しと同じ。図版が第1弾のどの刷かは確かめていない）。最新の説明に使うための条件はない。解説のうち処理に関わる記述:「もちろん手札が「オーキドはかせ」1枚になったときが最高の場合ですが……。」「手札を全部トラッシュして7枚とるのですから、7枚以上にはなりません。」「手札をトラッシュするために「オーキドはかせ」を使うという方法もあります。」「多く入れすぎると使いすぎて、山札切れになったり、必要なカードがすべてトラッシュに置かれたりしますからね。」山札が足りないとき・ないときの扱いはカードのページには書かれていない（公式ルール p.312 で決まる。マサキと同じ。docs/trainers-v0.2b.md 3 章）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-A09FF9B",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-077",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-077 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-072-P255",
+   "card_id": "PMCG1-072",
+   "card_name_ja": "突風",
+   "source": "P43",
+   "scan": "J38",
+   "page": "255",
+   "pdf_page": 257,
+   "location": "突風の見出し・図版・最新の説明・解説",
+   "checked_fields": {
+    "name.ja": "突風"
+   },
+   "fields_not_checked": [
+    "name.en と英語の文面",
+    "rarity_jp",
+    "jp_print の刷・版の特定",
+    "trainer.kinds",
+    "trainer.text.ja（図版の文面が転記と異なり、図版の版は未特定。LDのimage_text_jaに別に保存）"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "trainer.text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-072-TRAINER"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-072-TRAINER"
+   ],
+   "findings": [
+    "v0.21 で、既存のトレーナーの登録・使用中のカード・トレーナーの決定・ポケモンいれかえの入れ替えの処理で加えるトレーナーとして照合した。照合の前に既存の記録を探し、このファイル・kyuura のサイドカー（LD-・CC-・CR-・UQ-）・kyuura の P43 のページの記録（rule_history.json の refs）のどれにも、このカードのページの記録がないことを確かめた（入れ替えたときの特殊状態・持続する効果・ついているカード・ダメージ・にげるとの違い（p.311・p.322・p.325）、「とうめい」とトレーナーの効果（p.159。T29）、トレーナーの使いかた（p.310）は既存の記録を再利用した。docs/gust-v0.21.md 1 章）。読んだのは p.255 の上の突風だけ（v0.19 で 400dpi にしたページの画像から、見出し・収録・最新の説明、図版、解説を切り出して読んだ。OCR の文字は使っていない）。見出し「突風」、収録「ポケモンカード第1弾」「ポケモンジム第1弾カスミ」「ポケモンジム第2弾マチス」「クイックスターターギフトパック」「イントロパック」。図版: TRAINER、突風、文面「相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。」（最新の説明と同じ）。図版の右下に番号㉘とマークがあり、第1弾の版ではない可能性が高い（kyuura の docs/cards/products/intro-packs.md のイントロパック（フシギダネデッキ）028/040 と番号は合うが、版は確かめていない）。最新の説明に使うための条件はない。解説のうち処理に関わる記述:「相手のベンチからポケモンを選んでバトル場に呼んできます。呼んでくるポケモンは、自分の対戦ポケモンが倒せそうなポケモンがよいでしょう。」「相手のベンチのポケモンにエネルギーカードがついてなくて、逃げることができないような大きなポケモンがいたらバトル場に呼んで、時間をかせぎます。」相手に控えポケモンがいないときに使えるかは、最新の説明・図版・解説のどれにも書かれていない（docs/gust-v0.21.md の GW5。UNRESOLVED）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-36E3630",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-072",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-072 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW1",
+     "engine_classification": "CONFLICT（違いは「どの控えポケモンを出させるかは、自分が自由に選ぶ」の書き方と、控えがいないときの一文。GW5）"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-090-P260",
+   "card_id": "PMCG1-090",
+   "card_name_ja": "パソコン通信",
+   "source": "P43",
+   "scan": "J38",
+   "page": "260",
+   "pdf_page": 262,
+   "location": "パソコン通信の見出し・図版・最新の説明・解説",
+   "checked_fields": {
+    "name.ja": "パソコン通信",
+    "trainer.text.ja": "手札から2枚カードをすてることによって、山札から好きなカードを1枚選んで手札にすることができる。そのあとで山札をよくきってもとに戻す。"
+   },
+   "fields_not_checked": [
+    "name.en と英語の文面",
+    "rarity_jp",
+    "jp_print の刷・版の特定",
+    "trainer.kinds"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "trainer.text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-090-TRAINER"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "findings": [
+    "v0.22 で、既存のトレーナーの登録・使用中のカード・トレーナーの決定（2 段階）・ゾーンの共通の関数で加えるトレーナーとして照合した。照合の前に既存の記録を探し、このファイル・kyuura のサイドカー（LD-・CC-・CR-・UQ-）・kyuura の P43 のページの記録のどれにも、このカードのページの記録がないことを確かめた（トレーナーの使いかた p.310 の手順・使うための条件の一般の規定・使いすて、効果で引くとき p.312、トラッシュに順番がない p.312、デッキを切る実装上の仮定は既存の記録を再利用した。docs/computer-search-v0.22.md 1 章）。ページは推測せず、本の「シリーズ別カードさくいん」（p.354。PDF 356。第1弾のトレーナーカードの「パソコン通信 260」）で探した。読んだのは p.260 のいちばん上のパソコン通信（ページ全体は 110dpi で位置を確かめ、見出し・収録・最新の説明・図版・解説は 400dpi の画像で読んだ。OCR の文字はページの位置を探すのに使っただけ）と、既存の記録で範囲の足りなかった p.310 の「使うための条件」の例・p.312 の「山札」「手札」「トラッシュ」の項。p.260 には、ほかにダウジングマシーン・ポケモン回収がある（照合していない）。見出し「パソコン通信」、収録「ポケモンカード第1弾」だけ。図版: TRAINER、パソコン通信、文面「手札から2枚カードをすてることによって、山札から好きなカードを1枚選んで手札にすることができる。そのあとで山札をよくきってもとに戻す。」（kyuura の写しと同じ）。解説のうち処理に関わる記述:「「パソコン通信」は、何でも好きなカードを1枚、自分の山札から持ってくることができるからです。そのかわりに手札からカードを2枚トラッシュしなければいけませんが、これはなかなか選ぶのがたいへんです。」「必要なカードをとにかく山札から持ってきて」「しかし使いどころがなかったら、使わないという判断も大切です。」。p.310 の例:「たとえば「パソコン通信」には、手札からカードを2枚トラッシュしなければならないという条件が記述されています。2枚トラッシュできないときには、「パソコン通信」を使うことはできません。」と、p.260 と同じ最新の説明（「：最新の説明」）。山札が 0 枚のときの記述はカードのページ・p.310 の例のどちらにもない（docs/computer-search-v0.22.md の CS6。UNRESOLVED）。選んだカードを相手に見せる指示は最新の説明にない（同じページのダウジングマシーンの最新の説明には「相手プレイヤーに見せてから、手札に加える」がある）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-5844FCF",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-090",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-090 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS1",
+     "engine_classification": "CONFLICT（書き方の違い。「すてることによって…できる」→「選んでトラッシュしなければ、このカードは使えない」（使うための条件）、「選んで手札にすることができる」→「選び出し、手札に加える」、「よくきってもとに戻す」→「その後、その山札をよく切る」）"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-076-P257",
+   "card_id": "PMCG1-076",
+   "card_name_ja": "エネルギー回収",
+   "source": "P43",
+   "scan": "J38",
+   "page": "257",
+   "pdf_page": 259,
+   "location": "エネルギー回収の見出し・図版・最新の説明・解説",
+   "checked_fields": {
+    "name.ja": "エネルギー回収"
+   },
+   "fields_not_checked": [
+    "name.en と英語の文面",
+    "rarity_jp",
+    "jp_print の刷・版の特定",
+    "trainer.kinds",
+    "trainer.text.ja（図版の文面が転記と異なり、図版の版は未特定。LDのimage_text_jaに別に保存）"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "trainer.text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-076-TRAINER"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-076-TRAINER"
+   ],
+   "findings": [
+    "v0.23 で、既存のトレーナーの登録・使用中のカード・トレーナーの決定（2 段階）・手札のトラッシュとトラッシュから手札に加える共通の関数で加えるトレーナーとして照合した。照合の前に既存の記録を探した（docs/energy-retrieval-v0.23.md 1 章）: このファイルにこのカードの記録はない。kyuura のサイドカー（LD-・CC-・CR-・UQ-）にもない。kyuura の rule_history.json の ERR-ENERGY-RETRIEVAL（notes の 8 番目。根拠 J38 の p.257 のスキャン）に p.257 の最新の説明と、解説の特殊エネルギーの 1 文が kyuura の読み取りとしてある（最新の説明は再利用。下で読んだ文と同じ）。P43 の p.257 のページの記録（documents の P43 の pages）は、このカードについて「「基本エネルギーカード」を最大2枚。特殊エネルギーは手札に加えられない」だけ（照合の記録はプラスパワー・ディフェンダーだけ）。足りなかったのは、図版の文面（写しとの照合）・見出しと収録・解説のうち処理に関わるほかの記述（手札の枚数・対象がないとき・0 枚の選択）で、それだけを読んだ。トレーナーの使いかた（p.310 の手順・使うための条件・使いすて・何枚でも）・トラッシュは表を上にして置く（p.312）は既存の記録を再利用した。ページは推測せず、本の「シリーズ別カードさくいん」（p.354。PDF 356。第1弾のトレーナーカードの「エネルギー回収 257」）で探した。読んだのは p.257 のいちばん下のエネルギー回収（ページ全体は 110dpi で位置を確かめ、見出し・収録・最新の説明・図版・解説は 400dpi の画像で読んだ）。同じページのプラスパワー・ディフェンダーは読み直していない。見出し「エネルギー回収」、収録「ポケモンカード第1弾」「ポケモンジム第1弾タケシ」「ポケモンジム第2弾エリカ」「ポケモンジム第3弾ナツメ」「クイックスターターギフトパック」。図版: TRAINER、エネルギー回収、文面「手札からカードを1枚選んでトラッシュしなければ、このカードは使えない。あなたのトラッシュから基本エネルギーカードを最大2枚選び、手札に加えてよい。(ただし、このカードを使うためにトラッシュしたカードを選ぶことはできない)」（第1弾の印刷（kyuura の写し）ではない版。どの商品の版かは決めていない）。解説のうち処理に関わる記述:「「エネルギー回収」を使うとき、「手札のカードを1枚トラッシュしないといけない、さてどのカードをトラッシュしようか？」けっこう悩むところです。」「注意する点としては、「エネルギー回収」を使うときにトラッシュしたエネルギーカードは回収できないことです。それ以外にも、「エネルギー回収」では、「無色2個エネルギー」や「なんでもなおし配合エネルギー」などの特殊エネルギーカードは手札に加えることはできません。」。トラッシュに基本エネルギーカードがないとき・選べるものがあるのに 0 枚を選べるかの記述はない（docs/energy-retrieval-v0.23.md の ER9・ER10。UNRESOLVED）。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-CD641E6",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-076",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-076 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER1",
+     "engine_classification": "CONFLICT（エラッタ。第1弾の印刷は「好きなエネルギーカード」「すてることによって…できる」。図版は別の版の文面）"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-093-P259",
+   "card_id": "PMCG1-093",
+   "card_name_ja": "ポケモン交換おじさん",
+   "source": "P43",
+   "scan": "J38",
+   "page": "259",
+   "pdf_page": 261,
+   "location": "ポケモン交換おじさんの見出し・図版・最新の説明・解説",
+   "checked_fields": {
+    "name.ja": "ポケモン交換おじさん",
+    "trainer.text.ja": "自分の山札から好きなポケモンカードか進化カードを1枚選んで、手札のポケモンカードか進化カードと交換することができる。そのあとで、自分の山札をよくきる。交換するカードは相手に見せなければならない。"
+   },
+   "fields_not_checked": [
+    "name.en と英語の文面",
+    "rarity_jp",
+    "jp_print の刷・版の特定",
+    "trainer.kinds"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "trainer.text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-093-TRAINER"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "findings": [
+    "v0.24 で、既存のトレーナーの登録・使用中のカード・トレーナーの決定（2 段階）と、手札から山札にもどす・山札から選び出して見せる共通の関数で加えるトレーナーとして照合した。照合の前に既存の記録を探した（docs/pokemon-trader-v0.24.md 1 章）: このファイル・kyuura のサイドカー（LD-・CC-・CR-・UQ-）・kyuura の P43 のページの記録に、このカードの記録はない（kyuura にあるのは第1弾の印刷の文面・再録の書き方の違い（docs/cards/reprints.md）・2002 年の「サポーター適用カード」（2000.02.14 版のあとの規定なので使わない）だけ）。トレーナーの使いかた（p.310 の手順・使うための条件・使いすて・何枚でも）・山札の中を見て選ぶ・山札を切る（p.312。docs/computer-search-v0.22.md）・トラッシュの規定は既存の記録を再利用した。ページは推測せず、本の「シリーズ別カードさくいん」（p.354。PDF 356。第1弾のトレーナーカードの「ポケモン交換おじさん 259」）で探した。読んだのは p.259 の真ん中のポケモン交換おじさん（ページ全体は 110dpi で位置を確かめ、見出し・収録・最新の説明・図版・解説は 400dpi の画像で読んだ）と、同じページのポケモン育て屋さんの解説のうちポケモン交換おじさんを使う 1 段落（処理の順番の確かめ。ポケモン育て屋さんのカードは照合していない）。メンテナンスは読んでいない。見出し「ポケモン交換おじさん」、収録「ポケモンカード第1弾」「クイックスターターギフトパック」。図版: TRAINER、ポケモン交換おじさん、文面「自分の山札から好きなポケモンカードか進化カードを1枚選んで、手札のポケモンカードか進化カードと交換することができる。そのあとで、自分の山札をよくきる。交換するカードは相手に見せなければならない。」（kyuura の写しと同じ）。解説のうち処理に関わる記述:「もちろん、山札から持ってこられるのは、進化ポケモンだけでなくたねポケモンも持ってこられるので、たねポケモンだけのデッキでも力を発揮します。」「「ポケモン交換おじさん」を使ったときに、「山札の中にポケモンのカードが1枚も残っていなかったら？」という質問をよく聞きますが、山札の中にポケモンのカードがなかったら、交換のために入れたポケモンカードを持ってくることになります。」。ポケモン育て屋さんの解説:「場にたねポケモンが出ていて、手札にポケモンのカードがあれば、そのポケモンのカードを「ポケモン交換おじさん」で山札にもどし、2進化ポケモンカードを山札から持ってきて「ポケモン育て屋さん」で2進化ポケモンにします。」。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-6EE7C40",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-093",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-093 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT1",
+     "engine_classification": "CONFLICT（書き方。図版・第1弾の印刷は「交換することができる」「ポケモンカード」）"
+    }
+   ]
+  },
+  {
+   "id": "CC-PMCG1-094-P259",
+   "card_id": "PMCG1-094",
+   "card_name_ja": "ポケモン育て屋さん",
+   "source": "P43",
+   "scan": "J38",
+   "page": "259",
+   "pdf_page": 261,
+   "location": "ポケモン育て屋さんの見出し・図版・最新の説明・解説",
+   "checked_fields": {
+    "name.ja": "ポケモン育て屋さん",
+    "trainer.text.ja": "ポケモンを進化させるときに使う。2進化カードをいきなりつけることができる。"
+   },
+   "fields_not_checked": [
+    "name.en と英語の文面",
+    "rarity_jp",
+    "jp_print の刷・版の特定",
+    "trainer.kinds"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "trainer.text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-094-TRAINER"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "findings": [
+    "v0.25 で、既存のトレーナーの登録・使用中のカード・トレーナーの決定（2 段階）と、進化の手順の共通の関数（evolution.place_evolution_card）で加えるトレーナーとして照合した。照合の前に既存の記録を探した（docs/pokemon-breeder-v0.25.md 1 章）: このファイル・kyuura のサイドカー（LD-・CC-・CR-・UQ-）・kyuura の P43 のページの記録に、このカードの記録はない（kyuura にあるのは第1弾の印刷の文面（cards.json）・2002 年の「サポーター適用カード」（MIX-SUPPORTER-ERRATA。2000.02.14 版のあとの規定なので使わない）・p.88 の第4弾のゼニガメの解説の照合の記録（CC-PMCG4-018-P43。エンジンの記録の取り込み。「ポケモン育て屋さん」で「わるいカメックス」に進化する例）だけ）。v0.24 の PMCG1-093 の記録で読んだのは、このカードの解説のうちポケモン交換おじさんを使う 1 段落だけで、このカードの照合の記録としては扱わない。進化の規定（p.309・p.310・p.313・p.316・p.319・p.322〜p.324。docs/evolution-rules-v0.4a.md・docs/stage2-evolution-v0.4c.md）・トレーナーの使いかた（p.310）は既存の記録を再利用した。ページは v0.24 で索引（p.354「シリーズ別カードさくいん」の「ポケモン育て屋さん 259」）から確かめた p.259 で、読んだのは p.259 のいちばん下のポケモン育て屋さん（見出し・収録・図版・最新の説明・解説。v0.24 で作った 400dpi の画像を切り出して読んだ）だけ。同じページのメンテナンス・ポケモン交換おじさんは読み直していない。見出し「ポケモン育て屋さん」、収録「ポケモンカード第1弾」。図版: TRAINER、ポケモン育て屋さん、文面「ポケモンを進化させるときに使う。2進化カードをいきなりつけることができる。」（kyuura の写しと同じ）。解説のうち処理に関わる記述:「「ポケモン育て屋さん」を使えば、対戦開始2回めの自分の番で「ゼニガメ」が「カメックス」に、「ヒトカゲ」が「リザードン」へと一気に進化することができます。」「2種類の2進化ポケモンを育てようとしている大型デッキを使う場合などは、1進化ポケモンカードをかなり減らして「ポケモン育て屋さん」を多めに入れると進化が完成しやすくなります。」「ただし、急いで2進化ポケモンにしても、ワザも使えない、逃げられないということになることもあるのでエネルギーの数には注意してください。」「場にたねポケモンが出ていて、手札にポケモンのカードがあれば、そのポケモンのカードを「ポケモン交換おじさん」で山札にもどし、2進化ポケモンカードを山札から持ってきて「ポケモン育て屋さん」で2進化ポケモンにします。」。"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-548DD65",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-094",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-094 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR1",
+     "engine_classification": "CONFLICT（書き方）"
+    }
+   ]
   }
  ],
  "difference_kinds": {

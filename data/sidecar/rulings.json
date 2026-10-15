@@ -109,6 +109,13 @@
      "ruling_id": "L14",
      "part": "サカキのワンリキー → サカキのゴーリキー → サカキのカイリキー。第1弾のワンリキー系統とはたがいに進化できない",
      "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR20",
+     "engine_classification": "CONFIRMED（v0.4c の S2。変えていない）"
     }
    ]
   },
@@ -201,7 +208,16 @@
     "NEO-2000-OFFICIAL-RULES"
    ],
    "rule_differences_refs": [],
-   "checked": "kyuura_image"
+   "checked": "kyuura_image",
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW10",
+     "engine_classification": "CONFIRMED"
+    }
+   ]
   },
   {
    "id": "GR-2000-P323-POKEMON-CHECK",
@@ -284,6 +300,13 @@
      "document": "docs/pokemon-powers-v0.5.md",
      "ruling_id": "P10",
      "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-A09FF9B",
+     "engine_version": "v0.19",
+     "document": "docs/professor-oak-v0.19.md",
+     "ruling_id": "O8",
+     "engine_classification": "CONFIRMED"
     }
    ]
   },
@@ -330,7 +353,16 @@
     "NEO-2000-OFFICIAL-RULES"
    ],
    "rule_differences_refs": [],
-   "checked": "kyuura_image"
+   "checked": "kyuura_image",
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER17",
+     "engine_classification": "CONFIRMED"
+    }
+   ]
   },
   {
    "id": "GR-2000-P311-RETREAT",
@@ -611,6 +643,13 @@
      "ruling_id": "I5",
      "part": "フシギソウの「どくのこな」: もうどく状態なら二重にならない。ねむり・マヒ・こんらんとは重なる",
      "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW9",
+     "engine_classification": "CONFIRMED"
     }
    ]
   },
@@ -681,6 +720,121 @@
    ],
    "rule_differences_refs": [],
    "checked": "kyuura_image"
+  },
+  {
+   "id": "GR-2000-P310-TRAINERS",
+   "source": "P43",
+   "pages": [
+    "310"
+   ],
+   "section": "公式ルール p.310「トレーナーカードを使う」",
+   "summary": "手札から出して相手に見せ、使うための条件に従い、残りの説明を順に処理する。1回の番に何枚でも使える。使いすてのカードは使ったらトラッシュする。",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "engine_report",
+   "notes": [
+    "エンジンの既存記録とv0.22の照合記録を再利用。kyuuraは画像を再読していない。"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "engine_refs": [
+    {
+     "import": "ENGINE-A09FF9B",
+     "engine_version": "v0.19",
+     "document": "docs/professor-oak-v0.19.md",
+     "ruling_id": "O1",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-A09FF9B",
+     "engine_version": "v0.19",
+     "document": "docs/professor-oak-v0.19.md",
+     "ruling_id": "O9",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-A09FF9B",
+     "engine_version": "v0.19",
+     "document": "docs/professor-oak-v0.19.md",
+     "ruling_id": "O10",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS3",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS19",
+     "engine_classification": "CONFIRMED"
+    }
+   ]
+  },
+  {
+   "id": "GR-2000-P312-DECK-HAND-DISCARD",
+   "source": "P43",
+   "pages": [
+    "312"
+   ],
+   "section": "公式ルール p.312「山札・手札・トラッシュ」",
+   "summary": "特に指示されない限り山札の内容を見たり、切ったりしない。カードを引くときは山札の一番上から取り、足りない場合は引けるだけ引く。トラッシュは表向きで、順番を区別しない。",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "engine_report",
+   "notes": [
+    "エンジンの既存記録とv0.22の照合記録を再利用。kyuuraは画像を再読していない。"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "engine_refs": [
+    {
+     "import": "ENGINE-A09FF9B",
+     "engine_version": "v0.19",
+     "document": "docs/professor-oak-v0.19.md",
+     "ruling_id": "O6",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS10",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS13",
+     "engine_classification": "CONFIRMED"
+    },
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT12",
+     "engine_classification": "CONFIRMED（再利用: CS13）"
+    }
+   ]
   }
  ],
  "rulings": [
@@ -15614,6 +15768,3586 @@
     }
    ],
    "notes": []
+  },
+  {
+   "id": "CR-PROFESSOR-OAK-O3",
+   "topic": "オーキドはかせ",
+   "cards": [
+    {
+     "card_id": "PMCG1-077",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "オーキドはかせ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "手札をすべてトラッシュする（印刷の「すてて」）",
+   "conclusion": "手札をすべてトラッシュする（印刷の「すてて」）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "255",
+     "location": "オーキドはかせと関連規定。詳細はエンジンのdocs/professor-oak-v0.19.md O3の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-077-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-A09FF9B",
+     "engine_version": "v0.19",
+     "document": "docs/professor-oak-v0.19.md",
+     "ruling_id": "O3",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.255 の最新の説明「すべてトラッシュする」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/professor-oak-v0.19.md",
+    "ruling_id": "O3",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-PROFESSOR-OAK-O4",
+   "topic": "オーキドはかせ",
+   "cards": [
+    {
+     "card_id": "PMCG1-077",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "オーキドはかせ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "トラッシュしてから引く",
+   "conclusion": "トラッシュしてから引く",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "255",
+     "location": "オーキドはかせと関連規定。詳細はエンジンのdocs/professor-oak-v0.19.md O4の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "オーキドはかせと関連規定。詳細はエンジンのdocs/professor-oak-v0.19.md O4の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-077-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-A09FF9B",
+     "engine_version": "v0.19",
+     "document": "docs/professor-oak-v0.19.md",
+     "ruling_id": "O4",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.255 の最新の説明「その後」。再利用: p.310 の手順 4（書いてある順にしたがう）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/professor-oak-v0.19.md",
+    "ruling_id": "O4",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-PROFESSOR-OAK-O5",
+   "topic": "オーキドはかせ",
+   "cards": [
+    {
+     "card_id": "PMCG1-077",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "オーキドはかせ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "手札がこのカードだけでも使える（トラッシュは 0 枚）",
+   "conclusion": "手札がこのカードだけでも使える（トラッシュは 0 枚）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "255",
+     "location": "オーキドはかせと関連規定。詳細はエンジンのdocs/professor-oak-v0.19.md O5の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "オーキドはかせと関連規定。詳細はエンジンのdocs/professor-oak-v0.19.md O5の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-077-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-A09FF9B",
+     "engine_version": "v0.19",
+     "document": "docs/professor-oak-v0.19.md",
+     "ruling_id": "O5",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.255 の最新の説明に使うための条件がない。再利用: p.310（使うための条件を満たせないときだけ使えない）。p.255 の解説「手札が「オーキドはかせ」1枚になったときが最高の場合」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/professor-oak-v0.19.md",
+    "ruling_id": "O5",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-PROFESSOR-OAK-O7",
+   "topic": "オーキドはかせ",
+   "cards": [
+    {
+     "card_id": "PMCG1-077",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "オーキドはかせ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "山札が 0 枚でも使え、0 枚引く。負けではない",
+   "conclusion": "山札が 0 枚でも使え、0 枚引く。負けではない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312",
+     "location": "オーキドはかせと関連規定。詳細はエンジンのdocs/professor-oak-v0.19.md O7の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-077-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-A09FF9B",
+     "engine_version": "v0.19",
+     "document": "docs/professor-oak-v0.19.md",
+     "ruling_id": "O7",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: p.312「山札にカードがなかったり…負けにはなりません」。O5 と同じく使うための条件はない"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/professor-oak-v0.19.md",
+    "ruling_id": "O7",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-PROFESSOR-OAK-O11",
+   "topic": "オーキドはかせ",
+   "cards": [
+    {
+     "card_id": "PMCG1-077",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "オーキドはかせ"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "手札にあるもう 1 枚のオーキドはかせはトラッシュする手札に含まれる",
+   "conclusion": "手札にあるもう 1 枚のオーキドはかせはトラッシュする手札に含まれる",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "255",
+     "location": "オーキドはかせと関連規定。詳細はエンジンのdocs/professor-oak-v0.19.md O11の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-077-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-A09FF9B",
+     "engine_version": "v0.19",
+     "document": "docs/professor-oak-v0.19.md",
+     "ruling_id": "O11",
+     "engine_classification": "CONFIRMED（O1・O3 から）"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 手札にあるので「手札をすべて」に含まれる"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/professor-oak-v0.19.md",
+    "ruling_id": "O11",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-GUST-GW2",
+   "topic": "突風",
+   "cards": [
+    {
+     "card_id": "PMCG1-072",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "突風"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "相手の控えポケモンを選ぶのは、突風を使ったプレイヤー",
+   "conclusion": "相手の控えポケモンを選ぶのは、突風を使ったプレイヤー",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "255",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW2の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "19",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW2の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-072-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW2",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.255 の最新の説明「相手の控えポケモンを1匹選び」（主語は使うプレイヤー。ふきとばしの最新の説明の「入れ替わるポケモンは、相手が選ぶ」（p.19）のような書き方はない）。p.255 の解説「相手のベンチからポケモンを選んでバトル場に呼んできます。呼んでくるポケモンは、自分の対戦ポケモンが倒せそうな…」。ポケモンいれかえの「1匹選び」も使うプレイヤーが選ぶ（再利用: trainers-v0.2b.md 5 章）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/gust-v0.21.md",
+    "ruling_id": "GW2",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-GUST-GW3",
+   "topic": "突風",
+   "cards": [
+    {
+     "card_id": "PMCG1-072",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "突風"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "選べるのは相手のベンチのポケモン（控えポケモン）だけ。自分の場のポケモン・相手の対戦ポケモン・場にいないものは選べない。1 匹を選ぶ",
+   "conclusion": "選べるのは相手のベンチのポケモン（控えポケモン）だけ。自分の場のポケモン・相手の対戦ポケモン・場にいないものは選べない。1 匹を選ぶ",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "255",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW3の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-072-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW3",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.255 の最新の説明「相手の控えポケモンを1匹選び」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/gust-v0.21.md",
+    "ruling_id": "GW3",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-GUST-GW6",
+   "topic": "突風",
+   "cards": [
+    {
+     "card_id": "PMCG1-072",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "突風"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "自分の場（自分のベンチの有無）は関係しない",
+   "conclusion": "自分の場（自分のベンチの有無）は関係しない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "255",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW6の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW6の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-072-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW6",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.255 の最新の説明は相手の場だけを指す。使うための条件はない（再利用: p.310）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/gust-v0.21.md",
+    "ruling_id": "GW6",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-GUST-GW7",
+   "topic": "突風",
+   "cards": [
+    {
+     "card_id": "PMCG1-072",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "突風"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "「にげる」ではない。にげるエネルギーを払わず、使ったプレイヤーの「にげる」にも関わらない",
+   "conclusion": "「にげる」ではない。にげるエネルギーを払わず、使ったプレイヤーの「にげる」にも関わらない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW7の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "325",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW7の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-072-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW7",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: p.310〜311（にげるの手順）・p.325「「にげる」も、この「ポケモンの入れ替え」にふくまれます」（trainers-v0.2b.md 5 章・F12）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/gust-v0.21.md",
+    "ruling_id": "GW7",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-GUST-GW11",
+   "topic": "突風",
+   "cards": [
+    {
+     "card_id": "PMCG1-072",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "突風"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ねむり・マヒ状態の相手の対戦ポケモンでも入れ替える",
+   "conclusion": "ねむり・マヒ状態の相手の対戦ポケモンでも入れ替える",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "325",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW11の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-072-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW11",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: p.325（F11。trainers-v0.2b.md 5 章）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/gust-v0.21.md",
+    "ruling_id": "GW11",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-GUST-GW13",
+   "topic": "突風",
+   "cards": [
+    {
+     "card_id": "PMCG1-072",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "突風"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "相手の「とうめい」ははたらかない（トレーナーの効果は受ける）",
+   "conclusion": "相手の「とうめい」ははたらかない（トレーナーの効果は受ける）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "159",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW13の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-072-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW13",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: p.159（T29）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/gust-v0.21.md",
+    "ruling_id": "GW13",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-GUST-GW14",
+   "topic": "突風",
+   "cards": [
+    {
+     "card_id": "PMCG1-072",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "突風"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "かがくへんかガスは突風に影響しない",
+   "conclusion": "かがくへんかガスは突風に影響しない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "48",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW14の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "309",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW14の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW14の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-072-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW14",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: G8（p.48・p.309・p.310）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/gust-v0.21.md",
+    "ruling_id": "GW14",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-GUST-GW15",
+   "topic": "突風",
+   "cards": [
+    {
+     "card_id": "PMCG1-072",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "突風"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "使っても番は続く。そのあとワザ・にげるなどができ、ワザは入れ替えで出た相手の対戦ポケモンに当たる",
+   "conclusion": "使っても番は続く。そのあとワザ・にげるなどができ、ワザは入れ替えで出た相手の対戦ポケモンに当たる",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW15の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-072-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW15",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: p.310（トレーナーは自分の番に使い、すませたら番の続き）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/gust-v0.21.md",
+    "ruling_id": "GW15",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-GUST-GW17",
+   "topic": "突風",
+   "cards": [
+    {
+     "card_id": "PMCG1-072",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "突風"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "使っているカードの場所: 決定を待つ間は使用中（手札にもトラッシュにもない）、すませたらトラッシュ。宣言の拒否ではカードは手札のまま、不正な選択の拒否では決定を待ったまま使用中",
+   "conclusion": "使っているカードの場所: 決定を待つ間は使用中（手札にもトラッシュにもない）、すませたらトラッシュ。宣言の拒否ではカードは手札のまま、不正な選択の拒否では決定を待ったまま使用中",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "突風と関連規定。詳細はエンジンのdocs/gust-v0.21.md GW17の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-072-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW17",
+     "engine_classification": "CONFIRMED（p.310 の手順 1〜4。再利用）・実装（決定の仕組み。v0.2a・v0.2b）"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: p.310"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/gust-v0.21.md",
+    "ruling_id": "GW17",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS2",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "使うための条件は、手札からカードを 2 枚選んでトラッシュすること。2 枚トラッシュできなければ使えない",
+   "conclusion": "使うための条件は、手札からカードを 2 枚選んでトラッシュすること。2 枚トラッシュできなければ使えない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "260",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS2の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "310",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS2の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS2",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.260 の最新の説明「手札からカードを2枚選んでトラッシュしなければ、このカードは使えない。」。p.310 の例「2枚トラッシュできないときには、「パソコン通信」を使うことはできません。」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS2",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS4",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "使う前の手札が合計 1 枚（このカードだけ）・2 枚なら使えない。3 枚以上なら使える",
+   "conclusion": "使う前の手札が合計 1 枚（このカードだけ）・2 枚なら使えない。3 枚以上なら使える",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "260",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS4の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS4",
+     "engine_classification": "CONFIRMED（CS2・CS3 から）"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 同上"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS4",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS5",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ほかの使うための条件はない（自分の場・相手の場・手札の種類は条件にならない）",
+   "conclusion": "ほかの使うための条件はない（自分の場・相手の場・手札の種類は条件にならない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "260",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS5の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS5の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS5",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.260 の最新の説明が挙げる条件は手札のトラッシュだけ。p.310 の例も同じ。再利用: p.310（使うための条件はカードに書かれたもの）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS5",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS7",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "トラッシュする 2 枚を選ぶのは使ったプレイヤー",
+   "conclusion": "トラッシュする 2 枚を選ぶのは使ったプレイヤー",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "260",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS7の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS7",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.260 の最新の説明「手札からカードを2枚選んで」（使うプレイヤーへの指示）。解説「これはなかなか選ぶのがたいへんです」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS7",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS8",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ちょうど 2 枚。同じ名前の別のカード 2 枚を選べる。同じカードを 2 回は選べない",
+   "conclusion": "ちょうど 2 枚。同じ名前の別のカード 2 枚を選べる。同じカードを 2 回は選べない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "260",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS8の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS8",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.260「カードを2枚」（カードは 1 枚ずつの物。名前の制限は書かれていない）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS8",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS9",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "選べるのは自分の手札のカードだけ（使用中のこのカード・場・山札・トラッシュ・相手のカードは選べない）",
+   "conclusion": "選べるのは自分の手札のカードだけ（使用中のこのカード・場・山札・トラッシュ・相手のカードは選べない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "260",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS9の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "312",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS9の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS9",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.260「手札から」。p.312「特に指示されないかぎり、手札として持っているカードを直接トラッシュしてはいけません」（指示があるのは手札）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS9",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS11",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "山札から選ぶのは使ったプレイヤーで、どの種類のカードでもよい（ポケモン・トレーナー・エネルギー）。1 枚",
+   "conclusion": "山札から選ぶのは使ったプレイヤーで、どの種類のカードでもよい（ポケモン・トレーナー・エネルギー）。1 枚",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "260",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS11の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS11",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.260 の最新の説明「あなたの山札からカードを1枚選び出し」。解説「何でも好きなカードを1枚、自分の山札から持ってくることができる」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS11",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS12",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "選ぶことは省略できない（山札が 1 枚以上なら 1 枚選ぶ）",
+   "conclusion": "選ぶことは省略できない（山札が 1 枚以上なら 1 枚選ぶ）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "260",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS12の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS12",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.260 の最新の説明は「選び出し、手札に加える。」（印刷の文面の「できる」がない）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS12",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS14",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "選んだカードを相手に見せる必要はない",
+   "conclusion": "選んだカードを相手に見せる必要はない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "312",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS14の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS14",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 最新の説明に見せる指示がない。p.312「特に指示されないかぎり、引いたカードを相手プレイヤーに見せる必要はありません。」（「引いた」カードの規定）。同じページのダウジングマシーンの最新の説明は「相手プレイヤーに見せてから」と書く（見せるときは指示がある）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS14",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": "エンジンの推論を再利用: 最新の説明に見せる指示がない。p.312「特に指示されないかぎり、引いたカードを相手プレイヤーに見せる必要はありません。」（「引いた」カードの規定）。同じページのダウジングマシーンの最新の説明は「相手プレイヤーに見せてから」と書く（見せるときは指示がある）"
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS15",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "山札が 1 枚: そのカードを選ぶ。山札は 0 枚になる",
+   "conclusion": "山札が 1 枚: そのカードを選ぶ。山札は 0 枚になる",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "260",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS15の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS15",
+     "engine_classification": "CONFIRMED（CS11・CS12 から）"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 同上"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS15",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS16",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "順番: 手札をトラッシュ（使うための条件）→ 山札から選び出して手札に加える → その山札を切る",
+   "conclusion": "順番: 手札をトラッシュ（使うための条件）→ 山札から選び出して手札に加える → その山札を切る",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS16の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "260",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS16の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS16",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: p.310 の手順 3（使うための条件）→ 4（残りの説明）。p.260「…手札に加える。その後、その山札をよく切る。」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS16",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS17",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "その（自分の）山札を切る",
+   "conclusion": "その（自分の）山札を切る",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "260",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS17の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "312",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS17の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS17",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.260「その山札をよく切る」。p.312「特に指示されないかぎり…山札を切ったり…してはいけません」（指示がある）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS17",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-COMPUTER-SEARCH-CS20",
+   "topic": "パソコン通信",
+   "cards": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "手札に加えるのは「カードを引く」ではない。山札が 0 枚になっても負けではなく、負けるのは次の自分の番の最初に引けないとき",
+   "conclusion": "手札に加えるのは「カードを引く」ではない。山札が 0 枚になっても負けではなく、負けるのは次の自分の番の最初に引けないとき",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS20の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "309",
+     "location": "パソコン通信と関連規定。詳細はエンジンのdocs/computer-search-v0.22.md CS20の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-090-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS20",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.312「「カードを引く」と指定されたときには、山札の一番上のカードを取って…」（選び出すのは引くことではない）。再利用: 負けは番の最初に引けないときだけ（p.309・p.312）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS20",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-ENERGY-RETRIEVAL-ER2",
+   "topic": "エネルギー回収",
+   "cards": [
+    {
+     "card_id": "PMCG1-076",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "エネルギー回収"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "使うための条件は、手札からカードを 1 枚選んでトラッシュすること。使っているこのカードは含まない。手札が合計 1 枚（このカードだけ）なら使えず、2 枚以上なら使える",
+   "conclusion": "使うための条件は、手札からカードを 1 枚選んでトラッシュすること。使っているこのカードは含まない。手札が合計 1 枚（このカードだけ）なら使えず、2 枚以上なら使える",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "257",
+     "location": "エネルギー回収と関連規定。詳細はエンジンのdocs/energy-retrieval-v0.23.md ER2の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "エネルギー回収と関連規定。詳細はエンジンのdocs/energy-retrieval-v0.23.md ER2の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-076-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER2",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.257「手札からカードを1枚選んでトラッシュしなければ、このカードは使えない。」。再利用: p.310 の手順（手札から出してから使うための条件。CS3 と同じ規定）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/energy-retrieval-v0.23.md",
+    "ruling_id": "ER2",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-ENERGY-RETRIEVAL-ER3",
+   "topic": "エネルギー回収",
+   "cards": [
+    {
+     "card_id": "PMCG1-076",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "エネルギー回収"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "トラッシュするカードの種類に制限はない（ポケモン・トレーナー・エネルギー。もう 1 枚のエネルギー回収も）",
+   "conclusion": "トラッシュするカードの種類に制限はない（ポケモン・トレーナー・エネルギー。もう 1 枚のエネルギー回収も）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "257",
+     "location": "エネルギー回収と関連規定。詳細はエンジンのdocs/energy-retrieval-v0.23.md ER3の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-076-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER3",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.257「カードを1枚」。解説「どのカードをトラッシュしようか？」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/energy-retrieval-v0.23.md",
+    "ruling_id": "ER3",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-ENERGY-RETRIEVAL-ER4",
+   "topic": "エネルギー回収",
+   "cards": [
+    {
+     "card_id": "PMCG1-076",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "エネルギー回収"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "トラッシュするカード・手札に加えるカードを選ぶのは使ったプレイヤー",
+   "conclusion": "トラッシュするカード・手札に加えるカードを選ぶのは使ったプレイヤー",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "257",
+     "location": "エネルギー回収と関連規定。詳細はエンジンのdocs/energy-retrieval-v0.23.md ER4の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-076-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER4",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.257「手札から…選んで」「あなたのトラッシュから…選び出し」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/energy-retrieval-v0.23.md",
+    "ruling_id": "ER4",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-ENERGY-RETRIEVAL-ER5",
+   "topic": "エネルギー回収",
+   "cards": [
+    {
+     "card_id": "PMCG1-076",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "エネルギー回収"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "順番: 手札をトラッシュ（使うための条件）→ トラッシュの基本エネルギーカードを選んで手札に加える",
+   "conclusion": "順番: 手札をトラッシュ（使うための条件）→ トラッシュの基本エネルギーカードを選んで手札に加える",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "257",
+     "location": "エネルギー回収と関連規定。詳細はエンジンのdocs/energy-retrieval-v0.23.md ER5の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "エネルギー回収と関連規定。詳細はエンジンのdocs/energy-retrieval-v0.23.md ER5の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-076-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER5",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.257 の文の順番。再利用: p.310 の手順 3 → 4"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/energy-retrieval-v0.23.md",
+    "ruling_id": "ER5",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-ENERGY-RETRIEVAL-ER6",
+   "topic": "エネルギー回収",
+   "cards": [
+    {
+     "card_id": "PMCG1-076",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "エネルギー回収"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "手に入れられるのは自分のトラッシュの基本エネルギーカードだけ（特殊エネルギーカード・トレーナー・ポケモン・相手のトラッシュのカードは選べない）",
+   "conclusion": "手に入れられるのは自分のトラッシュの基本エネルギーカードだけ（特殊エネルギーカード・トレーナー・ポケモン・相手のトラッシュのカードは選べない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "257",
+     "location": "エネルギー回収と関連規定。詳細はエンジンのdocs/energy-retrieval-v0.23.md ER6の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-076-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER6",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.257「あなたのトラッシュから「基本エネルギーカード」を」・解説「特殊エネルギーカードは手札に加えることはできません」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/energy-retrieval-v0.23.md",
+    "ruling_id": "ER6",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-ENERGY-RETRIEVAL-ER7",
+   "topic": "エネルギー回収",
+   "cards": [
+    {
+     "card_id": "PMCG1-076",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "エネルギー回収"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "このカードを使うためにトラッシュしたカードは選べない（基本エネルギーカードでも）",
+   "conclusion": "このカードを使うためにトラッシュしたカードは選べない（基本エネルギーカードでも）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "257",
+     "location": "エネルギー回収と関連規定。詳細はエンジンのdocs/energy-retrieval-v0.23.md ER7の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-076-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER7",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.257「ただし、このカードを使うためにトラッシュしたカードを選ぶことはできない。」・解説「「エネルギー回収」を使うときにトラッシュしたエネルギーカードは回収できない」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/energy-retrieval-v0.23.md",
+    "ruling_id": "ER7",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-ENERGY-RETRIEVAL-ER8",
+   "topic": "エネルギー回収",
+   "cards": [
+    {
+     "card_id": "PMCG1-076",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "エネルギー回収"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "最大 2 枚。選べるものが 1 枚なら 1 枚まで。2 枚以上あっても 1 枚だけを選べる",
+   "conclusion": "最大 2 枚。選べるものが 1 枚なら 1 枚まで。2 枚以上あっても 1 枚だけを選べる",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "257",
+     "location": "エネルギー回収と関連規定。詳細はエンジンのdocs/energy-retrieval-v0.23.md ER8の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-076-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER8",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.257「最大2枚」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/energy-retrieval-v0.23.md",
+    "ruling_id": "ER8",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-ENERGY-RETRIEVAL-ER11",
+   "topic": "エネルギー回収",
+   "cards": [
+    {
+     "card_id": "PMCG1-076",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "エネルギー回収"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "選べるものの数を決める時点",
+   "conclusion": "選べるものの数を決める時点",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "257",
+     "location": "エネルギー回収と関連規定。詳細はエンジンのdocs/energy-retrieval-v0.23.md ER11の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-076-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER11",
+     "engine_classification": "CONFIRMED（ER7 から）"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: トラッシュしたカードは選べないので、段階 2 の選べるもの = 使う前のトラッシュの基本エネルギーカード（ほかに変わるものはない）。使う前に数えても、トラッシュのあとに数えても同じ"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/energy-retrieval-v0.23.md",
+    "ruling_id": "ER11",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-ENERGY-RETRIEVAL-ER12",
+   "topic": "エネルギー回収",
+   "cards": [
+    {
+     "card_id": "PMCG1-076",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "エネルギー回収"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "同じ名前の別のカード 2 枚・タイプの違う 2 枚を選べる。同じカードを 2 回は選べない",
+   "conclusion": "同じ名前の別のカード 2 枚・タイプの違う 2 枚を選べる。同じカードを 2 回は選べない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "257",
+     "location": "エネルギー回収と関連規定。詳細はエンジンのdocs/energy-retrieval-v0.23.md ER12の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-076-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER12",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.257「基本エネルギーカードを最大2枚」（名前・タイプの制限は書かれていない。カードは 1 枚ずつの物）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/energy-retrieval-v0.23.md",
+    "ruling_id": "ER12",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-ENERGY-RETRIEVAL-ER13",
+   "topic": "エネルギー回収",
+   "cards": [
+    {
+     "card_id": "PMCG1-076",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "エネルギー回収"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "手に入れたカードは公開の情報（トラッシュから手札に移ったカードは、だれにも分かる）",
+   "conclusion": "手に入れたカードは公開の情報（トラッシュから手札に移ったカードは、だれにも分かる）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312",
+     "location": "エネルギー回収と関連規定。詳細はエンジンのdocs/energy-retrieval-v0.23.md ER13の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-076-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER13",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 最新の説明に「見せる」の指示はないが、p.312「カードをトラッシュするときには、かならず表を上にして置きます。」（トラッシュは公開）。再利用: トラッシュに順番はない（p.312）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/energy-retrieval-v0.23.md",
+    "ruling_id": "ER13",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": "エンジンの推論を再利用: 最新の説明に「見せる」の指示はないが、p.312「カードをトラッシュするときには、かならず表を上にして置きます。」（トラッシュは公開）。再利用: トラッシュに順番はない（p.312）"
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT2",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "使うための条件は、手札の「たねポケモン」または「進化カード」を 1 枚選び、相手に見せてから山札にもどすこと。使っているこのカードは含まない。このカードを除く手札にたねポケモン・進化カードがなければ使えない（手札がこのカードだけ・トレーナーとエネルギーだけ）",
+   "conclusion": "使うための条件は、手札の「たねポケモン」または「進化カード」を 1 枚選び、相手に見せてから山札にもどすこと。使っているこのカードは含まない。このカードを除く手札にたねポケモン・進化カードがなければ使えない（手札がこのカードだけ・トレーナーとエネルギーだけ）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT2の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT2の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT2",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「…あなたの山札にもどす。それができないとき、このカードは使えない。」。再利用: p.310 の手順（手札から出してから使うための条件。CS3 と同じ規定）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT2",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT3",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "山札の中身（見えない情報）は使うための条件ではない。山札にたねポケモン・進化カードがない・山札が 0 枚でも使える",
+   "conclusion": "山札の中身（見えない情報）は使うための条件ではない。山札にたねポケモン・進化カードがない・山札が 0 枚でも使える",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT3の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT3",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259 の最新の説明が「それができないとき」と書くのは手札から山札にもどすことだけ。解説「山札の中にポケモンのカードがなかったら、交換のために入れたポケモンカードを持ってくることになります」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT3",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT4",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "手札から選ぶのも、山札から選び出すのも、使ったプレイヤー",
+   "conclusion": "手札から選ぶのも、山札から選び出すのも、使ったプレイヤー",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT4の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT4",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「手札から…1枚選び」「あなたの山札から…1枚選び出し」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT4",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT5",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "手札から選べるのは、たねポケモン・1 進化・2 進化のカード。トレーナー・エネルギー・使っているこのカード・手札にないカードは選べない。1 枚",
+   "conclusion": "手札から選べるのは、たねポケモン・1 進化・2 進化のカード。トレーナー・エネルギー・使っているこのカード・手札にないカードは選べない。1 枚",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT5の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT5",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「手札から「たねポケモン」または「進化カード」を1枚選び」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT5",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT6",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "手札から選んだカードは相手に見せる（公開の情報）",
+   "conclusion": "手札から選んだカードは相手に見せる（公開の情報）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT6の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT6",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「相手プレイヤーに見せてから」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT6",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT8",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "順番: 手札から選び、見せて山札にもどす（使うための条件）→ 山札から選び出し、見せて手札に加える → その山札を切る",
+   "conclusion": "順番: 手札から選び、見せて山札にもどす（使うための条件）→ 山札から選び出し、見せて手札に加える → その山札を切る",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT8の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT8の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT8",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259 の最新の説明の文の順番と「その後」。ポケモン育て屋さんの解説「「ポケモン交換おじさん」で山札にもどし、2進化ポケモンカードを山札から持ってきて」。再利用: p.310 の手順 3 → 4"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT8",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT9",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "山札から選び出せるのは、たねポケモン・1 進化・2 進化のカード（山札のどの位置でも）。エネルギー・トレーナーは選べない。1 枚で、選ぶことは省略できない",
+   "conclusion": "山札から選び出せるのは、たねポケモン・1 進化・2 進化のカード（山札のどの位置でも）。エネルギー・トレーナーは選べない。1 枚で、選ぶことは省略できない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT9の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT9",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「あなたの山札から「たねポケモン」または「進化カード」を1枚選び出し、…手札に加える」（「できる」がない）。解説「進化ポケモンだけでなくたねポケモンも持ってこられる」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT9",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT10",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "段階 1 でもどしたカードは山札のカードなので、選び出せる（ほかに選べるものがあっても）。山札にほかのたねポケモン・進化カードがなければ、もどしたカードを選ぶ",
+   "conclusion": "段階 1 でもどしたカードは山札のカードなので、選び出せる（ほかに選べるものがあっても）。山札にほかのたねポケモン・進化カードがなければ、もどしたカードを選ぶ",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT10の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT10",
+     "engine_classification": "CONFIRMED（解説）"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259 の解説「山札の中にポケモンのカードがなかったら、交換のために入れたポケモンカードを持ってくることになります」。最新の説明は、もどしたカードを除く指示を書かない"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT10",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT11",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "使う前の山札が 0 枚: もどしたカードだけが山札にあり、それを選ぶ。手に入れたあと山札は 0 枚（負けではない。CS20 の再利用）",
+   "conclusion": "使う前の山札が 0 枚: もどしたカードだけが山札にあり、それを選ぶ。手に入れたあと山札は 0 枚（負けではない。CS20 の再利用）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT11の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT11",
+     "engine_classification": "CONFIRMED（PT3・PT10 から）"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 同上"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT11",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT13",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "山札から選び出したカードは相手に見せる（公開の情報）",
+   "conclusion": "山札から選び出したカードは相手に見せる（公開の情報）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT13の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT13",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「相手プレイヤーに見せてから、手札に加える」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT13",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT14",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "その（自分の）山札を切る",
+   "conclusion": "その（自分の）山札を切る",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT14の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT14",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「その後、その山札をよく切る」。再利用: CS17"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT14",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT15",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "同じ名前の別のカード（手札にもどしたカードと同じ名前の山札のカード）を選び出せる。2 枚は別のカード",
+   "conclusion": "同じ名前の別のカード（手札にもどしたカードと同じ名前の山札のカード）を選び出せる。2 枚は別のカード",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT15の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT15",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259 に名前の制限は書かれていない（カードは 1 枚ずつの物）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT15",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-TRADER-PT17",
+   "topic": "ポケモン交換おじさん",
+   "cards": [
+    {
+     "card_id": "PMCG1-093",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン交換おじさん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "手に入れたカードは手札のカードで、ふつうの規定で使う（たねポケモンはベンチに出せる。進化カードは進化の条件を満たすポケモンにだけ重ねられる。手に入れたことで、その番に場に出たポケモン・最初の番の進化の制限を免除しない）",
+   "conclusion": "手に入れたカードは手札のカードで、ふつうの規定で使う（たねポケモンはベンチに出せる。進化カードは進化の条件を満たすポケモンにだけ重ねられる。手に入れたことで、その番に場に出たポケモン・最初の番の進化の制限を免除しない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT17の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン交換おじさんと関連規定。詳細はエンジンのdocs/pokemon-trader-v0.24.md PT17の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-093-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-6EE7C40",
+     "engine_version": "v0.24",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "ruling_id": "PT17",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: p.310（ベンチに出す・進化の条件）。p.259 に免除の指示はない"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-trader-v0.24.md",
+    "ruling_id": "PT17",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-BREEDER-BR2",
+   "topic": "ポケモン育て屋さん",
+   "cards": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "使えるのは、自分の場のポケモンを進化させるときだけ。進化させられる組（BR3〜BR10）がなければ使えない",
+   "conclusion": "使えるのは、自分の場のポケモンを進化させるときだけ。進化させられる組（BR3〜BR10）がなければ使えない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR2の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR2の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR2",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「このカードは、あなたが自分の場にいるポケモンを進化させるときにだけ、使える。」。再利用: p.310（使うための条件はカードに書かれたもの。手札から出す前に確かめる）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR2",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-BREEDER-BR3",
+   "topic": "ポケモン育て屋さん",
+   "cards": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "進化させるのは自分の場（バトル場・ベンチ）のポケモン",
+   "conclusion": "進化させるのは自分の場（バトル場・ベンチ）のポケモン",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR3の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "309",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR3の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "313",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR3の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR3",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「自分の場にいるポケモン」。再利用: p.309・p.313（場はバトル場とベンチ。S8）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR3",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-BREEDER-BR4",
+   "topic": "ポケモン育て屋さん",
+   "cards": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "進化させるのはたねポケモン（重なりのない、たねポケモンのカード）。1 進化ポケモン・2 進化ポケモンは対象にならない",
+   "conclusion": "進化させるのはたねポケモン（重なりのない、たねポケモンのカード）。1 進化ポケモン・2 進化ポケモンは対象にならない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR4の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "316",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR4の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR4",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「1進化をとばして「2進化ポケモン」に進化させる」（とばす 1 進化はたねポケモンからの 1 回目の進化）・解説の例（ゼニガメ・ヒトカゲ）と 2 段落目「場にたねポケモンが出ていて」。再利用: p.316（1 進化はたねポケモンから 1 回目、2 進化は 2 回目）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR4",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": "エンジンの推論を再利用: p.259「1進化をとばして「2進化ポケモン」に進化させる」（とばす 1 進化はたねポケモンからの 1 回目の進化）・解説の例（ゼニガメ・ヒトカゲ）と 2 段落目「場にたねポケモンが出ていて」。再利用: p.316（1 進化はたねポケモンから 1 回目、2 進化は 2 回目）"
+  },
+  {
+   "id": "CR-POKEMON-BREEDER-BR6",
+   "topic": "ポケモン育て屋さん",
+   "cards": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "系統: 2 進化カードの「○○○○から進化」の名前の 1 進化カードが「△△から進化」とする名前が、そのたねポケモンの名前と同じ（名前の完全一致）",
+   "conclusion": "系統: 2 進化カードの「○○○○から進化」の名前の 1 進化カードが「△△から進化」とする名前が、そのたねポケモンの名前と同じ（名前の完全一致）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR6の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "309",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR6の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "324",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR6の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "88",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR6の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR6",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「1進化をとばして」（とばす 1 進化は、そのたねポケモンから進化し、2 進化カードがその 1 進化から進化するもの）。再利用: p.309・p.324（進化は名前で決まり、書かれていない組み合わせで重ねない。E1・E19・S1・S2）。例: p.259 の解説（ゼニガメ → カメックス、ヒトカゲ → リザードン）、p.88 の第4弾のゼニガメの解説（ゼニガメ → わるいカメックス。CC-PMCG4-018-P43）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR6",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": "エンジンの推論を再利用: p.259「1進化をとばして」（とばす 1 進化は、そのたねポケモンから進化し、2 進化カードがその 1 進化から進化するもの）。再利用: p.309・p.324（進化は名前で決まり、書かれていない組み合わせで重ねない。E1・E19・S1・S2）。例: p.259 の解説（ゼニガメ → カメックス、ヒトカゲ → リザードン）、p.88 の第4弾のゼニガメの解説（ゼニガメ → わるいカメックス。CC-PMCG4-018-P43）"
+  },
+  {
+   "id": "CR-POKEMON-BREEDER-BR8",
+   "topic": "ポケモン育て屋さん",
+   "cards": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "1 進化カードを手札・山札などに用意する必要はなく、使わない（作らない・動かさない）",
+   "conclusion": "1 進化カードを手札・山札などに用意する必要はなく、使わない（作らない・動かさない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR8の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR8",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259 の最新の説明に 1 進化カードの指示がない（「直接のせ」）。解説「1進化ポケモンカードをかなり減らして「ポケモン育て屋さん」を多めに入れると進化が完成しやすくなります」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR8",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-BREEDER-BR9",
+   "topic": "ポケモン育て屋さん",
+   "cards": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "育て屋さんによるものも「進化」で、p.310 の進化の制限が当てはまる: おたがいの最初の番には使えない・その番に場に出したたねポケモンは進化させられない",
+   "conclusion": "育て屋さんによるものも「進化」で、p.310 の進化の制限が当てはまる: おたがいの最初の番には使えない・その番に場に出したたねポケモンは進化させられない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR9の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR9の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR9",
+     "engine_classification": "SUPPORTED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「進化させるときにだけ」「進化させる」・解説「対戦開始2回めの自分の番で…一気に進化することができます」。再利用: p.310（E4・E5）"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR9",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": "エンジンの推論を再利用: p.259「進化させるときにだけ」「進化させる」・解説「対戦開始2回めの自分の番で…一気に進化することができます」。再利用: p.310（E4・E5）"
+  },
+  {
+   "id": "CR-POKEMON-BREEDER-BR10",
+   "topic": "ポケモン育て屋さん",
+   "cards": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "その番に進化したポケモンは対象にならない（たねポケモンではない）",
+   "conclusion": "その番に進化したポケモンは対象にならない（たねポケモンではない）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR10の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR10",
+     "engine_classification": "SUPPORTED（BR4 から。再利用: p.310 の E7）"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 同上"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR10",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": "エンジンの推論を再利用: 同上"
+  },
+  {
+   "id": "CR-POKEMON-BREEDER-BR11",
+   "topic": "ポケモン育て屋さん",
+   "cards": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "特殊状態のたねポケモンも進化させられ、進化したら特殊状態・持続する効果・こんらんで「にげる」に失敗した記録は消える",
+   "conclusion": "特殊状態のたねポケモンも進化させられ、進化したら特殊状態・持続する効果・こんらんで「にげる」に失敗した記録は消える",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "322",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR11の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "323",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR11の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR11",
+     "engine_classification": "SUPPORTED（進化の規定の当てはめ）"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: p.322（E14）・p.323（E15）・R1"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR11",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": "エンジンの推論を再利用: 再利用: p.322（E14）・p.323（E15）・R1"
+  },
+  {
+   "id": "CR-POKEMON-BREEDER-BR13",
+   "topic": "ポケモン育て屋さん",
+   "cards": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "重なりはたねポケモン + 2 進化カードの 2 枚",
+   "conclusion": "重なりはたねポケモン + 2 進化カードの 2 枚",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR13の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "319",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR13の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR13",
+     "engine_classification": "CONFIRMED"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: p.259「直接のせ」。再利用: p.319「1枚のたねポケモンカードと、1または2枚の進化カードの合計2枚または3枚」"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR13",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": null
+  },
+  {
+   "id": "CR-POKEMON-BREEDER-BR14",
+   "topic": "ポケモン育て屋さん",
+   "cards": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "いちばん上の 2 進化カードの内容がそのポケモンを表す（HP・タイプ・弱点・抵抗力・にげる・ワザ・特殊能力）",
+   "conclusion": "いちばん上の 2 進化カードの内容がそのポケモンを表す（HP・タイプ・弱点・抵抗力・にげる・ワザ・特殊能力）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR14の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR14",
+     "engine_classification": "SUPPORTED（p.310 の E3'・E6 の当てはめ）"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: p.310"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR14",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": "エンジンの推論を再利用: 再利用: p.310"
+  },
+  {
+   "id": "CR-POKEMON-BREEDER-BR15",
+   "topic": "ポケモン育て屋さん",
+   "cards": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "きぜつしたら、重なった 2 枚とついているカードをトラッシュする。サイドは 1 枚",
+   "conclusion": "きぜつしたら、重なった 2 枚とついているカードをトラッシュする。サイドは 1 枚",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "313",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR15の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "323",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR15の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR15",
+     "engine_classification": "SUPPORTED（p.313 の E17・E17' の当てはめ）"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: p.313・p.323"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR15",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": "エンジンの推論を再利用: 再利用: p.313・p.323"
+  },
+  {
+   "id": "CR-POKEMON-BREEDER-BR19",
+   "topic": "ポケモン育て屋さん",
+   "cards": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "育て屋さんで進化させたポケモンは、その番にもう一度は進化させられない",
+   "conclusion": "育て屋さんで進化させたポケモンは、その番にもう一度は進化させられない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "ポケモン育て屋さんと関連規定。詳細はエンジンのdocs/pokemon-breeder-v0.25.md BR19の根拠欄",
+     "quote": "",
+     "checked": "engine_report"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [
+    "LD-PMCG1-094-TRAINER"
+   ],
+   "related_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR19",
+     "engine_classification": "SUPPORTED（p.310 の E7 の当てはめ。2 進化の上の段階もない）"
+    }
+   ],
+   "notes": [
+    "エンジンの分類をそのまま取り込んだ。原典の独立確認ではない。",
+    "エンジンの根拠欄: 再利用: p.310"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR19",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   },
+   "inference": "エンジンの推論を再利用: 再利用: p.310"
   }
  ],
  "issues": [
@@ -17299,6 +21033,360 @@
      }
     ]
    }
+  },
+  {
+   "id": "UQ-GUST-WITHOUT-OPPONENT-BENCH",
+   "status": "UNRESOLVED",
+   "question": "相手のベンチが空のとき、突風を使えるか",
+   "why_unresolved": "p.255 の最新の説明・図版・解説に書かれていない。再利用: p.310（トレーナーの使いかた）・p.311（「控えがいなければ宣言できない」は「にげる」の規定）。ポケモンいれかえの同じ場合も UNRESOLVED（v0.2b）。第1弾の印刷の文面の「相手に控えがいない場合は使えない」は最新の説明にないので使わない（印刷の文面で補わない。p.6）。一文がなくなったことを「使える（効果なし）」と読むこともできない。同じ本のふきとばしの最新の説明は控えがいないときを括弧で書く（p.19）が、書いていないカードの扱いは決まらない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "255",
+     "location": "突風の最新の説明・解説（エンジンの記録）"
+    },
+    {
+     "source": "P43",
+     "page": "310",
+     "location": "トレーナー・進化の手順（既存記録）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P310-TRAINERS",
+    "GR-P43-P6-LATEST-DESCRIPTION"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG1-072",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "突風"
+     },
+     "engine_ruling": "GW5",
+     "note": "相手に控えポケモンがいないとき"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードで起こりうる境界。自然な対戦での発生は確認していない",
+    "all_cards": "未調査"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-36E3630",
+     "engine_version": "v0.21",
+     "document": "docs/gust-v0.21.md",
+     "ruling_id": "GW5",
+     "engine_classification": "UNRESOLVED"
+    }
+   ],
+   "notes": [
+    "エンジンの記録を取り込んだ。kyuuraによる原典の再読・新しい裁定はない。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-15",
+    "game_effect": "game_result",
+    "game_effect_note": "使用可否または選択の扱いで、手札・場・トラッシュなどの状態が変わる可能性がある。",
+    "resolution_needs": "対象がない場合または当該境界の扱いを明記する、当時の日本語の公式Q&A・大会裁定など。",
+    "searched": "エンジンの文書と照合記録を再利用した。当時のQ&A・会報・雑誌の記事は今回探していない。原典画像も再読していない。",
+    "new_sources": []
+   },
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/gust-v0.21.md",
+    "ruling_id": "GW5",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   }
+  },
+  {
+   "id": "UQ-COMPUTER-SEARCH-EMPTY-DECK",
+   "status": "UNRESOLVED",
+   "question": "山札が空のとき、パソコン通信を使えるか",
+   "why_unresolved": "使うための条件は手札のトラッシュだけ（p.260・p.310 の例）で、山札が 0 枚のときは書かれていない。条件を満たせても、残りの説明（山札から 1 枚選び出す）は行えない。p.312 の「カードが足りないときは、引けるだけのカードを引いてください」「負けにはなりません」は「カードを引く」ときの規定で、選び出すときの規定ではない。p.310 は「使うための条件を満たすことができないとき」は使えないとだけ書き、残りの説明を行えないときを書かない。使える（手札 2 枚をトラッシュするだけ）とも、使えないとも決められない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "260",
+     "location": "パソコン通信の最新の説明・解説（エンジンの記録）"
+    },
+    {
+     "source": "P43",
+     "page": "310",
+     "location": "トレーナー・進化の手順（既存記録）"
+    },
+    {
+     "source": "P43",
+     "page": "312",
+     "location": "一般の規定（既存記録）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P310-TRAINERS",
+    "GR-2000-P312-DECK-HAND-DISCARD"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "パソコン通信"
+     },
+     "engine_ruling": "CS6",
+     "note": "山札が 0 枚のときに使えるか"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードで起こりうる境界。自然な対戦での発生は確認していない",
+    "all_cards": "未調査"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-5844FCF",
+     "engine_version": "v0.22",
+     "document": "docs/computer-search-v0.22.md",
+     "ruling_id": "CS6",
+     "engine_classification": "UNRESOLVED"
+    }
+   ],
+   "notes": [
+    "エンジンの記録を取り込んだ。kyuuraによる原典の再読・新しい裁定はない。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-15",
+    "game_effect": "game_result",
+    "game_effect_note": "使用可否または選択の扱いで、手札・場・トラッシュなどの状態が変わる可能性がある。",
+    "resolution_needs": "対象がない場合または当該境界の扱いを明記する、当時の日本語の公式Q&A・大会裁定など。",
+    "searched": "エンジンの文書と照合記録を再利用した。当時のQ&A・会報・雑誌の記事は今回探していない。原典画像も再読していない。",
+    "new_sources": []
+   },
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/computer-search-v0.22.md",
+    "ruling_id": "CS6",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   }
+  },
+  {
+   "id": "UQ-ENERGY-RETRIEVAL-ZERO-CHOICE",
+   "status": "UNRESOLVED",
+   "question": "回収対象があるとき、エネルギー回収で0枚を選べるか",
+   "why_unresolved": "p.257 の最新の説明は「最大2枚選び出し、手札に加える」で、0 枚を含むかを書かない。解説にもない。図版の「手札に加えてよい」は最新の説明ではない。ゴースのエナジーへんかんの H4 と同じ言い回しの問いだが、別のカード（トレーナー。使うための条件はすでに満たした）で、kyuura の UQ-ENERGY-CONVERSION-ZERO の対象でもない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "257",
+     "location": "エネルギー回収の最新の説明・解説（エンジンの記録）"
+    },
+    {
+     "source": "P43",
+     "page": "310",
+     "location": "トレーナー・進化の手順（既存記録）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P310-TRAINERS"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG1-076",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "エネルギー回収"
+     },
+     "engine_ruling": "ER9",
+     "note": "選べるものがあるのに 0 枚を選べるか"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードで起こりうる境界。自然な対戦での発生は確認していない",
+    "all_cards": "未調査"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER9",
+     "engine_classification": "UNRESOLVED"
+    }
+   ],
+   "notes": [
+    "エンジンの記録を取り込んだ。kyuuraによる原典の再読・新しい裁定はない。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-15",
+    "game_effect": "game_result",
+    "game_effect_note": "使用可否または選択の扱いで、手札・場・トラッシュなどの状態が変わる可能性がある。",
+    "resolution_needs": "対象がない場合または当該境界の扱いを明記する、当時の日本語の公式Q&A・大会裁定など。",
+    "searched": "エンジンの文書と照合記録を再利用した。当時のQ&A・会報・雑誌の記事は今回探していない。原典画像も再読していない。",
+    "new_sources": []
+   },
+   "related_issues": [
+    "UQ-ENERGY-CONVERSION-ZERO"
+   ],
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/energy-retrieval-v0.23.md",
+    "ruling_id": "ER9",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   }
+  },
+  {
+   "id": "UQ-ENERGY-RETRIEVAL-WITHOUT-TARGET",
+   "status": "UNRESOLVED",
+   "question": "使用前のトラッシュに基本エネルギーカードがないとき、エネルギー回収を使えるか",
+   "why_unresolved": "使うための条件は手札のトラッシュだけで満たせる（p.257）が、残りの説明の対象がないときは書かれていない。トラッシュする手札が基本エネルギーカードでも、ER7 で選べないので対象は生じない。p.309 の「処理の対象がなくなってしまっている場合、その内容は無視」はワザの処理の規定（エナジーへんかんの H5）で、トレーナーには当てはめていない（パソコン通信の CS6・きずぐすり・ポケモンいれかえ・突風と同じ扱い）",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "257",
+     "location": "エネルギー回収の最新の説明・解説（エンジンの記録）"
+    },
+    {
+     "source": "P43",
+     "page": "310",
+     "location": "トレーナー・進化の手順（既存記録）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P310-TRAINERS"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG1-076",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "エネルギー回収"
+     },
+     "engine_ruling": "ER10",
+     "note": "使う前の自分のトラッシュに基本エネルギーカードがないときに使えるか（手札をトラッシュするだけで使えるか）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "エンジンの対応カードで起こりうる境界。自然な対戦での発生は確認していない",
+    "all_cards": "未調査"
+   },
+   "related_engine_rulings": [],
+   "engine_refs": [
+    {
+     "import": "ENGINE-CD641E6",
+     "engine_version": "v0.23",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "ruling_id": "ER10",
+     "engine_classification": "UNRESOLVED"
+    }
+   ],
+   "notes": [
+    "エンジンの記録を取り込んだ。kyuuraによる原典の再読・新しい裁定はない。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-15",
+    "game_effect": "game_result",
+    "game_effect_note": "使用可否または選択の扱いで、手札・場・トラッシュなどの状態が変わる可能性がある。",
+    "resolution_needs": "対象がない場合または当該境界の扱いを明記する、当時の日本語の公式Q&A・大会裁定など。",
+    "searched": "エンジンの文書と照合記録を再利用した。当時のQ&A・会報・雑誌の記事は今回探していない。原典画像も再読していない。",
+    "new_sources": []
+   },
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/energy-retrieval-v0.23.md",
+    "ruling_id": "ER10",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   }
+  },
+  {
+   "id": "UQ-EVOLUTION-HP-BELOW-DAMAGE",
+   "status": "UNRESOLVED",
+   "question": "進化後のHPが、のっているダメージ以下になる場合、きぜつするか。また、いつ判定するか",
+   "why_unresolved": "進化の手順（p.310）はきぜつを確認する時点を書かない。一方、きぜつの規定（p.323）はHP以上の「ダメージを受けたら」とする。進化でHPが変わった場合にどう当てはめるかを決められない（エンジンv0.4aのH1・v0.25のBR17の記録を再利用）。",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "259",
+     "location": "ポケモン育て屋さんの最新の説明・解説（エンジンの記録）"
+    },
+    {
+     "source": "P43",
+     "page": "310",
+     "location": "トレーナー・進化の手順（既存記録）"
+    },
+    {
+     "source": "P43",
+     "page": "323",
+     "location": "一般の規定（既存記録）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P310-EVOLUTION",
+    "GR-2000-P319-HP-AND-DAMAGE",
+    "GR-2000-P323-KNOCKOUT"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG1-094",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋さん"
+     },
+     "engine_ruling": "BR17",
+     "note": "進化したあとの HP が、のっているダメージ以下になる組"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "現在の対応系統ではHPが増えるため、この境界の自然な発生は確認していない。エンジンではテスト用のカードで確認している。",
+    "all_cards": "未調査"
+   },
+   "related_engine_rulings": [
+    {
+     "ruling_id": "H1",
+     "engine_version": "v0.4a",
+     "document": "docs/evolution-rules-v0.4a.md",
+     "relation": "同じ問い。今回新しいエンジンの未解決項目として数えない"
+    }
+   ],
+   "engine_refs": [
+    {
+     "import": "ENGINE-548DD65",
+     "engine_version": "v0.25",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "ruling_id": "BR17",
+     "engine_classification": "UNRESOLVED（v0.4a の H1。変えていない。同じ問い・同じコード）"
+    }
+   ],
+   "notes": [
+    "エンジンの記録を取り込んだ。kyuuraによる原典の再読・新しい裁定はない。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-15",
+    "game_effect": "game_result",
+    "game_effect_note": "使用可否または選択の扱いで、手札・場・トラッシュなどの状態が変わる可能性がある。",
+    "resolution_needs": "対象がない場合または当該境界の扱いを明記する、当時の日本語の公式Q&A・大会裁定など。",
+    "searched": "エンジンの文書と照合記録を再利用した。当時のQ&A・会報・雑誌の記事は今回探していない。原典画像も再読していない。",
+    "new_sources": []
+   },
+   "source_provenance": {
+    "repository": "moheronemy/kyuura-engine",
+    "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "document": "docs/pokemon-breeder-v0.25.md",
+    "ruling_id": "BR17",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false
+   }
   }
  ],
  "comparisons": [
@@ -18592,6 +22680,512 @@
     "エンジンの記録は調査の履歴を追うための参照で、原典ではない。"
    ],
    "no_ruling_tables": true
+  },
+  {
+   "id": "ENGINE-A09FF9B",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.19-professor-oak",
+   "commit": "a09ff9bf3c909264c7ccb42c777162663bc1a902",
+   "engine_version": "v0.19",
+   "parent_version_commit": "4f2eb18c0a2af791a7427a23d79c5289da22cf4c",
+   "documents_read_at": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "research_commit_used_by_engine": "3f349085645f47d0649a6cacece3680caeae50bf",
+   "imported_on": "2026-10-15",
+   "documents": [
+    "docs/professor-oak-v0.19.md",
+    "docs/v0.19-verification.md",
+    "kyuura_engine/data/card_verification.json"
+   ],
+   "ruling_sets": [
+    {
+     "prefix": "O",
+     "first": 1,
+     "last": 13,
+     "document": "docs/professor-oak-v0.19.md",
+     "engine_reported_counts": {
+      "CONFIRMED": 12,
+      "SUPPORTED": 1,
+      "UNRESOLVED": 0,
+      "CONFLICT": 0,
+      "note": "複合行は各分類に数えるため合計は行数と一致しない場合がある"
+     }
+    }
+   ],
+   "imported_rulings": [
+    "CR-PROFESSOR-OAK-O11",
+    "CR-PROFESSOR-OAK-O3",
+    "CR-PROFESSOR-OAK-O4",
+    "CR-PROFESSOR-OAK-O5",
+    "CR-PROFESSOR-OAK-O7",
+    "GR-2000-P309-TURN",
+    "GR-2000-P310-TRAINERS",
+    "GR-2000-P312-DECK-HAND-DISCARD"
+   ],
+   "unresolved_rulings": [],
+   "not_imported": [
+    {
+     "ruling_id": "O2",
+     "document": "docs/professor-oak-v0.19.md",
+     "engine_classification": "CONFIRMED（使いすて）・SUPPORTED（時点は効果のあと）",
+     "status": "deferred",
+     "reason": "一般規定・推論・実装の複合行。分類を変更せず、分割して対応する作業を保留する。"
+    },
+    {
+     "ruling_id": "O12",
+     "document": "docs/professor-oak-v0.19.md",
+     "engine_classification": "CONFIRMED（引いたカード）・実装上の方針（ログの項目）",
+     "status": "deferred",
+     "reason": "一般規定・推論・実装の複合行。分類を変更せず、分割して対応する作業を保留する。"
+    },
+    {
+     "ruling_id": "O13",
+     "document": "docs/professor-oak-v0.19.md",
+     "engine_classification": "実装上の仮定",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    }
+   ],
+   "engine_unresolved_total": 24,
+   "notes": [
+    "原典は再読せず、エンジンの照合記録と規定の表を取り込んだ。by: kyuura-engine / checked: engine_report は独立の画像確認を意味しない。",
+    "分類を単一に分けられない複合行は保留し、実装だけの判断は公式の裁定にしない。原文の分類と保留理由を not_imported に残す。"
+   ]
+  },
+  {
+   "id": "ENGINE-36E3630",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.21-gust",
+   "commit": "36e363043c097b24fba0bd45fdc29e3d327716a1",
+   "engine_version": "v0.21",
+   "parent_version_commit": "99fd5e173dff7b3bd023d01ed7296aefc0f2b87d",
+   "documents_read_at": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "research_commit_used_by_engine": "3f349085645f47d0649a6cacece3680caeae50bf",
+   "imported_on": "2026-10-15",
+   "documents": [
+    "docs/gust-v0.21.md",
+    "docs/v0.21-verification.md",
+    "kyuura_engine/data/card_verification.json"
+   ],
+   "ruling_sets": [
+    {
+     "prefix": "GW",
+     "first": 1,
+     "last": 18,
+     "document": "docs/gust-v0.21.md",
+     "engine_reported_counts": {
+      "CONFIRMED": 12,
+      "SUPPORTED": 1,
+      "UNRESOLVED": 1,
+      "CONFLICT": 1,
+      "note": "複合行は各分類に数えるため合計は行数と一致しない場合がある"
+     }
+    }
+   ],
+   "imported_rulings": [
+    "CC-PMCG1-072-P255",
+    "CR-GUST-GW11",
+    "CR-GUST-GW13",
+    "CR-GUST-GW14",
+    "CR-GUST-GW15",
+    "CR-GUST-GW17",
+    "CR-GUST-GW2",
+    "CR-GUST-GW3",
+    "CR-GUST-GW6",
+    "CR-GUST-GW7",
+    "GR-2000-P322-PERSISTENT-EFFECTS",
+    "GR-2000-P322-SPECIAL-CONDITIONS"
+   ],
+   "unresolved_rulings": [
+    "UQ-GUST-WITHOUT-OPPONENT-BENCH"
+   ],
+   "not_imported": [
+    {
+     "ruling_id": "GW4",
+     "document": "docs/gust-v0.21.md",
+     "engine_classification": "実装上の判断（ポケモンいれかえと同じ）",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    },
+    {
+     "ruling_id": "GW8",
+     "document": "docs/gust-v0.21.md",
+     "engine_classification": "CONFIRMED（カード・カウンター）・SUPPORTED（p.311 のにげるの手順の文を入れ替えに当てる）・実装上の仮定（番号）",
+     "status": "deferred",
+     "reason": "一般規定・推論・実装の複合行。分類を変更せず、分割して対応する作業を保留する。"
+    },
+    {
+     "ruling_id": "GW12",
+     "document": "docs/gust-v0.21.md",
+     "engine_classification": "起こらない（実装上の仮定。不変条件で成り立つ）",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    },
+    {
+     "ruling_id": "GW16",
+     "document": "docs/gust-v0.21.md",
+     "engine_classification": "該当なし（その状態を持つカードがない）",
+     "status": "deferred",
+     "reason": "該当する状態を持つ対応カードがなく、将来追加するときの使用可否の調査を保留する。"
+    },
+    {
+     "ruling_id": "GW18",
+     "document": "docs/gust-v0.21.md",
+     "engine_classification": "実装上の判断（ログの意味の明記）",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    }
+   ],
+   "engine_unresolved_total": 25,
+   "notes": [
+    "原典は再読せず、エンジンの照合記録と規定の表を取り込んだ。by: kyuura-engine / checked: engine_report は独立の画像確認を意味しない。",
+    "分類を単一に分けられない複合行は保留し、実装だけの判断は公式の裁定にしない。原文の分類と保留理由を not_imported に残す。"
+   ]
+  },
+  {
+   "id": "ENGINE-5844FCF",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.22-computer-search",
+   "commit": "5844fcfbf3d51f4f2b6a4cb83bb4e23925913589",
+   "engine_version": "v0.22",
+   "parent_version_commit": "36e363043c097b24fba0bd45fdc29e3d327716a1",
+   "documents_read_at": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "research_commit_used_by_engine": "3f349085645f47d0649a6cacece3680caeae50bf",
+   "imported_on": "2026-10-15",
+   "documents": [
+    "docs/computer-search-v0.22.md",
+    "docs/v0.22-verification.md",
+    "kyuura_engine/data/card_verification.json"
+   ],
+   "ruling_sets": [
+    {
+     "prefix": "CS",
+     "first": 1,
+     "last": 21,
+     "document": "docs/computer-search-v0.22.md",
+     "engine_reported_counts": {
+      "CONFIRMED": 17,
+      "SUPPORTED": 2,
+      "UNRESOLVED": 1,
+      "CONFLICT": 1,
+      "note": "複合行は各分類に数えるため合計は行数と一致しない場合がある"
+     }
+    }
+   ],
+   "imported_rulings": [
+    "CC-PMCG1-090-P260",
+    "CR-COMPUTER-SEARCH-CS11",
+    "CR-COMPUTER-SEARCH-CS12",
+    "CR-COMPUTER-SEARCH-CS14",
+    "CR-COMPUTER-SEARCH-CS15",
+    "CR-COMPUTER-SEARCH-CS16",
+    "CR-COMPUTER-SEARCH-CS17",
+    "CR-COMPUTER-SEARCH-CS2",
+    "CR-COMPUTER-SEARCH-CS20",
+    "CR-COMPUTER-SEARCH-CS4",
+    "CR-COMPUTER-SEARCH-CS5",
+    "CR-COMPUTER-SEARCH-CS7",
+    "CR-COMPUTER-SEARCH-CS8",
+    "CR-COMPUTER-SEARCH-CS9",
+    "GR-2000-P310-TRAINERS",
+    "GR-2000-P312-DECK-HAND-DISCARD"
+   ],
+   "unresolved_rulings": [
+    "UQ-COMPUTER-SEARCH-EMPTY-DECK"
+   ],
+   "not_imported": [
+    {
+     "ruling_id": "CS18",
+     "document": "docs/computer-search-v0.22.md",
+     "engine_classification": "CONFIRMED（使いすて）・SUPPORTED（時点）",
+     "status": "deferred",
+     "reason": "一般規定・推論・実装の複合行。分類を変更せず、分割して対応する作業を保留する。"
+    },
+    {
+     "ruling_id": "CS21",
+     "document": "docs/computer-search-v0.22.md",
+     "engine_classification": "実装上の判断（p.310「そのトレーナーカードによって起こることをすべてすませてからでないと、他のことはできません」と矛盾しない）",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    }
+   ],
+   "engine_unresolved_total": 26,
+   "notes": [
+    "原典は再読せず、エンジンの照合記録と規定の表を取り込んだ。by: kyuura-engine / checked: engine_report は独立の画像確認を意味しない。",
+    "分類を単一に分けられない複合行は保留し、実装だけの判断は公式の裁定にしない。原文の分類と保留理由を not_imported に残す。"
+   ]
+  },
+  {
+   "id": "ENGINE-CD641E6",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.23-energy-retrieval",
+   "commit": "cd641e6fe59711c766a370a20a5dda0c9c3f2a94",
+   "engine_version": "v0.23",
+   "parent_version_commit": "5844fcfbf3d51f4f2b6a4cb83bb4e23925913589",
+   "documents_read_at": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "research_commit_used_by_engine": "3f349085645f47d0649a6cacece3680caeae50bf",
+   "imported_on": "2026-10-15",
+   "documents": [
+    "docs/energy-retrieval-v0.23.md",
+    "docs/v0.23-verification.md",
+    "kyuura_engine/data/card_verification.json"
+   ],
+   "ruling_sets": [
+    {
+     "prefix": "ER",
+     "first": 1,
+     "last": 17,
+     "document": "docs/energy-retrieval-v0.23.md",
+     "engine_reported_counts": {
+      "CONFIRMED": 11,
+      "SUPPORTED": 2,
+      "UNRESOLVED": 2,
+      "CONFLICT": 1,
+      "note": "複合行は各分類に数えるため合計は行数と一致しない場合がある"
+     }
+    }
+   ],
+   "imported_rulings": [
+    "CC-PMCG1-076-P257",
+    "CR-ENERGY-RETRIEVAL-ER11",
+    "CR-ENERGY-RETRIEVAL-ER12",
+    "CR-ENERGY-RETRIEVAL-ER13",
+    "CR-ENERGY-RETRIEVAL-ER2",
+    "CR-ENERGY-RETRIEVAL-ER3",
+    "CR-ENERGY-RETRIEVAL-ER4",
+    "CR-ENERGY-RETRIEVAL-ER5",
+    "CR-ENERGY-RETRIEVAL-ER6",
+    "CR-ENERGY-RETRIEVAL-ER7",
+    "CR-ENERGY-RETRIEVAL-ER8",
+    "GR-2000-P310-ATTACH-ENERGY"
+   ],
+   "unresolved_rulings": [
+    "UQ-ENERGY-RETRIEVAL-WITHOUT-TARGET",
+    "UQ-ENERGY-RETRIEVAL-ZERO-CHOICE"
+   ],
+   "not_imported": [
+    {
+     "ruling_id": "ER14",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "engine_classification": "CONFIRMED（使いすて・何枚でも）・SUPPORTED（時点）",
+     "status": "deferred",
+     "reason": "一般規定・推論・実装の複合行。分類を変更せず、分割して対応する作業を保留する。"
+    },
+    {
+     "ruling_id": "ER15",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "engine_classification": "実装上の判断（パソコン通信・ポケモンいれかえ・突風と同じ）",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    },
+    {
+     "ruling_id": "ER16",
+     "document": "docs/energy-retrieval-v0.23.md",
+     "engine_classification": "実装上の判断（パソコン通信の CS21 と同じ）",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    }
+   ],
+   "engine_unresolved_total": 28,
+   "notes": [
+    "原典は再読せず、エンジンの照合記録と規定の表を取り込んだ。by: kyuura-engine / checked: engine_report は独立の画像確認を意味しない。",
+    "分類を単一に分けられない複合行は保留し、実装だけの判断は公式の裁定にしない。原文の分類と保留理由を not_imported に残す。"
+   ]
+  },
+  {
+   "id": "ENGINE-6EE7C40",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.24-pokemon-trader",
+   "commit": "6ee7c408f63a6ef84e28545fbaa96813495a1ae8",
+   "engine_version": "v0.24",
+   "parent_version_commit": "cd641e6fe59711c766a370a20a5dda0c9c3f2a94",
+   "documents_read_at": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "research_commit_used_by_engine": "3f349085645f47d0649a6cacece3680caeae50bf",
+   "imported_on": "2026-10-15",
+   "documents": [
+    "docs/pokemon-trader-v0.24.md",
+    "docs/v0.24-verification.md",
+    "kyuura_engine/data/card_verification.json"
+   ],
+   "ruling_sets": [
+    {
+     "prefix": "PT",
+     "first": 1,
+     "last": 19,
+     "document": "docs/pokemon-trader-v0.24.md",
+     "engine_reported_counts": {
+      "CONFIRMED": 15,
+      "SUPPORTED": 1,
+      "UNRESOLVED": 0,
+      "CONFLICT": 1,
+      "note": "複合行は各分類に数えるため合計は行数と一致しない場合がある"
+     }
+    }
+   ],
+   "imported_rulings": [
+    "CC-PMCG1-093-P259",
+    "CR-POKEMON-TRADER-PT10",
+    "CR-POKEMON-TRADER-PT11",
+    "CR-POKEMON-TRADER-PT13",
+    "CR-POKEMON-TRADER-PT14",
+    "CR-POKEMON-TRADER-PT15",
+    "CR-POKEMON-TRADER-PT17",
+    "CR-POKEMON-TRADER-PT2",
+    "CR-POKEMON-TRADER-PT3",
+    "CR-POKEMON-TRADER-PT4",
+    "CR-POKEMON-TRADER-PT5",
+    "CR-POKEMON-TRADER-PT6",
+    "CR-POKEMON-TRADER-PT8",
+    "CR-POKEMON-TRADER-PT9",
+    "GR-2000-P312-DECK-HAND-DISCARD"
+   ],
+   "unresolved_rulings": [],
+   "not_imported": [
+    {
+     "ruling_id": "PT7",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "engine_classification": "実装上の仮定（最新の説明は「あなたの山札にもどす」で位置を書かない。そのあと必ず山札を切り、選び出すのは位置によらないので、ルール上の結果は変わらない。切ったあとの並びは乱数の割り当てで変わる）",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    },
+    {
+     "ruling_id": "PT16",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "engine_classification": "CONFIRMED（使いすて・何枚でも）・SUPPORTED（時点）",
+     "status": "deferred",
+     "reason": "一般規定・推論・実装の複合行。分類を変更せず、分割して対応する作業を保留する。"
+    },
+    {
+     "ruling_id": "PT18",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "engine_classification": "実装上の判断（パソコン通信・突風・エネルギー回収と同じ）",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    },
+    {
+     "ruling_id": "PT19",
+     "document": "docs/pokemon-trader-v0.24.md",
+     "engine_classification": "実装上の判断（パソコン通信の CS21 と同じ）",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    }
+   ],
+   "engine_unresolved_total": 28,
+   "notes": [
+    "原典は再読せず、エンジンの照合記録と規定の表を取り込んだ。by: kyuura-engine / checked: engine_report は独立の画像確認を意味しない。",
+    "分類を単一に分けられない複合行は保留し、実装だけの判断は公式の裁定にしない。原文の分類と保留理由を not_imported に残す。"
+   ]
+  },
+  {
+   "id": "ENGINE-548DD65",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.25-pokemon-breeder",
+   "commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+   "engine_version": "v0.25",
+   "parent_version_commit": "6ee7c408f63a6ef84e28545fbaa96813495a1ae8",
+   "documents_read_at": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+   "kyuura_commit_used_by_engine": "ecb2d694e6280ec5dc9ddd2a8f709cea16a6b691",
+   "research_commit_used_by_engine": "3f349085645f47d0649a6cacece3680caeae50bf",
+   "imported_on": "2026-10-15",
+   "documents": [
+    "docs/pokemon-breeder-v0.25.md",
+    "docs/v0.25-verification.md",
+    "kyuura_engine/data/card_verification.json"
+   ],
+   "ruling_sets": [
+    {
+     "prefix": "BR",
+     "first": 1,
+     "last": 22,
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "engine_reported_counts": {
+      "CONFIRMED": 8,
+      "SUPPORTED": 11,
+      "UNRESOLVED": 1,
+      "CONFLICT": 1,
+      "note": "複合行は各分類に数えるため合計は行数と一致しない場合がある"
+     }
+    }
+   ],
+   "imported_rulings": [
+    "CC-PMCG1-094-P259",
+    "CR-POKEMON-BREEDER-BR10",
+    "CR-POKEMON-BREEDER-BR11",
+    "CR-POKEMON-BREEDER-BR13",
+    "CR-POKEMON-BREEDER-BR14",
+    "CR-POKEMON-BREEDER-BR15",
+    "CR-POKEMON-BREEDER-BR19",
+    "CR-POKEMON-BREEDER-BR2",
+    "CR-POKEMON-BREEDER-BR3",
+    "CR-POKEMON-BREEDER-BR4",
+    "CR-POKEMON-BREEDER-BR6",
+    "CR-POKEMON-BREEDER-BR8",
+    "CR-POKEMON-BREEDER-BR9",
+    "GR-2000-P309-EVOLUTION-BY-NAME"
+   ],
+   "unresolved_rulings": [
+    "UQ-EVOLUTION-HP-BELOW-DAMAGE"
+   ],
+   "not_imported": [
+    {
+     "ruling_id": "BR5",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "engine_classification": "2 進化カード: CONFIRMED。手札から: SUPPORTED",
+     "status": "deferred",
+     "reason": "一般規定・推論・実装の複合行。分類を変更せず、分割して対応する作業を保留する。"
+    },
+    {
+     "ruling_id": "BR7",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "engine_classification": "実装上の判断（データの範囲。ルールの裁定ではない）",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    },
+    {
+     "ruling_id": "BR12",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "engine_classification": "SUPPORTED（p.310 の E8・E9・E8' の当てはめ）・実装上の仮定（場のポケモンの番号）",
+     "status": "deferred",
+     "reason": "一般規定・推論・実装の複合行。分類を変更せず、分割して対応する作業を保留する。"
+    },
+    {
+     "ruling_id": "BR16",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "engine_classification": "選ぶ人: CONFIRMED。順番: 実装上の判断（結果は変わらない）",
+     "status": "deferred",
+     "reason": "一般規定・推論・実装の複合行。分類を変更せず、分割して対応する作業を保留する。"
+    },
+    {
+     "ruling_id": "BR18",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "engine_classification": "CONFIRMED（使いすて・何枚でも）・SUPPORTED（時点）",
+     "status": "deferred",
+     "reason": "一般規定・推論・実装の複合行。分類を変更せず、分割して対応する作業を保留する。"
+    },
+    {
+     "ruling_id": "BR21",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "engine_classification": "実装上の判断（パソコン通信・突風などと同じ）",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    },
+    {
+     "ruling_id": "BR22",
+     "document": "docs/pokemon-breeder-v0.25.md",
+     "engine_classification": "実装上の判断",
+     "status": "excluded",
+     "reason": "決定・順序・番号などの実装上の判断であり、公式の裁定として取り込まない。"
+    }
+   ],
+   "engine_unresolved_total": 28,
+   "notes": [
+    "原典は再読せず、エンジンの照合記録と規定の表を取り込んだ。by: kyuura-engine / checked: engine_report は独立の画像確認を意味しない。",
+    "分類を単一に分けられない複合行は保留し、実装だけの判断は公式の裁定にしない。原文の分類と保留理由を not_imported に残す。"
+   ]
   }
  ],
  "engine_unresolved_index": [
@@ -18705,10 +23299,15 @@
    "document": "docs/evolution-rules-v0.4a.md",
    "stop_code": "UNRESOLVED_EVOLUTION_HP",
    "summary": "進化したあとの HP がのっているダメージ以下になる場合",
-   "kyuura_issue": null,
-   "disposition": "out_of_scope",
+   "kyuura_issue": "UQ-EVOLUTION-HP-BELOW-DAMAGE",
+   "disposition": "issue",
    "question_kind": "historical",
-   "reason": "v0.1〜v0.4b の文書の裁定で、この取り込み（v0.5〜v0.13）の範囲の外。問いの内容は公式の資料の読み方の問題（歴史上の論点）とみられるが、kyuura では原典のページを確かめておらず、論点にしていない（今後の作業）。進化したあとの HP がのっているダメージ以下になる場合の問い（v0.7 の S22 はこの問いに触れるが、取り込んだのはダメージカウンターを受け継ぐことだけ）。"
+   "instances": [
+    {
+     "engine_version": "v0.25",
+     "ruling_id": "BR17"
+    }
+   ]
   },
   {
    "engine_key": "PREVENTED-COIN-DAMAGE",
@@ -18933,6 +23532,46 @@
    "in_engine_count": false,
    "summary": "ダメージを与えたポケモンにエネルギーカードがないときのだつりょくえきのコイン（カードは延期）",
    "kyuura_issue": "UQ-ENERGY-DRAIN-NO-ENERGY",
+   "disposition": "issue",
+   "question_kind": "historical"
+  },
+  {
+   "engine_key": "GW5",
+   "engine_version": "v0.21",
+   "document": "docs/gust-v0.21.md",
+   "stop_code": "UNRESOLVED_GUST_WITHOUT_OPPONENT_BENCH",
+   "summary": "相手のベンチが空のとき、突風を使えるか",
+   "kyuura_issue": "UQ-GUST-WITHOUT-OPPONENT-BENCH",
+   "disposition": "issue",
+   "question_kind": "historical"
+  },
+  {
+   "engine_key": "CS6",
+   "engine_version": "v0.22",
+   "document": "docs/computer-search-v0.22.md",
+   "stop_code": "UNRESOLVED_COMPUTER_SEARCH_EMPTY_DECK",
+   "summary": "山札が空のとき、パソコン通信を使えるか",
+   "kyuura_issue": "UQ-COMPUTER-SEARCH-EMPTY-DECK",
+   "disposition": "issue",
+   "question_kind": "historical"
+  },
+  {
+   "engine_key": "ER9",
+   "engine_version": "v0.23",
+   "document": "docs/energy-retrieval-v0.23.md",
+   "stop_code": "UNRESOLVED_ENERGY_RETRIEVAL_ZERO_CHOICE",
+   "summary": "回収対象があるとき、エネルギー回収で0枚を選べるか",
+   "kyuura_issue": "UQ-ENERGY-RETRIEVAL-ZERO-CHOICE",
+   "disposition": "issue",
+   "question_kind": "historical"
+  },
+  {
+   "engine_key": "ER10",
+   "engine_version": "v0.23",
+   "document": "docs/energy-retrieval-v0.23.md",
+   "stop_code": "UNRESOLVED_ENERGY_RETRIEVAL_WITHOUT_TARGET",
+   "summary": "使用前のトラッシュに基本エネルギーカードがないとき、エネルギー回収を使えるか",
+   "kyuura_issue": "UQ-ENERGY-RETRIEVAL-WITHOUT-TARGET",
    "disposition": "issue",
    "question_kind": "historical"
   }

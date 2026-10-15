@@ -38,8 +38,11 @@ class Base(unittest.TestCase):
 
     def imported(self, ctx=None):
         ctx = ctx or self.ctx
-        return ([x for x in ctx['latest']['records'] if x.get('import_provenance')],
-                [x for x in ctx['checks']['records'] if x.get('import_provenance')])
+        # このテストはv0.18までの取り込みを検査する。後続の取り込みは別に検査する。
+        def original_import(x):
+            return x.get('import_provenance', {}).get('source_commit') == '46a3e2e8e8959dc12a39ebd461fb1c0ddf1094f0'
+        return ([x for x in ctx['latest']['records'] if original_import(x)],
+                [x for x in ctx['checks']['records'] if original_import(x)])
 
     def assert_detected(self, ctx, fragment):
         errors = bcr.validate(ctx)

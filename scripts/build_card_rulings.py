@@ -55,7 +55,7 @@ FILES = {'latest': 'latest_descriptions.json', 'checks': 'card_checks.json', 'ru
 GENERATED = ('<!-- このファイルは scripts/build_card_rulings.py が data/sidecar/ から生成しています。'
              '直接編集せず、データを直してから再生成してください。 -->')
 ID_PATTERNS = {
-    'latest': re.compile(r'^LD-[A-Za-z0-9]+-\d{3}-(ATK|PWR)\d+$'),
+    'latest': re.compile(r'^LD-[A-Za-z0-9]+-\d{3}-((ATK|PWR)\d+|TRAINER)$'),
     'checks': re.compile(r'^CC-[A-Za-z0-9]+-\d{3}-[A-Z]\d+$'),
     'clause': re.compile(r'^GR-[A-Z0-9][A-Z0-9-]*[A-Z0-9]$'),
     'ruling': re.compile(r'^CR-[A-Z0-9][A-Z0-9-]*[A-Z0-9]$'),
@@ -149,12 +149,16 @@ def resolve(obj, path):
 
 
 def target_path(target):
+    if target['kind'] == 'trainer':
+        return 'trainer'
     return f"pokemon.{TARGET_KINDS[target['kind']]}[{target['index']}]"
 
 
 def target_label(target):
     if target.get('kind') == 'card':
         return 'カード'
+    if target.get('kind') == 'trainer':
+        return 'トレーナー'
     return {'attack': 'ワザ', 'power': '特殊能力'}[target['kind']] + f"「{target['name_ja']}」"
 
 
@@ -208,6 +212,14 @@ def check_target(errors, where, cards, card_id, target, allow_card=False):
         return None
     if allow_card and target.get('kind') == 'card':
         return None
+    if target.get('kind') == 'trainer':
+        card = cards[card_id]
+        if card.get('category') != 'trainer' or not isinstance(card.get('trainer'), dict):
+            errors.append(f'{where}: {card_id} はトレーナーカードではない')
+            return None
+        if target.get('name_ja') != card['name']['ja'] or 'index' in target:
+            errors.append(f'{where}: トレーナーの対象はカード名を使い、index を持たない')
+        return card['trainer']
     if target.get('kind') not in TARGET_KINDS:
         errors.append(f"{where}: 対象の種類が不正: {target.get('kind')}")
         return None
@@ -324,12 +336,27 @@ def validate(ctx):
     rh_ids = rule_history_ids(rh)
     errata = errata_cards(rh)
 
+    # 規定・論点も、エンジンの記録の取り込みを独立の画像確認と混同しない。
+    for x in r['rule_clauses'] + r['rulings'] + r['issues']:
+        prov = x.get('source_provenance')
+        if prov is None:
+            continue
+        if (prov.get('repository') != 'moheronemy/kyuura-engine'
+                or not COMMIT.fullmatch(prov.get('commit') or '')
+                or not DATE.fullmatch(prov.get('imported_on') or '')
+                or not prov.get('document') or prov.get('kyuura_reread_source') is not False):
+            errors.append(f"{x['id']}: エンジンの規定・論点の取り込みの出所が不正")
+        if x.get('checked') == 'kyuura_image' or any(b.get('checked') == 'kyuura_image' for b in x.get('basis', [])):
+            errors.append(f"{x['id']}: エンジンの記録の取り込みをkyuuraの画像確認にしない")
+
     # ---- 最新の説明
     L = ctx['latest']
     seen = {}
     for x in L['records']:
         w = x['id']
         item = check_target(errors, w, cards, x['card_id'], x['target'])
+        if w.endswith('-TRAINER') != (x['target'].get('kind') == 'trainer'):
+            errors.append(f'{w}: 最新の説明のidとトレーナーの対象が合わない')
         if x['card_id'] in cards and cards[x['card_id']]['name']['ja'] != x.get('card_name_ja'):
             errors.append(f"{w}: カード名が data/cards.json と違う: {x.get('card_name_ja')}")
         key = (x['card_id'], x['target']['kind'], x['target'].get('index'))
@@ -345,6 +372,9 @@ def validate(ctx):
                 errors.append(f'{w}: 印刷の文面の写しが今の data/cards.json と違う（data/cards.json が変わった。照合し直す）')
         if pt.get('image_check') not in L['image_check_values']:
             errors.append(f"{w}: image_check の値が不正: {pt.get('image_check')}")
+        if pt.get('image_check') == 'different_text':
+            if not pt.get('image_text_ja') or pt['image_text_ja'] == pt['text_ja'] or not pt.get('image_check_note'):
+                errors.append(f'{w}: 図版の文面相違には、異なる image_text_ja と版を断定しない説明が必要')
         ld = x['latest_description']
         if not ld.get('text_ja'):
             errors.append(f'{w}: 最新の説明の文面がない')
@@ -706,7 +736,7 @@ def validate(ctx):
                 errors.append(f"{w}: not_imported の {n.get('ruling_id')} に理由がない")
             if n.get('status') not in NOT_IMPORTED_STATUS:
                 errors.append(f"{w}: not_imported の {n.get('ruling_id')} の status の値が不正: {n.get('status')}（{'・'.join(NOT_IMPORTED_STATUS)}）")
-            elif n['status'] == 'excluded' and not any(w_ in (n.get('engine_classification') or '') for w_ in ('実装上の仮定', '実装上の扱い', '実装の設計')):
+            elif n['status'] == 'excluded' and not any(w_ in (n.get('engine_classification') or '') for w_ in ('実装上の仮定', '実装上の扱い', '実装の設計', '実装上の判断')):
                 errors.append(f"{w}: not_imported の {n.get('ruling_id')} を対象外（excluded）にしているが、エンジンの分類が実装の判断でない（保留 deferred か要再確認 needs_recheck）")
         mine = {k: v for k, v in uses.items() if k[0] == w}
         imported = sorted({i for lst in mine.values() for k, i, _ in lst if k != 'issue'})
@@ -1157,7 +1187,7 @@ def build(ctx):
             reported = '・'.join(f'{k} {v}' for k, v in rs['engine_reported_counts'].items())
             extra = f"（ほかに {'・'.join(rs['extra_ids'])}）" if rs.get('extra_ids') else ''
             out += [f"エンジンの裁定 {rs['prefix']}{rs['first']}〜{rs['prefix']}{rs['last']}{extra}（{rs['document']}）。エンジンが報告した分類: {reported}。", '',
-                    '| エンジンの id | エンジンの分類 | 取り込み | kyuura の記録 | kyuura の分類 | 公式の根拠（kyuura が確かめたページ） | 部分・備考・分類を変えた理由 |',
+                    '| エンジンの id | エンジンの分類 | 取り込み | kyuura の記録 | kyuura の分類 | 根拠のページ（確認方法は各記録を参照） | 部分・備考・分類を変えた理由 |',
                     '|---|---|---|---|---|---|---|']
             tally = Counter()
             for rid in ids:

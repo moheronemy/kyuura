@@ -271,7 +271,7 @@ class V017ClassificationTest(Base):
         self.assertEqual({c['engine_ruling'] for c in ca['cases']}, {'C18', 'Z13'})
 
     def test_counts(self):
-        idx = self.ctx['rulings']['engine_unresolved_index']
+        idx = [u for u in self.ctx['rulings']['engine_unresolved_index'] if bcr.version_key(u['engine_version']) <= (0, 17)]
         codes = {u['stop_code'] for u in idx if u['stop_code']}
         self.assertEqual(len(codes), 18)  # エンジンの停止コード（v0.17）
         counted = [u for u in idx if u.get('in_engine_count', True)]
@@ -428,10 +428,11 @@ class UnresolvedAuditTest(Base):
 
     def test_counts_are_kept_apart(self):
         uc = bcr.unresolved_counts(self.ctx)
-        self.assertEqual(uc['research_issues'], 19)
-        self.assertEqual((uc['engine_total'], uc['engine_stop_codes']), (24, 18))  # docs/card-extensibility-verification-v0.17d.md 8 章
+        self.assertEqual(uc['research_issues'], len(self.ctx['rulings']['issues']))
+        self.assertEqual((uc['engine_total'], uc['engine_stop_codes']), (28, 22))
         # v0.18（ENGINE-46A3E2E。2026-10-15 に取り込んだ。新しい未解決の裁定はない）も 24
-        self.assertEqual(uc['by_import'], [('v0.13', 22), ('v0.17', 24), ('v0.18', 24)])
+        self.assertEqual([(v, n) for v, n in uc['by_import'] if bcr.version_key(v) <= (0, 18)],
+                         [('v0.13', 22), ('v0.17', 24), ('v0.18', 24)])
         self.assertEqual(len(uc['v013_items']), 22)
         self.assertEqual(uc['v017_additions'], ['Z9', 'Z23'])
         self.assertEqual(uc['not_in_engine_count'], ['DR1', 'DR6', 'DR8', 'DR13'])

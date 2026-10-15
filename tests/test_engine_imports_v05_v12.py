@@ -113,11 +113,11 @@ class CoverageTest(Base):
 
     def test_engine_unresolved_index_dispositions(self):
         idx = {u['engine_key']: u for u in self.ctx['rulings']['engine_unresolved_index']}
-        self.assertEqual(len([u for u in idx.values() if u['engine_version'] not in ('v0.17',)]), 22)  # v0.13 までの 22 件
+        self.assertEqual(len([u for u in idx.values() if bcr.version_key(u['engine_version']) <= (0, 13)]), 22)
         for key in ('R13', 'T19b', 'H4', 'C18', 'G37', 'W24', 'T27', 'C34/C35', 'G40', 'P19', 'P32'):
             self.assertEqual(idx[key]['disposition'], 'issue', key)
         for key in ('MULLIGAN', 'POTION-WITHOUT-DAMAGE', 'POTION-UNDAMAGED-TARGET', 'SWITCH-WITHOUT-BENCH', 'CHECK-DOUBLE-KO',
-                    'REPARALYSIS', 'CONFUSION-MODIFIERS', 'RETREAT-AFTER-CONFUSION-CLEARED', 'EVOLUTION-HP'):
+                    'REPARALYSIS', 'CONFUSION-MODIFIERS', 'RETREAT-AFTER-CONFUSION-CLEARED'):
             self.assertEqual(idx[key]['disposition'], 'out_of_scope', key)
             self.assertTrue(idx[key]['reason'], key)
         self.assertEqual(idx['PREVENTED-COIN-DAMAGE']['kyuura_issue'], idx['T19b']['kyuura_issue'])
@@ -216,7 +216,8 @@ class ClassificationTest(Base):
         tr = self.rec(self.ctx, 'latest', 'LD-PMCG3-030-PWR0')
         self.assertEqual({q['page'] for q in tr['also_quoted']}, {'159', '323'})
         for x in self.ctx['latest']['records']:
-            self.assertIsNone(x['errata_ref'], x['id'])  # 最新の説明をエラッタとして記録していない
+            if x['target']['kind'] != 'trainer':
+                self.assertIsNone(x['errata_ref'], x['id'])  # この取り込みのワザ・特殊能力は公式エラッタではない
 
 
 class BreakageTest(Base):

@@ -290,8 +290,8 @@ id は 3 つのファイルを通して重複しないこと、`data/rule_histor
 
 | 項目 | 内容 |
 |---|---|
-| `card_id`・`card_name_ja`・`target` | 対象のカードと、ワザ・特殊能力（`kind`: `attack`・`power`、`index`、`name_ja`）。名前が `data/cards.json` と合わないとエラー |
-| `printed_text` | 印刷の文面の場所（`path`）と、照合したときの写し（`text_ja`）。`data/cards.json` が変わって写しと違うとエラー（照合し直す）。`image_check` は書籍の図版の文面との照合（`match`・`consistent_where_legible`・`not_checked`）。図版と kyuura の文面が違うときは最新の説明の記録にせず、`card_checks.json` の `data_error` に書く |
+| `card_id`・`card_name_ja`・`target` | 対象のカードと、ワザ・特殊能力（`kind`: `attack`・`power`、`index`、`name_ja`）。トレーナーは `kind: trainer` とカード名の `name_ja` を持ち、`index` は持たない（id は `LD-<カード id>-TRAINER`、文面の path は `trainer.text.ja`）。名前・種類が `data/cards.json` と合わないとエラー |
+| `printed_text` | 印刷の文面の場所（`path`）と、照合したときの写し（`text_ja`）。`data/cards.json` が変わって写しと違うとエラー（照合し直す）。`image_check` は書籍の図版の文面との照合（`match`・`consistent_where_legible`・`not_checked`）。図版と転記の文面が異なり、図版の版を特定できない場合は `different_text` と `image_text_ja`・版を断定しない `image_check_note` に別の文面を保存できる。これは転記の誤りとは断定しない。データの誤りと確認できる場合は `card_checks.json` の `data_error` に書く |
 | `latest_description` | 最新の説明の文面（`text_ja`）、出典の記号（`source`）・スキャン（`scan`）・ページ（`page`。`data/rule_history.json` の `documents` にあるページ）・PDF のページ・位置 |
 | `also_quoted` | 同じ書籍の別のページに同じ文面が引かれている場所 |
 | `book_rule` | 最新の説明の扱いを決めた条項（`GR-P43-P6-LATEST-DESCRIPTION`） |
@@ -313,7 +313,7 @@ id は 3 つのファイルを通して重複しないこと、`data/rule_histor
 | `differences` | 違いの欄と種類（`printed_vs_latest`: 最新の説明の記録 `latest_description_ref` と結ぶ。`data_error`: データの誤りの欄） |
 | `corrections` | 照合のあとで `data/cards.json` を直した欄（あるときだけ）。`[{field, before, after, evidence, method, commit, note}]`。`after` は `checked_fields` の写し（直したあとの値）と同じ、`before` とは違う、`commit` はデータを直したコミット。直すのはカードのデータの生成の手順（`data/curation/` と `scripts/build_cardlist.py`）で、この記録ではない。同じ欄を `data_error`（修正の候補）と両方に書かない。例: ベロリンガ（PMCG2-041）のワザ名とレベル（`CC-PMCG2-041-P234`） |
 | `data_gaps` | 値が空の欄（あるときだけ。調査課題）。`[{field, kyuura_value, source_value, evidence, cause, status, note}]`。`kyuura_value` は今の `data/cards.json` の値（空）と同じで、値が入るとエラー（照合し直す）。`checked_fields` には入れない（値がないので照合していない）。`cause` は空になった原因、`status` は見出しの `gap_statuses`（`open`: 値を入れていない。推測で埋めない）。例: タケシのイワーク（PMCG5-048）の `jp_print.series`（`CC-PMCG5-048-P200`） |
-| `verification`・`import_provenance` | 最新の説明と同じ。エンジンの照合の記録を取り込んだ記録の照合した欄（`checked_fields`）は、エンジンの記録が照合したと書いた項目（`scope`）だけで、照合していない欄は理由とともに `fields_not_checked` に書く。例: v0.1 のたねポケモン（名前・段階はエンジンの照合の項目にない）、トレーナー（図版が第1弾の版でなく、トレーナーの最新の説明の記録の形式がないので文面を照合した欄に入れない）、基本エネルギー（公式ルール p.318 の種類だけ） |
+| `verification`・`import_provenance` | 最新の説明と同じ。エンジンの照合の記録を取り込んだ記録の照合した欄（`checked_fields`）は、エンジンの記録が照合したと書いた項目（`scope`）だけで、照合していない欄は理由とともに `fields_not_checked` に書く。例: v0.1 のたねポケモン（名前・段階はエンジンの照合の項目にない）、図版の文面が転記と異なり版が未特定のトレーナー（文面は照合した欄に入れず、LDの `image_text_ja` に保存する。v0.18までの取り込みには、当時LD形式がなかったため所見にだけ記録したトレーナーもある）、基本エネルギー（公式ルール p.318 の種類だけ） |
 
 ### `rulings.json`
 
@@ -321,7 +321,7 @@ id は 3 つのファイルを通して重複しないこと、`data/rule_histor
 |---|---|
 | `rule_clauses` | 裁定が参照する公式ルールの箇所（資料・ページ・節・要旨）。規則の本体の記録（`rule_history_refs`・`rule_differences_refs`）を必ず挙げる。新しい規則の記録ではなく、参照する位置の索引。エンジンの裁定が一般の規定をそのまま述べたもの（ベンチのポケモンも特殊能力を使える、など）は、カードごとの裁定を作らずに条項の `engine_refs` に結ぶ（エンジンが CONFIRMED としたものだけ。推論を含むなら裁定 `CR-` にする） |
 | `rulings` の `status` | `CONFIRMED`（公式の資料に書かれている）・`SUPPORTED`（記述・例から読み取れるが、その場面そのものは書かれていない）。未解決の論点は `issues` に書き、裁定には `UNRESOLVED` を使わない |
-| `rulings` の `basis` | 根拠。`kind` は `card_text`（カードの文面）・`card_commentary`（書籍のカードの解説・ワザ解説。関係するカードのものも含む）・`general_rule`（一般の規定がそのまま当てはまる）・`derived`（複数の規定から解釈の選択なしに導かれる。`statement` に書く）。資料のページ（`source`・`page`・`location`・`quote`）か、カードのデータ（`card_ref`・`field`）を指す。`checked` は確かめ方（`kyuura_image`・`kyuura_data`・`engine_report`） |
+| `rulings` の `basis` | 根拠。`kind` は `card_text`（カードの文面）・`card_commentary`（書籍のカードの解説・ワザ解説。関係するカードのものも含む）・`general_rule`（一般の規定がそのまま当てはまる）・`derived`（複数の規定から解釈の選択なしに導かれる。`statement` に書く）。資料のページ（`source`・`page`・`location`・`quote`）か、カードのデータ（`card_ref`・`field`）を指す。`checked` は確かめ方（`kyuura_image`・`kyuura_data`・`engine_report`）。エンジンの規定・論点の再利用は `source_provenance`（repository・40桁のcommit・document・imported_on・kyuura_reread_source: false、裁定はruling_idも）で出所を持つ。この記録を `kyuura_image` にするとエラー |
 | `rulings` の `inference` | 推論。`SUPPORTED` には必須で、`CONFIRMED` にはあってはいけない |
 | `rulings` の `cards` | 裁定の対象（カード id とワザ・特殊能力）。同じ問いを複数のカードにまとめるときは並べる（エンジンの複数の版の同じ裁定を 1 つにする。例: 「自分の番の中で何度でも使える」はエナジートランス・あまごい・ダメージスワップの 1 件）。同じ対象・同じ問いの裁定を 2 つ作るとエラー |
 | `rulings` の `engine_refs` | kyuura-engine の裁定 id との対応（`import`・`engine_version`・`document`・`ruling_id`・`engine_classification`（エンジンの表の「分類」の欄の写し）・`part`・`engine_note`）。エンジンの裁定 id は文書ごとの番号で、版が違えば同じ id が別の裁定なので、（`import`・`document`・`ruling_id`）で区別する。1 つの裁定を分けて記録したときは、それぞれに `part`。エンジンの分類が CONFIRMED でない裁定を `CONFIRMED` の記録に対応させるとき、エンジンが CONFIRMED だけとした裁定を `SUPPORTED` の記録に対応させるときは `reclassification`（`from`・`to`・`reason`）が必要。エンジンが「実装上の仮定」だけとした裁定は、裁定・条項に対応させない（`not_imported`）。その版の取り込みがまだないあいだだけ、別の版の裁定を、その文書を `documents` に挙げた取り込みに仮に結べる（v0.13 の取り込みが v0.10・v0.12 の C34・C35・W24 を結んだ形）。その版を取り込んだら、その版の取り込みに移す（移さないとエラー） |

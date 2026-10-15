@@ -7475,12 +7475,26 @@
     {
      "printed": "257",
      "pdf": 259,
-     "content": "プラスパワー（第1弾ほか。「(控えポケモンへのダメージは、そのまま)」）、ディフェンダー、エネルギー回収（第1弾ほか。「基本エネルギーカード」を最大2枚。特殊エネルギーは手札に加えられない）。プラスパワー・ディフェンダーのカードのページの照合の記録（図版は記号のある版）（kyuura-engine の照合の記録の取り込み。kyuura は画像を読み直していない）",
+     "content": "プラスパワー（第1弾ほか。「(控えポケモンへのダメージは、そのまま)」）、ディフェンダー、エネルギー回収（第1弾ほか。「基本エネルギーカード」を最大2枚。特殊エネルギーは手札に加えられない）。プラスパワー・ディフェンダーのカードのページの照合の記録（図版は記号のある版）（kyuura-engine の照合の記録の取り込み。kyuura は画像を読み直していない）。エネルギー回収の図版・最新の説明・解説（エンジンの照合記録を再利用。kyuuraは画像を再読していない）。エネルギー回収は、使うためにトラッシュしたカードを選べない（エンジンの照合記録を再利用）",
      "refs": [
       "ERR-PLUSPOWER",
       "ERR-ENERGY-RETRIEVAL",
       "CC-PMCG1-081-P257",
-      "CC-PMCG1-079-P257"
+      "CC-PMCG1-079-P257",
+      "LD-PMCG1-076-TRAINER",
+      "CC-PMCG1-076-P257",
+      "CR-ENERGY-RETRIEVAL-ER2",
+      "CR-ENERGY-RETRIEVAL-ER3",
+      "CR-ENERGY-RETRIEVAL-ER4",
+      "CR-ENERGY-RETRIEVAL-ER5",
+      "CR-ENERGY-RETRIEVAL-ER6",
+      "CR-ENERGY-RETRIEVAL-ER7",
+      "CR-ENERGY-RETRIEVAL-ER8",
+      "UQ-ENERGY-RETRIEVAL-ZERO-CHOICE",
+      "UQ-ENERGY-RETRIEVAL-WITHOUT-TARGET",
+      "CR-ENERGY-RETRIEVAL-ER11",
+      "CR-ENERGY-RETRIEVAL-ER12",
+      "CR-ENERGY-RETRIEVAL-ER13"
      ]
     },
     {
@@ -7567,6 +7581,108 @@
      "content": "「2000年2月29日初版第1刷発行」。監修 クリーチャーズ、執筆のうちプレイルールは三浦明彦。発行 メディアファクトリー。ISBN4-8401-0002-0",
      "refs": [
       "EV-2000-OFFICIALBOOK"
+     ]
+    },
+    {
+     "printed": "255",
+     "pdf": 257,
+     "content": "オーキドはかせの図版・最新の説明・解説（エンジンの照合記録を再利用。kyuuraは画像を再読していない）。突風の図版・最新の説明・解説（エンジンの照合記録を再利用。kyuuraは画像を再読していない）",
+     "refs": [
+      "LD-PMCG1-077-TRAINER",
+      "CC-PMCG1-077-P255",
+      "CR-PROFESSOR-OAK-O3",
+      "CR-PROFESSOR-OAK-O4",
+      "CR-PROFESSOR-OAK-O5",
+      "CR-PROFESSOR-OAK-O7",
+      "CR-PROFESSOR-OAK-O11",
+      "LD-PMCG1-072-TRAINER",
+      "CC-PMCG1-072-P255",
+      "CR-GUST-GW2",
+      "CR-GUST-GW3",
+      "UQ-GUST-WITHOUT-OPPONENT-BENCH",
+      "CR-GUST-GW6",
+      "CR-GUST-GW7",
+      "CR-GUST-GW11",
+      "CR-GUST-GW13",
+      "CR-GUST-GW14",
+      "CR-GUST-GW15",
+      "CR-GUST-GW17"
+     ]
+    },
+    {
+     "printed": "260",
+     "pdf": 262,
+     "content": "パソコン通信の図版・最新の説明・解説（エンジンの照合記録を再利用。kyuuraは画像を再読していない）",
+     "refs": [
+      "LD-PMCG1-090-TRAINER",
+      "CC-PMCG1-090-P260",
+      "CR-COMPUTER-SEARCH-CS2",
+      "CR-COMPUTER-SEARCH-CS4",
+      "CR-COMPUTER-SEARCH-CS5",
+      "UQ-COMPUTER-SEARCH-EMPTY-DECK",
+      "CR-COMPUTER-SEARCH-CS7",
+      "CR-COMPUTER-SEARCH-CS8",
+      "CR-COMPUTER-SEARCH-CS9",
+      "CR-COMPUTER-SEARCH-CS11",
+      "CR-COMPUTER-SEARCH-CS12",
+      "CR-COMPUTER-SEARCH-CS14",
+      "CR-COMPUTER-SEARCH-CS15",
+      "CR-COMPUTER-SEARCH-CS16",
+      "CR-COMPUTER-SEARCH-CS17",
+      "CR-COMPUTER-SEARCH-CS20"
+     ]
+    },
+    {
+     "printed": "259",
+     "pdf": 261,
+     "content": "ポケモン交換おじさんの図版・最新の説明・解説（エンジンの照合記録を再利用。kyuuraは画像を再読していない）。ポケモン育て屋さんの図版・最新の説明・解説（エンジンの照合記録を再利用。kyuuraは画像を再読していない）",
+     "refs": [
+      "LD-PMCG1-093-TRAINER",
+      "CC-PMCG1-093-P259",
+      "CR-POKEMON-TRADER-PT2",
+      "CR-POKEMON-TRADER-PT3",
+      "CR-POKEMON-TRADER-PT4",
+      "CR-POKEMON-TRADER-PT5",
+      "CR-POKEMON-TRADER-PT6",
+      "CR-POKEMON-TRADER-PT8",
+      "CR-POKEMON-TRADER-PT9",
+      "CR-POKEMON-TRADER-PT10",
+      "CR-POKEMON-TRADER-PT11",
+      "CR-POKEMON-TRADER-PT13",
+      "CR-POKEMON-TRADER-PT14",
+      "CR-POKEMON-TRADER-PT15",
+      "CR-POKEMON-TRADER-PT17",
+      "LD-PMCG1-094-TRAINER",
+      "CC-PMCG1-094-P259",
+      "CR-POKEMON-BREEDER-BR2",
+      "CR-POKEMON-BREEDER-BR3",
+      "CR-POKEMON-BREEDER-BR4",
+      "CR-POKEMON-BREEDER-BR6",
+      "CR-POKEMON-BREEDER-BR8",
+      "CR-POKEMON-BREEDER-BR9",
+      "CR-POKEMON-BREEDER-BR10",
+      "CR-POKEMON-BREEDER-BR11",
+      "CR-POKEMON-BREEDER-BR13",
+      "CR-POKEMON-BREEDER-BR14",
+      "CR-POKEMON-BREEDER-BR15",
+      "UQ-EVOLUTION-HP-BELOW-DAMAGE",
+      "CR-POKEMON-BREEDER-BR19"
+     ]
+    },
+    {
+     "printed": "310",
+     "pdf": 312,
+     "content": "手札から出して相手に見せ、使うための条件に従い、残りの説明を順に処理する。1回の番に何枚でも使える。使いすてのカードは使ったらトラッシュする。（エンジンの記録の取り込み。原典の再読なし）。使うための条件の例はパソコン通信の手札2枚のトラッシュ（v0.22の記録）",
+     "refs": [
+      "GR-2000-P310-TRAINERS"
+     ]
+    },
+    {
+     "printed": "312",
+     "pdf": 314,
+     "content": "特に指示されない限り山札の内容を見たり、切ったりしない。カードを引くときは山札の一番上から取り、足りない場合は引けるだけ引く。トラッシュは表向きで、順番を区別しない。（エンジンの記録の取り込み。原典の再読なし）",
+     "refs": [
+      "GR-2000-P312-DECK-HAND-DISCARD"
      ]
     }
    ],

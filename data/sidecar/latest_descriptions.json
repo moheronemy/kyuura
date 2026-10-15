@@ -18,7 +18,8 @@
  "image_check_values": {
   "match": "図版の印刷の文面と kyuura の文面が同じ",
   "consistent_where_legible": "図版の文字がかすれていて全部は読めないが、読める範囲で同じ",
-  "not_checked": "図版の文面は照合していない"
+  "not_checked": "図版の文面は照合していない",
+  "different_text": "図版の文面が転記と異なる。図版の版は未特定で、転記の誤りとは断定しない"
  },
  "records": [
   {
@@ -1826,6 +1827,374 @@
     "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録（card_verification.json の latest_description_ja・card_image_text_ja・mismatches・notes）による。kyuura は原典の画像を読み直していない"
    },
    "notes": []
+  },
+  {
+   "id": "LD-PMCG1-077-TRAINER",
+   "card_id": "PMCG1-077",
+   "card_name_ja": "オーキドはかせ",
+   "target": {
+    "kind": "trainer",
+    "name_ja": "オーキドはかせ"
+   },
+   "printed_text": {
+    "path": "trainer.text.ja",
+    "text_ja": "自分の手札を全部すてて、新たに7枚のカードを自分の山札から引いて手札にする。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-073-ookidohakase/",
+    "image_check": "match",
+    "image_check_note": "エンジンの記録では図版の文面と転記が一致。印刷の刷までは確認していない。kyuuraは画像を再読していない。"
+   },
+   "latest_description": {
+    "text_ja": "あなたの手札をすべてトラッシュする。その後、山札からカードを7枚引いて、手札にする。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "255",
+    "pdf_page": 257,
+    "location": "オーキドはかせの最新の説明（エンジンの照合記録の取り込み）"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "自分の手札を全部すてて、新たに7枚のカードを自分の山札から引いて手札にする。",
+     "latest": "あなたの手札をすべてトラッシュする。その後、山札からカードを7枚引いて、手札にする。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "エンジンの記録では、トラッシュ後に7枚引く順を明示した書き直しで、意味は矛盾しないとする。その解釈を再利用した。",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-A09FF9B",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-077",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-077 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "notes": [
+    "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は印刷の転記（なぞのばしょ）で、図版と同じ。最新の説明は「手札を全部すてて」を「手札をすべてトラッシュする」に、「新たに…引いて手札にする」を「その後、…引いて、手札にする」に改めている（意味は矛盾しない。トラッシュしてから引く順を明示する）。p.6 により最新の説明にしたがう。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。kyuura に、このカードの照合の記録（CC-）・最新の説明・p.255 のページの記録がないことを報告事項とする（誤りとは決めない。kyuura のサイドカーの最新の説明の記録はワザ・特殊能力だけで、トレーナーの形式はない）"
+   ]
+  },
+  {
+   "id": "LD-PMCG1-072-TRAINER",
+   "card_id": "PMCG1-072",
+   "card_name_ja": "突風",
+   "target": {
+    "kind": "trainer",
+    "name_ja": "突風"
+   },
+   "printed_text": {
+    "path": "trainer.text.ja",
+    "text_ja": "相手の場の対戦ポケモンと控えポケモンを入れ替える。どの控えポケモンを出させるかは、自分が自由に選ぶことができる。相手に控えがいない場合は使えない。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-080-toppu/",
+    "image_check": "different_text",
+    "image_check_note": "図版の文面は転記と異なる。図版が第1弾初版の文面とは確かめられておらず、版の相違とデータ誤りを区別して保留する。kyuuraは画像を再読していない。",
+    "image_text_ja": "相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。"
+   },
+   "latest_description": {
+    "text_ja": "相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "255",
+    "pdf_page": 257,
+    "location": "突風の最新の説明（エンジンの照合記録の取り込み）"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "相手の場の対戦ポケモンと控えポケモンを入れ替える。どの控えポケモンを出させるかは、自分が自由に選ぶことができる。相手に控えがいない場合は使えない。",
+     "latest": "相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "unknown",
+   "meaning_note": "エンジンの照合記録にある印刷の文面と最新の説明の相違を保存。書き方だけか、処理が変わるかを今回の取り込みで新たに確定しない。",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-36E3630",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-072",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-072 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "notes": [
+    "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は第1弾の印刷の転記（なぞのばしょ）。p.255 の図版（第1弾の版ではない可能性が高い）と最新の説明には、「どの控えポケモンを出させるかは、自分が自由に選ぶことができる」「相手に控えがいない場合は使えない」がない。選ぶのが使ったプレイヤーであることは最新の説明と解説で決まる（GW2）。控えがいないときの一文は最新の説明にないので、p.6 により最新の説明にしたがい、印刷の文面で補わない。一文がなくなったことを「使える」と読むこともできないので、控えがいないときは UNRESOLVED（UNRESOLVED_GUST_WITHOUT_OPPONENT_BENCH）。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。kyuura に、このカードの照合の記録（CC-）・最新の説明・p.255 のページの記録がないこと、kyuura のdocs/cards/reprints.md（data/curation/other_products.json の reprint_text）が文面の変更を「書き方だけ」（wording）と分類しているが、控えがいないときの一文がなくなったことの根拠を書いていないことを報告事項とする（誤りとは決めない）"
+   ]
+  },
+  {
+   "id": "LD-PMCG1-090-TRAINER",
+   "card_id": "PMCG1-090",
+   "card_name_ja": "パソコン通信",
+   "target": {
+    "kind": "trainer",
+    "name_ja": "パソコン通信"
+   },
+   "printed_text": {
+    "path": "trainer.text.ja",
+    "text_ja": "手札から2枚カードをすてることによって、山札から好きなカードを1枚選んで手札にすることができる。そのあとで山札をよくきってもとに戻す。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-083-pasokontsuushin/",
+    "image_check": "match",
+    "image_check_note": "エンジンの記録では図版の文面と転記が一致。印刷の刷までは確認していない。kyuuraは画像を再読していない。"
+   },
+   "latest_description": {
+    "text_ja": "手札からカードを2枚選んでトラッシュしなければ、このカードは使えない。あなたの山札からカードを1枚選び出し、手札に加える。その後、その山札をよく切る。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "260",
+    "pdf_page": 262,
+    "location": "パソコン通信の最新の説明（エンジンの照合記録の取り込み）"
+   },
+   "also_quoted": [
+    {
+     "source": "P43",
+     "page": "310",
+     "location": "使うための条件の例"
+    }
+   ],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "手札から2枚カードをすてることによって、山札から好きなカードを1枚選んで手札にすることができる。そのあとで山札をよくきってもとに戻す。",
+     "latest": "手札からカードを2枚選んでトラッシュしなければ、このカードは使えない。あなたの山札からカードを1枚選び出し、手札に加える。その後、その山札をよく切る。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "unknown",
+   "meaning_note": "エンジンの照合記録にある印刷の文面と最新の説明の相違を保存。書き方だけか、処理が変わるかを今回の取り込みで新たに確定しない。",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-5844FCF",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-090",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-090 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "notes": [
+    "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は印刷の転記（なぞのばしょ）で、図版と同じ。最新の説明は「すてることによって…できる」を「選んでトラッシュしなければ、このカードは使えない」（使うための条件。p.310）に、「好きなカードを1枚選んで手札にすることができる」を「カードを1枚選び出し、手札に加える」に、「よくきってもとに戻す」を「その後、その山札をよく切る」に改めている。p.6 により最新の説明にしたがう（選び出すのは省略できない形・トラッシュは使うための条件）。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。kyuura に、このカードの照合の記録（CC-）・最新の説明・p.260 のページの記録と、山札が 0 枚のときの論点がないことを報告事項とする（誤りとは決めない）"
+   ]
+  },
+  {
+   "id": "LD-PMCG1-076-TRAINER",
+   "card_id": "PMCG1-076",
+   "card_name_ja": "エネルギー回収",
+   "target": {
+    "kind": "trainer",
+    "name_ja": "エネルギー回収"
+   },
+   "printed_text": {
+    "path": "trainer.text.ja",
+    "text_ja": "手札から1枚のカードをすてることによって、トラッシュから2枚の好きなエネルギーカードをひろって、手札に加えることができる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-071-energykaishu/",
+    "image_check": "different_text",
+    "image_check_note": "図版の文面は転記と異なる。図版が第1弾初版の文面とは確かめられておらず、版の相違とデータ誤りを区別して保留する。kyuuraは画像を再読していない。",
+    "image_text_ja": "手札からカードを1枚選んでトラッシュしなければ、このカードは使えない。あなたのトラッシュから基本エネルギーカードを最大2枚選び、手札に加えてよい。(ただし、このカードを使うためにトラッシュしたカードを選ぶことはできない)"
+   },
+   "latest_description": {
+    "text_ja": "手札からカードを1枚選んでトラッシュしなければ、このカードは使えない。あなたのトラッシュから「基本エネルギーカード」を最大2枚選び出し、手札に加える。ただし、このカードを使うためにトラッシュしたカードを選ぶことはできない。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "257",
+    "pdf_page": 259,
+    "location": "エネルギー回収の最新の説明（エンジンの照合記録の取り込み）"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": "ERR-ENERGY-RETRIEVAL",
+   "differences": [
+    {
+     "printed": "手札から1枚のカードをすてることによって、トラッシュから2枚の好きなエネルギーカードをひろって、手札に加えることができる。",
+     "latest": "手札からカードを1枚選んでトラッシュしなければ、このカードは使えない。あなたのトラッシュから「基本エネルギーカード」を最大2枚選び出し、手札に加える。ただし、このカードを使うためにトラッシュしたカードを選ぶことはできない。",
+     "kind": "meaning"
+    }
+   ],
+   "meaning_change": "changed",
+   "meaning_note": "公式エラッタ ERR-ENERGY-RETRIEVAL と対応。基本エネルギー限定・支払ったカードの除外を記す。",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-CD641E6",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-076",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-076 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "notes": [
+    "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は第1弾の印刷の転記（なぞのばしょ）で、「好きなエネルギーカード」（基本エネルギーに限らない）・「すてることによって…できる」。最新の説明は「「基本エネルギーカード」を最大2枚」・「選んでトラッシュしなければ、このカードは使えない」（使うための条件。p.310）・「このカードを使うためにトラッシュしたカードを選ぶことはできない」。kyuura の ERR-ENERGY-RETRIEVAL（公式のエラッタ。会報 Vol.5・p.257）と同じ違いで、誤りではない。p.6 により最新の説明にしたがう。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。図版は「手札に加えてよい」と書くが、処理の根拠にはしない。kyuura に、このカードの照合の記録（CC-）・最新の説明（LD-）と、ER9・ER10 の論点がないことを報告事項とする"
+   ]
+  },
+  {
+   "id": "LD-PMCG1-093-TRAINER",
+   "card_id": "PMCG1-093",
+   "card_name_ja": "ポケモン交換おじさん",
+   "target": {
+    "kind": "trainer",
+    "name_ja": "ポケモン交換おじさん"
+   },
+   "printed_text": {
+    "path": "trainer.text.ja",
+    "text_ja": "自分の山札から好きなポケモンカードか進化カードを1枚選んで、手札のポケモンカードか進化カードと交換することができる。そのあとで、自分の山札をよくきる。交換するカードは相手に見せなければならない。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-088-pokemonkoukanojisan/",
+    "image_check": "match",
+    "image_check_note": "エンジンの記録では図版の文面と転記が一致。印刷の刷までは確認していない。kyuuraは画像を再読していない。"
+   },
+   "latest_description": {
+    "text_ja": "手札から「たねポケモン」または「進化カード」を1枚選び、相手プレイヤーに見せてから、あなたの山札にもどす。それができないとき、このカードは使えない。あなたの山札から「たねポケモン」または「進化カード」を1枚選び出し、相手プレイヤーに見せてから、手札に加える。その後、その山札をよく切る。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "259",
+    "pdf_page": 261,
+    "location": "ポケモン交換おじさんの最新の説明（エンジンの照合記録の取り込み）"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "自分の山札から好きなポケモンカードか進化カードを1枚選んで、手札のポケモンカードか進化カードと交換することができる。そのあとで、自分の山札をよくきる。交換するカードは相手に見せなければならない。",
+     "latest": "手札から「たねポケモン」または「進化カード」を1枚選び、相手プレイヤーに見せてから、あなたの山札にもどす。それができないとき、このカードは使えない。あなたの山札から「たねポケモン」または「進化カード」を1枚選び出し、相手プレイヤーに見せてから、手札に加える。その後、その山札をよく切る。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "unknown",
+   "meaning_note": "エンジンの照合記録にある印刷の文面と最新の説明の相違を保存。書き方だけか、処理が変わるかを今回の取り込みで新たに確定しない。",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-6EE7C40",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-093",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-093 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "notes": [
+    "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は第1弾の印刷の転記（なぞのばしょ）で、図版と同じ。最新の説明は「交換することができる」を、手札のカードを見せて先に山札にもどす（使うための条件。「それができないとき、このカードは使えない」）→ 山札から選び出して見せて手札に加える → その山札をよく切る、の順番に書き、「ポケモンカード」を「たねポケモン」に改めている（kyuura の docs/cards/reprints.md がクイックスターターギフトの再録の書き方の違いとして挙げるものと同じ向き）。p.6 により最新の説明にしたがう。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。kyuura にこのカードの照合の記録（CC-）・最新の説明（LD-）がないことを報告事項とする（誤りとは決めない）"
+   ]
+  },
+  {
+   "id": "LD-PMCG1-094-TRAINER",
+   "card_id": "PMCG1-094",
+   "card_name_ja": "ポケモン育て屋さん",
+   "target": {
+    "kind": "trainer",
+    "name_ja": "ポケモン育て屋さん"
+   },
+   "printed_text": {
+    "path": "trainer.text.ja",
+    "text_ja": "ポケモンを進化させるときに使う。2進化カードをいきなりつけることができる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-091-pokemonsodateyasan/",
+    "image_check": "match",
+    "image_check_note": "エンジンの記録では図版の文面と転記が一致。印刷の刷までは確認していない。kyuuraは画像を再読していない。"
+   },
+   "latest_description": {
+    "text_ja": "このカードは、あなたが自分の場にいるポケモンを進化させるときにだけ、使える。そのポケモンの上に「2進化カード」を直接のせ、1進化をとばして「2進化ポケモン」に進化させる。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "259",
+    "pdf_page": 261,
+    "location": "ポケモン育て屋さんの最新の説明（エンジンの照合記録の取り込み）"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "ポケモンを進化させるときに使う。2進化カードをいきなりつけることができる。",
+     "latest": "このカードは、あなたが自分の場にいるポケモンを進化させるときにだけ、使える。そのポケモンの上に「2進化カード」を直接のせ、1進化をとばして「2進化ポケモン」に進化させる。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "unknown",
+   "meaning_note": "エンジンの照合記録にある印刷の文面と最新の説明の相違を保存。書き方だけか、処理が変わるかを今回の取り込みで新たに確定しない。",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-548DD65",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-094",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "エンジンがスキャン [J38] の400dpi画像を目で確認した記録を再利用。kyuuraは画像を読み直していない",
+     "scope": "対象カードの見出し・図版の文面・最新の説明・解説のうち、エンジンの notes に明記された範囲だけ",
+     "result": "不一致あり"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-15",
+    "kyuura_reread_source": false,
+    "source_commit": "548dd65bbfce17b18f83dc0ef80c36092d597acc",
+    "scope_note": "エンジン548dd65bbfce17b18f83dc0ef80c36092d597accの cards.PMCG1-094 と対応する規定の文書を取り込んだ。原典の確認日と取り込んだ日は別の項目。kyuuraによる独立の照合ではない"
+   },
+   "notes": [
+    "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は第1弾の印刷の転記（なぞのばしょ）で、図版と同じ。最新の説明は「進化させるときに使う」を「進化させるときにだけ、使える」（使うための条件）に、「2進化カードをいきなりつけることができる」を「そのポケモンの上に「2進化カード」を直接のせ、1進化をとばして「2進化ポケモン」に進化させる」（重ねる相手と、1 進化を飛ばすこと）に書いている。p.6 により最新の説明にしたがう。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。kyuura にこのカードの照合の記録（CC-）・最新の説明（LD-）がないことを報告事項とする（誤りとは決めない）"
+   ]
   }
  ]
 }

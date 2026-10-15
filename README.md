@@ -23,7 +23,7 @@
 - [旧裏・新裏の混合ルール（2001〜2003年）](docs/rules/mixed-2002.md) — 裏面の変更後の混合、サポーター・ポケパワー/ポケボディーへの読み替え、殿堂入りカード、バトルロード 2002
 - [新ガルーラルール（2002年）](docs/rules/kangaskhan-2002.md) — 旧裏と新裏の山札を使い分ける 2 人 1 組の対戦と「タッチ世代交代！」
 - [カードの文面の変更とエラッタの履歴](docs/rules/errata-history.md) — 印刷の変更・公式エラッタ・読み替えの区別
-- [カードの裁定と公式の最新の説明](docs/rules/card-rulings.md) — カード・ワザごとの公式の書籍の「最新の説明」（印刷の文面とは別に記録）、照合、裁定（CONFIRMED・SUPPORTED）、未解決の論点、kyuura-engine v0.5〜v0.17 の裁定 id との対応（エナジートランス・あまごい・ダメージスワップ・かがくへんかガス・とうめい・はんげき・こんじょう・ふしちょう・ほのおのかべ・こうらがえし・わるいねぞう・たおれこむ・だつりょくえきなど）
+- [カードの裁定と公式の最新の説明](docs/rules/card-rulings.md) — カード・ワザごとの公式の書籍の「最新の説明」（印刷の文面とは別に記録）、照合、裁定（CONFIRMED・SUPPORTED）、未解決の論点、kyuura-engine v0.25までの裁定 id との対応（エナジートランス・あまごい・ダメージスワップ・かがくへんかガス・とうめい・はんげき・こんじょう・ふしちょう・ほのおのかべ・こうらがえし・わるいねぞう・たおれこむ・だつりょくえきなど）
 - [出典と確認状況](docs/sources.md)、[印刷物の照合記録](docs/printed-sources.md)（スキャンで確認した会報・雑誌・書籍の巻号とページ）
 - [調査の状況](docs/research-status.md) — 分野ごとにどこまで確かめられたか、件数、未解決の問題、必要な原本
 - [エンジン開発の準備状況](docs/engine-readiness.md) — 対戦エンジン（別のリポジトリ [kyuura-engine](https://github.com/moheronemy/kyuura-engine)）の基準にしたルールと調査データ。エンジンを作り始める前の計画も記録として残している
@@ -80,7 +80,7 @@ uc = bcr.unresolved_counts(ctx)
 print(uc['research_issues'], uc['engine_total'], uc['engine_stop_codes'])
 ```
 
-7. **エンジンの新しい版を取り込むとき**: `data/sidecar/rulings.json` の `engine_imports` に版ごとの記録を 1 件加え（`ENGINE-<コミットの先頭 7 桁>`。`commit`・`documents`・文書ごとの `ruling_sets`）、範囲のすべての id を記録の `engine_refs` か `not_imported`（理由つき）に結びます。最新の説明・照合・裁定は、原典のページの画像で確かめてから記録します。形式は [docs/data-schema.md の「サイドカー」](docs/data-schema.md#サイドカーdatasidecar)。
+7. **エンジンの新しい版を取り込むとき**: `data/sidecar/rulings.json` の `engine_imports` に版ごとの記録を 1 件加え（`ENGINE-<コミットの先頭 7 桁>`。`commit`・`documents`・文書ごとの `ruling_sets`）、範囲のすべての id を記録の `engine_refs` か `not_imported`（理由つき）に結びます。最新の説明・照合・裁定は、[照合済みの記録の再利用手順](docs/engine-readiness.md#10-照合済みの記録の再利用2026-10-15)に従って記録します。原典の確認者と範囲が追えるエンジンの記録は、出所を保って取り込めます。不足する範囲だけ画像を確認します。形式は [docs/data-schema.md の「サイドカー」](docs/data-schema.md#サイドカーdatasidecar)。
 8. **検査**: `python3 scripts/build_card_rulings.py --check`（データの検査と、生成したページ [docs/rules/card-rulings.md](docs/rules/card-rulings.md) が最新か）、`python3 -m unittest discover -s tests`。生成したページは手で編集しません（`python3 scripts/build_card_rulings.py` で作り直す）。
 
 **日本語テキストについて**:
