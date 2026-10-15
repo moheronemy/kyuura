@@ -260,6 +260,10 @@ def sidecar_stats():
     print(f"- カードの照合: {len(chk)} 件（" + '、'.join(f'{k} {v}' for k, v in Counter(x['result'] for x in chk).most_common()) +
           f"。データの誤り {sum(1 for x in chk if x['data_error'])}、照合のあとで直したもの {sum(1 for x in chk if x.get('corrections'))}、"
           f"値の欠け（調査課題） {sum(len(x.get('data_gaps', [])) for x in chk)}）")
+    imp_lat = [x for x in lat if x.get('import_provenance')]
+    imp_chk = [x for x in chk if x.get('import_provenance')]
+    print(f"  - 原典を確かめた人: kyuura が画像を読んだもの 最新の説明 {len(lat) - len(imp_lat)}・カードの照合 {len(chk) - len(imp_chk)}、"
+          f"kyuura-engine の照合の記録の取り込み（import_provenance。kyuura は読み直していない） 最新の説明 {len(imp_lat)}・カードの照合 {len(imp_chk)}")
     print(f"- 公式ルールの条項: {len(r['rule_clauses'])} 件")
     print(f"- 裁定: {len(r['rulings'])} 件（" + '、'.join(f'{k} {v}' for k, v in Counter(x['status'] for x in r['rulings']).most_common()) + '）')
     print('  - 根拠の種類ごとの記録の数（1 件に複数の種類があれば、それぞれに数える）: ' + '、'.join(

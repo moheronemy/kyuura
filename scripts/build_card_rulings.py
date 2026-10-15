@@ -36,6 +36,9 @@ docs/rules/card-rulings.md を生成する。
     その版の取り込みがまだないあいだだけ
   - エンジンの未解決の裁定の一覧（engine_unresolved_index）の件数・重複・扱い（disposition）・論点への対応
     （not_yet_imported は、その版の取り込みがまだないあいだだけ）
+  - 最新の説明・カードの照合の記録で、原典を誰が確かめたか: kyuura が画像を読んだ確認（verification の by: kyuura）がない
+    記録は、kyuura-engine の照合の記録の取り込み（import_provenance）で、原典の確認日（source_checked_on）・その根拠・方法・
+    エンジンの記録の場所を書く。取り込んだ日（imported_on）と原典の確認日を分け、取り込みの記録に kyuura の確認を書かない
   - --check: 生成結果が docs/rules/card-rulings.md と同じか（ファイルは書き換えない）
 
 使い方: python3 scripts/build_card_rulings.py [--check]
@@ -63,6 +66,11 @@ ID_PATTERNS = {
 ENGINE_TOKENS = re.compile(r'UNRESOLVED_|RuntimeError|UnsupportedError|IllegalActionError|StateIntegrityError|Phase\.|'
                            r'\b[A-Z][A-Z0-9]*_[A-Z0-9_]*[A-Z0-9]\b')
 COMMIT = re.compile(r'^[0-9a-f]{40}$')
+DATE = re.compile(r'^\d{4}-\d{2}-\d{2}$')
+IMPORT_PROVENANCE_KINDS = {
+    'engine_record': 'kyuura-engine の照合の記録（kyuura_engine/data/card_verification.json）を取り込んだ。kyuura は原典の画像を読み直していない',
+}
+ENGINE_VERIFICATION_KEYS = ('record', 'source_checked_on', 'source_checked_on_basis', 'method')
 DISPOSITIONS = {
     'issue': 'kyuura の未解決の論点（kyuura_issue）に取り込んだ',
     'implementation_only': '歴史上の論点ではない（エンジンの実装・処理の都合）。論点にしない',
@@ -243,6 +251,51 @@ def engine_uses(ctx):
     return out
 
 
+def check_provenance(errors, w, x):
+    """原典を誰が確かめたか。kyuura が画像を読んでいない記録（エンジンの照合の記録の取り込み）は import_provenance で区別し、
+    原典の確認日（エンジンの記録の日付）と取り込んだ日を分ける。"""
+    ver = x.get('verification', [])
+    kyuura_read = any(v.get('by') == 'kyuura' for v in ver)
+    prov = x.get('import_provenance')
+    if prov is None:
+        if not kyuura_read:
+            errors.append(f'{w}: kyuura が原典を読んだ確認（verification の by: kyuura）がない。'
+                          f'kyuura-engine の照合の記録の取り込みなら import_provenance を書く')
+        return
+    if prov.get('kind') not in IMPORT_PROVENANCE_KINDS:
+        errors.append(f"{w}: import_provenance の kind の値が不正: {prov.get('kind')}")
+    if kyuura_read or prov.get('kyuura_reread_source') is not False:
+        errors.append(f'{w}: 取り込みの記録（import_provenance）に、kyuura が原典を読んだ確認を書かない'
+                      f'（読み直したなら by: kyuura の確認を加え、import_provenance を外す）')
+    imported_on = prov.get('imported_on') or ''
+    if not DATE.match(imported_on):
+        errors.append(f'{w}: import_provenance の imported_on（取り込んだ日）がない')
+    if not prov.get('scope_note'):
+        errors.append(f'{w}: import_provenance の scope_note（照合の範囲はエンジンの記録の範囲だけ、など）がない')
+    engine = [v for v in ver if v.get('by') == 'kyuura-engine']
+    if not engine:
+        errors.append(f'{w}: import_provenance の記録に、kyuura-engine の照合の記録（verification の by: kyuura-engine）がない')
+    for v in engine:
+        for k in ENGINE_VERIFICATION_KEYS:
+            if not v.get(k):
+                errors.append(f'{w}: 取り込んだエンジンの照合の記録に {k} がない')
+        checked = v.get('source_checked_on') or ''
+        if checked and not DATE.match(checked):
+            errors.append(f'{w}: source_checked_on の書式が不正: {checked}')
+        elif checked and DATE.match(imported_on) and checked > imported_on:
+            errors.append(f'{w}: 原典の確認日（{checked}）が取り込んだ日（{imported_on}）より後')
+
+
+def provenance_text(x):
+    """生成するページに書く、原典を確かめた人と日付（kyuura が読んだ記録は空）。"""
+    prov = x.get('import_provenance')
+    if not prov:
+        return ''
+    dates = sorted({v['source_checked_on'] for v in x.get('verification', []) if v.get('by') == 'kyuura-engine' and v.get('source_checked_on')})
+    return (f"【kyuura-engine の照合の記録の取り込み。原典の確認 {'・'.join(dates)}（エンジン）、取り込み {prov.get('imported_on')}。"
+            f"kyuura は画像を読み直していない】")
+
+
 def validate(ctx):
     errors = []
     cards, rh = ctx['cards'], ctx['rule_history']
@@ -327,6 +380,7 @@ def validate(ctx):
         for v in x.get('verification', []):
             if v.get('by') == 'kyuura-engine' and v.get('import') not in imports:
                 errors.append(f"{w}: verification の import がない: {v.get('import')}")
+        check_provenance(errors, w, x)
 
     # ---- カードの照合
     C = ctx['checks']
@@ -435,6 +489,9 @@ def validate(ctx):
         for v in x.get('verification', []):
             if v.get('by') == 'kyuura-engine' and v.get('import') not in imports:
                 errors.append(f"{w}: verification の import がない: {v.get('import')}")
+        if not x.get('verification'):
+            errors.append(f'{w}: verification がない')
+        check_provenance(errors, w, x)
 
     # ---- 条項
     for x in r['rule_clauses']:
@@ -900,7 +957,9 @@ def build(ctx):
     for k, v in r['status_values'].items():
         out.append(f'  - {STATUS_JA[k]}: {v}')
     out += ['- **根拠の種類**: ' + '、'.join(f"{k}（{v}）" for k, v in r['basis_kinds'].items()) + '。推論はどれにも入れず、SUPPORTED の「推論」に書きます。',
-            '- **エンジンとの対応**: kyuura-engine（対戦処理の実装）の裁定 id との対応は、調査の履歴を追うための参照です。エンジンの実装・停止コード・例外は、公式の裁定として扱いません。', '']
+            '- **エンジンとの対応**: kyuura-engine（対戦処理の実装）の裁定 id との対応は、調査の履歴を追うための参照です。エンジンの実装・停止コード・例外は、公式の裁定として扱いません。',
+            '- **原典を確かめた人**: kyuura が原典の画像を読んだ記録と、kyuura-engine の照合の記録を取り込んだ記録（【kyuura-engine の照合の記録の取り込み…】と書く）を区別します。'
+            '取り込んだ記録の照合した欄はエンジンの記録の範囲だけで、原典の確認日（エンジンの記録の日付）と取り込んだ日を分けて書きます（`import_provenance`。再利用の手順は [エンジン開発の準備状況](../engine-readiness.md) の 10 章）。', '']
 
     # 1. 最新の説明
     out += ['## 1. 公式の最新の説明（印刷の文面との違い）', '',
@@ -917,6 +976,8 @@ def build(ctx):
         extra = [f"同じ文面の引用: " + '、'.join(f"[{q['source']}] p.{q['page']} {q['location']}" for q in x['also_quoted'])] if x['also_quoted'] else []
         extra += [f"分類: {L['classifications'][x['classification']].split('（')[0]}。公式エラッタの記録: {x['errata_ref'] or 'なし（訂正告知は見つかっていない）'}"]
         extra += x['notes']
+        if provenance_text(x):
+            extra.append(provenance_text(x))
         out.append(f"- {x['id']}: " + ' '.join(md(e) for e in extra))
     out.append('')
 
@@ -934,7 +995,7 @@ def build(ctx):
             de += '。値の欠け（調査課題）: ' + '、'.join(g['field'] for g in x['data_gaps'])
         out.append(f"| {x['id']} | {md(card_label(cards, x['card_id']))} | [{x['source']}] p.{x['page']}（{md(x['location'])}） | "
                    f"{md('、'.join(x['checked_fields']))} | {md(C['results'][x['result']])} | {md(de)} | "
-                   f"{md(' '.join(x['findings']))} |")
+                   f"{md(' '.join(([provenance_text(x)] if provenance_text(x) else []) + x['findings']))} |")
     out.append('')
     errs = [x for x in C['records'] if x['data_error']]
     if errs:

@@ -298,7 +298,8 @@ id は 3 つのファイルを通して重複しないこと、`data/rule_histor
 | `classification`・`errata_ref` | 分類は `latest_description`（最新の説明）。公式エラッタ・印刷の変更の記録（`data/rule_history.json`）があるカードは、`errata_ref` で結ばないとエラー（最新の説明とエラッタを混同しない） |
 | `differences` | 違い（`printed`・`latest`・`kind`: `wording`・`clarification`・`meaning`）。文字列が印刷の文面・最新の説明の中にそのままないとエラー |
 | `meaning_change`・`meaning_note` | 処理が変わるか（`none_apparent`・`changed`・`ambiguous_in_print`（印刷の文面だけでは処理が決まらず、最新の説明がその読み方を決めた）・`unknown`）と、その読み方（推論であることを書く）。違いの種類に `meaning` があれば `changed` |
-| `verification` | 確かめた記録（`by`: `kyuura`・`kyuura-engine`、日付・方法・結果） |
+| `verification` | 確かめた記録（`by`: `kyuura`・`kyuura-engine`、日付・方法・結果）。kyuura が原典の画像を読んだ記録は `by: kyuura` を持つ。エンジンの照合の記録を取り込んだ記録（`import_provenance` のある記録）の `by: kyuura-engine` は、`record`（`card_verification.json` の中の場所。`cards.PMCG1-002` など）・`source_checked_on`（エンジンが原典を確かめた日）・`source_checked_on_basis`（その日付の根拠）・`method`・`scope`（エンジンが照合した項目）を持つ |
+| `import_provenance` | kyuura が原典の画像を読んでいない記録（kyuura-engine の照合の記録の取り込み）だけ。`kind`（`engine_record`）・`imported_on`（取り込んだ日。原典の確認日とは別）・`kyuura_reread_source: false`・`source_commit`（エンジンのコミット）・`scope_note`。`by: kyuura` の確認と同時に持たない（読み直したら `by: kyuura` を加え、これを外す）。`by: kyuura` も `import_provenance` もない記録はエラー。再利用の手順は [エンジン開発の準備状況](engine-readiness.md) の 10 章 |
 
 ### `card_checks.json` の `records`
 
@@ -312,6 +313,7 @@ id は 3 つのファイルを通して重複しないこと、`data/rule_histor
 | `differences` | 違いの欄と種類（`printed_vs_latest`: 最新の説明の記録 `latest_description_ref` と結ぶ。`data_error`: データの誤りの欄） |
 | `corrections` | 照合のあとで `data/cards.json` を直した欄（あるときだけ）。`[{field, before, after, evidence, method, commit, note}]`。`after` は `checked_fields` の写し（直したあとの値）と同じ、`before` とは違う、`commit` はデータを直したコミット。直すのはカードのデータの生成の手順（`data/curation/` と `scripts/build_cardlist.py`）で、この記録ではない。同じ欄を `data_error`（修正の候補）と両方に書かない。例: ベロリンガ（PMCG2-041）のワザ名とレベル（`CC-PMCG2-041-P234`） |
 | `data_gaps` | 値が空の欄（あるときだけ。調査課題）。`[{field, kyuura_value, source_value, evidence, cause, status, note}]`。`kyuura_value` は今の `data/cards.json` の値（空）と同じで、値が入るとエラー（照合し直す）。`checked_fields` には入れない（値がないので照合していない）。`cause` は空になった原因、`status` は見出しの `gap_statuses`（`open`: 値を入れていない。推測で埋めない）。例: タケシのイワーク（PMCG5-048）の `jp_print.series`（`CC-PMCG5-048-P200`） |
+| `verification`・`import_provenance` | 最新の説明と同じ。エンジンの照合の記録を取り込んだ記録の照合した欄（`checked_fields`）は、エンジンの記録が照合したと書いた項目（`scope`）だけで、照合していない欄は理由とともに `fields_not_checked` に書く。例: v0.1 のたねポケモン（名前・段階はエンジンの照合の項目にない）、トレーナー（図版が第1弾の版でなく、トレーナーの最新の説明の記録の形式がないので文面を照合した欄に入れない）、基本エネルギー（公式ルール p.318 の種類だけ） |
 
 ### `rulings.json`
 

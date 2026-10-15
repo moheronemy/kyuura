@@ -157,6 +157,15 @@ class LatestDescriptionTest(Base):
         self.assertFalse(check['data_error'])
         self.assertEqual(check['result'], 'printed_vs_latest_only')
 
+    def test_who_read_the_source_is_required(self):
+        """kyuura が原典の画像を読んだ確認（by: kyuura）も、エンジンの照合の記録の取り込み（import_provenance）もない記録はエラー
+        （エンジンの記録だけを、kyuura が画像で確かめた記録として扱わない。docs/engine-readiness.md の 10 章）。"""
+        for kind, rid in (('latest', 'LD-PMCG4-021-ATK1'), ('checks', 'CC-PMCG4-021-P43')):
+            ctx = self.copy()
+            rec = self.find(ctx, kind, rid)
+            rec['verification'] = [v for v in rec['verification'] if v['by'] != 'kyuura']
+            self.assert_detected(ctx, f'{rid}: kyuura が原典を読んだ確認（verification の by: kyuura）がない')
+
 
 class RulingTest(Base):
     """J3: 裁定と、エンジンの S1〜S49 との対応。"""
