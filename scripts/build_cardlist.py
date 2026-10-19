@@ -9,9 +9,14 @@
   - PokeAPI の pokemon_species_names.csv（ポケモンの日本語・英語の種族名）
   - data/curation/*.json（手作業で確認した対応表・日本語名・日本語テキスト・日英の違い）
 
+  - data/ja_text_pcgsearch.json・data/pcgsearch_page_checks.json（拡張パック以外の商品。scripts/non_pack.py で正規化）
+  - data/curation/card_corrections.json（カードのデータの訂正の記録。生成のたびに当てはめる）
+
 出力:
-  - data/cards.json（構造化データ。スキーマは docs/data-schema.md）
-  - data/cards.csv, data/attacks.csv, data/powers.csv（表形式の写し）
+  - data/cards.json（構造化データ。スキーマは docs/data-schema.md。拡張パック 10 弾と、拡張パック以外の商品）
+  - data/cards.csv, data/attacks.csv, data/powers.csv（表形式の写し。data/cards.json と同じ記録から作る）
+  - data/product_items.json（拡張パック以外の商品の元の項目と、記録・まとめ・対戦のカードでない項目の対応）
+  - data/same_card_groups.json（商品をまたいだ同じカードの組と、比べた欄・違い）
   - docs/cards/*.md
 
 使い方:
@@ -19,14 +24,21 @@
       --species pokemon_species_names.csv
 """
 import argparse
+import builtins
+import contextlib
 import csv
+import io
 import json
 import re
+import sys
 import urllib.parse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SCHEMA_VERSION = 2
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import non_pack  # noqa: E402
+
+SCHEMA_VERSION = 3
 
 # 日本版の弾 → 主に対応する英語版セット（比較の基準）
 JP_SETS = [
@@ -499,7 +511,7 @@ def build_records(args):
                if c['_set'] in ('base1', 'base2', 'base3', 'base5', 'gym1', 'gym2', 'neo1', 'neo2', 'neo3', 'neo4')
                and c['id'] not in matched_en
                and not (c['supertype'] == 'Energy' and 'Basic' in c.get('subtypes', []))]
-    return records, en_only
+    return records, en_only, en, namer
 
 
 # ---- 日本語テキスト（なぞのばしょ・ポケモンWiki）の取り込み -----------------
@@ -734,13 +746,178 @@ def both(b):
     return ' / '.join(parts)
 
 
+def field_steps(field):
+    """'pokemon.attacks[0].text.ja' → ['pokemon', 'attacks', 0, 'text', 'ja']。"""
+    steps = []
+    for part in field.split('.'):
+        name, _, rest = part.partition('[')
+        steps.append(name)
+        while rest:
+            idx, _, rest = rest.partition(']')
+            steps.append(int(idx))
+            rest = rest.removeprefix('[')
+    return steps
+
+
+def get_field(rec, field):
+    cur = rec
+    for st in field_steps(field):
+        cur = cur[st]
+    return cur
+
+
+def set_field(rec, field, value):
+    steps = field_steps(field)
+    cur = rec
+    for st in steps[:-1]:
+        cur = cur[st]
+    cur[steps[-1]] = value
+
+
+def apply_corrections(records, ledger):
+    """data/curation/card_corrections.json の訂正を当てはめ、記録の corrections に残す。
+    applied_by が card_corrections の訂正は、当てはめる前の値が before と同じでなければ止まる（出典が変わったら見直す）。
+    ja_text.json で直した訂正は、生成した値が after と同じかだけを確かめる。"""
+    by_id = {r['id']: r for r in records}
+    ids = [c['id'] for c in ledger['corrections']]
+    if len(ids) != len(set(ids)):
+        raise SystemExit('card_corrections.json の訂正の id が重複している')
+    for c in ledger['corrections']:
+        r = by_id.get(c['card_id'])
+        if r is None:
+            raise SystemExit(f"card_corrections.json の訂正のカードがない: {c['id']} {c['card_id']}")
+        cur = get_field(r, c['field'])
+        if c['applied_by'] == 'card_corrections':
+            if cur != c['before']:
+                raise SystemExit(f"card_corrections.json の訂正の before が今の値と違う（出典が変わったか、すでに直っている）: {c['id']} {cur!r}")
+            set_field(r, c['field'], c['after'])
+            r['notes'].append(f"訂正（{c['id']}）: {c['field']} を「{c['before']}」から「{c['after']}」に直した。根拠: {c['basis_detail']}"
+                              if not isinstance(c['after'], dict) else
+                              f"訂正（{c['id']}）: {c['field']} を直した（{c['before'].get('display')} → {c['after'].get('display')}）。根拠: {c['basis_detail']}")
+        elif c['applied_by'] == 'ja_text.json':
+            if cur != c['after']:
+                raise SystemExit(f"ja_text.json で直したはずの値が after と違う: {c['id']} {cur!r}")
+        else:
+            raise SystemExit(f"card_corrections.json の applied_by が不正: {c['id']} {c['applied_by']}")
+        r.setdefault('corrections', []).append({'id': c['id'], 'field': c['field'], 'before': c['before'], 'after': c['after'],
+                                                'basis': c['basis'], 'decided_on': c['decided_on']})
+    for c in ledger['candidates']:
+        if c['card_id'] not in by_id:
+            raise SystemExit(f"card_corrections.json の候補のカードがない: {c['card_id']}")
+
+
+def pack_dates():
+    sets = load_json(ROOT / 'data' / 'curation' / 'sets.json')
+    out = {}
+    for set_id, _, _, _ in JP_SETS:
+        m = re.match(r'(\d+)年(\d+)月(\d+)日', sets[set_id]['release'])
+        out[set_id] = f'{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}'
+    return out
+
+
+def finish_records(records, en, namer):
+    """拡張パックの記録に、拡張パック以外の商品と共通の欄を加え、拡張パック以外の商品の記録を作り、同じカードの組・値の欠けを求める。"""
+    for r in records:
+        r['source_ids']['pcg_search'] = []
+        r['product_group'] = 'expansion_pack'
+        r['play_scope'] = 'standard'
+    np_ = non_pack.NonPack(ROOT, en, namer)
+    np_records, items, non_game = np_.build()
+    records = records + np_records
+    apply_corrections(records, load_json(ROOT / 'data' / 'curation' / 'card_corrections.json'))
+    cur = np_.cur
+    code_of = {title: v['code'] for title, v in np_.np['products'].items()}
+    product_dates = {code_of[p['pcg_title']]: p.get('release_date') for p in cur['products']}
+    reprint_text = {k: v for k, v in cur.get('reprint_text', {}).items() if not k.startswith('_')}
+    reprint_checks = {k: v for k, v in cur.get('reprint_checks', {}).items() if not k.startswith('_')}
+    groups, checks = non_pack.link(records, np_, pack_dates(), product_dates, reprint_text, reprint_checks, namer)
+    for r in records:
+        r['data_gaps'] = non_pack.data_gaps(r)
+    return records, (np_, items, non_game, groups, checks, code_of)
+
+
+def write_product_items(np_, items, non_game, records, code_of):
+    cur = np_.cur
+    by_page = {}
+    for it in items:
+        by_page[it['page']] = it
+    recs = {r['id']: r for r in records}
+    products = []
+    for title, meta in np_.np['products'].items():
+        if title.startswith('_'):
+            continue
+        p = next(x for x in cur['products'] if x['pcg_title'] == title)
+        code = meta['code']
+        mine = [it for it in items if it['product'] == code]
+        cards = [r for r in records if r['jp_set'] == code]
+        entry = {'id': code, 'pcg_title': title, 'name': p['name'], 'group': p['group'], 'release_date': p.get('release_date'),
+                 'page_prefix': meta['page_prefix'], 'sources': p.get('sources', []),
+                 'counts': {'source_items': len(mine), 'card_records': len(cards),
+                            'merged_copies': sum(1 for it in mine if it['disposition'] == 'copy'),
+                            'non_game_items': sum(1 for it in mine if it['disposition'] == 'non_game'),
+                            'standard_play_cards': sum(1 for r in cards if r['play_scope'] == 'standard')}}
+        if p.get('release_note'):
+            entry['release_note'] = p['release_note']
+        comp = None
+        if title in cur.get('decks', {}):
+            d = cur['decks'][title]
+            comp = {'kind': 'deck', 'cards': [{'id': by_page[e['page']]['id'], 'qty': e['qty']} for e in d['cards']],
+                    'basic_energy': d['basic_energy'], 'basic_energy_note': 'ジムデッキの基本エネルギーは pcg-search のページがなく、名前と枚数だけを記録している'}
+        elif p['group'] == 'quick_starter_gift':
+            q = cur.get('quick_starter_gift', {})
+            comp = {'kind': 'decks', 'decks': [{'name': q[k]['name'], 'types': q[k]['types'],
+                                                 'cards': [{'id': by_page[e['page']]['id'], 'qty': e['qty']} for e in q[k]['cards']],
+                                                 'basic_energy': q[k]['basic_energy']} for k in ('red', 'green') if k in q]}
+        elif title in cur.get('sheets', {}):
+            comp = {'kind': 'sheets', 'sheets': [{'sheet': sh['sheet'], 'area_ja': sh['area_ja'], 'area_en': sh['area_en'],
+                                                   'cards': [by_page[x]['id'] if not x.startswith('name:') else x for x in sh['cards']]}
+                                                  for sh in cur['sheets'][title]]}
+        elif meta.get('merge_numbered_copies'):
+            comp = {'kind': 'numbered_deck', 'cards': [{'id': r['id'], 'qty': len(r['copies']),
+                                                         'numbers': [c['list_number'] for c in r['copies']]} for r in cards]}
+        if comp:
+            entry['composition'] = comp
+        products.append(entry)
+    doc = {
+        'schema_version': 1,
+        'description': '拡張パック以外の旧裏の商品（data/ja_text_pcgsearch.json の pcg-search.com の転記）の、元の項目（カードページ）ごとの行き先と、商品の構成。'
+                       'disposition: card（data/cards.json の記録の代表のページ）・copy（同じ商品の番号だけ違うページ。代表の記録にまとめた）・'
+                       'non_game（通常の対戦のデッキに入れるカードではない。non_game_items に残す）。id は「商品の記号-ページ名の末尾 3 桁」。'
+                       '生成: scripts/build_cardlist.py（scripts/non_pack.py）。スキーマは docs/data-schema.md。',
+        'source': 'data/ja_text_pcgsearch.json',
+        'products': products,
+        'items': items,
+        'non_game_items': non_game,
+    }
+    with open(ROOT / 'data' / 'product_items.json', 'w', encoding='utf-8') as f:
+        json.dump(doc, f, ensure_ascii=False, indent=1)
+        f.write('\n')
+
+
+def write_same_card_groups(groups, checks):
+    doc = {
+        'schema_version': 1,
+        'description': '商品をまたいだ同じカードの組（再録の候補）。鍵は basis_fields（名前は NFKC で正規化し、サイトの表記の揺れ ウィンディ→ウインディを直して比べる）。'
+                       '組は記録をまとめない（記録はそれぞれ残る）。members の numbers_differ は最初の収録と違う数値の欄、text は効果文の関係'
+                       '（same・same_ignoring_punctuation・similar（似ている度合い 0.9 以上）・different）、equivalent_to_first は数値と文面が同じ（句読点を除く）か。'
+                       'text_difference は data/curation/other_products.json の reprint_text の判定（文面の違いの種類）。生成: scripts/build_cardlist.py。',
+        'groups': groups,
+        'evolves_from_checks': [list(c) for c in checks],
+    }
+    with open(ROOT / 'data' / 'same_card_groups.json', 'w', encoding='utf-8') as f:
+        json.dump(doc, f, ensure_ascii=False, indent=1)
+        f.write('\n')
+
+
 def write_json(records):
     doc = {
         'schema_version': SCHEMA_VERSION,
-        'description': '旧裏（1996〜2001年）の日本版拡張パック10弾の全カードと、対応する英語版（WotC）カード。スキーマは docs/data-schema.md を参照。',
+        'description': '旧裏（1996〜2001年）の日本版の拡張パック10弾の全カードと、拡張パック以外の商品（拡張シート・サザンアイランド・ポケモンジム・クイックスターターギフト・'
+                       'イントロパック・neo プレミアムファイル・プロモ）の対戦に使うカード、対応する英語版（WotC）カード。拡張パック以外の商品の記録は product_group が '
+                       'expansion_pack 以外で、元の項目との対応は data/product_items.json。スキーマは docs/data-schema.md を参照。',
         'text_availability': {
-            'en': 'ワザ・ポケモンパワー・トレーナー・特殊エネルギーの英語版の名前と文面は全件収録（PokemonTCG/pokemon-tcg-data）。',
-            'ja': 'カード名は収録。ワザ名・ポケモンパワー名・効果文の日本語版は、なぞのばしょ・ポケモンWiki の転記（出典は各カードの ja_text_source）と data/curation/ja_text.json から収録し、出典にないものは null。英語からの翻訳は入れていない。',
+            'en': '拡張パックのカードは、ワザ・ポケモンパワー・トレーナー・特殊エネルギーの英語版の名前と文面を全件収録（PokemonTCG/pokemon-tcg-data）。拡張パック以外の商品のカードは、英語版の対応がわかるものだけ英語の欄がある。',
+            'ja': 'カード名は収録。拡張パックのワザ名・ポケモンパワー名・効果文の日本語版は、なぞのばしょ・ポケモンWiki の転記（出典は各カードの ja_text_source）と data/curation/ja_text.json から収録し、出典にないものは null。拡張パック以外の商品は pcg-search.com の転記。英語からの翻訳は入れていない。訂正は data/curation/card_corrections.json（記録の corrections）。',
         },
         'cards': records,
     }
@@ -756,7 +933,8 @@ def write_csvs(records):
         w.writerow(['id', 'jp_set', 'seq', 'category', 'name_ja', 'name_en', 'name_ja_confidence',
                     'rarity_jp', 'holo', 'en_set', 'en_numbers', 'stage', 'evolves_from_ja', 'evolves_from_en',
                     'hp', 'types', 'weaknesses', 'resistances', 'retreat_cost', 'trainer_kinds',
-                    'energy_kind', 'text_ja', 'text_en', 'jp_en_differences', 'notes'])
+                    'energy_kind', 'text_ja', 'text_en', 'jp_en_differences', 'notes',
+                    'product_group', 'play_scope', 'same_card_group', 'source_pages', 'data_gaps', 'corrections'])
         for r in records:
             p, t, e = r['pokemon'], r['trainer'], r['energy']
             text = (t or {}).get('text') or (e or {}).get('text') or (p or {}).get('rules_text') or {}
@@ -773,7 +951,10 @@ def write_csvs(records):
                         ' '.join((t or {}).get('kinds', [])), (e or {}).get('kind', ''),
                         text.get('ja') or '', text.get('en') or '',
                         ' / '.join(f"[{x['kind']}] {x['summary']}" for x in r['jp_en_differences']),
-                        ' / '.join(r['notes'])])
+                        ' / '.join(r['notes']),
+                        r['product_group'], r['play_scope'], r['same_card_group'] or '',
+                        ' '.join(r['source_ids']['pcg_search']), ' '.join(r['data_gaps']),
+                        ' '.join(c['id'] for c in r.get('corrections', []))])
     with open(d / 'attacks.csv', 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f)
         w.writerow(['card_id', 'index', 'name_ja', 'name_en', 'cost', 'cost_total',
@@ -973,6 +1154,8 @@ def write_card_differences(records):
              '- 出典の記号は [出典と確認状況](../sources.md)、データは `data/cards.json` の `jp_en_differences` にあります。', '',
              '| カード | 種類 | 内容 | 日本版 | 英語版 | 確度 | 出典 |', '|---|---|---|---|---|---|---|']
     for r in records:
+        if r['product_group'] != 'expansion_pack':  # 拡張パック以外の商品の日英の違いは、商品のページ（build_other_products.py）に載せる
+            continue
         for d in r['jp_en_differences']:
             name = f"{r['name']['ja']} / {r['name']['en']}<br>（{r['jp_set']}・{en_ref(r)}）"
             lines.append('| {} | {} | {} | {} | {} | {} | {} |'.format(
@@ -988,18 +1171,74 @@ def write_card_differences(records):
     (ROOT / 'docs' / 'cards' / 'card-differences.md').write_text('\n'.join(lines), encoding='utf-8')
 
 
+@contextlib.contextmanager
+def captured_writes():
+    """--check のとき、ファイルに書く内容を書かずに集める（{パス: 内容}）。読むほうはそのまま。"""
+    written = {}
+    real_open, real_write_text = builtins.open, Path.write_text
+
+    class Sink(io.StringIO):
+        def __init__(self, path):
+            super().__init__()
+            self.path = path
+
+        def close(self):
+            written[self.path] = self.getvalue()
+            super().close()
+
+    def fake_open(file, mode='r', *a, **k):
+        if any(m in mode for m in 'wax'):
+            return Sink(Path(file).resolve())
+        return real_open(file, mode, *a, **k)
+
+    def fake_write_text(self, data, *a, **k):
+        written[self.resolve()] = data
+        return len(data)
+
+    builtins.open, Path.write_text = fake_open, fake_write_text
+    try:
+        yield written
+    finally:
+        builtins.open, Path.write_text = real_open, real_write_text
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--jp', required=True)
     ap.add_argument('--en', required=True, help='pokemon-tcg-data のパス')
     ap.add_argument('--species', required=True)
+    ap.add_argument('--check', action='store_true', help='生成結果が今のファイルと同じかを確かめる（ファイルは書き換えない）')
     args = ap.parse_args()
-    records, en_only = build_records(args)
+    if args.check:
+        with captured_writes() as written:
+            build(args)
+        bad = []
+        for path, text in sorted(written.items()):
+            try:
+                with open(path, encoding='utf-8', newline='') as f:
+                    if f.read() != text:
+                        bad.append(path)
+            except FileNotFoundError:
+                bad.append(path)
+        if bad:
+            raise SystemExit('生成結果が違う: ' + ', '.join(str(Path(b).relative_to(ROOT)) for b in bad))
+        print(f'{len(written)} files; OK', file=sys.stderr)
+        return
+    build(args)
+
+
+def build(args):
+    records, en_only, en, namer = build_records(args)
+    records, (np_, items, non_game, groups, checks, code_of) = finish_records(records, en, namer)
     write_json(records)
     write_csvs(records)
-    write_set_docs(records, en_only)
+    write_product_items(np_, items, non_game, records, code_of)
+    write_same_card_groups(groups, checks)
+    write_set_docs([r for r in records if r['product_group'] == 'expansion_pack'], en_only)
     write_card_differences(records)
-    print(f'{len(records)} cards, {len(en_only)} english-only')
+    pack = sum(1 for r in records if r['product_group'] == 'expansion_pack')
+    print(f'{len(records)} cards ({pack} expansion pack, {len(records) - pack} other products), '
+          f'{len(non_game)} non-game items, {len(groups)} same-card groups, {len(en_only)} english-only')
 
 
 if __name__ == '__main__':

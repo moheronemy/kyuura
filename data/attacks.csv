@@ -195,7 +195,7 @@ PMCG2-044,1,ゆびをふる,Metronome,colorless,1,,,,相手のワザの中から
 PMCG2-044,2,ちいさくなる,Minimize,colorless colorless,2,,,,次の相手の番でこのカードが受けるダメージが20へる。,All damage done by attacks to Clefable during your opponent's next turn is reduced by 20 (after applying Weakness and Resistance).
 PMCG2-045,1,こもりうた,Lullaby,colorless,1,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
 PMCG2-045,2,ともだちのわ,Do the Wave,colorless colorless colorless,3,10,+,10+,自分の控えポケモンの数×10ダメージを追加する。,Does 10 damage plus 10 more damage for each of your Benched Pokémon.
-PMCG2-046,1,こどものおつかい,Fetch,colorless,1,,,,コインを投げて「おもて」なら、自分の山札の上からカードを1枚ひいて、手札に加える。,Draw a card.
+PMCG2-046,1,こどものおつかい,Fetch,colorless,1,,,,自分の山札の上からカードを1枚ひいて、手札に加える。,Draw a card.
 PMCG2-046,2,れんぞくパンチ,Comet Punch,colorless colorless colorless colorless,4,20,×,20×,コインを4枚投げて「おもて」の数×20のダメージ。,Flip 4 coins. This attack does 20 damage times the number of heads.
 PMCG2-047,1,のしかかり,Body Slam,colorless colorless colorless colorless,4,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
 PMCG3-001,1,どくえき,Spit Poison,grass,1,,,,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
@@ -1029,3 +1029,731 @@ neo4-096,1,ちょうはつ,Provoke,colorless,1,,,,おたがいのプレイヤー
 neo4-096,2,だいらんとう,Battle Frenzy,colorless colorless,2,,,,おたがいの場のポケモン全員に対して、1枚ずつコインを投げ、「おもて」が出たポケモン全員に、「弱点・抵抗力」に関係なく、それぞれ20ダメージ。,"For each Pokémon in play (yours and your opponent's), flip a coin. For each heads, this attack does 20 damage to that Pokémon. Don't apply Weakness and Resistance for this attack."
 neo4-097,1,まるまるアタック,Curve Attack,colorless colorless colorless,3,20,,20,コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージを受けない(ダメージ以外の効果は受ける)。,"Flip a coin. If heads, prevent all damage done by attacks to Dark Porygon2 during your opponent's next turn. (Any other effects of attacks still happen.)"
 neo4-098,1,フラッシュアイ,Flashing Eyes,psychic lightning colorless,3,30,,30,コインを3枚投げる。「おもて」が1枚なら相手を「ねむり」状態に、「おもて」が2枚なら相手を「こんらん」状態に、すべて「おもて」なら相手を「マヒ」状態にする。,"Flip 3 coins. If exactly 1 is heads, the Defending Pokémon is now Asleep. If exactly 2 are heads, the Defending Pokémon is now Confused. If all 3 are heads, the Defending Pokémon is now Paralyzed."
+GD1-001,1,しらせる,Alert,colorless,1,,,,山札からカードを1枚引く。その後、自分の控えポケモンを1匹選び、このカードと入れ替える。自分に控えがいない時、このワザは使えない。,"Draw a card. Then, switch Brock's Zubat with 1 of your Benched Pokémon. You can't use this attack if your Bench is empty."
+GD1-001,2,つばさでうつ,Wing Attack,colorless colorless,2,20,,20,,
+GD1-002,1,ほのお,Flame,fire,1,20,,20,,
+GD1-002,2,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+GD1-003,1,まるくなる,Defense Curl,colorless,1,,,,コインを投げて「おもて」なら、このカードは次の相手の番にダメージを受けない。(ダメージ以外の効果は受ける),"Flip a coin. If heads, prevent all damage done to Brock's Sandshrew during your opponent's next turn. (Any other effects of attacks still happen.)"
+GD1-003,2,ボールアタック,Rolling Attack,fighting colorless,2,20,,20,,
+GD1-004,1,ぜんしんばり,Needles,fighting fighting,2,10,,10,コインを投げて「おもて」なら、相手を「どく」と「マヒ」の両方の状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed and Poisoned."
+GD1-004,2,サンドストーム,Sandstorm,fighting fighting,2,20,,20,このワザを受けたポケモンは、次の相手の番にワザを使う時にコインを投げ、「うら」ならワザは失敗する。,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
+GD1-005,1,からかう,Taunt,colorless,1,,,,相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。,"If your opponent has any Benched Pokémon, choose 1 of them and switch it with the Defending Pokémon."
+GD1-005,2,けとばす,Light Kick,fighting,1,10,,10,,
+GD1-006,1,たすけをよぶ,Call for Friend,fighting,1,,,,コインを投げて「おもて」なら、「タケシのポケモン」(進化カード以外)を自分の山札から1枚選び出し、自分のベンチに出してよい。その後、その山札をよく切る。(自分のベンチに空きがない時、このワザは使えない),"Flip a coin. If heads, you may search your deck for a Basic Pokémon card with Brock in its name and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)"
+GD1-006,2,スパイラルショット,Hook Shot,fighting colorless,2,20,,20,このワザのダメージは、「抵抗力」の影響を受けない。,Don't apply Resistance for this attack. (Any other effects that would happen after applying Resistance still happen.)
+GD1-007,1,たいあたり,Tackle,colorless,1,10,,10,,
+GD1-007,2,ロングショット,Lucky Shot,fighting colorless,2,,,,相手の控えポケモンから1匹を選ぶ。その後、コインを投げて「おもて」なら、そのポケモンに(「弱点・抵抗力」に関係なく)30ダメージ。(相手に控えがいないとき、このワザは使えない),"Choose 1 of your opponent's Benched Pokémon and flip a coin. If heads, this attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) This attack can't be used if your opponent has no Benched Pokémon."
+GD1-008,1,いわなげ,Rock Toss,fighting colorless colorless,3,20,×,20×,コインを3枚投げて「おもて」の数×20のダメージ。,Flip 3 coins. This attack does 20 damage times the number of heads.
+GD1-009,1,いわなだれ,Rock Slide,fighting fighting colorless,3,20,,20,相手の控えポケモンから最大3匹を選び、それぞれに(「弱点・抵抗力」に関係なく)10ダメージ。,"If your opponent has any Benched Pokémon, choose up to 3 of them. This attack does 10 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+GD1-009,2,ランドクラッシュ,Fissure,fighting fighting colorless colorless,4,50,,50,,
+GD1-010,1,しめつける,Bind,fighting fighting,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+GD1-010,2,ちていいどう,Tunneling,fighting fighting fighting,3,,,,相手の控えポケモンから最大2匹を選び、それぞれに(「弱点・抵抗力」に関係なく)20ダメージ。このワザを使ったポケモンは、次の自分の番にワザを使えない。,"If your opponent has any Benched Pokémon, choose up to 2 of them. This attack does 20 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.) Brock's Onix can't attack during your next turn."
+GD1-011,1,うなりごえ,Bellow,colorless,1,,,,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+GD1-011,2,いわおとし,Rock Throw,fighting fighting colorless,3,30,,30,,
+GD1-012,1,つのでなげる,Horn Toss,colorless colorless,2,20,,20,ダメージを与えた後、相手の対戦ポケモンを控えポケモンと入れ替える。入れ替わるポケモンは相手が選ぶ。(相手に控えがいない時、入れ替えはおこらない),"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+GD1-012,2,とっしん,Take Down,fighting fighting colorless,3,40,,40,ダメージを与えた後、自分にも10ダメージ。,Brock's Rhyhorn does 10 damage to itself.
+GD1-013,1,ラリアット,Lariat,fighting fighting colorless colorless,4,70,,70,コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
+GD2-001,1,ひっかく,Scratch,colorless,1,10,,10,,
+GD2-001,2,たすけをよぶ,Call for Friend,water,1,,,,コインを投げて「おもて」なら、「カスミのポケモン」(進化カード以外)を自分の山札から1枚選び出し、自分のベンチに出してよい。その後、その山札をよく切る。(自分のベンチに空きがない時、このワザは使えない),"Flip a coin. If heads, you may search your deck for a Basic Pokémon with Misty in its name and put it onto your Bench. (You can't use this attack if your Bench is full.) Shuffle your deck afterward."
+GD2-002,1,めまわし,Hypnotic Stare,water,1,,,,コインを投げて「おもて」なら、相手を「マヒ」状態に、「うら」なら「ねむり」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, the Defending Pokémon is now Asleep."
+GD2-002,2,しっぽビンタ,Tail Rap,water colorless,2,20,×,20×,コインを2枚投げて「おもて」の数×20のダメージ。,Flip 2 coins. This attack does 20 damage times the number of heads.
+GD2-003,1,ふしぎなひかり,Mysterious Light,colorless,1,,,,コインを投げて「おもて」なら、相手を「ねむり」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Asleep."
+GD2-003,2,くらげのむれ,Jellyfish Pod,water colorless,2,,,,自分の山札から「メノクラゲ」「ドククラゲ」「カスミのメノクラゲ」「カスミのドククラゲ」を好きなだけさがし出し、相手プレイヤーに見せてから、手札に加えてよい。その後、その山札をよく切る。,"Search your deck for any number of Pokémon named Tentacool, Tentacruel, Misty's Tentacool, and/or Misty's Tentacruel. Show those cards to your opponent, then put them into your hand. Shuffle your deck afterward."
+GD2-004,1,クラゲどく,Jellyfish Poison,water water colorless colorless,4,30,,30,コインを投げて「おもて」なら、相手を「どく」状態に、「うら」なら「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned. If tails, the Defending Pokémon is now Confused."
+GD2-005,1,オーロラビーム,Aurora Beam,water colorless,2,20,,20,,
+GD2-006,1,たいあたり,Tackle,colorless,1,10,,10,,
+GD2-006,2,からではさむ,Clamp,water colorless,2,20,,20,相手を「マヒ」状態にする。コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, this attack does nothing (not even damage)."
+GD2-007,1,トリプルキャノン,Triple Cannon,water water colorless,3,20,×,20×,コインを3枚投げて「おもて」の数×20のダメージ。,Flip 3 coins. This attack does 20 damage times the number of heads.
+GD2-008,1,たいあたり,Tackle,water,1,10,,10,,
+GD2-008,2,えんまく,Smokescreen,water water,2,20,,20,このワザを受けたポケモンは、次の相手の番にワザを使う時にコインを投げ、「うら」ならワザは失敗する。,"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
+GD2-009,1,つのでつつく,Horn Hazard,water,1,30,,30,コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
+GD2-010,1,みだれづき,Fury Attack,colorless,1,10,×,10×,コインを2枚投げて「おもて」の数×10のダメージ。,Flip 2 coins. This attack does 10 damage times the number of heads.
+GD2-010,2,ちょうおんぱ,Supersonic,water,1,,,,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+GD2-011,1,つのでつく,Horn Attack,water,1,10,,10,,
+GD2-011,2,だくりゅう,Mud Splash,water water,2,30,,30,相手に控えポケモンがいれば、そのうちの1匹を選ぶ。その後、コインを投げて「おもて」なら、そのポケモンにも(「弱点・抵抗力」に関係なく)10ダメージ。,"If your opponent has any Benched Pokémon, choose 1 of them and flip a coin. If heads, this attack does 10 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+GD2-012,1,スターブーメラン,Star Boomerang,water,1,20,,20,コインを投げて「おもて」なら、このカードと、このカードについている全てのカードを、持ち主の手札にもどす。,"Flip a coin. If heads, return Misty's Staryu and all cards attached to it to your hand. (Either way, this attack does its damage.)"
+GD2-013,1,スピードスター,Swift,water colorless,2,20,,20,このワザのダメージは、相手の持っている「弱点・抵抗力・特殊能力・その他の効果」の影響を受けない。,"This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
+GD2-014,1,みずでっぽう,Water Gun,water,1,10,+,10+,ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで),Does 10 damage plus 10 more damage for each Water Energy attached to Misty's Starmie but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
+GD2-014,2,バブルこうせん,Bubblebeam,water water water,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+GD3-001,1,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+GD3-002,1,たいでん,Charge,colorless,1,,,,自分のトラッシュに「雷」エネルギーカードがあれば、1枚取り出して、自分につける。,Take 1 Lightning Energy card from your discard pile and attach it to Lt. Surge's Pikachu.
+GD3-002,2,でんきしっぽ,Lightning Tail,lightning lightning,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+GD3-003,1,メガトンパンチ,Mega Punch,lightning lightning,2,30,,30,,
+GD3-003,2,10まんボルト,Thunderbolt,lightning lightning lightning lightning,4,100,,100,自分についているエネルギーカードを、すべてトラッシュする。(トラッシュできない時、このワザのダメージは0になる),Discard all Energy cards attached to Lt. Surge's Raichu in order to use this attack.
+GD3-004,1,はかいでんぱ,Removal Pulse,lightning,1,10,,10,コインを投げて「おもて」なら、相手についているエネルギーカードを1枚選び、トラッシュさせる。,"If the Defending Pokémon has any Energy cards attached to it, flip a coin. If heads, choose 1 of those Energy cards and discard it."
+GD3-004,2,こんらんでんぱ,Confusion Pulse,lightning lightning,2,20,,20,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+GD3-005,1,でんきショック,Thundershock,lightning,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+GD3-005,2,たいあたり,Tackle,colorless colorless,2,20,,20,,
+GD3-006,1,メガショック,Mega Shock,lightning lightning lightning colorless,4,50,,50,コインを投げて「うら」なら、自分にも20ダメージ。,"Flip a coin. If tails, Lt. Surge's Magneton does 20 damage to itself."
+GD3-007,1,スピンボール,Spin Ball,lightning,1,20,×,20×,コインを1枚投げ、「おもて」の数×20のダメージ。,Flip 1 coin. This attack does 20 damage times the number of heads.
+GD3-007,2,ダブルスピン,Double Spin,lightning colorless,2,20,×,20×,コインを2枚投げ、「おもて」の数×20のダメージ。,Flip 2 coins. This attack does 20 damage times the number of heads.
+GD3-008,1,ブレイクボール,Bouncing Ball,lightning colorless,2,30,,30,コインを投げて「うら」なら、自分にも10ダメージ。,"Flip a coin. If tails, Lt. Surge's Voltorb does 10 damage to itself."
+GD3-009,1,パワーアップボール,Power Ball,lightning lightning colorless,3,30,+,30+,コインを3枚投げ、「おもて」の数×10のダメージを追加する。,Flip 3 coins. This attack does 30 damage plus 10 more damage for each heads.
+GD3-010,1,たいでん,Charge,lightning,1,,,,自分のトラッシュに「雷」エネルギーカードがあれば、最大2枚を取り出して、自分につける。,Take up to 2 Lightning Energy cards from your discard pile and attach them to Lt. Surge's Electabuzz.
+GD3-010,2,デンキとばし,Electric Current,lightning lightning,2,20,,20,自分についている「雷」エネルギーカードを1枚選んではがす。その後、自分に控えポケモンがいれば1匹を選び、はがしたエネルギーをそれにつける。(自分に控えがいない時、はがしたエネルギーはトラッシュする),"Take 1 Lightning Energy card attached to Lt. Surge's Electabuzz and attach it to 1 of your Benched Pokémon. If you have no Benched Pokémon, discard that Energy card."
+GD3-011,1,きあいだめ,Focus Energy,colorless,1,,,,次の自分の番だけ、この「マチスのコラッタ」が使う「かじる」のダメージは2倍になる。,"During your next turn, Lt. Surge's Rattata's Gnaw attack's base damage is doubled."
+GD3-011,2,かじる,Gnaw,colorless colorless,2,20,,20,,
+GD3-012,1,いかりのまえば,Super Fang,colorless,1,,,,相手の残りHPの半分(切り上げ)のダメージを与える。,Does damage to the Defending Pokémon equal to half the Defending Pokémon's remaining HP (rounded up to the nearest 10).
+GD3-013,1,ドリルくちばし,Drill Peck,colorless,1,20,,20,,
+GD4-001,1,どくのこな,Poisonpowder,grass grass,2,20,,20,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+GD4-002,1,ちょっとすいとる,Blot,grass,1,10,,10,自分にのっているダメージカウンターを、1つとりのぞく。,"If there are any damage counters on Erika's Oddish, remove 1 of them."
+GD4-002,2,たまにすいとる,Sporadic Sponging,grass colorless,2,20,,20,コインを投げて「おもて」なら、自分にのっているダメージカウンターを、1つとりのぞく。,"If Erika's Oddish has any damage counters on it, flip a coin. If heads, remove 1 of those damage counters."
+GD4-003,1,ゆめみのまい,Dream Dance,grass colorless,2,10,,10,ダメージを与えた後、自分と相手を、それぞれ「ねむり」状態にする。,Both the Defending Pokémon and Erika's Gloom are now Asleep (after doing damage).
+GD4-003,2,くさいにおい,Vile Smell,grass grass colorless,3,30,,30,ダメージを与えた後、自分と相手を、それぞれ「こんらん」状態にする。,Both the Defending Pokémon and Erika's Gloom are now Confused (after doing damage).
+GD4-004,1,メガドレイン,Mega Drain,grass grass grass,3,30,,30,相手にダメージを与えたら、与えたダメージの半分(切り上げ)のダメージカウンターを、自分からとりのぞく。,"If Erika's Vileplume does damage to the Defending Pokémon (after applying Weakness and Resistance), remove a number of damage counters from Erika's Vileplume equal to half the damage done to the Defending Pokémon (rounded up to the nearest 10). If Erika's Vileplume has fewer damage counters than that, remove all of them."
+GD4-005,1,どくのしる,Poison Vine,grass,1,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+GD4-005,2,つるのムチ,Vine Whip,grass grass,2,30,,30,,
+GD4-006,1,へなへなタックル,Careless Tackle,colorless,1,20,,20,自分にも10ダメージ。,Erika's Bellsprout does 10 damage to itself.
+GD4-007,1,ねむけどく,Sleep Poison,grass colorless,2,,,,相手を「どく」と「ねむり」の両方の状態にする。,The Defending Pokémon is now Asleep and Poisoned.
+GD4-007,2,つるのムチ,Vine Whip,grass grass colorless,3,40,,40,,
+GD4-008,1,はっぱカッター,Razor Leaf,grass grass grass,3,50,,50,,
+GD4-009,1,たまなげ,Eggsplosion,colorless,1,10,×,10×,自分についているエネルギーの数だけコインを投げ、「おもて」の数×10のダメージ。,Flip a number of coins equal to the number of Energy attached to Erika's Exeggcute. This attack does 10 damage times the number of heads.
+GD4-009,2,サイコキネシス,Psychic,psychic colorless,2,10,+,10+,相手についているエネルギーカード×10のダメージを追加する。,Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon.
+GD4-010,1,サイコエクスチェンジ,Psychic Exchange,psychic,1,,,,自分の手札をすべて山札にもどし、山札をよく切る。その後、カードを5枚引いて、手札にする。,"Shuffle your hand into your deck, then draw 5 cards."
+GD4-010,2,ふみつけ,Stomp,grass colorless colorless,3,30,+,30+,コインを投げて「おもて」なら、10ダメージを追加する。,"Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage."
+GD4-011,1,つるでうつ,Vine Slap,grass,1,10,,10,,
+GD4-011,2,のびるつる,Stretch Vine,grass grass colorless,3,,,,相手の控えポケモンから1匹を選び、(「弱点・抵抗力」に関係なく)20ダメージ。,"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 20 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+GD4-012,1,おつきみ,Moonwatching,colorless,1,,,,自分の山札から「基本エネルギーカード」1枚を選び出し、相手に見せてから、手札に加えてよい。その後、その山札をよく切る。,"Search your deck for a basic Energy card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward."
+GD4-012,2,れんぞくビンタ,Comet Slap,colorless colorless,2,10,×,10×,コインを3枚投げ、「おもて」の数×10のダメージ。,Flip 3 coins. This attack does 10 damage times the number of heads.
+GD4-013,1,しっぽでつく,Tail Strike,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+GD5-001,1,ファイヤーテール,Fire Tail Slap,fire,1,20,,20,コインを投げて「うら」なら、自分についている「炎」エネルギーカードを1枚選び、トラッシュする。,"Use this attack only if there are any Fire Energy cards attached to Blaine's Charmander. Flip a coin. If tails, discard 1 of those cards."
+GD5-002,1,しっぽでまどわす,Tail Fan,fire colorless colorless,3,20,,20,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+GD5-003,1,かみつく,Bite,colorless,1,10,,10,,
+GD5-003,2,おにびあつめ,Call Will-o'-the-wisp,fire,1,,,,コインを3枚投げ、「おもて」の数ぶんの「炎」エネルギーカードを自分のトラッシュから選び出し、手札に加える。,"Flip 3 coins. For each heads, if you have a Fire Energy card in your discard pile, put it into your hand."
+GD5-004,1,しゃくねつ,Burn Up,fire fire,2,50,,50,コインを投げて「うら」なら、自分についている「炎」エネルギーカードを、すべてトラッシュする。,"Flip a coin. If tails, discard all Fire Energy cards attached to Blaine's Ninetales."
+GD5-005,1,ふりとばす,Shake,colorless,1,10,,10,相手を、控えポケモンと入れ替える。入れ替わるポケモンは、相手が選ぶ。,"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+GD5-005,2,ほのおタックル,Fire Tackle,fire colorless,2,30,,30,自分にも10ダメージ。,Blaine's Growlithe does 10 damage to itself.
+GD5-006,1,もえあがる,Stoke,fire,1,,,,自分の山札から「炎」エネルギーカード1枚を選び出し、自分につける。その後、その山札をよく切る。,Search your deck for a Fire Energy card and attach it to Blaine's Growlithe. Shuffle your deck afterward.
+GD5-006,2,のしかかり,Body Slam,fire colorless colorless,3,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+GD5-007,1,ヒートタックル,Heat Tackle,fire colorless colorless,3,40,,40,自分にも10ダメージ。,Blaine's Arcanine does 10 damage to itself.
+GD5-007,2,ほのおのあらし,Firestorm,fire fire fire fire,4,120,,120,自分についている「炎」エネルギーカードを3枚トラッシュしなければ、このワザは使えない。,Discard 3 Fire Energy cards attached to Blaine's Arcanine in order to use this attack.
+GD5-008,1,こうそくいどう,Agility,fire colorless,2,20,,20,コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Blaine's Ponyta."
+GD5-009,1,けりにげ,Hind Kick,colorless colorless,2,20,,20,コインを投げて「おもて」なら、自分の控えポケモンを1匹選び、このカードと入れ替える。,"If you have any Benched Pokémon, flip a coin. If heads, switch Blaine's Ponyta with 1 of your Benched Pokémon."
+GD5-010,1,ほのおのたてがみ,Fire Mane,fire,1,20,,20,,
+GD5-010,2,ふみあらす,Stamp,fire colorless colorless,3,30,+,30+,コインを投げて「おもて」なら、相手に10ダメージを追加し、相手の控えポケモン全員にも、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。,"Flip a coin. If heads, this attack does 30 damage plus 10 more damage (to the Defending Pokémon) and 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) If tails, this attack does 30 damage (to the Defending Pokémon)."
+GD5-011,1,ひをふく,Firebreathing,fire,1,10,+,10+,コインを投げて「おもて」なら、10ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 10 more damage; if tails, this attack does 10 damage."
+GD5-011,2,マグマふんしゅつ,Lava Burst,fire fire fire,3,20,×,20×,自分の山札の上から、カードを5枚トラッシュする。トラッシュした5枚の中にあった「炎」エネルギーカードの数×20のダメージ。,"Discard the top 5 cards of your deck. (If there are fewer than 5 cards in your deck, discard all of them.) This attack does 20 damage for each Fire Energy card you discarded in this way."
+GD5-012,1,けりつける,Wild Kick,colorless,1,20,,20,コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
+GD5-012,2,しかえし,Retaliate,colorless colorless,2,10,×,10×,自分にのっているダメージカウンターの数×10のダメージ。,Does 10 damage times the number of damage counters on Blaine's Doduo.
+GD5-013,1,きあいづき,Mega Peck,colorless colorless,2,50,,50,コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
+GD6-001,1,はたく,Pound,colorless,1,10,,10,,
+GD6-001,2,シンクロウェーブ,Synchronize,psychic colorless,2,40,,40,自分と相手に同じ数のエネルギーカードがついている時だけ、このワザは使える。,This attack can't be used unless Sabrina's Abra and the Defending Pokémon have the same number of Energy cards attached to them.
+GD6-002,1,とうし,Psyscan,psychic,1,,,,相手の手札を見る。,Look at your opponent's hand.
+GD6-002,2,クイックアタック,Quick Attack,psychic,1,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+GD6-003,1,ライフダウン,Life Drain,psychic,1,,,,コインを投げて「おもて」なら、残りHPが「10」になるように、相手にダメージカウンターをのせる。,"Flip a coin. If heads, put a number of damage counters on the Defending Pokémon so that its remaining HP are 10."
+GD6-003,2,サイコショット,Psyshot,psychic colorless colorless,3,30,,30,,
+GD6-004,1,メガバーン,Mega Burn,psychic colorless colorless colorless,4,60,,60,次の自分の番、このカードは「メガバーン」を使えない。,You can't use this attack during your next turn.
+GD6-005,1,したでなめる,Lick,psychic,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+GD6-005,2,ぱっときえる,Fade Out,psychic psychic,2,30,,30,自分と、自分についているすべてのエネルギーカードを、持ち主の手札にもどす。,Return Sabrina's Gastly and all Energy cards attached to it to your hand. (Discard all other cards attached to Sabrina's Gastly.)
+GD6-006,1,まとわりつく,Spook,psychic colorless,2,20,,20,このワザを受けた相手は、次の相手の番に「にげる」ことができない。,The Defending Pokémon can't retreat during your opponent's next turn.
+GD6-007,1,あくむ,Nightmare,psychic psychic,2,20,,20,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+GD6-007,2,かげからおそう,Shadow Attack,psychic psychic psychic,3,,,,コインを投げて「おもて」なら、相手の控えポケモンを1匹選び、「弱点・抵抗力」に関係なく、30ダメージ。,"Flip a coin. If heads, and if your opponent has any Benched Pokémon, choose 1 of them and this attack does 30 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+GD6-008,1,やみのはどう,Dark Wave,psychic psychic,2,20,,20,次の相手の番の終わりまで、お互いの場にいるすべてのポケモンは、特殊能力を使うことができず、それらの力も消える。,All Pokémon Powers stop working until the end of your opponent's next turn.
+GD6-008,2,かげしばり,Shadow Bind,psychic psychic psychic,3,40,,40,このワザを受けた相手は、次の相手の番に「にげる」ことができない。,The Defending Pokémon can't retreat during your opponent's next turn.
+GD6-009,1,エナジーサポート,Energy Support,psychic,1,,,,自分の山札から「超」エネルギーカードを1枚選び出し、自分の控えポケモンにつける。その後、山札をよく切る。,"Search your deck for a Psychic Energy card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward."
+GD6-009,2,マインドショック,Mind Shock,psychic colorless,2,20,,20,このワザのダメージは、相手の「弱点・抵抗力」の影響を受けない。,Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
+GD6-010,1,よみがえらせる,Invigorate,psychic,1,,,,自分または相手のトラッシュから「たねポケモン」を1枚選び出し、持ち主のベンチに出す。そして、そのポケモンに、HPの半分(切りすて)のダメージカウンターをのせる。,Choose 1 Basic Pokémon in any player's discard pile. Put it onto that player's Bench. Put a number of damage counters on that Pokémon equal to half its HP (rounded down to the nearest 10). (You can't put a Pokémon on a Bench that's full.)
+GD6-010,2,ふりこののろい,Pendulum Curse,psychic psychic,2,20,×,20×,相手にのっているダメージカウンターの数だけコインを投げ、「おもて」の数×20のダメージ。,Flip a number of coins equal to the number of damage counters on the Defending Pokémon. This attack does 20 damage times the number of heads.
+GD6-011,1,マジックダーツ,Magic Darts,psychic colorless,2,,,,相手の場にいるポケモンを1匹選ぶ。コインを3枚投げ、「おもて」の数×10のダメージを、「弱点・抵抗力」に関係なく、そのポケモンに与える。,Choose 1 of your opponent's Pokémon and flip 3 coins. This attack does 10 damage times the number of heads to that Pokémon. Don't apply Weakness and Resistance for this attack.
+GD6-012,1,おやすみのキッス,Good Night,psychic,1,10,,10,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+GD6-012,2,めざめのキッス,Good Morning,psychic colorless,2,20,,20,相手を「ねむり」状態から、回復させる。,"If the Defending Pokémon was Asleep, it is no longer Asleep."
+GD6-013,1,とがる,Sharp Point,colorless,1,10,,10,,
+GD6-013,2,バリアアタック,Barrier Attack,colorless colorless,2,20,,20,次の相手の番、このカードがワザによって受けるダメージは「-10」される。,All damage done by attacks to Sabrina's Porygon during your opponent's next turn is reduced by 10 (after applying Weakness and Resistance).
+ES1-001,1,かいふく,,colorless,1,,,,このカードにダメージカウンターがのっていれば、それを1つ取りのぞく,
+ES1-001,2,どくのたね,,grass,1,,,,相手を「どく」状態にする。,
+ES1-002,1,たいあたり,,colorless,1,10,,10,,
+ES1-002,2,からまるいと,,grass,1,10,,10,コインを投げて「おもて」なら、相手の対戦ポケモンは、次の相手の番が終わるまでバトル場をはなれられない。,
+ES1-003,1,ふしぎなこな,,grass grass,2,20,,20,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,
+ES1-004,1,つつく,,colorless,1,10,,10,,
+ES1-004,2,どくのつの,,grass,1,,,,相手を「どく」状態にする。,
+ES1-005,1,ころがる,,colorless,1,10,,10,,
+ES1-006,1,しっぽをふる,,colorless,1,,,,コインを投げて「おもて」なら、このワザを受けた相手は、次の相手の番にワザを使えない。,
+ES1-006,2,どくばり,,grass,1,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,
+ES1-007,1,きあいだめ,,colorless,1,,,,次の自分の番だけ、このカードがつかう「つのでとっしん」のダメージは2倍になる。,
+ES1-007,2,つのでとっしん,,grass colorless,2,40,,40,コインを投げて「うら」なら、このワザは失敗する。,
+ES1-008,1,かみつく,,colorless,1,10,,10,,
+ES1-008,2,あやしいおんぱ,,grass colorless,2,10,,10,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,
+ES1-009,1,きゅうけつ,,grass grass colorless,3,20,,20,相手にダメージを与えたら、与えたぶんのダメージカウンターを、このカードから取りのぞいてよい。,
+ES1-009,2,きゅうこうか,,grass colorless colorless colorless,4,60,,60,コインを投げて「うら」なら、自分にも40ダメージ。,
+ES1-010,1,ひっかく,,colorless,1,10,,10,,
+ES1-010,2,ほうしをとばす,,grass,1,,,,自分の山札から「パラス」を選び出し、ベンチに出す。その後、その山札をよく切る。(ベンチに空きがない時、このワザは使えない),
+ES1-011,1,どくのほうし,,grass grass,2,10,,10,相手を「どく」状態にする。,
+ES1-011,2,きゅうけつ,,grass grass colorless,3,20,,20,相手にダメージを与えたら、与えたぶんのダメージカウンターを、このカードから取りのぞいてよい。,
+ES1-012,1,はさんでなげる,,grass,1,10,+,10+,コインを投げて「おもて」なら、10ダメージを追加する。,
+ES1-012,2,きりさく,,colorless colorless colorless,3,30,,30,,
+ES1-013,1,なきごえ,,colorless,1,,,,このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される,
+ES1-013,2,ほのおのしっぽ,,fire fire,2,30,,30,,
+ES1-014,1,かえんじごく,,fire,1,10,+,10+,のぞむなら、このカードについている「炎」エネルギーカードを最大2枚はがしてトラッシュし、トラッシュした「炎」エネルギーカードの数×20のダメージを追加してよい。,
+ES1-014,2,けりとばす,,colorless colorless,2,20,,20,相手の対戦ポケモンを控えポケモンと入れ替える。入れ替わるポケモンは相手が選ぶ。(相手に控えがいない時、入れ替えはおこらない),
+ES1-015,1,ウォーターパワー,,water,1,,,,次の自分の番だけ、このカードが使う「はたく」のダメージは3倍になる。,
+ES1-015,2,はたく,,colorless,1,10,,10,,
+ES1-016,1,あわ,,water,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES1-017,1,ぐるぐる,,water water,2,,,,コインを投げて「おもて」なら、相手を「こんらん」状態に、「うら」なら「ねむり」状態にする。,
+ES1-017,2,のしかかり,,water colorless colorless,3,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES1-018,1,メガトンパンチ,,water water,2,30,,30,,
+ES1-018,2,ハイドロポンプ,,water water water,3,40,+,40+,ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで),
+ES1-019,1,でんきショック,Thundershock,lightning,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+ES1-019,2,こうそくいどう,Agility,lightning lightning,2,20,,20,コインを投げて「おもて」なら、このカードは次の相手の番で、ワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Pikachu."
+ES1-020,1,サイキックビーム,,psychic,1,,,,相手の場のポケモン1匹を選び、(「弱点・抵抗力」に関係なく)10ダメージ。,
+ES1-021,1,ジャグリング,,psychic colorless,2,10,×,10×,コインを4枚投げ、「おもて」の数×10のダメージ。,
+ES1-022,1,サイコクラッシュ,,psychic,1,10,×,10×,相手の場のポケモンについている「超」エネルギーカードの数×10のダメージ。,
+ES1-022,2,ちょうねんりき,,psychic psychic colorless,3,50,,50,,
+ES1-023,1,たいあたり,,colorless,1,10,,10,,
+ES1-023,2,かたくなる,,fighting colorless,2,,,,このカードが次の相手の番で受ける20以下のダメージは、0になる。(ダメージ以外の効果はそのまま受ける),
+ES1-024,1,かぜおこし,,colorless,1,10,,10,,
+ES1-024,2,でんこうせっか,,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,
+ES1-025,1,ひっかく,,colorless,1,10,,10,,
+ES1-025,2,しっぽをふる,,colorless,1,,,,コインを投げて「おもて」なら、このワザを受けた相手は、次の相手の番にワザを使えない。,
+ES1-026,1,このゆびとまれ,,colorless,1,,,,相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。(相手に控えがいない時、このワザは使えない),
+ES1-026,2,ひかるゆび,,colorless colorless,2,10,,10,相手を「ねむり」状態にする。,
+ES1-027,1,ふくらむ,,colorless colorless colorless colorless,4,20,,20,このカードが次の相手に受けるダメージは「-10」される。,
+ES1-028,1,なきごえ,,colorless,1,,,,このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される。,
+ES1-028,2,つつく,,colorless colorless,2,20,,20,,
+ES1-029,1,けとばす,,colorless,1,20,,20,,
+ES1-029,2,トライアタック,,colorless colorless colorless,3,20,×,20×,コインを3枚投げ、「おもて」の数×20のダメージ。,
+ES1-030,1,なめる,,colorless,1,,,,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES1-030,2,ふみつけ,,colorless colorless,2,20,+,20+,コインを投げて「おもて」なら、10ダメージを追加する。,
+ES1-031,1,うたう,,colorless,1,,,,コインを投げて「おもて」なら、相手を「ねむり」状態にする。,
+ES1-031,2,おうふくビンタ,,colorless colorless colorless,3,20,×,20×,コインを2枚投げて「おもて」の数×20のダメージ。,
+ES1-032,1,かじる,,colorless,1,10,,10,,
+ES1-032,2,とびかかる,,colorless,1,20,,20,コインを投げて「うら」なら、このワザは失敗する。,
+ES1-033,1,3Dアタック,,colorless,1,10,×,10×,コインを3枚投げて、「おもて」の数×10ダメージ。,
+ES1-033,2,テクスチャー2,,colorless colorless,2,,,,このカードの抵抗力を、好きな色(無色以外)に変えてよい。バトル場をはなれた時、このワザの効果は消える。,
+ES1-034,1,ねころぶ,Roll Over,colorless colorless colorless colorless,4,30,,30,ダメージを与えた後、自分を「ねむり」状態にする。コインを投げて「おもて」なら、相手も「ねむり」状態にする。,"Snorlax is now Asleep. Flip a coin. If heads, the Defending Pokémon is now Asleep."
+ES2-001,1,たつまきおこし,,grass grass,2,20,,20,相手を控えポケモンと入れ替える。入れ替わるポケモンは相手が選ぶ。その後、自分の控えポケモンから1匹を選び、自分と入れ替える。(控えがいない側は、入れ替えをしない),
+ES2-001,2,レインボーパウダー,,grass grass colorless,3,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態に、「うら」なら「どく」状態にする。,
+ES2-002,1,ベトベトえき,,grass,1,,,,相手に「ベトベトマーカー」がのっていなければ、1つのせる。(「ベトベトマーカー」をのせているポケモンは、「にげる」時トラッシュするエネルギーが、1つぶん多く必要になる),
+ES2-002,2,どくえき,,grass,1,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,
+ES2-003,1,ふしぎなガス,,grass grass,2,20,,20,コインを投げて「おもて」なら、次の相手の番が終わるまで、相手の場にいるポケモンは、特殊能力を使うことができず、その力も消える。,
+ES2-004,1,からみつく,,grass,1,10,,10,コインを投げて「おもて」なら、次の相手の番が終わるまで、相手はバトル場をはなれられない。(「きぜつ」した時をのぞく),
+ES2-004,2,つるのムチ,,grass colorless,2,20,,20,,
+ES2-005,1,ドライアップ,,fire fire,2,,,,相手の場のポケモンから1匹を選ぶ。その後、「うら」が出るまでコインを投げ続け、「おもて」の数ぶんの「水」エネルギーカードを、そのポケモンからはがしてトラッシュさせる。,
+ES2-005,2,ほのおのつばさ,,fire fire fire colorless,4,50,,50,,
+ES2-006,1,なきごえ,,colorless,1,,,,次の相手の番、このワザを受けた相手がこのカードに与えるダメージは「-10」される。,
+ES2-006,2,れいとうビーム,,water water,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES2-007,1,ねむる,,colorless colorless,2,,,,自分にのっているダメージカウンターをすべてとりのぞき、自分の「どく・ねむり・マヒ・こんらん」状態を、すべて回復させる。その後、自分を「ねむり」状態にする。,
+ES2-007,2,オーロラウェーブ,,water water water,3,30,,30,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,
+ES2-008,1,しおふき,,water colorless,2,20,+,20+,ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで),
+ES2-009,1,あわ,,water,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES2-009,2,はさみギロチン,,water colorless colorless,3,30,,30,,
+ES2-010,1,うたう,,colorless,1,,,,コインを投げて「おもて」なら、相手を「ねむり」状態にする。,
+ES2-010,2,なみのり,,water water,2,30,,30,,
+ES2-011,1,ころがりタックル,,colorless colorless,2,20,,20,,
+ES2-012,1,れいとうビーム,Ice Beam,water water colorless colorless,4,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+ES2-013,1,ろうでん,,lightning lightning,2,,,,相手の場のポケモンから1匹を選び、そのポケモンについている「水」エネルギーの数×10ダメージを、(「弱点・抵抗力」に関係なく)そのポケモンに与える。,
+ES2-013,2,ビリビリキック,,lightning lightning colorless,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES2-014,1,ちょうでんどう,,lightning,1,,,,相手の場のポケモンから1匹を選び、(「弱点・抵抗力」に関係なく)10ダメージ。,
+ES2-015,1,マイクロウェーブ,,lightning lightning colorless,3,,,,相手の場のポケモンから1匹を選び、(「弱点・抵抗力」に関係なく)20ダメージ。コインを投げて「おもて」なら、そのポケモンについているエネルギーカードを1枚選び、トラッシュさせる。,
+ES2-016,1,でんきショック,,lightning,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES2-016,2,みんなでスパーク,,lightning lightning,2,20,+,20+,お互いの場にいる「ビリリダマ」の数×10のダメージを追加する。,
+ES2-017,1,ひらいしん,Lightning Rod,lightning,1,,,,相手の場のポケモンから1匹を選ぶ。そのポケモンに「ひらいしんマーカー」がのっていなければ、1つのせる。,Choose 1 of your opponent's Pokémon and put a Lightning Rod marker on it. (A Pokémon can have only 1 Lightning Rod marker on it at a time.)
+ES2-017,2,かみなりショック,Lightning Bolt,lightning lightning,2,10,,10,「ひらいしんマーカー」をのせているすべてのポケモンに、それぞれ20ダメージ。(このワザのダメージは「弱点・抵抗力」の影響を受ける),This attack does 20 damage to any Pokémon with a Lightning Rod marker on it. Apply Weakness and Resistance.
+ES2-018,1,らくらい,,lightning lightning lightning,3,50,,50,コインを投げて「うら」なら、自分の場のポケモンから1匹を選び、そのポケモンにも、弱点・抵抗力に関係なく30ダメージ。,
+ES2-018,2,サンダークラッシュ,,lightning lightning colorless colorless,4,50,+,50+,コインを投げて「おもて」なら、20ダメージを追加する。「うら」なら、自分にも20ダメージ。,
+ES2-019,1,れいとうパンチ,,water,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES2-019,2,コールドブレス,,water water,2,20,,20,コインを投げて「おもて」なら、相手を「ねむり」状態にする。,
+ES2-020,1,どくばり,,fighting,1,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,
+ES2-020,2,スピードスター,,fighting,1,20,,20,このワザのダメージは、相手の持っている「弱点・抵抗カ・特殊能力・その他の効果」の影響を受けない。,
+ES2-021,1,きあいいっぱつ,,colorless,1,,,,コインを投げて「おもて」なら、次の自分の番、この「ワンリキー」が使う「どつく」のダメージは2倍になる。「うら」なら、次の自分の番、この「ワンリキー」は「どつく」を使えない。,
+ES2-021,2,どつく,,fighting colorless,2,30,,30,,
+ES2-022,1,メガトンキック,,fighting fighting,2,30,,30,,
+ES2-022,2,ワンツーパンチ,,fighting fighting fighting,3,30,+,30+,コインを投げて「おもて」なら、20ダメージを追加する。,
+ES2-023,1,れんぞくいわなげ,,fighting fighting,2,20,×,20×,「うら」が出るまでコインを投げ続け、その間に出た「おもて」の数×20ダメージ。,
+ES2-023,2,じしん,,fighting fighting fighting,3,50,,50,自分の控えポケモン全員にも、(「弱点・抵抗力」に関係なく)それぞれ10ダメージ。,
+ES2-024,1,しめつける,,fighting,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES2-024,2,いわふうじ,,fighting fighting,2,20,,20,コインを投げて「おもて」なら、このワザを受けた相手は、次の相手の番で「にげる」ことができない。,
+ES2-025,1,ほねさがし,,colorless,1,,,,このカードに「ほねカウンター」がのっていなければ、1つのせる。,
+ES2-025,2,ほねこんぼう,,fighting fighting,2,50,,50,このワザは、このカードに「ほねカウンター」がのっている時だけ、使える。それを1つとりのぞいてコインを投げ、「おもて」なら相手を「マヒ」状態にする。,
+ES2-026,1,にどげり,,fighting fighting,2,30,×,30×,コインを2枚投げ、「おもて」の数×30のダメージ。,
+ES2-026,2,まわしげり,,fighting fighting colorless,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES2-027,1,マッハパンチ,,fighting,1,20,,20,コインを投げて「おもて」なら、相手の控えポケモンから1匹を選び、そのポケモンにも(「弱点・抵抗力」に関係なく)10ダメージ。,
+ES2-028,1,するどいツメ,,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、30ダメージを追加する。,
+ES2-029,1,ちょうおんぱ,,colorless,1,,,,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,
+ES2-029,2,きりもみアタック,,colorless colorless colorless,3,40,,40,自分にも、「弱点・抵抗力」に関係なく、10ダメージ。,
+ES2-030,1,みだれづき,,colorless,1,10,×,10×,コインを2枚投げ、「おもて」の数×10のダメージ。,
+ES2-030,2,かぜおこし,,colorless,1,10,,10,,
+ES2-031,1,でんこうせっか,,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,
+ES2-031,2,ドリルこうか,,colorless colorless colorless,3,50,,50,コインを投げて「うら」なら、このワザは失敗する。,
+ES3-001,1,まきつく,,grass colorless,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES3-001,2,もうどく,,grass grass grass,3,30,+,30+,相手を「どく」状態にする。このワザを受ける前から相手が「どく」状態なら、10ダメージを追加する。,
+ES3-002,1,なかまのちから,,grass grass,2,10,+,10+,自分のベンチにいる「ニドラン♂」「ニドラン♀」「ニドリーノ」「ニドリーナ」「ニドキング」「ニドクイン」の数×10のダメージを追加する。,
+ES3-002,2,みだれひっかき,,grass grass colorless,3,30,×,30×,コインを3枚投げ、「おもて」の数×30のダメージ。,
+ES3-003,1,こうそくづき,,grass grass,2,60,,60,コインを投げて「うら」なら、相手にダメージを与えられず、自分に20ダメージ。,
+ES3-004,1,かなしばり,,colorless,1,,,,コインを投げて「おもて」なら、相手のワザを1つ選ぶ。次の相手の番、そのポケモンは、そのワザを使えない。,
+ES3-004,2,サイケこうせん,,grass grass,2,20,,20,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,
+ES3-005,1,ゆれる,,colorless,1,,,,コインを投げて「おもて」なら、このカードは次の相手の番にダメージを受けない。(ダメージ以外の効果はそのまま),
+ES3-005,2,しびれごな,,grass,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES3-006,1,さいせい,,grass,1,,,,自分にのっているダメージカウンターをすべてとりのぞく。その後、自分についている「進化カード」と「エネルギーカード」をすべてトラッシュして、「たねポケモン」にもどる。,
+ES3-006,2,ようかい,,grass grass,2,20,,20,コインを投げて「おもて」なら、相手についているエネルギーカードを1枚選び、トラッシュする。,
+ES3-007,1,ガスばくはつ,,grass grass grass,3,40,,40,自分にも30ダメージ。このワザによって相手が「きぜつ」したなら、そのかわりに出てくる対戦ポケモンを「どく」状態にする。,
+ES3-008,1,スラッシュダウン,Slashing Strike,grass grass,2,40,,40,次の自分の番、このカードは「スラッシュダウン」を使えない。,Scyther can't use this attack during your next turn. (Benching or evolving Scyther ends this effect.)
+ES3-009,1,きつねび,,fire fire,2,10,,10,のぞむなら、ダメージを与える前に相手の控えポケモンを1匹選び、相手と入れ替えてよい。(ダメージは、新しい対戦ポケモンに与える),
+ES3-010,1,おつかい,,colorless colorless,2,,,,コインを投げて「おもて」なら、自分の山札から「トレーナーカード」を1枚選び出し、相手プレイヤーに見せてから、手札に加えてよい。その後、その山札をよく切る。,
+ES3-010,2,ひのこ,,fire colorless,2,30,,30,自分についている「炎」エネルギーカードを1枚トラッシュしなければ、このワザは使えない。,
+ES3-011,1,けとばす,,colorless,1,10,,10,,
+ES3-011,2,ひばな,,fire,1,20,,20,コインを投げて「うら」なら、自分についているエネルギーカードを1枚選び、トラッシュする。(トラッシュできない時、このワザは失敗する),
+ES3-012,1,ファイヤーバーン,Burning Fire,fire,1,10,+,10+,のぞむなら、自分や自分の控えポケモンについている「炎」エネルギーカードを好きなだけトラッシュして、トラッシュした数×10のダメージを追加してよい。,"When you use this attack, you may discard any number of Fire Energy cards attached to your Pokémon in play. This attack does 10 damage plus 10 more damage for each Fire Energy card you discarded in this way."
+ES3-012,2,マグマパンチ,Magma Punch,fire fire colorless,3,40,,40,,
+ES3-013,1,サイコキネシス,,psychic colorless,2,10,+,10+,相手についているエネルギーカード×10のダメージを追加する。,
+ES3-013,2,スプラッシュ,,water water colorless,3,40,,40,,
+ES3-014,1,しおまねき,,water,1,,,,コインを投げて「おもて」なら、自分の山札から「水」エネルギーカードを最大3枚選び出し、このカードにつける。,
+ES3-014,2,もろばバサミ,,water water water water,4,80,,80,次の相手の番、このカードが受けるダメージは2倍になる。,
+ES3-015,1,かくれる,,colorless,1,,,,コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。,
+ES3-015,2,みずでっぽう,,water,1,10,+,10+,ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで),
+ES3-016,1,ウォーターボム,,water water,2,20,,20,ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき10ダメージを、相手の控えポケモンに好きなようにわりふって与える。(控えへのダメージ追加は2つぶんまで。また、控えへのダメージは「弱点・抵抗力」の影響を受けない),
+ES3-017,1,なぞのこうせん,,water,1,10,,10,次の相手の番、自分の場の「水」ポケモンは「弱点」の影響を受けない。,
+ES3-017,2,かいてんアタック,,water colorless,2,20,,20,,
+ES3-018,1,なみのり,,water water,2,30,,30,,
+ES3-019,1,サイコパニック,,psychic psychic,2,30,,30,このワザを受ける相手が「超」ポケモンなら、このワザのダメージは60になる。,
+ES3-019,2,ブリンク,,psychic psychic psychic,3,30,,30,次の相手の番、このカードがワザによるダメージを受ける時、コインを投げて「おもて」なら、このカードはそのダメージを受けない。(ダメージ以外の効果は受ける),
+ES3-020,1,エナジーさいせい,,psychic,1,,,,自分のトラッシュから、「特殊エネルギーカード」を1枚選び出し、手札に加える。,
+ES3-020,2,エナジーショック,,psychic psychic,2,20,,20,このワザを受けた相手は、次の相手の番、エネルギーカードがついた時、「マヒ」状態になる。,
+ES3-021,1,おおあくび,,psychic,1,,,,自分と相手を、それぞれ「ねむり」状態にする。,
+ES3-021,2,おおいびき,,psychic psychic,2,30,,30,このワザは、このカードが「ねむり」状態の時だけ、使える。,
+ES3-022,1,こわがらせる,,colorless,1,,,,次の相手の番が終わるまで、相手プレイヤーは「トレーナーカード」を使うことができない。,
+ES3-022,2,あんこく,,psychic colorless,2,10,,10,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,
+ES3-023,1,ぶきみなひかり,,psychic,1,,,,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,
+ES3-023,2,おんねん,,psychic psychic,2,20,+,20+,相手プレイヤーがすでに取りおえたサイドカードの数×10のダメージを追加する。,
+ES3-024,1,ポルターガイスト,,psychic,1,10,×,10×,相手の手札を見て、その中にある「トレーナーカード」の枚数×10のダメージ。,
+ES3-024,2,ナイトメア,,psychic psychic,2,20,,20,コインを投げて「おもて」なら、相手を「ねむり」状態に、「うら」なら「こんらん」状態にする。,
+ES3-025,1,マインドショック,,psychic psychic,2,30,,30,このワザのダメージは、相手の「弱点・抵抗力」の影響を受けない。,
+ES3-026,1,かんぜんかいふく,,psychic psychic,2,,,,自分についているエネルギーカードをすべてトラッシュする。その後、自分にのっているダメージカウンターやマーカーをすべて取りのぞき、「どく・こんらん」状態のすべてからも回復させる。,
+ES3-026,2,サイコブラスト,,psychic psychic colorless,3,30,,30,コインを投げて「おもて」なら、相手についているエネルギーカードから1枚を選び、トラッシュさせる。,
+ES3-027,1,すながくれ,,fighting,1,,,,コインを投げて「おもて」なら、このカードは次の相手の番にダメージを受けない。(ダメージ以外の効果はそのまま),
+ES3-027,2,ローリングニードル,,fighting fighting fighting,3,40,+,40+,コインを3枚投げ、「おもて」の数×10のダメージを追加する。その後、自分にも「おもて」の数×10のダメージ。,
+ES3-028,1,じごくづき,,fighting colorless,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+ES3-028,2,きあいだま,,colorless colorless colorless,3,,,,コインを投げて「おもて」なら、相手の場のポケモンから1匹を選び、20ダメージ。(このワザによる控えへのダメージは「弱点・抵抗力」の影響を受ける),
+ES3-029,1,がんせきくだき,,fighting fighting colorless,3,30,,30,コインを2枚投げ、「おもて」の数×10のダメージを、相手の控えポケモンに好きなようにわりふって与える。(控えへのダメージは「弱点・抵抗カ」の影響を受けない),
+ES3-030,1,ほねをなげる,,fighting,1,,,,コインを投げて「おもて」なら、相手に30ダメージ。「うら」なら、相手の控えポケモンから1匹を選び、「弱点・抵抗力」に関係なく、10ダメージ。,
+ES3-031,1,やまくずし,,fighting,1,10,,10,自分の山札の上からカードを5枚トラッシュする。トラッシュした5枚の中に「闘」エネルギーカードがあれば、それらをすべてトラッシュから取り出し、手札に加える。,
+ES3-031,2,にだんづき,,fighting fighting fighting,3,30,+,30+,コインを投げて「おもて」なら、20ダメージを追加する。,
+ES3-032,1,ツイスター,,colorless colorless,2,20,,20,相手が「きぜつ」しなかったなら、コインを投げる。「おもて」なら、このワザを受けた相手についているすべてのエネルギーカードとトレーナーカードを、持ち主の手札にもどす。,
+ES3-032,2,そらをとぶ,,colorless colorless colorless,3,30,,30,コインを投げて「うら」なら、このワザは失敗する。「おもて」なら、次の相手の番、このカードは相手のワザによるダメージや効果を受けない。,
+ES3-033,1,かみつく,,colorless colorless,2,20,,20,,
+ES3-033,2,テールドロップ,,colorless colorless colorless,3,80,,80,コインを2枚投げ、1つでも「うら」なら、このワザは失敗する。,
+ES3-034,1,ふんだりけったり,,colorless colorless,2,20,+,20+,コインを投げて「おもて」なら、10ダメージを追加する。「うら」なら、相手を控えポケモンと入れ替える。入れ替わるポケモンは、相手が選ぶ。(相手に控えがいない時、入れ替えはおこらない),
+QSG-001,1,かいふく,,colorless,1,,,,このカードにダメージカウンターがのっていれば、それを1つ取りのぞく,
+QSG-001,2,どくのたね,,grass,1,,,,相手を「どく」状態にする。,
+QSG-002,1,たいあたり,,colorless,1,10,,10,,
+QSG-002,2,からまるいと,,grass,1,10,,10,コインを投げて「おもて」なら、相手の対戦ポケモンは、次の相手の番が終わるまでバトル場をはなれられない。,
+QSG-003,1,ふしぎなこな,,grass grass,2,20,,20,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,
+QSG-004,1,しっぽをふる,,colorless,1,,,,コインを投げて「おもて」なら、このワザを受けた相手は、次の相手の番にワザを使えない。,
+QSG-004,2,どくばり,,grass,1,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,
+QSG-005,1,きあいだめ,,colorless,1,,,,次の自分の番だけ、このカードがつかう「つのでとっしん」のダメージは2倍になる。,
+QSG-005,2,つのでとっしん,,grass colorless,2,40,,40,コインを投げて「うら」なら、このワザは失敗する。,
+QSG-006,1,はさんでなげる,,grass,1,10,+,10+,コインを投げて「おもて」なら、10ダメージを追加する。,
+QSG-006,2,きりさく,,colorless colorless colorless,3,30,,30,,
+QSG-007,1,なきごえ,,colorless,1,,,,このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される,
+QSG-007,2,ほのおのしっぽ,,fire fire,2,30,,30,,
+QSG-008,1,きつねび,,fire fire,2,10,,10,のぞむなら、ダメージを与える前に相手の控えポケモンを1匹選び、相手と入れ替えてよい。(ダメージは、新しい対戦ポケモンに与える),
+QSG-009,1,おつかい,,colorless colorless,2,,,,コインを投げて「おもて」なら、自分の山札から「トレーナーカード」を1枚選び出し、相手プレイヤーに見せてから、手札に加えてよい。その後、その山札をよく切る。,
+QSG-009,2,ひのこ,,fire colorless,2,30,,30,自分についている「炎」エネルギーカードを1枚トラッシュしなければ、このワザは使えない。,
+QSG-010,1,けとばす,,colorless,1,10,,10,,
+QSG-010,2,ひばな,,fire,1,20,,20,コインを投げて「うら」なら、自分についているエネルギーカードを1枚選び、トラッシュする。(トラッシュできない時、このワザは失敗する),
+QSG-011,1,かえんじごく,,fire,1,10,+,10+,のぞむなら、このカードについている「炎」エネルギーカードを最大2枚はがしてトラッシュし、トラッシュした「炎」エネルギーカードの数×20のダメージを追加してよい。,
+QSG-011,2,けりとばす,,colorless colorless,2,20,,20,相手の対戦ポケモンを控えポケモンと入れ替える。入れ替わるポケモンは相手が選ぶ。(相手に控えがいない時、入れ替えはおこらない),
+QSG-012,1,ファイヤーバーン,,fire,1,10,+,10+,のぞむなら、自分や自分の控えポケモンについている「炎」エネルギーカードを好きなだけトラッシュして、トラッシュした数×10のダメージを追加してよい。,
+QSG-012,2,マグマパンチ,,fire fire colorless,3,40,,40,,
+QSG-013,1,ウォーターパワー,,water,1,,,,次の自分の番だけ、このカードが使う「はたく」のダメージは3倍になる。,
+QSG-013,2,はたく,,colorless,1,10,,10,,
+QSG-014,1,あわ,,water,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+QSG-015,1,ぐるぐる,,water water,2,,,,コインを投げて「おもて」なら、相手を「こんらん」状態に、「うら」なら「ねむり」状態にする。,
+QSG-015,2,のしかかり,,water colorless colorless,3,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+QSG-016,1,メガトンパンチ,,water water,2,30,,30,,
+QSG-016,2,ハイドロポンプ,,water water water,3,40,+,40+,ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで),
+QSG-017,1,なきごえ,,colorless,1,,,,次の相手の番、このワザを受けた相手がこのカードに与えるダメージは「-10」される。,
+QSG-017,2,れいとうビーム,,water water,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+QSG-018,1,ねむる,,colorless colorless,2,,,,自分にのっているダメージカウンターをすべてとりのぞき、自分の「どく・ねむり・マヒ・こんらん」状態を、すべて回復させる。その後、自分を「ねむり」状態にする。,
+QSG-018,2,オーロラウェーブ,,water water water,3,30,,30,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,
+QSG-019,1,うたう,,colorless,1,,,,コインを投げて「おもて」なら、相手を「ねむり」状態にする。,
+QSG-019,2,なみのり,,water water,2,30,,30,,
+QSG-020,1,でんきショック,,lightning,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+QSG-020,2,こうそくいどう,,lightning lightning,2,20,,20,コインを投げて「おもて」なら、このカードは次の相手の番で、ワザによるダメージや効果を受けない。,
+QSG-021,1,じゅうでん,,lightning,1,,,,自分の山札から「雷」エネルギーカードを1枚選び出し、このカードにつけてよい。その後、その山札をよく切る。,
+QSG-021,2,10まんボルト,,lightning lightning lightning,3,50,,50,このカードについているエネルギーカードを全てはがし、トラッシュする。,
+QSG-022,1,ろうでん,,lightning lightning,2,,,,相手の場のポケモンから1匹を選び、そのポケモンについている「水」エネルギーの数×10ダメージを、(「弱点・抵抗力」に関係なく)そのポケモンに与える。,
+QSG-022,2,ビリビリキック,,lightning lightning colorless,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+QSG-023,1,ちょうでんどう,,lightning,1,,,,相手の場のポケモンから1匹を選び、(「弱点・抵抗力」に関係なく)10ダメージ。,
+QSG-024,1,マイクロウェーブ,,lightning lightning colorless,3,,,,相手の場のポケモンから1匹を選び、(「弱点・抵抗力」に関係なく)20ダメージ。コインを投げて「おもて」なら、そのポケモンについているエネルギーカードを1枚選び、トラッシュさせる。,
+QSG-025,1,でんきショック,,lightning,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+QSG-025,2,みんなでスパーク,,lightning lightning,2,20,+,20+,お互いの場にいる「ビリリダマ」の数×10のダメージを追加する。,
+QSG-026,1,サイキックビーム,,psychic,1,,,,相手の場のポケモン1匹を選び、(「弱点・抵抗力」に関係なく)10ダメージ。,
+QSG-027,1,エナジーさいせい,,psychic,1,,,,自分のトラッシュから、「特殊エネルギーカード」を1枚選び出し、手札に加える。,
+QSG-027,2,エナジーショック,,psychic psychic,2,20,,20,このワザを受けた相手は、次の相手の番、エネルギーカードがついた時、「マヒ」状態になる。,
+QSG-028,1,こわがらせる,,colorless,1,,,,次の相手の番が終わるまで、相手プレイヤーは「トレーナーカード」を使うことができない。,
+QSG-028,2,あんこく,,psychic colorless,2,10,,10,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,
+QSG-029,1,ポルターガイスト,,psychic,1,10,×,10×,相手の手札を見て、その中にある「トレーナーカード」の枚数×10のダメージ。,
+QSG-029,2,ナイトメア,,psychic psychic,2,20,,20,コインを投げて「おもて」なら、相手を「ねむり」状態に、「うら」なら「こんらん」状態にする。,
+QSG-030,1,ジャグリング,,psychic colorless,2,10,×,10×,コインを4枚投げ、「おもて」の数×10のダメージ。,
+QSG-031,1,れいとうパンチ,,water,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+QSG-031,2,コールドブレス,,water water,2,20,,20,コインを投げて「おもて」なら、相手を「ねむり」状態にする。,
+QSG-032,1,サイコクラッシュ,,psychic,1,10,×,10×,相手の場のポケモンについている「超」エネルギーカードの数×10のダメージ。,
+QSG-032,2,ちょうねんりき,,psychic psychic colorless,3,50,,50,,
+QSG-033,1,どくばり,,fighting,1,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,
+QSG-033,2,スピードスター,,fighting,1,20,,20,このワザのダメージは、相手の持っている「弱点・抵抗カ・特殊能力・その他の効果」の影響を受けない。,
+QSG-034,1,すながくれ,,fighting,1,,,,コインを投げて「おもて」なら、このカードは次の相手の番にダメージを受けない。(ダメージ以外の効果はそのまま),
+QSG-034,2,ローリングニードル,,fighting fighting fighting,3,40,+,40+,コインを3枚投げ、「おもて」の数×10のダメージを追加する。その後、自分にも「おもて」の数×10のダメージ。,
+QSG-035,1,きあいいっぱつ,,colorless,1,,,,コインを投げて「おもて」なら、次の自分の番、この「ワンリキー」が使う「どつく」のダメージは2倍になる。「うら」なら、次の自分の番、この「ワンリキー」は「どつく」を使えない。,
+QSG-035,2,どつく,,fighting colorless,2,30,,30,,
+QSG-036,1,メガトンキック,,fighting fighting,2,30,,30,,
+QSG-036,2,ワンツーパンチ,,fighting fighting fighting,3,30,+,30+,コインを投げて「おもて」なら、20ダメージを追加する。,
+QSG-037,1,しめつける,,fighting,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+QSG-037,2,いわふうじ,,fighting fighting,2,20,,20,コインを投げて「おもて」なら、このワザを受けた相手は、次の相手の番で「にげる」ことができない。,
+QSG-038,1,マッハパンチ,,fighting,1,20,,20,コインを投げて「おもて」なら、相手の控えポケモンから1匹を選び、そのポケモンにも(「弱点・抵抗力」に関係なく)10ダメージ。,
+QSG-039,1,ひっかく,,colorless,1,10,,10,,
+QSG-039,2,しっぽをふる,,colorless,1,,,,コインを投げて「おもて」なら、このワザを受けた相手は、次の相手の番にワザを使えない。,
+QSG-040,1,このゆびとまれ,,colorless,1,,,,相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。(相手に控えがいない時、このワザは使えない),
+QSG-040,2,ひかるゆび,,colorless colorless,2,10,,10,相手を「ねむり」状態にする。,
+QSG-041,1,なきごえ,,colorless,1,,,,このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される。,
+QSG-041,2,つつく,,colorless colorless,2,20,,20,,
+QSG-042,1,なめる,,colorless,1,,,,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+QSG-042,2,ふみつけ,,colorless colorless,2,20,+,20+,コインを投げて「おもて」なら、10ダメージを追加する。,
+QSG-043,1,うたう,,colorless,1,,,,コインを投げて「おもて」なら、相手を「ねむり」状態にする。,
+QSG-043,2,おうふくビンタ,,colorless colorless colorless,3,20,×,20×,コインを2枚投げて「おもて」の数×20のダメージ。,
+QSG-044,1,かみつく,,colorless colorless,2,20,,20,,
+QSG-044,2,テールドロップ,,colorless colorless colorless,3,80,,80,コインを2枚投げ、1つでも「うら」なら、このワザは失敗する。,
+QSG-045,1,3Dアタック,,colorless,1,10,×,10×,コインを3枚投げて、「おもて」の数×10ダメージ。,
+QSG-045,2,テクスチャー2,,colorless colorless,2,,,,このカードの抵抗力を、好きな色(無色以外)に変えてよい。バトル場をはなれた時、このワザの効果は消える。,
+QSG-046,1,ねころぶ,,colorless colorless colorless colorless,4,30,,30,ダメージを与えた後、自分を「ねむり」状態にする。コインを投げて「おもて」なら、相手も「ねむり」状態にする。,
+QSG-054,1,スラッシュダウン,,grass grass,2,40,,40,次の自分の番、このカードは「スラッシュダウン」を使えない。,
+QSG-055,1,ドライアップ,,fire fire,2,,,,相手の場のポケモンから1匹を選ぶ。その後、「うら」が出るまでコインを投げ続け、「おもて」の数ぶんの「水」エネルギーカードを、そのポケモンからはがしてトラッシュさせる。,
+QSG-055,2,ほのおのつばさ,,fire fire fire colorless,4,50,,50,,
+QSG-056,1,らくらい,,lightning lightning lightning,3,50,,50,コインを投げて「うら」なら、自分の場のポケモンから1匹を選び、そのポケモンにも、弱点・抵抗力に関係なく30ダメージ。,
+QSG-056,2,サンダークラッシュ,,lightning lightning colorless colorless,4,50,+,50+,コインを投げて「おもて」なら、20ダメージを追加する。「うら」なら、自分にも20ダメージ。,
+QSG-057,1,れいとうビーム,,water water colorless colorless,4,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+SI-001,1,かじる,Gnaw,colorless,1,10,,10,,
+SI-001,2,こうそくいどう,Agility,grass grass,2,20,,20,コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Ledyba."
+SI-002,1,ひとみでさそう,Tempting Eyes,colorless,1,,,,相手の控えポケモンを1匹選び、相手と入れ替える。,Choose 1 of your opponent's Benched Pokémon and switch it with the Defending Pokémon.
+SI-002,2,うたう,Sing,colorless,1,,,,コインを投げて「おもて」なら、相手を「ねむり」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Asleep."
+SI-003,1,そらをとぶ,Fly,colorless colorless colorless,3,30,,30,コインを投げて「うら」なら、このワザは失敗する。「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Butterfree. If tails, this attack does nothing (not even damage)."
+SI-003,2,レインボーパウダー,Rainbow Powder,grass grass colorless,3,20,,20,コインを投げる「おもて」なら、相手を「マヒ」状態に、「うら」ならどく状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, the Defending Pokémon is now Poisoned."
+SI-004,1,レインボーウェーブ,Rainbow Wave,psychic,1,,,,自分についている「基本エネルギーカード」の色(タイプ)から、1つを選ぶ。相手と相手の控えポケモンのうち、選んだエネルギーと同じ色(タイプ)のポケモン全員に、「弱点・抵抗力」に関係なく、それぞれ20ダメージ。,Choose a type of Energy other than Colorless attached to Mew. This attack does 20 damage to each of your opponent's Pokémon of that type (including Benched Pokémon). Don't apply Weakness and Resistance.
+SI-005,1,マッハひこう,Supersonic Flight,colorless colorless,2,40,,40,コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
+SI-005,2,カッターウインド,Slicing Wind,colorless colorless colorless colorless,4,50,,50,,
+SI-006,1,たたきつける,Slam,colorless colorless,2,20,×,20×,コインを2枚投げ、「おもて」の数×20のダメージ。,Flip 2 coins. This attack does 20 damage times the number of heads.
+SI-006,2,のしかかり,Body Slam,fighting fighting fighting fighting,4,40,,40,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+SI-007,1,おおごえでなく,Bawl,colorless,1,10,,10,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+SI-008,1,ふしぎなかおり,Strange Scent,grass,1,,,,お互いのプレイヤーは、それぞれコインを投げる。「おもて」を出したプレイヤーは、自分の場のポケモンにのっているダメージカウンターを、最大3つとりのぞく。(合計が3つ以下なら、2匹以上のポケモンから、とりのぞいてもよい),"Each player flips a coin. Each player who gets heads chooses a total of 3 damage counters from among his or her Pokémon and removes them. (If the player's Pokémon have fewer total damage counters than that, he or she removes all of them.)"
+SI-008,2,はっぱカッター,Razor Leaf,grass grass,2,30,,30,,
+SI-009,1,するどいまえば,Sharp Teeth,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、30ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 30 more damage; if tails, this attack does 10 damage."
+SI-010,1,きずをなめる,Lick Wounds,colorless,1,,,,コインを投げて「おもて」なら、お互いの場にいるポケモンから1匹を選び、そのポケモンにのっているダメージカウンターを、2つとりのぞく。,"Flip a coin. If heads, choose 1 Pokémon (yours or your opponent's) with damage counters on it and remove 2 damage counters from it (1 if it only has 1)."
+SI-010,2,のびるベロ,Tongue Stretch,colorless colorless,2,,,,コインを投げて「おもて」なら、相手の場のポケモンを1匹選び、「弱点・抵抗力」に関係なく、20ダメージ。,"Flip a coin. If heads, choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. Don't apply Weakness and Resistance."
+SI-011,1,ごくらくかふん,Paradise Pollen,grass,1,,,,コインを投げて「おもて」なら、自分の控えポケモンを1匹選び、そのポケモンにのっているダメージカウンター最大2つと、自分にのっているダメージカウンター最大2つを、それぞれ、とりのぞく。,"Flip a coin. If heads, remove 2 damage counters from Vileplume (1 if it only has 1). Then, if you have any Benched Pokémon with damage counters on them, choose 1 of them and remove 2 damage counters from it (1 if it only has 1)."
+SI-011,2,さいあくかふん,Horrid Pollen,grass grass colorless,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態に、「うら」なら「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, the Defending Pokémon is now Confused."
+SI-012,1,けたぐり,Low Kick,fighting,1,20,,20,,
+SI-012,2,いかりくるう,Rampage,fighting fighting,2,20,+,20+,自分にのっているダメージカウンターの数×10のダメージを追加する。その後、コインを投げて「うら」なら、自分を「こんらん」状態にする。,"Does 20 damage plus 10 more damage for each damage counter on Primeape. Flip a coin. If tails, Primeape is now Confused (after doing damage)."
+SI-013,1,ねらいだま,Sharpshooter,grass,1,,,,相手の場のポケモンを、1匹選ぶ。自分についている「草」エネルギーの数だけコインを投げ、「おもて」の数×10のダメージを、「弱点・抵抗カ」に関係なく、そのポケモンに与える。,Choose 1 of your opponent's Pokémon. Flip a number of coins equal to the number of Grass Energy attached to Exeggutor. This attack does 10 damage times the number of heads to that Pokémon. Don't apply Weakness and Resistance.
+SI-014,1,ひらめく,Revelation,psychic,1,,,,コインを投げて「おもて」なら、自分の山札から「トレーナーカード」1枚を選び出し、相手に見せてから、手札に加える。その後、その山札をよく切る。,"Flip a coin. If heads, search your deck for a Trainer card, show it to your opponent, and put it into your hand. Shuffle your deck afterward."
+SI-014,2,サイコキネシス,Psychic,psychic colorless,2,10,+,10+,相手についているエネルギーカードの数×10のダメージを、追加する。,Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon.
+SI-015,1,みずでっぽう,Water Gun,water water,2,20,+,20+,ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで),Does 20 damage plus 10 more damage for each Water Energy attached to Wartortle but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
+SI-016,1,しょくしゅをつかう,Tentacle Grip,water,1,,,,自分についている「水」エネルギーの数だけコインを投げ、「おもて」の数×2枚のカードを、自分の山札から引く。,"Flip a number of coins equal to the number of Water Energy attached to Tentacruel. For each heads, draw 2 cards."
+SI-016,2,どくばり,Poison Sting,water water,2,20,,20,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+SI-017,1,みずとばし,Squirt,water,1,,,,相手の場のポケモンを1匹選び、「弱点・抵抗力」に関係なく、10ダメージ。,Choose 1 of your opponent's Pokémon. This attack does 10 damage to that Pokémon. Don't apply Weakness and Resistance.
+SI-017,2,ころがりタックル,Rolling Tackle,colorless colorless,2,20,,20,,
+SI-018,1,やさしいうた,Gentle Song,colorless,1,,,,自分と相手にのっているダメージカウンターを、それぞれ2つずつ、とりのぞく。その後、相手を「ねむり」状態にする。,"If Lapras has any damage counters on it, remove 2 of them from it (1 if it only has 1). If the Defending Pokémon has any damage counters on it, remove 2 of them from it (1 if it only has 1). The Defending Pokémon is now Asleep."
+SI-018,2,れいとうビーム,Ice Beam,water water,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+IP1-001,1,たいあたり,,colorless,1,10,,10,,
+IP1-001,2,はっぱカッター,,grass grass,2,30,,30,,
+IP1-002,1,はたく,Pound,colorless,1,10,,10,,
+IP1-002,2,あやしいひかり,Confuse Ray,psychic psychic,2,10,,10,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+IP1-003,1,でんこうせっか,,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,
+IP1-003,2,10まんボルト,,lightning lightning lightning,3,60,,60,自分についているエネルギーカードを、すべてトラッシュする。,
+IP1-013,1,かじる,Gnaw,colorless,1,10,,10,,
+IP1-013,2,でんげき,Thunder Jolt,lightning colorless,2,30,,30,コインを投げて「うら」なら、自分にも10ダメージ。,"Flip a coin. If tails, Pikachu does 10 damage to itself."
+IP1-016,1,かみつく,,colorless,1,10,,10,,
+IP1-016,2,みだれひっかき,,colorless colorless,2,10,×,10×,コインを3枚投げ、「おもて」の数×10のダメージ。,
+IP1-018,1,かいふく,,colorless,1,,,,このカードにダメージカウンターがのっていれば、それを1つ取りのぞく。,
+IP1-018,2,どくのたね,,grass,1,,,,相手を「どく」状態にする。,
+IP1-022,1,やどりぎのたね,,grass grass,2,20,,20,相手にダメージを与えたら、自分にのっているダメージカウンターを1つとりのぞく。,
+IP1-022,2,つるのムチ,,grass grass colorless,3,40,,40,,
+IP1-026,1,でんきショック,,lightning lightning colorless,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+IP1-030,1,みだれづき,,colorless,1,10,×,10×,コインを2枚投げて「おもて」の数×10のダメージ。,
+IP1-037,1,はたく,,colorless,1,10,,10,,
+IP1-037,2,おうふくビンタ,,psychic colorless,2,20,×,20×,コインを2枚投げ、「おもて」の数×20のダメージ。,
+IP1-039,1,どくガス,,grass,1,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,
+IP1-039,2,こんらんガス,,grass grass,2,20,,20,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,
+IP1-040,1,なきごえ,,colorless,1,,,,このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される。,
+IP1-040,2,でんきショック,,lightning lightning,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+IP2-001,1,ほのお,Flare,fire colorless,2,20,,20,,
+IP2-002,1,あなをほる,Dig,fighting,1,10,,10,,
+IP2-002,2,どろかけ,Mud Slap,fighting fighting,2,30,,30,,
+IP2-003,1,あわ,,water,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+IP2-003,2,なみのり,,water water,2,30,,30,,
+IP2-009,1,みずでっぽう,,water,1,10,+,10+,ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー１つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで),
+IP2-013,1,つつく,,colorless,1,10,,10,,
+IP2-013,2,つばさでうつ,,colorless colorless,2,20,,20,,
+IP2-014,1,こもりうた,Lullaby,colorless,1,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+IP2-014,2,はたく,Pound,colorless colorless,2,20,,20,,
+IP2-016,1,かみつく,,water,1,10,,10,,
+IP2-016,2,ロケットずつき,,water colorless,2,20,,20,,
+IP2-018,1,ウォーターパワー,,water,1,,,,次の自分の番だけ、このカードが使う「はたく」のダメージは3倍になる。,
+IP2-018,2,はたく,,colorless,1,10,,10,,
+IP2-026,1,とびかかる,,colorless,1,20,,20,コインを投げて「うら」なら、このワザは失敗する。,
+IP2-026,2,ひのこ,,fire colorless,2,30,,30,自分についている「炎」エネルギーカードを1枚トラッシュしなければ、このワザは使えない。,
+IP2-032,1,とっしん,,fire fire colorless,3,50,,50,自分にも20ダメージ。,
+IP2-035,1,けたぐり,Low Kick,fighting,1,20,,20,,
+IP2-039,1,ほのおパンチ,,fire,1,20,,20,,
+IP2-039,2,スモッグ,,fire fire,2,20,,20,コインを投げて「おもて」なら、相手を「どく」状態にする。,
+IPH-001,1,ソーラービーム,,grass grass grass grass,4,60,,60,,
+IPH-002,1,ハイドロポンプ,,water water water,3,40,+,40+,ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー１つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで),
+PR1-001,1,なきごえ,Growl,colorless,1,,,,次の相手の番でうけるダメージを10へらすことができる。,"If the Defending Pokémon attacks Pikachu during your opponent's next turn, any damage done by the attack is reduced by 10 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)"
+PR1-001,2,でんきショック,Thundershock,lightning lightning,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PR1-002,1,かいふく,First Aid,colorless,1,,,,自分についているダメージカウンターを1つ取り除くことができる。,Remove 1 damage counter from Jigglypuff.
+PR1-002,2,すてみタックル,Double-edge,colorless colorless colorless,3,40,,40,自分にも20ダメージ。,Jigglypuff does 20 damage to itself.
+PR1-003,1,なきごえ,Growl,colorless,1,,,,次の相手の番でうけるダメージを10へらすことができる。,"If the Defending Pokémon attacks Pikachu during your opponent's next turn, any damage done by the attack is reduced by 10 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)"
+PR1-003,2,でんきショック,Thundershock,lightning lightning,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PR1-004,1,かいふく,First Aid,colorless,1,,,,自分についているダメージカウンターを1つ取り除くことができる。,Remove 1 damage counter from Jigglypuff.
+PR1-004,2,すてみタックル,Double-edge,colorless colorless colorless,3,40,,40,自分にも20ダメージ。,Jigglypuff does 20 damage to itself.
+PR1-005,1,ねんりき,Psyshock,psychic,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PR1-006,1,ずつき,,colorless,1,10,,10,,
+PR1-006,2,ドわすれ,,psychic psychic,2,,,,相手の対戦ポケモンの「ワザ」を1つ選ぶ。次の相手の番でその「ワザ」は使えない。,
+PR1-007,1,エネルギーきゅうしゅう,Energy Absorption,psychic,1,,,,自分のトラッシュからエネルギーカードを最大2枚選び、このカードにつける。,Choose up to 2 Energy cards from your discard pile and attach them to Mewtwo.
+PR1-007,2,サイコバーン,Psyburn,psychic psychic colorless,3,40,,40,,
+PR1-008,1,エネルギーきゅうしゅう,Energy Absorption,psychic,1,,,,自分のトラッシュからエネルギーカードを最大2枚選び、このカードにつける。,Choose up to 2 Energy cards from your discard pile and attach them to Mewtwo.
+PR1-008,2,サイコバーン,Psyburn,psychic psychic colorless,3,40,,40,,
+PR1-010,1,ひかりのかべ,Light Screen,lightning,1,,,,次の相手の番で、このカードがうけるダメージは半分(切り捨て)になる。(ダメージ以外の効果はそのまま),"Whenever an attack does damage to Electabuzz (after applying Weakness and Resistance) during your opponent's next turn, that attack only does half the damage to Electabuzz (rounded down to the nearest 10). (Any other effects of attacks still happen.)"
+PR1-010,2,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+PR1-011,1,なみのり,Surf,water water,2,30,,30,,
+PR1-012,1,ねんりき,Psyshock,psychic,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PR1-014,1,なみのり,Surf,water water,2,30,,30,,
+PR1-016,1,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+PR1-016,2,いかりのほのお,Flames of Rage,fire fire,2,40,+,40+,このカードについている「炎」エネルギーカードを2枚はがして捨てなければこのワザは使えない。自分にのっているダメージカウンター×10のダメージを追加する,Discard 2 Fire Energy cards attached to Arcanine in order to use this attack. This attack does 40 damage plus 10 more damage for each damage counter on Arcanine.
+PR1-017,1,なきごえ,Growl,colorless,1,,,,次の相手の番でうけるダメージを10へらすことができる。,"If the Defending Pokémon attacks Pikachu during your opponent's next turn, any damage done by the attack is reduced by 10 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)"
+PR1-017,2,でんきショック,Thundershock,lightning lightning,2,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PR1-018,1,でんきショック,Thundershock,lightning,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PR1-018,2,そらをとぶ,Fly,colorless colorless colorless,3,30,,30,次の相手の番に、このカードは相手のワザをうけない。コインを投げて「うら」なら、このワザは失敗する。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Flying Pikachu; if tails, this attack does nothing (not even damage)."
+PR1-019,1,ゆうわく,Fascinate,colorless,1,,,,コインを投げて「おもて」なら、相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える。(相手に控えがいない時、このワザは使えない)。,"Flip a coin. If heads, choose 1 of your opponent's Benched Pokémon and switch it with the Defending Pokémon. This attack can't be used if your opponent has no Benched Pokémon."
+PR1-019,2,どくのつめ,Poison Claws,colorless colorless,2,10,,10,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PR1-020,1,じゅうでん,Recharge,lightning,1,,,,自分の山札から「雷」エネルギーカードを1枚選び出し、このカードにつけてよい。その後、その山札をよく切る。,Search your deck for a Lightning Energy card and attach it to Pikachu. Shuffle your deck afterward.
+PR1-020,2,10まんボルト,Thunderbolt,lightning lightning lightning,3,50,,50,このカードについているエネルギーカードを全てはがし、トラッシュする。,Discard all Energy cards attached to Pikachu in order to use this attack.
+PR1-021,1,はたく,,colorless,1,10,,10,,
+PR1-021,2,サイコデュープ,,psychic,1,,,,相手の場のポケモンのワザから1つを選び、それを自分のワザとして使う。「サイコデュープ」に必要なエネルギーに加えて、そのワザに必要なエネルギーがこのカードについていない限り、「サイコデュープ」は使えない。また、ほかに必要な条件(エネルギーカードをはがしてすてるなど)が満たせない時にも使えない。,
+PR1-022,1,エナジーコントロール,Energy Control,psychic,1,,,,コインを投げて「うら」なら、このワザは失敗する。相手の場のエネルギーカード(特殊エネルギー以外)を1枚選んではがす。その後、相手の場のポケモンを1匹選び、はがしたエネルギーをそのポケモンにつける。,"Flip a coin. If heads, choose a basic Energy card attached to 1 of your opponent's Pokémon and attach it to another of your opponent's Pokémon of your choice."
+PR1-022,2,テレキネシス,Telekinesis,psychic psychic psychic,3,,,,相手の場のポケモン1匹を選び、(「弱点・抵抗力」に関係なく)30ダメージ。,Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)
+PR1-023,1,テクスチャーマジック,Texture Magic,colorless colorless colorless,3,,,,相手に弱点があれば、それを好きな色(無色以外)に変えてよい。自分の抵抗力も、好きな色(無色以外)に変えてよい。バトル場をはなれたポケモンからは、このワザの効果は消える。,"You may change Cool Porygon's Resistance to a type of your choice other than Colorless. If the Defending Pokémon has a Weakness, you may change it to a type of your choice other than Colorless. (Benching either Pokémon ends the effect on that Pokémon.)"
+PR1-023,2,3Dアタック,3-D Attack,colorless colorless colorless,3,20,×,20×,コインを3枚投げて「おもて」の数×20のダメージ。,Flip 3 coins. This attack does 20 damage times the number of heads.
+PR1-024,1,たべる,,colorless,1,,,,「たべものカウンター」を1つ、このカードの上にのせる。(このカードに「たべものカウンター」が2つのっている時、このワザは使えない),
+PR1-024,2,ころがる,,colorless colorless colorless,3,20,+,20+,のぞむなら、このカードにのっている「たべものカウンター」を好きなだけ取りのぞき、取りのぞいた数×30ダメージを追加してもよい。,
+PR1-025,1,ひっかく,,colorless,1,10,,10,,
+PR1-025,2,まるもうけ,,colorless,1,,,,「うら」が出るまでコインを投げつづけ、その間に出た「おもて」の数だけ、カードを引く。,
+PR1-028,1,ハイドロポンプ,,water water water,3,40,+,40+,ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで),
+PR1-029,1,ソーラービーム,,grass grass grass grass,4,60,,60,,
+PR1-030,1,ほのおのうず,,fire fire fire fire,4,100,,100,このカードについているエネルギーカードを2枚トラッシュする。(トラッシュできない時、このワザのダメージは0になる),
+PR1-031,1,スターブーメラン,Star Boomerang,water,1,20,,20,コインを投げて「おもて」なら、このカードと、このカードについている全てのカードを、持ち主の手札にもどす。,"Flip a coin. If heads, return Misty's Staryu and all cards attached to it to your hand. (Either way, this attack does its damage.)"
+PR1-032,1,うなりごえ,Bellow,colorless,1,,,,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PR1-032,2,いわおとし,Rock Throw,fighting fighting colorless,3,30,,30,,
+PR1-033,1,ネギでたたく,,colorless,1,30,,30,このワザは、このカードが場に出てから、1回しか使えない。コインを投げて「うら」なら、このワザのダメージは0になる。,
+PR1-033,2,ナベでたたく,,colorless colorless colorless,3,30,,30,,
+PR1-034,1,ほねさがし,,colorless,1,,,,このカードの上に「ほねカウンター」がのっていなければ、1つのせる。,
+PR1-034,2,ボーンキラー,,fighting,1,10,+,10+,のぞむなら、このカードにのっている「ほねカウンター」を1つとりのぞき、30ダメージを追加してもよい。,
+PR1-035,1,あくまののろい,,psychic,1,,,,コインを投げて「おもて」なら、相手の対戦ポケモンの上に「のろいマーカー」をのせる。「のろいマーカー」をのせているポケモンは、弱点のタイプのポケモンからワザのダメージを受ける時、弱点の計算を「×2」ではなく、「×4」でおこなう。(「のろいマーカー」が2つ以上のっていても、効果は同じ),
+PR1-035,2,つららパンチ,,water,1,10,,10,,
+PR1-036,1,びちびち,,water,1,10,×,10×,コインを2枚投げ、「おもて」の数×10のダメージ。,
+PR1-036,2,りゅうのいかり,,water water,2,50,,50,コインを2枚投げ、1つでも「うら」なら、このワザは失敗する。,
+PR1-037,1,ピヨピヨパンチ,,colorless,1,10,×,10×,コインを2枚投げ、「おもて」の数×10のダメージ。,
+PR1-037,2,メガトンパンチ,,colorless colorless colorless,3,30,,30,,
+PR1-039,1,しっぽでつく,Tail Strike,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+PR1-040,1,たいでん,Charge,lightning,1,,,,自分のトラッシュに「雷」エネルギーカードがあれば、最大2枚を取り出して、自分につける。,Take up to 2 Lightning Energy cards from your discard pile and attach them to Lt. Surge's Electabuzz.
+PR1-040,2,デンキとばし,Electric Current,lightning lightning,2,20,,20,自分についている「雷」エネルギーカードを1枚選んではがす。その後、自分に控えポケモンがいれば1匹を選び、はがしたエネルギーをそれにつける。(自分に控えがいない時、はがしたエネルギーはトラッシュする),"Take 1 Lightning Energy card attached to Lt. Surge's Electabuzz and attach it to 1 of your Benched Pokémon. If you have no Benched Pokémon, discard that Energy card."
+PR1-042,1,でんげき,,lightning,1,20,,20,コインを投げて「うら」なら、自分にも10ダメージ。,
+PR1-042,2,そらをとぶ,,colorless colorless colorless,3,30,,30,コインを投げて「うら」ならこのワザは失敗する。「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。,
+PR1-043,1,マッハひこう,Supersonic Flight,colorless colorless colorless,3,60,,60,コインを投げ「うら」なら、このワザは失敗する。,"Flip a coin. If tails, this attack does nothing."
+PR1-044,1,おたんじょうび,Birthday Surprise,lightning lightning,2,30,+,30+,今日がこのカードの持ち主の誕生日ならコインを投げ、「おもて」なら、50ダメージを追加する。,"If it's not your birthday, this attack does 30 damage. If it is your birthday, flip a coin. If heads, this attack does 30 damage plus 50 more damage; if tails, this attack does 30 damage."
+PR1-045,1,つつく,,fighting,1,10,,10,,
+PR1-045,2,ころばす,,fighting colorless,2,20,+,20+,コインを投げて「おもて」なら、10ダメージを追加する。,
+PR1-046,1,アースウェイブ,,fighting fighting fighting,3,30,,30,相手の控えポケモンから最大2匹を選び、それぞれに、「弱点・抵抗力」に関係なく10ダメージ。,
+PR1-047,1,ねむりのたね,Sleep Seed,grass,1,10,,10,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+PR1-047,2,おつかい,Errand-Running,grass grass,2,,,,コインを投げて「おもて」なら、自分の山札から「トレーナーカード」1枚を選び出し、相手に見せてから、手札に加えてよい。その後、その山札をよく切る。,"Flip a coin. If heads, you may search your deck for a Trainer card. Show it to your opponent and put it into your hand. Shuffle your deck afterward."
+PR1-048,1,クリスタルビーム,Crystal Beam,water colorless,2,20,,20,コインを投げて「おもて」なら、次の相手の番、このワザを受けた相手には、「エネルギーカード」をつけることができない。,"Flip a coin. If heads, your opponent can't attach Energy cards to the Defending Pokémon during his or her next turn."
+PR1-049,1,ひまつぶし,Fidget,colorless,1,,,,自分の山札をよく切る。,Shuffle your deck.
+PR1-049,2,からてチョップ,Karate Chop,fighting colorless,2,40,-,40-,このワザのダメージは、自分にのっているダメージカウンターの数×10だけ、小さくなる。,Does 40 damage minus 10 damage for each damage counter on Brock's Mankey.
+PR1-050,1,こうしゅうは,High Voltage,lightning colorless,2,20,,20,コインを投げて「おもて」なら、次の相手の番が終わるまで、相手プレイヤーは「トレーナーカード」を使うことができない。,"Flip a coin. If heads, your opponent can't play Trainer cards during his or her next turn."
+PR1-050,2,いかりのサンダー,Thunder Flare,lightning lightning lightning,3,30,+,30+,自分にのっているダメージカウンターの数×10のダメージを追加する。その後、コインを投げて「うら」なら、自分にも30ダメージ。,"Does 30 damage plus 10 damage times the number of damage counters on Lt. Surge's Jolteon, then flip a coin. If tails, Lt. Surge's Jolteon does 30 damage to itself."
+PR1-051,1,しょくしゅをつかう,,water,1,,,,自分についている「水」エネルギーの数だけコインを投げ、「おもて」の数×2枚のカードを、自分の山札から引く。,
+PR1-051,2,ふしょくえき,,water water water,3,40,,40,コインを投げて「おもて」なら、相手を「マヒ」状態にする。「うら」なら、次の自分の番、このカードはこのワザを使えない。,
+PR1-052,1,いかりばくはつ,Seething Anger,fighting fighting,2,20,+,20+,自分にのっているダメージカウンターの数だけコインを投げ、「おもて」の数×10のダメージを追加する。,Flip a number of coins equal to the number of damage counters on Machamp. This attack does 20 damage plus 10 more damage for each heads.
+PR1-052,2,なげとばす,Fling,fighting fighting colorless colorless,4,50,,50,相手を控えポケモンと入れ替える。入れ替わるポケモンは相手が選ぶ。(相手に控えがいない時、入れ替えはおこらない),"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+PR1-053,1,サイコホラー,,psychic psychic psychic,3,30,,30,コインを投げて「おもて」なら、相手を「ねむり」状態に、「うら」なら「こんらん」状態にする。,
+PR1-054,1,ころがる,,colorless colorless,2,20,,20,,
+PR1-054,2,ロックブラスト,,fighting fighting fighting,3,,,,自分についている「闘」エネルギーカードを最大5枚トラッシュして、トラッシュした数ぶん、相手の場のポケモンを選ぶ。(同じポケモンを2回以上選んでもよい)。その後、選んだポケモンのそれぞれに、それが選ばれた回数×20のダメージを、「弱点・抵抗力」に関係なく与える。,
+PR1-055,1,サイコパニック,,psychic psychic,2,30,,30,このワザを受ける相手が「超」ポケモンなら、このワザのダメージは60になる。,
+PR1-055,2,トランスダメージ,,psychic psychic psychic,3,,,,自分についているエネルギーカードをすべてトラッシュしなければ、このワザは使えない。自分にのっているすべてのダメージカウンターを、相手にのせかえる。,
+PR1-056,1,たたきつける,,colorless colorless colorless,3,30,×,30×,コインを2枚投げ、「おもて」の数×30のダメージ。,
+PR1-057,1,ねこパンチ,Cat Punch,colorless colorless,2,,,,コインを投げて「おもて」なら、相手に20ダメージ。「うら」なら、相手の控えポケモンから1匹を相手プレイヤーに選ばせ、そのポケモンに20ダメージ。,"Flip a coin. If heads, this attack does 20 damage. If tails and if your opponent has any Benched Pokémon, he or she chooses 1 of them and this attack does 20 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+PR1-058,1,メガドレイン,Mega Drain,grass grass grass grass,4,40,,40,相手にダメージを与えたら、その半分(切り上げ)のダメージカウンターを、自分からとりのぞく。,"Remove a number of damage counters from Venusaur equal to half the damage done to the Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10). If Venusaur has fewer damage counters than that, remove all of them."
+PR1-059,1,ふりとばす,Shake,colorless,1,10,,10,相手を、控えポケモンと入れ替える。入れ替わるポケモンは、相手が選ぶ。,"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+PR1-059,2,ほのおタックル,Fire Tackle,fire colorless,2,30,,30,自分にも10ダメージ。,Blaine's Growlithe does 10 damage to itself.
+PR1-060,1,はたく,Pound,colorless,1,10,,10,,
+PR1-060,2,シンクロウェーブ,Synchronize,psychic colorless,2,40,,40,自分と相手に同じ数のエネルギーカードがついている時だけ、このワザは使える。,This attack can't be used unless Sabrina's Abra and the Defending Pokémon have the same number of Energy cards attached to them.
+PR1-061,1,ひっかく,Scratch,colorless,1,10,,10,,
+PR1-062,1,ひっかく,Scratch,colorless,1,10,,10,,
+PR1-062,2,10まんボルト,Thunderbolt,lightning lightning,2,40,,40,自分についているエネルギーカードを、すべてトラッシュする。,Discard all Energy cards attached to Pikachu.
+PR1-063,1,でんきショック,Thundershock,lightning,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PR1-063,2,そらをとぶ,Fly,colorless colorless colorless,3,30,,30,コインを投げて「うら」なら、このワザは失敗する。「おもて」なら次の相手の番、このカードは相手のワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Flying Pikachu; if tails, this attack does nothing (not even damage)."
+PR1-064,1,ダイヤモンドダスト,Diamond Dust,water water water,3,20,,20,コインを投げて「おもて」なら、相手を「マヒ」状態にし、相手の控えポケモン全員にも、「弱点・抵抗力」に関係なく、それぞれ10ダメージ。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed and this attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+PR1-065,1,なきつく,Snivel,colorless,1,,,,次の相手の番、このワザを受けた相手がこのカードに与えるダメージは「-20」される。,"If the Defending Pokémon attacks Togepi during your opponent's next turn, any damage done to Togepi is reduced by 20 (before applying Weakness and Resistance). (Benching either Pokémon ends this effect.)"
+PR1-065,2,ゆびをふる,Mini-Metronome,colorless colorless,2,,,,コインを投げて「おもて」なら、相手のワザを1つ選び、それを、自分が持っているワザとして使う。(そのワザに必要なエネルギーがついていなくてもかまわない),"Flip a coin. If heads, choose 1 of the Defending Pokémon's attacks. Mini-Metronome copies that attack except for its Energy cost. (You must still do anything else in order to use that attack.) (No matter what type the Defending Pokémon is, Togepi's type is still Colorless.) Togepi performs that attack."
+PR1-066,1,みずでっぽう,Water Gun,water water,2,20,+,20+,ワザに必要なエネルギーよりも多く「水」エネルギーがついている時、多い「水」エネルギー1つにつき、10ダメージを追加する。(ダメージ追加は2つぶんまで),Does 20 damage plus 10 more damage for each Energy attached to Marill but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.
+PR1-068,1,じひびき,,grass grass colorless colorless,4,50,,50,このワザを受けた相手は、次の相手の番に「にげる」ことができない。,
+PR1-069,1,Psyche(サイケ),,psychic psychic,2,40,,40,,
+PR1-070,1,ライトニングバーン,Lightning Burn,lightning lightning lightning,3,30,,30,コインを投げて「おもて」なら、相手の控えポケモンを1匹選び、そのポケモンにも、「弱点・抵抗力」に関係なく、30ダメージ。「うら」なら、自分にも30ダメージ。,"Flip a coin. If heads, and if your opponent has any Benched Pokémon, choose 1 of them. This attack does 30 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) If tails, Zapdos does 30 damage to itself."
+PR1-071,1,ハイパーフレイム,Hyper Flame,fire fire fire,3,60,,60,コインを投げて「おもて」なら、自分についている「炎」エネルギーカードを1枚選び、トラッシュする。「うら」なら、自分についているエネルギーカードすべてを、トラッシュする。どちらの場合も、エネルギーカードがトラッシュできない時、ダメージは与えられない。,"Flip a coin. If heads, discard 1 Fire Energy card attached to Moltres. If tails, discard all Energy cards attached to Moltres. If you can't discard Energy cards, this attack does nothing."
+PR1-072,1,こまったなあ,,psychic,1,,,,「こまったなぁ」と3回つぶやかないとこのワザは使えない。自分と相手は「こんらん」状態になる。,
+PR1-072,2,どつく,,colorless colorless,2,20,,20,「ええのかなあ」と3回つぶやかないとこのワザは使えない。,
+PR1-075,1,ふみつけ[Stomp],,colorless colorless,2,20,+,20+,"コインを1枚投げる。もし「おもて」なら、このワザは20+10ダメージを与える。もし「うら」なら、このワザは20ダメージを与える。 ( Flip a coin. If heads, this attack does 20 damage plus 10 more damage, if tails, this attack does 20 damage.)",
+PR1-076,1,ずつう,Headache,psychic,1,,,,次の相手の番の終わりまで、相手プレイヤーはトレーナーカードを使うことができない。,Your opponent can't play Trainer cards during his or her next turn.
+PR1-076,2,みだれひっかき,Fury Swipes,water,1,10,×,10×,コインを3枚投げて「おもて」の数×10のダメージ。,Flip 3 coins. This attack does 10 damage times the number of heads.
+PR1-077,1,ふみつけ[Stomp],,colorless colorless,2,20,+,20+,"コインを1枚投げる。もし「おもて」なら、このワザは20+10ダメージを与える。もし「うら」なら、このワザは20ダメージを与える。 ( Flip a coin. If heads, this attack does 20 damage plus 10 more damage, if tails, this attack does 20 damage.)",
+PR1-078,1,だいぎゃくてん？,Miraculous Comeback,colorless,1,,,,お互いの場にいるポケモン全員の数だけコインを投げ、相手に「おもて」の数×10のダメージ。その後、自分に「うら」の数×10のダメージ。,Flip a number of coins equal to the number of Pokémon in play. This attack does 10 damage times the number of heads. Then Team Rocket's Meowth does 10 damage times the number of tails to itself.
+PR1-080,1,りゅうのいかり,Dragon Rage,water water water,3,50,,50,,
+PR1-080,2,バブルこうせん,Bubblebeam,water water water water,4,40,,40,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PR1-081,1,かじる,Gnaw,colorless,1,10,,10,,
+PR1-081,2,でんげき,Thunder Jolt,lightning colorless,2,30,,30,コインを投げて「うら」なら、自分にも10ダメージ。,"Flip a coin. If tails, Pikachu does 10 damage to itself."
+PR1-082,1,みずでっぽう,Water Gun,water,1,10,+,10+,「水」エネルギーを1つ追加すると、10ダメージ追加できる。(追加は2つまで),Does 10 damage plus 10 more damage for each Water Energy attached to Poliwag but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd don't count.
+PR1-083,1,やどりぎのタネ,Leech Seed,grass grass,2,20,,20,相手にダメージをあたえることができたら、その時点で自分のダメージカウンターを1つとりのぞくことができる。,"Unless all damage from this attack is prevented, you may remove 1 damage counter from Bulbasaur."
+PR1-084,1,たいあたり,Tackle,colorless,1,10,,10,,
+PR1-084,2,じたばた,Flail,water,1,10,×,10×,自分のダメージカウンターの数×10のダメージをあたえる。,Does 10 damage times the number of damage counters on Magikarp.
+PR1-085,1,あわ,Bubble,water,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PR1-085,2,からにこもる,Withdraw,water colorless,2,,,,コインを投げて「おもて」なら、次の相手の番に受けるダメージが0になる。,"Flip a coin. If heads, prevent all damage done to Squirtle during your opponent's next turn. (Any other effects of attacks still happen.)"
+PR1-086,1,くさいガス,Foul Gas,grass grass,2,10,,10,コインを投げて「おもて」なら、相手を「どく」状態、「うら」なら「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned; if tails, it is now Confused."
+PR1-087,1,まるまる,Scrunch,colorless colorless,2,,,,コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。,"Flip a coin. If heads, prevent all damage done to Chansey during your opponent's next turn. (Any other effects of attacks still happen.)"
+PR1-087,2,すてみタックル,Double-edge,colorless colorless colorless colorless,4,80,,80,自分にも80ダメージ。,Chansey does 80 damage to itself.
+PR1-088,1,フリーズドライ,Freeze Dry,water water water,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PR1-088,2,ふぶき,Blizzard,water water water water,4,50,,50,コインを投げて「おもて」なら相手の控えポケモン全員に、「うら」なら自分の控えポケモン全員に、(「弱点・抵抗力」に関係なく)それぞれ10ダメージ。,"Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon. If tails, this attack does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+PR1-089,1,ひっかく,Scratch,colorless,1,10,,10,,
+PR1-089,2,ひのこ,Ember,fire colorless,2,30,,30,自分の「炎」エネルギーカードを1枚はがしてすてる。,Discard 1 Fire Energy card attached to Charmander in order to use this attack.
+PR1-090,1,おたんじょうび,Birthday Surprise,lightning lightning,2,30,+,30+,今日がこのカードの持ち主の誕生日ならコインを投げ、「おもて」なら、50ダメージを追加する。,"If it's not your birthday, this attack does 30 damage. If it is your birthday, flip a coin. If heads, this attack does 30 damage plus 50 more damage; if tails, this attack does 30 damage."
+PF1-001,1,なきごえ,Growl,colorless,1,,,,次の相手の番、このワザを受けた相手がこのカードに与えるダメージは「-10」される。,"If the Defending Pokémon attacks Chikorita during your opponent's next turn, any damage done to Chikorita is reduced by 10 (before applying Weakness and Resistance). (Benching or evolving either Pokémon ends this effect.)"
+PF1-001,2,はっぱカッター,Razor Leaf,grass colorless,2,20,,20,,
+PF1-002,1,どくのこな,Poisonpowder,grass colorless,2,20,,20,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+PF1-002,2,しんぴのこな,Pollen Shield,grass grass colorless,3,30,,30,次の相手の番、このカードは「どく・ねむり・マヒ・こんらん」状態にならない。,"During your opponent's next turn, Bayleef can't become Asleep, Confused, Paralyzed, or Poisoned. (All other effects of attacks, Pokémon Powers and Trainer cards still happen.)"
+PF1-003,1,のしかかり,Body Slam,grass grass colorless colorless,4,40,,40,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
+PF1-004,1,にらみつける,Leer,colorless,1,,,,コインを投げて「おもて」なら、次の相手の番、このカードがバトル場にいる限り、このワザを受けた相手は、ワザを使えない。,"Flip a coin. If heads, the Defending Pokémon can't attack Cyndaquil during your opponent's next turn. (Benching or evolving either Pokémon ends this effect.)"
+PF1-004,2,スピードスター,Swift,fire colorless,2,20,,20,このワザのダメージは、相手の持っている「弱点・抵抗力・特殊能力・その他の効果」の影響を受けない。,"This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon."
+PF1-005,1,ひのこ,Ember,fire colorless,2,30,,30,自分についている「炎」エネルギーカードを1枚トラッシュする。トラッシュできないとき、このワザのダメージはなくなる。,Discard 1 Fire Energy card attached to Quilava in order to use this attack.
+PF1-005,2,ほのおのかぜ,Fire Wind,fire fire,2,20,,20,相手の控えポケモンを1匹選ぶ。コインを2枚投げ、「おもて」の数×10ダメージを、「弱点・抵抗力」に関係なく、そのポケモンにも与える。,"If your opponent has any Benched Pokémon, choose 1 of them. Flip 2 coins. For each heads, this attack does 10 damage to that Pokémon. (Don't apply Weakness and Resistance.)"
+PF1-006,1,かえんぐるま,Flame Wheel,fire fire fire fire,4,80,,80,自分についている「炎」エネルギーカードを3枚トラッシュし、おたがいの控えポケモン全員にも、「弱点・抵抗力」に関係なく、20ダメージ。「炎」エネルギーカードがトラッシュできないとき、このワザのダメージは、すべてなくなる。,Discard 3 Fire Energy cards attached to Typhlosion in order to use this attack. Do 20 damage to each Benched Pokémon (yours and your opponent's). (Don't apply Weakness and Resistance for Benched Pokémon.)
+PF1-007,1,かみつく,Bite,colorless,1,10,,10,,
+PF1-007,2,いかり,Rage,water colorless,2,10,+,10+,自分にのっているダメージカウンターの数×10のダメージを追加する。,Does 10 damage plus 10 more damage for each damage counter on Totodile.
+PF1-008,1,たいあたり,Tackle,colorless colorless,2,20,,20,,
+PF1-008,2,まきこむ,Sweep Away,water water colorless,3,50,,50,自分の山札の上から、3枚のカードをトラッシュする。,Discard the top 3 cards from your deck.
+PF1-009,1,ぎゃくりゅう,Riptide,water water water,3,10,+,10+,自分のトラッシュにある「水」エネルギーカードの枚数×10のダメージを追加する。その後、自分のトラッシュにある「水」エネルギーカードをすべて山札にもどし、その山札をよく切る。,"Does 10 damage plus 10 damage times the number of Water Energy cards in your discard pile. Then, shuffle all Water Energy cards from your discard pile into your deck."
+PF2-001,1,めざめるパワー,Hidden Power,psychic,1,10,,10,,
+PF2-002,1,めざめるパワー,Hidden Power,psychic,1,10,,10,,
+PF2-003,1,めざめるパワー,Hidden Power,psychic,1,10,,10,,
+PF2-004,1,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+PF2-004,2,サイケこうせん,Psybeam,psychic psychic colorless,3,30,,30,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PF2-005,1,けとばす,Smash Kick,colorless,1,10,,10,,
+PF2-006,1,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+PF2-006,2,おいうち,Pursuit,darkness colorless colorless,3,30,,30,次の相手の番、このワザを受けた相手が「にげる」とき、「弱点・抵抗力」に関係なく、10ダメージ。,"During your opponent's next turn, if the Defending Pokémon tries to retreat, do 10 damage to it. (Don't apply Weakness and Resistance.)"
+PF2-007,1,いっしょにあそぼ,Let's Play!,colorless,1,,,,自分の山札から「ベイビィポケモン」を1枚選び出し、ベンチに出す。その後、その山札をよく切る。(自分のベンチに空きがないとき、このワザは失敗する。),Search your deck for a Baby Pokémon card and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)
+PF2-008,1,ほのおのまもり,Protective Flame,fire fire fire,3,50,,50,次の相手の番が終わるまで、自分の控えポケモン全員は、ワザによるダメージや効果を受けない。,"During your opponent's next turn, prevent all effects of attacks, including damage, done to your Benched Pokémon."
+PF2-009,1,ほのおのうず,,fire fire fire fire,4,100,,100,自分についている「エネルギーカード」を2枚トラッシュする。トラッシュできないとき、このワザのダメージはなくなる。,
+PF3-001,1,たたきつける,Slam,colorless colorless,2,20,×,20×,コインを2枚投げ、「おもて」の数×20のダメージ。,Flip 2 coins. This attack does 20 damage times the number of heads.
+PF3-002,1,サイコリーフ,Psychic Leaf,grass grass,2,10,+,10+,相手についている「エネルギー」の数ぶんコインを投げ、「おもて」の数×10のダメージを追加する。その後、与えたダメージぶんのダメージカウンターを、自分からとりのぞく。,"Flip a coin for each Energy attached to the Defending Pokémon. This attack does 10 damage plus 10 more damage for each heads. Remove a number of damage counters from Celebi equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance). If Celebi has fewer damage counters than that, remove all of them."
+PF3-003,1,だましとる,Swipe,darkness,1,,,,コインを投げて「おもて」なら、相手の場のポケモン全員についている「トレーナーカード」を、すべてトラッシュする。,"Flip a coin. If heads, discard all Trainer cards attached to your opponent's Pokémon."
+PF3-003,2,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage."
+PF3-004,1,ライトニングスパーク,Lightning Spark,lightning lightning lightning,3,30,,30,コインを投げて「おもて」なら、相手の控えポケモンを1匹選び、そのポケモンにも、「弱点・抵抗力」に関係なく、20ダメージ。,"If your opponent has any Benched Pokémon, flip a coin. If heads, choose 1 of them and this attack does 20 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+PF3-005,1,メガフレイム,Mega Flame,fire fire fire,3,50,,50,コインを2枚投げ、「うら」の数ぶんの「炎」エネルギーカードを、自分からトラッシュする。(トラッシュできないとき、このワザのダメージはなくなる。),"Flip 2 coins. For each tails, discard 1 Fire Energy card from Entei, if it has any."
+PF3-006,1,クリスタルウェーブ,Crystal Wave,water water water,3,30,+,30+,コインを投げて「おもて」なら、10ダメージを追加する。「うら」なら、相手を相手の控えポケモンと、入れ替える。入れ替えるポケモンは相手プレイヤーが選ぶ(相手に控えがいないとき、入れ替える効果はなくなる)。,"Flip a coin. If heads, this attack does 30 damage plus 10 more damage. If tails, this attack does 30 damage and, if your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
+PF3-007,1,レインボーバーン,Rainbow Burn,colorless colorless colorless colorless,4,30,+,30+,自分についている「基本エネルギーカード」の「色(タイプ)」の数×10のダメージを追加する。(同じ「色(タイプ)」の「エネルギーカード」が2枚以上ついていても、その「色(タイプ)」の追加ぶんは、10ダメージ。),"This attack does 30 damage plus 10 more damage for each type of Basic Energy card, if any, attached to Ho-Oh."
+PF3-008,1,エアロウイング,Aerowing,colorless colorless colorless colorless,4,40,,40,のぞむなら、コインを投げてよい。コインを投げて「おもて」なら、このワザのダメージは「80」になる。「うら」なら、このワザは失敗する。,"You may flip a coin. If heads, this attack does 80 damage. If tails, this attack does nothing."
+PF3-009,1,みだれづき,Fury Attack,colorless,1,10,×,10×,コインを2枚投げ、「おもて」の数×10のダメージ。,Flip 2 coins. This attack does 10 damage times the number of heads.
+PF3-009,2,こうそくいどう,Agility,metal colorless colorless,3,20,,20,コインを投げて「おもて」なら、次の相手の番、このカードはワザによるダメージや効果を受けない。,"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Skarmory."
+NIP1-001,1,たいあたり,,colorless,1,10,,10,,
+NIP1-001,2,はっぱカッター,,grass colorless,2,20,,20,,
+NIP1-002,1,ぶつかる,,colorless,1,10,,10,,
+NIP1-008,1,ひっかく,,colorless,1,10,,10,,
+NIP1-008,2,みだれひっかき,,colorless colorless,2,10,×,10×,コインを3枚投げ、「おもて」の数×10のダメージ。,
+NIP1-010,1,たいあたり,Tackle,colorless,1,10,,10,,
+NIP1-010,2,どくガス,Poison Gas,grass colorless,2,20,,20,コインを投げて「おもて」なら、相手を「どく」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+NIP1-012,1,ほのお,Flare,fire colorless,2,20,,20,,
+NIP1-013,1,たいあたり,,colorless colorless,2,20,,20,,
+NIP1-013,2,かえんほうしゃ,,fire fire colorless,3,50,,50,自分についている「炎」エネルギーカードを1枚トラッシュする。(トラッシュできないとき、このワザのダメージはなくなる。),
+NIP1-016,1,ひをふく,,fire,1,10,+,10+,コインを投げて「おもて」なら、10ダメージを追加する。,
+NIP1-022,1,ねむりのほうし,Sleep Spore,grass,1,10,,10,コインを投げて「おもて」なら、相手を「ねむり」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Asleep."
+NIP1-022,2,ひっかく,Scratch,colorless colorless,2,20,,20,,
+NIP1-024,1,たいあたり,,colorless colorless,2,20,,20,,
+NIP1-024,2,ねむりごな,,grass grass colorless,3,30,,30,相手を「ねむり」状態にする。,
+NIP1X-001,1,のしかかり,,grass grass colorless colorless,4,40,,40,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+NIP1X-002,1,パンチ,,colorless,1,10,,10,,
+NIP1X-003,1,パンチ,Punch,colorless colorless,2,20,,20,,
+NIP1X-003,2,キック,Kick,fighting colorless colorless,3,30,,30,,
+NIP1X-004,1,いしなだれ,,fighting colorless,2,10,,10,相手のポケモンを1匹選び、そのポケモンにも、「弱点・抵抗力」に関係なく、10ダメージ。,
+NIP1X-005,1,つつく,,colorless,1,10,,10,,
+NIP1X-005,2,メタルスラッシュ,,metal colorless,2,30,,30,次の自分の番、このカードはワザを使うことができない。,
+NIP2-001,1,かじる,Gnaw,colorless,1,10,,10,,
+NIP2-001,2,でんげき,Thunder Jolt,lightning colorless,2,30,,30,コインを投げて「うら」なら、自分にも10ダメージ。,"Flip a coin. If tails, Pikachu does 10 damage to itself."
+NIP2-002,1,たいあたり,,colorless,1,10,,10,,
+NIP2-002,2,ころがる,,colorless colorless,2,20,,20,,
+NIP2-003,1,ける,,colorless,1,20,,20,コインを投げて「うら」なら、このワザは失敗する。,
+NIP2-004,1,きりさく,,colorless colorless,2,20,,20,,
+NIP2-004,2,かみつく,,water colorless colorless,3,40,,40,,
+NIP2-010,1,みずでっぽう,,water,1,10,+,10+,ワザに必要な「エネルギー」よりも多く「水」エネルギーがついているとき、多い「水」エネルギー1個につき、10ダメージを追加する。ダメージ追加は2個ぶんまで。,
+NIP2-016,1,ひっかく,,colorless,1,10,,10,,
+NIP2-016,2,かみつく,,water colorless,2,20,,20,,
+NIP2-018,1,でんげき,Thunder Jolt,lightning colorless,2,30,,30,コインを投げて「うら」なら、自分にも10ダメージ。,"Flip a coin. If tails, Mareep does 10 damage to itself."
+NIP2-024,1,どくばり,,water colorless,2,20,,20,コインを投げて「おもて」なら、相手を「どく」状態にする。,
+NIP2-026,1,たいあたり,,colorless colorless,2,20,,20,,
+NIP2-026,2,でんきショック,,lightning lightning colorless,3,30,,30,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+NIP2X-001,1,ぎゃくりゅう,,water water water,3,10,+,10+,自分のトラッシュにある「水」エネルギーカードの枚数×10のダメージを追加する。その後、自分のトラッシュにある「水」エネルギーカードをすべて山札にもどし、その山札をよく切る。(山札にカードをもどすことができないとき、ダメージは追加されない。),
+NIP2X-002,1,はたく,,colorless,1,10,,10,,
+NIP2X-003,1,はたく,,colorless,1,10,,10,,
+NIP2X-003,2,はかいビーム,,psychic,1,10,,10,コインを投げて「おもて」なら、相手についている「エネルギーカード」を1枚トラッシュする。,
+NIP2X-004,1,あやしいひかり,Confuse Ray,psychic,1,10,,10,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused"
+NIP2X-005,1,かみつく,Bite,colorless,1,10,,10,,
+NIP2X-005,2,ごうだつ,Plunder,darkness colorless,2,20,,20,ダメージを与える前に、相手についている「トレーナーカード」をすべてトラッシュする。,"Before doing damage, discard all Trainer cards attached to the Defending Pokémon (before they affect the damage)."
+PRN-001,1,つつく,,colorless,1,10,,10,,
+PRN-001,2,おいうち,,darkness colorless,2,20,,20,次の相手の番、このワザを受けた相手が「にげる」とき、「弱点・抵抗力」に関係なく、10ダメージ。,
+PRN-003,1,しっぽをふる,,colorless,1,,,,コインを投げて「おもて」なら、次の相手の番、このカードがバトル場にいる限り、このワザを受けた相手は、ワザを使えない。,
+PRN-003,2,みずでっぽう,,water,1,10,+,10+,ワザに必要なエネルギーよりも多く「水」エネルギーがついているとき、多い「水」エネルギー1つにつき、10ダメージを追加する。ダメージ追加は2つぶんまで。,
+PRN-006,1,たいあたり,Tackle,colorless,1,10,,10,,
+PRN-006,2,リフレクター,Deflector,grass,1,,,,次の相手の番、このカードが受けるダメージは半分(切りすて)になる。(ダメージ以外の効果はそのまま),"During your opponent's next turn, whenever Chikorita takes damage, divide that damage in half (rounded down to the nearest 10). (Any other effects still happen.)"
+PRN-007,1,ひばな,Fireworks,fire,1,20,,20,コインを投げて「うら」なら、自分についている「エネルギーカード」を1枚選び、トラッシュする。トラッシュできないとき、このワザのダメージはなくなる。,"Flip a coin. If tails, discard 1 Energy card attached to Cyndaquil."
+PRN-007,2,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+PRN-008,1,にらみつける,Leer,colorless,1,,,,コインを投げて「おもて」なら、次の相手の番、このカードがバトル場にいるかぎり、このワザを受けた相手は、ワザを使えない。,"Flip a coin. If heads, the Defending Pokémon can't attack Totodile during your opponent's next turn. (Benching or evolving either Pokémon ends this effect.)"
+PRN-008,2,みだれひっかき,Fury Swipes,water,1,10,×,10×,コインを3枚投げ、「おもて」の数×10のダメージ。,Flip 3 coins. This attack does 10 damage times the number of heads.
+PRN-009,1,たいあたり,Tackle,colorless,1,10,,10,,
+PRN-009,2,リフレクター,Deflector,grass,1,,,,次の相手の番、このカードが受けるダメージは半分(切りすて)になる。(ダメージ以外の効果はそのまま),"During your opponent's next turn, whenever Chikorita takes damage, divide that damage in half (rounded down to the nearest 10). (Any other effects still happen.)"
+PRN-010,1,ひばな,Fireworks,fire,1,20,,20,コインを投げて「うら」なら、自分についている「エネルギーカード」を1枚選び、トラッシュする。トラッシュできないとき、このワザのダメージはなくなる。,"Flip a coin. If tails, discard 1 Energy card attached to Cyndaquil."
+PRN-010,2,でんこうせっか,Quick Attack,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,"Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+PRN-011,1,にらみつける,Leer,colorless,1,,,,コインを投げて「おもて」なら、次の相手の番、このカードがバトル場にいるかぎり、このワザを受けた相手は、ワザを使えない。,"Flip a coin. If heads, the Defending Pokémon can't attack Totodile during your opponent's next turn. (Benching or evolving either Pokémon ends this effect.)"
+PRN-011,2,みだれひっかき,Fury Swipes,water,1,10,×,10×,コインを3枚投げ、「おもて」の数×10のダメージ。,Flip 3 coins. This attack does 10 damage times the number of heads.
+PRN-012,1,ピッピッ,Eek,colorless,1,,,,山札からカードを2枚引いて、手札に加える。,Draw 2 cards.
+PRN-013,1,れいとうパンチ,,water,1,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+PRN-013,2,コールドブレス,,water water,2,20,,20,コインを投げて「おもて」なら、相手を「ねむり」状態にする。,
+PRN-014,1,メタルクラッシュ,,metal,1,50,,50,コインを投げて「うら」なら、このワザは失敗する。(その場合も、ワザは使ったことになる)。次の自分の番、このカードはワザを使えない。,
+PRN-014,2,じひびき,,fighting colorless,2,20,,20,次の相手の番、このワザを受けた相手は「にげる」ことができない。,
+PRN-023,1,オールクリア,,colorless,1,,,,おたがいの場にある、すべての「トレーナーカード」をトラッシュして、おたがいの場にいるポケモン全員を「どく・ねむり・マヒ・こんらん」状態や「その他の効果」から、すべて回復させる。おたがいの場にいるポケモン全員から、マーカーとカウンターを、すべてとりのぞく。(ダメージカウンターはそのまま)。このワザを使っているあいだ、おたがいの場にいるすべてのポケモンは「特殊能力」を使うことができず、その力も消える。,
+PRN-023,2,ハイパーテクスチャー,,colorless colorless,2,,,,相手の場のポケモンを1匹選ぶ。そのポケモンに「色マーカー」がのっているなら、それをとりのぞき、好きな「色(タイプ)」(無色以外)を選んでから、そのポケモンの上に「色マーカー」を1つのせる。「色マーカー」をのせているポケモンは、それをのせたときに選ばれた「色(タイプ)」のポケモンとしてあつかわれる。,
+PRN-024,1,かみつく,Bite,colorless,1,20,,20,,
+PRN-025,1,にらみつける,Leer,colorless,1,,,,コインを投げて「おもて」なら、次の相手の番、このカードがバトル場にいるかぎり、このワザを受けた相手は、ワザを使えない。,"Flip a coin. If heads, the Defending Pokémon can't attack Scizor during your opponent's next turn. (Benching either Pokémon ends this effect.)"
+PRN-025,2,メタルニッパー,Metal Pincer,metal colorless colorless,3,30,+,30+,「うら」が出るまでコインを投げつづけ、その間に出た「おもて」の数×10のダメージを追加する。,Flip a coin until you get tails. This attack does 30 damage plus 10 more damage for each heads.
+PRN-028,1,はずむ,,water,1,,,,次の自分の番、このカードが使う「とびのる」のダメージは「30」になる。,
+PRN-028,2,とびのる,,colorless colorless,2,10,,10,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+PRN-029,1,ペイント,Paint,colorless,1,,,,コインを投げて「おもて」なら、好きな「色(タイプ)」(無色以外)を1つ選び、相手に「色マーカー」を1つのせる。(すでに相手に「色マーカー」がのっているなら、それをとりのぞいて、新たに「色マーカー」をのせ替える。)「色マーカー」がのっているポケモンは、それをのせるときに選ばれた「色(タイプ)」のポケモンとしてあつかわれる。,"Flip a coin. If heads, choose a type (other than Colorless) and put a Coloring counter on the Defending Pokémon. That Pokémon is now the type you chose. If it already had a Coloring counter, remove the old one. If tails, this attack does nothing."
+PRN-030,1,れんぞくキック,Repeating Kick,fighting fighting,2,20,×,20×,「うら」が出るまでコインを投げつづけ、その間に出た「おもて」の数×20のダメージ。,Flip a coin until you get tails. This attack does 20 damage times the number of heads.
+PRN-030,2,こうそくスピン,Rapid Spin,fighting fighting colorless,3,30,,30,相手を相手の控えポケモンと入れ替える。その後、自分を自分の控えポケモンと入れ替える。入れ替えるときは、それぞれのプレイヤーが、それぞれ自分の場のポケモンを選ぶ。(控えがいない側は、入れ替えをしない。),"If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with his or her Active Pokémon, then, if you have any Benched Pokémon, you switch 1 of them with your Active Pokémon. (Do the damage before switching the Pokémon.)"
+PRN-031,1,おやすみのうた,Good Night Song,colorless,1,,,,相手を「ねむり」状態にする。,The Defending Pokémon is now Asleep.
+PRN-032,1,せいちょう,Growth,grass,1,,,,コインを投げて「おもて」なら、自分の手札にある「草」エネルギーカードを最大2枚、自分につける。,"Flip a coin. If heads, you may attach up to 2 Grass Energy cards from your hand to Sunkern."
+PRN-032,2,メガドレイン,Mega Drain,grass grass grass,3,30,,30,相手にダメージを与えたら、与えたダメージの半分(切り上げ)のダメージカウンターを、自分からとりのぞく。,"Remove a number of damage counters from Sunkern equal to half the damage done to the Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10). If Sunkern has fewer damage counters than that, remove all of them."
+PRN-033,1,はしゃぐ,,colorless,1,10,,10,自分を自分の控えポケモンと入れ替える。(自分に控えがいないとき、入れ替えはおこらない。),
+PRN-034,1,めざめるパワー,Hidden Power,psychic,1,10,,10,,
+PRN-035,1,めざめるパワー,,psychic colorless,2,20,,20,,
+PRN-036,1,いたみわけ,Pain Split,psychic,1,,,,自分にのっているダメージカウンターと同じ数のダメージカウンターを、相手にのせる。,Put 1 damage counter on the Defending Pokémon for each damage counter on Misdreavus.
+PRN-036,2,あやしいひかり,Confuse Ray,psychic psychic,2,10,,10,コインを投げて「おもて」なら、相手を「こんらん」状態にする。,"Flip a coin. If heads, the Defending Pokémon is now Confused."
+PRN-037,1,なげキッス,,colorless,1,,,,相手の場のポケモンを1匹選び、そのポケモンに、ダメージカウンターを1個のせる。,
+PRN-038,1,にらむ,,colorless,1,,,,コインを投げて「おもて」なら、相手を「マヒ」状態にする。,
+PRN-038,2,ドリルしっぽ,,colorless colorless,2,10,+,10+,コインを投げて「おもて」なら、20ダメージを追加する。,
+PRN-039,1,みだれうち,,grass grass,2,,,,相手の場のポケモンを、相手プレイヤーが、3回選ぶ(同じポケモンを2回以上選んでもよい)。その後、選ばれたポケモンそれぞれに、選ばれた数×10のダメージを、「弱点・抵抗力」に関係なく与える。,
+PRN-040,1,いやなかふん,,grass grass grass,3,30,,30,コインを2枚投げる。「おもて」が1枚なら相手を「どく」と「ねむり」状態に、すべて「おもて」なら相手を「どく」と「こんらん」状態に、すべて「うら」なら相手を「どく」と「マヒ」状態にする。,
+PRN-041,1,わるいぞうふく,,psychic psychic,2,20,+,20+,自分のベンチの「わるい」ポケモンの数ぶんコインを投げ、「おもて」の数×20のダメージを追加する。,
+PRN-042,1,エアロブラスト,,colorless colorless colorless,3,20,+,20+,コインを2枚投げ、「おもて」の数×20のダメージを追加する。,
+PRN-043,1,フローラルスピン,,grass grass grass,3,30,,30,コインを投げて「おもて」なら、相手を「ねむり」状態にする。「うら」なら、自分の控えポケモンを1匹選び、自分と入れ替える。(自分に控えがいないとき、入れ替える効果はなくなる。),
+PRN-044,1,フラッシュサーチ,,lightning,1,,,,自分の山札の上からカードを3枚見る。その中から好きなカードを1枚選び出し、自分の手札に加える。その後、その山札をよく切る。,
+PRN-044,2,ふしぎなほのお,,psychic fire,2,20,,20,自分についている「炎」エネルギーカードを1枚トラッシュし、コインを投げる。「おもて」なら相手を「こんらん」状態に、「うら」なら相手を「ねむり」状態にする。(トラッシュできないとき、このワザは失敗する。),
+PRN-045,1,たかくとぶ,,colorless,1,,,,次の自分の番、このカードが使う「ドリルダイブ」のダメージは「80」になる。,
+PRN-045,2,ドリルダイブ,,colorless colorless,2,40,,40,次の自分の番、このカードはワザを使うことができず、「にげる」こともできない。,
+PRN-046,1,きんいろのうろこ,Gold Scale,water,1,,,,おたがいのプレイヤーは、のぞむなら、それぞれの山札からカードを最大2枚まで引いて、手札に加えてよい。,"Your opponent may draw 2 cards. Either way, you may draw 2 cards."
+PRN-046,2,りゅうのきずな,Dragon Bond,psychic,1,,,,自分の山札から「ギャラドス」「わるいギャラドス」「ひかるギャラドス」のうち、1枚を選び出し、相手プレイヤーに見せてから、手札に加える。その後、その山札をよく切る。,"Search your deck for a card named Gyarados, Dark Gyarados, or Shining Gyarados. Show it to your opponent and put it into your hand. Shuffle your deck afterward."
+PRN-047,1,ころがりタックル,Rolling Tackle,grass,1,20,,20,,

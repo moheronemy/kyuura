@@ -215,7 +215,8 @@ class V017ClassificationTest(Base):
         self.assertEqual([(k, i) for k, i, _ in mapping['Z9']], [('issue', 'UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE')])
         self.assertEqual([(k, i) for k, i, _ in mapping['Z23']], [('issue', 'UQ-EFFECT-AFTER-NO-DAMAGE')])
         idx = {u['engine_key']: u for u in self.ctx['rulings']['engine_unresolved_index']}
-        self.assertIsNone(idx['Z9']['stop_code'])  # コードのない問い（結果が変わる場合だけ止める）
+        # v0.17 ではコードのない問い（結果が変わる場合だけ止める）。エンジンは v0.61 で停止コードを付けた（stop_code_since）
+        self.assertTrue(idx['Z9']['stop_code'] is None or bcr.version_key(idx['Z9']['stop_code_since']) > (0, 17))
         self.assertEqual(idx['Z23']['stop_code'], 'UNRESOLVED_EFFECT_AFTER_NO_DAMAGE')  # 停止コードは対応の記録だけに書く
         z9 = self.issue('UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE')
         # 「今のデータでは結果が変わらない」ことと、裁定が未解決であることを分けて書く
@@ -235,7 +236,9 @@ class V017ClassificationTest(Base):
                   'DR13': 'UQ-ENERGY-DRAIN-NO-ENERGY'}
         for key, issue_id in expect.items():
             self.assertEqual(idx[key]['kyuura_issue'], issue_id, key)
-            self.assertFalse(idx[key]['in_engine_count'], key)  # エンジンの 24 件には入らない（カードを延期）
+            # v0.17 ではエンジンの 24 件には入らない（カードを延期）。DR8・DR13 は v0.68 から数える（counted_from_version）
+            counted_at_v017 = idx[key].get('in_engine_count', True) and bcr.version_key(idx[key].get('counted_from_version') or 'v0.17') <= (0, 17)
+            self.assertFalse(counted_at_v017, key)
         self.assertIn('UQ-ENERGY-DRAIN-TIMING', self.issue('UQ-ENERGY-DRAIN-DECLARATION')['related_issues'])
         # DR18 は C34/C35 と同じ論点（新しい論点にしない）
         self.assertIn(('v0.17', 'DR18'), {(i['engine_version'], i['ruling_id']) for i in idx['C34/C35']['instances']})
@@ -263,19 +266,20 @@ class V017ClassificationTest(Base):
 
     def test_same_question_instances_are_not_new_issues(self):
         idx = {u['engine_key']: u for u in self.ctx['rulings']['engine_unresolved_index']}
-        self.assertEqual(idx['C18']['instances'], [{'engine_version': 'v0.17', 'ruling_id': 'Z13'}])
-        self.assertEqual(idx['G37']['instances'], [{'engine_version': 'v0.17', 'ruling_id': 'Z22'}])
+        # v0.17 までの事例（あとの版の事例は v0.26〜v0.68 の取り込みで加えた）
+        upto = lambda u: [i for i in u['instances'] if bcr.version_key(i['engine_version']) <= (0, 17)]
+        self.assertEqual(upto(idx['C18']), [{'engine_version': 'v0.17', 'ruling_id': 'Z13'}])
+        self.assertEqual(upto(idx['G37']), [{'engine_version': 'v0.17', 'ruling_id': 'Z22'}])
         self.assertEqual(idx['CHECK-SLEEP-COIN-ORDER']['kyuura_issue'], 'UQ-POKEMON-CHECK-SLEEP-COIN-ORDER')
         # わるいねぞうの同時のきぜつは、はんげきの論点（C18）と同じ論点で、ほのおのかべの論点（W24）とは別
         ca = self.issue('UQ-COUNTERATTACK-DOUBLE-KO')
         self.assertEqual({c['engine_ruling'] for c in ca['cases']}, {'C18', 'Z13'})
 
     def test_counts(self):
-        idx = [u for u in self.ctx['rulings']['engine_unresolved_index'] if bcr.version_key(u['engine_version']) <= (0, 17)]
-        codes = {u['stop_code'] for u in idx if u['stop_code']}
-        self.assertEqual(len(codes), 18)  # エンジンの停止コード（v0.17）
-        counted = [u for u in idx if u.get('in_engine_count', True)]
-        self.assertEqual(len(counted), 24)  # エンジンの数え方の未解決の裁定（v0.17）
+        # v0.17 の時点（あとの版で付いた停止コード・数えるようになった項目は as_of で除く）
+        uc = bcr.unresolved_counts(self.ctx, as_of='v0.17')
+        self.assertEqual(uc['engine_stop_codes'], 18)  # エンジンの停止コード（v0.17）
+        self.assertEqual(uc['engine_total'], 24)  # エンジンの数え方の未解決の裁定（v0.17）
         issues = self.ctx['rulings']['issues']
         self.assertEqual(len({x['id'] for x in issues}), len(issues))
 
@@ -427,8 +431,9 @@ class UnresolvedAuditTest(Base):
             self.assertTrue(all(n['resolves'] is False for n in a['new_sources']), x['id'])
 
     def test_counts_are_kept_apart(self):
-        uc = bcr.unresolved_counts(self.ctx)
-        self.assertEqual(uc['research_issues'], len(self.ctx['rulings']['issues']))
+        # v0.25 の時点の数（v0.26〜v0.68 の取り込みの数は tests/test_non_pack_engine_v068.py）
+        uc = bcr.unresolved_counts(self.ctx, as_of='v0.25')
+        self.assertEqual(uc['research_issues'], 24)
         self.assertEqual((uc['engine_total'], uc['engine_stop_codes']), (28, 22))
         # v0.18（ENGINE-46A3E2E。2026-10-15 に取り込んだ。新しい未解決の裁定はない）も 24
         self.assertEqual([(v, n) for v, n in uc['by_import'] if bcr.version_key(v) <= (0, 18)],
@@ -446,7 +451,8 @@ class UnresolvedAuditTest(Base):
         self.assertEqual(a['game_effect'], 'game_result')
         self.assertIn('今のデータでは結果が変わらない', a['game_effect_note'])
         self.assertIn('裁定が決まったことではない', a['game_effect_note'])
-        self.assertEqual(bcr.unresolved_counts(self.ctx)['stop_codes_by_issue']['UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE'], [])
+        # v0.25 までは停止コードのない問い。エンジンは v0.61 で停止コードを付けた（裁定が決まったことではない）
+        self.assertEqual(bcr.unresolved_counts(self.ctx, as_of='v0.25')['stop_codes_by_issue']['UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE'], [])
 
     def test_z23_stop_code_is_only_in_the_index(self):
         # Z23 の停止コードは一覧（engine_unresolved_index）にだけあり、論点の文（question・why_unresolved・audit）にはない（p.245・p.155）

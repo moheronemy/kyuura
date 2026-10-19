@@ -1,0 +1,6490 @@
+{
+ "schema_version": 1,
+ "description": "商品をまたいだ同じカードの組（再録の候補）。鍵は basis_fields（名前は NFKC で正規化し、サイトの表記の揺れ ウィンディ→ウインディを直して比べる）。組は記録をまとめない（記録はそれぞれ残る）。members の numbers_differ は最初の収録と違う数値の欄、text は効果文の関係（same・same_ignoring_punctuation・similar（似ている度合い 0.9 以上）・different）、equivalent_to_first は数値と文面が同じ（句読点を除く）か。text_difference は data/curation/other_products.json の reprint_text の判定（文面の違いの種類）。生成: scripts/build_cardlist.py。",
+ "groups": [
+  {
+   "id": "SC-PMCG1-001",
+   "kind": "pokemon",
+   "name_ja": "フシギダネ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-001",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-083",
+     "product": "PR1",
+     "date": "1999",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-006",
+   "kind": "pokemon",
+   "name_ja": "ドガース",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-006",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-086",
+     "product": "PR1",
+     "date": "1999",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-011",
+   "kind": "pokemon",
+   "name_ja": "フシギバナ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-011",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-029",
+     "product": "PR1",
+     "date": "1998-02",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "IPH-001",
+     "product": "IPH",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "エナジートランスを「この力は、自分の番の中で何度でも使える」で始まる書き方に",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-014",
+   "kind": "pokemon",
+   "name_ja": "ヒトカゲ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-014",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-089",
+     "product": "PR1",
+     "date": "1999",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-018",
+   "kind": "pokemon",
+   "name_ja": "ガーディ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-018",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "IP2-001",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "NIP1-012",
+     "product": "NIP1",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-021",
+   "kind": "pokemon",
+   "name_ja": "リザードン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-021",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-030",
+     "product": "PR1",
+     "date": "1998-02",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "meaning",
+    "summary": "エナジーバーンが使えない状態を「こんらん」だけから「ねむり・マヒ・こんらん」に（英語版と同じに）。ほのおのうずに「トラッシュできない時、このワザのダメージは0になる」を追加。第1弾の版も新しい文面で使うことは、『ポケモンカードオフィシャルブック2000』（2000年2月）の「最新の説明」で確認できる（TXT-CHARIZARD）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-023",
+   "kind": "pokemon",
+   "name_ja": "ゼニガメ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-023",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-085",
+     "product": "PR1",
+     "date": "1999",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-024",
+   "kind": "pokemon",
+   "name_ja": "ニョロモ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-024",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-082",
+     "product": "PR1",
+     "date": "1999",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "IP2-009",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "みずでっぽうを、のちの書き方（「ワザに必要なエネルギーよりも多く…」）に（カメックスのハイドロポンプと同じ書き換え）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-031",
+   "kind": "pokemon",
+   "name_ja": "コイキング",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-031",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-084",
+     "product": "PR1",
+     "date": "1999",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-032",
+   "kind": "pokemon",
+   "name_ja": "カメックス",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-032",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-028",
+     "product": "PR1",
+     "date": "1998-02",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "IPH-002",
+     "product": "IPH",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "あまごい・ハイドロポンプを、のちの書き方（「ワザに必要なエネルギーよりも多く…」など）に",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-034",
+   "kind": "pokemon",
+   "name_ja": "ギャラドス",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-034",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-080",
+     "product": "PR1",
+     "date": "1999",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-035",
+   "kind": "pokemon",
+   "name_ja": "ピカチュウ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-035",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-081",
+     "product": "PR1",
+     "date": "1999",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "IP1-013",
+     "product": "IP1",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "NIP2-001",
+     "product": "NIP2",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-045",
+   "kind": "pokemon",
+   "name_ja": "スリープ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-045",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "IP1-002",
+     "product": "IP1",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-052",
+   "kind": "pokemon",
+   "name_ja": "ディグダ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-052",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "IP2-002",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-053",
+   "kind": "pokemon",
+   "name_ja": "ワンリキー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-053",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "IP2-035",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-061",
+   "kind": "pokemon",
+   "name_ja": "ドードー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-061",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "IP1-030",
+     "product": "IP1",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "「〜の数×10のダメージをあたえる」から「〜の数×10のダメージ」に",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-063",
+   "kind": "pokemon",
+   "name_ja": "カモネギ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-063",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-033",
+     "product": "PR1",
+     "date": "1998-03-15",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "ネギでたたくを、のちの書き方（「このワザのダメージは0になる」）に",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-068",
+   "kind": "pokemon",
+   "name_ja": "ラッキー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-068",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "PR1-087",
+     "product": "PR1",
+     "date": "1999",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-070",
+   "kind": "trainer",
+   "name_ja": "エネルギー・リムーブ",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-070",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "IP2-019",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-071",
+   "kind": "trainer",
+   "name_ja": "きずぐすり",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-071",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "GD1-016",
+     "product": "GD1",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD2-019",
+     "product": "GD2",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD4-020",
+     "product": "GD4",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "QSG-049",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD5-018",
+     "product": "GD5",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD6-015",
+     "product": "GD6",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "IP1-007",
+     "product": "IP1",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "IP2-024",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "NIP1-015",
+     "product": "NIP1",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "NIP2-020",
+     "product": "NIP2",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "clarify",
+    "summary": "「ダメージカウンターを2個まで」から「ポケモン1匹を選び、…最大2個」に（対象が1匹であることを明記。英語版と同じ）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-072",
+   "kind": "trainer",
+   "name_ja": "突風",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-072",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "GD2-021",
+     "product": "GD2",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD3-018",
+     "product": "GD3",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "QSG-051",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "IP1-028",
+     "product": "IP1",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "NIP2X-007",
+     "product": "NIP2X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "「相手の控えポケモンを1匹選び、相手の対戦ポケモンと入れ替える」に",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-073",
+   "kind": "trainer",
+   "name_ja": "ポケモンいれかえ",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-073",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "GD1-021",
+     "product": "GD1",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD3-020",
+     "product": "GD3",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD4-024",
+     "product": "GD4",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "QSG-052",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD5-022",
+     "product": "GD5",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "IP1-019",
+     "product": "IP1",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "NIP1X-007",
+     "product": "NIP1X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "「あなたのベンチから控えポケモンを1匹選び、…入れ替える」に（にげるコストの記述はなくなる）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-074",
+   "kind": "trainer",
+   "name_ja": "マサキ",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-074",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "NIP1-020",
+     "product": "NIP1",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "NIP2-025",
+     "product": "NIP2",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-075",
+   "kind": "trainer",
+   "name_ja": "いいきずぐすり",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-075",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "GD3-014",
+     "product": "GD3",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "「エネルギーカードのついているものを1匹選ぶ」から始まる書き方に",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-076",
+   "kind": "trainer",
+   "name_ja": "エネルギー回収",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-076",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "GD1-014",
+     "product": "GD1",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD4-014",
+     "product": "GD4",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "QSG-047",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD6-014",
+     "product": "GD6",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "meaning",
+    "summary": "拾えるカードを「2枚の好きなエネルギーカード」から「基本エネルギーカードを最大2枚」に（英語版と同じに）。新しい文面の印刷はポケモンジム第1弾（1998年4月26日）から。会報 Vol.5（1998年6月10日発行）が、第1弾の版も含めた解釈の変更として説明した。古いカードへの適用開始日は未確認。『ポケモンカードオフィシャルブック2000』（2000年2月）は第1弾の版も新しい文面で載せる（docs/rules/errata-history.md の ERR-ENERGY-RETRIEVAL）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-078",
+   "kind": "trainer",
+   "name_ja": "元気のかけら",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-078",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "GD1-017",
+     "product": "GD1",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "「ポケモンカード（進化カードは不可）」から「たねポケモンカード」に。トラッシュにたねポケモンがない時・ベンチに空きがない時は使えないことを追加",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-079",
+   "kind": "trainer",
+   "name_ja": "ディフェンダー",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-079",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "GD2-020",
+     "product": "GD2",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD3-017",
+     "product": "GD3",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD4-021",
+     "product": "GD4",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD6-016",
+     "product": "GD6",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "NIP2X-006",
+     "product": "NIP2X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "トラッシュする時を「次の自分の番の最初」から「次の相手の番の終わり」に（効果のある期間は同じ）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-080",
+   "kind": "trainer",
+   "name_ja": "なんでもなおし",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-080",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "GD1-020",
+     "product": "GD1",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD3-019",
+     "product": "GD3",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD4-022",
+     "product": "GD4",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD5-020",
+     "product": "GD5",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD6-020",
+     "product": "GD6",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "IP2-007",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "NIP1-007",
+     "product": "NIP1",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "NIP2-008",
+     "product": "NIP2",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "clarify",
+    "summary": "「特殊状態にあるポケモン」から「あなたの対戦ポケモン」に（対象を明記。英語版と同じ）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-081",
+   "kind": "trainer",
+   "name_ja": "プラスパワー",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-081",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "GD4-023",
+     "product": "GD4",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD6-021",
+     "product": "GD6",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "NIP1X-006",
+     "product": "NIP1X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "meaning",
+    "summary": "のちの書き方に。「(控えポケモンへのダメージは、そのまま)」を追加。会報 Vol.4（1998年2月28日発行）によると、当初の扱いでは控えポケモンへのダメージにも +10 できたので、効果が変わる。第1弾の版も新しい文面で使うことは、『ポケモンカードオフィシャルブック2000』（2000年2月29日発行）の「最新の説明」で確認できる（ERR-PLUSPOWER）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-082",
+   "kind": "trainer",
+   "name_ja": "ポケモン図鑑 HANDY505",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-082",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "GD1-022",
+     "product": "GD1",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD5-023",
+     "product": "GD5",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-083",
+   "kind": "trainer",
+   "name_ja": "ポケモンセンター",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-083",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "GD1-023",
+     "product": "GD1",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD6-022",
+     "product": "GD6",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "「エネルギーカードはトラッシュする」を括弧書きに",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-093",
+   "kind": "trainer",
+   "name_ja": "ポケモン交換おじさん",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-093",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "QSG-053",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "手札のカードを先に山札にもどし、それから山札のカードを手札に加える書き方に",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG1-096",
+   "kind": "energy",
+   "name_ja": "無色2個エネルギー",
+   "basis_fields": [
+    "name.ja",
+    "energy.kind"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-096",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "GD1-025",
+     "product": "GD1",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "GD2-024",
+     "product": "GD2",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "GD3-025",
+     "product": "GD3",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "GD4-028",
+     "product": "GD4",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "GD5-025",
+     "product": "GD5",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "GD6-026",
+     "product": "GD6",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "IP1-023",
+     "product": "IP1",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "IP2-025",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-097",
+   "kind": "energy",
+   "name_ja": "草エネルギー",
+   "basis_fields": [
+    "name.ja",
+    "energy.kind"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-097",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "IP1-004",
+     "product": "IP1",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "NIP1-003",
+     "product": "NIP1",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-098",
+   "kind": "energy",
+   "name_ja": "炎エネルギー",
+   "basis_fields": [
+    "name.ja",
+    "energy.kind"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-098",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "IP2-004",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "NIP1-005",
+     "product": "NIP1",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-099",
+   "kind": "energy",
+   "name_ja": "水エネルギー",
+   "basis_fields": [
+    "name.ja",
+    "energy.kind"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-099",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "IP2-005",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "NIP2-005",
+     "product": "NIP2",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-100",
+   "kind": "energy",
+   "name_ja": "雷エネルギー",
+   "basis_fields": [
+    "name.ja",
+    "energy.kind"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-100",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "IP1-006",
+     "product": "IP1",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "NIP2-006",
+     "product": "NIP2",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-101",
+   "kind": "energy",
+   "name_ja": "超エネルギー",
+   "basis_fields": [
+    "name.ja",
+    "energy.kind"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-101",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "IP1-024",
+     "product": "IP1",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "NIP2-007",
+     "product": "NIP2",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG1-102",
+   "kind": "energy",
+   "name_ja": "闘エネルギー",
+   "basis_fields": [
+    "name.ja",
+    "energy.kind"
+   ],
+   "members": [
+    {
+     "id": "PMCG1-102",
+     "product": "PMCG1",
+     "date": "1996-10-20"
+    },
+    {
+     "id": "IP2-012",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "NIP1-006",
+     "product": "NIP1",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG2-028",
+   "kind": "pokemon",
+   "name_ja": "マンキー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG2-028",
+     "product": "PMCG2",
+     "date": "1997-03-05"
+    },
+    {
+     "id": "PR1-061",
+     "product": "PR1",
+     "date": "1999-05-22",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG2-035",
+   "kind": "pokemon",
+   "name_ja": "プリン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG2-035",
+     "product": "PMCG2",
+     "date": "1997-03-05"
+    },
+    {
+     "id": "IP2-014",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG2-048",
+   "kind": "trainer",
+   "name_ja": "モンスターボール",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG2-048",
+     "product": "PMCG2",
+     "date": "1997-03-05"
+    },
+    {
+     "id": "GD2-022",
+     "product": "GD2",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "GD3-023",
+     "product": "GD3",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "「たねポケモンカードまたは進化カード」に",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG3-010",
+   "kind": "pokemon",
+   "name_ja": "コダック",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG3-010",
+     "product": "PMCG3",
+     "date": "1997-06-21"
+    },
+    {
+     "id": "PR1-076",
+     "product": "PR1",
+     "date": "1999-09-22",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG3-023",
+   "kind": "pokemon",
+   "name_ja": "フリーザー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG3-023",
+     "product": "PMCG3",
+     "date": "1997-06-21"
+    },
+    {
+     "id": "PR1-088",
+     "product": "PR1",
+     "date": "1999",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG3-044",
+   "kind": "trainer",
+   "name_ja": "エネルギー転送",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG3-044",
+     "product": "PMCG3",
+     "date": "1997-06-21"
+    },
+    {
+     "id": "GD4-015",
+     "product": "GD4",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "QSG-048",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "「特殊なエネルギーカードは選べない」から「基本エネルギーカード」に（意味は同じ）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG3-045",
+   "kind": "trainer",
+   "name_ja": "ギャンブラー",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG3-045",
+     "product": "PMCG3",
+     "date": "1997-06-21"
+    },
+    {
+     "id": "QSG-050",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "「あなたの手札」などの書き方に",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG3-047",
+   "kind": "trainer",
+   "name_ja": "リサイクル",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PMCG3-047",
+     "product": "PMCG3",
+     "date": "1997-06-21"
+    },
+    {
+     "id": "GD4-025",
+     "product": "GD4",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "「好きなカード」から「カード」に",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PMCG4-005",
+   "kind": "pokemon",
+   "name_ja": "ドガース",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG4-005",
+     "product": "PMCG4",
+     "date": "1997-11-21"
+    },
+    {
+     "id": "NIP1-010",
+     "product": "NIP1",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG4-040",
+   "kind": "pokemon",
+   "name_ja": "ワンリキー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG4-040",
+     "product": "PMCG4",
+     "date": "1997-11-21"
+    },
+    {
+     "id": "NIP1X-003",
+     "product": "NIP1X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-019",
+   "kind": "pokemon",
+   "name_ja": "わるいペルシアン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-019",
+     "product": "PR1",
+     "date": "1997-11-18"
+    },
+    {
+     "id": "PMCG4-048",
+     "product": "PMCG4",
+     "date": "1997-11-21",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD4-002",
+   "kind": "pokemon",
+   "name_ja": "エリカのナゾノクサ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD4-002",
+     "product": "GD4",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-002",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD4-006",
+   "kind": "pokemon",
+   "name_ja": "エリカのマダツボミ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD4-006",
+     "product": "GD4",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-005",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD4-011",
+   "kind": "pokemon",
+   "name_ja": "エリカのモンジャラ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD4-011",
+     "product": "GD4",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-006",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG5-007",
+   "kind": "pokemon",
+   "name_ja": "エリカのフシギダネ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG5-007",
+     "product": "PMCG5",
+     "date": "1998-10-24"
+    },
+    {
+     "id": "PR1-047",
+     "product": "PR1",
+     "date": "1998-11-15",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD4-010",
+   "kind": "pokemon",
+   "name_ja": "エリカのナッシー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD4-010",
+     "product": "GD4",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-013",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD4-004",
+   "kind": "pokemon",
+   "name_ja": "エリカのラフレシア",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD4-004",
+     "product": "GD4",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-014",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-GD4-008",
+   "kind": "pokemon",
+   "name_ja": "エリカのウツボット",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD4-008",
+     "product": "GD4",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-015",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD1-002",
+   "kind": "pokemon",
+   "name_ja": "タケシのロコン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD1-002",
+     "product": "GD1",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-018",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD2-008",
+   "kind": "pokemon",
+   "name_ja": "カスミのタッツー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD2-008",
+     "product": "GD2",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-025",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD2-010",
+   "kind": "pokemon",
+   "name_ja": "カスミのトサキント",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD2-010",
+     "product": "GD2",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-026",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-031",
+   "kind": "pokemon",
+   "name_ja": "カスミのヒトデマン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-031",
+     "product": "PR1",
+     "date": "1998-02-15"
+    },
+    {
+     "id": "GD2-012",
+     "product": "GD2",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "PMCG5-027",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG5-030",
+   "kind": "pokemon",
+   "name_ja": "カスミのメノクラゲ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG5-030",
+     "product": "PMCG5",
+     "date": "1998-10-24"
+    },
+    {
+     "id": "PR1-048",
+     "product": "PR1",
+     "date": "1998-11-15",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD2-004",
+   "kind": "pokemon",
+   "name_ja": "カスミのドククラゲ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD2-004",
+     "product": "GD2",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-033",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD3-001",
+   "kind": "pokemon",
+   "name_ja": "マチスのピカチュウ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD3-001",
+     "product": "GD3",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-036",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD3-005",
+   "kind": "pokemon",
+   "name_ja": "マチスのコイル",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD3-005",
+     "product": "GD3",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-037",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD3-007",
+   "kind": "pokemon",
+   "name_ja": "マチスのビリリダマ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD3-007",
+     "product": "GD3",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-038",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD3-004",
+   "kind": "pokemon",
+   "name_ja": "マチスのコイル",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD3-004",
+     "product": "GD3",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-039",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD3-006",
+   "kind": "pokemon",
+   "name_ja": "マチスのレアコイル",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD3-006",
+     "product": "GD3",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-040",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG5-042",
+   "kind": "pokemon",
+   "name_ja": "マチスのサンダース",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG5-042",
+     "product": "PMCG5",
+     "date": "1998-10-24"
+    },
+    {
+     "id": "PR1-050",
+     "product": "PR1",
+     "date": "1998-11-15",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PMCG5-045",
+   "kind": "pokemon",
+   "name_ja": "タケシのマンキー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PMCG5-045",
+     "product": "PMCG5",
+     "date": "1998-10-24"
+    },
+    {
+     "id": "PR1-049",
+     "product": "PR1",
+     "date": "1998-11-15",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD1-006",
+   "kind": "pokemon",
+   "name_ja": "タケシのイシツブテ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD1-006",
+     "product": "GD1",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-047",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-032",
+   "kind": "pokemon",
+   "name_ja": "タケシのイワーク",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-032",
+     "product": "PR1",
+     "date": "1998-02-15"
+    },
+    {
+     "id": "GD1-011",
+     "product": "GD1",
+     "date": "1998-04-26",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "PMCG5-048",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD1-009",
+   "kind": "pokemon",
+   "name_ja": "タケシのゴローニャ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD1-009",
+     "product": "GD1",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-053",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD1-013",
+   "kind": "pokemon",
+   "name_ja": "タケシのサイドン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD1-013",
+     "product": "GD1",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-055",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-039",
+   "kind": "pokemon",
+   "name_ja": "エリカのミニリュウ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-039",
+     "product": "PR1",
+     "date": "1998-07-15"
+    },
+    {
+     "id": "GD4-013",
+     "product": "GD4",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "PMCG5-063",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD3-015",
+   "kind": "trainer",
+   "name_ja": "エネルギーサーキュレート",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD3-015",
+     "product": "GD3",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-067",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD2-017",
+   "kind": "trainer",
+   "name_ja": "カスミの勝負",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD2-017",
+     "product": "GD2",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-068",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD2-018",
+   "kind": "trainer",
+   "name_ja": "カスミのなみだ",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD2-018",
+     "product": "GD2",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-069",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD1-015",
+   "kind": "trainer",
+   "name_ja": "思い出させる",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD1-015",
+     "product": "GD1",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-071",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD4-017",
+   "kind": "trainer",
+   "name_ja": "エリカのお付き",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD4-017",
+     "product": "GD4",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-072",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD4-018",
+   "kind": "trainer",
+   "name_ja": "エリカの香水",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD4-018",
+     "product": "GD4",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-073",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD4-019",
+   "kind": "trainer",
+   "name_ja": "お上品攻撃",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD4-019",
+     "product": "GD4",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-074",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-GD2-016",
+   "kind": "trainer",
+   "name_ja": "カスミのいかり",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD2-016",
+     "product": "GD2",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-075",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD3-024",
+   "kind": "trainer",
+   "name_ja": "クチバシティジム",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD3-024",
+     "product": "GD3",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-076",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same_ignoring_punctuation",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD1-019",
+   "kind": "trainer",
+   "name_ja": "タケシの育て方",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD1-019",
+     "product": "GD1",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-077",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD4-027",
+   "kind": "trainer",
+   "name_ja": "タマムシシティジム",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD4-027",
+     "product": "GD4",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-078",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same_ignoring_punctuation",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD1-024",
+   "kind": "trainer",
+   "name_ja": "ニビシティジム",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD1-024",
+     "product": "GD1",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-079",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same_ignoring_punctuation",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD2-023",
+   "kind": "trainer",
+   "name_ja": "ハナダシティジム",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD2-023",
+     "product": "GD2",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-080",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same_ignoring_punctuation",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD3-022",
+   "kind": "trainer",
+   "name_ja": "マチスの交渉",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD3-022",
+     "product": "GD3",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-081",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD4-026",
+   "kind": "trainer",
+   "name_ja": "礼儀作法",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD4-026",
+     "product": "GD4",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-082",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD4-016",
+   "kind": "trainer",
+   "name_ja": "エリカ",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD4-016",
+     "product": "GD4",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-083",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD2-015",
+   "kind": "trainer",
+   "name_ja": "カスミ",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD2-015",
+     "product": "GD2",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-085",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD3-016",
+   "kind": "trainer",
+   "name_ja": "スパイ作戦",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD3-016",
+     "product": "GD3",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-088",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD1-018",
+   "kind": "trainer",
+   "name_ja": "タケシ",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD1-018",
+     "product": "GD1",
+     "date": "1998-04-26"
+    },
+    {
+     "id": "PMCG5-089",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "clarify",
+    "summary": "「ダメージカウンターののっていないポケモンには、何もおこらない」を追加",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-GD3-021",
+   "kind": "trainer",
+   "name_ja": "マチス",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD3-021",
+     "product": "GD3",
+     "date": "1998-07-25"
+    },
+    {
+     "id": "PMCG5-092",
+     "product": "PMCG5",
+     "date": "1998-10-24",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD5-002",
+   "kind": "pokemon",
+   "name_ja": "カツラのロコン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD5-002",
+     "product": "GD5",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-026",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD5-009",
+   "kind": "pokemon",
+   "name_ja": "カツラのポニータ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD5-009",
+     "product": "GD5",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-028",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD5-010",
+   "kind": "pokemon",
+   "name_ja": "カツラのギャロップ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD5-010",
+     "product": "GD5",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-030",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD5-011",
+   "kind": "pokemon",
+   "name_ja": "カツラのブーバー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD5-011",
+     "product": "GD5",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-031",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-GD5-004",
+   "kind": "pokemon",
+   "name_ja": "カツラのキュウコン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD5-004",
+     "product": "GD5",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-033",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD5-007",
+   "kind": "pokemon",
+   "name_ja": "カツラのウィンディ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD5-007",
+     "product": "GD5",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-034",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD6-003",
+   "kind": "pokemon",
+   "name_ja": "ナツメのユンゲラー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD6-003",
+     "product": "GD6",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-047",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD6-010",
+   "kind": "pokemon",
+   "name_ja": "ナツメのスリーパー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD6-010",
+     "product": "GD6",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-051",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-GD6-004",
+   "kind": "pokemon",
+   "name_ja": "ナツメのフーディン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD6-004",
+     "product": "GD6",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-053",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD5-012",
+   "kind": "pokemon",
+   "name_ja": "カツラのドードー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD5-012",
+     "product": "GD5",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-064",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD6-013",
+   "kind": "pokemon",
+   "name_ja": "ナツメのポリゴン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "GD6-013",
+     "product": "GD6",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-066",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD5-015",
+   "kind": "trainer",
+   "name_ja": "カツラのギャンブル",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD5-015",
+     "product": "GD5",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-076",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD6-019",
+   "kind": "trainer",
+   "name_ja": "ナツメの眼",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD6-019",
+     "product": "GD6",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-078",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD6-024",
+   "kind": "trainer",
+   "name_ja": "ワープポイント",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD6-024",
+     "product": "GD6",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-080",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same_ignoring_punctuation",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD5-024",
+   "kind": "trainer",
+   "name_ja": "グレンタウンジム",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD5-024",
+     "product": "GD5",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-085",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same_ignoring_punctuation",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD6-018",
+   "kind": "trainer",
+   "name_ja": "ナツメのESP",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD6-018",
+     "product": "GD6",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-087",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD6-025",
+   "kind": "trainer",
+   "name_ja": "ヤマブキシティジム",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD6-025",
+     "product": "GD6",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-090",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same_ignoring_punctuation",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD5-014",
+   "kind": "trainer",
+   "name_ja": "カツラ",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD5-014",
+     "product": "GD5",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-093",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-GD6-017",
+   "kind": "trainer",
+   "name_ja": "ナツメ",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "GD6-017",
+     "product": "GD6",
+     "date": "1999-02-26"
+    },
+    {
+     "id": "PMCG6-098",
+     "product": "PMCG6",
+     "date": "1999-06-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PRN-006",
+   "kind": "pokemon",
+   "name_ja": "チコリータ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PRN-006",
+     "product": "PRN",
+     "date": "2000"
+    },
+    {
+     "id": "PRN-009",
+     "product": "PRN",
+     "date": "2000",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "neo1-002",
+     "product": "neo1",
+     "date": "2000-02-04",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-neo1-006",
+   "kind": "pokemon",
+   "name_ja": "ヒマナッツ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "neo1-006",
+     "product": "neo1",
+     "date": "2000-02-04"
+    },
+    {
+     "id": "PRN-032",
+     "product": "PRN",
+     "date": "2000-08-23",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PRN-007",
+   "kind": "pokemon",
+   "name_ja": "ヒノアラシ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PRN-007",
+     "product": "PRN",
+     "date": "2000"
+    },
+    {
+     "id": "PRN-010",
+     "product": "PRN",
+     "date": "2000",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "neo1-018",
+     "product": "neo1",
+     "date": "2000-02-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PRN-008",
+   "kind": "pokemon",
+   "name_ja": "ワニノコ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PRN-008",
+     "product": "PRN",
+     "date": "2000"
+    },
+    {
+     "id": "PRN-011",
+     "product": "PRN",
+     "date": "2000",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "neo1-024",
+     "product": "neo1",
+     "date": "2000-02-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PRN-004",
+   "kind": "trainer",
+   "name_ja": "きのみ",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PRN-004",
+     "product": "PRN",
+     "date": "2000"
+    },
+    {
+     "id": "neo1-073",
+     "product": "neo1",
+     "date": "2000-02-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "NIP1X-008",
+     "product": "NIP1X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "NIP2X-008",
+     "product": "NIP2X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-PRN-005",
+   "kind": "trainer",
+   "name_ja": "きせきのみ",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PRN-005",
+     "product": "PRN",
+     "date": "2000"
+    },
+    {
+     "id": "neo1-081",
+     "product": "neo1",
+     "date": "2000-02-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-IP1-009",
+   "kind": "trainer",
+   "name_ja": "スーパーポケモン回収",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "IP1-009",
+     "product": "IP1",
+     "date": "1999-07-30"
+    },
+    {
+     "id": "IP2-029",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "neo1-083",
+     "product": "neo1",
+     "date": "2000-02-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-IP1-020",
+   "kind": "trainer",
+   "name_ja": "マサキの転送装置",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "IP1-020",
+     "product": "IP1",
+     "date": "1999-07-30"
+    },
+    {
+     "id": "IP2-021",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "neo1-084",
+     "product": "neo1",
+     "date": "2000-02-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-009",
+   "kind": "trainer",
+   "name_ja": "超エネルギー回収",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PR1-009",
+     "product": "PR1",
+     "date": "1997-05-20"
+    },
+    {
+     "id": "neo1-092",
+     "product": "neo1",
+     "date": "2000-02-04",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "meaning",
+    "summary": "小学館『ポケットモンスター公式ファンブック』のおまけ（1997年）は「最大4枚のエネルギーカード」、neo 第1弾は「「基本エネルギーカード」を最大4枚」（英語版と同じ）。会報 Vol.5（1998年6月10日発行）が、エネルギー回収と一緒に特殊エネルギーを拾えないように変更したと説明した。古いカードへの適用開始日は未確認。『ポケモンカードオフィシャルブック2000』（2000年2月）は付録の版も新しい文面で載せる（ERR-SUPER-ENERGY-RETRIEVAL）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PRN-002",
+   "kind": "energy",
+   "name_ja": "悪エネルギー",
+   "basis_fields": [
+    "name.ja",
+    "energy.kind"
+   ],
+   "members": [
+    {
+     "id": "PRN-002",
+     "product": "PRN",
+     "date": "1999-12-01"
+    },
+    {
+     "id": "neo1-094",
+     "product": "neo1",
+     "date": "2000-02-04",
+     "numbers_differ": [],
+     "text": "same_ignoring_punctuation",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "NIP2X-010",
+     "product": "NIP2X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-neo1-095",
+   "kind": "energy",
+   "name_ja": "鋼エネルギー",
+   "basis_fields": [
+    "name.ja",
+    "energy.kind"
+   ],
+   "members": [
+    {
+     "id": "neo1-095",
+     "product": "neo1",
+     "date": "2000-02-04"
+    },
+    {
+     "id": "NIP1X-010",
+     "product": "NIP1X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-neo2-004",
+   "kind": "pokemon",
+   "name_ja": "ハネッコ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "neo2-004",
+     "product": "neo2",
+     "date": "2000-07-07"
+    },
+    {
+     "id": "PRN-047",
+     "product": "PRN",
+     "date": "2001-07-23",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-neo2-020",
+   "kind": "pokemon",
+   "name_ja": "メリープ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "neo2-020",
+     "product": "neo2",
+     "date": "2000-07-07"
+    },
+    {
+     "id": "NIP2-018",
+     "product": "NIP2",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-neo2-022",
+   "kind": "pokemon",
+   "name_ja": "ネイティ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "neo2-022",
+     "product": "neo2",
+     "date": "2000-07-07"
+    },
+    {
+     "id": "NIP2X-004",
+     "product": "NIP2X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same_ignoring_punctuation",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-neo2-039",
+   "kind": "pokemon",
+   "name_ja": "デルビル",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "neo2-039",
+     "product": "neo2",
+     "date": "2000-07-07"
+    },
+    {
+     "id": "NIP2X-005",
+     "product": "NIP2X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-neo2-049",
+   "kind": "pokemon",
+   "name_ja": "イーブイ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "neo2-049",
+     "product": "neo2",
+     "date": "2000-07-07"
+    },
+    {
+     "id": "PF2-005",
+     "product": "PF2",
+     "date": "2000-07-08",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-neo2-054",
+   "kind": "trainer",
+   "name_ja": "遺跡の石版",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "neo2-054",
+     "product": "neo2",
+     "date": "2000-07-07"
+    },
+    {
+     "id": "neo2-057",
+     "product": "neo2",
+     "date": "2000-07-07",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-neo3-002",
+   "kind": "pokemon",
+   "name_ja": "パラス",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "neo3-002",
+     "product": "neo3",
+     "date": "2000-11-23"
+    },
+    {
+     "id": "NIP1-022",
+     "product": "NIP1",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-neo3-022",
+   "kind": "pokemon",
+   "name_ja": "ひかるコイキング",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "neo3-022",
+     "product": "neo3",
+     "date": "2000-11-23"
+    },
+    {
+     "id": "PRN-046",
+     "product": "PRN",
+     "date": "2001",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-NIP1X-009",
+   "kind": "trainer",
+   "name_ja": "エネルギースタジアム",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "NIP1X-009",
+     "product": "NIP1X",
+     "date": "2001-04-06"
+    },
+    {
+     "id": "neo4-101",
+     "product": "neo4",
+     "date": "2001-04-20",
+     "numbers_differ": [],
+     "text": "same_ignoring_punctuation",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PRN-015",
+   "kind": "trainer",
+   "name_ja": "ラッキースタジアム",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PRN-015",
+     "product": "PRN",
+     "date": "2000"
+    },
+    {
+     "id": "PRN-016",
+     "product": "PRN",
+     "date": "2000",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "PRN-017",
+     "product": "PRN",
+     "date": "2000",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "PRN-018",
+     "product": "PRN",
+     "date": "2000",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "PRN-019",
+     "product": "PRN",
+     "date": "2000",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "PRN-020",
+     "product": "PRN",
+     "date": "2000",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "PRN-021",
+     "product": "PRN",
+     "date": "2000",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "PRN-022",
+     "product": "PRN",
+     "date": "2000",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "PRN-027",
+     "product": "PRN",
+     "date": "2000",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "NIP2X-009",
+     "product": "NIP2X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "neo4-106",
+     "product": "neo4",
+     "date": "2001-04-20",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "トロピカルメガバトルの参加賞は英語の文面つきで、日本語も英語版の訳の書き方（「その番のプレイヤーはコインを投げてもよい」）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PR1-040",
+   "kind": "pokemon",
+   "name_ja": "マチスのエレブー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-040",
+     "product": "PR1",
+     "date": "1998-07-15"
+    },
+    {
+     "id": "GD3-010",
+     "product": "GD3",
+     "date": "1998-07-25",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-059",
+   "kind": "pokemon",
+   "name_ja": "カツラのガーディ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-059",
+     "product": "PR1",
+     "date": "1999-02-15"
+    },
+    {
+     "id": "GD5-005",
+     "product": "GD5",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-034",
+   "kind": "trainer",
+   "name_ja": "元気のかたまり",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "ES2-034",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "GD5-019",
+     "product": "GD5",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "clarify",
+    "summary": "拡張シート第2弾の版だけに「あなたのベンチに空きがない時、このカードは使えない」がある",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PR1-060",
+   "kind": "pokemon",
+   "name_ja": "ナツメのケーシィ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-060",
+     "product": "PR1",
+     "date": "1999-02-15"
+    },
+    {
+     "id": "GD6-001",
+     "product": "GD6",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-036",
+   "kind": "trainer",
+   "name_ja": "マスターボール",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "ES2-036",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-058",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "GD6-023",
+     "product": "GD6",
+     "date": "1999-02-26",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "NIP1-021",
+     "product": "NIP1",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    },
+    {
+     "id": "NIP2-022",
+     "product": "NIP2",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "similar",
+     "equivalent_to_first": false
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-001",
+   "kind": "pokemon",
+   "name_ja": "フシギダネ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-001",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-001",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "IP1-018",
+     "product": "IP1",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same_ignoring_punctuation",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-002",
+   "kind": "pokemon",
+   "name_ja": "キャタピー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-002",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-002",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-003",
+   "kind": "pokemon",
+   "name_ja": "トランセル",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-003",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-003",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-006",
+   "kind": "pokemon",
+   "name_ja": "ニドラン♀",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-006",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-004",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-007",
+   "kind": "pokemon",
+   "name_ja": "ニドラン♂",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-007",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-005",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-012",
+   "kind": "pokemon",
+   "name_ja": "カイロス",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-012",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-006",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-013",
+   "kind": "pokemon",
+   "name_ja": "ヒトカゲ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-013",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-007",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-014",
+   "kind": "pokemon",
+   "name_ja": "ギャロップ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-014",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-011",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-015",
+   "kind": "pokemon",
+   "name_ja": "ゼニガメ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-015",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-013",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "IP2-018",
+     "product": "IP2",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-016",
+   "kind": "pokemon",
+   "name_ja": "ニョロモ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-016",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-014",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "みずでっぽうを、のちの書き方（「ワザに必要なエネルギーよりも多く…」）に（カメックスのハイドロポンプと同じ書き換え）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-ES1-017",
+   "kind": "pokemon",
+   "name_ja": "ニョロゾ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-017",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-015",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-018",
+   "kind": "pokemon",
+   "name_ja": "ニョロボン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-018",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-016",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-019",
+   "kind": "pokemon",
+   "name_ja": "ピカチュウ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-019",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-020",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-020",
+   "kind": "pokemon",
+   "name_ja": "ケーシィ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-020",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-026",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-021",
+   "kind": "pokemon",
+   "name_ja": "バリヤード",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-021",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-030",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-022",
+   "kind": "pokemon",
+   "name_ja": "ミュウツー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-022",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-032",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-025",
+   "kind": "pokemon",
+   "name_ja": "コラッタ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-025",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-039",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-026",
+   "kind": "pokemon",
+   "name_ja": "ピッピ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-026",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-040",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-028",
+   "kind": "pokemon",
+   "name_ja": "ドードー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-028",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-041",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "「〜の数×10のダメージをあたえる」から「〜の数×10のダメージ」に",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-ES1-030",
+   "kind": "pokemon",
+   "name_ja": "ベロリンガ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-030",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-042",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-031",
+   "kind": "pokemon",
+   "name_ja": "ラッキー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-031",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-043",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-033",
+   "kind": "pokemon",
+   "name_ja": "ポリゴン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-033",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-045",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES1-034",
+   "kind": "pokemon",
+   "name_ja": "カビゴン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES1-034",
+     "product": "ES1",
+     "date": "1998-03-23"
+    },
+    {
+     "id": "QSG-046",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-005",
+   "kind": "pokemon",
+   "name_ja": "ファイヤー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-005",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-055",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-006",
+   "kind": "pokemon",
+   "name_ja": "パウワウ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-006",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-017",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-007",
+   "kind": "pokemon",
+   "name_ja": "ジュゴン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-007",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-018",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-010",
+   "kind": "pokemon",
+   "name_ja": "ラプラス",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-010",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-019",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-012",
+   "kind": "pokemon",
+   "name_ja": "フリーザー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-012",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-057",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-013",
+   "kind": "pokemon",
+   "name_ja": "ライチュウ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-013",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-022",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-014",
+   "kind": "pokemon",
+   "name_ja": "コイル",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-014",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-023",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-015",
+   "kind": "pokemon",
+   "name_ja": "レアコイル",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-015",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-024",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-016",
+   "kind": "pokemon",
+   "name_ja": "ビリリダマ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-016",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-025",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-018",
+   "kind": "pokemon",
+   "name_ja": "サンダー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-018",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-056",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-019",
+   "kind": "pokemon",
+   "name_ja": "ルージュラ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-019",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-031",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "PRN-013",
+     "product": "PRN",
+     "date": "2000-01-22",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-020",
+   "kind": "pokemon",
+   "name_ja": "サンド",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-020",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-033",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-021",
+   "kind": "pokemon",
+   "name_ja": "ワンリキー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-021",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-035",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-022",
+   "kind": "pokemon",
+   "name_ja": "ゴーリキー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-022",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-036",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-024",
+   "kind": "pokemon",
+   "name_ja": "イワーク",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-024",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-037",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES2-027",
+   "kind": "pokemon",
+   "name_ja": "エビワラー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES2-027",
+     "product": "ES2",
+     "date": "1998-06-17"
+    },
+    {
+     "id": "QSG-038",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES3-008",
+   "kind": "pokemon",
+   "name_ja": "ストライク",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES3-008",
+     "product": "ES3",
+     "date": "1998-11-24"
+    },
+    {
+     "id": "QSG-054",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES3-009",
+   "kind": "pokemon",
+   "name_ja": "ロコン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES3-009",
+     "product": "ES3",
+     "date": "1998-11-24"
+    },
+    {
+     "id": "QSG-008",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES3-010",
+   "kind": "pokemon",
+   "name_ja": "ガーディ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES3-010",
+     "product": "ES3",
+     "date": "1998-11-24"
+    },
+    {
+     "id": "QSG-009",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES3-011",
+   "kind": "pokemon",
+   "name_ja": "ポニータ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES3-011",
+     "product": "ES3",
+     "date": "1998-11-24"
+    },
+    {
+     "id": "QSG-010",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES3-012",
+   "kind": "pokemon",
+   "name_ja": "ブーバー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES3-012",
+     "product": "ES3",
+     "date": "1998-11-24"
+    },
+    {
+     "id": "QSG-012",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES3-020",
+   "kind": "pokemon",
+   "name_ja": "ユンゲラー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES3-020",
+     "product": "ES3",
+     "date": "1998-11-24"
+    },
+    {
+     "id": "QSG-027",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES3-022",
+   "kind": "pokemon",
+   "name_ja": "ゴース",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES3-022",
+     "product": "ES3",
+     "date": "1998-11-24"
+    },
+    {
+     "id": "QSG-028",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES3-024",
+   "kind": "pokemon",
+   "name_ja": "ゴースト",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES3-024",
+     "product": "ES3",
+     "date": "1998-11-24"
+    },
+    {
+     "id": "QSG-029",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES3-027",
+   "kind": "pokemon",
+   "name_ja": "サンドパン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES3-027",
+     "product": "ES3",
+     "date": "1998-11-24"
+    },
+    {
+     "id": "QSG-034",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-ES3-033",
+   "kind": "pokemon",
+   "name_ja": "ガルーラ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "ES3-033",
+     "product": "ES3",
+     "date": "1998-11-24"
+    },
+    {
+     "id": "QSG-044",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-020",
+   "kind": "pokemon",
+   "name_ja": "ピカチュウ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-020",
+     "product": "PR1",
+     "date": "1997"
+    },
+    {
+     "id": "QSG-021",
+     "product": "QSG",
+     "date": "1998-12-04",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-001",
+   "kind": "pokemon",
+   "name_ja": "ピカチュウ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-001",
+     "product": "PR1",
+     "date": "1996-10-15"
+    },
+    {
+     "id": "PR1-003",
+     "product": "PR1",
+     "date": "1996-11-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "PR1-017",
+     "product": "PR1",
+     "date": "1997-10",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    },
+    {
+     "id": "IP1-040",
+     "product": "IP1",
+     "date": "1999-07-30",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "clarify",
+    "summary": "なきごえを「次の相手の番でうけるダメージを10へらす」から「このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される」に（減るのはワザを受けた相手からのダメージと明記）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PR1-002",
+   "kind": "pokemon",
+   "name_ja": "プリン",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-002",
+     "product": "PR1",
+     "date": "1996-10-15"
+    },
+    {
+     "id": "PR1-004",
+     "product": "PR1",
+     "date": "1996-11-30",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-005",
+   "kind": "pokemon",
+   "name_ja": "ミュウ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-005",
+     "product": "PR1",
+     "date": "1997-01-15"
+    },
+    {
+     "id": "PR1-012",
+     "product": "PR1",
+     "date": "1997-08",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-007",
+   "kind": "pokemon",
+   "name_ja": "ミュウツー",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-007",
+     "product": "PR1",
+     "date": "1997-05-15"
+    },
+    {
+     "id": "PR1-008",
+     "product": "PR1",
+     "date": "1997-05-20",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-011",
+   "kind": "pokemon",
+   "name_ja": "なみのりピカチュウ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-011",
+     "product": "PR1",
+     "date": "1997-08"
+    },
+    {
+     "id": "PR1-014",
+     "product": "PR1",
+     "date": "1997-08-15",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-018",
+   "kind": "pokemon",
+   "name_ja": "そらをとぶピカチュウ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-018",
+     "product": "PR1",
+     "date": "1997-10-15"
+    },
+    {
+     "id": "PR1-063",
+     "product": "PR1",
+     "date": "1998-11",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "wording",
+    "summary": "そらをとぶを、のちの書き方（「ワザによるダメージや効果を受けない」）に",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PR1-026",
+   "kind": "trainer",
+   "name_ja": "パソコン大暴走！",
+   "basis_fields": [
+    "name.ja",
+    "trainer.kinds"
+   ],
+   "members": [
+    {
+     "id": "PR1-026",
+     "product": "PR1",
+     "date": "1997-12-15"
+    },
+    {
+     "id": "PR1-041",
+     "product": "PR1",
+     "date": "1998",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-044",
+   "kind": "pokemon",
+   "name_ja": "_のピカチュウ",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-044",
+     "product": "PR1",
+     "date": "1998-11-05"
+    },
+    {
+     "id": "PR1-090",
+     "product": "PR1",
+     "date": "2001-09-23",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PR1-075",
+   "kind": "pokemon",
+   "name_ja": "ナッシー［Exeggutor］",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PR1-075",
+     "product": "PR1",
+     "date": "1999"
+    },
+    {
+     "id": "PR1-077",
+     "product": "PR1",
+     "date": "1999-10-01",
+     "numbers_differ": [],
+     "text": "same",
+     "equivalent_to_first": true
+    }
+   ]
+  },
+  {
+   "id": "SC-PF1-003",
+   "kind": "pokemon",
+   "name_ja": "メガニウム",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PF1-003",
+     "product": "PF1",
+     "date": "1999-12-10"
+    },
+    {
+     "id": "NIP1X-001",
+     "product": "NIP1X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "clarify",
+    "summary": "ハーブのかおりを使える時を「このカードを手札から場に出したとき」から「手札から場に出してポケモンを進化させたとき」に（英語版と同じ）",
+    "source": "other_products.reprint_text"
+   }
+  },
+  {
+   "id": "SC-PF1-009",
+   "kind": "pokemon",
+   "name_ja": "オーダイル",
+   "basis_fields": [
+    "name.ja",
+    "pokemon.hp",
+    "pokemon.powers[].name.ja",
+    "pokemon.attacks[].name.ja"
+   ],
+   "members": [
+    {
+     "id": "PF1-009",
+     "product": "PF1",
+     "date": "1999-12-10"
+    },
+    {
+     "id": "NIP2X-001",
+     "product": "NIP2X",
+     "date": "2001-04-06",
+     "numbers_differ": [],
+     "text": "different",
+     "equivalent_to_first": false
+    }
+   ],
+   "text_difference": {
+    "kind": "clarify",
+    "summary": "どしゃぶりを「手札にある「水」エネルギーカードを1枚選び、トラッシュする」に。ぎゃくりゅうに「山札にカードをもどすことができないとき、ダメージは追加されない」を追加",
+    "source": "other_products.reprint_text"
+   }
+  }
+ ],
+ "evolves_from_checks": [
+  [
+   "evolves_from_english_agrees",
+   "GD1-004",
+   "タケシのサンド",
+   "Brock's Sandshrew",
+   "タケシのサンド"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD1-008",
+   "タケシのイシツブテ",
+   "Brock's Geodude",
+   "タケシのイシツブテ"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD1-009",
+   "タケシのゴローン"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD1-009",
+   "タケシのゴローン",
+   "Brock's Graveler",
+   "タケシのゴローン"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD1-013",
+   "タケシのサイホーン"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD1-013",
+   "タケシのサイホーン",
+   "Brock's Rhyhorn",
+   "タケシのサイホーン"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD2-004",
+   "カスミのメノクラゲ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD2-004",
+   "カスミのメノクラゲ",
+   "Misty's Tentacool",
+   "カスミのメノクラゲ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD2-007",
+   "カスミのシェルダー",
+   "Misty's Shellder",
+   "カスミのシェルダー"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD2-011",
+   "カスミのトサキント",
+   "Misty's Goldeen",
+   "カスミのトサキント"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD2-014",
+   "カスミのヒトデマン",
+   "Misty's Staryu",
+   "カスミのヒトデマン"
+  ],
+  [
+   "stage_differs_from_line",
+   "GD3-003",
+   "stage1",
+   [
+    "evoBasic"
+   ]
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD3-006",
+   "マチスのコイル"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD3-006",
+   "マチスのコイル",
+   "Lt. Surge's Magnemite",
+   "マチスのコイル"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD3-009",
+   "マチスのビリリダマ",
+   "Lt. Surge's Voltorb",
+   "マチスのビリリダマ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD3-012",
+   "マチスのコラッタ",
+   "Lt. Surge's Rattata",
+   "マチスのコラッタ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD4-003",
+   "エリカのナゾノクサ",
+   "Erika's Oddish",
+   "エリカのナゾノクサ"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD4-004",
+   "エリカのクサイハナ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD4-004",
+   "エリカのクサイハナ",
+   "Erika's Gloom",
+   "エリカのクサイハナ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD4-007",
+   "エリカのマダツボミ",
+   "Erika's Bellsprout",
+   "エリカのマダツボミ"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD4-008",
+   "エリカのウツドン"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD4-008",
+   "エリカのウツドン",
+   "Erika's Weepinbell",
+   "エリカのウツドン"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD4-010",
+   "エリカのタマタマ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD4-010",
+   "エリカのタマタマ",
+   "Erika's Exeggcute",
+   "エリカのタマタマ"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD5-004",
+   "カツラのロコン"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD5-004",
+   "カツラのロコン",
+   "Blaine's Vulpix",
+   "カツラのロコン"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD5-007",
+   "カツラのガーディ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD5-007",
+   "カツラのガーディ",
+   "Blaine's Growlithe",
+   "カツラのガーディ"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD5-010",
+   "カツラのポニータ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD5-010",
+   "カツラのポニータ",
+   "Blaine's Ponyta",
+   "カツラのポニータ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD5-013",
+   "カツラのドードー",
+   "Blaine's Doduo",
+   "カツラのドードー"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD6-003",
+   "ナツメのケーシィ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD6-003",
+   "ナツメのケーシィ",
+   "Sabrina's Abra",
+   "ナツメのケーシィ"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD6-004",
+   "ナツメのユンゲラー"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD6-004",
+   "ナツメのユンゲラー",
+   "Sabrina's Kadabra",
+   "ナツメのユンゲラー"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD6-007",
+   "ナツメのゴース",
+   "Sabrina's Gastly",
+   "ナツメのゴース"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD6-008",
+   "ナツメのゴースト",
+   "Sabrina's Haunter",
+   "ナツメのゴースト"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "GD6-010",
+   "ナツメのスリープ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "GD6-010",
+   "ナツメのスリープ",
+   "Sabrina's Drowzee",
+   "ナツメのスリープ"
+  ],
+  [
+   "evolves_from_line_ambiguous",
+   "ES2-011",
+   [
+    "ちていのかせき",
+    "なにかの化石"
+   ]
+  ],
+  [
+   "evolves_from_line_ambiguous",
+   "ES2-028",
+   [
+    "ちていのかせき",
+    "なにかの化石"
+   ]
+  ],
+  [
+   "evolves_from_line_ambiguous",
+   "ES2-029",
+   [
+    "ちていのかせき",
+    "なにかの化石"
+   ]
+  ],
+  [
+   "evolves_from_line_ambiguous",
+   "ES3-018",
+   [
+    "ちていのかせき",
+    "なにかの化石"
+   ]
+  ],
+  [
+   "evolves_from_english_agrees",
+   "SI-003",
+   "トランセル",
+   "Metapod",
+   "トランセル"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "SI-005",
+   "ピジョン",
+   "Pidgeotto",
+   "ピジョン"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "SI-008",
+   "フシギダネ",
+   "Bulbasaur",
+   "フシギダネ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "SI-009",
+   "コラッタ",
+   "Rattata",
+   "コラッタ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "SI-011",
+   "クサイハナ",
+   "Gloom",
+   "クサイハナ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "SI-012",
+   "マンキー",
+   "Mankey",
+   "マンキー"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "SI-013",
+   "タマタマ",
+   "Exeggcute",
+   "タマタマ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "SI-014",
+   "ヤドン",
+   "Slowpoke",
+   "ヤドン"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "SI-015",
+   "ゼニガメ",
+   "Squirtle",
+   "ゼニガメ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "SI-016",
+   "メノクラゲ",
+   "Tentacool",
+   "メノクラゲ"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "IPH-001",
+   "フシギソウ"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "IPH-002",
+   "カメール"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PR1-016",
+   "ガーディ",
+   "Growlithe",
+   "ガーディ"
+  ],
+  [
+   "evolution_line_name_differs",
+   "PR1-019",
+   "stage1",
+   [
+    "name:ペルシアン"
+   ]
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PR1-019",
+   "ニャース",
+   "Meowth",
+   "ニャース"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "PR1-028",
+   "カメール"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "PR1-029",
+   "フシギソウ"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "PR1-030",
+   "リザード"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PR1-043",
+   "ハクリュー",
+   "Dragonair",
+   "ハクリュー"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "PR1-050",
+   "マチスのイーブイ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PR1-050",
+   "マチスのイーブイ",
+   "Lt. Surge's Eevee",
+   "マチスのイーブイ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PR1-052",
+   "ゴーリキー",
+   "Machoke",
+   "ゴーリキー"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PR1-058",
+   "フシギソウ",
+   "Ivysaur",
+   "フシギソウ"
+  ],
+  [
+   "evolves_from_line_agrees",
+   "PR1-080",
+   "コイキング"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PR1-080",
+   "コイキング",
+   "Magikarp",
+   "コイキング"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PF1-002",
+   "チコリータ",
+   "Chikorita",
+   "チコリータ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PF1-003",
+   "ベイリーフ",
+   "Bayleef",
+   "ベイリーフ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PF1-005",
+   "ヒノアラシ",
+   "Cyndaquil",
+   "ヒノアラシ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PF1-006",
+   "マグマラシ",
+   "Quilava",
+   "マグマラシ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PF1-008",
+   "ワニノコ",
+   "Totodile",
+   "ワニノコ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PF1-009",
+   "アリゲイツ",
+   "Croconaw",
+   "アリゲイツ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PF2-004",
+   "イーブイ",
+   "Eevee",
+   "イーブイ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PF2-006",
+   "イーブイ",
+   "Eevee",
+   "イーブイ"
+  ],
+  [
+   "evolves_from_english_agrees",
+   "PRN-025",
+   "ストライク",
+   "Scyther",
+   "ストライク"
+  ],
+  [
+   "stage_differs_from_line",
+   "PRN-030",
+   "stage1",
+   [
+    "evoBasic"
+   ]
+  ],
+  [
+   "evolution_line_name_differs",
+   "PRN-039",
+   "stage1",
+   [
+    "name:フシギソウ"
+   ]
+  ],
+  [
+   "evolution_line_name_differs",
+   "PRN-040",
+   "stage2",
+   [
+    "name:フシギバナ"
+   ]
+  ],
+  [
+   "evolution_line_name_differs",
+   "PRN-045",
+   "stage1",
+   [
+    "name:オニドリル"
+   ]
+  ]
+ ]
+}

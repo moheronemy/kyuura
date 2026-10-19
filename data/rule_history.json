@@ -7684,6 +7684,100 @@
      "refs": [
       "GR-2000-P312-DECK-HAND-DISCARD"
      ]
+    },
+    {
+     "printed": 56,
+     "pdf": 58,
+     "content": "ストライク（ポケモンジャングル。LV.25／HP70）。「ワザ」欄の最新の説明（つるぎのまい）と解説（kyuura-engine v0.27・v0.28 の照合の記録の取り込み。kyuura は画像を読み直していない）",
+     "refs": [
+      "LD-PMCG2-017-ATK0",
+      "CC-PMCG2-017-P56"
+     ]
+    },
+    {
+     "printed": 112,
+     "pdf": 114,
+     "content": "スターミー（ポケモンカード第1弾。LV.28／HP60）。「ワザ」欄の最新の説明（じこさいせい）と解説（kyuura-engine v0.27・v0.28 の照合の記録の取り込み。kyuura は画像を読み直していない）",
+     "refs": [
+      "LD-PMCG1-026-ATK0",
+      "CC-PMCG1-026-P112"
+     ]
+    },
+    {
+     "printed": 164,
+     "pdf": 166,
+     "content": "スリープ（ポケモンカード第1弾。LV.12／HP50）。「ワザ」欄と解説（kyuura-engine v0.27・v0.28 の照合の記録の取り込み。kyuura は画像を読み直していない）",
+     "refs": [
+      "CC-PMCG1-045-P164"
+     ]
+    },
+    {
+     "printed": 235,
+     "pdf": 237,
+     "content": "ラッキー（ポケモンカード第1弾。LV.55／HP120）。「ワザ」欄の最新の説明（まるまる）と解説（kyuura-engine v0.27・v0.28 の照合の記録の取り込み。kyuura は画像を読み直していない）",
+     "refs": [
+      "LD-PMCG1-068-ATK0",
+      "CC-PMCG1-068-P235"
+     ]
+    },
+    {
+     "printed": 49,
+     "pdf": 51,
+     "content": "タマタマ（ポケモンジャングル。LV.14／HP50）。「ワザ」欄の最新の説明（やどりぎのタネ）と解説（kyuura-engine v0.27・v0.28 の照合の記録の取り込み。kyuura は画像を読み直していない）",
+     "refs": [
+      "LD-PMCG2-006-ATK1",
+      "CC-PMCG2-006-P49"
+     ]
+    },
+    {
+     "printed": 58,
+     "pdf": 60,
+     "content": "カイロス（ポケモンジャングル。LV.24／HP60）。「ワザ」欄と解説（kyuura-engine v0.27・v0.28 の照合の記録の取り込み。kyuura は画像を読み直していない）",
+     "refs": [
+      "CC-PMCG2-018-P58"
+     ]
+    },
+    {
+     "printed": 108,
+     "pdf": 110,
+     "content": "トサキント（ポケモンジャングル。LV.12／HP40）。「ワザ」欄と解説（kyuura-engine v0.27・v0.28 の照合の記録の取り込み。kyuura は画像を読み直していない）",
+     "refs": [
+      "CC-PMCG2-021-P108"
+     ]
+    },
+    {
+     "printed": 109,
+     "pdf": 111,
+     "content": "アズマオウ（ポケモンジャングル。LV.28／HP70）。「ワザ」欄と解説（kyuura-engine v0.27・v0.28 の照合の記録の取り込み。kyuura は画像を読み直していない）",
+     "refs": [
+      "CC-PMCG2-022-P109"
+     ]
+    },
+    {
+     "printed": 225,
+     "pdf": 227,
+     "content": "プリン（ポケモンジャングル。LV.14／HP60）。「ワザ」欄と解説（kyuura-engine v0.27・v0.28 の照合の記録の取り込み。kyuura は画像を読み直していない）",
+     "refs": [
+      "CC-PMCG2-035-P225"
+     ]
+    },
+    {
+     "printed": 103,
+     "pdf": 105,
+     "content": "シェルダー（化石の秘密。LV.8／HP30）。「ワザ」欄の最新の説明（からをとじる）と解説（kyuura-engine v0.27・v0.28 の照合の記録の取り込み。kyuura は画像を読み直していない）",
+     "refs": [
+      "LD-PMCG3-012-ATK1",
+      "CC-PMCG3-012-P103"
+     ]
+    },
+    {
+     "printed": 116,
+     "pdf": 118,
+     "content": "ラプラス（化石の秘密。LV.31／HP80）。「ワザ」欄の最新の説明（みずでっぽう）と解説（kyuura-engine v0.27・v0.28 の照合の記録の取り込み。kyuura は画像を読み直していない）",
+     "refs": [
+      "LD-PMCG3-022-ATK0",
+      "CC-PMCG3-022-P116"
+     ]
     }
    ],
    "notes": [

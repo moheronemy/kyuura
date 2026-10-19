@@ -13,7 +13,9 @@ docs/rules/card-rulings.md を生成する。
   - id の書式と重複（3 つのファイルを通して。data/rule_history.json の id とも重ならない）
   - カード id があるか、ワザ・特殊能力の位置と名前が data/cards.json と合うか
   - 印刷の文面の写し（printed_text.text_ja）と照合した欄の写し（checked_fields）が、今の data/cards.json と同じか
-    （data/cards.json が変わったら、照合し直すまでエラー）
+    （data/cards.json が変わったら、照合し直すまでエラー。照合のあとでデータを訂正した欄は、訂正の記録
+    data/curation/card_corrections.json に照合した値（before）から今の値（after）への訂正があり、その card_checks_affected に
+    この照合の記録があればよい。過去の照合の記録は書きかえない）
   - 違い（differences）の文字列が、印刷の文面・最新の説明の中にそのままあるか
   - 出典の記号が docs/sources.md にあるか、ページが data/rule_history.json の documents のページの記録にあるか
   - 公式エラッタの記録があるカードの最新の説明は errata_ref で結ぶ（最新の説明とエラッタを混同しない）
@@ -29,6 +31,9 @@ docs/rules/card-rulings.md を生成する。
     条項（rule_clauses）に対応させるのは、エンジンが CONFIRMED とした裁定だけ
   - エンジンの裁定 id: 版ごとの取り込み（engine_imports）の、文書ごとの範囲（ruling_sets）がすべて、どれかの記録か
     not_imported にあるか。対応は（取り込み, 文書, id）で区別する（版が違えば同じ id が別の裁定）。
+    v0.26 からの取り込みの not_imported は classification（公式の資料による当てはめ・研究上の解釈・未解決の問いの当てはめ・
+    エンジンの仮定・採用した仕様・実装の都合・表記の違い・処理の記録）を書き、status と合うか（excluded は仮定・実装の都合・表記、
+    existing_record は kyuura_records の既存の記録、adopted_spec は engine_positions の記録）を確かめる
     engine_refs の文書・版・id が、その取り込みの範囲にあるか。同じ id を記録と not_imported の両方に置かない。
     同じ id を 2 つ以上の記録に対応させるときは、どれにも part（どの部分か）が必要。2 つの未解決の論点に同じ id を
     対応させない（未解決の論点の重複）。取り込みの imported_rulings・unresolved_rulings が対応から求めたものと同じか。
@@ -39,6 +44,9 @@ docs/rules/card-rulings.md を生成する。
   - 最新の説明・カードの照合の記録で、原典を誰が確かめたか: kyuura が画像を読んだ確認（verification の by: kyuura）がない
     記録は、kyuura-engine の照合の記録の取り込み（import_provenance）で、原典の確認日（source_checked_on）・その根拠・方法・
     エンジンの記録の場所を書く。取り込んだ日（imported_on）と原典の確認日を分け、取り込みの記録に kyuura の確認を書かない
+  - エンジンの採用した仕様・簡略化・実装の事項（engine_positions）: kind・取り込み・カード・kyuura の記録があるか、裁定の status を
+    持たないか、採用した仕様の裁定 id がその取り込みの not_imported に adopted_spec として結ばれているか
+  - エンジンの未解決の一覧の数: 版ごとの engine_unresolved_total と、その版までに数える項目（counted_from_version の版から数える）が同じか
   - --check: 生成結果が docs/rules/card-rulings.md と同じか（ファイルは書き換えない）
 
 使い方: python3 scripts/build_card_rulings.py [--check]
@@ -62,6 +70,7 @@ ID_PATTERNS = {
     'issue': re.compile(r'^UQ-[A-Z0-9][A-Z0-9-]*[A-Z0-9]$'),
     'comparison': re.compile(r'^CMP-[A-Z0-9][A-Z0-9-]*[A-Z0-9]$'),
     'import': re.compile(r'^ENGINE-[A-Z0-9][A-Z0-9-]*$'),
+    'position': re.compile(r'^ENG-V\d+-[A-Z0-9][A-Z0-9-]*[A-Z0-9]$'),
 }
 ENGINE_TOKENS = re.compile(r'UNRESOLVED_|RuntimeError|UnsupportedError|IllegalActionError|StateIntegrityError|Phase\.|'
                            r'\b[A-Z][A-Z0-9]*_[A-Z0-9_]*[A-Z0-9]\b')
@@ -84,6 +93,34 @@ NOT_IMPORTED_STATUS = {
     'excluded': '対象外（実装の判断）',
     'deferred': '保留',
     'needs_recheck': '要再確認',
+    'card_application': 'カードごとの当てはめ（新しい裁定にしない）',
+    'existing_record': '既存の記録の当てはめ（kyuura_records）',
+    'adopted_spec': 'エンジンの採用した仕様（engine_positions）',
+}
+# 取り込まない行の分類（v0.26 からの取り込みで必須）。公式の資料・研究上の解釈・未解決の論点・エンジンの仮定・実装の都合・処理の記録を分ける
+NOT_IMPORTED_CLASSIFICATIONS = {
+    'official_confirmed': 'エンジンが CONFIRMED とした当てはめ（カードの文面・一般規定がそのまま当てはまる）。kyuura は原典を読み直していない',
+    'supported_interpretation': 'エンジンが SUPPORTED とした読み方（推論を含む研究上の解釈）',
+    'unresolved_rules_question': '未解決の問いの当てはめ（既存の論点と同じ問い）',
+    'engine_assumption': 'エンジンの実装上の仮定・判断・簡略化',
+    'engine_adopted_spec': 'エンジンの採用した仕様（公式の裁定ではない）',
+    'engine_implementation': 'エンジンの実装の都合（未対応・起こらない場面・計算の上限・保存の形式）',
+    'notation_difference': '表記・転記の違い',
+    'card_text_application': '印刷の文面・最新の説明と既存の記録から決めた処理の記録（分類の欄がない）',
+}
+CLASSIFICATION_STATUSES = {
+    'excluded': {'engine_assumption', 'engine_implementation', 'notation_difference'},
+    'card_application': {'official_confirmed', 'supported_interpretation', 'card_text_application'},
+    'existing_record': {'official_confirmed', 'supported_interpretation', 'unresolved_rules_question', 'card_text_application'},
+    'adopted_spec': {'engine_adopted_spec'},
+    'deferred': set(NOT_IMPORTED_CLASSIFICATIONS),
+    'needs_recheck': set(NOT_IMPORTED_CLASSIFICATIONS),
+}
+CLASSIFIED_FROM = 'v0.26'  # この版からの取り込みは、取り込まない行に classification を書く
+ENGINE_POSITION_KINDS = {
+    'adopted_spec': 'エンジンが採用した仕様（原典で決まらない点を、エンジンが決めて実装した。公式の裁定ではない）',
+    'simplification': 'エンジンが簡略化した仕様（印刷の文面の処理を簡単にした。エラッタ・最新の説明ではない）',
+    'implementation_matter': 'エンジンの実装の事項（不具合・未対応・制限。公式の未解決の裁定ではない）',
 }
 
 
@@ -130,6 +167,8 @@ def load(root=ROOT):
     ctx['rule_history'] = json.loads((root / 'data' / 'rule_history.json').read_text(encoding='utf-8'))
     ctx['rule_differences'] = json.loads((root / 'data' / 'rule_differences.json').read_text(encoding='utf-8'))
     ctx['codes'] = source_codes(root)
+    ledger = root / 'data' / 'curation' / 'card_corrections.json'
+    ctx['corrections'] = json.loads(ledger.read_text(encoding='utf-8'))['corrections'] if ledger.exists() else []
     return ctx
 
 
@@ -159,6 +198,8 @@ def target_label(target):
         return 'カード'
     if target.get('kind') == 'trainer':
         return 'トレーナー'
+    if target.get('kind') == 'energy':
+        return 'エネルギー'
     return {'attack': 'ワザ', 'power': '特殊能力'}[target['kind']] + f"「{target['name_ja']}」"
 
 
@@ -203,6 +244,7 @@ def all_ids(ctx):
     out += [(x['id'], 'issue', x) for x in r['issues']]
     out += [(x['id'], 'comparison', x) for x in r.get('comparisons', [])]
     out += [(x['id'], 'import', x) for x in r['engine_imports']]
+    out += [(x['id'], 'position', x) for x in r.get('engine_positions', [])]
     return out
 
 
@@ -212,6 +254,11 @@ def check_target(errors, where, cards, card_id, target, allow_card=False):
         return None
     if allow_card and target.get('kind') == 'card':
         return None
+    if target.get('kind') == 'energy':
+        card = cards[card_id]
+        if card.get('category') != 'energy' or card['name']['ja'] != target.get('name_ja') or 'index' in target:
+            errors.append(f'{where}: エネルギーの対象は、エネルギーカードのカード名を使い、index を持たない')
+        return card.get('energy')
     if target.get('kind') == 'trainer':
         card = cards[card_id]
         if card.get('category') != 'trainer' or not isinstance(card.get('trainer'), dict):
@@ -332,6 +379,8 @@ def validate(ctx):
     latest = {x['id']: x for x in ctx['latest']['records']}
     rulings = {x['id']: x for x in r['rulings']}
     issues = {x['id']: x for x in r['issues']}
+    positions = {x['id']: x for x in r.get('engine_positions', [])}
+    all_record_ids = set(kinds)
     rd_items = {x['id'] for x in ctx['rule_differences']['items']}
     rh_ids = rule_history_ids(rh)
     errata = errata_cards(rh)
@@ -434,7 +483,14 @@ def validate(ctx):
                 errors.append(f'{w}: 照合した欄 {path} が data/cards.json にない')
                 continue
             if current != value:
-                errors.append(f'{w}: 照合した欄 {path} の写しが今の data/cards.json と違う（照合し直す）')
+                # 照合のあとでデータを訂正した欄は、訂正の記録（data/curation/card_corrections.json）で、照合した値（before）から今の値（after）への
+                # 訂正が記録されていればよい（過去の照合の記録を書きかえない）。記録がなければ照合し直す
+                fix = next((c for c in ctx['corrections'] if c['card_id'] == x['card_id'] and c['field'] == path
+                            and c['before'] == value and c['after'] == current), None)
+                if fix is None:
+                    errors.append(f'{w}: 照合した欄 {path} の写しが今の data/cards.json と違う（照合し直すか、訂正の記録 data/curation/card_corrections.json に前後の値を書く）')
+                elif x['id'] not in fix.get('card_checks_affected', []):
+                    errors.append(f"{w}: 照合した欄 {path} を訂正した記録 {fix['id']} の card_checks_affected に、この照合の記録がない")
         if x.get('result') not in C['results']:
             errors.append(f"{w}: result の値が不正: {x.get('result')}")
         if (x.get('result') == 'data_error') != bool(x.get('data_error')):
@@ -731,13 +787,34 @@ def validate(ctx):
             for rid in ruling_set_ids(rs):
                 if (w, rs['document'], rid) not in uses and (rs['document'], rid) not in skipped:
                     errors.append(f"{w}: エンジンの裁定 {rid} が、どの記録にも not_imported にもない（{rs['document']}）")
+        classified = version_key(imp['engine_version']) >= version_key(CLASSIFIED_FROM)
         for n in imp.get('not_imported', []):
+            nid = n.get('ruling_id')
             if not n.get('reason'):
-                errors.append(f"{w}: not_imported の {n.get('ruling_id')} に理由がない")
+                errors.append(f"{w}: not_imported の {nid} に理由がない")
             if n.get('status') not in NOT_IMPORTED_STATUS:
-                errors.append(f"{w}: not_imported の {n.get('ruling_id')} の status の値が不正: {n.get('status')}（{'・'.join(NOT_IMPORTED_STATUS)}）")
-            elif n['status'] == 'excluded' and not any(w_ in (n.get('engine_classification') or '') for w_ in ('実装上の仮定', '実装上の扱い', '実装の設計', '実装上の判断')):
-                errors.append(f"{w}: not_imported の {n.get('ruling_id')} を対象外（excluded）にしているが、エンジンの分類が実装の判断でない（保留 deferred か要再確認 needs_recheck）")
+                errors.append(f"{w}: not_imported の {nid} の status の値が不正: {n.get('status')}（{'・'.join(NOT_IMPORTED_STATUS)}）")
+                continue
+            if not classified:
+                if n['status'] not in ('excluded', 'deferred', 'needs_recheck'):
+                    errors.append(f"{w}: not_imported の {nid} の status {n['status']} は、{CLASSIFIED_FROM} からの取り込みだけで使う")
+                elif n['status'] == 'excluded' and not any(w_ in (n.get('engine_classification') or '') for w_ in ('実装上の仮定', '実装上の扱い', '実装の設計', '実装上の判断')):
+                    errors.append(f"{w}: not_imported の {nid} を対象外（excluded）にしているが、エンジンの分類が実装の判断でない（保留 deferred か要再確認 needs_recheck）")
+                continue
+            cls = n.get('classification')
+            if cls not in NOT_IMPORTED_CLASSIFICATIONS:
+                errors.append(f"{w}: not_imported の {nid} の classification の値が不正: {cls}（{'・'.join(NOT_IMPORTED_CLASSIFICATIONS)}）")
+            elif cls not in CLASSIFICATION_STATUSES[n['status']]:
+                errors.append(f"{w}: not_imported の {nid} の status {n['status']} と classification {cls} が合わない")
+            for ref in n.get('kyuura_records', []):
+                if ref not in all_record_ids:
+                    errors.append(f"{w}: not_imported の {nid} の kyuura_records の記録がない: {ref}")
+            if n['status'] == 'existing_record' and not n.get('kyuura_records'):
+                errors.append(f"{w}: not_imported の {nid} は既存の記録の当てはめ（existing_record）なのに kyuura_records がない")
+            if n['status'] == 'adopted_spec' and n.get('engine_position') not in positions:
+                errors.append(f"{w}: not_imported の {nid} の engine_position の記録がない: {n.get('engine_position')}")
+            if cls == 'unresolved_rules_question' and n['status'] == 'existing_record' and not any(ref in issues for ref in n.get('kyuura_records', [])):
+                errors.append(f"{w}: not_imported の {nid} は未解決の問いの当てはめなのに、kyuura_records に未解決の論点がない")
         mine = {k: v for k, v in uses.items() if k[0] == w}
         imported = sorted({i for lst in mine.values() for k, i, _ in lst if k != 'issue'})
         unresolved = sorted({i for lst in mine.values() for k, i, _ in lst if k == 'issue'})
@@ -746,6 +823,32 @@ def validate(ctx):
                           f"余分: {'・'.join(sorted(set(imp['imported_rulings']) - set(imported))) or 'なし'}）")
         if 'unresolved_rulings' in imp and sorted(imp['unresolved_rulings']) != unresolved:
             errors.append(f"{w}: unresolved_rulings が対応から求めたものと違う（求めたもの: {'・'.join(unresolved) or 'なし'}）")
+    # ---- エンジンの採用した仕様・簡略化・実装の事項（裁定・論点と分ける）
+    for x in r.get('engine_positions', []):
+        w = x['id']
+        if x.get('kind') not in ENGINE_POSITION_KINDS:
+            errors.append(f"{w}: kind の値が不正: {x.get('kind')}（{'・'.join(ENGINE_POSITION_KINDS)}）")
+        imp = imports.get(x.get('engine_import'))
+        if imp is None:
+            errors.append(f"{w}: engine_import の取り込みがない: {x.get('engine_import')}")
+        elif x.get('document') not in imp['documents']:
+            errors.append(f"{w}: document {x.get('document')} が取り込み {imp['id']} の documents にない")
+        for c in x.get('cards', []):
+            check_target(errors, w, cards, c['card_id'], c['target'])
+        for ref in x.get('kyuura_records', []):
+            if ref not in all_record_ids:
+                errors.append(f'{w}: kyuura_records の記録がない: {ref}')
+        for k in ('summary', 'kyuura_handling'):
+            if not x.get(k):
+                errors.append(f'{w}: {k} がない')
+        if 'status' in x or 'conclusion' in x:
+            errors.append(f'{w}: エンジンの採用・簡略化・実装の事項に、裁定の status・conclusion を書かない（公式の裁定ではない）')
+        if imp is not None:
+            skipped = {n['ruling_id']: n for n in imp.get('not_imported', []) if n.get('document') == x.get('document')}
+            for rid in x.get('engine_rulings', []):
+                n = skipped.get(rid)
+                if not n or n.get('status') != 'adopted_spec' or n.get('engine_position') != w:
+                    errors.append(f'{w}: エンジンの裁定 {rid} が、取り込み {imp["id"]} の not_imported に adopted_spec（engine_position: {w}）としてない')
     idx = r.get('engine_unresolved_index', [])
     keys = Counter(u['engine_key'] for u in idx)
     for k, n in keys.items():
@@ -757,7 +860,8 @@ def validate(ctx):
         if 'engine_unresolved_total' not in imp:
             continue
         # その版までの項目のうち、エンジンが数えているもの（in_engine_count が false でないもの）。エンジンの数え方の件数と同じか
-        n = sum(1 for u in idx if vkey(u['engine_version']) <= vkey(imp['engine_version']) and u.get('in_engine_count', True))
+        n = sum(1 for u in idx if vkey(u['engine_version']) <= vkey(imp['engine_version']) and u.get('in_engine_count', True)
+                and vkey(u.get('counted_from_version') or u['engine_version']) <= vkey(imp['engine_version']))
         if n != imp['engine_unresolved_total']:
             errors.append(f"engine_unresolved_index: {imp['engine_version']} までの項目（エンジンが数えるもの）が {n} 件で、"
                           f"{imp['id']} の engine_unresolved_total の {imp['engine_unresolved_total']} と違う")
@@ -777,6 +881,11 @@ def validate(ctx):
             errors.append(f'engine_unresolved_index: {k} は disposition が {disp} なのに kyuura_issue がある')
         if disp != 'issue' and not u.get('reason'):
             errors.append(f'engine_unresolved_index: {k} を論点にしない理由（reason）がない')
+        for f in ('stop_code_since', 'counted_from_version'):
+            if u.get(f) and (u[f] not in imported_versions or vkey(u[f]) < vkey(u['engine_version'])):
+                errors.append(f"engine_unresolved_index: {k} の {f}（{u[f]}）が、取り込んだ版でないか、項目の版より前")
+        if u.get('stop_code_since') and not u.get('stop_code'):
+            errors.append(f'engine_unresolved_index: {k} に stop_code_since があるのに停止コードがない')
         if disp == 'out_of_scope' and u.get('engine_version') in imported_versions:
             errors.append(f"engine_unresolved_index: {k} は取り込んだ版 {u['engine_version']} のものなので、out_of_scope にしない")
         for inst in u.get('instances', []):
@@ -833,8 +942,12 @@ def version_key(v):
     return tuple(int(x) for x in re.findall(r'\d+', v))
 
 
-def unresolved_counts(ctx):
+def unresolved_counts(ctx, as_of=None):
     """未解決の数を、kyuura の調査の論点とエンジンの数え方に分けて求める（同じ数として扱わない）。
+
+    as_of（'v0.25' など）を渡すと、その版の時点の数にする: その版までの一覧の項目、その版で数えていた項目（counted_from_version）、
+    その版で付いていた停止コード（stop_code_since）、その版までのエンジンの裁定に結んだ論点（engine_refs のない論点も含む）、
+    その版までの事例（instances）。過去の取り込みの検査が、あとの版の取り込みで変わらずに確かめられるようにする。
 
     - research_issues: kyuura の未解決の論点（issues）の数
     - engine_total: 最新の版でエンジンが数える未解決の裁定の数（engine_unresolved_index で in_engine_count が false でないもの）
@@ -846,28 +959,43 @@ def unresolved_counts(ctx):
     - issues_not_in_index: エンジンの一覧の項目と結んでいない論点
     """
     r = ctx['rulings']
-    idx = r['engine_unresolved_index']
+    latest = as_of or max((imp['engine_version'] for imp in r['engine_imports']), key=version_key)
+    lk = version_key(latest)
+    within = lambda v: version_key(v) <= lk
+    idx = []
+    for u in r['engine_unresolved_index']:
+        if not within(u['engine_version']):
+            continue
+        u = dict(u, instances=[i for i in u.get('instances', []) if within(i['engine_version'])])
+        if u.get('stop_code_since') and not within(u['stop_code_since']):
+            u['stop_code'] = None
+        if u.get('counted_from_version') and not within(u['counted_from_version']):
+            u['in_engine_count'] = False
+        idx.append(u)
     counted = [u for u in idx if u.get('in_engine_count', True)]
-    latest = max((imp['engine_version'] for imp in r['engine_imports']), key=version_key)
+    issues = [x for x in r['issues'] if not x.get('engine_refs') or any(within(e['engine_version']) for e in x['engine_refs'])]
     by_issue = defaultdict(list)
     for u in idx:
         if u.get('kyuura_issue'):
             by_issue[u['kyuura_issue']].append(u)
     return {
-        'research_issues': len(r['issues']),
+        'research_issues': len(issues),
         'latest_version': latest,
         'engine_total': len(counted),
         'engine_stop_codes': sum(1 for u in counted if u.get('stop_code')),
-        'by_import': [(imp['engine_version'], imp['engine_unresolved_total']) for imp in r['engine_imports'] if 'engine_unresolved_total' in imp],
+        'by_import': [(imp['engine_version'], imp['engine_unresolved_total']) for imp in r['engine_imports']
+                      if 'engine_unresolved_total' in imp and within(imp['engine_version'])],
         'v013_items': [u['engine_key'] for u in counted if version_key(u['engine_version']) <= version_key('v0.13')],
-        'v017_additions': [u['engine_key'] for u in counted if u['engine_version'] == 'v0.17'],
+        'v017_additions': [u['engine_key'] for u in counted if u['engine_version'] == 'v0.17' and not u.get('counted_from_version')],
+        'v026_v068_additions': [u['engine_key'] for u in counted if version_key('v0.26') <= version_key(u['engine_version']) <= version_key('v0.68')],
+        'counted_later': [(u['engine_key'], u['counted_from_version']) for u in counted if u.get('counted_from_version')],
         'not_in_engine_count': [u['engine_key'] for u in idx if not u.get('in_engine_count', True)],
         'out_of_scope': [u['engine_key'] for u in idx if u.get('disposition') == 'out_of_scope'],
         'instances': [(u['engine_key'], i['engine_version'], i['ruling_id']) for u in idx for i in u.get('instances', [])],
-        'issues_without_stop_code': [x['id'] for x in r['issues'] if not any(u.get('stop_code') for u in by_issue.get(x['id'], []))],
-        'issues_not_in_index': [x['id'] for x in r['issues'] if x['id'] not in by_issue],
-        'stop_codes_by_issue': {x['id']: sorted({u['stop_code'] for u in by_issue.get(x['id'], []) if u.get('stop_code')}) for x in r['issues']},
-        'game_effect': Counter(x.get('audit', {}).get('game_effect') for x in r['issues']),
+        'issues_without_stop_code': [x['id'] for x in issues if not any(u.get('stop_code') for u in by_issue.get(x['id'], []))],
+        'issues_not_in_index': [x['id'] for x in issues if x['id'] not in by_issue],
+        'stop_codes_by_issue': {x['id']: sorted({u['stop_code'] for u in by_issue.get(x['id'], []) if u.get('stop_code')}) for x in issues},
+        'game_effect': Counter(x.get('audit', {}).get('game_effect') for x in issues),
     }
 
 
@@ -1184,9 +1312,11 @@ def build(ctx):
             mapping = engine_mapping(ctx, imp['id'], rs['document'])
             ids = ruling_set_ids(rs)
             skipped = {n['ruling_id']: n for n in imp.get('not_imported', []) if n.get('document') == rs['document']}
-            reported = '・'.join(f'{k} {v}' for k, v in rs['engine_reported_counts'].items())
+            reported = ('エンジンが報告した分類: ' + '・'.join(f'{k} {v}' for k, v in rs['engine_reported_counts'].items()) + '。'
+                        if rs.get('engine_reported_counts') else '')
             extra = f"（ほかに {'・'.join(rs['extra_ids'])}）" if rs.get('extra_ids') else ''
-            out += [f"エンジンの裁定 {rs['prefix']}{rs['first']}〜{rs['prefix']}{rs['last']}{extra}（{rs['document']}）。エンジンが報告した分類: {reported}。", '',
+            span = f"{rs['prefix']}{rs['first']}〜{rs['prefix']}{rs['last']}" if rs['last'] >= rs['first'] else ''
+            out += [f"エンジンの裁定 {span}{extra if span else '・'.join(rs.get('extra_ids', []))}（{rs['document']}）。{reported}", '',
                     '| エンジンの id | エンジンの分類 | 取り込み | kyuura の記録 | kyuura の分類 | 根拠のページ（確認方法は各記録を参照） | 部分・備考・分類を変えた理由 |',
                     '|---|---|---|---|---|---|---|']
             tally = Counter()
@@ -1194,7 +1324,10 @@ def build(ctx):
                 lst = mapping.get(rid, [])
                 if not lst:
                     n = skipped.get(rid, {})
-                    out.append(f"| {rid} | {md(n.get('engine_classification', '—'))} | {NOT_IMPORTED_STATUS.get(n.get('status'), '—')} | — | — | — | {md(n.get('reason', ''))} |")
+                    cls = NOT_IMPORTED_CLASSIFICATIONS.get(n.get('classification'), '').split('（')[0]
+                    recs = '・'.join(n.get('kyuura_records', [])) or '—'
+                    out.append(f"| {rid} | {md(n.get('engine_classification', '—'))} | {NOT_IMPORTED_STATUS.get(n.get('status'), '—')} | {md(recs)} | "
+                               f"{md(cls) or '—'} | — | {md(n.get('reason', ''))} |")
                     tally['取り込んでいない'] += 1
                     continue
                 kinds = {k for k, _, _ in lst}
@@ -1238,6 +1371,21 @@ def build(ctx):
     out.append('')
     tally = Counter(u.get('disposition') for u in idx)
     out += ['扱いの集計: ' + '、'.join(f'{DISPOSITION_SHORT.get(k, k)} {v}' for k, v in tally.items()) + '。', '']
+    positions = r.get('engine_positions', [])
+    pos_section = ['## 9. エンジンの採用した仕様・簡略化・実装の事項', '',
+                   'kyuura-engine が原典で決まらない点を決めて実装した仕様、処理を簡略化した仕様、実装の不具合・制限です。公式の裁定・エラッタ・最新の説明ではなく、'
+                   'kyuura の裁定（CR-）・論点（UQ-）とは分けて記録しています（data/sidecar/rulings.json の engine_positions）。', '']
+    for x in positions:
+        cards_txt = '、'.join(f"{card_label(cards, c['card_id'])}・{target_label(c['target'])}" for c in x['cards'])
+        pos_section += [f"### {x['id']}（{ENGINE_POSITION_KINDS[x['kind']].split('（')[0]}）", '',
+                        f"- エンジン: {x['engine_import']}・{x['document']} {x.get('section', '')}" + (f"（裁定 {'・'.join(x['engine_rulings'])}）" if x.get('engine_rulings') else ''),
+                        f"- カード: {cards_txt}",
+                        f"- 内容: {md(x['summary'])}"]
+        if x.get('engine_basis'):
+            pos_section.append('- エンジンが挙げた根拠: ' + '；'.join(md(b) for b in x['engine_basis']))
+        if x.get('kyuura_records'):
+            pos_section.append('- kyuura の記録: ' + '・'.join(x['kyuura_records']))
+        pos_section += [f"- kyuura での扱い: {md(x['kyuura_handling'])}", '']
     out += ['### 未解決の数の区別', '',
             'kyuura の調査の未解決（論点の数）と、エンジンの数え方（未解決の裁定・停止コード）は別の数です。どれも、ほかの数の代わりにしません。', '',
             f"- kyuura の未解決の論点: {uc['research_issues']} 件（5 章。結果への影響: " +
@@ -1246,12 +1394,15 @@ def build(ctx):
             '取り込みごとの数: ' + '、'.join(f'{v} {n} 件' for v, n in uc['by_import']),
             f"  - v0.13 までの項目: {len(uc['v013_items'])} 件（{'・'.join(uc['v013_items'])}）",
             f"  - v0.17 で加わった項目: {len(uc['v017_additions'])} 件（{'・'.join(uc['v017_additions'])}）",
-            f"- エンジンが数に入れていない項目: {len(uc['not_in_engine_count'])} 件（{'・'.join(uc['not_in_engine_count'])}。カードを延期した設計の表の問い。kyuura では論点にした）",
+            f"  - v0.26〜v0.68 で加わった項目: {len(uc['v026_v068_additions'])} 件",
+            f"  - あとの版から数えるようになった項目: {len(uc['counted_later'])} 件（" + '、'.join(f'{k}（{v} から）' for k, v in uc['counted_later']) + '）',
+            f"- エンジンが数に入れていない項目: {len(uc['not_in_engine_count'])} 件（{'・'.join(uc['not_in_engine_count'])}。設計の表の問い・今の対応カードでは起こらないコードのない問い。kyuura では論点にした）",
             f"- 既存の項目の、あとの版の事例（新しい項目にしない）: {len(uc['instances'])} 件（" +
             '、'.join(f'{k} → {v} の {rid}' for k, v, rid in uc['instances']) + '）',
             f"- 取り込みの範囲の外（v0.1〜v0.4b。kyuura では論点にしていない）: {len(uc['out_of_scope'])} 件（{'・'.join(uc['out_of_scope'])}）",
             f"- 停止コードのない論点: {len(uc['issues_without_stop_code'])} 件（{'・'.join(uc['issues_without_stop_code'])}）",
             f"- エンジンの一覧の項目と結んでいない論点: {len(uc['issues_not_in_index'])} 件（{'・'.join(uc['issues_not_in_index'])}）", '']
+    out += pos_section
     return '\n'.join(out)
 
 

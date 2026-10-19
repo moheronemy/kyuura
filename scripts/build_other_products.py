@@ -6,16 +6,19 @@
 あわせて、商品をまたいだ同じカード（再録）の判定のしかたと点検の結果のページ（docs/cards/reprints.md）を作る。
 
 入力: data/ja_text_pcgsearch.json（pcg-search.com から抽出）、data/ja_text_nazonobasho.json（サザンアイランドのレベル・備考）、
-      data/cards.json（拡張パックと同じカードかの判定）、data/curation/other_products.json（発売日・構成・英語版の対応・日英の違い）、
+      data/cards.json（拡張パックと同じカードかの判定）、data/product_items.json・data/same_card_groups.json（記録の id・元の項目の行き先・
+      同じカードの組。scripts/build_cardlist.py の出力）、data/curation/non_pack.json（商品の記号・収録していない商品）、data/curation/other_products.json（発売日・構成・英語版の対応・日英の違い）、
       data/curation/sets.json（拡張パックの発売日）
       data/curation/en_fixes.json（英語版データの補正。再録の点検のページに載せる）
 出力: docs/cards/other-products.md（一覧）、docs/cards/products/*.md（商品ごと）、docs/cards/reprints.md（再録の対応付け）
 
-使い方: python3 scripts/build_other_products.py
+使い方: python3 scripts/build_other_products.py [--check]
+  --check: 生成結果が今のページと同じか（ファイルは書き換えない）
 """
 import difflib
 import json
 import re
+import sys
 import unicodedata
 from collections import Counter
 from pathlib import Path
@@ -95,7 +98,13 @@ class Catalog:
     def __init__(self):
         self.data = load('data/ja_text_pcgsearch.json')['products']
         self.cur = load('data/curation/other_products.json')
-        self.records = load('data/cards.json')['cards']
+        self.np = load('data/curation/non_pack.json')
+        # data/cards.json のうち拡張パック 10 弾の記録（拡張パック以外の商品の記録は、このページ群では pcg-search の項目から作る）
+        self.records = [r for r in load('data/cards.json')['cards'] if r.get('product_group', 'expansion_pack') == 'expansion_pack']
+        items = load('data/product_items.json')
+        self.item_id = {it['page']: it['id'] for it in items['items']}  # pcg-search のページ → data/cards.json の id（対象外の項目は product_items の id）
+        self.item_disposition = {it['page']: it['disposition'] for it in items['items']}
+        self.product_entries = {p['pcg_title']: p for p in items['products']}
         sets = load('data/curation/sets.json')
         self.products = {p['pcg_title']: p for p in self.cur['products']}
         self.promo_info = self.cur.get('promos', {})
@@ -230,13 +239,20 @@ def dist_ja(text):
     return re.sub(r'\s*\([^)]*\d{4}\)$', '', text) + '（Bulbapedia）'
 
 
+def id_cell(cat, c):
+    """data/cards.json の id（番号違いをまとめたページは「→ 代表の id」、対戦のカードでない項目は「対象外」）。"""
+    pid = page_id(c)
+    i, d = cat.item_id.get(pid, ''), cat.item_disposition.get(pid)
+    return {'card': f'`{i}`', 'copy': f'→ `{i}`', 'non_game': f'対象外（`{i}`）'}.get(d, '')
+
+
 def card_table(cat, cards, key, qty=None, en_prints=None):
-    head = '| 番号 | カード名 | 種類 | タイプ | HP | レア |' + (' 枚数 |' if qty else '') + ' 英語版 | ほかの収録 |'
+    head = '| 番号 | id | カード名 | 種類 | タイプ | HP | レア |' + (' 枚数 |' if qty else '') + ' 英語版 | ほかの収録 |'
     lines = [head, '|' + '---|' * (head.count('|') - 1)]
     for c in cards:
         name = cat.display_name(c)
         name = f"[{md(name)}]({c['url']})" + ('（名前はカードの画像で確認）' if name != c['name'] else '')
-        row = [c['list_number'], name, kind_short(c), c.get('type') or '', str(c.get('hp') or ''),
+        row = [c['list_number'], id_cell(cat, c), name, kind_short(c), c.get('type') or '', str(c.get('hp') or ''),
                c['rarity'] if c['rarity'] not in (None, '-') else '']
         if qty:
             row.append(str(qty.get(page_id(c), '')))
@@ -262,7 +278,9 @@ def header(title, depth=1, numbers='「番号」は pcg-search の並び順で�
             f'[拡張パック以外の商品の一覧](../other-products.md) ／ 出典の記号: [出典と確認状況]({up}../sources.md)', '',
             '- カードの欄（名前・HP・ワザなど）は、ポケモンカード 旧シリーズ検索（pcg-search.com）[N3] の転記です。カード名から各カードのページにリンクしています。',
             f'- {numbers}',
-            '- 「ほかの収録」は、名前（ポケモンは HP・特殊能力名・ワザ名も）が同じカードが入っているほかの商品です（拡張パック 10 弾と、このページ群の商品）。', '']
+            '- 「ほかの収録」は、名前（ポケモンは HP・特殊能力名・ワザ名も）が同じカードが入っているほかの商品です（拡張パック 10 弾と、このページ群の商品）。',
+            '- 「id」は `data/cards.json` のカードの id（商品の記号とカードページ名の末尾 3 桁。[data/product_items.json](../../../data/product_items.json) にページとの対応）。'
+            '「→」は番号だけが違うページを、代表のページの記録にまとめたもの。「対象外」は通常の対戦のデッキに入れるカードではない項目（`data/product_items.json` の non_game_items）。', '']
 
 
 def keys_of(cat, group):
@@ -529,19 +547,21 @@ def page_intro_packs(cat):
     for k in keys:
         cards = cat.data[k]
         L += [f"## {cat.short_name(k)}", '',
-              '| 番号 | カード名 | 種類 | タイプ | HP | 英語版 | ほかの収録 | Bulbapedia |', '|---|---|---|---|---|---|---|---|']
+              '| 番号 | id | カード名 | 種類 | タイプ | HP | 英語版 | ほかの収録 | Bulbapedia |', '|---|---|---|---|---|---|---|---|---|']
         for c in cards:
             if is_basic_energy(c):
                 continue
-            L.append('| {} | [{}]({}) | {} | {} | {} | {} | {} | {} |'.format(
-                c['list_number'], md(c['name']), c['url'], kind_short(c), c.get('type') or '', c.get('hp') or '',
+            L.append('| {} | {} | [{}]({}) | {} | {} | {} | {} | {} | {} |'.format(
+                c['list_number'], id_cell(cat, c), md(c['name']), c['url'], kind_short(c), c.get('type') or '', c.get('hp') or '',
                 cat.en(c), '<br>'.join(cat.appears(c)), bulba_cell(cat, c)))
         energy = {}
         for c in cards:
             if is_basic_energy(c):
-                energy.setdefault(c['name'], []).append(str(int(c['list_number'].split('/')[0])))
+                energy.setdefault(c['name'], []).append(c)
         if energy:
-            L += ['', '基本エネルギー: ' + '、'.join(f"{n} {len(v)} 枚（{'・'.join(v)}）" for n, v in energy.items())]
+            L += ['', '基本エネルギー: ' + '、'.join(
+                f"{n} {len(v)} 枚（{'・'.join(str(int(c['list_number'].split('/')[0])) for c in v)}。`{cat.item_id[page_id(v[0])]}`）"
+                for n, v in energy.items())]
         L.append('')
     return L
 
@@ -743,6 +763,26 @@ def bulba_check(cat):
     return len(bp), bad
 
 
+def record_group_mismatches(cat):
+    """このページの組（pcg-search のページと拡張パックの記録で作る）と、data/same_card_groups.json の記録の組の食い違い。
+    ページは data/product_items.json で記録の id に直し、対戦のカードでない項目は除く。1 つの記録だけになる組は比べない。"""
+    page_sets = []
+    for sig, members in cat.groups.items():
+        ids = set()
+        for g in members:
+            if 'record' in g:
+                ids.add(g['record']['id'])
+            elif cat.item_disposition.get(page_id(g['card'])) in ('card', 'copy'):
+                ids.add(cat.item_id[page_id(g['card'])])
+        if len(ids) > 1:
+            page_sets.append(frozenset(ids))
+    rec_sets = [frozenset(m['id'] for m in g['members']) for g in load('data/same_card_groups.json')['groups']]
+    a, b = set(page_sets), set(rec_sets)
+    out = [(x, next((y for y in b if x & y), frozenset())) for x in sorted(a - b, key=sorted)]
+    out += [(frozenset(), y) for y in sorted(b - a, key=sorted) if not any(y & x for x in a - b)]
+    return out, len(rec_sets)
+
+
 def page_reprints(cat):
     groups = reprint_groups(cat)
     L = ['# 再録カードの対応付け', '', GENERATED.replace('data/ja_text_pcgsearch.json と data/curation/other_products.json',
@@ -814,6 +854,12 @@ def page_reprints(cat):
     for a, b in near_same_numbers:
         mark = '（効果文も同じ。要確認）' if (a, b) in suspicious else '（効果文が違う別のカード）'
         L.append(f"  - {a[0]} HP{a[1]}: {'・'.join(a[2] + a[3])} ／ {'・'.join(b[2] + b[3])}{mark}")
+    mism, n_rec = record_group_mismatches(cat)
+    L += [f'- **記録の組との照合**: `data/cards.json` の記録で作った同じカードの組（[`data/same_card_groups.json`](../../data/same_card_groups.json)。{n_rec} 組。'
+          'イントロパックの番号違いのページは 1 つの記録、基本エネルギーも含む）と、このページの組（pcg-search のページで数える）を、記録の id の集まりで比べました。'
+          f'食い違いは {len(mism)} 件です。']
+    for a, b in mism:
+        L.append(f"  - このページの組 {'・'.join(sorted(a)) or '（なし）'} ／ 記録の組 {'・'.join(sorted(b)) or '（なし）'}")
     L += ['',
           '### 点検で見つけて直したこと', '',
           '- 拡張パック「ポケモンジャングル」のプリン（PMCG2-035）は、なぞのばしょの転記で 2 つめのワザ名が「こもりうた」になっていました（正しくは「はたく」）。'
@@ -903,11 +949,15 @@ def page_reprints(cat):
 def page_index(cat):
     L = ['# 拡張パック以外の商品', '', GENERATED, '',
          '旧裏期に日本で出た、拡張パック 10 弾以外の商品のカードをまとめたページ群です。',
-         'これらのカードは拡張パックのデータ（`data/cards.json`）には入れず、`data/ja_text_pcgsearch.json` に収録しています。', '',
-         '- カードの欄は、ポケモンカード 旧シリーズ検索（pcg-search.com）[N3] の転記です。',
+         '対戦に使うカードは `data/cards.json`・`data/cards.csv` に、商品の記号の id（例 `GD1-009`）で収録しています（`product_group` が `expansion_pack` 以外の記録）。'
+         'pcg-search の転記そのものは `data/ja_text_pcgsearch.json`、元の項目（カードページ）ごとの行き先（記録・番号違いのまとめ・対戦のカードでない項目）と商品の構成は '
+         '[`data/product_items.json`](../../data/product_items.json)、商品をまたいだ同じカードの組は [`data/same_card_groups.json`](../../data/same_card_groups.json) にあります。', '',
+         '- カードの欄は、ポケモンカード 旧シリーズ検索（pcg-search.com）[N3] の転記です。進化元・にげるの一部は、同じサイトのカードページを読み直して確かめました（`data/pcgsearch_page_checks.json`。2026-10-19）。',
          '- 商品の情報（発売日・構成・英語版の配布など）は、主に Bulbapedia [X30][X31][X41]〜[X48] によります（MediaWiki の API でページの原文を取得して確認）。',
          '- 確度（確実／有力／未確認）と出典の記号は [出典と確認状況](../sources.md) を参照。', '',
          '| 商品 | 発売 | カード | 英語版 | ページ |', '|---|---|---|---|---|']
+    counts_head = ['', '商品ごとの項目と記録の数（`data/product_items.json` の counts）:', '',
+                   '| 記号 | 商品 | 元の項目 | 記録 | 番号違いのまとめ | 対象外の項目 | 通常の対戦のカード |', '|---|---|---|---|---|---|---|']
     rows = {
         'expansion_sheet': ('1998-03〜1998-11', '英語版になったのは 6 枚（Wizards Black Star Promos）'),
         'southern_islands': ('1999-07-17', 'Southern Islands（2001）の 18 枚'),
@@ -925,6 +975,21 @@ def page_index(cat):
         date, en = rows[group]
         kinds = '旧裏期・neo 期' if group == 'promo' else f'{len(keys)} 種'
         L.append(f"| {title}（{kinds}）| {date} | {n_cards} 種 | {en} | [{slug}.md](products/{slug}.md) |")
+    L += counts_head
+    for title, e in cat.product_entries.items():
+        n = e['counts']
+        L.append(f"| `{e['id']}` | {e['name']} | {n['source_items']} | {n['card_records']} | {n['merged_copies']} | {n['non_game_items']} | {n['standard_play_cards']} |")
+    tot = {k: sum(e['counts'][k] for e in cat.product_entries.values()) for k in next(iter(cat.product_entries.values()))['counts']}
+    L.append(f"| 計 | | {tot['source_items']} | {tot['card_records']} | {tot['merged_copies']} | {tot['non_game_items']} | {tot['standard_play_cards']} |")
+    L += ['', '- 元の項目の数は pcg-search のカードページの数で、カードの種類の数ではありません（イントロパックのデッキは番号ごとにページがある）。構築済みデッキの封入枚数は各商品のページの「枚数」です。',
+          '- 「通常の対戦のカード」は記録のうち `play_scope` が `standard` のもの（ガルーラルール専用・公式大会で使えないと書かれたカードを除く）。']
+    unc = cat.np.get('uncovered_products', [])
+    if unc:
+        L += ['', '## 収録していない商品・範囲（わかっているもの）', '',
+              '23 の商品で旧裏期の商品をすべて収録できたとは言えません。わかっている範囲で、収録していないもの・確かめていないものを挙げます。', '',
+              '| 対象 | 根拠 | 扱い・不足 |', '|---|---|---|']
+        for x in unc:
+            L.append(f"| {md(x['target'])} | {md(x['basis'])} | {md(x['status'])} |")
     L += ['', '英語版にあって日本の拡張パックにないカードの、日本での初出は [英語版のみに見られるカード](english-only.md) にあります。',
           '商品をまたいだ同じカード（再録）の判定のしかたと点検の結果は [再録カードの対応付け](reprints.md) にあります。', '',
           '## まだ確認できていないこと', '',
@@ -939,16 +1004,26 @@ def page_index(cat):
 
 
 def main():
+    check = '--check' in sys.argv[1:]
     cat = Catalog()
-    (OUT / 'products').mkdir(exist_ok=True)
     builders = {'expansion-sheets': page_expansion_sheets, 'southern-islands': page_southern_islands,
                 'gym-decks': page_gym_decks, 'quick-starter-gift': page_quick_starter_gift,
                 'intro-packs': page_intro_packs, 'premium-files': page_premium_files, 'promos': page_promos}
+    pages = {}
     for slug, title, group in PAGES:
         if keys_of(cat, group):
-            (OUT / 'products' / f'{slug}.md').write_text('\n'.join(builders[slug](cat)), encoding='utf-8')
-    (OUT / 'other-products.md').write_text('\n'.join(page_index(cat)), encoding='utf-8')
-    (OUT / 'reprints.md').write_text('\n'.join(page_reprints(cat)), encoding='utf-8')
+            pages[OUT / 'products' / f'{slug}.md'] = '\n'.join(builders[slug](cat))
+    pages[OUT / 'other-products.md'] = '\n'.join(page_index(cat))
+    pages[OUT / 'reprints.md'] = '\n'.join(page_reprints(cat))
+    if check:
+        bad = [p for p, text in pages.items() if not p.exists() or p.read_text(encoding='utf-8') != text]
+        if bad:
+            raise SystemExit('生成結果が違う: ' + ', '.join(str(p.relative_to(OUT.parent.parent)) for p in bad))
+        print(f'{len(pages)} pages; OK', file=sys.stderr)
+        return
+    (OUT / 'products').mkdir(exist_ok=True)
+    for p, text in pages.items():
+        p.write_text(text, encoding='utf-8')
     print(sum(len(v) for v in cat.data.values()), 'cards')
 
 

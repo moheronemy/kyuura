@@ -156,8 +156,35 @@ def reprint_stats():
           '、'.join(f"{bop.REPRINT_KIND_JA.get(k, k)} {v}" for k, v in kinds.most_common()) + '）')
 
 
+def non_pack_stats():
+    """拡張パック以外の商品の記録（data/cards.json の product_group が expansion_pack 以外）と、元の項目の行き先。"""
+    allc = load('data/cards.json')['cards']
+    np_ = [r for r in allc if r.get('product_group', 'expansion_pack') != 'expansion_pack']
+    items = load('data/product_items.json')
+    groups = load('data/same_card_groups.json')
+    ledger = load('data/curation/card_corrections.json')
+    print(f'\n## data/cards.json（拡張パック以外の商品、{len(np_)} 件）\n')
+    print('- 元の項目（data/ja_text_pcgsearch.json のカードページ）: ' + f"{len(items['items'])} 件（" +
+          '、'.join(f'{k} {v}' for k, v in Counter(it['disposition'] for it in items['items']).most_common()) + '）')
+    print('- 商品ごとの記録: ' + '、'.join(f"{p['id']} {p['counts']['card_records']}" for p in items['products']))
+    print('- 種類: ' + '、'.join(f'{k} {v}' for k, v in Counter(r['category'] for r in np_).most_common()) +
+          '。使える範囲（play_scope）: ' + '、'.join(f'{k} {v}' for k, v in Counter(r['play_scope'] for r in np_).most_common()))
+    print('- 対戦のカードでない項目（non_game_items）: ' + '、'.join(f'{k} {v}' for k, v in Counter(x['kind'] for x in items['non_game_items']).most_common()))
+    print('- 値の欠け（data_gaps）: ' + '、'.join(f'{k} {v}' for k, v in Counter(g for r in np_ for g in r['data_gaps']).most_common()))
+    src = Counter(r['field_sources'].get('pokemon.evolves_from', 'なし') .split(':')[0] for r in np_
+                  if r['pokemon'] and r['pokemon']['stage'] in ('stage1', 'stage2'))
+    print('- 進化元の出どころ（1 進化・2 進化）: ' + '、'.join(f'{k} {v}' for k, v in src.most_common()))
+    rt = Counter(r['field_sources'].get('pokemon.retreat_cost') for r in np_ if r['pokemon'])
+    print('- にげるの出どころ: ' + '、'.join(f'{k} {v}' for k, v in rt.most_common()))
+    print(f"- 同じカードの組（data/same_card_groups.json）: {len(groups['groups'])} 組（拡張パックとの組 "
+          f"{sum(1 for g in groups['groups'] if any(m['product'] in ('PMCG1','PMCG2','PMCG3','PMCG4','PMCG5','PMCG6','neo1','neo2','neo3','neo4') for m in g['members']))}）")
+    print(f"- 訂正の記録（data/curation/card_corrections.json）: 訂正 {len(ledger['corrections'])} 件（" +
+          '、'.join(f'{k} {v}' for k, v in Counter(c['applied_by'] for c in ledger['corrections']).most_common()) + '）、候補 ' +
+          f"{len(ledger['candidates'])} 件（" + '、'.join(f'{k} {v}' for k, v in Counter(c['status'] for c in ledger['candidates']).most_common()) + '）')
+
+
 def main():
-    cards = load('data/cards.json')['cards']
+    cards = [r for r in load('data/cards.json')['cards'] if r.get('product_group', 'expansion_pack') == 'expansion_pack']
     tr = transcriptions()
     print(f'\n## data/cards.json（拡張パック 10 弾、{len(cards)} 件）\n')
 
@@ -302,5 +329,6 @@ if __name__ == '__main__':
     source_stats()
     rule_stats()
     main()
+    non_pack_stats()
     reprint_stats()
     sidecar_stats()

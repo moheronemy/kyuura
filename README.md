@@ -23,14 +23,15 @@
 - [旧裏・新裏の混合ルール（2001〜2003年）](docs/rules/mixed-2002.md) — 裏面の変更後の混合、サポーター・ポケパワー/ポケボディーへの読み替え、殿堂入りカード、バトルロード 2002
 - [新ガルーラルール（2002年）](docs/rules/kangaskhan-2002.md) — 旧裏と新裏の山札を使い分ける 2 人 1 組の対戦と「タッチ世代交代！」
 - [カードの文面の変更とエラッタの履歴](docs/rules/errata-history.md) — 印刷の変更・公式エラッタ・読み替えの区別
-- [カードの裁定と公式の最新の説明](docs/rules/card-rulings.md) — カード・ワザごとの公式の書籍の「最新の説明」（印刷の文面とは別に記録）、照合、裁定（CONFIRMED・SUPPORTED）、未解決の論点、kyuura-engine v0.25までの裁定 id との対応（エナジートランス・あまごい・ダメージスワップ・かがくへんかガス・とうめい・はんげき・こんじょう・ふしちょう・ほのおのかべ・こうらがえし・わるいねぞう・たおれこむ・だつりょくえきなど）
+- [カードの裁定と公式の最新の説明](docs/rules/card-rulings.md) — カード・ワザごとの公式の書籍の「最新の説明」（印刷の文面とは別に記録）、照合、裁定（CONFIRMED・SUPPORTED）、未解決の論点、kyuura-engine v0.68までの裁定 id との対応、エンジンの採用した仕様・簡略化・実装の事項（裁定とは別）（エナジートランス・あまごい・ダメージスワップ・かがくへんかガス・とうめい・はんげき・こんじょう・ふしちょう・ほのおのかべ・こうらがえし・わるいねぞう・たおれこむ・だつりょくえきなど）
 - [出典と確認状況](docs/sources.md)、[印刷物の照合記録](docs/printed-sources.md)（スキャンで確認した会報・雑誌・書籍の巻号とページ）
 - [調査の状況](docs/research-status.md) — 分野ごとにどこまで確かめられたか、件数、未解決の問題、必要な原本
+- [エンジンの実装の対象](docs/engine-targets.md) — 記録ごとに、実装の対象にできるかと kyuura-engine v0.68 の登録との対応（データ: [`data/engine_targets.json`](data/engine_targets.json)）。[v0.26〜v0.68 の還元の記録](docs/engine-findings-through-v0.68.md)、[エンジンへの引き継ぎ](docs/engine-handover-v0.68.md)
 - [エンジン開発の準備状況](docs/engine-readiness.md) — 対戦エンジン（別のリポジトリ [kyuura-engine](https://github.com/moheronemy/kyuura-engine)）の基準にしたルールと調査データ。エンジンを作り始める前の計画も記録として残している
 
 ### カード
 
-- [カードリストの見かた](docs/cards/README.md) と各弾のリスト（10 弾・780 枚。一覧表と、ワザ・ポケモンパワー・効果文つきのカード詳細）
+- [カードリストの見かた](docs/cards/README.md) と各弾のリスト（10 弾・780 枚。一覧表と、ワザ・ポケモンパワー・効果文つきのカード詳細）。拡張パック以外の商品のカード 597 枚も `data/cards.json` に収録（下の拡張パック以外の商品）
 - [カードの日英の違い](docs/cards/card-differences.md) — 文面の意味・エラッタ・表記・イラスト
 - [収録内容・製品の違い](docs/cards/set-differences.md) — 弾の対応、印刷、裏面
 - [英語版のみに見られるカード](docs/cards/english-only.md)
@@ -39,7 +40,9 @@
 
 ### データ
 
-- [`data/cards.json`](data/cards.json) — 構造化データ（スキーマ: [docs/data-schema.md](docs/data-schema.md)）
+- [`data/cards.json`](data/cards.json) — 構造化データ（スキーマ: [docs/data-schema.md](docs/data-schema.md)）。拡張パック 10 弾の 780 件と、拡張パック以外の商品の 597 件（形式 3。`product_group` で分ける。id は「商品の記号-ページ名の末尾 3 桁」）
+- [`data/product_items.json`](data/product_items.json)・[`data/same_card_groups.json`](data/same_card_groups.json) — 拡張パック以外の商品の元の項目（pcg-search のページ）の行き先と、商品をまたいだ同じカードの組
+- [`data/curation/card_corrections.json`](data/curation/card_corrections.json) — カードデータの訂正の記録（生成のたびに当てはめる）と、訂正しなかった候補
 - [`data/cards.csv`](data/cards.csv)、[`data/attacks.csv`](data/attacks.csv)、[`data/powers.csv`](data/powers.csv) — 表形式の写し
 - [`data/rule_differences.json`](data/rule_differences.json) — 日米のルールの違い
 - [`data/rule_history.json`](data/rule_history.json) — 旧裏期のルール・大会レギュレーション・エラッタの記録（日付・地域・対象カード・根拠の種類・確度）、日本版のルールの版ごとの比較、スキャンで確認した印刷物の巻号・ページ

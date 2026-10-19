@@ -266,7 +266,8 @@ class RulingTest(Base):
         # v0.13 までの項目は 22 件（停止コード 17 件）。あとの版の項目はこの数に足す（過去の件数を総数として固定しない）
         old = [u for u in idx if bcr_vkey(u['engine_version']) <= (0, 13)]
         self.assertEqual(len(old), 22)
-        self.assertEqual(sum(1 for u in old if u['stop_code']), 17)
+        # v0.13 の時点の停止コード（あとの版でエンジンが付けたコードは stop_code_since の版から数える）
+        self.assertEqual(sum(1 for u in old if u['stop_code'] and bcr_vkey(u.get('stop_code_since') or 'v0.13') <= (0, 13)), 17)
         imported = {u['engine_key']: u['kyuura_issue'] for u in idx if u['kyuura_issue']}
         # v0.13 の取り込みの 2 件はどの段階でも同じ論点に結ぶ
         self.assertEqual(imported['W24'], 'UQ-RETALIATION-DOUBLE-KO')
@@ -330,9 +331,11 @@ class CompatibilityTest(Base):
     """J5: 既存のデータと読み手の互換性。"""
 
     def test_card_data_counts_and_ids(self):
-        ids = [c['id'] for c in json.loads((ROOT / 'data' / 'cards.json').read_text(encoding='utf-8'))['cards']]
-        self.assertEqual(len(ids), 780)
-        self.assertEqual(len(set(ids)), 780)
+        cards = json.loads((ROOT / 'data' / 'cards.json').read_text(encoding='utf-8'))['cards']
+        ids = [c['id'] for c in cards]
+        self.assertEqual(len(set(ids)), len(ids))
+        # 拡張パックの記録は 780 件（2026-10-19 から、拡張パック以外の商品の記録も同じファイルにある。product_group で分ける）
+        self.assertEqual(sum(1 for c in cards if c['product_group'] == 'expansion_pack'), 780)
 
     def test_cards_without_sidecar_records(self):
         notes = bcr.annotations_for(self.ctx, 'PMCG1-005')  # PMCG1-001（v0.5）・PMCG1-002（2026-10-15 の取り込み）には記録ができた
