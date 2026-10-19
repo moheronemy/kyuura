@@ -1,0 +1,4549 @@
+{
+ "source": "https://pcg-search.com",
+ "checked_on": "2026-10-19",
+ "note": "pcg-search.com のカードページを読み直し、data/ja_text_pcgsearch.json の転記に入っていない欄・区別だけを取り出したもの（scripts/pcg_search.py extract-pages）。transcript_differences は、読み直したページを転記と同じ方法で読んだ欄のうち、転記と違うもの。弱点・抵抗力・にげるの *_raw は欄の生の表記で、「-」はその欄の値がないこと（にげるは 0）、空文字は欄が空。evolution_line はサイトの「進化ライン検索」の並び（サイトの機能で、カードに印刷された「〇〇から進化」の転記ではない）。同じサイトのデータなので、転記の独立した照合には数えない。",
+ "pages": {
+  "1stex1003": {
+   "url": "https://pcg-search.com/card/1st/1stex1003.php",
+   "name": "トランセル",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "キャタピー",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "トランセル",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "バタフリー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1005": {
+   "url": "https://pcg-search.com/card/1st/1stex1005.php",
+   "name": "コクーン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ビードル",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "コクーン",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "スピアー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1008": {
+   "url": "https://pcg-search.com/card/1st/1stex1008.php",
+   "name": "ズバット",
+   "kind": "たねポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ズバット",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴルバット",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "クロバット",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1009": {
+   "url": "https://pcg-search.com/card/1st/1stex1009.php",
+   "name": "ゴルバット",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ズバット",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴルバット",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "クロバット",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1011": {
+   "url": "https://pcg-search.com/card/1st/1stex1011.php",
+   "name": "パラセクト",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "パラス",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "パラセクト",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1014": {
+   "url": "https://pcg-search.com/card/1st/1stex1014.php",
+   "name": "ギャロップ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ポニータ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ギャロップ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1017": {
+   "url": "https://pcg-search.com/card/1st/1stex1017.php",
+   "name": "ニョロゾ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ニョロモ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ニョロゾ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ニョロボン",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ニョロトノ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1018": {
+   "url": "https://pcg-search.com/card/1st/1stex1018.php",
+   "name": "ニョロボン",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ニョロモ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ニョロゾ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ニョロボン",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ニョロトノ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1019": {
+   "url": "https://pcg-search.com/card/1st/1stex1019.php",
+   "name": "ピカチュウ",
+   "kind": "たねポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "ピチュー",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ピカチュウ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ライチュウ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1020": {
+   "url": "https://pcg-search.com/card/1st/1stex1020.php",
+   "name": "ケーシィ",
+   "kind": "たねポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ケーシィ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ユンゲラー",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フーディン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1027": {
+   "url": "https://pcg-search.com/card/1st/1stex1027.php",
+   "name": "プクリン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "超-30",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "ププリン",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "プリン",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "プクリン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1028": {
+   "url": "https://pcg-search.com/card/1st/1stex1028.php",
+   "name": "ドードー",
+   "kind": "たねポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ドードー",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ドードリオ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1029": {
+   "url": "https://pcg-search.com/card/1st/1stex1029.php",
+   "name": "ドードリオ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ドードー",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ドードリオ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1032": {
+   "url": "https://pcg-search.com/card/1st/1stex1032.php",
+   "name": "イーブイ",
+   "kind": "たねポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "超-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "イーブイ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "シャワーズ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "サンダース",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ブースター",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "エーフィ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ブラッキー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex1033": {
+   "url": "https://pcg-search.com/card/1st/1stex1033.php",
+   "name": "ポリゴン",
+   "kind": "たねポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "超-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ポリゴン",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ポリゴン2",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2001": {
+   "url": "https://pcg-search.com/card/1st/1stex2001.php",
+   "name": "モルフォン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "コンパン",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "モルフォン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2007": {
+   "url": "https://pcg-search.com/card/1st/1stex2007.php",
+   "name": "ジュゴン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "パウワウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ジュゴン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2011": {
+   "url": "https://pcg-search.com/card/1st/1stex2011.php",
+   "name": "オムナイト",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "なにかの化石",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ちていのかせき",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "オムナイト",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "オムスター",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2013": {
+   "url": "https://pcg-search.com/card/1st/1stex2013.php",
+   "name": "ライチュウ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "ピチュー",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ピカチュウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ライチュウ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2015": {
+   "url": "https://pcg-search.com/card/1st/1stex2015.php",
+   "name": "レアコイル",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "コイル",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "レアコイル",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2016": {
+   "url": "https://pcg-search.com/card/1st/1stex2016.php",
+   "name": "ビリリダマ",
+   "kind": "たねポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ビリリダマ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マルマイン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2022": {
+   "url": "https://pcg-search.com/card/1st/1stex2022.php",
+   "name": "ゴーリキー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ワンリキー",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴーリキー",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "カイリキー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2023": {
+   "url": "https://pcg-search.com/card/1st/1stex2023.php",
+   "name": "ゴローン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "イシツブテ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴローン",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ゴローニャ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2025": {
+   "url": "https://pcg-search.com/card/1st/1stex2025.php",
+   "name": "ガラガラ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "雷-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カラカラ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ガラガラ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2028": {
+   "url": "https://pcg-search.com/card/1st/1stex2028.php",
+   "name": "カブト",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "なにかの化石",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ちていのかせき",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カブト",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "カブトプス",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2029": {
+   "url": "https://pcg-search.com/card/1st/1stex2029.php",
+   "name": "プテラ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "なにかの化石",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ちていのかせき",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "プテラ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2030": {
+   "url": "https://pcg-search.com/card/1st/1stex2030.php",
+   "name": "オニスズメ",
+   "kind": "たねポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "オニスズメ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "オニドリル",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex2031": {
+   "url": "https://pcg-search.com/card/1st/1stex2031.php",
+   "name": "オニドリル",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "オニスズメ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "オニドリル",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3001": {
+   "url": "https://pcg-search.com/card/1st/1stex3001.php",
+   "name": "アーボック",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "アーボ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "アーボック",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3002": {
+   "url": "https://pcg-search.com/card/1st/1stex3002.php",
+   "name": "ニドリーナ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ニドラン♀",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ニドリーナ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ニドクイン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3003": {
+   "url": "https://pcg-search.com/card/1st/1stex3003.php",
+   "name": "ニドリーノ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ニドラン♂",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ニドリーノ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ニドキング",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3006": {
+   "url": "https://pcg-search.com/card/1st/1stex3006.php",
+   "name": "ウツドン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "マダツボミ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ウツドン",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ウツボット",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3007": {
+   "url": "https://pcg-search.com/card/1st/1stex3007.php",
+   "name": "マタドガス",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ドガース",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マタドガス",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3011": {
+   "url": "https://pcg-search.com/card/1st/1stex3011.php",
+   "name": "ポニータ",
+   "kind": "たねポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ポニータ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ギャロップ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3013": {
+   "url": "https://pcg-search.com/card/1st/1stex3013.php",
+   "name": "ゴルダック",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "コダック",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴルダック",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3014": {
+   "url": "https://pcg-search.com/card/1st/1stex3014.php",
+   "name": "キングラー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "クラブ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "キングラー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3015": {
+   "url": "https://pcg-search.com/card/1st/1stex3015.php",
+   "name": "タッツー",
+   "kind": "たねポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "タッツー",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "シードラ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "キングドラ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3016": {
+   "url": "https://pcg-search.com/card/1st/1stex3016.php",
+   "name": "シードラ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "タッツー",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "シードラ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "キングドラ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3018": {
+   "url": "https://pcg-search.com/card/1st/1stex3018.php",
+   "name": "オムナイト",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "なにかの化石",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ちていのかせき",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "オムナイト",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "オムスター",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3019": {
+   "url": "https://pcg-search.com/card/1st/1stex3019.php",
+   "name": "ユンゲラー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ケーシィ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ユンゲラー",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フーディン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3020": {
+   "url": "https://pcg-search.com/card/1st/1stex3020.php",
+   "name": "ユンゲラー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ケーシィ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ユンゲラー",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フーディン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3021": {
+   "url": "https://pcg-search.com/card/1st/1stex3021.php",
+   "name": "ヤドラン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ヤドン",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ヤドラン",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ヤドキング",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ハマちゃんのヤドキング",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3022": {
+   "url": "https://pcg-search.com/card/1st/1stex3022.php",
+   "name": "ゴース",
+   "kind": "たねポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ゴース",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴースト",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ゲンガー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3023": {
+   "url": "https://pcg-search.com/card/1st/1stex3023.php",
+   "name": "ゴースト",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ゴース",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴースト",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ゲンガー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3024": {
+   "url": "https://pcg-search.com/card/1st/1stex3024.php",
+   "name": "ゴースト",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ゴース",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴースト",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ゲンガー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3025": {
+   "url": "https://pcg-search.com/card/1st/1stex3025.php",
+   "name": "スリーパー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "スリープ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "スリーパー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3027": {
+   "url": "https://pcg-search.com/card/1st/1stex3027.php",
+   "name": "サンドパン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "雷-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "サンド",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "サンドパン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3028": {
+   "url": "https://pcg-search.com/card/1st/1stex3028.php",
+   "name": "ゴーリキー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ワンリキー",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴーリキー",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "カイリキー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3029": {
+   "url": "https://pcg-search.com/card/1st/1stex3029.php",
+   "name": "ゴローン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "イシツブテ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴローン",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ゴローニャ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3031": {
+   "url": "https://pcg-search.com/card/1st/1stex3031.php",
+   "name": "サイドン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "雷-30",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "サイホーン",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "サイドン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stex3032": {
+   "url": "https://pcg-search.com/card/1st/1stex3032.php",
+   "name": "ピジョン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ポッポ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ピジョン",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ピジョット",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd1001": {
+   "url": "https://pcg-search.com/card/1st/1stgymd1001.php",
+   "name": "タケシのズバット",
+   "kind": "たねポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "タケシのズバット",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "タケシのゴルバット",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd1004": {
+   "url": "https://pcg-search.com/card/1st/1stgymd1004.php",
+   "name": "タケシのサンドパン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "雷-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "タケシのサンド",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "タケシのサンドパン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd1005": {
+   "url": "https://pcg-search.com/card/1st/1stgymd1005.php",
+   "name": "タケシのマンキー",
+   "kind": "たねポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "タケシのマンキー",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "タケシのオコリザル",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd1008": {
+   "url": "https://pcg-search.com/card/1st/1stgymd1008.php",
+   "name": "タケシのゴローン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "タケシのイシツブテ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "タケシのゴローン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd1009": {
+   "url": "https://pcg-search.com/card/1st/1stgymd1009.php",
+   "name": "タケシのゴローニャ",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "タケシのイシツブテ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "タケシのゴローン",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "タケシのゴローニャ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd1013": {
+   "url": "https://pcg-search.com/card/1st/1stgymd1013.php",
+   "name": "タケシのサイドン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "雷-30",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "タケシのサイホーン",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "タケシのサイドン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd2003": {
+   "url": "https://pcg-search.com/card/1st/1stgymd2003.php",
+   "name": "カスミのメノクラゲ",
+   "kind": "たねポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カスミのメノクラゲ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カスミのドククラゲ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd2004": {
+   "url": "https://pcg-search.com/card/1st/1stgymd2004.php",
+   "name": "カスミのドククラゲ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カスミのメノクラゲ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カスミのドククラゲ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd2007": {
+   "url": "https://pcg-search.com/card/1st/1stgymd2007.php",
+   "name": "カスミのパルシェン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カスミのシェルダー",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カスミのパルシェン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd2008": {
+   "url": "https://pcg-search.com/card/1st/1stgymd2008.php",
+   "name": "カスミのタッツー",
+   "kind": "たねポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カスミのタッツー",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カスミのシードラ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd2009": {
+   "url": "https://pcg-search.com/card/1st/1stgymd2009.php",
+   "name": "カスミのトサキント",
+   "kind": "たねポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カスミのトサキント",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カスミのアズマオウ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd2011": {
+   "url": "https://pcg-search.com/card/1st/1stgymd2011.php",
+   "name": "カスミのアズマオウ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カスミのトサキント",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カスミのアズマオウ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd2014": {
+   "url": "https://pcg-search.com/card/1st/1stgymd2014.php",
+   "name": "カスミのスターミー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カスミのヒトデマン",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カスミのスターミー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd3001": {
+   "url": "https://pcg-search.com/card/1st/1stgymd3001.php",
+   "name": "マチスのピカチュウ",
+   "kind": "たねポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "マチスのピカチュウ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マチスのライチュウ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd3003": {
+   "url": "https://pcg-search.com/card/1st/1stgymd3003.php",
+   "name": "マチスのライチュウ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "マチスのライチュウ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd3004": {
+   "url": "https://pcg-search.com/card/1st/1stgymd3004.php",
+   "name": "マチスのコイル",
+   "kind": "たねポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "マチスのコイル",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マチスのレアコイル",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd3006": {
+   "url": "https://pcg-search.com/card/1st/1stgymd3006.php",
+   "name": "マチスのレアコイル",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "マチスのコイル",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マチスのレアコイル",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd3009": {
+   "url": "https://pcg-search.com/card/1st/1stgymd3009.php",
+   "name": "マチスのマルマイン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "マチスのビリリダマ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マチスのマルマイン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd3012": {
+   "url": "https://pcg-search.com/card/1st/1stgymd3012.php",
+   "name": "マチスのラッタ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "超-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "マチスのコラッタ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マチスのラッタ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd3013": {
+   "url": "https://pcg-search.com/card/1st/1stgymd3013.php",
+   "name": "マチスのオニスズメ",
+   "kind": "たねポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "マチスのオニスズメ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マチスのオニドリル",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd4003": {
+   "url": "https://pcg-search.com/card/1st/1stgymd4003.php",
+   "name": "エリカのクサイハナ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "エリカのナゾノクサ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "エリカのクサイハナ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "エリカのラフレシア",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd4004": {
+   "url": "https://pcg-search.com/card/1st/1stgymd4004.php",
+   "name": "エリカのラフレシア",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "エリカのナゾノクサ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "エリカのクサイハナ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "エリカのラフレシア",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd4007": {
+   "url": "https://pcg-search.com/card/1st/1stgymd4007.php",
+   "name": "エリカのウツドン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "エリカのマダツボミ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "エリカのウツドン",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "エリカのウツボット",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd4008": {
+   "url": "https://pcg-search.com/card/1st/1stgymd4008.php",
+   "name": "エリカのウツボット",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "エリカのマダツボミ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "エリカのウツドン",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "エリカのウツボット",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd4010": {
+   "url": "https://pcg-search.com/card/1st/1stgymd4010.php",
+   "name": "エリカのナッシー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "エリカのタマタマ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "エリカのナッシー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd5004": {
+   "url": "https://pcg-search.com/card/1st/1stgymd5004.php",
+   "name": "カツラのキュウコン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カツラのロコン",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カツラのキュウコン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd5007": {
+   "url": "https://pcg-search.com/card/1st/1stgymd5007.php",
+   "name": "カツラのウィンディ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カツラのガーディ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カツラのウィンディ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd5008": {
+   "url": "https://pcg-search.com/card/1st/1stgymd5008.php",
+   "name": "カツラのポニータ",
+   "kind": "たねポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カツラのポニータ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カツラのギャロップ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd5010": {
+   "url": "https://pcg-search.com/card/1st/1stgymd5010.php",
+   "name": "カツラのギャロップ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カツラのポニータ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カツラのギャロップ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd5012": {
+   "url": "https://pcg-search.com/card/1st/1stgymd5012.php",
+   "name": "カツラのドードー",
+   "kind": "たねポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カツラのドードー",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カツラのドードリオ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd5013": {
+   "url": "https://pcg-search.com/card/1st/1stgymd5013.php",
+   "name": "カツラのドードリオ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "カツラのドードー",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カツラのドードリオ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd6001": {
+   "url": "https://pcg-search.com/card/1st/1stgymd6001.php",
+   "name": "ナツメのケーシィ",
+   "kind": "たねポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ナツメのケーシィ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ナツメのユンゲラー",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ナツメのフーディン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd6003": {
+   "url": "https://pcg-search.com/card/1st/1stgymd6003.php",
+   "name": "ナツメのユンゲラー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ナツメのケーシィ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ナツメのユンゲラー",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ナツメのフーディン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd6004": {
+   "url": "https://pcg-search.com/card/1st/1stgymd6004.php",
+   "name": "ナツメのフーディン",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ナツメのケーシィ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ナツメのユンゲラー",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ナツメのフーディン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd6005": {
+   "url": "https://pcg-search.com/card/1st/1stgymd6005.php",
+   "name": "ナツメのゴース",
+   "kind": "たねポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ナツメのゴース",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ナツメのゴースト",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ナツメのゲンガー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd6007": {
+   "url": "https://pcg-search.com/card/1st/1stgymd6007.php",
+   "name": "ナツメのゴースト",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ナツメのゴース",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ナツメのゴースト",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ナツメのゲンガー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd6008": {
+   "url": "https://pcg-search.com/card/1st/1stgymd6008.php",
+   "name": "ナツメのゲンガー",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ナツメのゴース",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ナツメのゴースト",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ナツメのゲンガー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stgymd6010": {
+   "url": "https://pcg-search.com/card/1st/1stgymd6010.php",
+   "name": "ナツメのスリーパー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ナツメのスリープ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ナツメのスリーパー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stintro001": {
+   "url": "https://pcg-search.com/card/1st/1stintro001.php",
+   "name": "フシギバナ",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "フシギダネ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "フシギソウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フシギバナ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stintro002": {
+   "url": "https://pcg-search.com/card/1st/1stintro002.php",
+   "name": "カメックス",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ゼニガメ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カメール",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "カメックス",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stintro1003": {
+   "url": "https://pcg-search.com/card/1st/1stintro1003.php",
+   "name": "ライチュウ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "ピチュー",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ピカチュウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ライチュウ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stintro1022": {
+   "url": "https://pcg-search.com/card/1st/1stintro1022.php",
+   "name": "フシギソウ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "フシギダネ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "フシギソウ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フシギバナ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stintro1030": {
+   "url": "https://pcg-search.com/card/1st/1stintro1030.php",
+   "name": "ドードー",
+   "kind": "たねポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ドードー",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ドードリオ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stintro1032": {
+   "url": "https://pcg-search.com/card/1st/1stintro1032.php",
+   "name": "フシギソウ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "フシギダネ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "フシギソウ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フシギバナ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stintro2002": {
+   "url": "https://pcg-search.com/card/1st/1stintro2002.php",
+   "name": "ディグダ",
+   "kind": "たねポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "雷-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ディグダ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ダグトリオ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stintro2003": {
+   "url": "https://pcg-search.com/card/1st/1stintro2003.php",
+   "name": "カメール",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ゼニガメ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カメール",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "カメックス",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stintro2010": {
+   "url": "https://pcg-search.com/card/1st/1stintro2010.php",
+   "name": "カメール",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ゼニガメ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カメール",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "カメックス",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stintro2013": {
+   "url": "https://pcg-search.com/card/1st/1stintro2013.php",
+   "name": "オニスズメ",
+   "kind": "たねポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "オニスズメ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "オニドリル",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stintro2032": {
+   "url": "https://pcg-search.com/card/1st/1stintro2032.php",
+   "name": "ウィンディ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ガーディ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ウインディ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stmv003": {
+   "url": "https://pcg-search.com/card/1st/1stmv003.php",
+   "name": "バタフリー",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "キャタピー",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "トランセル",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "バタフリー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stmv004": {
+   "url": "https://pcg-search.com/card/1st/1stmv004.php",
+   "name": "ミュウ",
+   "kind": "たねポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ミュウ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stmv005": {
+   "url": "https://pcg-search.com/card/1st/1stmv005.php",
+   "name": "ピジョット",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ポッポ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ピジョン",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ピジョット",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stmv008": {
+   "url": "https://pcg-search.com/card/1st/1stmv008.php",
+   "name": "フシギソウ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "フシギダネ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "フシギソウ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フシギバナ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stmv009": {
+   "url": "https://pcg-search.com/card/1st/1stmv009.php",
+   "name": "ラッタ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "超-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "コラッタ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ラッタ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stmv011": {
+   "url": "https://pcg-search.com/card/1st/1stmv011.php",
+   "name": "ラフレシア",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ナゾノクサ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "クサイハナ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ラフレシア",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "キレイハナ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stmv012": {
+   "url": "https://pcg-search.com/card/1st/1stmv012.php",
+   "name": "オコリザル",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "マンキー",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "オコリザル",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stmv013": {
+   "url": "https://pcg-search.com/card/1st/1stmv013.php",
+   "name": "ナッシー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "タマタマ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ナッシー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stmv014": {
+   "url": "https://pcg-search.com/card/1st/1stmv014.php",
+   "name": "ヤドキング",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ヤドン",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ヤドラン",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ヤドキング",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ハマちゃんのヤドキング",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stmv015": {
+   "url": "https://pcg-search.com/card/1st/1stmv015.php",
+   "name": "カメール",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ゼニガメ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カメール",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "カメックス",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stmv016": {
+   "url": "https://pcg-search.com/card/1st/1stmv016.php",
+   "name": "ドククラゲ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "メノクラゲ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ドククラゲ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp016": {
+   "url": "https://pcg-search.com/card/1st/1stp016.php",
+   "name": "ウィンディ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ガーディ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ウインディ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp019": {
+   "url": "https://pcg-search.com/card/1st/1stp019.php",
+   "name": "わるいペルシアン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "超-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ニャース",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ペルシアン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp021": {
+   "url": "https://pcg-search.com/card/1st/1stp021.php",
+   "name": "ミュウ",
+   "kind": "たねポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ミュウ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp028": {
+   "url": "https://pcg-search.com/card/1st/1stp028.php",
+   "name": "カメックス",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ゼニガメ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "カメール",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "カメックス",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp029": {
+   "url": "https://pcg-search.com/card/1st/1stp029.php",
+   "name": "フシギバナ",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "フシギダネ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "フシギソウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フシギバナ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp030": {
+   "url": "https://pcg-search.com/card/1st/1stp030.php",
+   "name": "リザードン",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ヒトカゲ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "リザード",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "リザードン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp043": {
+   "url": "https://pcg-search.com/card/1st/1stp043.php",
+   "name": "カイリュー",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ミニリュウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ハクリュー",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "カイリュー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp046": {
+   "url": "https://pcg-search.com/card/1st/1stp046.php",
+   "name": "ダグトリオ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "雷-30",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ディグダ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ダグトリオ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp049": {
+   "url": "https://pcg-search.com/card/1st/1stp049.php",
+   "name": "タケシのマンキー",
+   "kind": "たねポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "タケシのマンキー",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "タケシのオコリザル",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp050": {
+   "url": "https://pcg-search.com/card/1st/1stp050.php",
+   "name": "マチスのサンダース",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "マチスのイーブイ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マチスのサンダース",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp051": {
+   "url": "https://pcg-search.com/card/1st/1stp051.php",
+   "name": "オムスター",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "なにかの化石",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ちていのかせき",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "オムナイト",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "オムスター",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp052": {
+   "url": "https://pcg-search.com/card/1st/1stp052.php",
+   "name": "カイリキー",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ワンリキー",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴーリキー",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "カイリキー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp053": {
+   "url": "https://pcg-search.com/card/1st/1stp053.php",
+   "name": "ゲンガー",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ゴース",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴースト",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ゲンガー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp054": {
+   "url": "https://pcg-search.com/card/1st/1stp054.php",
+   "name": "ゴローニャ",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "イシツブテ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴローン",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ゴローニャ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp055": {
+   "url": "https://pcg-search.com/card/1st/1stp055.php",
+   "name": "フーディン",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ケーシィ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ユンゲラー",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フーディン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp056": {
+   "url": "https://pcg-search.com/card/1st/1stp056.php",
+   "name": "カイリュー",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ミニリュウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ハクリュー",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "カイリュー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp058": {
+   "url": "https://pcg-search.com/card/1st/1stp058.php",
+   "name": "フシギバナ",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "フシギダネ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "フシギソウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フシギバナ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp060": {
+   "url": "https://pcg-search.com/card/1st/1stp060.php",
+   "name": "ナツメのケーシィ",
+   "kind": "たねポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ナツメのケーシィ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ナツメのユンゲラー",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ナツメのフーディン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp061": {
+   "url": "https://pcg-search.com/card/1st/1stp061.php",
+   "name": "マンキー",
+   "kind": "たねポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "マンキー",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "オコリザル",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp068": {
+   "url": "https://pcg-search.com/card/1st/1stp068.php",
+   "name": "サカキのニドキング",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "サカキのニドラン♂",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "サカキのニドリーノ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "サカキのニドキング",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp072": {
+   "url": "https://pcg-search.com/card/1st/1stp072.php",
+   "name": "ハマちゃんのヤドキング",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ヤドン",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ヤドラン",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ヤドキング",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ハマちゃんのヤドキング",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp075": {
+   "url": "https://pcg-search.com/card/1st/1stp075.php",
+   "name": "ナッシー［Exeggutor］",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "タマタマ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ナッシー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp077": {
+   "url": "https://pcg-search.com/card/1st/1stp077.php",
+   "name": "ナッシー［Exeggutor］",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "タマタマ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ナッシー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stp080": {
+   "url": "https://pcg-search.com/card/1st/1stp080.php",
+   "name": "ギャラドス",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "コイキング",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ギャラドス",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg003": {
+   "url": "https://pcg-search.com/card/1st/1stqsg003.php",
+   "name": "トランセル",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "キャタピー",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "トランセル",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "バタフリー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg010": {
+   "url": "https://pcg-search.com/card/1st/1stqsg010.php",
+   "name": "ポニータ",
+   "kind": "たねポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ポニータ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ギャロップ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg011": {
+   "url": "https://pcg-search.com/card/1st/1stqsg011.php",
+   "name": "ギャロップ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ポニータ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ギャロップ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg015": {
+   "url": "https://pcg-search.com/card/1st/1stqsg015.php",
+   "name": "ニョロゾ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ニョロモ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ニョロゾ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ニョロボン",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ニョロトノ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg016": {
+   "url": "https://pcg-search.com/card/1st/1stqsg016.php",
+   "name": "ニョロボン",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ニョロモ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ニョロゾ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ニョロボン",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ニョロトノ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg018": {
+   "url": "https://pcg-search.com/card/1st/1stqsg018.php",
+   "name": "ジュゴン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "パウワウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ジュゴン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg020": {
+   "url": "https://pcg-search.com/card/1st/1stqsg020.php",
+   "name": "ピカチュウ",
+   "kind": "たねポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "ピチュー",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ピカチュウ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ライチュウ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg022": {
+   "url": "https://pcg-search.com/card/1st/1stqsg022.php",
+   "name": "ライチュウ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "ピチュー",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ピカチュウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ライチュウ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg024": {
+   "url": "https://pcg-search.com/card/1st/1stqsg024.php",
+   "name": "レアコイル",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "コイル",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "レアコイル",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg025": {
+   "url": "https://pcg-search.com/card/1st/1stqsg025.php",
+   "name": "ビリリダマ",
+   "kind": "たねポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ビリリダマ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マルマイン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg026": {
+   "url": "https://pcg-search.com/card/1st/1stqsg026.php",
+   "name": "ケーシィ",
+   "kind": "たねポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ケーシィ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ユンゲラー",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フーディン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg027": {
+   "url": "https://pcg-search.com/card/1st/1stqsg027.php",
+   "name": "ユンゲラー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ケーシィ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ユンゲラー",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フーディン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg028": {
+   "url": "https://pcg-search.com/card/1st/1stqsg028.php",
+   "name": "ゴース",
+   "kind": "たねポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ゴース",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴースト",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ゲンガー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg029": {
+   "url": "https://pcg-search.com/card/1st/1stqsg029.php",
+   "name": "ゴースト",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ゴース",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴースト",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ゲンガー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg034": {
+   "url": "https://pcg-search.com/card/1st/1stqsg034.php",
+   "name": "サンドパン",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "雷-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "サンド",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "サンドパン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg036": {
+   "url": "https://pcg-search.com/card/1st/1stqsg036.php",
+   "name": "ゴーリキー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ワンリキー",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ゴーリキー",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "カイリキー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg041": {
+   "url": "https://pcg-search.com/card/1st/1stqsg041.php",
+   "name": "ドードー",
+   "kind": "たねポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ドードー",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ドードリオ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "1stqsg045": {
+   "url": "https://pcg-search.com/card/1st/1stqsg045.php",
+   "name": "ポリゴン",
+   "kind": "たねポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "超-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ポリゴン",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ポリゴン2",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neointro1013": {
+   "url": "https://pcg-search.com/card/neo/neointro1013.php",
+   "name": "マグマラシ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ヒノアラシ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マグマラシ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "バクフーン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neointro1024": {
+   "url": "https://pcg-search.com/card/neo/neointro1024.php",
+   "name": "ベイリーフ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "チコリータ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ベイリーフ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "メガニウム",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neointro1ex001": {
+   "url": "https://pcg-search.com/card/neo/neointro1ex001.php",
+   "name": "メガニウム",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "チコリータ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ベイリーフ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "メガニウム",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neointro1ex002": {
+   "url": "https://pcg-search.com/card/neo/neointro1ex002.php",
+   "name": "ブビィ",
+   "kind": "ベイビィポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "ブビィ",
+     "current": true
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ブーバー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neointro2004": {
+   "url": "https://pcg-search.com/card/neo/neointro2004.php",
+   "name": "アリゲイツ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ワニノコ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "アリゲイツ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "オーダイル",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neointro2026": {
+   "url": "https://pcg-search.com/card/neo/neointro2026.php",
+   "name": "モココ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "メリープ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "モココ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "デンリュウ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neointro2ex001": {
+   "url": "https://pcg-search.com/card/neo/neointro2ex001.php",
+   "name": "オーダイル",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ワニノコ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "アリゲイツ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "オーダイル",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neointro2ex002": {
+   "url": "https://pcg-search.com/card/neo/neointro2ex002.php",
+   "name": "ピチュー",
+   "kind": "ベイビィポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "ピチュー",
+     "current": true
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ピカチュウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ライチュウ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neop012": {
+   "url": "https://pcg-search.com/card/neo/neop012.php",
+   "name": "ピィ",
+   "kind": "ベイビィポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "ピィ",
+     "current": true
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ピッピ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ピクシー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neop014": {
+   "url": "https://pcg-search.com/card/neo/neop014.php",
+   "name": "ハガネール",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "草-30",
+   "retreat_raw": "無無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "イワーク",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ハガネール",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neop024": {
+   "url": "https://pcg-search.com/card/neo/neop024.php",
+   "name": "イーブイ",
+   "kind": "たねポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "超-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "イーブイ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "シャワーズ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "サンダース",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ブースター",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "エーフィ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ブラッキー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neop025": {
+   "url": "https://pcg-search.com/card/neo/neop025.php",
+   "name": "ハッサム",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "草-30",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ストライク",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ハッサム",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neop030": {
+   "url": "https://pcg-search.com/card/neo/neop030.php",
+   "name": "カポエラー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "バルキー",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "サワムラー",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "エビワラー",
+     "current": false
+    },
+    {
+     "stage": "evoBasic",
+     "name": "カポエラー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neop031": {
+   "url": "https://pcg-search.com/card/neo/neop031.php",
+   "name": "ププリン",
+   "kind": "ベイビィポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "ププリン",
+     "current": true
+    },
+    {
+     "stage": "evoBasic",
+     "name": "プリン",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "プクリン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neop037": {
+   "url": "https://pcg-search.com/card/neo/neop037.php",
+   "name": "ムチュール",
+   "kind": "ベイビィポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "ムチュール",
+     "current": true
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ルージュラ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neop039": {
+   "url": "https://pcg-search.com/card/neo/neop039.php",
+   "name": "わるいフシギソウ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "フシギダネ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "フシギソウ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フシギバナ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neop040": {
+   "url": "https://pcg-search.com/card/neo/neop040.php",
+   "name": "わるいフシギバナ",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "フシギダネ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "フシギソウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "フシギバナ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neop043": {
+   "url": "https://pcg-search.com/card/neo/neop043.php",
+   "name": "キレイハナ",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ナゾノクサ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "クサイハナ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ラフレシア",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "キレイハナ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neop045": {
+   "url": "https://pcg-search.com/card/neo/neop045.php",
+   "name": "わるいオニドリル",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "オニスズメ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "オニドリル",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neop047": {
+   "url": "https://pcg-search.com/card/neo/neop047.php",
+   "name": "ハネッコ",
+   "kind": "たねポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ハネッコ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ポポッコ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "ワタッコ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf1002": {
+   "url": "https://pcg-search.com/card/neo/neopf1002.php",
+   "name": "ベイリーフ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "チコリータ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ベイリーフ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "メガニウム",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf1003": {
+   "url": "https://pcg-search.com/card/neo/neopf1003.php",
+   "name": "メガニウム",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "炎×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "チコリータ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ベイリーフ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "メガニウム",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf1005": {
+   "url": "https://pcg-search.com/card/neo/neopf1005.php",
+   "name": "マグマラシ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ヒノアラシ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マグマラシ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "バクフーン",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf1006": {
+   "url": "https://pcg-search.com/card/neo/neopf1006.php",
+   "name": "バクフーン",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ヒノアラシ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "マグマラシ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "バクフーン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf1008": {
+   "url": "https://pcg-search.com/card/neo/neopf1008.php",
+   "name": "アリゲイツ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ワニノコ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "アリゲイツ",
+     "current": true
+    },
+    {
+     "stage": "evoStage2",
+     "name": "オーダイル",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf1009": {
+   "url": "https://pcg-search.com/card/neo/neopf1009.php",
+   "name": "オーダイル",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "草×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ワニノコ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "アリゲイツ",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "オーダイル",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf2004": {
+   "url": "https://pcg-search.com/card/neo/neopf2004.php",
+   "name": "エーフィ",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "超×2",
+   "resistance_raw": "-",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "イーブイ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "シャワーズ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "サンダース",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ブースター",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "エーフィ",
+     "current": true
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ブラッキー",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf2006": {
+   "url": "https://pcg-search.com/card/neo/neopf2006.php",
+   "name": "ブラッキー",
+   "kind": "１進化ポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "超-30",
+   "retreat_raw": "無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "イーブイ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "シャワーズ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "サンダース",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ブースター",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "エーフィ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ブラッキー",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf2007": {
+   "url": "https://pcg-search.com/card/neo/neopf2007.php",
+   "name": "ピチュー",
+   "kind": "ベイビィポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBaby",
+     "name": "ピチュー",
+     "current": true
+    },
+    {
+     "stage": "evoBasic",
+     "name": "ピカチュウ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "ライチュウ",
+     "current": false
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf2009": {
+   "url": "https://pcg-search.com/card/neo/neopf2009.php",
+   "name": "リザードン",
+   "kind": "２進化ポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "闘-30",
+   "retreat_raw": "無無無",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ヒトカゲ",
+     "current": false
+    },
+    {
+     "stage": "evoStage1",
+     "name": "リザード",
+     "current": false
+    },
+    {
+     "stage": "evoStage2",
+     "name": "リザードン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf3003": {
+   "url": "https://pcg-search.com/card/neo/neopf3003.php",
+   "name": "ニューラ",
+   "kind": "たねポケモン",
+   "weakness_raw": "-",
+   "resistance_raw": "超-30",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ニューラ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf3004": {
+   "url": "https://pcg-search.com/card/neo/neopf3004.php",
+   "name": "ライコウ",
+   "kind": "たねポケモン",
+   "weakness_raw": "闘×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "ライコウ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf3005": {
+   "url": "https://pcg-search.com/card/neo/neopf3005.php",
+   "name": "エンテイ",
+   "kind": "たねポケモン",
+   "weakness_raw": "水×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "エンテイ",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  },
+  "neopf3006": {
+   "url": "https://pcg-search.com/card/neo/neopf3006.php",
+   "name": "スイクン",
+   "kind": "たねポケモン",
+   "weakness_raw": "雷×2",
+   "resistance_raw": "-",
+   "retreat_raw": "-",
+   "evolution_line": [
+    {
+     "stage": "evoBasic",
+     "name": "スイクン",
+     "current": true
+    }
+   ],
+   "transcript_differences": {}
+  }
+ }
+}

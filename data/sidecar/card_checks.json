@@ -5380,6 +5380,942 @@
      "engine_classification": "CONFLICT（書き方）"
     }
    ]
+  },
+  {
+   "id": "CC-PMCG2-017-P56",
+   "card_id": "PMCG2-017",
+   "card_name_ja": "ストライク",
+   "source": "P43",
+   "scan": "J38",
+   "page": "56",
+   "pdf_page": 58,
+   "location": "p.56「たねポケモン ストライク LV.25／HP70」（ポケモンジャングル）",
+   "checked_fields": {
+    "name.ja": "ストライク",
+    "jp_print.level": 25,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 70,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "fighting",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 0,
+    "pokemon.attacks[0].name.ja": "つるぎのまい",
+    "pokemon.attacks[0].cost": [
+     "grass"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "次の自分の番だけ、このカードが使う「きりさく」のダメージは2倍になる。",
+    "pokemon.attacks[1].name.ja": "きりさく",
+    "pokemon.attacks[1].cost": [
+     "colorless",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "30",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG2-017-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG2-017-ATK0"
+   ],
+   "findings": [
+    "エンジンの照合: pokemon.attacks[0].text.ja — 資料「図版は「次の自分の番だけ　このカードが使う「きりさく」のダメージは2倍になる。」（「だけ」のあとは空白で、読点は読めない）。最新の説明「次の自分の番、このカードが使う「きりさく」のダメージは「60」になる。」（p.56・p.321）」"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-E730CE2",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-017",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品（「ポケモンカード第1弾」）・図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力・「ワザ」欄の「最新の説明」（効果の説明文がないこと）（エンジンの checked_fields）",
+     "result": "「不一致あり」（mismatches: pokemon.attacks[0].text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-026-P112",
+   "card_id": "PMCG1-026",
+   "card_name_ja": "スターミー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "112",
+   "pdf_page": 114,
+   "location": "p.112「1進化ポケモン スターミー LV.28／HP60」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "スターミー",
+    "jp_print.level": 28,
+    "pokemon.stage": "stage1",
+    "pokemon.hp": 60,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "じこさいせい",
+    "pokemon.attacks[0].cost": [
+     "water",
+     "water"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "自分の「水」エネルギーカードを1枚はがしてすてることによってダメージカウンターを全てとりのぞく。",
+    "pokemon.attacks[1].name.ja": "スターフリーズ",
+    "pokemon.attacks[1].cost": [
+     "water",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "20",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-026-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-026-ATK0"
+   ],
+   "findings": [
+    "エンジンの照合: pokemon.attacks[0].text.ja — 資料「図版は kyuura と同じ印刷の文面と読める。最新の説明「自分についている「水」エネルギーカードを1枚トラッシュして、自分にのっているダメージカウンターを、すべてとりのぞく。トラッシュできないとき、このワザの効果はなくなる。」（p.112）」"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-026",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品（「ポケモンカード第1弾」）・図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力・「ワザ」欄の「最新の説明」（効果の説明文がないこと）（エンジンの checked_fields）",
+     "result": "「不一致あり」（mismatches: pokemon.attacks[0].text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-045-P164",
+   "card_id": "PMCG1-045",
+   "card_name_ja": "スリープ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "164",
+   "pdf_page": 166,
+   "location": "p.164「たねポケモン スリープ LV.12／HP50」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "スリープ",
+    "jp_print.level": 12,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "psychic"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "psychic",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "はたく",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": null,
+    "pokemon.attacks[1].name.ja": "あやしいひかり",
+    "pokemon.attacks[1].cost": [
+     "psychic",
+     "psychic"
+    ],
+    "pokemon.attacks[1].damage.display": "10",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "エンジンの照合の結果は「一致」（照合した項目がすべて kyuura の記録と同じ）。最新の説明は印刷の文面と同じか、句読点だけの違い"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-045",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品（「ポケモンカード第1弾」）・図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力・「ワザ」欄の「最新の説明」（効果の説明文がないこと）（エンジンの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG1-068-P235",
+   "card_id": "PMCG1-068",
+   "card_name_ja": "ラッキー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "235",
+   "pdf_page": 237,
+   "location": "p.235「たねポケモン ラッキー LV.55／HP120」（ポケモンカード第1弾）",
+   "checked_fields": {
+    "name.ja": "ラッキー",
+    "jp_print.level": 55,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 120,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "psychic",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "まるまる",
+    "pokemon.attacks[0].cost": [
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。",
+    "pokemon.attacks[1].name.ja": "すてみタックル",
+    "pokemon.attacks[1].cost": [
+     "colorless",
+     "colorless",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "80",
+    "pokemon.attacks[1].text.ja": "自分にも80ダメージ。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG1-068-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG1-068-ATK0"
+   ],
+   "findings": [
+    "エンジンの照合: pokemon.attacks[0].text.ja — 資料「図版「コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。」（kyuura と同じ印刷の文面）、最新の説明「コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）」（p.235）」"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-068",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品（「ポケモンカード第1弾」）・図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力・「ワザ」欄の「最新の説明」（効果の説明文がないこと）（エンジンの checked_fields）",
+     "result": "「不一致あり」（mismatches: pokemon.attacks[0].text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG2-006-P49",
+   "card_id": "PMCG2-006",
+   "card_name_ja": "タマタマ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "49",
+   "pdf_page": 51,
+   "location": "p.49「たねポケモン タマタマ LV.14／HP50」（ポケモンジャングル）",
+   "checked_fields": {
+    "name.ja": "タマタマ",
+    "jp_print.level": 14,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 50,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "さいみんじゅつ",
+    "pokemon.attacks[0].cost": [
+     "psychic"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "相手を「ねむり」状態にする。",
+    "pokemon.attacks[1].name.ja": "やどりぎのタネ",
+    "pokemon.attacks[1].cost": [
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[1].damage.display": "20",
+    "pokemon.attacks[1].text.ja": "相手にダメージを与えたら、自分のダメージカウンターを1つとりのぞく。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "data_error",
+   "data_error": [
+    {
+     "field": "pokemon.attacks[1].name.ja",
+     "kyuura_value": "やどりぎのタネ",
+     "source_value": "やどりぎのたね",
+     "evidence": "p.49 の図版・「ワザ」欄・解説とも、ひらがなの「たね」（エンジンの記録）",
+     "fix_status": "candidate",
+     "note": "kyuura の値の出典（ポケモンジャングルの転記）の表記と思われる。この取り込みでは data/cards.json を直さない（修正の候補。data/curation/card_corrections.json）"
+    }
+   ],
+   "differences": [
+    {
+     "field": "pokemon.attacks[1].name.ja",
+     "kind": "data_error",
+     "note": "ワザ名の表記（やどりぎのタネ／やどりぎのたね）"
+    },
+    {
+     "field": "pokemon.attacks[1].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG2-006-ATK1",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG2-006-ATK1"
+   ],
+   "findings": [
+    "エンジンの照合: pokemon.attacks[1].name.ja — 資料「やどりぎのたね（図版・「ワザ」欄・解説とも、ひらがなの「たね」。p.49）」",
+    "エンジンの照合: pokemon.attacks[1].text.ja — 資料「図版は kyuura と同じ印刷の文面と読める。最新の説明「相手にダメージを与えたら、自分にのっているダメージカウンターを1個とりのぞく。」（p.49。p.13 のフシギダネと同じ）」"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-006",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品（「ポケモンカード第1弾」）・図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力・「ワザ」欄の「最新の説明」（効果の説明文がないこと）（エンジンの checked_fields）",
+     "result": "「不一致あり」（mismatches: pokemon.attacks[1].name.ja・pokemon.attacks[1].text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG2-018-P58",
+   "card_id": "PMCG2-018",
+   "card_name_ja": "カイロス",
+   "source": "P43",
+   "scan": "J38",
+   "page": "58",
+   "pdf_page": 60,
+   "location": "p.58「たねポケモン カイロス LV.24／HP60」（ポケモンジャングル）",
+   "checked_fields": {
+    "name.ja": "カイロス",
+    "jp_print.level": 24,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 60,
+    "pokemon.types": [
+     "grass"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fire",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "まんりきばさみ",
+    "pokemon.attacks[0].cost": [
+     "grass",
+     "grass"
+    ],
+    "pokemon.attacks[0].damage.display": "20",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。",
+    "pokemon.attacks[1].name.ja": "ハサミギロチン",
+    "pokemon.attacks[1].cost": [
+     "grass",
+     "grass",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "50",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "エンジンの照合の結果は「一致」（照合した項目がすべて kyuura の記録と同じ）。最新の説明は印刷の文面と同じか、句読点だけの違い"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-018",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品（「ポケモンカード第1弾」）・図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力・「ワザ」欄の「最新の説明」（効果の説明文がないこと）（エンジンの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG2-021-P108",
+   "card_id": "PMCG2-021",
+   "card_name_ja": "トサキント",
+   "source": "P43",
+   "scan": "J38",
+   "page": "108",
+   "pdf_page": 110,
+   "location": "p.108「たねポケモン トサキント LV.12／HP40」（ポケモンジャングル）",
+   "checked_fields": {
+    "name.ja": "トサキント",
+    "jp_print.level": 12,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 0,
+    "pokemon.attacks[0].name.ja": "つのでつく",
+    "pokemon.attacks[0].cost": [
+     "water"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "エンジンの照合の結果は「一致」（照合した項目がすべて kyuura の記録と同じ）。最新の説明は印刷の文面と同じか、句読点だけの違い"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-021",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品（「ポケモンカード第1弾」）・図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力・「ワザ」欄の「最新の説明」（効果の説明文がないこと）（エンジンの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG2-022-P109",
+   "card_id": "PMCG2-022",
+   "card_name_ja": "アズマオウ",
+   "source": "P43",
+   "scan": "J38",
+   "page": "109",
+   "pdf_page": 111,
+   "location": "p.109「1進化ポケモン アズマオウ LV.28／HP70」（ポケモンジャングル）",
+   "checked_fields": {
+    "name.ja": "アズマオウ",
+    "jp_print.level": 28,
+    "pokemon.stage": "stage1",
+    "pokemon.hp": 70,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "つのでつく",
+    "pokemon.attacks[0].cost": [
+     "water"
+    ],
+    "pokemon.attacks[0].damage.display": "10",
+    "pokemon.attacks[0].text.ja": null,
+    "pokemon.attacks[1].name.ja": "たきのぼり",
+    "pokemon.attacks[1].cost": [
+     "water",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "30",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "エンジンの照合の結果は「一致」（照合した項目がすべて kyuura の記録と同じ）。最新の説明は印刷の文面と同じか、句読点だけの違い"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-022",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品（「ポケモンカード第1弾」）・図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力・「ワザ」欄の「最新の説明」（効果の説明文がないこと）（エンジンの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG2-035-P225",
+   "card_id": "PMCG2-035",
+   "card_name_ja": "プリン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "225",
+   "pdf_page": 227,
+   "location": "p.225「たねポケモン プリン LV.14／HP60」（ポケモンジャングル）",
+   "checked_fields": {
+    "name.ja": "プリン",
+    "jp_print.level": 14,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 60,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "psychic",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "こもりうた",
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "相手を「ねむり」状態にする。",
+    "pokemon.attacks[1].name.ja": "はたく",
+    "pokemon.attacks[1].cost": [
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[1].damage.display": "20",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "no_difference",
+   "data_error": false,
+   "differences": [],
+   "latest_description_refs": [],
+   "findings": [
+    "エンジンの照合の結果は「一致」（照合した項目がすべて kyuura の記録と同じ）。最新の説明は印刷の文面と同じか、句読点だけの違い"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-035",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品（「ポケモンカード第1弾」）・図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力・「ワザ」欄の「最新の説明」（効果の説明文がないこと）（エンジンの checked_fields）",
+     "result": "「一致」"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG3-012-P103",
+   "card_id": "PMCG3-012",
+   "card_name_ja": "シェルダー",
+   "source": "P43",
+   "scan": "J38",
+   "page": "103",
+   "pdf_page": 105,
+   "location": "p.103「たねポケモン シェルダー LV.8／HP30」（化石の秘密）",
+   "checked_fields": {
+    "name.ja": "シェルダー",
+    "jp_print.level": 8,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 30,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 1,
+    "pokemon.attacks[0].name.ja": "ちょうおんぱ",
+    "pokemon.attacks[0].cost": [
+     "water"
+    ],
+    "pokemon.attacks[0].damage": null,
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。",
+    "pokemon.attacks[1].name.ja": "からをとじる",
+    "pokemon.attacks[1].cost": [
+     "water"
+    ],
+    "pokemon.attacks[1].damage": null,
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、次の相手の番にこのカードが受けるダメージは0になる。(ダメージ以外の効果はそのまま)"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[1].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG3-012-ATK1",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG3-012-ATK1"
+   ],
+   "findings": [
+    "エンジンの照合: pokemon.attacks[1].text.ja — 資料「図版は kyuura と同じ印刷の文面と読める。最新の説明「コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）」（p.103）」"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG3-012",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品（「ポケモンカード第1弾」）・図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力・「ワザ」欄の「最新の説明」（効果の説明文がないこと）（エンジンの checked_fields）",
+     "result": "「不一致あり」（mismatches: pokemon.attacks[1].text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
+  },
+  {
+   "id": "CC-PMCG3-022-P116",
+   "card_id": "PMCG3-022",
+   "card_name_ja": "ラプラス",
+   "source": "P43",
+   "scan": "J38",
+   "page": "116",
+   "pdf_page": 118,
+   "location": "p.116「たねポケモン ラプラス LV.31／HP80」（化石の秘密）",
+   "checked_fields": {
+    "name.ja": "ラプラス",
+    "jp_print.level": 31,
+    "pokemon.stage": "basic",
+    "pokemon.hp": 80,
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "lightning",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [],
+    "pokemon.retreat_cost": 2,
+    "pokemon.attacks[0].name.ja": "みずでっぽう",
+    "pokemon.attacks[0].cost": [
+     "water"
+    ],
+    "pokemon.attacks[0].damage.display": "10+",
+    "pokemon.attacks[1].name.ja": "あやしいひかり",
+    "pokemon.attacks[1].cost": [
+     "water",
+     "water"
+    ],
+    "pokemon.attacks[1].damage.display": "10",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「こんらん」状態にする。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "jp_print.series（収録の書き方。照合した欄ではない）",
+    "name.en と英語の文面",
+    "pokemon.powers（エンジンの記録に特殊能力の欄の記述がない）",
+    "pokemon.attacks[0].text.ja（図版の読みが kyuura の文面と違う。上の findings）"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-PMCG3-022-ATK0",
+     "note": "kyuura の文面は印刷の文面。最新の説明とは書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-PMCG3-022-ATK0"
+   ],
+   "findings": [
+    "エンジンの照合: pokemon.attacks[0].text.ja — 資料「図版「ワザに必要なぶんよりも多く「水」エネルギーカードがついている時 多いエネルギー1つにつき10ダメージを追加する（ダメージ追加は2つぶんまで）」（800dpi の拡大で「エネルギーカー／ド」と読める。小さくかすれている）、最新の説明「ワザに必要なエネルギーよりも多く「水」エネルギーがついているとき、多い「水」エネルギー1個につき、10ダメージを追加する。ダメージ追加は2個ぶんまで。」（p.116）」",
+    "図版のみずでっぽうの説明文は「エネルギーカードがついている時」と読める（エンジンの記録。読み取りの確度は高くない）。kyuura の文面（「エネルギーがついている時」）との違いは、転記の誤りとは断定しない。この欄は照合した欄に入れていない（修正の候補。data/curation/card_corrections.json）"
+   ],
+   "not_confused_with": [],
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG3-022",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method）",
+     "scope": "見出しのレベル・HP・収録商品（「ポケモンカード第1弾」）・図版のタイプ・ワザの名前・必要なエネルギー・ダメージ・にげる・弱点・抵抗力・「ワザ」欄の「最新の説明」（効果の説明文がないこと）（エンジンの checked_fields）",
+     "result": "「不一致あり」（mismatches: pokemon.attacks[0].text.ja）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "照合した欄は、kyuura-engine の照合の記録が照合したと書いた項目だけ。kyuura は原典の画像を読み直していない。照合していない欄は fields_not_checked に書いた"
+   },
+   "engine_refs": []
   }
  ],
  "difference_kinds": {

@@ -7,6 +7,7 @@
 - カードの欄（名前・HP・ワザなど）は、ポケモンカード 旧シリーズ検索（pcg-search.com）[N3] の転記です。カード名から各カードのページにリンクしています。
 - 「番号」は pcg-search の並び順で、カードに印刷された番号ではありません。
 - 「ほかの収録」は、名前（ポケモンは HP・特殊能力名・ワザ名も）が同じカードが入っているほかの商品です（拡張パック 10 弾と、このページ群の商品）。
+- 「id」は `data/cards.json` のカードの id（商品の記号とカードページ名の末尾 3 桁。[data/product_items.json](../../../data/product_items.json) にページとの対応）。「→」は番号だけが違うページを、代表のページの記録にまとめたもの。「対象外」は通常の対戦のデッキに入れるカードではない項目（`data/product_items.json` の non_game_items）。
 
 ## 概要
 
@@ -148,140 +149,140 @@ Bulbapedia [X43] によります。場所の名前はゲームの日本語名に
 
 ## カードリスト: 拡張シート 第1弾（青版）
 
-| 番号 | カード名 | 種類 | タイプ | HP | レア | 英語版 | ほかの収録 |
-|---|---|---|---|---|---|---|---|
-| 001/036 | [フシギダネ](https://pcg-search.com/card/1st/1stex1001.php) | たね | 草 | 50 | ◆ |  | クイックスターターギフト（1998-12-04）<br>イントロパック（フシギダネデッキ）（1999-07-30） |
-| 002/036 | [キャタピー](https://pcg-search.com/card/1st/1stex1002.php) | たね | 草 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
-| 003/036 | [トランセル](https://pcg-search.com/card/1st/1stex1003.php) | 1進化 | 草 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 004/036 | [ビードル](https://pcg-search.com/card/1st/1stex1004.php) | たね | 草 | 50 | ● |  |  |
-| 005/036 | [コクーン](https://pcg-search.com/card/1st/1stex1005.php) | 1進化 | 草 | 60 | ● |  |  |
-| 006/036 | [ニドラン♀](https://pcg-search.com/card/1st/1stex1006.php) | たね | 草 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
-| 007/036 | [ニドラン♂](https://pcg-search.com/card/1st/1stex1007.php) | たね | 草 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
-| 008/036 | [ズバット](https://pcg-search.com/card/1st/1stex1008.php) | たね | 草 | 40 | ● |  |  |
-| 009/036 | [ゴルバット](https://pcg-search.com/card/1st/1stex1009.php) | 1進化 | 草 | 50 | ● |  |  |
-| 010/036 | [パラス](https://pcg-search.com/card/1st/1stex1010.php) | たね | 草 | 50 | ● |  |  |
-| 011/036 | [パラセクト](https://pcg-search.com/card/1st/1stex1011.php) | 1進化 | 草 | 60 | ● |  |  |
-| 012/036 | [カイロス](https://pcg-search.com/card/1st/1stex1012.php) | たね | 草 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 013/036 | [ヒトカゲ](https://pcg-search.com/card/1st/1stex1013.php) | たね | 炎 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 014/036 | [ギャロップ](https://pcg-search.com/card/1st/1stex1014.php) | 1進化 | 炎 | 60 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 015/036 | [ゼニガメ](https://pcg-search.com/card/1st/1stex1015.php) | たね | 水 | 50 | ◆ |  | クイックスターターギフト（1998-12-04）<br>イントロパック（ゼニガメデッキ）（1999-07-30） |
-| 016/036 | [ニョロモ](https://pcg-search.com/card/1st/1stex1016.php) | たね | 水 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
-| 017/036 | [ニョロゾ](https://pcg-search.com/card/1st/1stex1017.php) | 1進化 | 水 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 018/036 | [ニョロボン](https://pcg-search.com/card/1st/1stex1018.php) | 2進化 | 水 | 80 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 019/036 | [ピカチュウ](https://pcg-search.com/card/1st/1stex1019.php) | たね | 雷 | 30 | ◆ | Wizards Black Star Promos 27（Pikachu） | クイックスターターギフト（1998-12-04） |
-| 020/036 | [ケーシィ](https://pcg-search.com/card/1st/1stex1020.php) | たね | 超 | 30 | ● |  | クイックスターターギフト（1998-12-04） |
-| 021/036 | [バリヤード](https://pcg-search.com/card/1st/1stex1021.php) | たね | 超 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 022/036 | [ミュウツー](https://pcg-search.com/card/1st/1stex1022.php) | たね | 超 | 80 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 023/036 | [イシツブテ](https://pcg-search.com/card/1st/1stex1023.php) | たね | 闘 | 50 | ● |  |  |
-| 024/036 | [ポッポ](https://pcg-search.com/card/1st/1stex1024.php) | たね | 無 | 50 | ● |  |  |
-| 025/036 | [コラッタ](https://pcg-search.com/card/1st/1stex1025.php) | たね | 無 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
-| 026/036 | [ピッピ](https://pcg-search.com/card/1st/1stex1026.php) | たね | 無 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 027/036 | [プクリン](https://pcg-search.com/card/1st/1stex1027.php) | 1進化 | 無 | 90 | ◆ |  |  |
-| 028/036 | [ドードー](https://pcg-search.com/card/1st/1stex1028.php) | たね | 無 | 40 | ● |  | クイックスターターギフト（1998-12-04） |
-| 029/036 | [ドードリオ](https://pcg-search.com/card/1st/1stex1029.php) | 1進化 | 無 | 60 | ● |  |  |
-| 030/036 | [ベロリンガ](https://pcg-search.com/card/1st/1stex1030.php) | たね | 無 | 60 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 031/036 | [ラッキー](https://pcg-search.com/card/1st/1stex1031.php) | たね | 無 | 100 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 032/036 | [イーブイ](https://pcg-search.com/card/1st/1stex1032.php) | たね | 無 | 30 | ● |  |  |
-| 033/036 | [ポリゴン](https://pcg-search.com/card/1st/1stex1033.php) | たね | 無 | 40 | ● |  | クイックスターターギフト（1998-12-04） |
-| 034/036 | [カビゴン](https://pcg-search.com/card/1st/1stex1034.php) | たね | 無 | 90 | ◆ | Wizards Black Star Promos 49（Snorlax） | クイックスターターギフト（1998-12-04） |
-| 035/036 | [化石の発掘](https://pcg-search.com/card/1st/1stex1035.php) | トレーナー |  |  | ◆ |  |  |
-| 036/036 | [月の石](https://pcg-search.com/card/1st/1stex1036.php) | トレーナー |  |  | ◆ |  |  |
+| 番号 | id | カード名 | 種類 | タイプ | HP | レア | 英語版 | ほかの収録 |
+|---|---|---|---|---|---|---|---|---|
+| 001/036 | `ES1-001` | [フシギダネ](https://pcg-search.com/card/1st/1stex1001.php) | たね | 草 | 50 | ◆ |  | クイックスターターギフト（1998-12-04）<br>イントロパック（フシギダネデッキ）（1999-07-30） |
+| 002/036 | `ES1-002` | [キャタピー](https://pcg-search.com/card/1st/1stex1002.php) | たね | 草 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
+| 003/036 | `ES1-003` | [トランセル](https://pcg-search.com/card/1st/1stex1003.php) | 1進化 | 草 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 004/036 | `ES1-004` | [ビードル](https://pcg-search.com/card/1st/1stex1004.php) | たね | 草 | 50 | ● |  |  |
+| 005/036 | `ES1-005` | [コクーン](https://pcg-search.com/card/1st/1stex1005.php) | 1進化 | 草 | 60 | ● |  |  |
+| 006/036 | `ES1-006` | [ニドラン♀](https://pcg-search.com/card/1st/1stex1006.php) | たね | 草 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
+| 007/036 | `ES1-007` | [ニドラン♂](https://pcg-search.com/card/1st/1stex1007.php) | たね | 草 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
+| 008/036 | `ES1-008` | [ズバット](https://pcg-search.com/card/1st/1stex1008.php) | たね | 草 | 40 | ● |  |  |
+| 009/036 | `ES1-009` | [ゴルバット](https://pcg-search.com/card/1st/1stex1009.php) | 1進化 | 草 | 50 | ● |  |  |
+| 010/036 | `ES1-010` | [パラス](https://pcg-search.com/card/1st/1stex1010.php) | たね | 草 | 50 | ● |  |  |
+| 011/036 | `ES1-011` | [パラセクト](https://pcg-search.com/card/1st/1stex1011.php) | 1進化 | 草 | 60 | ● |  |  |
+| 012/036 | `ES1-012` | [カイロス](https://pcg-search.com/card/1st/1stex1012.php) | たね | 草 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 013/036 | `ES1-013` | [ヒトカゲ](https://pcg-search.com/card/1st/1stex1013.php) | たね | 炎 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 014/036 | `ES1-014` | [ギャロップ](https://pcg-search.com/card/1st/1stex1014.php) | 1進化 | 炎 | 60 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 015/036 | `ES1-015` | [ゼニガメ](https://pcg-search.com/card/1st/1stex1015.php) | たね | 水 | 50 | ◆ |  | クイックスターターギフト（1998-12-04）<br>イントロパック（ゼニガメデッキ）（1999-07-30） |
+| 016/036 | `ES1-016` | [ニョロモ](https://pcg-search.com/card/1st/1stex1016.php) | たね | 水 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
+| 017/036 | `ES1-017` | [ニョロゾ](https://pcg-search.com/card/1st/1stex1017.php) | 1進化 | 水 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 018/036 | `ES1-018` | [ニョロボン](https://pcg-search.com/card/1st/1stex1018.php) | 2進化 | 水 | 80 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 019/036 | `ES1-019` | [ピカチュウ](https://pcg-search.com/card/1st/1stex1019.php) | たね | 雷 | 30 | ◆ | Wizards Black Star Promos 27（Pikachu） | クイックスターターギフト（1998-12-04） |
+| 020/036 | `ES1-020` | [ケーシィ](https://pcg-search.com/card/1st/1stex1020.php) | たね | 超 | 30 | ● |  | クイックスターターギフト（1998-12-04） |
+| 021/036 | `ES1-021` | [バリヤード](https://pcg-search.com/card/1st/1stex1021.php) | たね | 超 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 022/036 | `ES1-022` | [ミュウツー](https://pcg-search.com/card/1st/1stex1022.php) | たね | 超 | 80 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 023/036 | `ES1-023` | [イシツブテ](https://pcg-search.com/card/1st/1stex1023.php) | たね | 闘 | 50 | ● |  |  |
+| 024/036 | `ES1-024` | [ポッポ](https://pcg-search.com/card/1st/1stex1024.php) | たね | 無 | 50 | ● |  |  |
+| 025/036 | `ES1-025` | [コラッタ](https://pcg-search.com/card/1st/1stex1025.php) | たね | 無 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
+| 026/036 | `ES1-026` | [ピッピ](https://pcg-search.com/card/1st/1stex1026.php) | たね | 無 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 027/036 | `ES1-027` | [プクリン](https://pcg-search.com/card/1st/1stex1027.php) | 1進化 | 無 | 90 | ◆ |  |  |
+| 028/036 | `ES1-028` | [ドードー](https://pcg-search.com/card/1st/1stex1028.php) | たね | 無 | 40 | ● |  | クイックスターターギフト（1998-12-04） |
+| 029/036 | `ES1-029` | [ドードリオ](https://pcg-search.com/card/1st/1stex1029.php) | 1進化 | 無 | 60 | ● |  |  |
+| 030/036 | `ES1-030` | [ベロリンガ](https://pcg-search.com/card/1st/1stex1030.php) | たね | 無 | 60 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 031/036 | `ES1-031` | [ラッキー](https://pcg-search.com/card/1st/1stex1031.php) | たね | 無 | 100 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 032/036 | `ES1-032` | [イーブイ](https://pcg-search.com/card/1st/1stex1032.php) | たね | 無 | 30 | ● |  |  |
+| 033/036 | `ES1-033` | [ポリゴン](https://pcg-search.com/card/1st/1stex1033.php) | たね | 無 | 40 | ● |  | クイックスターターギフト（1998-12-04） |
+| 034/036 | `ES1-034` | [カビゴン](https://pcg-search.com/card/1st/1stex1034.php) | たね | 無 | 90 | ◆ | Wizards Black Star Promos 49（Snorlax） | クイックスターターギフト（1998-12-04） |
+| 035/036 | `ES1-035` | [化石の発掘](https://pcg-search.com/card/1st/1stex1035.php) | トレーナー |  |  | ◆ |  |  |
+| 036/036 | `ES1-036` | [月の石](https://pcg-search.com/card/1st/1stex1036.php) | トレーナー |  |  | ◆ |  |  |
 
 ## カードリスト: 拡張シート 第2弾（赤版）
 
-| 番号 | カード名 | 種類 | タイプ | HP | レア | 英語版 | ほかの収録 |
-|---|---|---|---|---|---|---|---|
-| 001/036 | [モルフォン](https://pcg-search.com/card/1st/1stex2001.php) | 1進化 | 草 | 60 | ● |  |  |
-| 002/036 | [ベトベター](https://pcg-search.com/card/1st/1stex2002.php) | たね | 草 | 50 | ● |  |  |
-| 003/036 | [ドガース](https://pcg-search.com/card/1st/1stex2003.php) | たね | 草 | 50 | ● |  |  |
-| 004/036 | [モンジャラ](https://pcg-search.com/card/1st/1stex2004.php) | たね | 草 | 50 | ● |  |  |
-| 005/036 | [ファイヤー](https://pcg-search.com/card/1st/1stex2005.php) | たね | 炎 | 80 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 006/036 | [パウワウ](https://pcg-search.com/card/1st/1stex2006.php) | たね | 水 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
-| 007/036 | [ジュゴン](https://pcg-search.com/card/1st/1stex2007.php) | 1進化 | 水 | 60 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 008/036 | [シェルダー](https://pcg-search.com/card/1st/1stex2008.php) | たね | 水 | 50 | ● |  |  |
-| 009/036 | [クラブ](https://pcg-search.com/card/1st/1stex2009.php) | たね | 水 | 40 | ● |  |  |
-| 010/036 | [ラプラス](https://pcg-search.com/card/1st/1stex2010.php) | たね | 水 | 60 | ● |  | クイックスターターギフト（1998-12-04） |
-| 011/036 | [オムナイト](https://pcg-search.com/card/1st/1stex2011.php) | 1進化 | 水 | 50 | ◆ |  |  |
-| 012/036 | [フリーザー](https://pcg-search.com/card/1st/1stex2012.php) | たね | 水 | 80 | ◆ | Wizards Black Star Promos 48（Articuno） | クイックスターターギフト（1998-12-04） |
-| 013/036 | [ライチュウ](https://pcg-search.com/card/1st/1stex2013.php) | 1進化 | 雷 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 014/036 | [コイル](https://pcg-search.com/card/1st/1stex2014.php) | たね | 雷 | 40 | ● |  | クイックスターターギフト（1998-12-04） |
-| 015/036 | [レアコイル](https://pcg-search.com/card/1st/1stex2015.php) | 1進化 | 雷 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 016/036 | [ビリリダマ](https://pcg-search.com/card/1st/1stex2016.php) | たね | 雷 | 30 | ● |  | クイックスターターギフト（1998-12-04） |
-| 017/036 | [エレブー](https://pcg-search.com/card/1st/1stex2017.php) | たね | 雷 | 60 | ● | Wizards Black Star Promos 46（Electabuzz） |  |
-| 018/036 | [サンダー](https://pcg-search.com/card/1st/1stex2018.php) | たね | 雷 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 019/036 | [ルージュラ](https://pcg-search.com/card/1st/1stex2019.php) | たね | 超 | 50 | ◆ |  | クイックスターターギフト（1998-12-04）<br>プロモ（2000-01-22） |
-| 020/036 | [サンド](https://pcg-search.com/card/1st/1stex2020.php) | たね | 闘 | 40 | ● |  | クイックスターターギフト（1998-12-04） |
-| 021/036 | [ワンリキー](https://pcg-search.com/card/1st/1stex2021.php) | たね | 闘 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
-| 022/036 | [ゴーリキー](https://pcg-search.com/card/1st/1stex2022.php) | 1進化 | 闘 | 70 | ● |  | クイックスターターギフト（1998-12-04） |
-| 023/036 | [ゴローン](https://pcg-search.com/card/1st/1stex2023.php) | 1進化 | 闘 | 60 | ◆ |  |  |
-| 024/036 | [イワーク](https://pcg-search.com/card/1st/1stex2024.php) | たね | 闘 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 025/036 | [ガラガラ](https://pcg-search.com/card/1st/1stex2025.php) | 1進化 | 闘 | 60 | ◆ |  |  |
-| 026/036 | [サワムラー](https://pcg-search.com/card/1st/1stex2026.php) | たね | 闘 | 50 | ◆ |  |  |
-| 027/036 | [エビワラー](https://pcg-search.com/card/1st/1stex2027.php) | たね | 闘 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 028/036 | [カブト](https://pcg-search.com/card/1st/1stex2028.php) | 1進化 | 闘 | 50 | ◆ |  |  |
-| 029/036 | [プテラ](https://pcg-search.com/card/1st/1stex2029.php) | 1進化 | 闘 | 70 | ◆ |  |  |
-| 030/036 | [オニスズメ](https://pcg-search.com/card/1st/1stex2030.php) | たね | 無 | 40 | ● |  |  |
-| 031/036 | [オニドリル](https://pcg-search.com/card/1st/1stex2031.php) | 1進化 | 無 | 60 | ● |  |  |
-| 032/036 | [メタモン](https://pcg-search.com/card/1st/1stex2032.php) | たね | 無 | 40 | ◆ |  |  |
-| 033/036 | [エフェクトガード](https://pcg-search.com/card/1st/1stex2033.php) | トレーナー |  |  | ● |  |  |
-| 034/036 | [元気のかたまり](https://pcg-search.com/card/1st/1stex2034.php) | トレーナー |  |  | ● | Gym Challenge 117（Max Revive） | ポケモンジム第3弾「グレンタウンジム カツラ」（1999-02-26） |
-| 035/036 | [フラッシュ](https://pcg-search.com/card/1st/1stex2035.php) | トレーナー |  |  | ◆ |  |  |
-| 036/036 | [マスターボール](https://pcg-search.com/card/1st/1stex2036.php) | トレーナー |  |  | ◆ | Gym Challenge 116（Master Ball） | クイックスターターギフト（1998-12-04）<br>ポケモンジム第3弾「ヤマブキシティジム ナツメ」（1999-02-26）<br>イントロパック★neo（チコリータデッキ）（2001-04-06）<br>イントロパック★neo（ワニノコデッキ）（2001-04-06） |
+| 番号 | id | カード名 | 種類 | タイプ | HP | レア | 英語版 | ほかの収録 |
+|---|---|---|---|---|---|---|---|---|
+| 001/036 | `ES2-001` | [モルフォン](https://pcg-search.com/card/1st/1stex2001.php) | 1進化 | 草 | 60 | ● |  |  |
+| 002/036 | `ES2-002` | [ベトベター](https://pcg-search.com/card/1st/1stex2002.php) | たね | 草 | 50 | ● |  |  |
+| 003/036 | `ES2-003` | [ドガース](https://pcg-search.com/card/1st/1stex2003.php) | たね | 草 | 50 | ● |  |  |
+| 004/036 | `ES2-004` | [モンジャラ](https://pcg-search.com/card/1st/1stex2004.php) | たね | 草 | 50 | ● |  |  |
+| 005/036 | `ES2-005` | [ファイヤー](https://pcg-search.com/card/1st/1stex2005.php) | たね | 炎 | 80 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 006/036 | `ES2-006` | [パウワウ](https://pcg-search.com/card/1st/1stex2006.php) | たね | 水 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
+| 007/036 | `ES2-007` | [ジュゴン](https://pcg-search.com/card/1st/1stex2007.php) | 1進化 | 水 | 60 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 008/036 | `ES2-008` | [シェルダー](https://pcg-search.com/card/1st/1stex2008.php) | たね | 水 | 50 | ● |  |  |
+| 009/036 | `ES2-009` | [クラブ](https://pcg-search.com/card/1st/1stex2009.php) | たね | 水 | 40 | ● |  |  |
+| 010/036 | `ES2-010` | [ラプラス](https://pcg-search.com/card/1st/1stex2010.php) | たね | 水 | 60 | ● |  | クイックスターターギフト（1998-12-04） |
+| 011/036 | `ES2-011` | [オムナイト](https://pcg-search.com/card/1st/1stex2011.php) | 1進化 | 水 | 50 | ◆ |  |  |
+| 012/036 | `ES2-012` | [フリーザー](https://pcg-search.com/card/1st/1stex2012.php) | たね | 水 | 80 | ◆ | Wizards Black Star Promos 48（Articuno） | クイックスターターギフト（1998-12-04） |
+| 013/036 | `ES2-013` | [ライチュウ](https://pcg-search.com/card/1st/1stex2013.php) | 1進化 | 雷 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 014/036 | `ES2-014` | [コイル](https://pcg-search.com/card/1st/1stex2014.php) | たね | 雷 | 40 | ● |  | クイックスターターギフト（1998-12-04） |
+| 015/036 | `ES2-015` | [レアコイル](https://pcg-search.com/card/1st/1stex2015.php) | 1進化 | 雷 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 016/036 | `ES2-016` | [ビリリダマ](https://pcg-search.com/card/1st/1stex2016.php) | たね | 雷 | 30 | ● |  | クイックスターターギフト（1998-12-04） |
+| 017/036 | `ES2-017` | [エレブー](https://pcg-search.com/card/1st/1stex2017.php) | たね | 雷 | 60 | ● | Wizards Black Star Promos 46（Electabuzz） |  |
+| 018/036 | `ES2-018` | [サンダー](https://pcg-search.com/card/1st/1stex2018.php) | たね | 雷 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 019/036 | `ES2-019` | [ルージュラ](https://pcg-search.com/card/1st/1stex2019.php) | たね | 超 | 50 | ◆ |  | クイックスターターギフト（1998-12-04）<br>プロモ（2000-01-22） |
+| 020/036 | `ES2-020` | [サンド](https://pcg-search.com/card/1st/1stex2020.php) | たね | 闘 | 40 | ● |  | クイックスターターギフト（1998-12-04） |
+| 021/036 | `ES2-021` | [ワンリキー](https://pcg-search.com/card/1st/1stex2021.php) | たね | 闘 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
+| 022/036 | `ES2-022` | [ゴーリキー](https://pcg-search.com/card/1st/1stex2022.php) | 1進化 | 闘 | 70 | ● |  | クイックスターターギフト（1998-12-04） |
+| 023/036 | `ES2-023` | [ゴローン](https://pcg-search.com/card/1st/1stex2023.php) | 1進化 | 闘 | 60 | ◆ |  |  |
+| 024/036 | `ES2-024` | [イワーク](https://pcg-search.com/card/1st/1stex2024.php) | たね | 闘 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 025/036 | `ES2-025` | [ガラガラ](https://pcg-search.com/card/1st/1stex2025.php) | 1進化 | 闘 | 60 | ◆ |  |  |
+| 026/036 | `ES2-026` | [サワムラー](https://pcg-search.com/card/1st/1stex2026.php) | たね | 闘 | 50 | ◆ |  |  |
+| 027/036 | `ES2-027` | [エビワラー](https://pcg-search.com/card/1st/1stex2027.php) | たね | 闘 | 50 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 028/036 | `ES2-028` | [カブト](https://pcg-search.com/card/1st/1stex2028.php) | 1進化 | 闘 | 50 | ◆ |  |  |
+| 029/036 | `ES2-029` | [プテラ](https://pcg-search.com/card/1st/1stex2029.php) | 1進化 | 闘 | 70 | ◆ |  |  |
+| 030/036 | `ES2-030` | [オニスズメ](https://pcg-search.com/card/1st/1stex2030.php) | たね | 無 | 40 | ● |  |  |
+| 031/036 | `ES2-031` | [オニドリル](https://pcg-search.com/card/1st/1stex2031.php) | 1進化 | 無 | 60 | ● |  |  |
+| 032/036 | `ES2-032` | [メタモン](https://pcg-search.com/card/1st/1stex2032.php) | たね | 無 | 40 | ◆ |  |  |
+| 033/036 | `ES2-033` | [エフェクトガード](https://pcg-search.com/card/1st/1stex2033.php) | トレーナー |  |  | ● |  |  |
+| 034/036 | `ES2-034` | [元気のかたまり](https://pcg-search.com/card/1st/1stex2034.php) | トレーナー |  |  | ● | Gym Challenge 117（Max Revive） | ポケモンジム第3弾「グレンタウンジム カツラ」（1999-02-26） |
+| 035/036 | `ES2-035` | [フラッシュ](https://pcg-search.com/card/1st/1stex2035.php) | トレーナー |  |  | ◆ |  |  |
+| 036/036 | `ES2-036` | [マスターボール](https://pcg-search.com/card/1st/1stex2036.php) | トレーナー |  |  | ◆ | Gym Challenge 116（Master Ball） | クイックスターターギフト（1998-12-04）<br>ポケモンジム第3弾「ヤマブキシティジム ナツメ」（1999-02-26）<br>イントロパック★neo（チコリータデッキ）（2001-04-06）<br>イントロパック★neo（ワニノコデッキ）（2001-04-06） |
 
 ## カードリスト: 拡張シート 第3弾（緑版）
 
-| 番号 | カード名 | 種類 | タイプ | HP | レア | 英語版 | ほかの収録 |
-|---|---|---|---|---|---|---|---|
-| 001/036 | [アーボック](https://pcg-search.com/card/1st/1stex3001.php) | 1進化 | 草 | 60 | ◆ |  |  |
-| 002/036 | [ニドリーナ](https://pcg-search.com/card/1st/1stex3002.php) | 1進化 | 草 | 60 | ◆ |  |  |
-| 003/036 | [ニドリーノ](https://pcg-search.com/card/1st/1stex3003.php) | 1進化 | 草 | 60 | ◆ |  |  |
-| 004/036 | [コンパン](https://pcg-search.com/card/1st/1stex3004.php) | たね | 草 | 50 | ● |  |  |
-| 005/036 | [マダツボミ](https://pcg-search.com/card/1st/1stex3005.php) | たね | 草 | 40 | ● |  |  |
-| 006/036 | [ウツドン](https://pcg-search.com/card/1st/1stex3006.php) | 1進化 | 草 | 60 | ◆ |  |  |
-| 007/036 | [マタドガス](https://pcg-search.com/card/1st/1stex3007.php) | 1進化 | 草 | 60 | ◆ |  |  |
-| 008/036 | [ストライク](https://pcg-search.com/card/1st/1stex3008.php) | たね | 草 | 60 | ◆ | Wizards Black Star Promos 45（Scyther） | クイックスターターギフト（1998-12-04） |
-| 009/036 | [ロコン](https://pcg-search.com/card/1st/1stex3009.php) | たね | 炎 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
-| 010/036 | [ガーディ](https://pcg-search.com/card/1st/1stex3010.php) | たね | 炎 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
-| 011/036 | [ポニータ](https://pcg-search.com/card/1st/1stex3011.php) | たね | 炎 | 40 | ● |  | クイックスターターギフト（1998-12-04） |
-| 012/036 | [ブーバー](https://pcg-search.com/card/1st/1stex3012.php) | たね | 炎 | 60 | ◆ | Wizards Black Star Promos 44（Magmar） | クイックスターターギフト（1998-12-04） |
-| 013/036 | [ゴルダック](https://pcg-search.com/card/1st/1stex3013.php) | 1進化 | 水 | 70 | ◆ |  |  |
-| 014/036 | [キングラー](https://pcg-search.com/card/1st/1stex3014.php) | 1進化 | 水 | 80 | ◆ |  |  |
-| 015/036 | [タッツー](https://pcg-search.com/card/1st/1stex3015.php) | たね | 水 | 40 | ● |  |  |
-| 016/036 | [シードラ](https://pcg-search.com/card/1st/1stex3016.php) | 1進化 | 水 | 70 | ◆ |  |  |
-| 017/036 | [ヒトデマン](https://pcg-search.com/card/1st/1stex3017.php) | たね | 水 | 50 | ● |  |  |
-| 018/036 | [オムナイト](https://pcg-search.com/card/1st/1stex3018.php) | 1進化 | 水 | 50 | ◆ |  |  |
-| 019/036 | [ユンゲラー](https://pcg-search.com/card/1st/1stex3019.php) | 1進化 | 超 | 60 | ◆ |  |  |
-| 020/036 | [ユンゲラー](https://pcg-search.com/card/1st/1stex3020.php) | 1進化 | 超 | 70 | ● |  | クイックスターターギフト（1998-12-04） |
-| 021/036 | [ヤドラン](https://pcg-search.com/card/1st/1stex3021.php) | 1進化 | 超 | 90 | ● |  |  |
-| 022/036 | [ゴース](https://pcg-search.com/card/1st/1stex3022.php) | たね | 超 | 40 | ● |  | クイックスターターギフト（1998-12-04） |
-| 023/036 | [ゴースト](https://pcg-search.com/card/1st/1stex3023.php) | 1進化 | 超 | 60 | ◆ |  |  |
-| 024/036 | [ゴースト](https://pcg-search.com/card/1st/1stex3024.php) | 1進化 | 超 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
-| 025/036 | [スリーパー](https://pcg-search.com/card/1st/1stex3025.php) | 1進化 | 超 | 60 | ◆ |  |  |
-| 026/036 | [ミュウツー](https://pcg-search.com/card/1st/1stex3026.php) | たね | 超 | 80 | ● |  |  |
-| 027/036 | [サンドパン](https://pcg-search.com/card/1st/1stex3027.php) | 1進化 | 闘 | 70 | ● |  | クイックスターターギフト（1998-12-04） |
-| 028/036 | [ゴーリキー](https://pcg-search.com/card/1st/1stex3028.php) | 1進化 | 闘 | 60 | ● |  |  |
-| 029/036 | [ゴローン](https://pcg-search.com/card/1st/1stex3029.php) | 1進化 | 闘 | 60 | ● |  |  |
-| 030/036 | [カラカラ](https://pcg-search.com/card/1st/1stex3030.php) | たね | 闘 | 40 | ● |  |  |
-| 031/036 | [サイドン](https://pcg-search.com/card/1st/1stex3031.php) | 1進化 | 闘 | 80 | ◆ |  |  |
-| 032/036 | [ピジョン](https://pcg-search.com/card/1st/1stex3032.php) | 1進化 | 無 | 60 | ◆ |  |  |
-| 033/036 | [ガルーラ](https://pcg-search.com/card/1st/1stex3033.php) | たね | 無 | 80 | ● |  | クイックスターターギフト（1998-12-04） |
-| 034/036 | [ケンタロス](https://pcg-search.com/card/1st/1stex3034.php) | たね | 無 | 70 | ● |  |  |
-| 035/036 | [ポケモン再転送](https://pcg-search.com/card/1st/1stex3035.php) | トレーナー |  |  | ● |  |  |
-| 036/036 | [ポケモンタワー](https://pcg-search.com/card/1st/1stex3036.php) | スタジアム |  |  | ◆ |  |  |
-| -/- | [サイドカード4枚戦](https://pcg-search.com/card/1st/1stex3037.php) | EXTRA RULE |  |  |  |  |  |
-| -/- | [「こんらん」で20ダメージルール](https://pcg-search.com/card/1st/1stex3038.php) | EXTRA RULE |  |  |  |  |  |
-| -/- | [3デッキ戦](https://pcg-search.com/card/1st/1stex3039.php) | EXTRA RULE |  |  |  |  |  |
-| -/- | [ダグトリオチームバトル 3vs3](https://pcg-search.com/card/1st/1stex3040.php) | EXTRA RULE |  |  |  |  |  |
-| -/- | [デッキ交換戦](https://pcg-search.com/card/1st/1stex3041.php) | EXTRA RULE |  |  |  |  |  |
-| -/- | [ポケモンタワーのなぞ?](https://pcg-search.com/card/1st/1stex3042.php) | デッキ |  |  |  |  |  |
-| -/- | [ポケモンやしきでアッチッチ!](https://pcg-search.com/card/1st/1stex3043.php) | デッキ |  |  |  |  |  |
-| -/- | [サファリゾーンでおおあばれ!](https://pcg-search.com/card/1st/1stex3044.php) | デッキ |  |  |  |  |  |
-| -/- | [ふたごじまのタッツー](https://pcg-search.com/card/1st/1stex3045.php) | デッキ |  |  |  |  |  |
-| -/- | [ハナダ!さいごのどうくつ](https://pcg-search.com/card/1st/1stex3046.php) | デッキ |  |  |  |  |  |
-| -/- | [オーヤマのピカチュウ](https://pcg-search.com/card/1st/1stex3047.php) | たね | 雷 | 50 |  |  |  |
-| -/- | [イマクニ?のわるだくみ](https://pcg-search.com/card/1st/1stex3048.php) | その他 |  |  |  |  |  |
-| -/- | [イマクニ？のコーナー](https://pcg-search.com/card/1st/1stex3049.php)（名前はカードの画像で確認） | その他 |  |  |  |  |  |
-| -/- | [ハズレ？](https://pcg-search.com/card/1st/1stex3050.php)（名前はカードの画像で確認） | その他 |  |  |  |  |  |
-| -/- | [Pokémon Machine](https://pcg-search.com/card/1st/1stex3051.php)（名前はカードの画像で確認） | その他 |  |  |  |  |  |
-| -/- | [イマクニ?のパソコン](https://pcg-search.com/card/1st/1stex3052.php) | PASS CARD |  |  |  |  |  |
-| -/- | [マサキのパソコン](https://pcg-search.com/card/1st/1stex3053.php) | PASS CARD |  |  |  |  |  |
+| 番号 | id | カード名 | 種類 | タイプ | HP | レア | 英語版 | ほかの収録 |
+|---|---|---|---|---|---|---|---|---|
+| 001/036 | `ES3-001` | [アーボック](https://pcg-search.com/card/1st/1stex3001.php) | 1進化 | 草 | 60 | ◆ |  |  |
+| 002/036 | `ES3-002` | [ニドリーナ](https://pcg-search.com/card/1st/1stex3002.php) | 1進化 | 草 | 60 | ◆ |  |  |
+| 003/036 | `ES3-003` | [ニドリーノ](https://pcg-search.com/card/1st/1stex3003.php) | 1進化 | 草 | 60 | ◆ |  |  |
+| 004/036 | `ES3-004` | [コンパン](https://pcg-search.com/card/1st/1stex3004.php) | たね | 草 | 50 | ● |  |  |
+| 005/036 | `ES3-005` | [マダツボミ](https://pcg-search.com/card/1st/1stex3005.php) | たね | 草 | 40 | ● |  |  |
+| 006/036 | `ES3-006` | [ウツドン](https://pcg-search.com/card/1st/1stex3006.php) | 1進化 | 草 | 60 | ◆ |  |  |
+| 007/036 | `ES3-007` | [マタドガス](https://pcg-search.com/card/1st/1stex3007.php) | 1進化 | 草 | 60 | ◆ |  |  |
+| 008/036 | `ES3-008` | [ストライク](https://pcg-search.com/card/1st/1stex3008.php) | たね | 草 | 60 | ◆ | Wizards Black Star Promos 45（Scyther） | クイックスターターギフト（1998-12-04） |
+| 009/036 | `ES3-009` | [ロコン](https://pcg-search.com/card/1st/1stex3009.php) | たね | 炎 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
+| 010/036 | `ES3-010` | [ガーディ](https://pcg-search.com/card/1st/1stex3010.php) | たね | 炎 | 50 | ● |  | クイックスターターギフト（1998-12-04） |
+| 011/036 | `ES3-011` | [ポニータ](https://pcg-search.com/card/1st/1stex3011.php) | たね | 炎 | 40 | ● |  | クイックスターターギフト（1998-12-04） |
+| 012/036 | `ES3-012` | [ブーバー](https://pcg-search.com/card/1st/1stex3012.php) | たね | 炎 | 60 | ◆ | Wizards Black Star Promos 44（Magmar） | クイックスターターギフト（1998-12-04） |
+| 013/036 | `ES3-013` | [ゴルダック](https://pcg-search.com/card/1st/1stex3013.php) | 1進化 | 水 | 70 | ◆ |  |  |
+| 014/036 | `ES3-014` | [キングラー](https://pcg-search.com/card/1st/1stex3014.php) | 1進化 | 水 | 80 | ◆ |  |  |
+| 015/036 | `ES3-015` | [タッツー](https://pcg-search.com/card/1st/1stex3015.php) | たね | 水 | 40 | ● |  |  |
+| 016/036 | `ES3-016` | [シードラ](https://pcg-search.com/card/1st/1stex3016.php) | 1進化 | 水 | 70 | ◆ |  |  |
+| 017/036 | `ES3-017` | [ヒトデマン](https://pcg-search.com/card/1st/1stex3017.php) | たね | 水 | 50 | ● |  |  |
+| 018/036 | `ES3-018` | [オムナイト](https://pcg-search.com/card/1st/1stex3018.php) | 1進化 | 水 | 50 | ◆ |  |  |
+| 019/036 | `ES3-019` | [ユンゲラー](https://pcg-search.com/card/1st/1stex3019.php) | 1進化 | 超 | 60 | ◆ |  |  |
+| 020/036 | `ES3-020` | [ユンゲラー](https://pcg-search.com/card/1st/1stex3020.php) | 1進化 | 超 | 70 | ● |  | クイックスターターギフト（1998-12-04） |
+| 021/036 | `ES3-021` | [ヤドラン](https://pcg-search.com/card/1st/1stex3021.php) | 1進化 | 超 | 90 | ● |  |  |
+| 022/036 | `ES3-022` | [ゴース](https://pcg-search.com/card/1st/1stex3022.php) | たね | 超 | 40 | ● |  | クイックスターターギフト（1998-12-04） |
+| 023/036 | `ES3-023` | [ゴースト](https://pcg-search.com/card/1st/1stex3023.php) | 1進化 | 超 | 60 | ◆ |  |  |
+| 024/036 | `ES3-024` | [ゴースト](https://pcg-search.com/card/1st/1stex3024.php) | 1進化 | 超 | 70 | ◆ |  | クイックスターターギフト（1998-12-04） |
+| 025/036 | `ES3-025` | [スリーパー](https://pcg-search.com/card/1st/1stex3025.php) | 1進化 | 超 | 60 | ◆ |  |  |
+| 026/036 | `ES3-026` | [ミュウツー](https://pcg-search.com/card/1st/1stex3026.php) | たね | 超 | 80 | ● |  |  |
+| 027/036 | `ES3-027` | [サンドパン](https://pcg-search.com/card/1st/1stex3027.php) | 1進化 | 闘 | 70 | ● |  | クイックスターターギフト（1998-12-04） |
+| 028/036 | `ES3-028` | [ゴーリキー](https://pcg-search.com/card/1st/1stex3028.php) | 1進化 | 闘 | 60 | ● |  |  |
+| 029/036 | `ES3-029` | [ゴローン](https://pcg-search.com/card/1st/1stex3029.php) | 1進化 | 闘 | 60 | ● |  |  |
+| 030/036 | `ES3-030` | [カラカラ](https://pcg-search.com/card/1st/1stex3030.php) | たね | 闘 | 40 | ● |  |  |
+| 031/036 | `ES3-031` | [サイドン](https://pcg-search.com/card/1st/1stex3031.php) | 1進化 | 闘 | 80 | ◆ |  |  |
+| 032/036 | `ES3-032` | [ピジョン](https://pcg-search.com/card/1st/1stex3032.php) | 1進化 | 無 | 60 | ◆ |  |  |
+| 033/036 | `ES3-033` | [ガルーラ](https://pcg-search.com/card/1st/1stex3033.php) | たね | 無 | 80 | ● |  | クイックスターターギフト（1998-12-04） |
+| 034/036 | `ES3-034` | [ケンタロス](https://pcg-search.com/card/1st/1stex3034.php) | たね | 無 | 70 | ● |  |  |
+| 035/036 | `ES3-035` | [ポケモン再転送](https://pcg-search.com/card/1st/1stex3035.php) | トレーナー |  |  | ● |  |  |
+| 036/036 | `ES3-036` | [ポケモンタワー](https://pcg-search.com/card/1st/1stex3036.php) | スタジアム |  |  | ◆ |  |  |
+| -/- | 対象外（`ES3-037`） | [サイドカード4枚戦](https://pcg-search.com/card/1st/1stex3037.php) | EXTRA RULE |  |  |  |  |  |
+| -/- | 対象外（`ES3-038`） | [「こんらん」で20ダメージルール](https://pcg-search.com/card/1st/1stex3038.php) | EXTRA RULE |  |  |  |  |  |
+| -/- | 対象外（`ES3-039`） | [3デッキ戦](https://pcg-search.com/card/1st/1stex3039.php) | EXTRA RULE |  |  |  |  |  |
+| -/- | 対象外（`ES3-040`） | [ダグトリオチームバトル 3vs3](https://pcg-search.com/card/1st/1stex3040.php) | EXTRA RULE |  |  |  |  |  |
+| -/- | 対象外（`ES3-041`） | [デッキ交換戦](https://pcg-search.com/card/1st/1stex3041.php) | EXTRA RULE |  |  |  |  |  |
+| -/- | 対象外（`ES3-042`） | [ポケモンタワーのなぞ?](https://pcg-search.com/card/1st/1stex3042.php) | デッキ |  |  |  |  |  |
+| -/- | 対象外（`ES3-043`） | [ポケモンやしきでアッチッチ!](https://pcg-search.com/card/1st/1stex3043.php) | デッキ |  |  |  |  |  |
+| -/- | 対象外（`ES3-044`） | [サファリゾーンでおおあばれ!](https://pcg-search.com/card/1st/1stex3044.php) | デッキ |  |  |  |  |  |
+| -/- | 対象外（`ES3-045`） | [ふたごじまのタッツー](https://pcg-search.com/card/1st/1stex3045.php) | デッキ |  |  |  |  |  |
+| -/- | 対象外（`ES3-046`） | [ハナダ!さいごのどうくつ](https://pcg-search.com/card/1st/1stex3046.php) | デッキ |  |  |  |  |  |
+| -/- | 対象外（`ES3-047`） | [オーヤマのピカチュウ](https://pcg-search.com/card/1st/1stex3047.php) | たね | 雷 | 50 |  |  |  |
+| -/- | 対象外（`ES3-048`） | [イマクニ?のわるだくみ](https://pcg-search.com/card/1st/1stex3048.php) | その他 |  |  |  |  |  |
+| -/- | 対象外（`ES3-049`） | [イマクニ？のコーナー](https://pcg-search.com/card/1st/1stex3049.php)（名前はカードの画像で確認） | その他 |  |  |  |  |  |
+| -/- | 対象外（`ES3-050`） | [ハズレ？](https://pcg-search.com/card/1st/1stex3050.php)（名前はカードの画像で確認） | その他 |  |  |  |  |  |
+| -/- | 対象外（`ES3-051`） | [Pokémon Machine](https://pcg-search.com/card/1st/1stex3051.php)（名前はカードの画像で確認） | その他 |  |  |  |  |  |
+| -/- | 対象外（`ES3-052`） | [イマクニ?のパソコン](https://pcg-search.com/card/1st/1stex3052.php) | PASS CARD |  |  |  |  |  |
+| -/- | 対象外（`ES3-053`） | [マサキのパソコン](https://pcg-search.com/card/1st/1stex3053.php) | PASS CARD |  |  |  |  |  |

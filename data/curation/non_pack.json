@@ -1,0 +1,233 @@
+{
+ "_comment": "拡張パック以外の商品（data/ja_text_pcgsearch.json）を data/cards.json の記録に正規化するための手作業の決め事。scripts/build_cardlist.py（scripts/non_pack.py）が使う。商品の名前・発売日・構成は data/curation/other_products.json にある。商品の記号（code）とカード id の規則は一度決めたら変えない（カード id = 商品の記号 + pcg-search のカードページ名の末尾 3 桁。サイトの並び順 list_number は使わない）。",
+ "products": {
+  "拡張シート 第1弾(青版)": {
+   "code": "ES1",
+   "page_prefix": "1stex1"
+  },
+  "拡張シート 第2弾(赤版)": {
+   "code": "ES2",
+   "page_prefix": "1stex2"
+  },
+  "拡張シート 第3弾(緑版)": {
+   "code": "ES3",
+   "page_prefix": "1stex3"
+  },
+  "映画公開記念パック「サザンアイランド」": {
+   "code": "SI",
+   "page_prefix": "1stmv"
+  },
+  "ポケモンジム第1弾「ニビシティジム タケシ」": {
+   "code": "GD1",
+   "page_prefix": "1stgymd1"
+  },
+  "ポケモンジム第1弾「ハナダシティジム カスミ」": {
+   "code": "GD2",
+   "page_prefix": "1stgymd2"
+  },
+  "ポケモンジム第2弾「クチバシティジム マチス」": {
+   "code": "GD3",
+   "page_prefix": "1stgymd3"
+  },
+  "ポケモンジム第2弾「タマムシシティジム エリカ」": {
+   "code": "GD4",
+   "page_prefix": "1stgymd4"
+  },
+  "ポケモンジム第3弾「グレンタウンジム カツラ」": {
+   "code": "GD5",
+   "page_prefix": "1stgymd5"
+  },
+  "ポケモンジム第3弾「ヤマブキシティジム ナツメ」": {
+   "code": "GD6",
+   "page_prefix": "1stgymd6"
+  },
+  "クイックスターターギフト": {
+   "code": "QSG",
+   "page_prefix": "1stqsg"
+  },
+  "イントロパック(フシギダネデッキ)": {
+   "code": "IP1",
+   "page_prefix": "1stintro1",
+   "merge_numbered_copies": true
+  },
+  "イントロパック(ゼニガメデッキ)": {
+   "code": "IP2",
+   "page_prefix": "1stintro2",
+   "merge_numbered_copies": true
+  },
+  "イントロパック(おまけカード)": {
+   "code": "IPH",
+   "page_prefix": "1stintro"
+  },
+  "プロモ(旧裏)": {
+   "code": "PR1",
+   "page_prefix": "1stp"
+  },
+  "プレミアムファイル": {
+   "code": "PF1",
+   "page_prefix": "neopf1"
+  },
+  "プレミアムファイル2": {
+   "code": "PF2",
+   "page_prefix": "neopf2"
+  },
+  "プレミアムファイル3": {
+   "code": "PF3",
+   "page_prefix": "neopf3"
+  },
+  "イントロパック★neo(チコリータデッキ)": {
+   "code": "NIP1",
+   "page_prefix": "neointro1",
+   "merge_numbered_copies": true
+  },
+  "イントロパック★neo(チコリータデッキ：拡張カード)": {
+   "code": "NIP1X",
+   "page_prefix": "neointro1ex"
+  },
+  "イントロパック★neo(ワニノコデッキ)": {
+   "code": "NIP2",
+   "page_prefix": "neointro2",
+   "merge_numbered_copies": true
+  },
+  "イントロパック★neo(ワニノコデッキ：拡張カード)": {
+   "code": "NIP2X",
+   "page_prefix": "neointro2ex"
+  },
+  "プロモ(neo)": {
+   "code": "PRN",
+   "page_prefix": "neop"
+  }
+ },
+ "merge_numbered_copies_note": "イントロパックのデッキは、デッキの各カードに丸数字の番号が印刷されていて、pcg-search は番号ごとに 1 ページを持つ（同じカードが 2 枚・基本エネルギーが 19 枚など）。番号のほかの欄（種類・名前・タイプ・HP・弱点・抵抗力・にげる・特殊能力・ワザ・本文・補足・イラストレーター・レアリティ・備考）がすべて同じページを、同じ商品の 1 つのカードの記録にまとめ、枚数（copies）とページを残す。プロモは同じ内容でも配布ごとに別のページなので、まとめない。",
+ "non_game_items": {
+  "_comment": "通常の対戦のデッキに入れるカードではない項目。data/cards.json には入れず、data/product_items.json の non_game_items に、元の項目から追えるように残す。拡張シート第3弾（緑版）の番号のない 17 枚は、裏面の違うおまけのカード（docs/cards/products/expansion-sheets.md。Bulbapedia [X43]）。",
+  "1stex3037": {
+   "kind": "extra_rule",
+   "reason": "おすすめルール（EXTRA RULE）のカード。遊びかたの説明で、デッキに入れるカードではない。裏面の違うおまけのカード"
+  },
+  "1stex3038": {
+   "kind": "extra_rule",
+   "reason": "おすすめルール（EXTRA RULE）のカード。裏面の違うおまけのカード"
+  },
+  "1stex3039": {
+   "kind": "extra_rule",
+   "reason": "おすすめルール（EXTRA RULE）のカード。裏面の違うおまけのカード"
+  },
+  "1stex3040": {
+   "kind": "extra_rule",
+   "reason": "おすすめルール（EXTRA RULE）のカード。裏面の違うおまけのカード"
+  },
+  "1stex3041": {
+   "kind": "extra_rule",
+   "reason": "おすすめルール（EXTRA RULE）のカード。裏面の違うおまけのカード"
+  },
+  "1stex3042": {
+   "kind": "deck_recipe",
+   "reason": "デッキのカード（デッキレシピ）。裏面の違うおまけのカード"
+  },
+  "1stex3043": {
+   "kind": "deck_recipe",
+   "reason": "デッキのカード（デッキレシピ）。裏面の違うおまけのカード"
+  },
+  "1stex3044": {
+   "kind": "deck_recipe",
+   "reason": "デッキのカード（デッキレシピ）。裏面の違うおまけのカード"
+  },
+  "1stex3045": {
+   "kind": "deck_recipe",
+   "reason": "デッキのカード（デッキレシピ）。裏面の違うおまけのカード"
+  },
+  "1stex3046": {
+   "kind": "deck_recipe",
+   "reason": "デッキのカード（デッキレシピ）。裏面の違うおまけのカード"
+  },
+  "1stex3047": {
+   "kind": "joke_card",
+   "reason": "オーヤマのピカチュウ。ポケモンのカードの形のジョークカードで、ワザのダメージが「10ぐらい」。裏面の違うおまけのカード（pcg-search の種類は「たねポケモン」）"
+  },
+  "1stex3048": {
+   "kind": "other",
+   "reason": "その他（イマクニ?のわるだくみ）。裏面の違うおまけのカード"
+  },
+  "1stex3049": {
+   "kind": "other",
+   "reason": "その他（イマクニ？のコーナー。名前は data/curation/other_products.json の identified_cards）。裏面の違うおまけのカード"
+  },
+  "1stex3050": {
+   "kind": "other",
+   "reason": "その他（ハズレ？。名前は identified_cards）。裏面の違うおまけのカード"
+  },
+  "1stex3051": {
+   "kind": "other",
+   "reason": "その他（Pokémon Machine。名前は identified_cards）。裏面の違うおまけのカード"
+  },
+  "1stex3052": {
+   "kind": "pass_card",
+   "reason": "パスカード（イマクニ?のパソコン）。裏面の違うおまけのカード"
+  },
+  "1stex3053": {
+   "kind": "pass_card",
+   "reason": "パスカード（マサキのパソコン。通信進化キャンペーンの応募用）。裏面の違うおまけのカード"
+  },
+  "1stp015": {
+   "kind": "award",
+   "reason": "ポケモンイラストレーター（pcg-search の種類は ILLUSTRATOR）。イラストコンテストの賞のカードで、本文は認定の文で対戦の効果がない"
+  }
+ },
+ "note_roles": {
+  "_comment": "pcg-search の補足欄（note。サイトの ruleDetail）の役割。書いていないページは rules（カードのルールの文）として本文につなぐ。flavor（カードの説明の文）・label（大会での扱い・専用ルールの表示）は本文につながず、記録の notes に残す",
+  "1stp013": "flavor",
+  "neop026": "flavor",
+  "1stp027": "label",
+  "1stp073": "label",
+  "1stp038": "label",
+  "neop048": "label"
+ },
+ "play_scope": {
+  "_comment": "通常の対戦のカードとは扱いが違うカード（data/cards.json の play_scope）。kangaskhan_rule は 2 人 1 組の「ガルーラルール」専用（docs/rules/kangaskhan-2002.md）。not_for_official_tournaments は、カードに「公式大会では使えません」とある",
+  "1stp038": {
+   "scope": "kangaskhan_rule",
+   "label": "(ガルーラルール専用カード)"
+  },
+  "neop048": {
+   "scope": "kangaskhan_rule",
+   "label": "新ガルーラルール専用カード"
+  },
+  "1stp027": {
+   "scope": "not_for_official_tournaments",
+   "label": "(このカードは、ポケモンカード公式大会では使えません。)"
+  },
+  "1stp073": {
+   "scope": "not_for_official_tournaments",
+   "label": "(このカードは、ポケモンカード公式大会では使えません。)"
+  }
+ },
+ "uncovered_products_checked_on": "2026-10-19",
+ "uncovered_products": [
+  {
+   "target": "pcg-search の「第1弾 スターターパック」（6 ページ。1st1s001〜1st1s006、基本エネルギー 6 種）",
+   "basis": "pcg-search のカードリスト（card_list.php。2026-10-19 に読み直し、取り込んだ 23 の商品の欄が前の取得と同じことを確かめた）",
+   "status": "拡張パックの記録 PMCG1-097〜PMCG1-102（収録商品に「スターターパック」）として収録済み。スターターパックのページは読んでおらず、ページとの対応づけ（source_ids.pcg_search）はしていない。スターターパックのほかのカードは拡張パック第1弾と同じカードとして扱っている（data/cards.json の jp_products）"
+  },
+  {
+   "target": "pcg-search の「ポケモンカードGB 専用カード」（18 ページ）・「ポケモンカードGB2 GR団参上! 専用カード」（30 ページ）",
+   "basis": "pcg-search のカードリスト（2026-10-19）",
+   "status": "ゲームボーイのソフトの中だけのカードで、印刷されたカードではないので収録しない（対象外）。GB の購入特典などで印刷されたカードはプロモ（PR1）にある"
+  },
+  {
+   "target": "pcg-search の旧裏・neo の欄（/card/1st/・/card/neo/）のうち、ここにない欄",
+   "basis": "pcg-search のカードリスト（2026-10-19）",
+   "status": "ない。旧裏・neo の欄は、拡張パック 10 弾・neo の拡張パック 4 弾（拡張パックとして別に扱う範囲）・第1弾 スターターパック・取り込んだ 23 の商品だけ"
+  },
+  {
+   "target": "ポケモンカードVS・ポケモンカード★web・それ以降のシリーズ（e・ADV など）",
+   "basis": "pcg-search のカードリストでは neo のプロモのあとの欄",
+   "status": "新裏の別のシリーズなので対象外（今回の範囲を広げない）"
+  },
+  {
+   "target": "pcg-search のカードリストにない旧裏期の商品・配布物",
+   "basis": "なし（調べていない）",
+   "status": "23 の商品で旧裏期の商品をすべて収録できたとは言えない。プロモの一覧は pcg-search の「プロモ」の欄の範囲で、配布物の網羅は確かめていない（docs/cards/products/promos.md の「まだ確認できていないこと」）"
+  }
+ ]
+}

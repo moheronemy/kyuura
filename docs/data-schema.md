@@ -1,12 +1,12 @@
 # データの構造（`data/cards.json`）
 
-`data/cards.json` は、旧裏の拡張パック 10 弾の全 780 枚を、日本版を基準に 1 枚 1 レコードで収録した構造化データです。`scripts/build_cardlist.py` で生成しています。
+`data/cards.json` は、旧裏の日本版のカードを 1 枚 1 レコードで収録した構造化データです。拡張パック 10 弾の全 780 枚と、拡張パック以外の商品（拡張シート・サザンアイランド・ポケモンジムのデッキ・クイックスターターギフト・イントロパック・neo プレミアムファイル・プロモ）の対戦に使うカード 597 枚の、計 1,377 件です（形式 3。2026-10-19 から）。`scripts/build_cardlist.py` で生成しています（拡張パック以外の商品の正規化は `scripts/non_pack.py`）。拡張パックの 780 件の id・欄は形式 2 のままで、形式 3 で加えた欄を全記録に持ちます。
 
 ## 全体
 
 ```json
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "description": "...",
   "text_availability": {"en": "...", "ja": "..."},
   "cards": [ { ...カード... } ]
@@ -17,8 +17,8 @@
 
 | フィールド | 型 | 内容 |
 |---|---|---|
-| `id` | 文字列 | カード id。TCGdex の日本版 id（例 `PMCG1-011`、`neo4-113`） |
-| `jp_set` | 文字列 | 日本版の弾。`PMCG1`〜`PMCG6`（第1〜6弾）、`neo1`〜`neo4` |
+| `id` | 文字列 | カード id。拡張パックは TCGdex の日本版 id（例 `PMCG1-011`、`neo4-113`）。拡張パック以外の商品は「商品の記号-カードページ名の末尾 3 桁」（例 `GD1-009` = pcg-search の `1stgymd1009`。下の「拡張パック以外の商品の記録」） |
+| `jp_set` | 文字列 | 日本版の弾。`PMCG1`〜`PMCG6`（第1〜6弾）、`neo1`〜`neo4`。拡張パック以外の商品の記録は商品の記号（`GD1`・`ES1`・`PR1` など） |
 | `seq` | 整数 | 弾の中の通し番号。カードに印刷された番号ではない |
 | `category` | 文字列 | `pokemon`／`trainer`／`energy` |
 | `name` | 日英 | カード名 `{"ja": "フシギバナ", "en": "Venusaur"}` |
@@ -33,7 +33,15 @@
 | `notes` | 文字列の配列 | 備考 |
 | `source_ids` | オブジェクト | 出典データでの id `{"tcgdex": "...", "pokemontcg": ["base1-15"]}` |
 | `ja_text_source` | 文字列／null | 日本語テキスト（ワザ名・特殊能力・効果文）の出典。なぞのばしょ・ポケモンWiki のカードページの URL。未収録なら `null` |
-| `jp_print` | オブジェクト／null | 日本版の印刷についての情報（下記）。なぞのばしょ・ポケモンWiki にカードページがあるカードだけ |
+| `jp_print` | オブジェクト／null | 日本版の印刷についての情報（下記）。なぞのばしょ・ポケモンWiki にカードページがあるカード（拡張パック以外の商品は pcg-search のカードページ）だけ |
+| `product_group` | 文字列 | 商品の種類（形式 3）。`expansion_pack`（拡張パック）・`expansion_sheet`・`southern_islands`・`gym_deck`・`quick_starter_gift`・`intro_pack`・`premium_file`・`promo` |
+| `play_scope` | 文字列 | 対戦での扱い（形式 3）。`standard`（通常の対戦のカード）・`kangaskhan_rule`（2 人 1 組の「ガルーラルール」専用）・`not_for_official_tournaments`（カードに「公式大会では使えません」とある）。`data/curation/non_pack.json` の `play_scope` |
+| `same_card_group` | 文字列／null | 商品をまたいだ同じカードの組の id（`SC-<最初の記録の id>`。`data/same_card_groups.json`）。組がなければ `null` |
+| `data_gaps` | 文字列の配列 | 値のない欄（調査・転記の不足。形式 3）。例 `pokemon.evolves_from`・`jp_print.level`・`energy.text.ja`・`pokemon.stage`（サイトの種類の欄と進化ラインの段階が違う）。英語版がないことは数えない |
+| `source_ids.pcg_search` | 文字列の配列 | pcg-search.com のカードページ名（形式 3）。拡張パックの記録は空（拡張パックのページとは結んでいない） |
+| `copies` | 配列 | 拡張パック以外の商品の記録だけ。同じ商品の中で番号だけが違うページ（イントロパックのデッキ）をまとめた元のページ `[{page, list_number}]`。1 ページなら 1 件 |
+| `field_sources` | オブジェクト | 拡張パック以外の商品の記録だけ。欄の出どころ（`pcg_search`・`pcg_search_page_dash`（読み直したページで「-」）・`pcg_search_null_read_as_zero`・`pcg_search_evolution_line`・`same_card:<拡張パックの id>`・`other_products.en_prints`・`pokemontcg:<id>`・`pcg_search_kind_conflicts_with_evolution_line`） |
+| `corrections` | 配列 | 訂正の記録（`data/curation/card_corrections.json`）で直した欄があるときだけ `[{id, field, before, after, basis, decided_on}]` |
 
 ### 日英の値
 
@@ -183,9 +191,50 @@
 
 | ファイル | 1 行の単位 | 主な列 |
 |---|---|---|
-| `data/cards.csv` | カード 1 枚 | `id`、名前（日英）、レア、英語版、進化、HP、タイプ、弱点、抵抗力、にげる、トレーナー・エネルギーの区分と本文（日英）、日英の違い |
+| `data/cards.csv` | カード 1 枚 | `id`、名前（日英）、レア、英語版、進化、HP、タイプ、弱点、抵抗力、にげる、トレーナー・エネルギーの区分と本文（日英）、日英の違い、`product_group`・`play_scope`・`same_card_group`・`source_pages`（pcg-search のページ名を空白区切り）・`data_gaps`（空白区切り）・`corrections`（訂正の id を空白区切り） |
 | `data/attacks.csv` | ワザ 1 つ | `card_id`、`index`、名前（日英）、`cost`（列挙値を空白区切り）、`cost_total`、`damage_base`、`damage_modifier`、`damage_display`、効果文（日英） |
 | `data/powers.csv` | ポケモンパワー 1 つ | `card_id`、`index`、`kind`、名前（日英）、本文（日英） |
+
+`data/cards.json` と 3 つの CSV は、同じ記録から同じ生成で作ります（`tests/test_non_pack_engine_v068.py` が件数・主な欄の一致を確かめる）。
+
+## 拡張パック以外の商品の記録
+
+`data/ja_text_pcgsearch.json`（pcg-search.com の転記。23 商品・681 ページ）を、`scripts/non_pack.py` が `data/cards.json` の記録の形に正規化します。手作業の決め事は `data/curation/non_pack.json` にあります。
+
+- **id**: 「商品の記号-カードページ名の末尾 3 桁」。サイトの並び順（`list_number`）は使わないので、並び順が変わっても id は変わりません。商品の記号は `data/curation/non_pack.json` の `products`（`ES1`〜`ES3` 拡張シート、`SI` サザンアイランド、`GD1`〜`GD6` ポケモンジム、`QSG`、`IP1`・`IP2`・`IPH` イントロパック、`PR1` 旧裏のプロモ、`PF1`〜`PF3`、`NIP1`・`NIP1X`・`NIP2`・`NIP2X` イントロパック★neo、`PRN` neo のプロモ）。一度決めたら変えません。
+- **元の項目の行き先**: 681 ページは、記録（597）・同じ商品の番号違いのまとめ（イントロパックのデッキ。66。`copies`）・対戦のカードでない項目（18。`data/product_items.json` の `non_game_items`）のどれかで、`data/product_items.json` の `items` にページごとの行き先があります。ページの数はカードの種類の数ではなく、デッキの封入枚数とも別です（構築済みデッキの枚数は `data/curation/other_products.json` の `decks`）。
+- **欄**: 名前・段階・HP・タイプ・弱点・抵抗力・にげる・特殊能力・ワザ・本文は pcg-search の転記です。英語版の文面で日本語の欄を補いません。
+- **進化元**（`pokemon.evolves_from`）: (1) 同じカードの拡張パックの記録（名前・HP・特殊能力名・ワザ名が同じ）、(2) 同じサイトのカードページの「進化ライン検索」で 1 つ前の段階の名前（1 つに決まり、ページのカードの位置の段階がサイトの種類の欄と同じときだけ）、の順に使います。名前の接頭辞からは推測しません。英語版の進化元は照らし合わせ（`data/same_card_groups.json` の `evolves_from_checks`）にだけ使います。どれもなければ `null` で、`data_gaps` に入ります。種類の欄と進化ラインの段階が違うカードは、段階を `data_gaps`（`pokemon.stage`）にして進化元を入れません。
+- **にげる**: 転記の `null` は、サイトの欄の「-」（にげるエネルギーなし。0）か空欄です。読み直したページ（`data/pcgsearch_page_checks.json`）で「-」を確かめたものは `pcg_search_page_dash` です。
+- **補足欄**: 補足（サイトの ruleDetail）は、ふつうはカードのルールの文として本文につなぎます。カードの説明の文（`flavor`）・大会での扱いの表示（`label`）は `notes` に残します（`non_pack.json` の `note_roles`）。
+- **レアリティ**: ●◆★ を common・uncommon・rare、「★(キラ)」を holo_rare、「-」を no_mark、「★★(キラ)」などを special（キラ）にします。
+
+## `data/product_items.json`・`data/same_card_groups.json`
+
+`scripts/build_cardlist.py` の出力です（手で編集しない）。
+
+| ファイル | キー | 内容 |
+|---|---|---|
+| `product_items.json` | `products` | 商品ごとの記号・名前・まとまり・発売日・出典・数（`counts`: 元の項目・記録・番号違いのまとめ・対象外の項目・通常の対戦のカード）・構成（`composition`） |
+| | `items` | 元の項目（ページ）ごとの行き先（`disposition`: `card` 記録・`copy` 番号違いのまとめ・`non_game` 対象外）と記録の `id` |
+| | `non_game_items` | 対戦のカードでない項目（おすすめルール・デッキのカード・パスカード・ジョークカード・イラストレーターの賞のカードなど）。`kind` と `reason` |
+| `same_card_groups.json` | `groups` | 商品をまたいだ同じカードの組（`basis_fields` で判定した欄。名前・HP・特殊能力名・ワザ名、トレーナー・エネルギーは名前と種類）。組の要素ごとに、数値の違う欄（`numbers_differ`）・文面の関係（`text`: `same`・`same_ignoring_punctuation`・`similar`・`different`）・最初の記録と同じ処理か（`equivalent_to_first`）。名前だけでまとめない |
+| | `evolves_from_checks` | 進化元の照らし合わせ（進化ラインと同じ・違う・決まらない、英語版と同じ・違う、進化ラインの名前・段階が記録と違う） |
+
+## `data/pcgsearch_page_checks.json`
+
+pcg-search.com のカードページを読み直し、転記に入っていない欄と区別（弱点・抵抗力・にげるの欄の生の表記、「進化ライン検索」）だけを取り出したものです（`scripts/pcg_search.py extract-pages`。2026-10-19 に 187 ページ）。`transcript_differences` は、読み直したページを転記と同じ方法で読んだ欄のうち転記と違うもの（2026-10-19 は 0）。同じサイトのデータなので、転記の独立した照合には数えません。
+
+## `data/curation/card_corrections.json`
+
+カードデータの訂正の記録（`corrections`）と、訂正しなかった候補（`candidates`）です。
+
+- `corrections`: `id`（`FIX-…`）・`card_id`・`field`・`before`・`after`・`kind`・`applied_by`（`card_corrections`: `scripts/build_cardlist.py` が生成のたびに当てはめる。当てはめる前の値が `before` でなければ止まる。`ja_text.json`: 前の作業で `data/curation/ja_text.json` で直したもので、生成した値が `after` かだけを確かめる）・`basis`（`user_provided`・`kyuura_source_check`・`kyuura_existing_record`）・`basis_detail`・`confirmed_by`・`card_checks_affected`（照合したときの値 `before` を写している照合の記録。`scripts/build_card_rulings.py` は、照合の記録の写しと今の値の違いをこの訂正で確かめる。過去の照合の記録は書きかえない）。公式エラッタ・最新の説明は書かない（`data/rule_history.json`・`data/sidecar/`）。
+- `candidates`: `status`（`held_print_version` 印刷の版が決まらない・`held_transcription_difference` 別の転記との違い・`held_likely_transcription_error` 誤りの可能性が高いが印刷で確かめていない・`version_difference` 版の違い（誤りではない）・`gap_open` 値の欠け）と `reason`。
+
+## エンジンの実装の対象（`data/engine_targets.json`）
+
+`scripts/build_engine_targets.py` の出力で、読み方は [エンジンの実装の対象](engine-targets.md) です。エンジンの登録表の写しは `data/curation/engine_registered_cards.json`（`scripts/snapshot_engine_registry.py`。エンジンの版を上げるときに作り直す）。記録ごとに `category`（`candidate`・`data_missing`・`special_rule_design`・`non_game`）と `engine_status`（`registered`・`mechanically_equivalent`・`reuse_candidate`・`new_effect_needed`）を分けて持ちます。
 
 ## `data/rule_differences.json`
 
@@ -252,7 +301,7 @@
 
 ## `data/ja_text_pcgsearch.json`（拡張パック以外の商品）
 
-拡張パック以外の商品のカードです。`data/cards.json` とは別のファイルで、pcg-search.com の記載をそのまま持っています（[拡張パック以外の商品](cards/other-products.md)）。
+拡張パック以外の商品のカードの、pcg-search.com の記載をそのまま持つ転記です（[拡張パック以外の商品](cards/other-products.md)）。生成のたびにこの転記から `data/cards.json` の記録を作り（上の「拡張パック以外の商品の記録」）、転記そのものは書き換えません。訂正は `data/curation/card_corrections.json` で当てはめます。
 
 - `products` の各キーが商品名（サイトの見出し）、値がカードの配列です。
 - カードの主な欄: `list_number`（サイトの並び順。印刷された番号ではない。イントロパックのデッキだけは印刷された丸数字と一致）、`url`、`kind`（たねポケモン／トレーナー／EXTRA RULE など）、`name`、`type`、`hp`、`weakness`、`resistance`、`retreat`、`powers`、`attacks`、`text`、`note`、`illustrator`、`rarity`、`remarks`。
@@ -282,7 +331,7 @@
 |---|---|---|
 | `latest_descriptions.json` | 公式の書籍の「最新の説明」と、印刷の文面（`data/cards.json`）の違い | `LD-<カード id>-ATK<位置>`（ワザ）・`LD-<カード id>-PWR<位置>`（特殊能力）。位置は `pokemon.attacks`・`pokemon.powers` の 0 から数えた番号 |
 | `card_checks.json` | カードの記録を公式の資料のページと照合した記録 | `CC-<カード id>-<出典の記号>` |
-| `rulings.json` | 公式ルールの条項の索引（`rule_clauses`）、カード・ワザごとの裁定（`rulings`）、未解決の論点（`issues`）、比較（`comparisons`）、kyuura-engine の取り込みの記録（`engine_imports`）、エンジンの未解決の裁定の一覧（`engine_unresolved_index`） | `GR-…`・`CR-…`・`UQ-…`・`CMP-…`・`ENGINE-…` |
+| `rulings.json` | 公式ルールの条項の索引（`rule_clauses`）、カード・ワザごとの裁定（`rulings`）、未解決の論点（`issues`）、比較（`comparisons`）、kyuura-engine の取り込みの記録（`engine_imports`）、エンジンの未解決の裁定の一覧（`engine_unresolved_index`）、エンジンの採用した仕様・簡略化・実装の事項（`engine_positions`。2026-10-19 から） | `GR-…`・`CR-…`・`UQ-…`・`CMP-…`・`ENGINE-…`・`ENG-V<版>-…` |
 
 id は 3 つのファイルを通して重複しないこと、`data/rule_history.json` の id と重ならないことを検査します。`data/rule_history.json` の `documents` のページの記録（`refs`）からも、これらの id を参照できます。
 
@@ -306,7 +355,7 @@ id は 3 つのファイルを通して重複しないこと、`data/rule_histor
 | 項目 | 内容 |
 |---|---|
 | `card_id`・`source`・`page`・`location` | 照合したカードと資料のページ |
-| `checked_fields` | 照合した欄と、そのときの `data/cards.json` の値の写し。今の値と違うとエラー |
+| `checked_fields` | 照合した欄と、そのときの `data/cards.json` の値の写し。今の値と違うとエラー。ただし、照合のあとで訂正した欄は、`data/curation/card_corrections.json` の訂正（照合した値 → 今の値。`card_checks_affected` にこの記録）があればよい（過去の照合の記録は書きかえない） |
 | `fields_not_checked` | 照合していない欄 |
 | `result`・`data_error` | `no_difference`（照合して差異なし）・`printed_vs_latest_only`（違いは印刷の文面と最新の説明の違いだけ）・`data_error`（データの誤り。別の修正として扱う）。照合の記録のないカードは未照合。`no_difference` なら、結んだ最新の説明にも違いがないこと（違いがあるとエラー） |
 | `data_error` の中身 | `result` が `data_error` のときだけ、`[{field, kyuura_value, source_value, evidence, fix_status, note}]`。`kyuura_value` は `checked_fields` の写しと同じ、`fix_status` は `candidate`（この記録ではデータを直さない。修正は別の作業）。ほかの結果では `false` |
@@ -325,10 +374,11 @@ id は 3 つのファイルを通して重複しないこと、`data/rule_histor
 | `rulings` の `inference` | 推論。`SUPPORTED` には必須で、`CONFIRMED` にはあってはいけない |
 | `rulings` の `cards` | 裁定の対象（カード id とワザ・特殊能力）。同じ問いを複数のカードにまとめるときは並べる（エンジンの複数の版の同じ裁定を 1 つにする。例: 「自分の番の中で何度でも使える」はエナジートランス・あまごい・ダメージスワップの 1 件）。同じ対象・同じ問いの裁定を 2 つ作るとエラー |
 | `rulings` の `engine_refs` | kyuura-engine の裁定 id との対応（`import`・`engine_version`・`document`・`ruling_id`・`engine_classification`（エンジンの表の「分類」の欄の写し）・`part`・`engine_note`）。エンジンの裁定 id は文書ごとの番号で、版が違えば同じ id が別の裁定なので、（`import`・`document`・`ruling_id`）で区別する。1 つの裁定を分けて記録したときは、それぞれに `part`。エンジンの分類が CONFIRMED でない裁定を `CONFIRMED` の記録に対応させるとき、エンジンが CONFIRMED だけとした裁定を `SUPPORTED` の記録に対応させるときは `reclassification`（`from`・`to`・`reason`）が必要。エンジンが「実装上の仮定」だけとした裁定は、裁定・条項に対応させない（`not_imported`）。その版の取り込みがまだないあいだだけ、別の版の裁定を、その文書を `documents` に挙げた取り込みに仮に結べる（v0.13 の取り込みが v0.10・v0.12 の C34・C35・W24 を結んだ形）。その版を取り込んだら、その版の取り込みに移す（移さないとエラー） |
-| `issues` | 未解決の論点（`question`・`why_unresolved`・`official_material`・`cases`（事例のカード・ワザとエンジンの裁定 id）・`reachability`・`related_engine_rulings`・`related_issues`・`engine_refs`）。`cases` の事例は、エンジンの裁定のない事例（同じ文面のほかのカードなど）も書ける（`engine_ruling` を省く）。同じ問いのエンジンの裁定は 1 つの論点にまとめる（同じ問いと言える根拠がないときはまとめない）。同じエンジンの裁定を 2 つの論点に対応させる・同じ問いの論点を 2 つ作るとエラー。エンジンの未解決の一覧にない論点（エンジンは処理を決めているが、公式の資料では決められないもの）は `not_in_engine_index: true` |
+| `issues` | 未解決の論点（`question`・`why_unresolved`・`official_material`・`cases`（事例のカード・ワザとエンジンの裁定 id。対象の種類は `attack`・`power`・`trainer`・`energy`（エネルギーカードのカード名））・`reachability`・`related_engine_rulings`・`related_issues`・`engine_refs`）。`cases` の事例は、エンジンの裁定のない事例（同じ文面のほかのカードなど）も書ける（`engine_ruling` を省く）。同じ問いのエンジンの裁定は 1 つの論点にまとめる（同じ問いと言える根拠がないときはまとめない）。同じエンジンの裁定を 2 つの論点に対応させる・同じ問いの論点を 2 つ作るとエラー。エンジンの未解決の一覧にない論点（エンジンは処理を決めているが、公式の資料では決められないもの）は `not_in_engine_index: true` |
 | `issues` の `audit` | 未解決の論点の監査（2026-10-14 から必須）。`audited_on`（日付）・`game_effect`（結果への影響。見出しの `game_effect_values`: `game_result` 盤面か勝ち負けが変わる・`rng_only` コインの有無・順番だけが変わる（推論）・`order_only` 処理の順番だけが変わる・`not_analyzed` 未調査）・`game_effect_note`・`resolution_needs`（解決に要る資料）・`searched`（調べた範囲。探していない資料も書く）・`new_sources`（この監査で新しく読んだページ `[{source, page, what, resolves: false}]`。ページは `sources` にあること。論点を決める資料なら論点にせず裁定にするので、`resolves` はいつも false）。決まらないこと（`question`）・カード（`cases`）・エンジンの id（`engine_refs`）・分類（`status`・`official_material`）は既存の項目。エンジンの停止コードは `engine_unresolved_index` から求め、論点の文には書かない。`resolution_needs`・`game_effect_note` に停止コード・例外の名前を書くとエラー |
-| `engine_imports` | エンジンの版ごとに 1 件（`ENGINE-<コミットの先頭 7 桁>`）。`engine_version`・`commit`（その版のコミット）・`parent_version_commit`・`documents_read_at`（文書を読んだコミット）・`kyuura_commit_used_by_engine`・`documents`・`ruling_sets`（文書ごとの範囲 `prefix`・`first`・`last`・`document`・`extra_ids`（T19b のような枝番）・`engine_reported_counts`）・`imported_rulings`（結んだ kyuura の記録の id）・`unresolved_rulings`（結んだ論点の id）・`not_imported`（`ruling_id`・`document`・`engine_classification`・`reason`）・`notes`（取り込みの注記）。範囲の id は、どれかの記録か `not_imported` のどちらか一方にないとエラー。`imported_rulings`・`unresolved_rulings` は対応から求めたものと同じでないとエラー。1 つの取り込みの中で同じ接頭辞を 2 つの文書に使わない。`not_imported` の各項目に `status`（`excluded`: エンジンの実装の判断（実装上の仮定・実装上の扱い・実装の設計）で取り込まない、`deferred`: 保留（kyuura が原典を確かめていない・対象のカードを調べていない）、`needs_recheck`: 要再確認）。裁定の表のない版（実装の履歴。v0.14〜v0.16）は `no_ruling_tables: true` で、`ruling_sets`・`not_imported` を持たず、読んだ文書とルールに関わる記述を `notes` に書く |
-| `engine_unresolved_index` | エンジンの未解決の裁定の一覧（件数は取り込みとともに増える。過去の件数を総数として固定しない）。`disposition` は `issue`（論点 `kyuura_issue` に取り込んだ）・`implementation_only`（歴史上の論点ではない）・`out_of_scope`（取り込みの範囲の外。取り込んだ版のものには使えない）・`not_yet_imported`（その版の取り込みがまだない。段階を分けた取り込みの途中だけで、取り込んだ版のものには使えない）。`issue` 以外は `reason` が必要。`question_kind` は問いの性質（`historical`）。`instances` は、同じ問いのあとの版の事例（`engine_version`・`ruling_id`。v0.17 の Z13 は C18 と同じ問い、など）で、新しい項目にしない（事例は同じ論点の `engine_refs` に結ぶ）。`in_engine_count: false` は、エンジンの数え方の件数に入らない項目（v0.17 のキョウのベトベトン。カードを延期したので、エンジンは数えていない）。取り込みの `engine_unresolved_total` は、その版までの項目のうちエンジンが数えるものの件数と同じ（v0.13 は 22、v0.17 は 24）。kyuura の論点の数・エンジンの数・停止コードの数は別の数で、`scripts/build_card_rulings.py` の `unresolved_counts` が分けて求める（生成するページの 8 章「未解決の数の区別」） |
+| `engine_imports` | エンジンの版ごとに 1 件（`ENGINE-<コミットの先頭 7 桁>`）。`engine_version`・`commit`（その版のコミット）・`parent_version_commit`・`documents_read_at`（文書を読んだコミット）・`kyuura_commit_used_by_engine`・`documents`・`ruling_sets`（文書ごとの範囲 `prefix`・`first`・`last`・`document`・`extra_ids`（T19b のような枝番）・`engine_reported_counts`）・`imported_rulings`（結んだ kyuura の記録の id）・`unresolved_rulings`（結んだ論点の id）・`not_imported`（`ruling_id`・`document`・`engine_classification`・`reason`）・`notes`（取り込みの注記）。範囲の id は、どれかの記録か `not_imported` のどちらか一方にないとエラー。`imported_rulings`・`unresolved_rulings` は対応から求めたものと同じでないとエラー。1 つの取り込みの中で同じ接頭辞を 2 つの文書に使わない。`not_imported` の各項目に `status`（`excluded`: エンジンの実装の判断（実装上の仮定・実装上の扱い・実装の設計）で取り込まない、`deferred`: 保留（kyuura が原典を確かめていない・対象のカードを調べていない）、`needs_recheck`: 要再確認）。裁定の表のない版（実装の履歴。v0.14〜v0.16）は `no_ruling_tables: true` で、`ruling_sets`・`not_imported` を持たず、読んだ文書とルールに関わる記述を `notes` に書く。v0.26 からの取り込みは、`not_imported` の各項目に `classification`（`official_confirmed` エンジンが CONFIRMED とした当てはめ・`supported_interpretation` 研究上の解釈・`unresolved_rules_question` 既存の論点の当てはめ・`engine_assumption` 実装上の仮定・`engine_adopted_spec` 採用した仕様・`engine_implementation` 実装の都合・`notation_difference` 表記の違い・`card_text_application` 処理の記録）を書き、`status` に `card_application`（カードごとの当てはめ。新しい裁定にしない）・`existing_record`（`kyuura_records` の既存の記録の当てはめ）・`adopted_spec`（`engine_position` の記録）も使う。`status` と `classification` の組み合わせが合わないとエラー |
+| `engine_positions` | エンジンの採用した仕様（`adopted_spec`）・簡略化した仕様（`simplification`）・実装の事項（`implementation_matter`。不具合・未対応・制限）。`engine_import`・`document`・`section`・`cards`・`engine_rulings`・`summary`・`engine_basis`・`kyuura_records`・`kyuura_handling`。公式の裁定ではないので `status`・`conclusion` を持たない（持つとエラー）。採用した仕様の `engine_rulings` は、その取り込みの `not_imported` に `adopted_spec` として結ぶ。例: キョウのベトベトンの［だつりょくえき］（v0.68）・イマクニ？のドードーの簡略化・マチスの秘策の受け付けの不具合 |
+| `engine_unresolved_index` | エンジンの未解決の裁定の一覧（件数は取り込みとともに増える。過去の件数を総数として固定しない）。`disposition` は `issue`（論点 `kyuura_issue` に取り込んだ）・`implementation_only`（歴史上の論点ではない）・`out_of_scope`（取り込みの範囲の外。取り込んだ版のものには使えない）・`not_yet_imported`（その版の取り込みがまだない。段階を分けた取り込みの途中だけで、取り込んだ版のものには使えない）。`issue` 以外は `reason` が必要。`question_kind` は問いの性質（`historical`）。`instances` は、同じ問いのあとの版の事例（`engine_version`・`ruling_id`。v0.17 の Z13 は C18 と同じ問い、など）で、新しい項目にしない（事例は同じ論点の `engine_refs` に結ぶ）。`in_engine_count: false` は、エンジンの数え方の件数に入らない項目（v0.17 のキョウのベトベトン。カードを延期したので、エンジンは数えていない）。`counted_from_version` は、あとの版から数えるようになった項目のその版（DR8・DR13 は v0.68 から）。`stop_code_since`・`stop_code_note` は、コードのない問いとして取り込んだあとでエンジンが停止コードを付けた版（エンジンの文書で最初に見える版）。過去の版の数は `unresolved_counts(ctx, as_of='v0.25')` のように求める。取り込みの `engine_unresolved_total` は、その版までの項目のうちエンジンが数えるものの件数と同じ（v0.13 は 22、v0.17 は 24）。kyuura の論点の数・エンジンの数・停止コードの数は別の数で、`scripts/build_card_rulings.py` の `unresolved_counts` が分けて求める（生成するページの 8 章「未解決の数の区別」） |
 
 結論・論点・推論の文に、エンジンの停止コード・例外の名前（`UNRESOLVED_…`・`RuntimeError` など）を書くとエラーです。エンジンの実装の情報は `engine_refs`・`engine_unresolved_index` にだけ書きます。
 

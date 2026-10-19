@@ -92,7 +92,8 @@ class TrainerImportsTest(unittest.TestCase):
             self.assertEqual(skipped | mapped, expected)
 
     def test_four_new_engine_questions_and_existing_hp_question_are_separate(self):
-        uc = bcr.unresolved_counts(self.ctx)
+        # v0.25 の時点の数（あとの版の取り込みは as_of で除く。v0.26〜v0.68 の取り込みは tests/test_non_pack_engine_v068.py）
+        uc = bcr.unresolved_counts(self.ctx, as_of='v0.25')
         self.assertEqual((uc['research_issues'], uc['engine_total'], uc['engine_stop_codes']), (24,28,22))
         idx = {x['engine_key']: x for x in self.ctx['rulings']['engine_unresolved_index']}
         self.assertEqual(len({idx[k]['kyuura_issue'] for k in ['GW5','CS6','ER9','ER10']}), 4)

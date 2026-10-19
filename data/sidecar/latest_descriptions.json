@@ -2195,6 +2195,387 @@
    "notes": [
     "エンジン548dd65時点の報告（下記の「kyuuraに記録がない」は取り込み前の状況）: kyuura の文面は第1弾の印刷の転記（なぞのばしょ）で、図版と同じ。最新の説明は「進化させるときに使う」を「進化させるときにだけ、使える」（使うための条件）に、「2進化カードをいきなりつけることができる」を「そのポケモンの上に「2進化カード」を直接のせ、1進化をとばして「2進化ポケモン」に進化させる」（重ねる相手と、1 進化を飛ばすこと）に書いている。p.6 により最新の説明にしたがう。kyuura の写しの値は登録の照合（TrainerEntry.text_ja）にだけ使う。kyuura にこのカードの照合の記録（CC-）・最新の説明（LD-）がないことを報告事項とする（誤りとは決めない）"
    ]
+  },
+  {
+   "id": "LD-PMCG2-017-ATK0",
+   "card_id": "PMCG2-017",
+   "card_name_ja": "ストライク",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "つるぎのまい"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "次の自分の番だけ、このカードが使う「きりさく」のダメージは2倍になる。",
+    "source_of_data": "https://nazonobasho.com/pmcg02-017-strike/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "エンジンの記録: 図版は「次の自分の番だけ　このカードが使う「きりさく」のダメージは2倍になる。」（「だけ」のあとは空白で、読点は読めない）。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "次の自分の番、このカードが使う「きりさく」のダメージは「60」になる。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "56",
+    "pdf_page": 58,
+    "location": "ストライク（LV.25／HP70。ポケモンジャングル）の「ワザ」欄"
+   },
+   "also_quoted": [
+    {
+     "source": "P43",
+     "page": "321",
+     "location": "p.321 ダメージの計算の順番の 2 段階の例（「つるぎのまい」の最新の説明を引く。エンジンの記録）"
+    }
+   ],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "次の自分の番だけ、",
+     "latest": "次の自分の番、",
+     "kind": "wording"
+    },
+    {
+     "printed": "2倍になる。",
+     "latest": "「60」になる。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "ambiguous_in_print",
+   "meaning_note": "印刷の「2倍」が最終ダメージを 2 倍にするのか、「きりさく」のダメージ（30）を 2 倍にするのかは、印刷の文面だけでは決まらない（弱点・抵抗力・プラスパワーのある場面で結果が変わりうる）。最新の説明は「「60」になる」とし、p.321 のダメージの計算の 2 段階（ワザを使うポケモンの持つダメージを変更する効果）の例にこの説明を挙げる（エンジンの記録）。kyuura は画像を読み直していない",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-E730CE2",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-017",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method。カードの図版の小さい字は 600〜800dpi で拡大した、とエンジンの記録の notes）",
+     "scope": "「ワザ」欄の最新の説明の文面と、図版の印刷の文面（エンジンの記録の latest_description_ja・card_image_text_ja・mismatches）",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録が kyuura にないことの報告。エンジンは最新の説明にしたがう）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-026-ATK0",
+   "card_id": "PMCG1-026",
+   "card_name_ja": "スターミー",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "じこさいせい"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "自分の「水」エネルギーカードを1枚はがしてすてることによってダメージカウンターを全てとりのぞく。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-032-starmie/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "エンジンの記録: 図版は kyuura と同じ印刷の文面と読める。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "自分についている「水」エネルギーカードを1枚トラッシュして、自分にのっているダメージカウンターを、すべてとりのぞく。トラッシュできないとき、このワザの効果はなくなる。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "112",
+    "pdf_page": 114,
+    "location": "スターミー（LV.28／HP60。ポケモンカード第1弾）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "自分の「水」エネルギーカードを1枚はがしてすてることによって",
+     "latest": "自分についている「水」エネルギーカードを1枚トラッシュして、",
+     "kind": "wording"
+    },
+    {
+     "printed": "ダメージカウンターを全てとりのぞく。",
+     "latest": "自分にのっているダメージカウンターを、すべてとりのぞく。トラッシュできないとき、このワザの効果はなくなる。",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "ユンゲラーのじこさいせい（LD-PMCG1-046-ATK0。kyuura が p.151 で確かめた）と同じ書きかえ（エネルギーの種類だけ「水」）。印刷の「すてることによって」は、すてられなければとりのぞけないと読める（推論）。最新の説明はそれを明示した",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-026",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method。カードの図版の小さい字は 600〜800dpi で拡大した、とエンジンの記録の notes）",
+     "scope": "「ワザ」欄の最新の説明の文面と、図版の印刷の文面（エンジンの記録の latest_description_ja・card_image_text_ja・mismatches）",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録が kyuura にないことの報告。エンジンは最新の説明にしたがう）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG1-068-ATK0",
+   "card_id": "PMCG1-068",
+   "card_name_ja": "ラッキー",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "まるまる"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。",
+    "source_of_data": "https://nazonobasho.com/pmcg01-066-lucky/",
+    "image_check": "match",
+    "image_check_note": "エンジンの記録: 図版「コインを投げて「おもて」なら、次の相手の番にうけるダメージが0になる。」は kyuura と同じ印刷の文面。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+    "source": "P43",
+    "scan": "J38",
+    "page": "235",
+    "pdf_page": 237,
+    "location": "ラッキー（LV.55／HP120。ポケモンカード第1弾）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "次の相手の番にうけるダメージが0になる。",
+     "latest": "次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "トランセル・コクーンの「かたまる」（LD-PMCG1-003-ATK0・LD-PMCG1-009-ATK0）と同じ書きかえ。「ダメージが0になる」と「ダメージを受けない」は、ダメージを計算するか（p.319・p.321）が違うが、結果が変わる場面は kyuura では見つけていない（推論）",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG1-068",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method。カードの図版の小さい字は 600〜800dpi で拡大した、とエンジンの記録の notes）",
+     "scope": "「ワザ」欄の最新の説明の文面と、図版の印刷の文面（エンジンの記録の latest_description_ja・card_image_text_ja・mismatches）",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録が kyuura にないことの報告。エンジンは最新の説明にしたがう）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG2-006-ATK1",
+   "card_id": "PMCG2-006",
+   "card_name_ja": "タマタマ",
+   "target": {
+    "kind": "attack",
+    "index": 1,
+    "name_ja": "やどりぎのタネ"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[1].text.ja",
+    "text_ja": "相手にダメージを与えたら、自分のダメージカウンターを1つとりのぞく。",
+    "source_of_data": "https://nazonobasho.com/pmcg02-015-tamatama/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "エンジンの記録: 図版「相手にダメージを与えたら 自分のダメージカウンターを1つとりのぞく。」（「たら」のあとの読点は読めない）。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "相手にダメージを与えたら、自分にのっているダメージカウンターを1個とりのぞく。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "49",
+    "pdf_page": 51,
+    "location": "タマタマ（LV.14／HP50。ポケモンジャングル）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "自分のダメージカウンターを1つとりのぞく。",
+     "latest": "自分にのっているダメージカウンターを1個とりのぞく。",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "どちらも、相手にダメージを与えたら自分のダメージカウンターを 1 個とりのぞく（エンジンの記録。p.13 のフシギダネと同じ最新の説明）",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG2-006",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method。カードの図版の小さい字は 600〜800dpi で拡大した、とエンジンの記録の notes）",
+     "scope": "「ワザ」欄の最新の説明の文面と、図版の印刷の文面（エンジンの記録の latest_description_ja・card_image_text_ja・mismatches）",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録が kyuura にないことの報告。エンジンは最新の説明にしたがう）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG3-012-ATK1",
+   "card_id": "PMCG3-012",
+   "card_name_ja": "シェルダー",
+   "target": {
+    "kind": "attack",
+    "index": 1,
+    "name_ja": "からをとじる"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[1].text.ja",
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番にこのカードが受けるダメージは0になる。(ダメージ以外の効果はそのまま)",
+    "source_of_data": "https://nazonobasho.com/pmcg03-014-shellder/",
+    "image_check": "consistent_where_legible",
+    "image_check_note": "エンジンの記録: 図版は kyuura と同じ印刷の文面と読める（「なら」のあとの読点・かっこの全角半角は読み分けていない）。kyuura は画像を読み直していない"
+   },
+   "latest_description": {
+    "text_ja": "コインを投げて「おもて」なら、次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+    "source": "P43",
+    "scan": "J38",
+    "page": "103",
+    "pdf_page": 105,
+    "location": "シェルダー（LV.8／HP30。化石の秘密）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "次の相手の番にこのカードが受けるダメージは0になる。(ダメージ以外の効果はそのまま)",
+     "latest": "次の相手の番、このカードはダメージを受けない。（ダメージ以外の効果は受ける）",
+     "kind": "clarification"
+    }
+   ],
+   "meaning_change": "none_apparent",
+   "meaning_note": "印刷の文面にも「(ダメージ以外の効果はそのまま)」があり、「かたまる」の最新の説明と意味は同じとみられる（エンジンの記録。推論）",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG3-012",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method。カードの図版の小さい字は 600〜800dpi で拡大した、とエンジンの記録の notes）",
+     "scope": "「ワザ」欄の最新の説明の文面と、図版の印刷の文面（エンジンの記録の latest_description_ja・card_image_text_ja・mismatches）",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録が kyuura にないことの報告。エンジンは最新の説明にしたがう）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
+  },
+  {
+   "id": "LD-PMCG3-022-ATK0",
+   "card_id": "PMCG3-022",
+   "card_name_ja": "ラプラス",
+   "target": {
+    "kind": "attack",
+    "index": 0,
+    "name_ja": "みずでっぽう"
+   },
+   "printed_text": {
+    "path": "pokemon.attacks[0].text.ja",
+    "text_ja": "ワザに必要なぶんよりも多く「水」エネルギーがついている時、多いエネルギー1つにつき10ダメージを追加する。(ダメージ追加は2つぶんまで)",
+    "source_of_data": "https://nazonobasho.com/pmcg03-020-laplace/",
+    "image_check": "different_text",
+    "image_text_ja": "ワザに必要なぶんよりも多く「水」エネルギーカードがついている時 多いエネルギー1つにつき10ダメージを追加する（ダメージ追加は2つぶんまで）",
+    "image_check_note": "エンジンの記録: 図版の説明文は小さくかすれていて、800dpi の拡大で「「水」エネルギーカー／ドがついている時」と読める（エンジンは読み取りの確度は高くないとする）。kyuura の文面の「「水」エネルギーがついている時」との違いを、転記の誤りとは断定しない（kyuura は画像を見ていない。図版の版も確かめていない）"
+   },
+   "latest_description": {
+    "text_ja": "ワザに必要なエネルギーよりも多く「水」エネルギーがついているとき、多い「水」エネルギー1個につき、10ダメージを追加する。ダメージ追加は2個ぶんまで。",
+    "source": "P43",
+    "scan": "J38",
+    "page": "116",
+    "pdf_page": 118,
+    "location": "ラプラス（LV.31／HP80。化石の秘密）の「ワザ」欄"
+   },
+   "also_quoted": [],
+   "book_rule": "GR-P43-P6-LATEST-DESCRIPTION",
+   "classification": "latest_description",
+   "errata_ref": null,
+   "differences": [
+    {
+     "printed": "ワザに必要なぶんよりも",
+     "latest": "ワザに必要なエネルギーよりも",
+     "kind": "wording"
+    },
+    {
+     "printed": "多いエネルギー1つにつき10ダメージを追加する。",
+     "latest": "多い「水」エネルギー1個につき、10ダメージを追加する。",
+     "kind": "clarification"
+    },
+    {
+     "printed": "(ダメージ追加は2つぶんまで)",
+     "latest": "ダメージ追加は2個ぶんまで。",
+     "kind": "wording"
+    }
+   ],
+   "meaning_change": "unknown",
+   "meaning_note": "最新の説明は数える多いエネルギーを「水」エネルギーと書く（p.90 のカメックスの「ハイドロポンプ」の最新の説明と同じ文面。エンジンの記録）。印刷の「多いエネルギー」との違いで処理が変わるかは、kyuura では判断していない",
+   "verification": [
+    {
+     "by": "kyuura-engine",
+     "import": "ENGINE-C7382DB",
+     "document": "kyuura_engine/data/card_verification.json",
+     "record": "cards.PMCG3-022",
+     "source_checked_on": "2026-10-15",
+     "source_checked_on_basis": "エンジンのカードの記録の checked_on",
+     "method": "Internet Archive の PDF からページを画像にし（130〜400dpi）、画像を目で読んだ。OCR の文字はページの位置を探すのに使っただけ。印刷物の実物ではない。（エンジンの card_verification.json の method。カードの図版の小さい字は 600〜800dpi で拡大した、とエンジンの記録の notes）",
+     "scope": "「ワザ」欄の最新の説明の文面と、図版の印刷の文面（エンジンの記録の latest_description_ja・card_image_text_ja・mismatches）",
+     "result": "「不一致あり」（印刷の文面と最新の説明を区別した記録が kyuura にないことの報告。エンジンは最新の説明にしたがう）"
+    }
+   ],
+   "import_provenance": {
+    "kind": "engine_record",
+    "imported_on": "2026-10-19",
+    "kyuura_reread_source": false,
+    "source_commit": "24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1",
+    "scope_note": "最新の説明の文面・ページ・図版の照合は kyuura-engine の照合の記録による。kyuura は原典の画像を読み直していない"
+   },
+   "notes": []
   }
  ]
 }

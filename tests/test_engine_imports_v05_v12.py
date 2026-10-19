@@ -359,27 +359,56 @@ class BreakageTest(Base):
 
 
 class ProtectedDataTest(Base):
-    """取り込みで変えないファイル（L 段階）と、エンジンの写しとの比較。"""
+    """取り込みで変えないファイル（L 段階）と、エンジンの写しとの比較。
+
+    2026-10-19 から、data/cards.json・CSV には拡張パック以外の商品の記録（形式 3）と、訂正の記録（data/curation/card_corrections.json）で
+    当てはめた訂正がある。拡張パックの 780 件は、v0.13 の取り込みのコミット（bcf38c7）と比べて、次の欄だけが違う（一括で緩めない）:
+      - CORRECTED（v0.17 の取り込みのデータの調査で直した欄）
+      - 訂正の記録で当てはめた欄（その欄・notes・corrections。ja_text.json で直した訂正は corrections だけ）
+      - 形式 3 で全記録に加えた欄（product_group・play_scope・same_card_group・data_gaps・source_ids.pcg_search。値が None のものは差にならない）
+    """
 
     # v0.17 の取り込みのデータの調査（2026-10-14）で、data/curation/ から作り直して直したカードと欄だけ。ほかは bcf38c7 と同じ
     CORRECTED = {
         'PMCG2-041': {'.pokemon.attacks[0].name.ja', '.jp_print.level', '.ja_text_source', '.notes'},  # ベロリンガ（p.234。CC-PMCG2-041-P234）
         'PMCG6-023': {'.jp_en_differences'},  # キョウのベトベトンの日英の文面の違い（英語版の「if it has any」）
     }
+    FORMAT3_FIELDS = ('.product_group', '.play_scope', '.same_card_group', '.data_gaps', '.source_ids.pcg_search')
+    HEADER_CHANGED = {'schema_version', 'description', 'text_availability'}  # 形式 3 の説明（拡張パック以外の商品を収録）
+
+    def ledger(self):
+        return json.loads((ROOT / 'data' / 'curation' / 'card_corrections.json').read_text(encoding='utf-8'))['corrections']
+
+    def expected_changes(self, cid, after):
+        exp = set(self.CORRECTED.get(cid, set()))
+        for f in self.FORMAT3_FIELDS:
+            cur = after
+            for part in f.strip('.').split('.'):
+                cur = (cur or {}).get(part)
+            if cur is not None:
+                exp.add(f)
+        for c in self.ledger():
+            if c['card_id'] == cid:
+                exp.add('.corrections')
+                if c['applied_by'] == 'card_corrections':
+                    exp |= {'.' + c['field'], '.notes'}
+        return exp
 
     def test_protected_files_are_unchanged_since_v013_import(self):
-        # v0.13 の取り込みのコミット（bcf38c7）と同じであること（カードのデータは、CORRECTED の欄だけが違う）
+        # v0.13 の取り込みのコミット（bcf38c7）と同じであること（カードのデータは、上の欄だけが違う）
         for path in PROTECTED:
-            if path in ('data/cards.json', 'data/cards.csv', 'data/attacks.csv'):
+            if path in ('data/cards.json', 'data/cards.csv', 'data/attacks.csv', 'data/powers.csv'):
                 continue
             out = subprocess.run(['git', '-C', str(ROOT), 'diff', '--quiet', 'bcf38c7', '--', path])
             self.assertEqual(out.returncode, 0, path)
         old = json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', 'bcf38c7:data/cards.json'], capture_output=True, text=True, check=True).stdout)
         new = json.loads((ROOT / 'data' / 'cards.json').read_text(encoding='utf-8'))
-        self.assertEqual({k: v for k, v in old.items() if k != 'cards'}, {k: v for k, v in new.items() if k != 'cards'})
+        self.assertEqual({k for k in set(old) | set(new) if k != 'cards' and old.get(k) != new.get(k)}, self.HEADER_CHANGED)
+        self.assertEqual((old['schema_version'], new['schema_version']), (2, 3))
         before = {c['id']: c for c in old['cards']}
         after = {c['id']: c for c in new['cards']}
-        self.assertEqual(sorted(before), sorted(after))
+        self.assertEqual(sorted(before), sorted(c['id'] for c in new['cards'] if c['product_group'] == 'expansion_pack'))
+        self.assertFalse(set(before) & {c['id'] for c in new['cards'] if c['product_group'] != 'expansion_pack'})
 
         def changed(x, y, path=''):
             if isinstance(x, dict) and isinstance(y, dict):
@@ -391,12 +420,23 @@ class ProtectedDataTest(Base):
             elif x != y:
                 yield path
         for cid in before:
-            self.assertEqual(set(changed(before[cid], after[cid])), self.CORRECTED.get(cid, set()), cid)
-        for path in ('data/cards.csv', 'data/attacks.csv'):
-            old_lines = set(subprocess.run(['git', '-C', str(ROOT), 'show', f'bcf38c7:{path}'], capture_output=True, text=True, check=True).stdout.splitlines())
-            new_lines = set((ROOT / path).read_text(encoding='utf-8').splitlines())
-            for line in old_lines ^ new_lines:
-                self.assertIn(line.split(',')[0], self.CORRECTED, (path, line[:60]))
+            self.assertEqual(set(changed(before[cid], after[cid])), self.expected_changes(cid, after[cid]), cid)
+        # CSV: bcf38c7 の列の値は、上の欄の違うカードの行だけが違う。加わった行は拡張パック以外の商品の記録だけ
+        import csv
+        import io
+        allowed = {cid for cid in before if self.expected_changes(cid, after[cid]) - set(self.FORMAT3_FIELDS)}
+        for path, key in (('data/cards.csv', ('id',)), ('data/attacks.csv', ('card_id', 'index')), ('data/powers.csv', ('card_id', 'index'))):
+            old_rows = list(csv.DictReader(io.StringIO(subprocess.run(['git', '-C', str(ROOT), 'show', f'bcf38c7:{path}'],
+                                                                      capture_output=True, text=True, check=True).stdout)))
+            new_rows = {tuple(r[k] for k in key): r for r in csv.DictReader(io.StringIO((ROOT / path).read_text(encoding='utf-8')))}
+            for r in old_rows:
+                k = tuple(r[c] for c in key)
+                self.assertIn(k, new_rows, (path, k))
+                diff = [c for c in r if r[c] != new_rows[k][c]]
+                if diff:
+                    self.assertIn(k[0], allowed, (path, k, diff))
+            for k in set(new_rows) - {tuple(r[c] for c in key) for r in old_rows}:
+                self.assertNotIn(k[0], before, (path, k))
 
     def test_card_json_has_no_sidecar_fields(self):
         text = (ROOT / 'data' / 'cards.json').read_text(encoding='utf-8')
