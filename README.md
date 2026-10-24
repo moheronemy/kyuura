@@ -27,6 +27,7 @@
 - [出典と確認状況](docs/sources.md)、[印刷物の照合記録](docs/printed-sources.md)（スキャンで確認した会報・雑誌・書籍の巻号とページ）
 - [調査の状況](docs/research-status.md) — 分野ごとにどこまで確かめられたか、件数、未解決の問題、必要な原本
 - [エンジンの実装の対象](docs/engine-targets.md) — 記録ごとに、実装の対象にできるかと kyuura-engine v0.68 の登録との対応（データ: [`data/engine_targets.json`](data/engine_targets.json)）。[v0.26〜v0.68 の還元の記録](docs/engine-findings-through-v0.68.md)、[エンジンへの引き継ぎ](docs/engine-handover-v0.68.md)
+- [アンノーンI・D・F・[N]・[J] の調査](docs/unown-research-v0.97.md) — kyuura-engine v0.97 の前の研究（2026-10-24）。カードの画像で確かめたルール文、デッキの 4 枚の数え方、DARK df・NORMAL df の対象・重なり・計算の段階、効果を除くワザとの関係、未解決の論点とエンジンへの引き継ぎ
 - [エンジン開発の準備状況](docs/engine-readiness.md) — 対戦エンジン（別のリポジトリ [kyuura-engine](https://github.com/moheronemy/kyuura-engine)）の基準にしたルールと調査データ。エンジンを作り始める前の計画も記録として残している
 
 ### カード
@@ -90,7 +91,7 @@ print(uc['research_issues'], uc['engine_total'], uc['engine_stop_codes'])
 - カード名は日英とも全件収録しています。
 - ワザ名・特殊能力名・効果文は、英語版は全件、日本版は全 10 弾の 774 枚（効果文のない基本エネルギー 6 枚以外の全カード）を収録しています。
   - 出典は、第1〜4弾と neo 第1〜2弾が [なぞのばしょ](https://nazonobasho.com/)、第5〜6弾と neo 第3〜4弾が [ポケモンWiki](https://wiki.pokemonwiki.com/)（ブラウザで保存したページ）です。
-- 無色2個エネルギーの効果文と、neo 第1〜2弾のベイビィ・アンノーン 12 枚のルール文は、なぞのばしょに記載がなく未収録です。詳しくは [カードリストの見かた](docs/cards/README.md#日本語テキストについて) を参照してください。
+- 無色2個エネルギーの効果文と、neo 第1〜2弾のベイビィ 6 枚・アンノーン 3 枚（M・U・A）のルール文は、なぞのばしょに記載がなく未収録です。アンノーンI・D・F のルール文は、2026-10-24 にカードの画像で確かめて入れました（[アンノーンの調査](docs/unown-research-v0.97.md)）。詳しくは [カードリストの見かた](docs/cards/README.md#日本語テキストについて) を参照してください。
 
 ## 日英のルールの違い（要約）
 

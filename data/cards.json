@@ -58955,7 +58955,7 @@
     "resistances": [],
     "retreat_cost": 1,
     "rules_text": {
-     "ja": null,
+     "ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
      "en": "You may have up to 4 Basic Pokémon cards in your deck with Unown in their names."
     },
     "powers": [
@@ -58996,7 +58996,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo2-023-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「I」）の日本語版のカードの画像を 2 つのサイトで読み、カード名の上（右上）の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-24）。転記（なぞのばしょ）はこの欄を載せていなかった（なぞのばしょのページの欄にルール文がない。印刷されていないのではない）。英語版の文面・ほかの文字のアンノーンの文面からは写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo2-023",
     "pokemontcg": [
@@ -59014,10 +59016,18 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo2-023-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-24"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo2-024",
@@ -59182,7 +59192,7 @@
     "resistances": [],
     "retreat_cost": 1,
     "rules_text": {
-     "ja": null,
+     "ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
      "en": "You may have up to 4 Basic Pokémon cards in your deck with Unown in their names."
     },
     "powers": [
@@ -59222,8 +59232,22 @@
    },
    "trainer": null,
    "energy": null,
-   "jp_en_differences": [],
-   "notes": [],
+   "jp_en_differences": [
+    {
+     "kind": "text",
+     "summary": "ポケモンパワー DARK df（[Darkness]）で「-30」するダメージの対象と、2 匹以上のときの条件",
+     "ja": "「自分の場の「アンノーン」が「悪」ポケモンからダメージを受けるとき、そのダメージは「-30」される。自分の場のほかのアンノーン「D」の「DARK df」がはたらいているとき、この力は、はたらかない。」と、減らすのは自分の場の「アンノーン」が「悪」ポケモンから受けるダメージだけで、自分の場のほかのアンノーン「D」の力がはたらいているときにはたらかないと書く（2026-10-24 にカードの画像で確認）。弱点・抵抗力との順番、ねむり・マヒ・こんらんのときの扱いは書かれていない",
+     "en": "「Whenever a Darkness Pokémon damages 1 of your Pokémon, reduce that damage by 30 (after applying Weakness and Resistance). This power stops working if you have more than 1 Unown [D] in play. (This power works even if Unown [D] is Asleep, Confused, or Paralyzed.)」と、自分のポケモンすべてが受けるダメージを減らし（弱点・抵抗力のあと）、場にアンノーン[D] が 2 匹以上いれば止まると書く。英語版の文面は日本語版の処理の根拠にしない（kyuura の裁定・論点は日本語の文面だけで決める）",
+     "confidence": "確実",
+     "sources": [
+      "N1",
+      "N3"
+     ]
+    }
+   ],
+   "notes": [
+    "訂正（FIX-neo2-025-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「D」）の日本語版のカードの画像を 2 つのサイトで読み、カード名の上（右上）の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-24）。転記（なぞのばしょ）はこの欄を載せていなかった（なぞのばしょのページの欄にルール文がない。印刷されていないのではない）。英語版の文面・ほかの文字のアンノーンの文面からは写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo2-025",
     "pokemontcg": [
@@ -59241,10 +59265,18 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo2-025-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-24"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo2-026",
@@ -59291,7 +59323,7 @@
     "resistances": [],
     "retreat_cost": 1,
     "rules_text": {
-     "ja": null,
+     "ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
      "en": "You may have up to 4 Basic Pokémon cards in your deck with Unown in their names."
     },
     "powers": [
@@ -59332,7 +59364,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo2-026-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「F」）の日本語版のカードの画像を 2 つのサイトで読み、カード名の上（右上）の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-24）。転記（なぞのばしょ）はこの欄を載せていなかった（なぞのばしょのページの欄にルール文がない。印刷されていないのではない）。英語版の文面・ほかの文字のアンノーンの文面からは写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo2-026",
     "pokemontcg": [
@@ -59350,10 +59384,18 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo2-026-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-24"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo2-027",
@@ -130999,7 +131041,19 @@
    },
    "trainer": null,
    "energy": null,
-   "jp_en_differences": [],
+   "jp_en_differences": [
+    {
+     "kind": "text",
+     "summary": "ポケモンパワー NORMAL df（[Normal]）で「-30」するダメージの対象と、2 匹以上のときの条件",
+     "ja": "「自分の場の「アンノーン」が「無色」ポケモンからダメージを受けるとき、そのダメージは「-30」される。自分の場のほかのアンノーン「N」の「NORMAL df」がはたらいているとき、この力は、はたらかない。」と、減らすのは自分の場の「アンノーン」が「無色」ポケモンから受けるダメージだけで、自分の場のほかのアンノーン「N」の力がはたらいているときにはたらかないと書く（2026-10-24 にカードの画像で確認）。弱点・抵抗力との順番、ねむり・マヒ・こんらんのときの扱いは書かれていない",
+     "en": "「Whenever a Colorless Pokémon damages 1 of your Pokémon, reduce that damage by 30 (after applying Weakness and Resistance). This power stops working if you have more than 1 Unown [N] in play. (This power works even if Unown [N] is Asleep, Confused, or Paralyzed.)」と、自分のポケモンすべてが受けるダメージを減らし（弱点・抵抗力のあと）、場にアンノーン[N] が 2 匹以上いれば止まると書く。英語版の文面は日本語版の処理の根拠にしない（kyuura の裁定・論点は日本語の文面だけで決める）",
+     "confidence": "確実",
+     "sources": [
+      "N1",
+      "N3"
+     ]
+    }
+   ],
    "notes": [],
    "source_ids": {
     "tcgdex": null,

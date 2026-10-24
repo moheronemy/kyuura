@@ -372,6 +372,9 @@ class ProtectedDataTest(Base):
     CORRECTED = {
         'PMCG2-041': {'.pokemon.attacks[0].name.ja', '.jp_print.level', '.ja_text_source', '.notes'},  # ベロリンガ（p.234。CC-PMCG2-041-P234）
         'PMCG6-023': {'.jp_en_differences'},  # キョウのベトベトンの日英の文面の違い（英語版の「if it has any」）
+        # 2026-10-24 のアンノーンI・D・F・[N]・[J] の調査で加えた日英の違い（data/curation/card_differences.json。DARK df の対象と 2 匹以上の条件）。
+        # ルール文を埋めた neo2-023・025・026 の欄は訂正の記録（FIX-neo2-0xx-RULES-TEXT-JA）から求める
+        'neo2-025': {'.jp_en_differences'},
     }
     FORMAT3_FIELDS = ('.product_group', '.play_scope', '.same_card_group', '.data_gaps', '.source_ids.pcg_search')
     HEADER_CHANGED = {'schema_version', 'description', 'text_availability'}  # 形式 3 の説明（拡張パック以外の商品を収録）

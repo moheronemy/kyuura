@@ -317,8 +317,11 @@ class EngineImportV068Test(unittest.TestCase):
 
     def test_counts_are_kept_apart(self):
         # 研究の論点の数と、エンジンの停止コード・未解決の裁定の数を同じにそろえない
+        # v0.68 の取り込みの時点は 71。2026-10-24 のアンノーンの調査で kyuura の論点 UQ-SELF-EXCLUDING-POWER-COPIES（エンジンの裁定に結ばない）を加えて、今は 72
+        at_import = bcr.unresolved_counts(self.ctx, as_of='v0.68')
+        self.assertEqual((at_import['research_issues'], at_import['engine_total'], at_import['engine_stop_codes']), (71, 151, 149))
         now = bcr.unresolved_counts(self.ctx)
-        self.assertEqual((now['research_issues'], now['engine_total'], now['engine_stop_codes']), (71, 151, 149))
+        self.assertEqual((now['research_issues'], now['engine_total'], now['engine_stop_codes']), (72, 151, 149))
         old = bcr.unresolved_counts(self.ctx, as_of='v0.25')
         self.assertEqual((old['research_issues'], old['engine_total'], old['engine_stop_codes']), (24, 28, 22))
 

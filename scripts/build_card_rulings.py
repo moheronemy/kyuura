@@ -689,6 +689,13 @@ def validate(ctx):
         for e in x.get('engine_refs', []):
             if e.get('import') not in imports:
                 errors.append(f"{w}: engine_refs の import がない: {e.get('import')}")
+        if not x.get('engine_refs'):
+            # kyuura の調査で立てた論点（エンジンの裁定に結ばない）。記録した日と、その時点の最新の取り込みを書く（過去の時点の数から外すため）
+            ra = x.get('recorded_after') or {}
+            if ra.get('import') not in imports or not DATE.fullmatch(ra.get('date') or ''):
+                errors.append(f'{w}: engine_refs のない論点には recorded_after（記録した時点の最新の取り込み import と日付 date）が要る')
+            if not x.get('not_in_engine_index'):
+                errors.append(f'{w}: engine_refs のない論点は、エンジンの未解決の一覧に結べないので not_in_engine_index: true')
         a = x.get('audit')
         if not isinstance(a, dict):
             errors.append(f'{w}: audit（結果への影響・解決に要る資料・調べた範囲・新しく読んだ資料）がない')
@@ -946,8 +953,9 @@ def unresolved_counts(ctx, as_of=None):
     """未解決の数を、kyuura の調査の論点とエンジンの数え方に分けて求める（同じ数として扱わない）。
 
     as_of（'v0.25' など）を渡すと、その版の時点の数にする: その版までの一覧の項目、その版で数えていた項目（counted_from_version）、
-    その版で付いていた停止コード（stop_code_since）、その版までのエンジンの裁定に結んだ論点（engine_refs のない論点も含む）、
-    その版までの事例（instances）。過去の取り込みの検査が、あとの版の取り込みで変わらずに確かめられるようにする。
+    その版で付いていた停止コード（stop_code_since）、その版までのエンジンの裁定に結んだ論点、その版までの事例（instances）。
+    engine_refs のない論点（kyuura の調査で立てた論点）は recorded_after の取り込みのあとに記録したので、as_of がその取り込みの版より
+    あとのとき（as_of を渡さない今の数を含む）だけ数える。過去の取り込みの検査が、あとの版の取り込みで変わらずに確かめられるようにする。
 
     - research_issues: kyuura の未解決の論点（issues）の数
     - engine_total: 最新の版でエンジンが数える未解決の裁定の数（engine_unresolved_index で in_engine_count が false でないもの）
@@ -973,7 +981,16 @@ def unresolved_counts(ctx, as_of=None):
             u['in_engine_count'] = False
         idx.append(u)
     counted = [u for u in idx if u.get('in_engine_count', True)]
-    issues = [x for x in r['issues'] if not x.get('engine_refs') or any(within(e['engine_version']) for e in x['engine_refs'])]
+    imports = {imp['id']: imp for imp in r['engine_imports']}
+
+    def counted_issue(x):
+        if x.get('engine_refs'):
+            return any(within(e['engine_version']) for e in x['engine_refs'])
+        # kyuura の調査で立てた論点: 記録した時点の最新の取り込みより後の時点（今の数を含む）だけ数える
+        rec = imports[x['recorded_after']['import']]
+        return as_of is None or version_key(as_of) > version_key(rec['engine_version'])
+
+    issues = [x for x in r['issues'] if counted_issue(x)]
     by_issue = defaultdict(list)
     for u in idx:
         if u.get('kyuura_issue'):
@@ -1253,7 +1270,11 @@ def build(ctx):
             out.append(f"- 関係する論点: {'・'.join(x['related_issues'])}")
         for e in x['engine_refs']:
             out.append(f'- エンジン: {md(engine_line(e))}')
-        if x.get('not_in_engine_index'):
+        if x.get('recorded_after'):
+            ra = x['recorded_after']
+            out.append(f"- kyuura の調査で立てた論点（{ra['date']}。取り込み {ra['import']} のあと）。エンジンの裁定に結んでいないので、"
+                       'エンジンの未解決の裁定の一覧（8 章）には入っていない')
+        elif x.get('not_in_engine_index'):
             out.append('- エンジンの未解決の裁定の一覧（8 章）には入っていない（エンジンは処理を決めている）')
         for n in x.get('notes', []):
             out.append(f'- 注: {md(n)}')
