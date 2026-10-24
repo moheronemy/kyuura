@@ -1544,6 +1544,19 @@
      "P43"
     ]
    }
+  ],
+  "neopf2001": [
+   {
+    "kind": "text",
+    "summary": "ポケモンパワー NORMAL df（[Normal]）で「-30」するダメージの対象と、2 匹以上のときの条件",
+    "ja": "「自分の場の「アンノーン」が「無色」ポケモンからダメージを受けるとき、そのダメージは「-30」される。自分の場のほかのアンノーン「N」の「NORMAL df」がはたらいているとき、この力は、はたらかない。」と、減らすのは自分の場の「アンノーン」が「無色」ポケモンから受けるダメージだけで、自分の場のほかのアンノーン「N」の力がはたらいているときにはたらかないと書く（2026-10-24 にカードの画像で確認）。弱点・抵抗力との順番、ねむり・マヒ・こんらんのときの扱いは書かれていない",
+    "en": "「Whenever a Colorless Pokémon damages 1 of your Pokémon, reduce that damage by 30 (after applying Weakness and Resistance). This power stops working if you have more than 1 Unown [N] in play. (This power works even if Unown [N] is Asleep, Confused, or Paralyzed.)」と、自分のポケモンすべてが受けるダメージを減らし（弱点・抵抗力のあと）、場にアンノーン[N] が 2 匹以上いれば止まると書く。英語版の文面は日本語版の処理の根拠にしない（kyuura の裁定・論点は日本語の文面だけで決める）",
+    "confidence": "確実",
+    "sources": [
+     "N1",
+     "N3"
+    ]
+   }
   ]
  },
  "sheets": {

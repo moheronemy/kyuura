@@ -103,6 +103,143 @@
    "confirmed_by": "kyuura（2 つの転記の突き合わせ。前の作業の判定）",
    "source_of_error": "pcg-search.com の転記（1stmv010）",
    "card_checks_affected": []
+  },
+  {
+   "id": "FIX-neo2-023-RULES-TEXT-JA",
+   "card_id": "neo2-023",
+   "card_name_ja": "アンノーンI",
+   "field": "pokemon.rules_text.ja",
+   "before": null,
+   "after": "「アンノーン」はデッキに4枚までしか入れることができません。",
+   "kind": "transcription_omission",
+   "applied_by": "card_corrections",
+   "decided_on": "2026-10-24",
+   "basis": "card_image_check",
+   "basis_detail": "kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「I」）の日本語版のカードの画像を 2 つのサイトで読み、カード名の上（右上）の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-24）。転記（なぞのばしょ）はこの欄を載せていなかった（なぞのばしょのページの欄にルール文がない。印刷されていないのではない）。英語版の文面・ほかの文字のアンノーンの文面からは写していない",
+   "confirmed_by": "kyuura（ウェブに公開されたカードの画像。公式の書籍のページとの照合 CC- ではない）",
+   "kyuura_saw_image": true,
+   "evidence": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo2023.php",
+     "list_entry": "第2弾「遺跡をこえて...」の 023/057「アンノーン[I]」",
+     "image_url": "https://pcg-search.com/img/neo/neo2023.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "57548cc0fd60aaba0797e7f90a71185811f39ccf2480a1ee3306e5014d429b3f",
+     "accessed_on": "2026-10-24"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo2-023-unknown-i/",
+     "page_title": "アンノーン[I] | ポケモンカード★neo | 拡張パック第2弾 遺跡をこえて…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2021/05/neo2_B_023_unknown-i_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "838076599ffd2be2aa01a8829d65c34d0be214d286a142d3ed2c7f551ce100bd",
+     "accessed_on": "2026-10-24"
+    }
+   ],
+   "identification": "2 つの画像とも、大きい「アンノーン」・文字の形の図・小さい「I［アイ］」、LV.10、HP40、超、たねポケモン、【特殊能力】INCREASE［インクリーズ］、めざめるパワー（超・10）、No.201、レアリティのマーク ●、イラストの右下の「遺跡をこえて...」の記号（遺跡の形）。kyuura の data/cards.json の名前の英字・jp_print.level・HP・レアリティ・特殊能力名と合う。このアンノーンは日本版ではこの弾にだけ収録（kyuura の記録で、ほかの商品の同じ文字のアンノーンはない）",
+   "scope": "確かめた欄は pokemon.rules_text.ja（全文）と、カードを決めるための名前の英字・レベル・HP・レアリティ・特殊能力名。特殊能力の文面は、転記の半角の空白（改行の位置）を除いて画像と同じ（直していない）。画像は 1 枚ずつで、刷・版の違い（初版のマークなど）は確かめていない。カードの実物・公式の書籍のページでは確かめていない。2 つのサイトの画像は構図・色がよく似ていて、同じ撮影・スキャンに由来するかは分からないので、独立した 2 枚の実物の照合とは数えない",
+   "source_of_error": "なぞのばしょ（https://nazonobasho.com/neo2-023-unknown-i/）の転記がルール文の欄を載せていない（null。data/cards.json の data_gaps の pokemon.rules_text.ja）",
+   "not_errata": "公式エラッタ・再録による文面の変更ではない（転記の欠け）。最新の説明（LD-）・照合の記録（CC-）はない",
+   "related": [
+    "アンノーン[N]（PF2-001）・アンノーン[J]（PRN-034）は pcg-search の転記にルール文があり、kyuura は同じ日に pcg-search のカードの画像でも同じ文面を読んだ（同じサイトの画像なので独立した照合ではない）",
+    "『トレーナーズ』Vol.7 p.3 [P39]（2000-07-01）の枚数の注記は数字が読めない（既存の記録）。4 と補って読んでいない。Vol.8 p.32 [P40]（2000-09-01）の「アンノーンはデッキに4枚までしか入れることができません」（既存の記録）は記事の文で、このカードの印刷の文面の照合に数えない",
+    "2002-05-24 の公式サイトの Q&A [P10] の「ポケボディー」一覧（アンノーン[D] を含む）は特殊能力の分類で、ルール文とは関係がない（別の時期の資料）"
+   ],
+   "card_checks_affected": []
+  },
+  {
+   "id": "FIX-neo2-025-RULES-TEXT-JA",
+   "card_id": "neo2-025",
+   "card_name_ja": "アンノーンD",
+   "field": "pokemon.rules_text.ja",
+   "before": null,
+   "after": "「アンノーン」はデッキに4枚までしか入れることができません。",
+   "kind": "transcription_omission",
+   "applied_by": "card_corrections",
+   "decided_on": "2026-10-24",
+   "basis": "card_image_check",
+   "basis_detail": "kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「D」）の日本語版のカードの画像を 2 つのサイトで読み、カード名の上（右上）の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-24）。転記（なぞのばしょ）はこの欄を載せていなかった（なぞのばしょのページの欄にルール文がない。印刷されていないのではない）。英語版の文面・ほかの文字のアンノーンの文面からは写していない",
+   "confirmed_by": "kyuura（ウェブに公開されたカードの画像。公式の書籍のページとの照合 CC- ではない）",
+   "kyuura_saw_image": true,
+   "evidence": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo2026.php",
+     "list_entry": "第2弾「遺跡をこえて...」の 026/057「アンノーン[D]」",
+     "image_url": "https://pcg-search.com/img/neo/neo2026.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "fbf1c613e098e0ecdc35925a73b4d47a2c2d2bb2503c06c800bc0ec0e1a513c2",
+     "accessed_on": "2026-10-24"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo2-026-unknown-d/",
+     "page_title": "アンノーン[D] | ポケモンカード★neo | 拡張パック第2弾 遺跡をこえて…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2021/05/neo2_B_026_unknown-d_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "f425a4b87daecfa13345e215eee9c91b617fb13c38c72dfe2f118b6f360bae9f",
+     "accessed_on": "2026-10-24"
+    }
+   ],
+   "identification": "2 つの画像とも、大きい「アンノーン」・文字の形の図・小さい「D［ディー］」、LV.14、HP40、超、たねポケモン、【特殊能力】DARK df［ダーク ディーエフ］、めざめるパワー（超・10）、No.201、レアリティのマーク ◆、イラストの右下の「遺跡をこえて...」の記号（遺跡の形）。kyuura の data/cards.json の名前の英字・jp_print.level・HP・レアリティ・特殊能力名と合う。このアンノーンは日本版ではこの弾にだけ収録（kyuura の記録で、ほかの商品の同じ文字のアンノーンはない）",
+   "scope": "確かめた欄は pokemon.rules_text.ja（全文）と、カードを決めるための名前の英字・レベル・HP・レアリティ・特殊能力名。特殊能力の文面は、転記の半角の空白（改行の位置）を除いて画像と同じ（直していない）。画像は 1 枚ずつで、刷・版の違い（初版のマークなど）は確かめていない。カードの実物・公式の書籍のページでは確かめていない。2 つのサイトの画像は構図・色がよく似ていて、同じ撮影・スキャンに由来するかは分からないので、独立した 2 枚の実物の照合とは数えない",
+   "source_of_error": "なぞのばしょ（https://nazonobasho.com/neo2-026-unknown-d/）の転記がルール文の欄を載せていない（null。data/cards.json の data_gaps の pokemon.rules_text.ja）",
+   "not_errata": "公式エラッタ・再録による文面の変更ではない（転記の欠け）。最新の説明（LD-）・照合の記録（CC-）はない",
+   "related": [
+    "アンノーン[N]（PF2-001）・アンノーン[J]（PRN-034）は pcg-search の転記にルール文があり、kyuura は同じ日に pcg-search のカードの画像でも同じ文面を読んだ（同じサイトの画像なので独立した照合ではない）",
+    "『トレーナーズ』Vol.7 p.3 [P39]（2000-07-01）の枚数の注記は数字が読めない（既存の記録）。4 と補って読んでいない。Vol.8 p.32 [P40]（2000-09-01）の「アンノーンはデッキに4枚までしか入れることができません」（既存の記録）は記事の文で、このカードの印刷の文面の照合に数えない",
+    "2002-05-24 の公式サイトの Q&A [P10] の「ポケボディー」一覧（アンノーン[D] を含む）は特殊能力の分類で、ルール文とは関係がない（別の時期の資料）",
+    "kyuura の id は TCGdex の並び（neo2-025 が D）で、転記元の URL（なぞのばしょ neo2-026-unknown-d・pcg-search neo2026）とは番号が違う。カードは番号ではなく、名前の英字・レベル・特殊能力で決めた。なぞのばしょのこのページの「カード名称」欄は「アンノーン[I]」（既存の判定 data/curation/nazonobasho_review.json の neo2-025|name。この記録では二重に訂正しない）だが、ページの見出しと画像は D"
+   ],
+   "card_checks_affected": []
+  },
+  {
+   "id": "FIX-neo2-026-RULES-TEXT-JA",
+   "card_id": "neo2-026",
+   "card_name_ja": "アンノーンF",
+   "field": "pokemon.rules_text.ja",
+   "before": null,
+   "after": "「アンノーン」はデッキに4枚までしか入れることができません。",
+   "kind": "transcription_omission",
+   "applied_by": "card_corrections",
+   "decided_on": "2026-10-24",
+   "basis": "card_image_check",
+   "basis_detail": "kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「F」）の日本語版のカードの画像を 2 つのサイトで読み、カード名の上（右上）の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-24）。転記（なぞのばしょ）はこの欄を載せていなかった（なぞのばしょのページの欄にルール文がない。印刷されていないのではない）。英語版の文面・ほかの文字のアンノーンの文面からは写していない",
+   "confirmed_by": "kyuura（ウェブに公開されたカードの画像。公式の書籍のページとの照合 CC- ではない）",
+   "kyuura_saw_image": true,
+   "evidence": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo2025.php",
+     "list_entry": "第2弾「遺跡をこえて...」の 025/057「アンノーン[F]」",
+     "image_url": "https://pcg-search.com/img/neo/neo2025.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "43f5f5b21f0576b7d6c347964967f31f83f9d58bd9f07d207a010f984e3922e5",
+     "accessed_on": "2026-10-24"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo2-025-unknown-f/",
+     "page_title": "アンノーン[F] | ポケモンカード★neo | 拡張パック第2弾 遺跡をこえて…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2021/05/neo2_B_025_unknown-f_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "60c17562ed1734179b7ce8fe2278f44abdf80fbb30371d5f2d9b4c9dd3ee39be",
+     "accessed_on": "2026-10-24"
+    }
+   ],
+   "identification": "2 つの画像とも、大きい「アンノーン」・文字の形の図・小さい「F［エフ］」、LV.16、HP40、超、たねポケモン、【特殊能力】FIND［ファインド］、めざめるパワー（超・10）、No.201、レアリティのマーク ◆、イラストの右下の「遺跡をこえて...」の記号（遺跡の形）。kyuura の data/cards.json の名前の英字・jp_print.level・HP・レアリティ・特殊能力名と合う。このアンノーンは日本版ではこの弾にだけ収録（kyuura の記録で、ほかの商品の同じ文字のアンノーンはない）",
+   "scope": "確かめた欄は pokemon.rules_text.ja（全文）と、カードを決めるための名前の英字・レベル・HP・レアリティ・特殊能力名。特殊能力の文面は、転記の半角の空白（改行の位置）を除いて画像と同じ（直していない）。画像は 1 枚ずつで、刷・版の違い（初版のマークなど）は確かめていない。カードの実物・公式の書籍のページでは確かめていない。2 つのサイトの画像は構図・色がよく似ていて、同じ撮影・スキャンに由来するかは分からないので、独立した 2 枚の実物の照合とは数えない",
+   "source_of_error": "なぞのばしょ（https://nazonobasho.com/neo2-025-unknown-f/）の転記がルール文の欄を載せていない（null。data/cards.json の data_gaps の pokemon.rules_text.ja）",
+   "not_errata": "公式エラッタ・再録による文面の変更ではない（転記の欠け）。最新の説明（LD-）・照合の記録（CC-）はない",
+   "related": [
+    "アンノーン[N]（PF2-001）・アンノーン[J]（PRN-034）は pcg-search の転記にルール文があり、kyuura は同じ日に pcg-search のカードの画像でも同じ文面を読んだ（同じサイトの画像なので独立した照合ではない）",
+    "『トレーナーズ』Vol.7 p.3 [P39]（2000-07-01）の枚数の注記は数字が読めない（既存の記録）。4 と補って読んでいない。Vol.8 p.32 [P40]（2000-09-01）の「アンノーンはデッキに4枚までしか入れることができません」（既存の記録）は記事の文で、このカードの印刷の文面の照合に数えない",
+    "2002-05-24 の公式サイトの Q&A [P10] の「ポケボディー」一覧（アンノーン[D] を含む）は特殊能力の分類で、ルール文とは関係がない（別の時期の資料）",
+    "kyuura の id は TCGdex の並び（neo2-026 が F）で、転記元の URL（なぞのばしょ neo2-025-unknown-f・pcg-search neo2025）とは番号が違う。カードは番号ではなく、名前の英字・レベル・特殊能力で決めた"
+   ],
+   "card_checks_affected": []
   }
  ],
  "candidates": [
@@ -1385,6 +1522,78 @@
    "status": "held_transcription_difference",
    "reason": "別の転記サイトとの書き方・表記の違い。どちらが印刷の表記かは、印刷の版の画像がないので決めていない（エンジンの判定では処理は変わらない）",
    "engine_note": "kyuura は全角の「？」、サイトは半角の「?」（表記の違い。処理に影響しない）"
+  },
+  {
+   "card_id": "neo2-027",
+   "card_name_ja": "アンノーンM",
+   "field": "pokemon.rules_text.ja",
+   "kyuura_value": null,
+   "other_value": null,
+   "other_source": "なぞのばしょの転記にルール文の欄がない（I・D・F と同じ）。pcg-search.com の同じ弾のカードの一覧にこのカードのページがある（2026-10-24 の調査の対象外で、画像は読んでいない）",
+   "records": [],
+   "affects_behavior": true,
+   "status": "gap_open",
+   "reason": "同じ弾のアンノーンI・D・F は 2026-10-24 にカードの画像でルール文を確かめて埋めた（FIX-neo2-023/025/026-RULES-TEXT-JA）。アンノーン「M」は画像を読んでいないので、ほかの文字の文面を写して埋めない"
+  },
+  {
+   "card_id": "neo2-028",
+   "card_name_ja": "アンノーンU",
+   "field": "pokemon.rules_text.ja",
+   "kyuura_value": null,
+   "other_value": null,
+   "other_source": "なぞのばしょの転記にルール文の欄がない（I・D・F と同じ）。pcg-search.com の同じ弾のカードの一覧にこのカードのページがある（2026-10-24 の調査の対象外で、画像は読んでいない）",
+   "records": [],
+   "affects_behavior": true,
+   "status": "gap_open",
+   "reason": "同じ弾のアンノーンI・D・F は 2026-10-24 にカードの画像でルール文を確かめて埋めた（FIX-neo2-023/025/026-RULES-TEXT-JA）。アンノーン「U」は画像を読んでいないので、ほかの文字の文面を写して埋めない"
+  },
+  {
+   "card_id": "neo2-030",
+   "card_name_ja": "アンノーンA",
+   "field": "pokemon.rules_text.ja",
+   "kyuura_value": null,
+   "other_value": null,
+   "other_source": "なぞのばしょの転記にルール文の欄がない（I・D・F と同じ）。pcg-search.com の同じ弾のカードの一覧にこのカードのページがある（2026-10-24 の調査の対象外で、画像は読んでいない）",
+   "records": [],
+   "affects_behavior": true,
+   "status": "gap_open",
+   "reason": "同じ弾のアンノーンI・D・F は 2026-10-24 にカードの画像でルール文を確かめて埋めた（FIX-neo2-023/025/026-RULES-TEXT-JA）。アンノーン「A」は画像を読んでいないので、ほかの文字の文面を写して埋めない"
+  },
+  {
+   "card_id": "PF2-001",
+   "card_name_ja": "アンノーン[N]",
+   "field": "jp_print.level",
+   "kyuura_value": null,
+   "other_value": 14,
+   "other_source": "pcg-search.com のカードの画像（https://pcg-search.com/img/neo/neopf2001.png。2026-10-24 に kyuura が読んだ）の「LV.14」。なぞのばしょの転記（https://nazonobasho.com/neo2-s-005-unknown-n/。data/ja_text_nazonobasho.json の cardlist-neopf02）も LV 14",
+   "records": [],
+   "affects_behavior": false,
+   "status": "gap_open",
+   "reason": "拡張パック以外の商品の記録は、pcg-search の転記にレベルの欄がないので jp_print.level がどれも空（data_gaps）。2 枚だけを画像の値で埋めると出どころがまざるので、まとめて扱う作業に残す（レベルは対戦の処理に使わない）"
+  },
+  {
+   "card_id": "PRN-034",
+   "card_name_ja": "アンノーン[J]",
+   "field": "jp_print.level",
+   "kyuura_value": null,
+   "other_value": 16,
+   "other_source": "pcg-search.com のカードの画像（https://pcg-search.com/img/neo/neop034.png。2026-10-24 に kyuura が読んだ）の「LV.16」。画像の下端に「ポケモンカード公式マガジン「トレーナーズVol.8」おまけカード」の印刷がある（配布の記録 data/curation/other_products.json の neop034 の distribution_en と合う）",
+   "records": [],
+   "affects_behavior": false,
+   "status": "gap_open",
+   "reason": "拡張パック以外の商品の記録は、pcg-search の転記にレベルの欄がないので jp_print.level がどれも空（data_gaps）。2 枚だけを画像の値で埋めると出どころがまざるので、まとめて扱う作業に残す（レベルは対戦の処理に使わない）"
+  },
+  {
+   "card_id": "PRN-034",
+   "card_name_ja": "アンノーン[J]",
+   "field": "pokemon.powers[0].text.en",
+   "kyuura_value": "Once during your turn (before your attack), if you have Unown [J], Unown [O], Unown [I], and Unown Dragon on your Bench, you may search your deck for a Basic Pokémon or Evolution card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward.",
+   "other_value": "Once during your turn (before you attack), if you have Unown J, Unown O, Unown I, and Unown N on your Bench, you may search your deck for a Basic Pokémon or Evolution Pokémon card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward.",
+   "other_source": "TCGdex（tcgdex/cards-database 4199850a の data/Base/Wizards Black Star Promos/38.ts）の英語の文面。kyuura の値は PokemonTCG/pokemon-tcg-data 39a26a1 の basep-38",
+   "records": [],
+   "affects_behavior": false,
+   "status": "held_transcription_difference",
+   "reason": "2 つの英語の転記で 4 匹目の名前が違う（「Unown Dragon」と「Unown N」）。日本語版の印刷は「アンノーン「O」「I」「N」」（pcg-search の転記と画像）だが、英語版のカードの画像・印刷を確かめていないので直さない。日本語版の処理の根拠には英語の文面を使わない"
   }
  ]
 }

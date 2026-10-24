@@ -19348,6 +19348,392 @@
     "kyuura_reread_source": false
    },
    "inference": "エンジンの推論を再利用: 再利用: p.310"
+  },
+  {
+   "id": "CR-UNOWN-DECK-LIMIT-ALL-LETTERS",
+   "topic": "アンノーン・デッキの枚数",
+   "cards": [
+    {
+     "card_id": "neo2-023",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo2-025",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo2-026",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PF2-001",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PRN-034",
+     "target": {
+      "kind": "card"
+     }
+    }
+   ],
+   "related_cards": [
+    "neo2-054",
+    "neo2-057"
+   ],
+   "question": "アンノーンのルール文「「アンノーン」はデッキに4枚までしか入れることができません。」の 4 枚に、文字の違うアンノーン・ほかの商品のアンノーンを合わせて数えるか",
+   "conclusion": "合わせて数える。デッキに入れられるアンノーンのカードは、文字（I・D・F・N・J など）と商品にかかわらず全部で 4 枚まで（例: アンノーンI・D・F・[N] の 4 枚のデッキには、文字の違うアンノーンも 5 枚目として入れられない）。同じ名前の 4 枚の規定（p.308）とは別に、このルール文がはたらく",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-023",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-025",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-026",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PF2-001",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PRN-034",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-023",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "「アンノーン」を1枚選び出し、ベンチに出す",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-054",
+     "field": "trainer.text.ja",
+     "quote": "あなたの山札から「アンノーン」を1枚選び出し、ベンチに出す",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "source": "P40",
+     "page": "32",
+     "location": "p.32（PDF 18）。記事の文（既存の記録の写し。今回スキャンを読み直していない）",
+     "quote": "アンノーンはデッキに4枚までしか入れることができません",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.307「プレイルールとカードの記述」・p.308「同じ名前のカード」",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "ルール文は「アンノーン」をかぎかっこで示す。同じ弾の［INCREASE］・遺跡の石版の「「アンノーン」を1枚選び出し」は、文字を問わずアンノーンのカードを指すと読める（同じ文字だけなら、ほかのアンノーンを並べる特殊能力（［FIND］など）のための効果の意味が通らない）。印刷のカード名は大きい「アンノーン」のあとに文字の形の図と小さい英字・読み（「I［アイ］」）を置く形で、データの名前（アンノーンI・アンノーン[N]）は kyuura の正規化した書き方なので、名前の比べには使っていない。文字ごとに 4 枚という読み方では、ルール文が p.308 と同じことを述べるだけになる。『トレーナーズ』Vol.8 p.32（2000-09-01）も文字を区別せずに「アンノーンはデッキに4枚まで」と書く。どれも 4 枚の数え方そのものを例で示した資料ではないので SUPPORTED にした",
+   "rule_clause_refs": [
+    "GR-2000-P308-SAME-NAME",
+    "GR-2000-P307-CARD-OVER-RULE"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [],
+   "engine_refs": [],
+   "notes": [
+    "カードの文面は kyuura のカードデータの値。アンノーンI・D・F のルール文は 2026-10-24 に kyuura がカードの画像（pcg-search.com・なぞのばしょ）で確かめて埋めた（data/curation/card_corrections.json の FIX-neo2-023/025/026-RULES-TEXT-JA）。アンノーン[N]・[J] は pcg-search の転記と、同じサイトのカードの画像。公式の書籍のページとの照合（CC-）ではない",
+    "時期: アンノーンI・D・F は 2000-07-07、[N] は 2000-07-08（プレミアムファイル2）、[J] は 2000-09-01（『トレーナーズ』Vol.8 のおまけ。カードの下端の印刷）の発売で、どれも公式ルール 2000.02.14 版より後のカード。ルール文はカードの記述なので、2000.02.14 版を基準にした対戦でもカードとともにはたらく（p.307）。",
+    "『トレーナーズ』Vol.7 p.3 [P39]（2000-07-01。第2弾の発売の前）のアンノーンのカードの写真の枚数の注記は、数字が読めない（既存の記録）。4 と補って読まず、根拠に入れていない。",
+    "2002-05-24 の公式サイトの Q&A [P10] の「ポケボディー」一覧は、特殊能力の分類（アンノーン[D]・[N] などを含む）で、デッキの枚数とは関係がない。2000.02.14 版の根拠にしていない（別の時期の資料）。",
+    "アンノーンM・U・A（第2弾）のルール文は画像を読んでいない（data/curation/card_corrections.json の候補 gap_open）。",
+    "kyuura-engine v0.96 は、ルール文のある文字のアンノーンを合わせた枚数の上限としてデッキの検査に当てはめている（エンジンの採用。エンジンは P39・P40・P10 を根拠にしていない）。"
+   ]
+  },
+  {
+   "id": "CR-UNOWN-DF-PROTECTS-OWN-UNOWN",
+   "topic": "DARK df・NORMAL df",
+   "cards": [
+    {
+     "card_id": "neo2-025",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "DARK df[ダーク ディーエフ]"
+     }
+    },
+    {
+     "card_id": "PF2-001",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "NORMAL df[ノーマル ディーエフ]"
+     }
+    }
+   ],
+   "related_cards": [
+    "neo2-027"
+   ],
+   "question": "アンノーンDの［DARK df］・アンノーン[N]の［NORMAL df］が「-30」するのは、どのポケモンが受けるダメージか",
+   "conclusion": "持ち主の場（バトル場とベンチ）にいる「アンノーン」が受けるダメージだけ（その力を持つカード自身も入る）。アンノーンでない自分のポケモン、相手の場のポケモン（相手のアンノーンも）が受けるダメージは変えない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-025",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "自分の場の「アンノーン」が「悪」ポケモンからダメージを受けるとき、そのダメージは「-30」される",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PF2-001",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "自分の場の「アンノーン」が「無色」ポケモンからダメージを受けるとき、そのダメージは「-30」される",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.312「場」（バトル場とベンチを合わせて「場」）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P312-FIELD"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-UNOWN-DF-SOURCE-TYPE"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "カードの文面は kyuura のカードデータの値。アンノーンI・D・F のルール文は 2026-10-24 に kyuura がカードの画像（pcg-search.com・なぞのばしょ）で確かめて埋めた（data/curation/card_corrections.json の FIX-neo2-023/025/026-RULES-TEXT-JA）。アンノーン[N]・[J] は pcg-search の転記と、同じサイトのカードの画像。公式の書籍のページとの照合（CC-）ではない",
+    "英語版は「1 of your Pokémon」と自分のポケモンすべてを守る書き方で、日本語版と違う（data/curation/card_differences.json の neo2-025、other_products.json の neopf2001）。この裁定は日本語の文面だけで決めた。",
+    "アンノーンM（neo2-027）の［METAL df］も同じ書き方（「鋼」ポケモン）。この調査の対象外で、裁定の対象に入れていない。"
+   ]
+  },
+  {
+   "id": "CR-UNOWN-DF-SOURCE-TYPE",
+   "topic": "DARK df・NORMAL df",
+   "cards": [
+    {
+     "card_id": "neo2-025",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "DARK df[ダーク ディーエフ]"
+     }
+    },
+    {
+     "card_id": "PF2-001",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "NORMAL df[ノーマル ディーエフ]"
+     }
+    }
+   ],
+   "related_cards": [
+    "neo2-042",
+    "neo4-096",
+    "PMCG5-066",
+    "neo1-094"
+   ],
+   "question": "［DARK df］・［NORMAL df］の「「悪」（「無色」）ポケモンから」は、どのポケモンが与えるダメージか（相手のポケモンだけか、名前の「わるい」を含むか）",
+   "conclusion": "ダメージを与えるのが「悪」（［NORMAL df］は「無色」）のタイプのポケモンなら、相手のポケモンでも自分のポケモンでもよい（例: 自分のバンギラスの「なぎたおす」・わるいリングマの「だいらんとう」・エリカのハクリューの「ふぶき」の「うら」が自分のベンチのアンノーンに与えるダメージも「-30」）。名前に「わるい」がつくだけで「悪」のタイプでないポケモンからのダメージは減らさない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-025",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "「悪」ポケモンからダメージを受けるとき",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PF2-001",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "「無色」ポケモンからダメージを受けるとき",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo1-094",
+     "field": "energy.text.ja",
+     "quote": "「悪」または「わるい」ポケモンでないなら",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-042",
+     "field": "pokemon.attacks[1].text.ja",
+     "quote": "おたがいの控えポケモン全員に対して",
+     "checked": "kyuura_data"
+    }
+   ],
+   "inference": "説明は「悪」（「無色」）ポケモンの持ち主を書かず、「相手の」と限っていないので、自分のポケモンのワザのダメージも含むと読んだ。「悪」はかぎかっこのタイプの書き方で、悪エネルギーの説明が「「悪」または「わるい」ポケモン」と書き分けるので、名前の「わるい」はタイプの「悪」に入らないと読んだ。自分のポケモンのワザのダメージを含むかを例で示した資料はない",
+   "rule_clause_refs": [
+    "GR-2000-P307-CARD-OVER-RULE"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-UNOWN-DF-PROTECTS-OWN-UNOWN"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "カードの文面は kyuura のカードデータの値。アンノーンI・D・F のルール文は 2026-10-24 に kyuura がカードの画像（pcg-search.com・なぞのばしょ）で確かめて埋めた（data/curation/card_corrections.json の FIX-neo2-023/025/026-RULES-TEXT-JA）。アンノーン[N]・[J] は pcg-search の転記と、同じサイトのカードの画像。公式の書籍のページとの照合（CC-）ではない",
+    "ワザでない特殊能力のダメージ（R団のカビゴンの［わるいねぞう］）に当てはめるかは、この裁定に含めない（未解決の論点 UQ-NON-ATTACK-DAMAGE-MODIFIERS の事例）。",
+    "ダメージカウンターをのせる効果・移す効果は「ダメージを受ける」ことにならない（p.320 のダメージカウンターの移動。GR-2000-P320-COUNTER-MOVE）。kyuura のデータには、「悪」「無色」のポケモンが相手のポケモンにダメージカウンターをのせるワザ・特殊能力はない（2026-10-24 に data/cards.json を検索）。",
+    "タイプを変える効果でダメージを与えるポケモンのタイプが変わるときは、そのときのタイプで決める（この裁定は読み方を決めていない。エンジンのタイプの読み方の問いの扱い）。"
+   ]
+  },
+  {
+   "id": "CR-UNOWN-DF-AT-MOST-ONE",
+   "topic": "DARK df・NORMAL df",
+   "cards": [
+    {
+     "card_id": "neo2-025",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "DARK df[ダーク ディーエフ]"
+     }
+    },
+    {
+     "card_id": "PF2-001",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "NORMAL df[ノーマル ディーエフ]"
+     }
+    }
+   ],
+   "related_cards": [
+    "neo2-027"
+   ],
+   "question": "自分の場にアンノーンDが 2 匹以上いるとき（アンノーン[N] も同じ）、［DARK df］の「-30」は重なるか",
+   "conclusion": "重ならない。ほかのアンノーンDの［DARK df］がはたらいているあいだ、この力ははたらかないので、同時にはたらく［DARK df］は多くても 1 つで、1 回のダメージを「-30」より多く減らすことはない。どれがはたらくか・1 つもはたらかないことがあるかは決まっていない（UQ-SELF-EXCLUDING-POWER-COPIES）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-025",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "自分の場のほかのアンノーン「D」の「DARK df」がはたらいているとき、この力は、はたらかない。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PF2-001",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "自分の場のほかのアンノーン「N」の「NORMAL df」がはたらいているとき、この力は、はたらかない。",
+     "checked": "kyuura_data"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "UQ-SELF-EXCLUDING-POWER-COPIES"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "カードの文面は kyuura のカードデータの値。アンノーンI・D・F のルール文は 2026-10-24 に kyuura がカードの画像（pcg-search.com・なぞのばしょ）で確かめて埋めた（data/curation/card_corrections.json の FIX-neo2-023/025/026-RULES-TEXT-JA）。アンノーン[N]・[J] は pcg-search の転記と、同じサイトのカードの画像。公式の書籍のページとの照合（CC-）ではない",
+    "英語版の「This power stops working if you have more than 1 Unown [D] in play.」は条件の書き方が違う（data/curation/card_differences.json の neo2-025）。この裁定に使っていない。",
+    "デッキのアンノーンは文字を問わず合わせて 4 枚まで（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）なので、アンノーンD・[N] はそれぞれ 2〜4 匹まで場に並べられる。"
+   ]
+  },
+  {
+   "id": "CR-UNOWN-DF-DAMAGE-STEP",
+   "topic": "DARK df・NORMAL df",
+   "cards": [
+    {
+     "card_id": "neo2-025",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "DARK df[ダーク ディーエフ]"
+     }
+    },
+    {
+     "card_id": "PF2-001",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "NORMAL df[ノーマル ディーエフ]"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ワザによるダメージの計算の順番（p.321）で、［DARK df］・［NORMAL df］の「-30」はどの段階か。その違いで最終ダメージが変わるか",
+   "conclusion": "ダメージを受けるアンノーンが、はたらいている力を持つカード自身なら 8（ワザを受けるポケモンの持っている「ダメージを変更する効果」）、ほかのアンノーン（ベンチのアンノーン、受けるポケモンでないバトル場のアンノーン）の力なら 6（それ以外の「ダメージを変更する効果」）。どちらも弱点・抵抗力（3・4）のあとで、「-30」を足すだけの効果なので、足すだけの効果どうしなら 6 と 8 のどちらで当てはめても最終ダメージは同じ（0 以下なら「ダメージを受けなかった」）。足すだけでない効果（エリカのフシギソウの［くつろぐかおり］の「半分」）と同じ 6 段階に重なるときの順番は、ワザを使うプレイヤーが決める（p.321）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9 ワザによるダメージ計算の順番」の 6（例: 控えポケモンの特殊能力）・8（例: なぞのかべ）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-025",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "そのダメージは「-30」される",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.319「6 HPとダメージ」（最終的なダメージが 0 やマイナスなら「ダメージを受けなかった」）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "p.321 は 6 段階の例に控えポケモンの特殊能力を、8 段階の例に受けるポケモン自身の特殊能力（なぞのかべ）を挙げる。この力は持ち主の場のどのアンノーンにもはたらくので、受けるポケモン自身の力かどうかで例のどちらに当たるかが決まると読んだ。足すだけの効果どうしは当てはめる順番で和が変わらず、途中で 0 以下になってもよい（p.321）ので、段階の違いだけでは結果が変わらない。足すだけでない効果と重なる場面は、kyuura のデータで探した範囲では、持ち主のバトル場にエリカのフシギソウ（［くつろぐかおり］。控えへのダメージも半分）がいて、ベンチのアンノーンが「悪」「無色」のポケモンのワザのダメージを受けるときで、どちらも 6 段階なので p.321 の同じ段階の規定で順番が決まる。受けるのがバトル場のアンノーンなら、くつろぐかおりを持つポケモンはバトル場にいられない（その番のワザを使うのはエリカのフシギソウ自身で、「悪」「無色」ではない）。今のデータの「悪」「無色」のポケモンの控えへのダメージは 30 以下で、どちらの順番でも最終ダメージは 0 になる",
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER",
+    "GR-2000-P319-HP-AND-DAMAGE"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-UNOWN-DF-PROTECTS-OWN-UNOWN"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "カードの文面は kyuura のカードデータの値。アンノーンI・D・F のルール文は 2026-10-24 に kyuura がカードの画像（pcg-search.com・なぞのばしょ）で確かめて埋めた（data/curation/card_corrections.json の FIX-neo2-023/025/026-RULES-TEXT-JA）。アンノーン[N]・[J] は pcg-search の転記と、同じサイトのカードの画像。公式の書籍のページとの照合（CC-）ではない",
+    "効果を除くワザ（スピードスター・だましうち）で、受けるアンノーン自身の力か、ほかのアンノーンの力かは結果を変えうる（UQ-SPEED-STAR-SCOPE・UQ-SELF-EXCLUDING-POWER-COPIES）。それは段階の違いではなく、除く効果の範囲の問い。",
+    "控えポケモンへのダメージに p.321 の段階をどう当てはめるかは、弱点・抵抗力について未解決（UQ-BENCH-DAMAGE-WEAKNESS-RESISTANCE）。この力は控えのアンノーンが受けるダメージも減らす（CR-UNOWN-DF-PROTECTS-OWN-UNOWN）。くつろぐかおりと重なる控えへのダメージで順番が結果を変えるのは、半分にする前のダメージが 40 以上のとき（例: 40 なら、半分 → -30 で 0、-30 → 半分で 10）で、今のデータの「悪」「無色」のワザでは起こらない。"
+   ]
   }
  ],
  "issues": [
@@ -21681,6 +22067,33 @@
      },
      "engine_ruling": "PW2",
      "note": "手札が 0 枚"
+    },
+    {
+     "card_id": "neo2-023",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "INCREASE[インクリーズ]"
+     },
+     "note": "山札に「アンノーン」がない（山札 0 枚を含む）。説明が使えないとするのはベンチに空きがないときだけ"
+    },
+    {
+     "card_id": "neo2-026",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "FIND[ファインド]"
+     },
+     "note": "山札に「トレーナーカード」がない（山札 0 枚を含む）"
+    },
+    {
+     "card_id": "PRN-034",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "JOIN[ジョイン]"
+     },
+     "note": "山札に「ベイビィポケモン」「たねポケモン」「進化カード」がない（山札 0 枚を含む）"
     }
    ],
    "related_engine_rulings": [],
@@ -21814,7 +22227,8 @@
    ],
    "notes": [
     "エンジンの記録（停止コードで止める未解決の問い）を取り込んだ。kyuura による原典の再読・新しい裁定はない。",
-    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。"
+    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。",
+    "2026-10-24: アンノーンI・F・[J] の山札から選ぶ特殊能力の事例を加えた（論点の問い・分類は変えていない）。"
    ],
    "audit": {
     "audited_on": "2026-10-19",
@@ -22541,6 +22955,15 @@
      },
      "engine_ruling": "TD1",
      "note": "トレーナーのダメージに受けるダメージを変える効果を当てはめるか"
+    },
+    {
+     "card_id": "PF2-001",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "NORMAL df[ノーマル ディーエフ]"
+     },
+     "note": "R団のカビゴン（PMCG6-073。「無色」）の［わるいねぞう］の 20（特殊能力によるダメージ。CR-RESTLESS-SLEEP-IS-POWER-DAMAGE）を、ワザを使ったアンノーンが受けるとき、「「無色」ポケモンからダメージを受けるとき」の「-30」を当てはめるか（20 か 0 か）"
     }
    ],
    "related_engine_rulings": [],
@@ -22576,7 +22999,8 @@
    ],
    "notes": [
     "エンジンの記録（停止コードで止める未解決の問い）を取り込んだ。kyuura による原典の再読・新しい裁定はない。",
-    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。"
+    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。",
+    "2026-10-24: アンノーン[N] の事例を加えた（論点の問い・分類は変えていない）。［NORMAL df］の説明は「ワザ」と書かず「「無色」ポケモンからダメージを受けるとき」と書く。『オフィシャルブック2000』p.245 の解説は、わるいねぞうのダメージを特殊能力によるダメージなのでディフェンダー（説明は「「ワザ」によって受けるダメージ」）で防げないとするが、ワザと書かない減らす効果についての記述ではない。ワザによるダメージの計算（p.321）をわるいねぞうに当てはめない読み方（CR-RESTLESS-SLEEP-NOT-ATTACK-CALCULATION）との関係も決まらない。受けるアンノーンの弱点は超で、R団のカビゴンは無色なので、弱点・抵抗力の論点（UQ-POWER-DAMAGE-WEAKNESS-RESISTANCE）はこの事例の結果を変えない。アンノーンDの［DARK df］は、「悪」ポケモンの特殊能力のダメージが kyuura のデータに見つからないので、今は起こらない。鋼エネルギーの「-10」と重なるときの順番を書いた資料はないが、どちらも減らすだけなので順番で結果は変わらない（neo1-095 の鋼エネルギーはワザによるダメージだけ、イントロパック★neo の NIP1X-010 は「ダメージを受けるとき」）。"
    ],
    "audit": {
     "audited_on": "2026-10-19",
@@ -24816,6 +25240,33 @@
      },
      "engine_ruling": "SS1",
      "note": "相手の場のほかのポケモンの特殊能力がダメージを変える"
+    },
+    {
+     "card_id": "PF2-001",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "NORMAL df[ノーマル ディーエフ]"
+     },
+     "note": "相手の場の、受けるポケモンでないアンノーン[N] の［NORMAL df］（ほかのアンノーンが受けるダメージを「-30」）。スピードスターを使うのが「無色」ポケモンのときだけ条件を満たす"
+    },
+    {
+     "card_id": "PMCG1-066",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "オウムがえし"
+     },
+     "note": "「無色」のピジョンが、前の相手の番に受けたスピードスター（ヒノアラシ PF1-004 など）を「オウムがえし」で使う手順案（到達性の候補。対戦の再現はしていない。写したワザの扱いは UQ-COPIED-ATTACK）"
+    },
+    {
+     "card_id": "PF1-004",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "スピードスター"
+     },
+     "note": "タケシのサンドパンと同じ文面のスピードスター（手順案で写されるワザ）"
     }
    ],
    "related_engine_rulings": [],
@@ -24830,19 +25281,21 @@
    ],
    "notes": [
     "エンジンの記録（停止コードで止める未解決の問い）を取り込んだ。kyuura による原典の再読・新しい裁定はない。",
-    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。"
+    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。",
+    "2026-10-24: アンノーンI・D・F・[N]・[J] の調査で、相手の場のほかのポケモンの特殊能力（ベンチのアンノーン[N] の［NORMAL df］）の事例と、到達性を加えた。論点の問い・分類は変えていない。",
+    "ブラッキーの「だましうち」（neo2-040）は、除く効果の持ち主を書かない別の書き方で、この論点に含めない（エンジン v0.89 の FA1。kyuura は v0.69 より後の版を取り込んでいない）。ヤミカラスの「だましうち」（neo1-055）は「そのポケモンの持っている」と書き、受けるポケモン自身を挙げる点でスピードスターの「相手の持っている」と書き方が違うので、この論点の事例に入れていない（エンジン v0.92 は同じ比べを当てはめる）。"
    ],
    "audit": {
-    "audited_on": "2026-10-19",
+    "audited_on": "2026-10-24",
     "game_effect": "game_result",
-    "game_effect_note": "最終ダメージが変わる",
+    "game_effect_note": "最終ダメージが変わる（例: ベンチのアンノーン[N] がほかのアンノーンを守るとき、「無色」のポケモンが写して使うスピードスターの 20 が 0 か 20 か）",
     "resolution_needs": "当時の日本語の公式の Q&A・大会の裁定・公式の書籍の解説など、この場面を書いた資料。",
-    "searched": "エンジンの文書と停止コードの記録を再利用した。当時の Q&A・会報・雑誌の記事は今回探していない。原典の画像も読み直していない。",
+    "searched": "2026-10-19: エンジンの文書と停止コードの記録を再利用した。当時の Q&A・会報・雑誌の記事は今回探していない。原典の画像も読み直していない。 2026-10-24: kyuura のカードデータで、スピードスターの使い手のタイプと、写して使う効果を探した。当時の Q&A は日本語のウェブ検索で見つからず、Internet Archive の公式サイトの写しはこの環境から接続できなかった。",
     "new_sources": []
    },
    "reachability": {
     "engine_card_pool": "エンジン v0.68 は、この場面になると状態を変える前に止める（停止コード）。",
-    "all_cards": "未調査"
+    "all_cards": "スピードスターを使うポケモン（タケシのサンドパン・エレブー・ヤンヤンマ・カスミのヒトデマン・サンド・ヒノアラシ）に「悪」「無色」はいないので、アンノーンD・[N] の「-30」の条件を満たすのは、「無色」のポケモンが写したスピードスターを使う場合（ピジョンの「オウムがえし」など）だけ。そのとき、受けるアンノーンが［NORMAL df］を持つカード自身でほかに[N] がいなければ、どちらの読み方でも除かれて 20。ベンチの[N] がほかのアンノーンを守るときは、受けるポケモン自身の効果だけを除く読み方なら0、相手の場のほかのポケモンの特殊能力も除く読み方なら 20（到達性の候補で、対戦の再現はしていない。2026-10-24）。「悪」のポケモンがスピードスターを使う手順は見つけていない。レディバ（neo4-002）のスピードスターは「特殊能力」を挙げない別の書き方で、事例に入れていない"
    },
    "source_provenance": {
     "repository": "moheronemy/kyuura-engine",
@@ -25946,6 +26399,104 @@
     "ruling_id": "HC1",
     "imported_on": "2026-10-19",
     "kyuura_reread_source": false
+   }
+  },
+  {
+   "id": "UQ-SELF-EXCLUDING-POWER-COPIES",
+   "status": "UNRESOLVED",
+   "question": "「自分の場のほかの〇〇の［△△］がはたらいているとき、この力は、はたらかない」と書かれた特殊能力で、ほかの条件ではたらきうる同じカードが自分の場に2 匹以上いるとき、1 つだけがはたらくのか（どれがはたらくか）、たがいに止めて 1 つもはたらかないのか",
+   "why_unresolved": "説明は、ほかのカードのその力がはたらいていればこの力ははたらかないとだけ書き、2 匹以上のどれがはたらくか（先に場に出たもの、持ち主が選ぶものなど）を書かない。文字どおりには、1 つもはたらかない状態では止める条件が成り立たないので 1 つだけがはたらく読み方になるが、どれかを決める規定がない。たがいの存在で止める読み方を退ける当時の日本語の資料も見つけていない。公式ルールの同じタイミングの順番（p.325）は、同時に起こったことがらの処理の順番で、常にはたらく力のどれがはたらくかを決める規定ではない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.311「ポケモンの特殊能力を使う」（常にはたらく特殊能力）"
+    },
+    {
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「14 ポケモンの特殊能力」・p.325「23 同じタイミングで起こったことの順番」"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS",
+    "GR-2000-P325-SAME-TIMING"
+   ],
+   "cases": [
+    {
+     "card_id": "neo2-025",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "DARK df[ダーク ディーエフ]"
+     },
+     "note": "アンノーンDが 2 匹以上: 「悪」ポケモンのワザのダメージを受けるアンノーンで、減る量が 30 か 0 か"
+    },
+    {
+     "card_id": "PF2-001",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "NORMAL df[ノーマル ディーエフ]"
+     },
+     "note": "アンノーン[N]が 2 匹以上: 「無色」ポケモンのワザのダメージで同じ"
+    },
+    {
+     "card_id": "neo2-027",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "METAL df[メタル ディーエフ]"
+     },
+     "note": "アンノーンMが 2 匹以上: 「鋼」ポケモンのワザのダメージで同じ（この調査の対象外のカード）"
+    },
+    {
+     "card_id": "neo4-046",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "かんでん"
+     },
+     "note": "わるいデンリュウが 2 匹以上: 相手が手札からエネルギーカードをつけたときの 10 ダメージが 10 か 0 か（重ねて 20 にはならない）"
+    },
+    {
+     "card_id": "PRN-041",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいはどう"
+     },
+     "note": "GR団のミュウツーが 2 匹以上: 「わるい」ポケモンのワザのダメージに加える量（コインを投げるかを含む）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "kyuura-engine v0.96（f3770975。比較元）は、アンノーンD・[N]・M・GR団のミュウツーを登録していない。わるいデンリュウは v0.86 から登録し、はたらきうるものが 2 匹以上なら止める（エンジンの CV1。kyuura は v0.69 より後の版を取り込んでいない）",
+    "all_cards": "アンノーンのカードはデッキに合わせて 4 枚まで（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）なので、アンノーンD・[N]・M はそれぞれ 2〜4 匹まで場に並べられる。わるいデンリュウ・GR団のミュウツーは同じ名前の 4 枚まで（p.308）"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [
+    "UQ-SPEED-STAR-SCOPE"
+   ],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-24BFBE2",
+    "date": "2026-10-24"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-24 のアンノーンI・D・F・[N]・[J] の調査で、カードの文面から立てた）。kyuura の engine_unresolved_index は取り込んだ版（v0.68 まで）の項目だけで、この問いに結ぶ項目はない。エンジン v0.86 の CV1（わるいデンリュウ）は同じ形の問いだが、kyuura は v0.86 を取り込んでいないので engine_refs に結んでいない。",
+    "重ならないこと（多くても 1 つ）は CR-UNOWN-DF-AT-MOST-ONE（カードの文面）。",
+    "同じ形でも、アンノーンA の［ANGER］・サカキのニドキングの［めいれい］は「…が使っているとき、この力は使えない」（使う順番の書き方）で、この論点に入れていない。",
+    "どれがはたらくかは、効果を除くワザの読み方と組み合わさると結果を変える: ブラッキーの「だましうち」・スピードスターで、受けるアンノーンが D の 1 匹で、ベンチにも D がいるとき、受けるポケモン自身の効果だけを除く読み方なら、はたらくのが受ける D 自身なら除かれ（30）、ベンチの D なら減る（0）。uid・場の並び・場に出た順で代表を選ぶ処理は、公式の裁定ではない。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-24",
+    "game_effect": "game_result",
+    "game_effect_note": "同じ力を持つカードが 2 匹以上のとき、減らす・加える量（アンノーンD・[N]・M は 30 か 0、わるいデンリュウは 10 か 0）が変わる。どれがはたらくかは、効果を除くワザの読み方と組み合わさるとき（スピードスター・だましうち）に、最終ダメージを変える",
+    "resolution_needs": "当時の日本語の公式の Q&A・大会の裁定・公式の書籍のカードの解説で、「ほかの…がはたらいているとき、この力は、はたらかない」のカードが 2 匹以上場にいるときの扱いを書いたもの（第2弾の全カードの解説を載せた資料。たとえば『トレーナーズ』Vol.8 の付録「公式 全カードブック」（kyuura の読取メモに付録の存在だけがある。スキャンは確かめていない））",
+    "searched": "kyuura の記録（data/sidecar・data/rule_history.json の資料のページの記録・docs/printed-sources.md）、以前の作業の『トレーナーズ』Vol.7〜9 の読取メモ（Vol.9 pp.22〜23 の「ポケモンカードQ&A」9 問は『遺跡をこえて...』のカード中心だが、アンノーンの問いはない）、日本語のウェブ検索（カードの販売ページだけで、裁定は見つからない）。Internet Archive の公式サイトの写し（2002 年の「あそびかたQ&A」の目次など）は、この環境から接続できず読めなかった。『オフィシャルブック2000』（2000-02-29）は第2弾より前の本で、アンノーンを載せていない。ガイドブックの新しい読み直しはしていない（依頼の範囲外）",
+    "new_sources": []
    }
   }
  ],

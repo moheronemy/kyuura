@@ -791,9 +791,12 @@ def apply_corrections(records, ledger):
             if cur != c['before']:
                 raise SystemExit(f"card_corrections.json の訂正の before が今の値と違う（出典が変わったか、すでに直っている）: {c['id']} {cur!r}")
             set_field(r, c['field'], c['after'])
-            r['notes'].append(f"訂正（{c['id']}）: {c['field']} を「{c['before']}」から「{c['after']}」に直した。根拠: {c['basis_detail']}"
-                              if not isinstance(c['after'], dict) else
-                              f"訂正（{c['id']}）: {c['field']} を直した（{c['before'].get('display')} → {c['after'].get('display')}）。根拠: {c['basis_detail']}")
+            if c['before'] is None:  # 転記の欠け（値が空の欄）を埋めた
+                r['notes'].append(f"訂正（{c['id']}）: 空だった {c['field']} に「{c['after']}」を入れた。根拠: {c['basis_detail']}")
+            else:
+                r['notes'].append(f"訂正（{c['id']}）: {c['field']} を「{c['before']}」から「{c['after']}」に直した。根拠: {c['basis_detail']}"
+                                  if not isinstance(c['after'], dict) else
+                                  f"訂正（{c['id']}）: {c['field']} を直した（{c['before'].get('display')} → {c['after'].get('display')}）。根拠: {c['basis_detail']}")
         elif c['applied_by'] == 'ja_text.json':
             if cur != c['after']:
                 raise SystemExit(f"ja_text.json で直したはずの値が after と違う: {c['id']} {cur!r}")

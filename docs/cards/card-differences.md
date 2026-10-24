@@ -38,6 +38,7 @@
 | モーモーミルク / Moo-Moo Milk<br>（neo1・Neo Genesis 101） | イラスト | イラスト | オタチがミルタンクの乳を飲んでいる | 不適切とされ、納屋に置かれたモーモーミルクの缶とピィのイラストに変更 | 確実 | [X45] |
 | 鋼エネルギー / Metal Energy<br>（neo1・Neo Genesis 19） | 文面の意味 | 鋼エネルギーが減らすダメージの範囲 | 「このカードをつけているポケモンがワザによるダメージを受けるとき、そのダメージは『-10』される」と、ワザによるダメージに限っている | 「Damage done to the Pokémon … is reduced by 10」とワザに限定していない | 確実 | [N1][X3] |
 | わるいライチュウ / Dark Raichu<br>（neo2・Team Rocket 83） | 収録先 | 収録先と登場順 | 「遺跡をこえて...」（2000年7月）で登場 | Team Rocket（2000年4月）のシークレットカード（83/82）として先に登場 | 有力 | [X27] |
+| アンノーンD / Unown [D]<br>（neo2・Neo Discovery 47） | 文面の意味 | ポケモンパワー DARK df（[Darkness]）で「-30」するダメージの対象と、2 匹以上のときの条件 | 「自分の場の「アンノーン」が「悪」ポケモンからダメージを受けるとき、そのダメージは「-30」される。自分の場のほかのアンノーン「D」の「DARK df」がはたらいているとき、この力は、はたらかない。」と、減らすのは自分の場の「アンノーン」が「悪」ポケモンから受けるダメージだけで、自分の場のほかのアンノーン「D」の力がはたらいているときにはたらかないと書く（2026-10-24 にカードの画像で確認）。弱点・抵抗力との順番、ねむり・マヒ・こんらんのときの扱いは書かれていない | 「Whenever a Darkness Pokémon damages 1 of your Pokémon, reduce that damage by 30 (after applying Weakness and Resistance). This power stops working if you have more than 1 Unown [D] in play. (This power works even if Unown [D] is Asleep, Confused, or Paralyzed.)」と、自分のポケモンすべてが受けるダメージを減らし（弱点・抵抗力のあと）、場にアンノーン[D] が 2 匹以上いれば止まると書く。英語版の文面は日本語版の処理の根拠にしない（kyuura の裁定・論点は日本語の文面だけで決める） | 確実 | [N1][N3] |
 | ドーブル / Smeargle<br>（neo2・Neo Discovery 11・30） | 文面の意味 | ワザ スケッチ（Sketch）でコピーしたワザの条件 | 「(そのワザに必要な『エネルギー』がついていなくても、かまわない。)」とエネルギーだけを不要としている | エネルギーコストに加えて「そのワザを使うために必要なこと」も不要と書かれている | 確実 | [N1][X3] |
 
 ## 日本の拡張パックにないカードの例

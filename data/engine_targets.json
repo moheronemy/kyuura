@@ -23,8 +23,8 @@
  "counts": {
   "records": 1377,
   "by_category": {
-   "candidate": 1343,
-   "data_missing": 30,
+   "candidate": 1346,
+   "data_missing": 27,
    "special_rule_design": 4
   },
   "non_game_items": 18,
@@ -44,8 +44,8 @@
      "new_effect_needed": 275
     },
     "by_category": {
-     "candidate": 767,
-     "data_missing": 13
+     "candidate": 770,
+     "data_missing": 10
     }
    },
    "expansion_sheet": {
@@ -9212,12 +9212,17 @@
    "same_card_group": null,
    "release_date": "2000-07-07",
    "released_after_rule_base": true,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.rules_text.ja"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_without_registered_text": [
+    {
+     "part": "rules_text",
+     "index": null,
+     "name_ja": null,
+     "text_ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "reason": "rules_text_not_registered"
+    },
     {
      "part": "power",
      "index": 0,
@@ -9258,12 +9263,17 @@
    "same_card_group": null,
    "release_date": "2000-07-07",
    "released_after_rule_base": true,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.rules_text.ja"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_without_registered_text": [
+    {
+     "part": "rules_text",
+     "index": null,
+     "name_ja": null,
+     "text_ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "reason": "rules_text_not_registered"
+    },
     {
      "part": "power",
      "index": 0,
@@ -9282,12 +9292,17 @@
    "same_card_group": null,
    "release_date": "2000-07-07",
    "released_after_rule_base": true,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.rules_text.ja"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_without_registered_text": [
+    {
+     "part": "rules_text",
+     "index": null,
+     "name_ja": null,
+     "text_ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "reason": "rules_text_not_registered"
+    },
     {
      "part": "power",
      "index": 0,
