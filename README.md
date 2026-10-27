@@ -26,8 +26,9 @@
 - [カードの裁定と公式の最新の説明](docs/rules/card-rulings.md) — カード・ワザごとの公式の書籍の「最新の説明」（印刷の文面とは別に記録）、照合、裁定（CONFIRMED・SUPPORTED）、未解決の論点、kyuura-engine v0.68までの裁定 id との対応、エンジンの採用した仕様・簡略化・実装の事項（裁定とは別）（エナジートランス・あまごい・ダメージスワップ・かがくへんかガス・とうめい・はんげき・こんじょう・ふしちょう・ほのおのかべ・こうらがえし・わるいねぞう・たおれこむ・だつりょくえきなど）
 - [出典と確認状況](docs/sources.md)、[印刷物の照合記録](docs/printed-sources.md)（スキャンで確認した会報・雑誌・書籍の巻号とページ）
 - [調査の状況](docs/research-status.md) — 分野ごとにどこまで確かめられたか、件数、未解決の問題、必要な原本
-- [エンジンの実装の対象](docs/engine-targets.md) — 記録ごとに、実装の対象にできるかと kyuura-engine v0.68 の登録との対応（データ: [`data/engine_targets.json`](data/engine_targets.json)）。[v0.26〜v0.68 の還元の記録](docs/engine-findings-through-v0.68.md)、[エンジンへの引き継ぎ](docs/engine-handover-v0.68.md)
+- [エンジンの実装の対象](docs/engine-targets.md) — 記録ごとに、実装の対象にできるかと kyuura-engine v0.113（固定した `2d113b5`。2026-10-27 に写しを作り直した）の登録との対応（データ: [`data/engine_targets.json`](data/engine_targets.json)）。研究の取り込みは v0.68 までと v0.113 の報告事項だけ。[v0.26〜v0.68 の還元の記録](docs/engine-findings-through-v0.68.md)、[エンジンへの引き継ぎ（v0.68）](docs/engine-handover-v0.68.md)
 - [アンノーンI・D・F・[N]・[J] の調査](docs/unown-research-v0.97.md) — kyuura-engine v0.97 の前の研究（2026-10-24）。カードの画像で確かめたルール文、デッキの 4 枚の数え方、DARK df・NORMAL df の対象・重なり・計算の段階、効果を除くワザとの関係、未解決の論点とエンジンへの引き継ぎ
+- [ベイビィ 13 枚の準備と v0.113 の報告事項](docs/baby-preparation-engine-v0.113.md) — 2026-10-27。カードの画像で確かめたルール文・進化先（`pokemon.evolves_to`）、ベイビィの一般の条項・裁定・論点、登録表の写しの v0.113 への更新、ESP・ゆうでんの実装の記録。[エンジンへの引き継ぎ（v0.113）](docs/engine-handover-baby-v0.113.md)
 - [エンジン開発の準備状況](docs/engine-readiness.md) — 対戦エンジン（別のリポジトリ [kyuura-engine](https://github.com/moheronemy/kyuura-engine)）の基準にしたルールと調査データ。エンジンを作り始める前の計画も記録として残している
 
 ### カード
@@ -91,7 +92,7 @@ print(uc['research_issues'], uc['engine_total'], uc['engine_stop_codes'])
 - カード名は日英とも全件収録しています。
 - ワザ名・特殊能力名・効果文は、英語版は全件、日本版は全 10 弾の 774 枚（効果文のない基本エネルギー 6 枚以外の全カード）を収録しています。
   - 出典は、第1〜4弾と neo 第1〜2弾が [なぞのばしょ](https://nazonobasho.com/)、第5〜6弾と neo 第3〜4弾が [ポケモンWiki](https://wiki.pokemonwiki.com/)（ブラウザで保存したページ）です。
-- 無色2個エネルギーの効果文と、neo 第1〜2弾のベイビィ 6 枚・アンノーン 3 枚（M・U・A）のルール文は、なぞのばしょに記載がなく未収録です。アンノーンI・D・F のルール文は、2026-10-24 にカードの画像で確かめて入れました（[アンノーンの調査](docs/unown-research-v0.97.md)）。詳しくは [カードリストの見かた](docs/cards/README.md#日本語テキストについて) を参照してください。
+- 無色2個エネルギーの効果文と、アンノーン 3 枚（M・U・A）のルール文は、なぞのばしょに記載がなく未収録です。アンノーンI・D・F のルール文は 2026-10-24 に（[アンノーンの調査](docs/unown-research-v0.97.md)）、neo 第1〜2弾のベイビィ 6 枚のルール文は 2026-10-27 に（なぞのばしょのページには「ルール」の欄があるが、取り込みが残していなかった。[ベイビィの準備](docs/baby-preparation-engine-v0.113.md)）、カードの画像で確かめて入れました。ベイビィ 13 枚の進化先は `pokemon.evolves_to` にあります。詳しくは [カードリストの見かた](docs/cards/README.md#日本語テキストについて) を参照してください。
 
 ## 日英のルールの違い（要約）
 

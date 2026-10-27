@@ -1,0 +1,846 @@
+{
+ "_comment": "kyuura がウェブに公開されたカードの画像で印刷の欄を読んだ記録（照合の記録 IMG-）。公式の書籍のページとの照合（data/sidecar/ の CC-）・公式の最新の説明（LD-）ではない。print_values は画像に写っている値（欄 → 値）で、scripts/build_cardlist.py が生成した data/cards.json の値と同じかを確かめる（違えば止まる。値を直すときは data/curation/card_corrections.json の訂正を書き、その訂正の image_check にこの記録の id を書く）。site_transcriptions はサイトの転記・解説の値で、画像の値とは分ける（照合の数に入れない）。同じ画像が複数のサイトにあっても独立した照合とは数えない。2026-10-27 のベイビィ 13 枚から。アンノーンI・D・F（2026-10-24）の記録は訂正の記録の evidence にあり、ここにはない。スキーマは docs/data-schema.md",
+ "checks": [
+  {
+   "id": "IMG-neo1-022",
+   "card_id": "neo1-022",
+   "card_name_ja": "ブビィ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo1022.php",
+     "page_title": "ブビィ | ポケモンカードneo 第1弾 金、銀、新世界へ...",
+     "image_url": "https://pcg-search.com/img/neo/neo1022.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "3545f88194b44895d208688a02d6cfa1c7d55eb4f3a34dddeaaaa2c3963dbece",
+     "accessed_on": "2026-10-27"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo01-022-buby/",
+     "page_title": "ブビィ | ポケモンカード★neo | 拡張パック第1弾 金、銀、新世界へ…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2020/12/neo1_B_022_buby_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "5826d4f70fc9d9d4f33150ce891af858d40a6391d634036969262ac2a61a4411",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「ブビィ」、HP30、ベイビィポケモン、LV.5、炎、ワザ「モクモク」（無色 1 個・10）。商品は 拡張パック第1弾「金、銀、新世界へ...」（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）",
+   "independence": "画像は 2 つのサイトに 1 枚ずつ。構図・色がよく似ていて、同じ撮影・スキャンに由来するかは分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "ブーバー"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "ブーバーへ進化",
+     "「ブーバー」を上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo1022.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね ブビィ たね ブーバー）で、カードの印刷の文ではないので使っていない"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-27 に取得したページの「ルール」「進化条件」の欄）",
+     "page_url": "https://nazonobasho.com/neo01-022-buby/",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": [
+       "ブーバー"
+      ]
+     },
+     "note": "kyuura の既存の取り込み data/ja_text_nazonobasho.json にも「進化条件」（ブーバーへ進化）がある。「ルール」の欄は取り込みの処理（scripts/nazonobasho.py の KEEP_FIELDS）が残さないので、取り込みにはない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-neo1-022-RULES-TEXT-JA",
+    "FIX-neo1-022-EVOLVES-TO"
+   ]
+  },
+  {
+   "id": "IMG-neo1-042",
+   "card_id": "neo1-042",
+   "card_name_ja": "ピチュー",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo1042.php",
+     "page_title": "ピチュー | ポケモンカードneo 第1弾 金、銀、新世界へ...",
+     "image_url": "https://pcg-search.com/img/neo/neo1042.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "6f9c9aeaffa8e2430d911325650c4b79112688606a548ad7b3162cd379d6ed80",
+     "accessed_on": "2026-10-27"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo01-042-pichu/",
+     "page_title": "ピチュー | ポケモンカード★neo | 拡張パック第1弾 金、銀、新世界へ…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2020/12/neo1_B_042_pichu_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "23858c62d627cbfa4e2f6480572177fd3e5abbd81507277921bc24618f6648bf",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「ピチュー」、HP30、ベイビィポケモン、LV.5、雷、ワザ「パチパチ」（無色 1 個。ダメージの数字なし）。商品は 拡張パック第1弾「金、銀、新世界へ...」（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）",
+   "independence": "画像は 2 つのサイトに 1 枚ずつ。構図・色がよく似ていて、同じ撮影・スキャンに由来するかは分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "ピカチュウ"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "ピカチュウへ進化",
+     "「ピカチュウ」を上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo1042.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね ピチュー たね ピカチュウ １進化 ライチュウ）で、カードの印刷の文ではないので使っていない"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-27 に取得したページの「ルール」「進化条件」の欄）",
+     "page_url": "https://nazonobasho.com/neo01-042-pichu/",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": [
+       "ピカチュウ"
+      ]
+     },
+     "note": "kyuura の既存の取り込み data/ja_text_nazonobasho.json にも「進化条件」（ピカチュウへ進化）がある。「ルール」の欄は取り込みの処理（scripts/nazonobasho.py の KEEP_FIELDS）が残さないので、取り込みにはない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-neo1-042-RULES-TEXT-JA",
+    "FIX-neo1-042-EVOLVES-TO"
+   ],
+   "print_version": "2 つの画像は修正前の版（パチパチの説明「おたがいの場にいる、「特殊能力」を持っているポケモン全員に、…」・図鑑の説明「…大人をビリビリさせるほどの電気をはなてる。…」）。なぞのばしょの備考（kyuura の jp_print.remarks）は修正版の違いをパチパチの説明と図鑑の説明だけと書くが、これはサイトの解説で、修正版のルール欄・進化先の欄は画像で確かめていない"
+  },
+  {
+   "id": "IMG-neo1-044",
+   "card_id": "neo1-044",
+   "card_name_ja": "エレキッド",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo1044.php",
+     "page_title": "エレキッド | ポケモンカードneo 第1弾 金、銀、新世界へ...",
+     "image_url": "https://pcg-search.com/img/neo/neo1044.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "f891bc837d500fc04ea4b121ffaf54456a24546c1122535ef1c859f47765d15a",
+     "accessed_on": "2026-10-27"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo01-044-elekid/",
+     "page_title": "エレキッド | ポケモンカード★neo | 拡張パック第1弾 金、銀、新世界へ…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2020/12/neo1_B_044_elekid_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "7cc15112ef9ecdc23d23aa387ca21f218908967ccdc5540dd4a98924959019e7",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「エレキッド」、HP30、ベイビィポケモン、LV.6、雷、【特殊能力】わんぱくパンチ（ワザの欄はない）。商品は 拡張パック第1弾「金、銀、新世界へ...」（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）",
+   "independence": "画像は 2 つのサイトに 1 枚ずつ。構図・色がよく似ていて、同じ撮影・スキャンに由来するかは分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "エレブー"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "エレブーへ進化",
+     "「エレブー」を上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo1044.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね エレキッド たね エレブー）で、カードの印刷の文ではないので使っていない"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-27 に取得したページの「ルール」「進化条件」の欄）",
+     "page_url": "https://nazonobasho.com/neo01-044-elekid/",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": [
+       "エレブー"
+      ]
+     },
+     "note": "kyuura の既存の取り込み data/ja_text_nazonobasho.json にも「進化条件」（エレブーへ進化）がある。「ルール」の欄は取り込みの処理（scripts/nazonobasho.py の KEEP_FIELDS）が残さないので、取り込みにはない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-neo1-044-RULES-TEXT-JA",
+    "FIX-neo1-044-EVOLVES-TO"
+   ]
+  },
+  {
+   "id": "IMG-neo1-070",
+   "card_id": "neo1-070",
+   "card_name_ja": "ピィ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo1070.php",
+     "page_title": "ピィ | ポケモンカードneo 第1弾 金、銀、新世界へ...",
+     "image_url": "https://pcg-search.com/img/neo/neo1070.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "2ce941a3c9c77b62e80a5dc10164d7599a94956fd4e96fe7815b80a8617d1a08",
+     "accessed_on": "2026-10-27"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo01-070-py/",
+     "page_title": "ピィ | ポケモンカード★neo | 拡張パック第1弾 金、銀、新世界へ…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2020/12/neo1_B_071_Py_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "ad5b3a35dee203a125a819ea76fee3d9d3951fd3de93b575a85d77725d66337f",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「ピィ」、HP30、ベイビィポケモン、LV.6、無色、ワザ「ピピピ」（無色 1 個。ダメージの数字なし）。商品は 拡張パック第1弾「金、銀、新世界へ...」（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）。なぞのばしょの画像のファイル名の番号は 071（ページは neo01-070-py）で、カードの特定には使っていない",
+   "independence": "画像は 2 つのサイトに 1 枚ずつ。構図・色がよく似ていて、同じ撮影・スキャンに由来するかは分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "ピッピ"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "ピッピへ進化",
+     "「ピッピ」を上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo1070.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね ピィ たね ピッピ １進化 ピクシー）で、カードの印刷の文ではないので使っていない"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-27 に取得したページの「ルール」「進化条件」の欄）",
+     "page_url": "https://nazonobasho.com/neo01-070-py/",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": [
+       "ピッピ"
+      ]
+     },
+     "note": "kyuura の既存の取り込み data/ja_text_nazonobasho.json にも「進化条件」（ピッピへ進化）がある。「ルール」の欄は取り込みの処理（scripts/nazonobasho.py の KEEP_FIELDS）が残さないので、取り込みにはない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-neo1-070-RULES-TEXT-JA",
+    "FIX-neo1-070-EVOLVES-TO"
+   ]
+  },
+  {
+   "id": "IMG-neo2-033",
+   "card_id": "neo2-033",
+   "card_name_ja": "バルキー",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo2033.php",
+     "page_title": "バルキー | ポケモンカードneo 第2弾 遺跡をこえて...",
+     "image_url": "https://pcg-search.com/img/neo/neo2033.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "ed41e3301955de786e9b656819ec93e0363afbdb52b65e8341dcd1ac406ea1c3",
+     "accessed_on": "2026-10-27"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo2-033-balkie/",
+     "page_title": "バルキー | ポケモンカード★neo | 拡張パック第2弾 遺跡をこえて…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2021/05/neo2_B_033_balkie_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "930484e6933cd329bbffe18ab269885347e59bd14492474349e4f866efc8a9cc",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「バルキー」、HP30、ベイビィポケモン、LV.7、闘、ワザ「スマッシュパンチ」（無色 1 個・30）。進化先の欄は 3 つの円の図版と見出しで、ルール欄の上にある。商品は 拡張パック第2弾「遺跡をこえて...」（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）",
+   "independence": "画像は 2 つのサイトに 1 枚ずつ。構図・色がよく似ていて、同じ撮影・スキャンに由来するかは分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "エビワラー",
+     "サワムラー",
+     "カポエラー"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "エビワラーへ進化",
+     "サワムラーへ進化",
+     "カポエラーへ進化",
+     "「エビワラー」「サワムラー」「カポエラー」のいずれかを上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo2033.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね バルキー たね サワムラー たね エビワラー たね カポエラー）で、カードの印刷の文ではないので使っていない"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-27 に取得したページの「ルール」「進化条件」の欄）",
+     "page_url": "https://nazonobasho.com/neo2-033-balkie/",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": [
+       "エビワラー",
+       "サワムラー",
+       "カポエラー"
+      ]
+     },
+     "note": "kyuura の既存の取り込み data/ja_text_nazonobasho.json にも「進化条件」（エビワラーへ進化・サワムラーへ進化・カポエラーへ進化）がある。「ルール」の欄は取り込みの処理（scripts/nazonobasho.py の KEEP_FIELDS）が残さないので、取り込みにはない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-neo2-033-RULES-TEXT-JA",
+    "FIX-neo2-033-EVOLVES-TO"
+   ]
+  },
+  {
+   "id": "IMG-neo2-050",
+   "card_id": "neo2-050",
+   "card_name_ja": "ププリン",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo2050.php",
+     "page_title": "ププリン | ポケモンカードneo 第2弾 遺跡をこえて...",
+     "image_url": "https://pcg-search.com/img/neo/neo2050.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "d6ca907583590e5bb8e85d97312566383b7a6bdf9140895806e4b5e7ecd79e8e",
+     "accessed_on": "2026-10-27"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo2-050-pupurin/",
+     "page_title": "ププリン | ポケモンカード★neo | 拡張パック第2弾 遺跡をこえて…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2021/05/neo2_B_050_pupurin_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "a616ac8bef18a3f3fdcc30d37d2448d58e83c48077bd9bc69dba14733b1cf074",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「ププリン」、HP30、ベイビィポケモン、LV.6、無色、【特殊能力】じっとみる（ワザの欄はない）。商品は 拡張パック第2弾「遺跡をこえて...」（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）",
+   "independence": "画像は 2 つのサイトに 1 枚ずつ。構図・色がよく似ていて、同じ撮影・スキャンに由来するかは分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "プリン"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "プリンへ進化",
+     "「プリン」を上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo2050.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね ププリン たね プリン １進化 プクリン）で、カードの印刷の文ではないので使っていない"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-27 に取得したページの「ルール」「進化条件」の欄）",
+     "page_url": "https://nazonobasho.com/neo2-050-pupurin/",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": [
+       "プリン"
+      ]
+     },
+     "note": "kyuura の既存の取り込み data/ja_text_nazonobasho.json にも「進化条件」（プリンへ進化）がある。「ルール」の欄は取り込みの処理（scripts/nazonobasho.py の KEEP_FIELDS）が残さないので、取り込みにはない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-neo2-050-RULES-TEXT-JA",
+    "FIX-neo2-050-EVOLVES-TO"
+   ]
+  },
+  {
+   "id": "IMG-neo3-031",
+   "card_id": "neo3-031",
+   "card_name_ja": "ムチュール",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo3031.php",
+     "page_title": "ムチュール | ポケモンカードneo 第3弾 めざめる伝説",
+     "image_url": "https://pcg-search.com/img/neo/neo3031.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "c9a14da75fe6a29b58b8424e8b2b859367dd6dac04817789a5e269fe4f89511c",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「ムチュール」、HP30、ベイビィポケモン、LV.6、超、ワザ「サイコキッス」（無色 1 個。ダメージの数字なし）。商品は 拡張パック第3弾「めざめる伝説」（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）",
+   "independence": "画像は pcg-search.com の 1 枚だけ（ほかのサイトの画像は探していない）。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "ルージュラ"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "ルージュラへ進化",
+     "「ルージュラ」を上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo3031.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね ムチュール たね ルージュラ）で、カードの印刷の文ではないので使っていない"
+    },
+    {
+     "source": "ポケモンWiki の既存の保存データ（data/raw/めざめる伝説.json。版 812568。今回は取り直していない）",
+     "page_url": "https://wiki.pokemonwiki.com/wiki/%E3%83%A0%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AB_(%E3%82%81%E3%81%96%E3%82%81%E3%82%8B%E4%BC%9D%E8%AA%AC)",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": [
+       "ルージュラ"
+      ]
+     },
+     "note": "保存データの「進化」の欄が「ルージュラへ進化」（取り込みでは evolves_from_raw という名前の項目）。ルール文は data/ja_text_pokemonwiki.json の rules_text で、今までの生成の値"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-neo3-031-EVOLVES-TO"
+   ],
+   "existing_value": "ルール文は今までの生成の値（ポケモンWiki の転記）と画像が一字一句同じ（かぎかっこを含む）。訂正はない"
+  },
+  {
+   "id": "IMG-PF2-007",
+   "card_id": "PF2-007",
+   "card_name_ja": "ピチュー",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neopf2007.php",
+     "page_title": "ピチュー | ポケモンカードneo プレミアムファイル2",
+     "image_url": "https://pcg-search.com/img/neo/neopf2007.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "2a53ae3c573c6ea2b236cbde61f641d1b56511c71887d6a9765b5636e52f8cb5",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「ピチュー」、HP30、ベイビィポケモン、雷、ワザ「いっしょにあそぼ」（無色 1 個。ダメージの数字なし）。キラの加工で一部の文字に模様が重なるが、ルール欄と進化先の欄は読める。商品は neo プレミアムファイル2（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）",
+   "independence": "画像は pcg-search.com の 1 枚だけ（ほかのサイトの画像は探していない）。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "ピカチュウ"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "ピカチュウへ進化",
+     "「ピカチュウ」を上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neopf2007.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね ピチュー たね ピカチュウ １進化 ライチュウ）で、カードの印刷の文ではないので使っていない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-PF2-007-EVOLVES-TO"
+   ],
+   "existing_value": "ルール文は今までの生成の値（pcg-search.com の転記）と画像が一字一句同じ（かぎかっこを含む）。訂正はない"
+  },
+  {
+   "id": "IMG-NIP1X-002",
+   "card_id": "NIP1X-002",
+   "card_name_ja": "ブビィ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neointro1ex002.php",
+     "page_title": "ブビィ | ポケモンカードneo イントロパック★neo(チコリータデッキ：拡張カード)",
+     "image_url": "https://pcg-search.com/img/neo/neointro1ex002.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "72dea1b1673a0121165377c9494db5178f94999c781939683c56cdaaae42a68d",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「ブビィ」、HP30、ベイビィポケモン、炎、ワザ「パンチ」（無色 1 個・10）。商品は イントロパック★neo（チコリータデッキ：拡張カード）（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）",
+   "independence": "画像は pcg-search.com の 1 枚だけ（ほかのサイトの画像は探していない）。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "ブーバー"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "ブーバーへ進化",
+     "「ブーバー」を上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neointro1ex002.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね ブビィ たね ブーバー）で、カードの印刷の文ではないので使っていない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-NIP1X-002-EVOLVES-TO"
+   ],
+   "existing_value": "ルール文は今までの生成の値（pcg-search.com の転記）と画像が一字一句同じ（かぎかっこを含む）。訂正はない"
+  },
+  {
+   "id": "IMG-NIP2X-002",
+   "card_id": "NIP2X-002",
+   "card_name_ja": "ピチュー",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neointro2ex002.php",
+     "page_title": "ピチュー | ポケモンカードneo イントロパック★neo(ワニノコデッキ：拡張カード)",
+     "image_url": "https://pcg-search.com/img/neo/neointro2ex002.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "5e1c9ec797257d91af829125a2eb351e9c31b3fcff266fdc101ffd459b27e53c",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「ピチュー」、HP30、ベイビィポケモン、雷、ワザ「はたく」（無色 1 個・10）。商品は イントロパック★neo（ワニノコデッキ：拡張カード）（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）",
+   "independence": "画像は pcg-search.com の 1 枚だけ（ほかのサイトの画像は探していない）。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "ピカチュウ"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "ピカチュウへ進化",
+     "「ピカチュウ」を上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neointro2ex002.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね ピチュー たね ピカチュウ １進化 ライチュウ）で、カードの印刷の文ではないので使っていない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-NIP2X-002-EVOLVES-TO"
+   ],
+   "existing_value": "ルール文は今までの生成の値（pcg-search.com の転記）と画像が一字一句同じ（かぎかっこを含む）。訂正はない"
+  },
+  {
+   "id": "IMG-PRN-012",
+   "card_id": "PRN-012",
+   "card_name_ja": "ピィ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neop012.php",
+     "page_title": "ピィ | ポケモンカードneo プロモ",
+     "image_url": "https://pcg-search.com/img/neo/neop012.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "82dbf047a10a378c8f8c8495065dfb66df3b83703c9ef012f6a1c1f5c5f1ff88",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「ピィ」、HP30、ベイビィポケモン、無色、ワザ「ピッピッ」（無色 1 個。ダメージの数字なし）。商品は プロモ（neo）（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）",
+   "independence": "画像は pcg-search.com の 1 枚だけ（ほかのサイトの画像は探していない）。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "ピッピ"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "ピッピへ進化",
+     "「ピッピ」を上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neop012.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね ピィ たね ピッピ １進化 ピクシー）で、カードの印刷の文ではないので使っていない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-PRN-012-EVOLVES-TO"
+   ],
+   "existing_value": "ルール文は今までの生成の値（pcg-search.com の転記）と画像が一字一句同じ（かぎかっこを含む）。訂正はない"
+  },
+  {
+   "id": "IMG-PRN-031",
+   "card_id": "PRN-031",
+   "card_name_ja": "ププリン",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neop031.php",
+     "page_title": "ププリン | ポケモンカードneo プロモ",
+     "image_url": "https://pcg-search.com/img/neo/neop031.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "1581d95c332ee886fbb14eeff69e0eb3b40929cf7b6147ca0096fadc8a14fa5f",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「ププリン」、HP30、ベイビィポケモン、無色、ワザ「おやすみのうた」（無色 1 個。ダメージの数字なし）。商品は プロモ（neo）（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）",
+   "independence": "画像は pcg-search.com の 1 枚だけ（ほかのサイトの画像は探していない）。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "プリン"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "プリンへ進化",
+     "「プリン」を上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neop031.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね ププリン たね プリン １進化 プクリン）で、カードの印刷の文ではないので使っていない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-PRN-031-EVOLVES-TO"
+   ],
+   "existing_value": "ルール文は今までの生成の値（pcg-search.com の転記）と画像が一字一句同じ（かぎかっこを含む）。訂正はない"
+  },
+  {
+   "id": "IMG-PRN-037",
+   "card_id": "PRN-037",
+   "card_name_ja": "ムチュール",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-27",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neop037.php",
+     "page_title": "ムチュール | ポケモンカードneo プロモ",
+     "image_url": "https://pcg-search.com/img/neo/neop037.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "e7fe9c0073a11d34b07b978e2aa65e7aad72d3eb3d4e1ee52489b88de27bbd69",
+     "accessed_on": "2026-10-27"
+    }
+   ],
+   "identification": "画像はどれも「ムチュール」、HP30、ベイビィポケモン、水（kyuura のデータと同じ。超のムチュール neo3-031 とは別のカード）、ワザ「なげキッス」（無色 1 個。ダメージの数字なし）。商品は プロモ（neo）（サイトのページの見出し）。kyuura の data/cards.json の名前・HP・タイプ・ワザまたは特殊能力の名前と合う。カードに番号は使っていない（id の番号と転記元の URL の番号は一致するとは限らない）",
+   "independence": "画像は pcg-search.com の 1 枚だけ（ほかのサイトの画像は探していない）。サイトの転記（site_transcriptions）は画像の値と分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+    "pokemon.evolves_to": [
+     "ルージュラ"
+    ]
+   },
+   "print_text": {
+    "pokemon.evolves_to": [
+     "ルージュラへ進化",
+     "「ルージュラ」を上に重ねて進化させることができます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-27 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neop037.php",
+     "values": {
+      "pokemon.rules_text.ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+      "pokemon.evolves_to": null
+     },
+     "note": "ページの文字に進化先の欄の文（「〜へ進化」）はない。ページの「進化ライン検索」はサイトの進化ラインの一覧（ベイビィ/たね ムチュール たね ルージュラ）で、カードの印刷の文ではないので使っていない"
+    }
+   ],
+   "not_checked": [
+    "pokemon.types は画像でも水で、kyuura のデータと同じ（変えていない。超のムチュール neo3-031 に合わせない）",
+    "jp_print.level・pokemon.dex の値の照合と補完（拡張パックのカードのレベルはカードの特定の手がかりにだけ使った。拡張パック以外の商品のレベル・図鑑番号の欠けは埋めない）",
+    "ワザ・特殊能力の説明の全文の読み比べ（カードの特定に使った名前・コスト・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・レアリティ・刷や版の記号（初版のマークなど）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-PRN-037-EVOLVES-TO"
+   ],
+   "existing_value": "ルール文は今までの生成の値（pcg-search.com の転記）と画像が一字一句同じ（かぎかっこを含む）。訂正はない"
+  }
+ ]
+}

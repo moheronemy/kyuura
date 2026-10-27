@@ -57,7 +57,10 @@ class RulesTextTest(Base):
             self.assertEqual(self.by_id[cid]['pokemon']['rules_text']['ja'], RULE, cid)
 
     def test_corrections_record_the_image_check_and_not_a_book_check(self):
-        fixes = {c['card_id']: c for c in self.ledger['corrections'] if c['field'] == 'pokemon.rules_text.ja'}
+        # この調査の時点（2026-10-24）までのルール文の訂正。2026-10-27 のベイビィ 6 枚の訂正（FIX-neo1-022-RULES-TEXT-JA など）は
+        # tests/test_baby_preparation_v0113.py が確かめる
+        fixes = {c['card_id']: c for c in self.ledger['corrections']
+                 if c['field'] == 'pokemon.rules_text.ja' and c['decided_on'] <= '2026-10-24'}
         self.assertEqual(sorted(fixes), list(FILLED))
         for cid, c in fixes.items():
             self.assertEqual((c['before'], c['after'], c['applied_by'], c['basis'], c['kind']),
@@ -186,7 +189,9 @@ class IssuesTest(Base):
     def test_counts_at_past_imports_do_not_include_the_new_issue(self):
         self.assertEqual(bcr.unresolved_counts(self.ctx, as_of='v0.68')['research_issues'], 71)
         self.assertEqual(bcr.unresolved_counts(self.ctx, as_of='v0.25')['research_issues'], 24)
-        self.assertEqual(bcr.unresolved_counts(self.ctx)['research_issues'], 72)
+        # アンノーンの論点を数える、次の取り込み（v0.113。2026-10-27）の時点の数。そのあとに記録したベイビィの論点
+        # （UQ-NEO-TEXT-BABY-CATEGORIES）は数えない（今の数は tests/test_baby_preparation_v0113.py）
+        self.assertEqual(bcr.unresolved_counts(self.ctx, as_of='v0.113')['research_issues'], 72)
 
     def test_validation_requires_recorded_after_and_index_flag(self):
         self.assertEqual(bcr.validate(self.ctx), [])

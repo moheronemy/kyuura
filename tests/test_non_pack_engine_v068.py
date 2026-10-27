@@ -22,6 +22,10 @@ import non_pack  # noqa: E402
 
 BASE = '4b73536e5507581c3d2cf44f7d519021850f9e81'  # この作業の基準（main）
 ENGINE = '24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1'  # kyuura-engine v0.68（固定した参照）
+# v0.68 の写し（data/curation/engine_registered_cards.json）を main に入れたコミット。2026-10-27 に写しを v0.113 に置きかえたので、
+# この取り込みの時点の検査は、git の履歴にあるこの写しを固定した入力にして行う（当時の取得日・件数を今の値で書きかえない）
+V068_SNAPSHOT_AT = '7d3f4ca76c084774efb4ac6a1d3a943387e183c3'
+V068_COUNTS = {'attacks': 597, 'trainers': 94, 'powers': 58, 'energies': 4, 'playable_cards': 457, 'cards_with_registrations': 451}
 KANGASKHAN_BEFORE = 'コインを投げて「おもて」なら、自分の山札の上からカードを1枚ひいて、手札に加える。'
 KANGASKHAN_AFTER = '自分の山札の上からカードを1枚ひいて、手札に加える。'
 
@@ -262,6 +266,16 @@ class EngineTargetsTest(Data):
         super().setUpClass()
         cls.targets = load('data/engine_targets.json')
         cls.snapshot = load('data/curation/engine_registered_cards.json')
+        cls.v068 = json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{V068_SNAPSHOT_AT}:data/curation/engine_registered_cards.json'],
+                                             capture_output=True, text=True, check=True).stdout)
+        # v0.68 の写しで、今のカードのデータから一覧を作り直す（scripts/build_engine_targets.py の build。ファイルは書かない）
+        import build_engine_targets as bet
+        orig = bet.load
+        bet.load = lambda rel: copy.deepcopy(cls.v068) if rel == 'data/curation/engine_registered_cards.json' else orig(rel)
+        try:
+            cls.targets_v068, _ = bet.build()
+        finally:
+            bet.load = orig
 
     def test_generated_files_are_current(self):
         out = subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_engine_targets.py'), '--check'], capture_output=True, text=True)
@@ -270,22 +284,29 @@ class EngineTargetsTest(Data):
         self.assertEqual(out.returncode, 0, out.stderr)
 
     def test_snapshot_is_the_fixed_engine_version(self):
-        self.assertEqual(self.snapshot['engine']['commit'], ENGINE)
-        self.assertEqual(self.snapshot['counts'], {'attacks': 597, 'trainers': 94, 'powers': 58, 'energies': 4,
-                                                   'playable_cards': 457, 'cards_with_registrations': 451})
+        # この取り込みの時点（2026-10-19）の写しは v0.68。今の写し（v0.113。tests/test_baby_preparation_v0113.py）の previous_snapshots にも
+        # 当時の取得日・件数のまま残っている
+        self.assertEqual((self.v068['engine']['commit'], self.v068['extracted_on'], self.v068['counts']), (ENGINE, '2026-10-19', V068_COUNTS))
+        prev = [p for p in self.snapshot['previous_snapshots'] if p['engine']['commit'] == ENGINE]
+        self.assertEqual([(p['extracted_on'], p['counts']) for p in prev], [('2026-10-19', V068_COUNTS)])
+        self.assertNotEqual(self.snapshot['engine']['commit'], ENGINE)
 
     def test_only_registered_ids_count_as_registered(self):
-        rows = {r['id']: r for r in self.targets['cards']}
-        registered = {i for i, r in rows.items() if r['engine_status'] == 'registered'}
-        self.assertEqual(registered, set(self.snapshot['playable']))
-        self.assertTrue(all(self.by_id[i]['product_group'] == 'expansion_pack' for i in registered))
-        for r in rows.values():
-            if r['engine_status'] == 'mechanically_equivalent':
-                self.assertTrue(set(r['equivalent_to']) <= registered, r['id'])
-                self.assertNotIn(r['id'], registered)
-        self.assertEqual(sum(self.targets['counts']['by_engine_status'].values()), len(self.cards))
-        self.assertEqual(len(self.targets['non_game_items']), 18)
-        # 拡張シートの同じ名前の別のカード（HP・ワザが違う）は、登録されたカードの再利用の候補にしない
+        for targets, snapshot in ((self.targets, self.snapshot), (self.targets_v068, self.v068)):
+            rows = {r['id']: r for r in targets['cards']}
+            registered = {i for i, r in rows.items() if r['engine_status'] == 'registered'}
+            self.assertEqual(registered, set(snapshot['playable']))
+            for r in rows.values():
+                if r['engine_status'] == 'mechanically_equivalent':
+                    self.assertTrue(set(r['equivalent_to']) <= registered, r['id'])
+                    self.assertNotIn(r['id'], registered)
+            self.assertEqual(sum(targets['counts']['by_engine_status'].values()), len(self.cards))
+            self.assertEqual(len(targets['non_game_items']), 18)
+        # v0.68 の登録は拡張パックのカードだけ
+        rows = {r['id']: r for r in self.targets_v068['cards']}
+        self.assertTrue(all(self.by_id[i]['product_group'] == 'expansion_pack' for i in self.v068['playable']))
+        # 拡張シートの同じ名前の別のカード（HP・ワザが違う）は、登録されたカードの再利用の候補にしない（v0.68 の写しで。v0.113 では QSG-001 は登録あり）
+        self.assertEqual(rows['QSG-001']['engine_status'], 'new_effect_needed')
         self.assertNotIn('nearest_registered', rows['QSG-001'])
 
 
@@ -317,11 +338,12 @@ class EngineImportV068Test(unittest.TestCase):
 
     def test_counts_are_kept_apart(self):
         # 研究の論点の数と、エンジンの停止コード・未解決の裁定の数を同じにそろえない
-        # v0.68 の取り込みの時点は 71。2026-10-24 のアンノーンの調査で kyuura の論点 UQ-SELF-EXCLUDING-POWER-COPIES（エンジンの裁定に結ばない）を加えて、今は 72
+        # v0.68 の取り込みの時点は 71。2026-10-24 のアンノーンの調査で kyuura の論点 UQ-SELF-EXCLUDING-POWER-COPIES（エンジンの裁定に結ばない）を加えて 72。
+        # 2026-10-27 の v0.113 の取り込み（ENGINE-2D113B5）の時点も 72（そのあとに記録したベイビィの論点は数えない。今の数は tests/test_baby_preparation_v0113.py）
         at_import = bcr.unresolved_counts(self.ctx, as_of='v0.68')
         self.assertEqual((at_import['research_issues'], at_import['engine_total'], at_import['engine_stop_codes']), (71, 151, 149))
-        now = bcr.unresolved_counts(self.ctx)
-        self.assertEqual((now['research_issues'], now['engine_total'], now['engine_stop_codes']), (72, 151, 149))
+        later = bcr.unresolved_counts(self.ctx, as_of='v0.113')
+        self.assertEqual((later['research_issues'], later['engine_total'], later['engine_stop_codes']), (72, 151, 149))
         old = bcr.unresolved_counts(self.ctx, as_of='v0.25')
         self.assertEqual((old['research_issues'], old['engine_total'], old['engine_stop_codes']), (24, 28, 22))
 

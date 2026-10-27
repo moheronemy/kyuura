@@ -37,7 +37,7 @@
 | `product_group` | 文字列 | 商品の種類（形式 3）。`expansion_pack`（拡張パック）・`expansion_sheet`・`southern_islands`・`gym_deck`・`quick_starter_gift`・`intro_pack`・`premium_file`・`promo` |
 | `play_scope` | 文字列 | 対戦での扱い（形式 3）。`standard`（通常の対戦のカード）・`kangaskhan_rule`（2 人 1 組の「ガルーラルール」専用）・`not_for_official_tournaments`（カードに「公式大会では使えません」とある）。`data/curation/non_pack.json` の `play_scope` |
 | `same_card_group` | 文字列／null | 商品をまたいだ同じカードの組の id（`SC-<最初の記録の id>`。`data/same_card_groups.json`）。組がなければ `null` |
-| `data_gaps` | 文字列の配列 | 値のない欄（調査・転記の不足。形式 3）。例 `pokemon.evolves_from`・`jp_print.level`・`energy.text.ja`・`pokemon.stage`（サイトの種類の欄と進化ラインの段階が違う）。英語版がないことは数えない |
+| `data_gaps` | 文字列の配列 | 値のない欄（調査・転記の不足。形式 3）。例 `pokemon.evolves_from`・`pokemon.evolves_to`（ベイビィの進化先が未確認）・`jp_print.level`・`energy.text.ja`・`pokemon.stage`（サイトの種類の欄と進化ラインの段階が違う）。英語版がないことは数えない |
 | `source_ids.pcg_search` | 文字列の配列 | pcg-search.com のカードページ名（形式 3）。拡張パックの記録は空（拡張パックのページとは結んでいない） |
 | `copies` | 配列 | 拡張パック以外の商品の記録だけ。同じ商品の中で番号だけが違うページ（イントロパックのデッキ）をまとめた元のページ `[{page, list_number}]`。1 ページなら 1 件 |
 | `field_sources` | オブジェクト | 拡張パック以外の商品の記録だけ。欄の出どころ（`pcg_search`・`pcg_search_page_dash`（読み直したページで「-」）・`pcg_search_null_read_as_zero`・`pcg_search_evolution_line`・`same_card:<拡張パックの id>`・`other_products.en_prints`・`pokemontcg:<id>`・`pcg_search_kind_conflicts_with_evolution_line`） |
@@ -51,7 +51,7 @@
 {"ja": null, "en": "Energy Trans"}
 ```
 
-- `ja`: 日本版の文面。第1〜4弾と neo 第1〜2弾はなぞのばしょ、第5〜6弾と neo 第3〜4弾はポケモンWiki の転記から取り込み済み。出典にないもの（無色2個エネルギーの効果文、neo 第1〜2弾のベイビィ・アンノーン M・U・A のルール文）は `null`（[詳細](cards/README.md#日本語テキストについて)）。アンノーンI・D・F のルール文は、カードの画像で確かめた訂正の記録（`data/curation/card_corrections.json`）で入れている。
+- `ja`: 日本版の文面。第1〜4弾と neo 第1〜2弾はなぞのばしょ、第5〜6弾と neo 第3〜4弾はポケモンWiki の転記から取り込み済み。出典にないもの（無色2個エネルギーの効果文、アンノーン M・U・A のルール文）は `null`（[詳細](cards/README.md#日本語テキストについて)）。アンノーンI・D・F のルール文と、neo 第1〜2弾のベイビィ 6 枚のルール文（なぞのばしょのページの「ルール」の欄を取り込み（`scripts/nazonobasho.py` の `KEEP_FIELDS`）が残していなかった）は、カードの画像で確かめた訂正の記録（`data/curation/card_corrections.json`）で入れている。
 - `en`: 英語版（WotC 版）の文面。
 
 ### `rarity_jp`
@@ -91,6 +91,7 @@
 | `dex` | 整数の配列 | 全国図鑑番号 |
 | `stage` | 文字列 | `basic`（たね）／`stage1`（1進化）／`stage2`（2進化）／`baby`（ベイビィ） |
 | `evolves_from` | 日英／null | 進化元のカード名 |
+| `evolves_to` | 文字列の配列／null（ベイビィだけ） | ベイビィポケモンの進化先の欄（「〇〇へ進化」）の日本語名。印刷の順（バルキーは `["エビワラー", "サワムラー", "カポエラー"]`）。下の「進化先」 |
 | `hp` | 整数 | HP |
 | `types` | 文字列の配列 | タイプ（下の列挙値） |
 | `weaknesses` | 配列 | 弱点 `[{"type": "fire", "operator": "×", "value": 2}]` |
@@ -99,6 +100,21 @@
 | `rules_text` | 日英／null | ベイビィ・ひかるポケモン・アンノーンなどのルール文 |
 | `powers` | 配列 | ポケモンパワー（下記） |
 | `attacks` | 配列 | ワザ（下記） |
+
+#### 進化先（`pokemon.evolves_to`）
+
+印刷に進化先の欄があるのはベイビィポケモン（`stage` が `baby`）だけなので、この欄はベイビィの記録にだけ置きます（2026-10-27 から）。値で次の 4 つを区別します。
+
+| 値 | 意味 |
+|---|---|
+| 欄がない（`baby` 以外） | 適用外。その段階の印刷に進化先の欄がない。進化できない・進化先がないという意味ではない（たねポケモン・1 進化ポケモンの進化先は、進化カードの `evolves_from` から引く） |
+| `null` | 未確認。進化先の欄はあるが、印刷で確かめた値がない（`data_gaps` に `pokemon.evolves_to`）。推測・同じ名前のほかの版から埋めない |
+| 名前の配列 | 印刷の進化先の欄で確かめた名前（印刷の順）。カードの画像の照合の記録（`data/curation/card_image_checks.json`）と訂正の記録（`data/curation/card_corrections.json`。`kind: field_added_from_print`・`basis: card_image_check`）でたどれる |
+| `[]` | 印刷に進化先がないと明示している（形式の上の値）。今の 1377 件に該当はなく、生成の検査が受け付けない（加えるときは根拠を記録して検査を直す） |
+
+生成の順番: 記録を作る（拡張パック・拡張パック以外の商品）→ ベイビィの記録に `evolves_to: null` を置く（`evolves_from` のすぐあと）→ 訂正の記録を当てはめる（`before` が `null` でなければ止まる）→ 進化先の形と出どころの検査（null でない値は、画像の照合の記録を持つ訂正から入ったものだけ）→ 画像の照合の記録と生成した値の照らし合わせ → 同じカードの組・`data_gaps`。転記（なぞのばしょの「進化条件」など）からは作りません（転記の値は照合の記録の `site_transcriptions` に分けて残す）。ベイビィから進化できることを理由に、進化先のカードの `stage`（印刷の段階 `basic`）・`evolves_from` は変えません。場で「進化ポケモン」としてあつかうか（公式ルール p.315）は、場の状態の規定で、カードの段階の値ではありません（`data/sidecar/rulings.json` の GR-2000-P315-EVOLVED-BABY）。
+
+`data/cards.csv` では `evolves_to_status`（空: ポケモンでない・`not_applicable`・`unconfirmed`・`printed`・`printed_none`）と `evolves_to_ja`（名前を空白区切り。ポケモンの日本語名は空白を含まない（検査で確かめる））の 2 列です。エンジンの写し（`scripts/extract_kyuura_cards.py`）は 2026-10-27 の時点でこの欄を取り出していません（`docs/engine-handover-baby-v0.113.md`）。
 
 #### `powers` の要素
 
@@ -191,7 +207,7 @@
 
 | ファイル | 1 行の単位 | 主な列 |
 |---|---|---|
-| `data/cards.csv` | カード 1 枚 | `id`、名前（日英）、レア、英語版、進化、HP、タイプ、弱点、抵抗力、にげる、トレーナー・エネルギーの区分と本文（日英）、日英の違い、`product_group`・`play_scope`・`same_card_group`・`source_pages`（pcg-search のページ名を空白区切り）・`data_gaps`（空白区切り）・`corrections`（訂正の id を空白区切り） |
+| `data/cards.csv` | カード 1 枚 | `id`、名前（日英）、レア、英語版、進化、HP、タイプ、弱点、抵抗力、にげる、トレーナー・エネルギーの区分と本文（日英）、日英の違い、`product_group`・`play_scope`・`same_card_group`・`source_pages`（pcg-search のページ名を空白区切り）・`data_gaps`（空白区切り）・`corrections`（訂正の id を空白区切り）・`evolves_to_status`・`evolves_to_ja`（ベイビィの進化先。上の「進化先」） |
 | `data/attacks.csv` | ワザ 1 つ | `card_id`、`index`、名前（日英）、`cost`（列挙値を空白区切り）、`cost_total`、`damage_base`、`damage_modifier`、`damage_display`、効果文（日英） |
 | `data/powers.csv` | ポケモンパワー 1 つ | `card_id`、`index`、`kind`、名前（日英）、本文（日英） |
 
@@ -229,12 +245,29 @@ pcg-search.com のカードページを読み直し、転記に入っていな�
 
 カードデータの訂正の記録（`corrections`）と、訂正しなかった候補（`candidates`）です。
 
-- `corrections`: `id`（`FIX-…`）・`card_id`・`field`・`before`・`after`・`kind`・`applied_by`（`card_corrections`: `scripts/build_cardlist.py` が生成のたびに当てはめる。当てはめる前の値が `before` でなければ止まる。`ja_text.json`: 前の作業で `data/curation/ja_text.json` で直したもので、生成した値が `after` かだけを確かめる）・`kind`（`transcription_error` 転記の誤り・`transcription_omission` 転記の欠け。`before` が `null` の訂正は、空だった欄に値を入れる）・`basis`（`user_provided`・`kyuura_source_check`・`kyuura_existing_record`・`card_image_check`: kyuura がウェブに公開されたカードの画像を読んだ。公式の書籍のページとの照合（`CC-`）ではないので、照合の記録を作らず、`evidence`（サイト・ページと画像の URL・画像の形式と sha256・取得した日）・`identification`（同じカード・同じ版と決めた手がかり）・`scope`（確かめた欄と確かめていないこと）を書く。2026-10-24 のアンノーンI・D・F のルール文から）・`basis_detail`・`confirmed_by`・`card_checks_affected`（照合したときの値 `before` を写している照合の記録。`scripts/build_card_rulings.py` は、照合の記録の写しと今の値の違いをこの訂正で確かめる。過去の照合の記録は書きかえない）。公式エラッタ・最新の説明は書かない（`data/rule_history.json`・`data/sidecar/`）。
+- `corrections`: `id`（`FIX-…`）・`card_id`・`field`・`before`・`after`・`kind`・`applied_by`（`card_corrections`: `scripts/build_cardlist.py` が生成のたびに当てはめる。当てはめる前の値が `before` でなければ止まる。`ja_text.json`: 前の作業で `data/curation/ja_text.json` で直したもので、生成した値が `after` かだけを確かめる）・`kind`（`transcription_error` 転記の誤り・`transcription_omission` 転記の欠け・`field_added_from_print` データの形になかった欄（`null` で作る）に印刷で確かめた値を入れる（2026-10-27 のベイビィの `pokemon.evolves_to`）。`before` が `null` の訂正は、空だった欄に値を入れる）・`basis`（`user_provided`・`kyuura_source_check`・`kyuura_existing_record`・`card_image_check`: kyuura がウェブに公開されたカードの画像を読んだ。公式の書籍のページとの照合（`CC-`）ではないので、照合の記録を作らず、`evidence`（サイト・ページと画像の URL・画像の形式と sha256・取得した日）・`identification`（同じカード・同じ版と決めた手がかり）・`scope`（確かめた欄と確かめていないこと）を書く。2026-10-24 のアンノーンI・D・F のルール文から。2026-10-27 からは、画像・特定の手がかり・読んだ欄を照合の記録 `data/curation/card_image_checks.json` に 1 枚 1 件で書き、訂正は `image_check` でその id を指す（`evidence` か `image_check` のどちらかがないとエラー））・`basis_detail`・`confirmed_by`・`card_checks_affected`（照合したときの値 `before` を写している照合の記録。`scripts/build_card_rulings.py` は、照合の記録の写しと今の値の違いをこの訂正で確かめる。過去の照合の記録は書きかえない）。公式エラッタ・最新の説明は書かない（`data/rule_history.json`・`data/sidecar/`）。
+- 訂正の記録の `image_check`: カードの画像の照合の記録（下の `data/curation/card_image_checks.json`）の id。
+
+## `data/curation/card_image_checks.json`
+
+kyuura がウェブに公開されたカードの画像で印刷の欄を読んだ記録（照合の記録 `IMG-<カード id>`。2026-10-27 のベイビィ 13 枚から）。公式の書籍のページとの照合（`CC-`）・最新の説明（`LD-`）ではありません。
+
+| 項目 | 内容 |
+|---|---|
+| `id`・`card_id`・`card_name_ja`・`kind`（`card_image_check`）・`checked_on`・`checked_by` | 記録と、読んだカード・日 |
+| `images` | 画像ごとに `site`（`pcg-search.com [N3]`・`なぞのばしょ [N1]`）・`page_url`・`page_title`・`image_url`・`image_format`・`image_sha256`・`accessed_on` |
+| `identification`・`independence` | 同じ日本語版の同じカードと決めた手がかり（名前・HP・タイプ・ワザや特殊能力・商品。カードの番号は使わない）と、画像が独立した照合か（同じ画像・同じスキャンの疑いがあれば独立と数えない） |
+| `print_values` | 画像に写っている値（欄 → 値）。`scripts/build_cardlist.py` が、生成した `data/cards.json` の値（訂正のあと）と同じかを確かめる（違えば止まる） |
+| `print_text` | 欄の印刷の文（進化先の欄の見出しと文など） |
+| `site_transcriptions` | サイトの転記・解説の値（画像の値と分ける。照合の数に入れない）。`values` の `null` はその転記にその欄の文がないこと |
+| `not_checked`・`print_version`・`existing_value` | 確かめていない欄、刷・版の注記（修正前・修正版など）、今までの値が画像と同じだったこと |
+| `corrections` | この記録から書いた訂正の id。訂正は同じカード・`print_values` の欄・同じ値で、`basis` は `card_image_check`、`image_check` はこの記録、`card_checks_affected` は空（違えば止まる） |
+
 - `candidates`: `status`（`held_print_version` 印刷の版が決まらない・`held_transcription_difference` 別の転記との違い・`held_likely_transcription_error` 誤りの可能性が高いが印刷で確かめていない・`version_difference` 版の違い（誤りではない）・`gap_open` 値の欠け）と `reason`。
 
 ## エンジンの実装の対象（`data/engine_targets.json`）
 
-`scripts/build_engine_targets.py` の出力で、読み方は [エンジンの実装の対象](engine-targets.md) です。エンジンの登録表の写しは `data/curation/engine_registered_cards.json`（`scripts/snapshot_engine_registry.py`。エンジンの版を上げるときに作り直す）。記録ごとに `category`（`candidate`・`data_missing`・`special_rule_design`・`non_game`）と `engine_status`（`registered`・`mechanically_equivalent`・`reuse_candidate`・`new_effect_needed`）を分けて持ちます。
+`scripts/build_engine_targets.py` の出力で、読み方は [エンジンの実装の対象](engine-targets.md) です。エンジンの登録表の写しは `data/curation/engine_registered_cards.json`（`scripts/snapshot_engine_registry.py`。エンジンの版を上げるときに作り直す）。記録ごとに `category`（`candidate`・`data_missing`・`special_rule_design`・`non_game`）と `engine_status`（`registered`・`mechanically_equivalent`・`reuse_candidate`・`new_effect_needed`）を分けて持ちます。写しを新しい版で作り直すと、前の写しの参照（版・コミット・取得日・件数）を `previous_snapshots` に残します（`engine_reference` にも写す。前の版の時点の取得日・件数を新しい値で書きかえない）。写しの `registry_id` は登録表の名前で、版の番号ではありません。同じかの比べ（`mechanically_equivalent`）と値の欠け（`data_missing`）には、エンジンの写しがまだ取り出さないベイビィの進化先（`pokemon.evolves_to`）も含めます。
 
 ## `data/rule_differences.json`
 
@@ -362,22 +395,23 @@ id は 3 つのファイルを通して重複しないこと、`data/rule_histor
 | `differences` | 違いの欄と種類（`printed_vs_latest`: 最新の説明の記録 `latest_description_ref` と結ぶ。`data_error`: データの誤りの欄） |
 | `corrections` | 照合のあとで `data/cards.json` を直した欄（あるときだけ）。`[{field, before, after, evidence, method, commit, note}]`。`after` は `checked_fields` の写し（直したあとの値）と同じ、`before` とは違う、`commit` はデータを直したコミット。直すのはカードのデータの生成の手順（`data/curation/` と `scripts/build_cardlist.py`）で、この記録ではない。同じ欄を `data_error`（修正の候補）と両方に書かない。例: ベロリンガ（PMCG2-041）のワザ名とレベル（`CC-PMCG2-041-P234`） |
 | `data_gaps` | 値が空の欄（あるときだけ。調査課題）。`[{field, kyuura_value, source_value, evidence, cause, status, note}]`。`kyuura_value` は今の `data/cards.json` の値（空）と同じで、値が入るとエラー（照合し直す）。`checked_fields` には入れない（値がないので照合していない）。`cause` は空になった原因、`status` は見出しの `gap_statuses`（`open`: 値を入れていない。推測で埋めない）。例: タケシのイワーク（PMCG5-048）の `jp_print.series`（`CC-PMCG5-048-P200`） |
+| `later_notes` | 照合のあとの追記（あるときだけ）。`[{recorded_on, by: kyuura, finding, card_ids, source_rechecked: false, note}]`。照合した日の `findings`・`checked_fields`・`verification` は書きかえず、`finding` に追記が指す findings の文を写す。原典を読み直したら `verification` に書く（`source_rechecked` は false でないとエラー）。例: CC-PMCG6-063-P229 の、同じページのロケット団のニャースと PR1-078 の対応（2026-10-27） |
 | `verification`・`import_provenance` | 最新の説明と同じ。エンジンの照合の記録を取り込んだ記録の照合した欄（`checked_fields`）は、エンジンの記録が照合したと書いた項目（`scope`）だけで、照合していない欄は理由とともに `fields_not_checked` に書く。例: v0.1 のたねポケモン（名前・段階はエンジンの照合の項目にない）、図版の文面が転記と異なり版が未特定のトレーナー（文面は照合した欄に入れず、LDの `image_text_ja` に保存する。v0.18までの取り込みには、当時LD形式がなかったため所見にだけ記録したトレーナーもある）、基本エネルギー（公式ルール p.318 の種類だけ） |
 
 ### `rulings.json`
 
 | 項目 | 内容 |
 |---|---|
-| `rule_clauses` | 裁定が参照する公式ルールの箇所（資料・ページ・節・要旨）。規則の本体の記録（`rule_history_refs`・`rule_differences_refs`）を必ず挙げる。新しい規則の記録ではなく、参照する位置の索引。エンジンの裁定が一般の規定をそのまま述べたもの（ベンチのポケモンも特殊能力を使える、など）は、カードごとの裁定を作らずに条項の `engine_refs` に結ぶ（エンジンが CONFIRMED としたものだけ。推論を含むなら裁定 `CR-` にする） |
+| `rule_clauses` | 裁定が参照する公式ルールの箇所（資料・ページ・節・要旨）。規則の本体の記録（`rule_history_refs`・`rule_differences_refs`）を必ず挙げる。新しい規則の記録ではなく、参照する位置の索引。エンジンの裁定が一般の規定をそのまま述べたもの（ベンチのポケモンも特殊能力を使える、など）は、カードごとの裁定を作らずに条項の `engine_refs` に結ぶ（エンジンが CONFIRMED としたものだけ。推論を含むなら裁定 `CR-` にする）。`checked` は確かめ方で、見出しの `checked_values` の値で始める（違えばエラー）。`transcription_quotes`（`[{file, pdf_page, page, quote}]`）は既存の転記の引用で、検査が転記の文と照らす（`existing_transcription` で始まる条項には必須） |
 | `rulings` の `status` | `CONFIRMED`（公式の資料に書かれている）・`SUPPORTED`（記述・例から読み取れるが、その場面そのものは書かれていない）。未解決の論点は `issues` に書き、裁定には `UNRESOLVED` を使わない |
-| `rulings` の `basis` | 根拠。`kind` は `card_text`（カードの文面）・`card_commentary`（書籍のカードの解説・ワザ解説。関係するカードのものも含む）・`general_rule`（一般の規定がそのまま当てはまる）・`derived`（複数の規定から解釈の選択なしに導かれる。`statement` に書く）。資料のページ（`source`・`page`・`location`・`quote`）か、カードのデータ（`card_ref`・`field`）を指す。`checked` は確かめ方（`kyuura_image`・`kyuura_data`・`engine_report`）。エンジンの規定・論点の再利用は `source_provenance`（repository・40桁のcommit・document・imported_on・kyuura_reread_source: false、裁定はruling_idも）で出所を持つ。この記録を `kyuura_image` にするとエラー |
+| `rulings` の `basis` | 根拠。`kind` は `card_text`（カードの文面）・`card_commentary`（書籍のカードの解説・ワザ解説。関係するカードのものも含む）・`general_rule`（一般の規定がそのまま当てはまる）・`derived`（複数の規定から解釈の選択なしに導かれる。`statement` に書く）。資料のページ（`source`・`page`・`location`・`quote`）か、カードのデータ（`card_ref`・`field`）を指す。`checked` は確かめ方（`kyuura_image`・`kyuura_data`・`engine_report`・`existing_transcription`）。`existing_transcription`（2026-10-27 から）は、既存の転記 `data/Silver_Bible_structured.md`（利用者が加えた『オフィシャルブック2000』の OCR・校正の転記。PDF の番号 = ページ + 2）の文で、kyuura は原典の画像で確かめていない。`transcription`（`file`・`pdf_page`・`page`・`quote`）が要り、引用が転記のそのページにないとエラー。エンジンの規定・論点の再利用は `source_provenance`（repository・40桁のcommit・document・imported_on・kyuura_reread_source: false、裁定はruling_idも）で出所を持つ。この記録を `kyuura_image` にするとエラー |
 | `rulings` の `inference` | 推論。`SUPPORTED` には必須で、`CONFIRMED` にはあってはいけない |
 | `rulings` の `cards` | 裁定の対象（カード id とワザ・特殊能力）。同じ問いを複数のカードにまとめるときは並べる（エンジンの複数の版の同じ裁定を 1 つにする。例: 「自分の番の中で何度でも使える」はエナジートランス・あまごい・ダメージスワップの 1 件）。同じ対象・同じ問いの裁定を 2 つ作るとエラー |
 | `rulings` の `engine_refs` | kyuura-engine の裁定 id との対応（`import`・`engine_version`・`document`・`ruling_id`・`engine_classification`（エンジンの表の「分類」の欄の写し）・`part`・`engine_note`）。エンジンの裁定 id は文書ごとの番号で、版が違えば同じ id が別の裁定なので、（`import`・`document`・`ruling_id`）で区別する。1 つの裁定を分けて記録したときは、それぞれに `part`。エンジンの分類が CONFIRMED でない裁定を `CONFIRMED` の記録に対応させるとき、エンジンが CONFIRMED だけとした裁定を `SUPPORTED` の記録に対応させるときは `reclassification`（`from`・`to`・`reason`）が必要。エンジンが「実装上の仮定」だけとした裁定は、裁定・条項に対応させない（`not_imported`）。その版の取り込みがまだないあいだだけ、別の版の裁定を、その文書を `documents` に挙げた取り込みに仮に結べる（v0.13 の取り込みが v0.10・v0.12 の C34・C35・W24 を結んだ形）。その版を取り込んだら、その版の取り込みに移す（移さないとエラー） |
-| `issues` | 未解決の論点（`question`・`why_unresolved`・`official_material`・`cases`（事例のカード・ワザとエンジンの裁定 id。対象の種類は `attack`・`power`・`trainer`・`energy`（エネルギーカードのカード名））・`reachability`・`related_engine_rulings`・`related_issues`・`engine_refs`）。`cases` の事例は、エンジンの裁定のない事例（同じ文面のほかのカードなど）も書ける（`engine_ruling` を省く）。同じ問いのエンジンの裁定は 1 つの論点にまとめる（同じ問いと言える根拠がないときはまとめない）。同じエンジンの裁定を 2 つの論点に対応させる・同じ問いの論点を 2 つ作るとエラー。エンジンの未解決の一覧にない論点（エンジンは処理を決めているが、公式の資料では決められないもの）は `not_in_engine_index: true`。kyuura の調査で立てた論点（エンジンの裁定に結ばない。`engine_refs` が空）は、`not_in_engine_index: true` と `recorded_after`（記録した日 `date` と、その時点の最新の取り込み `import`）を持つ。`unresolved_counts(ctx, as_of=…)` は、その取り込みの版より後の時点（今の数を含む）だけ数える（例: アンノーンの調査の UQ-SELF-EXCLUDING-POWER-COPIES は v0.68 の取り込みのあと） |
+| `issues` | 未解決の論点（`question`・`why_unresolved`・`official_material`・`cases`（事例のカード・ワザとエンジンの裁定 id。対象の種類は `attack`・`power`・`trainer`・`energy`（エネルギーカードのカード名）・`card`（カード全体。ルール文など））・`reachability`・`related_engine_rulings`・`related_issues`・`engine_refs`）。`cases` の事例は、エンジンの裁定のない事例（同じ文面のほかのカードなど）も書ける（`engine_ruling` を省く）。同じ問いのエンジンの裁定は 1 つの論点にまとめる（同じ問いと言える根拠がないときはまとめない）。同じエンジンの裁定を 2 つの論点に対応させる・同じ問いの論点を 2 つ作るとエラー。エンジンの未解決の一覧にない論点（エンジンは処理を決めているが、公式の資料では決められないもの）は `not_in_engine_index: true`。kyuura の調査で立てた論点（エンジンの裁定に結ばない。`engine_refs` が空）は、`not_in_engine_index: true` と `recorded_after`（記録した日 `date` と、その時点の最新の取り込み `import`）を持つ。`unresolved_counts(ctx, as_of=…)` は、その取り込みの版より後の時点（今の数を含む）だけ数える（例: アンノーンの調査の UQ-SELF-EXCLUDING-POWER-COPIES は v0.68 の取り込みのあと） |
 | `issues` の `audit` | 未解決の論点の監査（2026-10-14 から必須）。`audited_on`（日付）・`game_effect`（結果への影響。見出しの `game_effect_values`: `game_result` 盤面か勝ち負けが変わる・`rng_only` コインの有無・順番だけが変わる（推論）・`order_only` 処理の順番だけが変わる・`not_analyzed` 未調査）・`game_effect_note`・`resolution_needs`（解決に要る資料）・`searched`（調べた範囲。探していない資料も書く）・`new_sources`（この監査で新しく読んだページ `[{source, page, what, resolves: false}]`。ページは `sources` にあること。論点を決める資料なら論点にせず裁定にするので、`resolves` はいつも false）。決まらないこと（`question`）・カード（`cases`）・エンジンの id（`engine_refs`）・分類（`status`・`official_material`）は既存の項目。エンジンの停止コードは `engine_unresolved_index` から求め、論点の文には書かない。`resolution_needs`・`game_effect_note` に停止コード・例外の名前を書くとエラー |
-| `engine_imports` | エンジンの版ごとに 1 件（`ENGINE-<コミットの先頭 7 桁>`）。`engine_version`・`commit`（その版のコミット）・`parent_version_commit`・`documents_read_at`（文書を読んだコミット）・`kyuura_commit_used_by_engine`・`documents`・`ruling_sets`（文書ごとの範囲 `prefix`・`first`・`last`・`document`・`extra_ids`（T19b のような枝番）・`engine_reported_counts`）・`imported_rulings`（結んだ kyuura の記録の id）・`unresolved_rulings`（結んだ論点の id）・`not_imported`（`ruling_id`・`document`・`engine_classification`・`reason`）・`notes`（取り込みの注記）。範囲の id は、どれかの記録か `not_imported` のどちらか一方にないとエラー。`imported_rulings`・`unresolved_rulings` は対応から求めたものと同じでないとエラー。1 つの取り込みの中で同じ接頭辞を 2 つの文書に使わない。`not_imported` の各項目に `status`（`excluded`: エンジンの実装の判断（実装上の仮定・実装上の扱い・実装の設計）で取り込まない、`deferred`: 保留（kyuura が原典を確かめていない・対象のカードを調べていない）、`needs_recheck`: 要再確認）。裁定の表のない版（実装の履歴。v0.14〜v0.16）は `no_ruling_tables: true` で、`ruling_sets`・`not_imported` を持たず、読んだ文書とルールに関わる記述を `notes` に書く。v0.26 からの取り込みは、`not_imported` の各項目に `classification`（`official_confirmed` エンジンが CONFIRMED とした当てはめ・`supported_interpretation` 研究上の解釈・`unresolved_rules_question` 既存の論点の当てはめ・`engine_assumption` 実装上の仮定・`engine_adopted_spec` 採用した仕様・`engine_implementation` 実装の都合・`notation_difference` 表記の違い・`card_text_application` 処理の記録）を書き、`status` に `card_application`（カードごとの当てはめ。新しい裁定にしない）・`existing_record`（`kyuura_records` の既存の記録の当てはめ）・`adopted_spec`（`engine_position` の記録）も使う。`status` と `classification` の組み合わせが合わないとエラー |
-| `engine_positions` | エンジンの採用した仕様（`adopted_spec`）・簡略化した仕様（`simplification`）・実装の事項（`implementation_matter`。不具合・未対応・制限）。`engine_import`・`document`・`section`・`cards`・`engine_rulings`・`summary`・`engine_basis`・`kyuura_records`・`kyuura_handling`。公式の裁定ではないので `status`・`conclusion` を持たない（持つとエラー）。採用した仕様の `engine_rulings` は、その取り込みの `not_imported` に `adopted_spec` として結ぶ。例: キョウのベトベトンの［だつりょくえき］（v0.68）・イマクニ？のドードーの簡略化・マチスの秘策の受け付けの不具合 |
+| `engine_imports` | エンジンの版ごとに 1 件（`ENGINE-<コミットの先頭 7 桁>`）。`engine_version`・`commit`（その版のコミット）・`parent_version_commit`・`documents_read_at`（文書を読んだコミット）・`kyuura_commit_used_by_engine`・`documents`・`ruling_sets`（文書ごとの範囲 `prefix`・`first`・`last`・`document`・`extra_ids`（T19b のような枝番）・`engine_reported_counts`）・`imported_rulings`（結んだ kyuura の記録の id）・`unresolved_rulings`（結んだ論点の id）・`not_imported`（`ruling_id`・`document`・`engine_classification`・`reason`）・`notes`（取り込みの注記）・`engine_reported_totals`（エンジンの文書が報告した停止コード・未解決の裁定の数 `stop_codes`・`unresolved_rulings` と `note`。`engine_unresolved_index` と照らしていない版だけに書き、照らした数 `engine_unresolved_total` と同じ取り込みに書かない。v0.113 の 237・238。`unresolved_counts` の今の数は、照らした最後の取り込みまでで数える）。範囲の id は、どれかの記録か `not_imported` のどちらか一方にないとエラー。`imported_rulings`・`unresolved_rulings` は対応から求めたものと同じでないとエラー。1 つの取り込みの中で同じ接頭辞を 2 つの文書に使わない。`not_imported` の各項目に `status`（`excluded`: エンジンの実装の判断（実装上の仮定・実装上の扱い・実装の設計）で取り込まない、`deferred`: 保留（kyuura が原典を確かめていない・対象のカードを調べていない）、`needs_recheck`: 要再確認）。裁定の表のない版（実装の履歴。v0.14〜v0.16）は `no_ruling_tables: true` で、`ruling_sets`・`not_imported` を持たず、読んだ文書とルールに関わる記述を `notes` に書く。v0.26 からの取り込みは、`not_imported` の各項目に `classification`（`official_confirmed` エンジンが CONFIRMED とした当てはめ・`supported_interpretation` 研究上の解釈・`unresolved_rules_question` 既存の論点の当てはめ・`engine_assumption` 実装上の仮定・`engine_adopted_spec` 採用した仕様・`engine_implementation` 実装の都合・`notation_difference` 表記の違い・`card_text_application` 処理の記録）を書き、`status` に `card_application`（カードごとの当てはめ。新しい裁定にしない）・`existing_record`（`kyuura_records` の既存の記録の当てはめ）・`adopted_spec`（`engine_position` の記録）も使う。`status` と `classification` の組み合わせが合わないとエラー |
+| `engine_positions` | エンジンの採用した仕様（`adopted_spec`）・簡略化した仕様（`simplification`）・実装の事項（`implementation_matter`。不具合・未対応・制限）。`engine_import`・`document`・`section`・`cards`・`engine_rulings`・`summary`・`engine_basis`・`kyuura_records`・`kyuura_handling`。公式の裁定ではないので `status`・`conclusion` を持たない（持つとエラー）。実装の事項は `engine_fix`（`state`: `fixed` その版で直した（エンジンの報告）・`not_fixed` その版の時点で直していない・`document_corrected` 文書の訂正（処理は変えていない）、`as_of`: 取り込みの版、`tests`）で、修正済み・未修正・文書の訂正を分けられる（v0.113 のESPの 3 件・ゆうでんの FC1 の制限）。採用した仕様の `engine_rulings` は、その取り込みの `not_imported` に `adopted_spec` として結ぶ。例: キョウのベトベトンの［だつりょくえき］（v0.68）・イマクニ？のドードーの簡略化・マチスの秘策の受け付けの不具合 |
 | `engine_unresolved_index` | エンジンの未解決の裁定の一覧（件数は取り込みとともに増える。過去の件数を総数として固定しない）。`disposition` は `issue`（論点 `kyuura_issue` に取り込んだ）・`implementation_only`（歴史上の論点ではない）・`out_of_scope`（取り込みの範囲の外。取り込んだ版のものには使えない）・`not_yet_imported`（その版の取り込みがまだない。段階を分けた取り込みの途中だけで、取り込んだ版のものには使えない）。`issue` 以外は `reason` が必要。`question_kind` は問いの性質（`historical`）。`instances` は、同じ問いのあとの版の事例（`engine_version`・`ruling_id`。v0.17 の Z13 は C18 と同じ問い、など）で、新しい項目にしない（事例は同じ論点の `engine_refs` に結ぶ）。`in_engine_count: false` は、エンジンの数え方の件数に入らない項目（v0.17 のキョウのベトベトン。カードを延期したので、エンジンは数えていない）。`counted_from_version` は、あとの版から数えるようになった項目のその版（DR8・DR13 は v0.68 から）。`stop_code_since`・`stop_code_note` は、コードのない問いとして取り込んだあとでエンジンが停止コードを付けた版（エンジンの文書で最初に見える版）。過去の版の数は `unresolved_counts(ctx, as_of='v0.25')` のように求める。取り込みの `engine_unresolved_total` は、その版までの項目のうちエンジンが数えるものの件数と同じ（v0.13 は 22、v0.17 は 24）。kyuura の論点の数・エンジンの数・停止コードの数は別の数で、`scripts/build_card_rulings.py` の `unresolved_counts` が分けて求める（生成するページの 8 章「未解決の数の区別」） |
 
 結論・論点・推論の文に、エンジンの停止コード・例外の名前（`UNRESOLVED_…`・`RuntimeError` など）を書くとエラーです。エンジンの実装の情報は `engine_refs`・`engine_unresolved_index` にだけ書きます。

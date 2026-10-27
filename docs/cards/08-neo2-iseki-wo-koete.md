@@ -42,7 +42,7 @@
 | 30 | アンノーンA | ポケモン | 超 | たね | 40 | ★キラ | Unown [A]<br>Neo Discovery 14・33 |  |
 | 31 | ソーナンス | ポケモン | 超 | たね | 90 | ★キラ | Wobbuffet<br>Neo Discovery 16・35 |  |
 | 32 | オムナイト | ポケモン | 闘 | 1進化 | 50 | ● | Omanyte<br>Neo Discovery 60 |  |
-| 33 | バルキー | ポケモン | 闘 | ベイビィ | 30 | ● | Tyrogue<br>Neo Discovery 66 |  |
+| 33 | バルキー | ポケモン | 闘 | ベイビィ | 30 | ● | Tyrogue<br>Neo Discovery 66 | 訂正（FIX-neo2-033-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のバルキー）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo2-033、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない<br>訂正（FIX-neo2-033-EVOLVES-TO）: 空だった pokemon.evolves_to に「エビワラー・サワムラー・カポエラー」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のバルキー）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「エビワラーへ進化」「サワムラーへ進化」「カポエラーへ進化」「「エビワラー」「サワムラー」「カポエラー」のいずれかを上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo2-033）。同じ名前のほかの版の記録から写していない |
 | 34 | ヨーギラス | ポケモン | 闘 | たね | 40 | ● | Larvitar<br>Neo Discovery 57 |  |
 | 35 | オムスター | ポケモン | 闘 | 2進化 | 80 | ◆ | Omastar<br>Neo Discovery 43 |  |
 | 36 | サナギラス | ポケモン | 闘 | 1進化 | 70 | ◆ | Pupitar<br>Neo Discovery 45 |  |
@@ -59,7 +59,7 @@
 | 47 | ノコッチ | ポケモン | 無色 | たね | 30 | ● | Dunsparce<br>Neo Discovery 54 |  |
 | 48 | ヒメグマ | ポケモン | 無色 | たね | 40 | ● | Teddiursa<br>Neo Discovery 65 |  |
 | 49 | イーブイ | ポケモン | 無色 | たね | 50 | ◆ | Eevee<br>Neo Discovery 38 |  |
-| 50 | ププリン | ポケモン | 無色 | ベイビィ | 30 | ◆ | Igglybuff<br>Neo Discovery 40 |  |
+| 50 | ププリン | ポケモン | 無色 | ベイビィ | 30 | ◆ | Igglybuff<br>Neo Discovery 40 | 訂正（FIX-neo2-050-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のププリン）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo2-050、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない<br>訂正（FIX-neo2-050-EVOLVES-TO）: 空だった pokemon.evolves_to に「プリン」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のププリン）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「プリンへ進化」「「プリン」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo2-050）。同じ名前のほかの版の記録から写していない |
 | 51 | リングマ | ポケモン | 無色 | 1進化 | 80 | ★キラ | Ursaring<br>Neo Discovery 15・34 |  |
 | 52 | ドーブル | ポケモン | 無色 | たね | 50 | ★キラ | Smeargle<br>Neo Discovery 11・30 | 日英の違い: ワザ スケッチ（Sketch）でコピーしたワザの条件 |
 | 53 | エネルギーアーク | トレーナー |  |  |  | ● | Energy Ark<br>Neo Discovery 75 |  |
@@ -566,17 +566,19 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 
 ### 33. バルキー / Tyrogue
 
-ベイビィ／LV.7／闘／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ●
+ベイビィ（エビワラー・サワムラー・カポエラーへ進化）／LV.7／闘／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ●
 
 英語版: Neo Discovery 66
 
-- ルール: If this Baby Pokémon is your Active Pokémon and your opponent announces an attack, your opponent flips a coin (before doing anything else). If tails, your opponent's turn ends.
+- ルール: 「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。 / If this Baby Pokémon is your Active Pokémon and your opponent announces an attack, your opponent flips a coin (before doing anything else). If tails, your opponent's turn ends.
 
 | ワザ | エネルギー | ダメージ | 効果 |
 |---|---|---:|---|
 | スマッシュパンチ / Smash Punch | 無 | 30 | 日本語: コインを投げて「うら」なら、このワザは失敗する。 英語: Flip a coin. If tails, this attack does nothing. |
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo2-033-balkie/)
+- 備考: 訂正（FIX-neo2-033-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のバルキー）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo2-033、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない
+- 備考: 訂正（FIX-neo2-033-EVOLVES-TO）: 空だった pokemon.evolves_to に「エビワラー・サワムラー・カポエラー」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のバルキー）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「エビワラーへ進化」「サワムラーへ進化」「カポエラーへ進化」「「エビワラー」「サワムラー」「カポエラー」のいずれかを上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo2-033）。同じ名前のほかの版の記録から写していない
 - 日本版の収録商品: 遺跡をこえて...
 
 ### 34. ヨーギラス / Larvitar
@@ -809,16 +811,18 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 
 ### 50. ププリン / Igglybuff
 
-ベイビィ／LV.6／無色／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ◆
+ベイビィ（プリンへ進化）／LV.6／無色／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ◆
 
 英語版: Neo Discovery 40
 
-- ルール: If this Baby Pokémon is your Active Pokémon and your opponent announces an attack, your opponent flips a coin (before doing anything else). If tails, your opponent's turn ends.
+- ルール: 「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。 / If this Baby Pokémon is your Active Pokémon and your opponent announces an attack, your opponent flips a coin (before doing anything else). If tails, your opponent's turn ends.
 - ポケモンパワー「じっとみる / Gaze」
   - 日本語: この力は、自分の番ごとに1回使える。相手のベンチの「特殊能力」を持っているポケモンを1匹選ぶ。そのポケモンは、この番が終わるまで、「特殊能力」を使うことができず、その力も消える。（そのポケモンがバトル場に出てきたとき、この効果は消える。）
   - 英語: Once during your turn (before your attack), choose 1 of your opponent's Benched Pokémon that has a Pokémon Power. That power stops working until the end of this turn. This effect ends if that Pokémon leaves the Bench.
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo2-050-pupurin/)
+- 備考: 訂正（FIX-neo2-050-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のププリン）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo2-050、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない
+- 備考: 訂正（FIX-neo2-050-EVOLVES-TO）: 空だった pokemon.evolves_to に「プリン」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のププリン）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「プリンへ進化」「「プリン」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo2-050）。同じ名前のほかの版の記録から写していない
 - 日本版の収録商品: 遺跡をこえて...
 
 ### 51. リングマ / Ursaring

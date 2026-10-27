@@ -40,7 +40,7 @@
 | 28 | デンリュウ | ポケモン | 雷 | 2進化 | 90 | ★キラ | Ampharos<br>Neo Revelation 1 |  |
 | 29 | ライコウ | ポケモン | 雷 | たね | 80 | ★キラ | Raikou<br>Neo Revelation 13 |  |
 | 30 | アンノーンK | ポケモン | 超 | たね | 40 | ● | Unown [K]<br>Neo Revelation 58 |  |
-| 31 | ムチュール | ポケモン | 超 | ベイビィ | 30 | ● | Smoochum<br>Neo Revelation 54 |  |
+| 31 | ムチュール | ポケモン | 超 | ベイビィ | 30 | ● | Smoochum<br>Neo Revelation 54 | 訂正（FIX-neo3-031-EVOLVES-TO）: 空だった pokemon.evolves_to に「ルージュラ」を入れた。根拠: kyuura が、同じカード（拡張パック第3弾「めざめる伝説」のムチュール）の日本語版のカードの画像（pcg-search.com [N3]）で、進化先の欄「ルージュラへ進化」「「ルージュラ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo3-031）。同じ名前のほかの版の記録から写していない |
 | 32 | アンノーンB | ポケモン | 超 | たね | 50 | ◆ | Unown [B]<br>Neo Revelation 39 |  |
 | 33 | アンノーンY | ポケモン | 超 | たね | 40 | ◆ | Unown [Y]<br>Neo Revelation 40 |  |
 | 34 | スターミー | ポケモン | 超 | 1進化 | 70 | ★キラ | Starmie<br>Neo Revelation 25 |  |
@@ -537,7 +537,7 @@ Neo Revelation にあって、日本版の本弾に収録されていないカ�
 
 ### 31. ムチュール / Smoochum
 
-ベイビィ／LV.6／超／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ●
+ベイビィ（ルージュラへ進化）／LV.6／超／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ●
 
 英語版: Neo Revelation 54
 
@@ -548,6 +548,7 @@ Neo Revelation にあって、日本版の本弾に収録されていないカ�
 | サイコキッス / Psykiss | 無 |  | 日本語: コインを投げて「おもて」なら、相手の場のポケモンについている「特殊エネルギーカード」を1枚選び、相手の山札にもどす。その後、その山札をよく切る。 英語: Flip a coin. If heads, choose a Special Energy card attached to 1 of your opponent's Pokémon. Your opponent shuffles that card into his or her deck. |
 
 - 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%83%A0%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AB_(%E3%82%81%E3%81%96%E3%82%81%E3%82%8B%E4%BC%9D%E8%AA%AC))
+- 備考: 訂正（FIX-neo3-031-EVOLVES-TO）: 空だった pokemon.evolves_to に「ルージュラ」を入れた。根拠: kyuura が、同じカード（拡張パック第3弾「めざめる伝説」のムチュール）の日本語版のカードの画像（pcg-search.com [N3]）で、進化先の欄「ルージュラへ進化」「「ルージュラ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo3-031）。同じ名前のほかの版の記録から写していない
 - 日本版の収録商品: めざめる伝説
 
 ### 32. アンノーンB / Unown [B]

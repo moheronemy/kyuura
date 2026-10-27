@@ -15,7 +15,8 @@
  "checked_values": {
   "kyuura_image": "kyuura が原典のページの画像で確かめた",
   "kyuura_data": "kyuura のカードデータ（data/cards.json）の値",
-  "engine_report": "kyuura-engine の照合の記録による（kyuura では確かめていない）"
+  "engine_report": "kyuura-engine の照合の記録による（kyuura では確かめていない）",
+  "existing_transcription": "kyuura の既存の転記 data/Silver_Bible_structured.md（利用者が 2026-10-18 に加えた『オフィシャルブック2000』の OCR・校正の転記。PDF の番号 = ページ + 2）の文。kyuura は原典の画像でこの文を確かめていない（照合の記録ではない。引用は scripts/build_card_rulings.py が転記の文と照らす）"
  },
  "rule_clauses": [
   {
@@ -834,6 +835,329 @@
      "ruling_id": "PT12",
      "engine_classification": "CONFIRMED（再利用: CS13）"
     }
+   ]
+  },
+  {
+   "id": "GR-2000-P308-BABY-SETUP",
+   "source": "P43",
+   "pages": [
+    "306〜311"
+   ],
+   "section": "公式ルール p.308「対戦の前に」「対戦スタート」（デッキ・カードを7枚取る・ポケモンを場に出す）",
+   "summary": "デッキには、かならずベイビィポケモンカードかたねポケモンカードを入れる。最初の 7 枚の手札にベイビィポケモンカード・たねポケモンカードが 1 枚もなければ、手札を見せて切り直す（相手は山札から最大 2 枚引ける）。切り直しは、手札にベイビィポケモンカードかたねポケモンカードが来るまでくりかえす。対戦の準備では、手札のベイビィポケモンカードかたねポケモンカードを 1 枚バトル場に、さらにあれば最大 5 枚までベンチに、裏にして出す",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [
+    "baby"
+   ],
+   "checked": "kyuura_image（2026-10-12 の『オフィシャルブック2000』の取り込みの読み取り。NEO-2000-OFFICIAL-RULES の notes の p.308 の要約「ベイビィポケモンかたねポケモンを必ず入れる」「たねポケモン（ベイビィポケモン）がなければ…切り直し」。この作業では読み直していない）",
+   "transcription_quotes": [
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 310,
+     "page": "308",
+     "quote": "デッキには、かならずベイビィポケモンカードまたはたねポケモンカードが、ふくまれていなければいけません。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 310,
+     "page": "308",
+     "quote": "切り直しは、手札にベイビィポケモンカードまたは、たねポケモンカードが来るまで、くりかえします。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 310,
+     "page": "308",
+     "quote": "おたがいのプレイヤーは、手札の中からベイビィポケモンカードまたは、たねポケモンカードを1枚選んで、自分のバトル場に裏にして出します。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 310,
+     "page": "308",
+     "quote": "手札にさらにベイビィポケモンカードまたは、たねポケモンカードがあるときは、最大5枚まで、裏にしてベンチに出すことができます。"
+    }
+   ],
+   "notes": [
+    "2026-10-27 に既存の記録を再利用して条項にした（原典の画像は読み直していない）。場に出すカードの種類の文は既存の転記で引いた（読み取りの要約には「バトル場に 1 枚、ベンチに最大5枚まで裏にして出す」とだけある）。",
+    "後の資料『トレーナーズ』Vol.5（P38。2000-03-01）p.60 の「ベイビィポケモンはたねポケモンと同様に扱う」（既存の記録の要約）は、この条項の根拠にしていない。"
+   ]
+  },
+  {
+   "id": "GR-2000-P309-BABY-BENCH",
+   "source": "P43",
+   "pages": [
+    "306〜311"
+   ],
+   "section": "公式ルール p.309「手札からポケモンを場に出す」",
+   "summary": "自分の番に、手札のベイビィポケモンカードかたねポケモンカードを、ベンチの空いている場所に出せる（出すかどうかはプレイヤーが決める）。手札から直接バトル場に出すことはできない",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "existing_transcription（p.309 は 2026-10-12 に kyuura が画像で読んだページだが、この項の読み取りの記録はない。2026-10-27 に既存の転記で引いた）",
+   "transcription_quotes": [
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 311,
+     "page": "309",
+     "quote": "手札にベイビィポケモンカードまたは、たねポケモンカードがあれば、そのカードを自分のベンチに出すことができます。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 311,
+     "page": "309",
+     "quote": "ベイビィポケモンカードやたねポケモンカードを手札から直接バトル場に出すことはできません。ポケモンを出せる場所は、空いているベンチだけです。"
+    }
+   ],
+   "notes": [
+    "2026-10-27 に既存の記録を再利用して条項にした（原典の画像は読み直していない）。原典の画像で確かめる候補（docs/engine-handover-baby-v0.113.md）。"
+   ]
+  },
+  {
+   "id": "GR-2000-P313-POKEMON-COMPOSITION",
+   "source": "P43",
+   "pages": [
+    "312〜320"
+   ],
+   "section": "公式ルール p.313「ポケモンが場をはなれる」・ポケモンのカードと「ポケモン」",
+   "summary": "ベイビィポケモンカードは場に出ると「ベイビィポケモン」（「ポケモン」の一種）になる。たねポケモンカードでベイビィポケモンを進化させたときは、ベイビィポケモンカードとたねポケモンカードをあわせて「ポケモン」と呼ぶ。進化カードで進化させたときは、進化カードとその下のベイビィポケモンカード・たねポケモンカード・進化カード（すべてがあるとはかぎらない）をあわせて「ポケモン」と呼ぶ。「ポケモン」が場をはなれたら（きぜつしてトラッシュ・手札にもどるなど）、構成していたベイビィポケモンカード・たねポケモンカード・進化カードそれぞれにもどる。再び場に出せば、前とは別の「ポケモン」",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "existing_transcription（kyuura は p.313 を画像で読んでいない。kyuura-engine v0.4a の docs/evolution-rules-v0.4a.md に p.313 の同じ文の読み取りがある（エンジンの記録。kyuura の確認ではない））",
+   "transcription_quotes": [
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 315,
+     "page": "313",
+     "quote": "ベイビィポケモンカードは、場に出ると「ベイビィポケモン」になります。「ベイビィポケモン」は、「ポケモン」の一種です。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 315,
+     "page": "313",
+     "quote": "たねポケモンカードによって「ベイビィポケモン」を進化させたときは、ベイビィポケモンカードとたねポケモンカードをあわせて「ポケモン」と呼びます。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 315,
+     "page": "313",
+     "quote": "進化カードによって「ポケモン」を進化させたときは、進化カードと、その下にあるベイビィポケモンカード、たねポケモンカード、進化カード、すべて"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 315,
+     "page": "313",
+     "quote": "「ポケモン」がいったん場をはなれたら、その「ポケモン」は、それを構成していたベイビィポケモンカード、たねポケモンカード、進化カード、それぞれにもどります。"
+    }
+   ],
+   "notes": [
+    "2026-10-27 に既存の記録を再利用して条項にした（原典の画像は読み直していない）。原典の画像で確かめる候補（docs/engine-handover-baby-v0.113.md）。"
+   ]
+  },
+  {
+   "id": "GR-2000-P314-BABY-RULE",
+   "source": "P43",
+   "pages": [
+    "312〜320"
+   ],
+   "section": "公式ルール p.314「ベイビィポケモンカード」（ベイビィポケモンのルール）",
+   "summary": "ベイビィポケモンがバトル場にいるかぎり、相手側のプレイヤーは、ポケモンのワザを使うときコインを投げ、「うら」ならそのワザは失敗する。ベイビィポケモンは、場に出ているかぎり「ポケモン（ベイビィポケモン）」、場に出ていないときは「カード（ベイビィポケモンカード）」としてあつかう",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [
+    "baby"
+   ],
+   "checked": "kyuura_image（2026-10-12 の読み取り。NEO-2000-OFFICIAL-RULES の notes の「ベイビィポケモン（pp.314・325）: バトル場にいるかぎり、相手はワザを使うときにコインを投げ、「うら」なら失敗」。この作業では読み直していない）",
+   "transcription_quotes": [
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 316,
+     "page": "314",
+     "quote": "ベイビィポケモンのルール・ベイビィポケモンがバトル場にいるかぎり、相手側のプレイヤーは、ポケモンのワザを使うとき、コインを投げます。コインが「うら」なら、そのワザは失敗となります。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 316,
+     "page": "314",
+     "quote": "ベイビィポケモンは、場に出ているかぎり「ポケモン(ベイビィポケモン)」としてあつかわれ、場に出ていないときには「カード(ベイビィポケモンカード)」としてあつかわれます。"
+    }
+   ],
+   "notes": [
+    "2026-10-27 に既存の記録を再利用して条項にした（原典の画像は読み直していない）。",
+    "カードの印刷の文は「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」（13 枚。2026-10-27 に kyuura がカードの画像で確かめた。data/curation/card_image_checks.json）。"
+   ]
+  },
+  {
+   "id": "GR-2000-P310-BABY-EVOLUTION",
+   "source": "P43",
+   "pages": [
+    "306〜311",
+    "312〜320",
+    "321〜325"
+   ],
+   "section": "公式ルール p.310「場にいるポケモンを進化させる」・p.314「このベイビィポケモンを進化させるカード」・p.324「18 ポケモンの進化」",
+   "summary": "場にいる、「〇〇に進化」と書かれたベイビィポケモンの上に、「〇〇」という名前のたねポケモンカードを重ねるのも「ポケモンの進化」（ワザ・特殊能力などで重ねるときも同じ）。書かれていない組み合わせで重ねてはいけない。ベイビィポケモンのカードの進化先の欄は、進化させるのに必要なたねポケモンのイラストと名前で、そのカードが手札にあれば上に重ねて進化させられる。そのほかの進化の規定（その番の最初から場にいたポケモンだけ・おたがいの最初の番は不可・同じ番にもう一度は不可・受け継ぐもの・回復するもの）は、p.310 の「場にいるポケモンを進化させる」の項にしたがう",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "existing_transcription（p.310・p.324 は 2026-10-12 に kyuura が画像で読んだページだが、ベイビィの進化の文の読み取りの記録はない。p.314 の進化先の欄の説明も読み取りの記録がない。2026-10-27 に既存の転記で引いた）",
+   "transcription_quotes": [
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 312,
+     "page": "310",
+     "quote": "また、場に「に進化」と記述されている「ベイビィポケモン」がいて、手札に「〇」という名前のたねポケモンカードがあるとき、その「ベイビィポケモン」を進化させることができます。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 312,
+     "page": "310",
+     "quote": "たとえば、自分の場に「ピチュー〈ピカチュウに進化〉」という「ベイビィポケモン」がいて、手札に「ピカチュウ」というたねポケモンカードがあれば、「ピチュー」を進化させることができます。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 316,
+     "page": "314",
+     "quote": "このカードが手札にあれば、このポケモンの上に重ねて、このポケモンを進化させることができます。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 326,
+     "page": "324",
+     "quote": "また、場にいるベイビィポケモンの上にたねポケモンカードを重ねることも、「ポケモンの進化」と呼びます。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 326,
+     "page": "324",
+     "quote": "書かれていない組み合わせでカードを重ねてはいけません。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 326,
+     "page": "324",
+     "quote": "「ポケモンの進化」に関するそのほかのルールについては、先の「自分の番でおこなうこと一場にいるポケモンを進化させる」の項目を参照してください。"
+    }
+   ],
+   "notes": [
+    "2026-10-27 に既存の記録を再利用して条項にした（原典の画像は読み直していない）。転記の p.310 の「「に進化」」「「〇」」は、転記で名前の部分が落ちたとみられる（引用はそのまま）。原典の画像で確かめる候補。",
+    "本の書き方は「〇〇に進化」、カードの印刷は「〇〇へ進化」（2026-10-27 の 13 枚の画像）。カードごとの進化先は data/cards.json の pokemon.evolves_to（日本語名の配列）。",
+    "kyuura-engine v0.4 の E2（「ベイビィポケモンにたねポケモンを重ねるのも進化」。p.310・p.324）は、v0.4a の画像の読み直しでは範囲外だった（エンジンの記録）。この条項はエンジンの記録を根拠にしていない。"
+   ]
+  },
+  {
+   "id": "GR-2000-P315-EVOLVED-BABY",
+   "source": "P43",
+   "pages": [
+    "312〜320"
+   ],
+   "section": "公式ルール p.315「たねポケモンカード」",
+   "summary": "たねポケモンカードは、場に出ているかぎり「ポケモン（たねポケモン）」、場に出ていないときは「カード（たねポケモンカード）」としてあつかう。ただし、ベイビィポケモンから進化したたねポケモンは、たねポケモンではなく「進化ポケモン」としてあつかう",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "existing_transcription（kyuura は p.315 を画像で読んでいない。2026-10-27 に既存の転記で引いた）",
+   "transcription_quotes": [
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 317,
+     "page": "315",
+     "quote": "たねポケモンカードは、場に出ているかぎり「ポケモン(たねポケモン)」としてあつかわれ、場に出ていないときには「カード(たねポケモンカード)」としてあつかわれます。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 317,
+     "page": "315",
+     "quote": "ただし、ベイビィポケモンから進化したたねポケモンは、たねポケモンではなく、「進化ポケモン」としてあつかわれます。"
+    }
+   ],
+   "notes": [
+    "2026-10-27 に既存の記録を再利用して条項にした（原典の画像は読み直していない）。原典の画像で確かめる候補。",
+    "カードの印刷の段階（data/cards.json の pokemon.stage の basic）は変わらない。場での「進化ポケモン」のあつかいは、場にいるあいだの状態で、カードの段階の値ではない。",
+    "後の資料 P38 p.60 の「ベイビィから進化したポケモンは「場にいる限り」進化ポケモンとして扱う」（既存の記録の要約）は、この条項の根拠にしていない。"
+   ]
+  },
+  {
+   "id": "GR-2000-P323-ATTACK-FAILURE",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.323「12 ワザの失敗」",
+   "summary": "ワザが失敗した場合でも、そのポケモンは、そのワザを使ったことになる",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "existing_transcription（p.323 は 2026-10-12 に kyuura が画像で読んだページだが、この項の読み取りの記録はない。kyuura-engine v0.2d の docs/coin-rules-v0.2d.md もp.323 の「12 ワザの失敗」を読んだと記録している（エンジンの記録））",
+   "transcription_quotes": [
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 325,
+     "page": "323",
+     "quote": "ワザが失敗した場合でも、そのポケモンは、そのワザを使ったことになります。"
+    }
+   ],
+   "notes": [
+    "2026-10-27 に既存の記録を再利用して条項にした（原典の画像は読み直していない）。原典の画像で確かめる候補。"
+   ]
+  },
+  {
+   "id": "GR-2000-P325-PRE-NEO-BABY",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.325「24 ポケモンカード★ネオ」",
+   "summary": "「ポケモンカード★ネオ」より前のカード（ベイビィポケモンについての説明がない）では、ベイビィポケモンカードはたねポケモンカードと同様に、場にいるベイビィポケモンはたねポケモンと同様にあつかう。ベイビィポケモンを進化させたたねポケモンカードは、場にあるかぎり進化カードとしてあつかい、そのポケモンは場にあるかぎり「進化ポケモン」としてあつかう（例: 「進化カード」をはがす説明で、ベイビィの上のたねポケモンカードをはがせる。相手の「進化ポケモン」のワザによるダメージや効果を受けないポケモンは、ベイビィから進化したたねポケモンのワザによるダメージや効果を受けない）。neo のカードの説明の読み方は、この項は書かない",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [
+    "baby"
+   ],
+   "checked": "kyuura_image（2026-10-12 の読み取り。NEO-2000-OFFICIAL-RULES の notes の「ネオより前のカードの説明の「たねポケモン」には、ベイビィポケモンもふくむ」。この作業では読み直していない。進化カード・進化ポケモンの文は既存の転記で引いた）",
+   "transcription_quotes": [
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 327,
+     "page": "325",
+     "quote": "ここでは、「ポケモンカード★ネオ」より前に存在しているカードにおいて、べイビィポケモンや、それに関連することがらがどのようにあつかわれるかを説明します。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 327,
+     "page": "325",
+     "quote": "ベイビィポケモンカードは、たねポケモンカードと同様にあつかわれます。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 327,
+     "page": "325",
+     "quote": "場にいるベイビィポケモンは、たねポケモンと同様にあつかわれます。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 327,
+     "page": "325",
+     "quote": "ベイビィポケモンを進化させたたねポケモンカードも、場にあるかぎり、進化カードとしてあつかわれます。"
+    },
+    {
+     "file": "data/Silver_Bible_structured.md",
+     "pdf_page": 327,
+     "page": "325",
+     "quote": "場にいるベイビィポケモンを、たねポケモンカードによって進化させたなら、場にあるかぎり、そのポケモンは「進化ポケモン」としてあつかわれます。"
+    }
+   ],
+   "notes": [
+    "2026-10-27 に既存の記録を再利用して条項にした（原典の画像は読み直していない）。転記の「べイビィ」（1 字目がひらがな）は転記のまま引いた。",
+    "ネオより前のカードの説明の読み方を、neo のカードの説明に一律に当てはめない（UQ-NEO-TEXT-BABY-CATEGORIES）。"
    ]
   }
  ],
@@ -19734,6 +20058,773 @@
     "効果を除くワザ（スピードスター・だましうち）で、受けるアンノーン自身の力か、ほかのアンノーンの力かは結果を変えうる（UQ-SPEED-STAR-SCOPE・UQ-SELF-EXCLUDING-POWER-COPIES）。それは段階の違いではなく、除く効果の範囲の問い。",
     "控えポケモンへのダメージに p.321 の段階をどう当てはめるかは、弱点・抵抗力について未解決（UQ-BENCH-DAMAGE-WEAKNESS-RESISTANCE）。この力は控えのアンノーンが受けるダメージも減らす（CR-UNOWN-DF-PROTECTS-OWN-UNOWN）。くつろぐかおりと重なる控えへのダメージで順番が結果を変えるのは、半分にする前のダメージが 40 以上のとき（例: 40 なら、半分 → -30 で 0、-30 → 半分で 10）で、今のデータの「悪」「無色」のワザでは起こらない。"
    ]
+  },
+  {
+   "id": "CR-BABY-RULE-COIN",
+   "topic": "ベイビィポケモンのルール",
+   "cards": [
+    {
+     "card_id": "neo1-022",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo1-042",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo1-044",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo1-070",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo2-033",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo2-050",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo3-031",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PF2-007",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "NIP1X-002",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "NIP2X-002",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PRN-012",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PRN-031",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PRN-037",
+     "target": {
+      "kind": "card"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ベイビィポケモンがバトル場にいるとき、だれが、いつコインを投げ、「うら」ならどうなるか",
+   "conclusion": "ベイビィポケモンの持ち主の相手のプレイヤー（ワザを使う側）が、そのベイビィポケモンがバトル場にいるあいだ、ワザを使うたびに 1 枚投げる。「うら」ならそのワザは失敗する。失敗してもワザを使ったことになるので、その番は終わる（その番にもう一度ワザを使うことはできない）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "neo1-022",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo1-042",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo1-044",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo1-070",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-033",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-050",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo3-031",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PF2-007",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "NIP1X-002",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "NIP2X-002",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PRN-012",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PRN-031",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PRN-037",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.314「ベイビィポケモンのルール」",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「12 ワザの失敗」",
+     "quote": "ワザが失敗した場合でも、そのポケモンは、そのワザを使ったことになります。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 325,
+      "page": "323",
+      "quote": "ワザが失敗した場合でも、そのポケモンは、そのワザを使ったことになります。"
+     }
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309「バトル場にいるポケモンのワザを使う」（ワザは番ごとに一度で、使うと番が終わる。GR-2000-P309-ATTACK-PROCEDURE）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "derived",
+     "statement": "ルールはワザを使うときにコインを投げさせ、「うら」ならそのワザを失敗とする（カードの文・p.314）。ワザが失敗してもワザを使ったことになり（p.323）、ワザを使うのは番ごとに一度で、使うと番が終わる（p.309）ので、「うら」ならその番は終わる"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P314-BABY-RULE",
+    "GR-2000-P323-ATTACK-FAILURE",
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-BABY-RULE-COIN-STEP",
+    "UQ-ATTACK-PRE-DAMAGE-COIN-ORDER"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "13 枚のルール文は 2026-10-27 に kyuura がカードの画像で確かめた（data/curation/card_image_checks.json の IMG-。6 枚は空だった値を訂正で埋めた）。一般の規定の当てはめで、カードごとの裁定を 13 に分けていない。",
+    "p.323 の文は既存の転記（existing_transcription）で、kyuura は原典の画像で確かめていない。",
+    "後の資料『トレーナーズ』Vol.5（P38。2000-03-01）p.63 も「「うら」ならワザは失敗し、自分の番は終わる」と書く（既存の記録 NEO-2000-PLAYRULE）。2000.02.14 版の根拠にしていない。",
+    "英語版（WotC）の文面・規定は根拠にしていない（日英の違いは data/rule_differences.json の baby）。"
+   ]
+  },
+  {
+   "id": "CR-BABY-RULE-COIN-STEP",
+   "topic": "ベイビィポケモンのルール",
+   "cards": [
+    {
+     "card_id": "neo1-022",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo1-042",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo1-044",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo1-070",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo2-033",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo2-050",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo3-031",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PF2-007",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "NIP1X-002",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "NIP2X-002",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PRN-012",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PRN-031",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PRN-037",
+     "target": {
+      "kind": "card"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ベイビィポケモンのルールのコインは、ワザを使う手順（p.309）のどこで投げ、「うら」のとき、ワザの説明をどこまで処理するか",
+   "conclusion": "ワザの使用の宣言（手順 3）のあと、ワザの説明の処理（手順 6）の前に投げる。「うら」なら、ワザの説明の内容（ダメージ・効果・説明に書かれたコイン）は処理しない。宣言の前の確かめ（手順 1・2。ワザを使えなくする効果・必要なエネルギー）で使えないワザでは投げない。手順 4 のほかの効果（すなかけなど）・手順 5 のこんらんのコイン・スタジアムのコインとの順番と、「うら」のあとに手順 5 などをするかは決まらない（UQ-ATTACK-PRE-DAMAGE-COIN-ORDER）。説明に「…しないと、このワザは使えない」と書かれた条件（エネルギーをトラッシュするなど）をいつするかは、この記録では決めていない",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309「バトル場にいるポケモンのワザを使う」の手順 4",
+     "quote": "4●ワザを使うポケモンが、ワザを失敗させたりワザの内容を変えてしまう効果を受けている場合は、それによってワザが失敗したりワザの内容が変わってしまうかどうかをチェックします。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 311,
+      "page": "309",
+      "quote": "4●ワザを使うポケモンが、ワザを失敗させたりワザの内容を変えてしまう効果を受けている場合は、それによってワザが失敗したりワザの内容が変わってしまうかどうかをチェックします。"
+     }
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.314「ベイビィポケモンのルール」",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo1-042",
+     "field": "pokemon.rules_text.ja",
+     "quote": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "checked": "kyuura_data"
+    }
+   ],
+   "inference": "p.309 は、宣言（手順 3）のあとに「ワザを失敗させたりワザの内容を変えてしまう効果」を確かめ（手順 4）、こんらん（手順 5）のあとでワザの説明を処理する（手順 6）。ベイビィポケモンのルールは、ワザを使うときにコインを投げさせ、「うら」ならワザを失敗させるので、宣言のあと・説明の処理の前の、ワザが失敗するかを確かめるところで投げると読める。ただし、ルールが「ワザを使うポケモンが受けている効果」（手順 4 の書き方）に当たるのか、相手のバトル場のポケモンのルールとして別にはたらくのかは書かれていない。失敗したワザの説明を処理する規定はない。手順 1・2 で使えないワザは宣言できないので、「ワザを使うとき」に当たらない",
+   "rule_clause_refs": [
+    "GR-2000-P309-ATTACK-PROCEDURE",
+    "GR-2000-P314-BABY-RULE"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-BABY-RULE-COIN",
+    "UQ-ATTACK-PRE-DAMAGE-COIN-ORDER"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "p.309 の手順 4 の文は既存の転記（existing_transcription）で、kyuura は原典の画像で確かめていない（p.309 は 2026-10-12 に読んだページだが、手順の文の読み取りの記録はない）。",
+    "後の資料 P38 p.63（2000-03-01）は ① 宣言 → ② ベイビィポケモンのルールのチェック → ③ すなかけなど → ④ こんらん → ⑤ 処理 と並べる（既存の記録 NEO-2000-PLAYRULE）。2000.02.14 版（P43 p.309）の手順にベイビィの段はなく、P38 の順番を 2000.02.14 版の規定として扱わない（適用日をさかのぼらせない）。",
+    "炎エネルギーをトラッシュするワザの説明は neo から「…トラッシュする。トラッシュできないとき、このワザのダメージはなくなる。」に変わった（RUL-ENERGY-DISCARD-ATTACKS）。ネオより前の「トラッシュしないと使えない」の説明のトラッシュとベイビィのコインの前後は、この記録で決めていない。",
+    "英語版（WotC）はワザの宣言の前に投げる（data/rule_differences.json の baby）。根拠にしていない。"
+   ]
+  },
+  {
+   "id": "CR-BABY-RULE-NOT-POWER",
+   "topic": "ベイビィポケモンのルール",
+   "cards": [
+    {
+     "card_id": "neo1-022",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo1-042",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo1-044",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo1-070",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo2-033",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo2-050",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo3-031",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PF2-007",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "NIP1X-002",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "NIP2X-002",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PRN-012",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PRN-031",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PRN-037",
+     "target": {
+      "kind": "card"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG3-007"
+   ],
+   "question": "ベイビィポケモンのルールは特殊能力か。特殊能力を使えなくする効果（ブビィのモクモク・ベトベトンのかがくへんかガスなど）で止まるか",
+   "conclusion": "特殊能力ではない。特殊能力を使えなくする・その力を消す効果では止まらず、ベイビィポケモンがバトル場にいれば、相手はワザを使うときにコインを投げる。エレキッドの［わんぱくパンチ］・ププリンの［じっとみる］は特殊能力で、こうした効果を受ける",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.314「ベイビィポケモンカード」の各部の説明（ワザや特殊能力の欄）",
+     "quote": "このポケモンが持っているワザや特殊能力を表しています。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 316,
+      "page": "314",
+      "quote": "このポケモンが持っているワザや特殊能力を表しています。"
+     }
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.314「ベイビィポケモンカード」の各部の説明（ベイビィポケモンのルール）",
+     "quote": "ベイビィポケモンのルール・ベイビィポケモンがバトル場にいるかぎり、相手側のプレイヤーは、ポケモンのワザを使うとき、コインを投げます。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 316,
+      "page": "314",
+      "quote": "ベイビィポケモンのルール・ベイビィポケモンがバトル場にいるかぎり、相手側のプレイヤーは、ポケモンのワザを使うとき、コインを投げます。"
+     }
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo1-022",
+     "field": "pokemon.attacks[0].text.ja",
+     "quote": "すべてのポケモンは「特殊能力」を使うことができず、その力も消える。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.311「ポケモンの特殊能力を使う」（GR-2000-P311-POKEMON-POWERS）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "p.314 はカードの各部の説明で、「ワザや特殊能力」の欄と「ベイビィポケモンのルール」を別の項目にする。13 枚の印刷でも、ルールの文は【特殊能力】の見出しのない枠にあり、エレキッド・ププリンの特殊能力は【特殊能力】の見出しつきで別にある（2026-10-27 の kyuura のカードの画像の確認）。特殊能力を止める効果の説明は「特殊能力」を対象にするので、ルールには当てはまらないと読める。ルールそのものが特殊能力でないと明記した 2000.02.14 版の文は見つけていない",
+   "rule_clause_refs": [
+    "GR-2000-P314-BABY-RULE",
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [],
+   "engine_refs": [],
+   "notes": [
+    "p.314 の各部の説明の文は既存の転記（existing_transcription）で、kyuura は原典の画像で確かめていない。",
+    "エンジンの設計（ルールを特殊能力の登録表で扱うかなど）は kyuura の裁定にしない。"
+   ]
+  },
+  {
+   "id": "CR-BABY-WITHOUT-ATTACKS",
+   "topic": "ワザのないベイビィポケモン",
+   "cards": [
+    {
+     "card_id": "neo1-044",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "neo2-050",
+     "target": {
+      "kind": "card"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ワザのないベイビィポケモン（エレキッド・ププリン）を、デッキに入れて対戦に使えるか。バトル場にいるときはどうなるか",
+   "conclusion": "使える。デッキ・対戦の準備・ベンチに出す規定に、ワザのないポケモンを除く規定はない。バトル場にいるあいだはワザを使えないので、自分の番はワザを使わずに終える。特殊能力（［わんぱくパンチ］・［じっとみる］）は、それぞれの説明にしたがって使える。ベイビィポケモンのルールは、ワザがなくてもはたらく",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.308「デッキ」「同じ名前のカード」（GR-2000-P308-BABY-SETUP・GR-2000-P308-SAME-NAME）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309「バトル場にいるポケモンのワザを使う」",
+     "quote": "ワザを使わないで自分の番を終わらせてもかまいません。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 311,
+      "page": "309",
+      "quote": "ワザを使わないで自分の番を終わらせてもかまいません。"
+     }
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo1-044",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "この力は、自分の番ごとに1回使え",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo2-050",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "この力は、自分の番ごとに1回使える。",
+     "checked": "kyuura_data"
+    }
+   ],
+   "inference": "デッキの規定（60 枚・同じ名前は 4 枚まで・ベイビィかたねを必ず入れる）と、ベンチに出す・バトル場に出す規定は、ポケモンにワザがあることを求めない。ワザを使うかはプレイヤーが決め、使わずに番を終えてよい。禁止する文がないことからの推論なので SUPPORTED にした",
+   "rule_clause_refs": [
+    "GR-2000-P308-BABY-SETUP",
+    "GR-2000-P308-SAME-NAME",
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-BABY-RULE-COIN"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "kyuura-engine v0.113 は、ベイビィポケモンのカードを対戦に使えるカードにしていない（未対応）。これはエンジンの実装の範囲で、ルール上の禁止ではない（kyuura の裁定にしない）。",
+    "p.309 の文は既存の転記（existing_transcription）。"
+   ]
+  },
+  {
+   "id": "CR-NEUTRAL-SHIELD-EVOLVED-BABY",
+   "topic": "ニュートラルシールド",
+   "cards": [
+    {
+     "card_id": "PR1-005",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ニュートラルシールド"
+     }
+    },
+    {
+     "card_id": "PR1-012",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ニュートラルシールド"
+     }
+    }
+   ],
+   "related_cards": [
+    "neo1-042"
+   ],
+   "question": "ミュウのニュートラルシールドは、ベイビィポケモンから進化したたねポケモン（例: ピチューの上に重ねたピカチュウ）のワザを受けないか。進化していないベイビィポケモンのワザはどうか",
+   "conclusion": "ベイビィポケモンから進化したたねポケモンは、場にいるかぎり「進化ポケモン」なので、ミュウはそのワザを受けない。進化していないベイビィポケモンは進化ポケモンではない（ネオより前のカードの説明では、場にいるベイビィポケモンはたねポケモンと同様）ので、そのワザは受ける",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "PR1-005",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "ミュウは相手の進化ポケモンからの「ワザ」を受けない。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.315「たねポケモンカード」",
+     "quote": "ただし、ベイビィポケモンから進化したたねポケモンは、たねポケモンではなく、「進化ポケモン」としてあつかわれます。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 317,
+      "page": "315",
+      "quote": "ただし、ベイビィポケモンから進化したたねポケモンは、たねポケモンではなく、「進化ポケモン」としてあつかわれます。"
+     }
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.325「24 ポケモンカード★ネオ」",
+     "quote": "場にいるベイビィポケモンを、たねポケモンカードによって進化させたなら、場にあるかぎり、そのポケモンは「進化ポケモン」としてあつかわれます。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 327,
+      "page": "325",
+      "quote": "場にいるベイビィポケモンを、たねポケモンカードによって進化させたなら、場にあるかぎり、そのポケモンは「進化ポケモン」としてあつかわれます。"
+     }
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.325「24 ポケモンカード★ネオ」",
+     "quote": "場にいるベイビィポケモンは、たねポケモンと同様にあつかわれます。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 327,
+      "page": "325",
+      "quote": "場にいるベイビィポケモンは、たねポケモンと同様にあつかわれます。"
+     }
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P315-EVOLVED-BABY",
+    "GR-2000-P325-PRE-NEO-BABY"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [],
+   "engine_refs": [],
+   "notes": [
+    "一般の定義（GR-2000-P315-EVOLVED-BABY・GR-2000-P325-PRE-NEO-BABY）を、説明の「進化ポケモン」にそのまま当てはめた個別の記録。ミュウの解説・Q&A の記述は探していない。",
+    "ミュウ（PR1-005 は 1997-01-15、PR1-012 は 1997-08。data/engine_targets.json の release_date）はネオより前のカードで、p.325 の項に当たる。p.325 の例の文（「このカードは、相手の『進化ポケモン』のワザによるダメージや効果を受けない」）はカードの名前を書かないので、ニュートラルシールドの最新の説明と同じかは確かめていない（例を根拠の引用にしていない）。",
+    "p.315・p.325 の文は既存の転記（existing_transcription）で、kyuura は原典の画像で確かめていない。"
+   ]
+  },
+  {
+   "id": "CR-DEVOLUTION-SPRAY-EVOLVED-BABY",
+   "topic": "退化スプレー",
+   "cards": [
+    {
+     "card_id": "PMCG1-086",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "退化スプレー"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ベイビィポケモンから進化したたねポケモンに退化スプレーを使えるか。はがしたあとはどうなるか",
+   "conclusion": "使える。そのポケモンは場にいるかぎり「進化ポケモン」で、ベイビィの上のたねポケモンカードは場にあるかぎり進化カードなので、はがして捨てられる（退化）。はがすと下のベイビィポケモンのカードの内容がそのポケモンを表し、特殊状態・持続する効果から回復する。捨てたたねポケモンカードは、場をはなれたのでたねポケモンカードにもどる",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "PMCG1-086",
+     "field": "trainer.text.ja",
+     "quote": "自分の進化ポケモンを1匹選び、進化カードを何枚でもはがしてすてることができる。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.325「24 ポケモンカード★ネオ」",
+     "quote": "ベイビィポケモンを進化させたたねポケモンカードも、場にあるかぎり、進化カードとしてあつかわれます。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 327,
+      "page": "325",
+      "quote": "ベイビィポケモンを進化させたたねポケモンカードも、場にあるかぎり、進化カードとしてあつかわれます。"
+     }
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.325「24 ポケモンカード★ネオ」",
+     "quote": "場にいるベイビィポケモンを、たねポケモンカードによって進化させたなら、場にあるかぎり、そのポケモンは「進化ポケモン」としてあつかわれます。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 327,
+      "page": "325",
+      "quote": "場にいるベイビィポケモンを、たねポケモンカードによって進化させたなら、場にあるかぎり、そのポケモンは「進化ポケモン」としてあつかわれます。"
+     }
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324「19 ポケモンの退化」（GR-2000-P324-DEVOLUTION）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.313「ポケモンが場をはなれる」",
+     "quote": "「ポケモン」がいったん場をはなれたら、その「ポケモン」は、それを構成していたベイビィポケモンカード、たねポケモンカード、進化カード、それぞれにもどります。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 315,
+      "page": "313",
+      "quote": "「ポケモン」がいったん場をはなれたら、その「ポケモン」は、それを構成していたベイビィポケモンカード、たねポケモンカード、進化カード、それぞれにもどります。"
+     }
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P325-PRE-NEO-BABY",
+    "GR-2000-P324-DEVOLUTION",
+    "GR-2000-P313-POKEMON-COMPOSITION"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [],
+   "engine_refs": [],
+   "notes": [
+    "退化スプレー（1996-10-20）はネオより前のカードで、p.325 の項に当たる。p.325 の例の文（「そのポケモンについている『進化カード』を好きなだけはがし、......」）はカードの名前を書かないので、退化スプレーの最新の説明と同じかは確かめていない（例を根拠の引用にしていない）。",
+    "neo の退化スプレーHYPER（neo2-056）・わるいオムスターのげんしのしずく（neo4-038）の「進化カード」は UQ-NEO-TEXT-BABY-CATEGORIES。",
+    "p.313・p.325 の文は既存の転記（existing_transcription）で、kyuura は原典の画像で確かめていない。"
+   ]
   }
  ],
  "issues": [
@@ -23029,8 +24120,8 @@
   {
    "id": "UQ-ATTACK-PRE-DAMAGE-COIN-ORDER",
    "status": "UNRESOLVED",
-   "question": "ワザの宣言のあとに投げるコイン（p.309 の手順 4 の効果・手順 5 のこんらん・クチバシティジム）が重なるとき、どの順番に投げ、手順 4 で失敗したあとも手順 5 やスタジアムのコインをするか",
-   "why_unresolved": "p.309 は手順を並べるだけで、手順 4 で失敗したときに手順 5 をするか、手順 4 の効果が 2 つ以上あるときの順番、スタジアムのコインとの順番を書かない。p.323 のワザの失敗の規定もこんらんにふれない。『トレーナーズ』Vol.5 の「ネオ」のプレイルール（NEO-2000-PLAYRULE）は順番を並べるだけで、2000.02.14 版の規定ではない（エンジンの記録）",
+   "question": "ワザの宣言のあとに投げるコイン（p.309 の手順 4 の効果・手順 5 のこんらん・クチバシティジム・ベイビィポケモンのルール（p.314））が重なるとき、どの順番に投げ、ワザが失敗したあとも（手順 4 の効果・ベイビィのコイン）手順 5 やスタジアムのコインをするか",
+   "why_unresolved": "p.309 は手順を並べるだけで、手順 4 で失敗したときに手順 5 をするか、手順 4 の効果が 2 つ以上あるときの順番、スタジアムのコインとの順番を書かない。p.323 のワザの失敗の規定もこんらんにふれない。『トレーナーズ』Vol.5 の「ネオ」のプレイルール（NEO-2000-PLAYRULE）は順番を並べるだけで、2000.02.14 版の規定ではない（エンジンの記録）。ベイビィポケモンのルールのコイン（p.314）は、p.309 の手順に段がなく、手順 4 の「ワザを使うポケモンが受けている効果」としてあつかうかも書かれていない（宣言のあと・説明の処理の前に投げることは CR-BABY-RULE-COIN-STEP）。後の資料『トレーナーズ』Vol.5 p.63 の順番（宣言 → ベイビィ → すなかけなど → こんらん）は2000.02.14 版の規定ではない（適用日をさかのぼらせない）",
    "official_material": "insufficient",
    "sources": [
     {
@@ -23047,11 +24138,22 @@
      "source": "P43",
      "page": "323",
      "location": "p.323 きぜつ・ポケモンチェック（エンジンの記録が挙げる規定）"
+    },
+    {
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.314「ベイビィポケモンのルール」（kyuura の 2026-10-12 の読み取り）"
+    },
+    {
+     "source": "P38",
+     "page": "63",
+     "location": "p.63「ワザの宣言から処理まで」（後の資料。2000-03-01。2000.02.14 版の規定ではない）"
     }
    ],
    "rule_clause_refs": [
     "GR-2000-P309-ATTACK-PROCEDURE",
-    "GR-2000-P322-CONFUSION"
+    "GR-2000-P322-CONFUSION",
+    "GR-2000-P314-BABY-RULE"
    ],
    "cases": [
     {
@@ -23082,6 +24184,13 @@
      },
      "engine_ruling": "VM1",
      "note": "スタジアムのコインと手順 4・5・ワザの失敗の順番"
+    },
+    {
+     "card_id": "neo1-042",
+     "target": {
+      "kind": "card"
+     },
+     "note": "ベイビィポケモン（13 枚とも同じルール。例としてピチュー）がバトル場にいるとき、相手のワザのベイビィのコインと、手順 4 のほかの効果（すなかけなど）・手順 5 のこんらん・スタジアムのコインの順番、「うら」でワザが失敗したあとに手順 5 などをするか（kyuura が 2026-10-27 に加えた事例。エンジンの裁定はない）"
     }
    ],
    "related_engine_rulings": [],
@@ -23117,7 +24226,8 @@
    ],
    "notes": [
     "エンジンの記録（停止コードで止める未解決の問い）を取り込んだ。kyuura による原典の再読・新しい裁定はない。",
-    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。"
+    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。",
+    "2026-10-27: ベイビィポケモンのルールのコインを問いと事例に加えた（kyuura の調査。原典の画像は読み直していない。エンジンの記録の取り込みの部分（engine_refs・source_provenance）は変えていない）。"
    ],
    "audit": {
     "audited_on": "2026-10-19",
@@ -26496,6 +27606,111 @@
     "game_effect_note": "同じ力を持つカードが 2 匹以上のとき、減らす・加える量（アンノーンD・[N]・M は 30 か 0、わるいデンリュウは 10 か 0）が変わる。どれがはたらくかは、効果を除くワザの読み方と組み合わさるとき（スピードスター・だましうち）に、最終ダメージを変える",
     "resolution_needs": "当時の日本語の公式の Q&A・大会の裁定・公式の書籍のカードの解説で、「ほかの…がはたらいているとき、この力は、はたらかない」のカードが 2 匹以上場にいるときの扱いを書いたもの（第2弾の全カードの解説を載せた資料。たとえば『トレーナーズ』Vol.8 の付録「公式 全カードブック」（kyuura の読取メモに付録の存在だけがある。スキャンは確かめていない））",
     "searched": "kyuura の記録（data/sidecar・data/rule_history.json の資料のページの記録・docs/printed-sources.md）、以前の作業の『トレーナーズ』Vol.7〜9 の読取メモ（Vol.9 pp.22〜23 の「ポケモンカードQ&A」9 問は『遺跡をこえて...』のカード中心だが、アンノーンの問いはない）、日本語のウェブ検索（カードの販売ページだけで、裁定は見つからない）。Internet Archive の公式サイトの写し（2002 年の「あそびかたQ&A」の目次など）は、この環境から接続できず読めなかった。『オフィシャルブック2000』（2000-02-29）は第2弾より前の本で、アンノーンを載せていない。ガイドブックの新しい読み直しはしていない（依頼の範囲外）",
+    "new_sources": []
+   }
+  },
+  {
+   "id": "UQ-NEO-TEXT-BABY-CATEGORIES",
+   "status": "UNRESOLVED",
+   "question": "neo のカードの説明で「たねポケモン」とだけ書かれているとき、ベイビィポケモン（カード）をふくむか。また、説明の「進化カード」に、ベイビィポケモンを進化させたたねポケモンカードをふくむか",
+   "why_unresolved": "公式ルール 2000.02.14 版 p.325 の「24 ポケモンカード★ネオ」は、ネオより前のカード（ベイビィポケモンについての説明がない）の読み方だけを書く。neo のカードの説明には、「ベイビィポケモン」「たねポケモン」「進化カード」を並べて書くもの（ポケモンマーチ・タイムカプセル・やさしいほのお など）と、「たねポケモン」「進化カード」とだけ書くもの（すごいつりざお・いかく・ポケモン育て屋夫婦 など）があり、後者にベイビィをふくむかを書いた 2000.02.14 版の文はない。p.315 は、ベイビィから進化したたねポケモンを「進化ポケモン」とあつかうと書くが、そのたねポケモンカードを「進化カード」とあつかうと書くのは p.325（ネオより前のカード）だけ。後の資料『トレーナーズ』Vol.5 p.60 の「ベイビィポケモンはたねポケモンと同様に扱う」（既存の記録の要約）は、どの場面の文か（デッキ・ベンチの規定か、説明の読み方か）が既存の記録から分からず、2000.02.14 版の規定でもない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.325「24 ポケモンカード★ネオ」（ネオより前のカードの読み方）"
+    },
+    {
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.315「たねポケモンカード」（ベイビィから進化したたねポケモンは進化ポケモン）"
+    },
+    {
+     "source": "P38",
+     "page": "58〜62",
+     "location": "p.60（後の資料。2000-03-01。既存の記録の要約だけ。2000.02.14 版の規定ではない）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P325-PRE-NEO-BABY",
+    "GR-2000-P315-EVOLVED-BABY"
+   ],
+   "cases": [
+    {
+     "card_id": "neo1-074",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "すごいつりざお"
+     },
+     "note": "「うら」なら「たねポケモン」を 1 枚トラッシュから手札に: ベイビィポケモンカードを選べるか"
+    },
+    {
+     "card_id": "neo3-049",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "いかく"
+     },
+     "note": "相手が「たねポケモン」なら: 相手のバトル場のベイビィポケモン・ベイビィから進化したたねポケモンに当たるか"
+    },
+    {
+     "card_id": "neo3-056",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ポケモン育て屋夫婦"
+     },
+     "note": "場の「たねポケモン」「1進化ポケモン」を選ぶ: ベイビィポケモン・ベイビィから進化したたねポケモンを選べるか"
+    },
+    {
+     "card_id": "NIP1-021",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "マスターボール"
+     },
+     "note": "ネオより前のマスターボールと同じ書き方の説明を、イントロパック★neo（2001-04-06）で印刷したもの。「たねポケモン」にベイビィポケモンカードをふくむか"
+    },
+    {
+     "card_id": "neo2-056",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "退化スプレーHYPER"
+     },
+     "note": "ベイビィから進化したたねポケモン（進化ポケモン）の上のたねポケモンカードを「進化カード」としてはがせるか"
+    },
+    {
+     "card_id": "neo4-038",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "げんしのしずく"
+     },
+     "note": "退化スプレーHYPER と同じ（相手の場の進化ポケモンの「進化カード」）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "kyuura-engine v0.113 はベイビィポケモンのカードを対戦に使えるカードにしていない（未対応）。ベイビィを対応にすると、この問いの場面が起こりうる",
+    "all_cards": "data/cards.json の neo の説明で「たねポケモン」とだけ書くもの 8（うち 3 は化石の進化カードを「たねポケモン」としてあつかう説明で、この問いの場面ではない）、「ベイビィポケモン」と「たねポケモン」を並べて書くもの 11（2026-10-27 に探した）"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-2D113B5",
+    "date": "2026-10-27"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-27 のベイビィ 13 枚の準備で、公式ルールの p.325 の範囲とカードの文面から立てた）。エンジンの記録に結ぶ裁定はない。",
+    "ネオより前のカードの説明の「たねポケモン」にベイビィをふくむこと（p.325）を、neo の説明に一律に当てはめない。逆に、neo の説明の「たねポケモン」がベイビィをふくまないとも決めていない。",
+    "p.315・p.325 の文は既存の転記（data/Silver_Bible_structured.md）で、kyuura は原典の画像で確かめていない。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-27",
+    "game_effect": "game_result",
+    "game_effect_note": "選べるカード・当たる相手が変わる（すごいつりざおでベイビィポケモンカードを手札に加えられるか、いかく・ポケモン育て屋夫婦がベイビィに当たるか、退化スプレーHYPER でベイビィの上のたねポケモンカードをはがせるか）",
+    "resolution_needs": "当時の日本語の公式の Q&A・『トレーナーズ』のプレイルールQ&A（Vol.5 pp.58〜62 のベイビィポケモン Q1〜Q6 の全文）・neo のカードの解説で、neo の説明の「たねポケモン」「進化カード」とベイビィの関係を書いたもの。P38 p.60 の文の範囲は、原典の画像で確かめる（今回は読み直していない）",
+    "searched": "kyuura の記録（data/rule_history.json の NEO-2000-OFFICIAL-RULES・NEO-2000-PLAYRULE、data/rule_differences.json の baby、data/sidecar/）と、既存の転記data/Silver_Bible_structured.md の pp.308〜325（2026-10-27）。neo のカードの文面は data/cards.json で探した。原典の画像は読み直していない",
     "new_sources": []
    }
   }
@@ -32810,6 +34025,43 @@
     "UQ-ENERGY-DRAIN-NO-ENERGY",
     "UQ-MULTIPLE-DAMAGE-TRIGGERS-ONE-ATTACK"
    ]
+  },
+  {
+   "id": "ENGINE-2D113B5",
+   "repository": "moheronemy/kyuura-engine",
+   "branch": "claude/v0.113-variable-coins-search-attachments",
+   "commit": "2d113b5eeea0dbd4f7466e144f7a1345494405c0",
+   "engine_version": "v0.113",
+   "parent_version_commit": "c6fb94ffd5890b80cce4807c21a8a1b73886b65c",
+   "documents_read_at": "2d113b5eeea0dbd4f7466e144f7a1345494405c0",
+   "kyuura_commit_used_by_engine": "73a169063463bbf7bcaa3137d70cbf9721d11534",
+   "research_commit_used_by_engine": "73a169063463bbf7bcaa3137d70cbf9721d11534",
+   "imported_on": "2026-10-27",
+   "documents": [
+    "docs/variable-coins-search-attachments-v0.113.md",
+    "docs/data-provenance.md",
+    "kyuura_engine/data/card_sources.json",
+    "kyuura_engine/data/research_links.json",
+    "tests/test_variable_coins_search_attachments_v0_113.py"
+   ],
+   "ruling_sets": [],
+   "imported_rulings": [],
+   "unresolved_rulings": [],
+   "not_imported": [],
+   "no_ruling_tables": true,
+   "engine_reported_totals": {
+    "stop_codes": 237,
+    "unresolved_rulings": 238,
+    "note": "docs/variable-coins-search-attachments-v0.113.md 2 章の数（kyuura の研究の論点の数としてエンジンが挙げたのは 72。新しい停止コード・問いはない）。kyuura の engine_unresolved_index は v0.68 までを照らしていて、v0.69〜v0.112 の未解決は取り込んでいないので、この数と照らしていない（範囲外の版の未取り込みを補って数を合わせない）"
+   },
+   "notes": [
+    "取り込みの範囲は v0.113 の報告事項だけ: 文書の 5 章（ESPの実在する経路と続きの情報）・8 章（未解決の裁定と実装上の読み方）・9 章（不具合）・10 章（検証）・11 章（kyuura への報告事項）と、docs/data-provenance.md の v0.113 の節・card_sources.json の 6 枚の採用の記録・research_links.json・EspRealPathTest。v0.69〜v0.112 の文書・裁定の表・未解決の一覧は取り込んでいない（登録表の写しを v0.113 に上げたことは、研究の取り込みの範囲を広げたことではない）。原典は読み直していない。checked: engine_report は kyuura の独立の確認ではない。",
+    "v0.113 の文書に番号つきの裁定の表はない（8 章の表は区分ごとの一覧で、既存の FC1・RB2・HC5・FD1・HC9・VS1・CE1・CE2・CM1・TE1・RB1・BZ2・MEC1 を再利用と書く）。どの問いも kyuura で解決済みにしていない（UQ-STATED-COUNT-SHORT・UQ-SPECIAL-ENERGY-AS-TYPED-ENERGY・UQ-UP-TO-ZERO-CHOICE・UQ-FACE-DOWN-CARD・UQ-COPIED-ATTACK などは未解決のまま）。",
+    "8 章の「実装上の読み方」（みんなでおどるの 0 枚、ゆうでんの H = 0・つける先がないとき、ダークフレイムの順番（トラッシュ → ダメージ → つける）と悪エネルギーの読み方、ファイヤーラッシュの選べるカードがないとき、くろいキバのレインボー）はエンジンが一般規定（GR-2000-P309-ATTACK-PROCEDURE など）を当てはめた読み方で、kyuura の裁定（CR-）にしていない。",
+    "実装の事項は engine_positions に書いた: ESPのやり直しのあとの結果の運び（v0.113 で直した不具合。ENG-V0113-ESP-REDO-CARRIED-RESULTS）、v0.112 の文書の訂正（ENG-V0113-ESP-TENTACLE-GRIP-REACH）、直していない不具合（ENG-V0113-ESP-REDO-SWITCH-RESULT）、ゆうでんの FC1 の制限（ENG-V0113-ATTRACT-CURRENT-SHORT-DECK）。どれも公式の裁定・kyuura の論点にしていない。",
+    "v0.113 の 6 枚（neo1-063・neo3-028・neo3-043・neo3-044・neo4-022・PR1-078）の登録は data/curation/engine_registered_cards.json（2026-10-27 に v0.113 の木で作り直した写し）。報告文の CC-PMCG6-063-P229 の対象はサカキのニャース（PMCG6-063）で、ロケット団のニャース（PR1-078）の照合の記録ではない（data/sidecar/card_checks.json の later_notes）。",
+    "エンジンの全体のテストは、文書 10.2 節のとおり 6,315 件のうち失敗 2（既存のテストの期待の更新の漏れ）で、その 2 つの期待を直したあとに 2 モジュールと新しいテストのモジュール（138 件）と文書を読むテストを再実行して通った（全体を一回ですべて通した結果ではない）。kyuura ではエンジンのテスト・対戦を再実行していない。"
+   ]
   }
  ],
  "engine_unresolved_index": [
@@ -34629,6 +35881,187 @@
     "UQ-FACE-DOWN-CARD"
    ],
    "kyuura_handling": "エンジンの実装の不具合と制限で、公式の未解決の裁定ではない（kyuura の論点にしない）。うらのカードの項目の扱い・爆発ジムとの関係（FD1・FD2）は別の問いとして UQ-FACE-DOWN-CARD に取り込んだ。"
+  },
+  {
+   "id": "ENG-V0113-ESP-REDO-CARRIED-RESULTS",
+   "kind": "implementation_matter",
+   "engine_import": "ENGINE-2D113B5",
+   "document": "docs/variable-coins-search-attachments-v0.113.md",
+   "section": "1 章の前文・5 章・9.1 節",
+   "cards": [
+    {
+     "card_id": "PMCG6-087",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ナツメのESP"
+     }
+    },
+    {
+     "card_id": "PMCG6-053",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "サイコリンク"
+     }
+    },
+    {
+     "card_id": "PMCG5-041",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "ほうでん"
+     }
+    },
+    {
+     "card_id": "PMCG6-015",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "くもがくれガス"
+     }
+    },
+    {
+     "card_id": "neo4-022",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "ファイヤーラッシュ"
+     }
+    }
+   ],
+   "engine_rulings": [],
+   "summary": "v0.113 で直した不具合（エンジンの報告）。ナツメのESPのやり直しのあと、コインを投げた要素とそのあとの要素をもう一度処理するとき、前の要素のトラッシュ・ダメージの結果を続きの情報に運んでいなかった。ナツメのフーディンの［サイコリンク］で超の色マーカーのポケモンのワザを使い、ESPをつけると、既存のワザでも起こる。エンジンは、修正前のv0.112 の固定の木で、マチスのエレブーの「ほうでん」（トラッシュの結果）とキョウのドガースの「くもがくれガス」（ダメージの結果）が、やり直す・やり直さないのどちらの答えでも内部エラー（KeyError）になることを確かめ、v0.113 でトラッシュの結果（discarded_results）とダメージの結果（damage_results）を運ぶように直した。回帰のテストは、修正後に通ることと、運んだ値を除くと同じ内部エラーになることを確かめる。ひかるリザードンの「しゃくねつのほのお」も同じ結果を読むので同じ修正の範囲（個別のテストはない）。直したのはトラッシュ・ダメージの結果だけで、すべての種類の続きの情報ではない（入れ替えの結果は ENG-V0113-ESP-REDO-SWITCH-RESULT）",
+   "engine_fix": {
+    "state": "fixed",
+    "as_of": "v0.113",
+    "reproduced_in": "v0.112（c6fb94f。エンジンの確認）",
+    "tests": [
+     "EspRealPathTest.test_existing_discharge_and_smokescreen_no_longer_crash",
+     "EspRealPathTest.test_rushing_flames_carries_the_discarded_cards"
+    ]
+   },
+   "engine_basis": [],
+   "kyuura_records": [
+    "UQ-ESP-REDO"
+   ],
+   "kyuura_handling": "エンジンの実装の不具合の修正で、公式の裁定・未解決の問いではない（kyuura の論点にしない）。ESPのやり直しの問い（UQ-ESP-REDO の ES0〜ES3）は変えていない。kyuura は不具合を再現していない（エンジンの文書・テストの名前を読んだだけ）"
+  },
+  {
+   "id": "ENG-V0113-ESP-TENTACLE-GRIP-REACH",
+   "kind": "implementation_matter",
+   "engine_import": "ENGINE-2D113B5",
+   "document": "docs/variable-coins-search-attachments-v0.113.md",
+   "section": "5 章・9.1 節",
+   "cards": [
+    {
+     "card_id": "SI-016",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "しょくしゅをつかう"
+     }
+    },
+    {
+     "card_id": "PMCG6-053",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "サイコリンク"
+     }
+    },
+    {
+     "card_id": "PMCG6-087",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ナツメのESP"
+     }
+    }
+   ],
+   "engine_rulings": [],
+   "summary": "v0.112 の文書（docs/energy-coins-draw-v0.112.md の 3.4 節・11 章）とテスト（test_esp_redo_draws_once_from_the_final_result）の説明の「ESPを持てるナツメのポケモンにこのワザを使えるものは今の写しにない」は誤りだった（文書の訂正）。超の色マーカーをのせたドククラゲ（SI-016）をベンチに置けば、ESPをつけたナツメのフーディン（PMCG6-053）が［サイコリンク］で「しょくしゅをつかう」を使える。これは前からあった経路で、エンジンが新しく可能にしたのではない（処理は変えていない）。確かめたのは、直接作った盤面で通常の登録・操作（手札のESPをつける・ワザの供給元を選ぶ）を通る代表のテストで、正式な対戦で出た場面ではない",
+   "engine_fix": {
+    "state": "document_corrected",
+    "as_of": "v0.113",
+    "tests": [
+     "EspRealPathTest.test_v0_112_tentacle_grip_is_reachable"
+    ]
+   },
+   "engine_basis": [],
+   "kyuura_records": [
+    "UQ-ESP-REDO"
+   ],
+   "kyuura_handling": "エンジンの文書の訂正で、到達経路を新しく可能にした修正・公式の裁定ではない（kyuura の論点にしない）"
+  },
+  {
+   "id": "ENG-V0113-ESP-REDO-SWITCH-RESULT",
+   "kind": "implementation_matter",
+   "engine_import": "ENGINE-2D113B5",
+   "document": "docs/variable-coins-search-attachments-v0.113.md",
+   "section": "8 章（エンジンの未対応・制限）・9.2 節",
+   "cards": [
+    {
+     "card_id": "neo4-011",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "からめとる"
+     }
+    },
+    {
+     "card_id": "PMCG6-053",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "サイコリンク"
+     }
+    },
+    {
+     "card_id": "PMCG6-087",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ナツメのESP"
+     }
+    }
+   ],
+   "engine_rulings": [],
+   "summary": "v0.113 の時点で直していない不具合（エンジンの報告）。わるいアリアドス（neo4-011）の「からめとる」を［サイコリンク］で使うナツメのフーディンにESPをつけ、「おもて」にやり直すと、入れ替えの結果（入れ替えた控えの番号）を続きの情報に運ばず、新しく出てきたポケモンをマヒにする処理を黙って省く。入れ替えの要素のあとの別の要素でコインを投げる形で、ほかのワザに同じ形があるかは調べきっていない（エンジンの報告）。エンジンの文書の確認の記録だけで、テストはない",
+   "engine_fix": {
+    "state": "not_fixed",
+    "as_of": "v0.113"
+   },
+   "engine_basis": [],
+   "kyuura_records": [
+    "UQ-ESP-REDO"
+   ],
+   "kyuura_handling": "エンジンの実装の不具合（v0.113 の残件）で、修正済み・意図した仕様・公式の未解決の裁定ではない（kyuura の論点にしない）。kyuura からエンジンは直さない。エンジンへの引き継ぎ（docs/engine-handover-baby-v0.113.md）に書いた"
+  },
+  {
+   "id": "ENG-V0113-ATTRACT-CURRENT-SHORT-DECK",
+   "kind": "implementation_matter",
+   "engine_import": "ENGINE-2D113B5",
+   "document": "docs/variable-coins-search-attachments-v0.113.md",
+   "section": "8 章・12 章",
+   "cards": [
+    {
+     "card_id": "neo3-028",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ゆうでん"
+     }
+    }
+   ],
+   "engine_rulings": [],
+   "summary": "デンリュウの「ゆうでん」（3 枚のコインの「おもて」の数だけ、山札から「雷」エネルギーカードを選んでつける）で、山札の「雷」エネルギーカードが 1・2 枚のとき、エンジンは宣言の前に既存の FC1 の問いで止める。「おもて」の数がその枚数以下になる結果（足りる結果）だけを受け付けることはできない（コインの結果で受け付けるかを変えない先読みの約束による、エンジンの制限）",
+   "engine_fix": {
+    "state": "not_fixed",
+    "as_of": "v0.113"
+   },
+   "engine_basis": [],
+   "kyuura_records": [
+    "UQ-STATED-COUNT-SHORT"
+   ],
+   "kyuura_handling": "既存の問い（UQ-STATED-COUNT-SHORT。エンジンの FC1。足りないときにできるだけ処理するのか、その要素を処理しないのか）とは別の、エンジンの制限の記録。問いは未解決のままで、この制限は問いの答えではない。ゆうでんを論点の事例（cases）に加えていない"
   }
  ]
 }

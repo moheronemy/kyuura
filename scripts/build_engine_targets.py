@@ -21,7 +21,8 @@
   mechanically_equivalent・reuse_candidate は、エンジンで実装済みとは数えない（エンジンの登録はカード id ごと）。
 
 エンジンが使う欄は、エンジンの scripts/extract_kyuura_cards.py の FIELDS_USED_BY_ENGINE のうち日本語の欄（名前・段階・進化元・HP・タイプ・
-弱点・抵抗力・にげる・ルールの文・特殊能力・ワザの名前・コスト・ダメージ・説明・トレーナー・エネルギー）。
+弱点・抵抗力・にげる・ルールの文・特殊能力・ワザの名前・コスト・ダメージ・説明・トレーナー・エネルギー）と、ベイビィの進化先（pokemon.evolves_to。
+2026-10-27 に加えた欄。エンジンの写しはまだ取り出していないが、どのカードを上に重ねて進化できるかを決める欄なので、同じかの比べ・値の欠けに含める）。
 
 使い方: python3 scripts/build_engine_targets.py [--check]
   --check: 生成結果が data/engine_targets.json・docs/engine-targets.md と同じか（ファイルは書き換えない）
@@ -39,7 +40,7 @@ RULE_BASE_DATE = '2000-02-14'  # 公式ルール 2000.02.14版（NEO-2000-OFFICI
 GENERATED = ('<!-- このファイルは scripts/build_engine_targets.py が data/cards.json・data/curation/engine_registered_cards.json などから'
              '生成しています。直接編集せず、データを直してから再生成してください。 -->')
 # data_gaps のうち、エンジンが処理に使う欄の欠け（図鑑番号・レベル・シリーズの欠けは数えない）
-ENGINE_GAP = re.compile(r'^(name\.ja|pokemon\.(evolves_from|stage|hp|types|rules_text\.ja|powers\[\d+\]\.ja|attacks\[\d+\]\.(name|text)\.ja)|'
+ENGINE_GAP = re.compile(r'^(name\.ja|pokemon\.(evolves_from|evolves_to|stage|hp|types|rules_text\.ja|powers\[\d+\]\.ja|attacks\[\d+\]\.(name|text)\.ja)|'
                         r'trainer\.text\.ja|energy\.text\.ja)$')
 STATUS_ORDER = ['registered', 'mechanically_equivalent', 'reuse_candidate', 'new_effect_needed']
 CATEGORY_ORDER = ['candidate', 'data_missing', 'special_rule_design', 'non_game']
@@ -61,6 +62,8 @@ def engine_view(r):
         v.update({'pokemon.stage': p['stage'], 'pokemon.evolves_from.ja': ja(p['evolves_from']), 'pokemon.hp': p['hp'],
                   'pokemon.types': p['types'], 'pokemon.weaknesses': p['weaknesses'], 'pokemon.resistances': p['resistances'],
                   'pokemon.retreat_cost': p['retreat_cost'], 'pokemon.rules_text.ja': ja(p['rules_text'])})
+        if 'evolves_to' in p:  # 進化先の欄のある段階（ベイビィ）だけ。欄のない段階とは別の値（欄がない）として比べる
+            v['pokemon.evolves_to'] = p['evolves_to']
         for i, x in enumerate(p['powers']):
             v.update({f'pokemon.powers[{i}].kind': x['kind'], f'pokemon.powers[{i}].name.ja': x['name']['ja'],
                       f'pokemon.powers[{i}].text.ja': x['text']['ja']})
@@ -264,7 +267,8 @@ def build():
                        'category はデータから決めた実装の対象の分類、engine_status は engine_reference の版の登録との対応。'
                        'mechanically_equivalent・reuse_candidate は実装済みではない（エンジンの登録はカード id ごと）。',
         'engine_reference': {**snap['engine'], 'registry_id': snap['registry_id'], 'counts': snap['counts'],
-                             'snapshot': 'data/curation/engine_registered_cards.json', 'extracted_on': snap['extracted_on']},
+                             'snapshot': 'data/curation/engine_registered_cards.json', 'extracted_on': snap['extracted_on'],
+                             'previous_snapshots': snap.get('previous_snapshots', [])},
         'rule_base_date': RULE_BASE_DATE,
         'counts': counts,
         'cards': rows,
@@ -292,7 +296,18 @@ def render(doc):
          f"（ブランチ `{e['branch']}`、コミット `{e['commit'][:7]}`）の登録との対応（engine_status）を、機械で読める一覧 "
          '[`data/engine_targets.json`](../data/engine_targets.json) にまとめています。この一覧は kyuura のデータとエンジンの登録表の写し'
          '（[`data/curation/engine_registered_cards.json`](../data/curation/engine_registered_cards.json)。'
-         f"{e['extracted_on']} に scripts/snapshot_engine_registry.py で作成）から作ったもので、エンジンの実装の状況の正本はエンジンのリポジトリです。", '',
+         f"{e['extracted_on']} に scripts/snapshot_engine_registry.py で作成）から作ったもので、エンジンの実装の状況の正本はエンジンのリポジトリです。"
+         f"写しの `registry_id`（`{e['registry_id']}`）は登録表の名前で、版の番号ではありません（版は上の {e['version']}）。", '']
+    if e['previous_snapshots']:
+        L += ['前の写しの参照（その時点の取得日・件数のまま。中身は git の履歴にあります。研究の取り込みの範囲は別で、'
+              '[研究の状況](research-status.md) と data/sidecar/rulings.json の engine_imports に書きます）:', '']
+        for p in e['previous_snapshots']:
+            n = p['counts']
+            L.append(f"- {p['engine']['version']}（コミット `{p['engine']['commit'][:7]}`、{p['extracted_on']} に作成、{p['replaced_on']} に置きかえ）: "
+                     f"対戦用のカード {n['playable_cards']}、登録のあるカード {n['cards_with_registrations']}"
+                     f"（ワザ {n['attacks']}・トレーナー {n['trainers']}・特殊能力 {n['powers']}・特殊エネルギー {n['energies']}）")
+        L.append('')
+    L += [
          '- エンジンの登録はカード id ごとです。登録のない id を、同じ処理のカードがあっても実装済みとは数えません。',
          '- 強さ・勝率・デッキの釣り合いは評価していません。新しいカードの効果は実装していません。',
          '- 印刷の文面・公式の最新の説明・公式エラッタ・研究上の解釈・エンジンの採用した仕様は別のものです。この一覧の「同じ」は kyuura の転記の欄が同じことで、'
@@ -304,8 +319,9 @@ def render(doc):
     for k in STATUS_ORDER:
         L.append(f'| engine_status | `{k}` | {STATUS_JA[k]} |')
     L += ['',
-          '- `data_missing` の理由（category_reasons）は、記録の `data_gaps` のうちエンジンが使う欄（名前・段階・進化元・HP・タイプ・ルールの文・特殊能力・ワザの名前と説明・'
-          'トレーナーと特殊エネルギーの説明）の欠けです。図鑑番号・レベル・シリーズの欠けは数えません。',
+          '- `data_missing` の理由（category_reasons）は、記録の `data_gaps` のうちエンジンが使う欄（名前・段階・進化元・ベイビィの進化先・HP・タイプ・ルールの文・特殊能力・ワザの名前と説明・'
+          'トレーナーと特殊エネルギーの説明）の欠けです。ベイビィの進化先（`pokemon.evolves_to`）はエンジンの写しがまだ取り出さない欄ですが、'
+          '進化できるカードを決めるので、欠け（未確認）と、登録されたカードと同じかの比べに含めます。図鑑番号・レベル・シリーズの欠けは数えません。',
           '- `special_rule_design` は `play_scope` が `standard` でない記録（ガルーラルール専用・公式大会で使えないと書かれたカード）。',
           '- `mechanically_equivalent` は、エンジンが使う欄がすべて登録されたカードと同じで、ワザ・特殊能力・トレーナー・特殊エネルギーの名前と説明が、'
           'エンジンが登録のときに照合した文面（`text_ja`）とも同じもの（`equivalent_to` に登録されたカード）。',

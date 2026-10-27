@@ -2230,7 +2230,19 @@
      "result": "「一致」（v0.17a。既存の要素の新しい並びで登録した）"
     }
    ],
-   "engine_refs": []
+   "engine_refs": [],
+   "later_notes": [
+    {
+     "recorded_on": "2026-10-27",
+     "by": "kyuura",
+     "finding": "同じページの真ん中のロケット団のニャース（LV.11／HP40。プロモーションカード）は別のカードで、kyuura の data/cards.json にはない。",
+     "card_ids": [
+      "PR1-078"
+     ],
+     "source_rechecked": false,
+     "note": "上の findings の「同じページの真ん中のロケット団のニャース（LV.11／HP40。プロモーションカード）は別のカードで、kyuura の data/cards.json にはない」は、照合した日（2026-10-14）の記録として残す。2026-10-19 から data/cards.json に拡張パック以外の商品の記録があり、今は同じ名前のロケット団のニャースが PR1-078（pcg-search の 1stp078・HP40・プロモ）にある。この照合の記録はサカキのニャース（PMCG6-063）の照合で、PR1-078 の欄は照合していない（checked_fields・verification は PMCG6-063 だけ。PR1-078 の CC- はない）。2026-10-14 の読み取りが記録したのは名前・LV・HP・「プロモーションカード」だけで、ワザ・タイプを記録していないので、PR1-078 のレベルの欠けはこの記録だけでは補わず、訂正の候補（data/curation/card_corrections.json の candidates。gap_open）にした。kyuura-engine v0.113 の報告事項（11 章）による追記"
+    }
+   ]
   },
   {
    "id": "CC-PMCG6-073-P245",

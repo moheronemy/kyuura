@@ -11,6 +11,7 @@
 
   - data/ja_text_pcgsearch.json・data/pcgsearch_page_checks.json（拡張パック以外の商品。scripts/non_pack.py で正規化）
   - data/curation/card_corrections.json（カードのデータの訂正の記録。生成のたびに当てはめる）
+  - data/curation/card_image_checks.json（kyuura がカードの画像で印刷の欄を読んだ記録。生成した値と同じかを確かめる）
 
 出力:
   - data/cards.json（構造化データ。スキーマは docs/data-schema.md。拡張パック 10 弾と、拡張パック以外の商品）
@@ -75,6 +76,9 @@ TYPE_JA = {'grass': '草', 'fire': '炎', 'water': '水', 'lightning': '雷', 'p
            'fighting': '闘', 'colorless': '無色', 'darkness': '悪', 'metal': '鋼'}
 STAGE_ID = {'Basic': 'basic', 'Stage 1': 'stage1', 'Stage 2': 'stage2', 'Baby': 'baby'}
 STAGE_JA = {'basic': 'たね', 'stage1': '1進化', 'stage2': '2進化', 'baby': 'ベイビィ'}
+# 印刷に進化先の欄（「○○へ進化」）がある段階。pokemon.evolves_to はこの段階の記録にだけ置く（ほかの段階は欄がない = 適用外）。
+# 生成は未確認の null で作り、印刷で確かめた値は訂正の記録（data/curation/card_corrections.json）で入れる
+EVOLVES_TO_STAGES = ('baby',)
 TRAINER_KIND_ID = {'Stadium': 'stadium', 'Pokémon Tool': 'pokemon_tool',
                    "Rocket's Secret Machine": 'rockets_secret_machine',
                    'Goldenrod Game Corner': 'goldenrod_game_corner'}
@@ -791,8 +795,9 @@ def apply_corrections(records, ledger):
             if cur != c['before']:
                 raise SystemExit(f"card_corrections.json の訂正の before が今の値と違う（出典が変わったか、すでに直っている）: {c['id']} {cur!r}")
             set_field(r, c['field'], c['after'])
-            if c['before'] is None:  # 転記の欠け（値が空の欄）を埋めた
-                r['notes'].append(f"訂正（{c['id']}）: 空だった {c['field']} に「{c['after']}」を入れた。根拠: {c['basis_detail']}")
+            if c['before'] is None:  # 転記の欠け・未確認の欄（値が空の欄）を埋めた
+                after = '・'.join(c['after']) if isinstance(c['after'], list) else c['after']
+                r['notes'].append(f"訂正（{c['id']}）: 空だった {c['field']} に「{after}」を入れた。根拠: {c['basis_detail']}")
             else:
                 r['notes'].append(f"訂正（{c['id']}）: {c['field']} を「{c['before']}」から「{c['after']}」に直した。根拠: {c['basis_detail']}"
                                   if not isinstance(c['after'], dict) else
@@ -807,6 +812,94 @@ def apply_corrections(records, ledger):
     for c in ledger['candidates']:
         if c['card_id'] not in by_id:
             raise SystemExit(f"card_corrections.json の候補のカードがない: {c['card_id']}")
+
+
+def add_evolves_to(r):
+    """進化先の欄のある段階（EVOLVES_TO_STAGES）のポケモンに pokemon.evolves_to を未確認（null）で置く（進化元 evolves_from のすぐあと）。"""
+    p = r['pokemon']
+    if not p or p['stage'] not in EVOLVES_TO_STAGES or 'evolves_to' in p:
+        return
+    r['pokemon'] = {}
+    for k, v in p.items():
+        r['pokemon'][k] = v
+        if k == 'evolves_from':
+            r['pokemon']['evolves_to'] = None
+
+
+def check_evolves_to(records, ledger):
+    """pokemon.evolves_to の形と出どころを確かめる。
+    - 欄は EVOLVES_TO_STAGES の段階の記録にだけある（ほかの段階は適用外で、欄を置かない）。
+    - 値は null（未確認）か、空でない日本語名の配列（印刷の順。重複・空白を含む名前はない）。[]（印刷に進化先がないと明示）は
+      今の 1377 件に該当がないので受け付けない（加えるときは根拠を記録してこの確認を直す）。
+    - null でない値は、生成が作らない（いつも null で作る）ので、訂正の記録（applied_by: card_corrections）で入れたものだけ。
+      その訂正の basis は card_image_check で、照合の記録（image_check）を持つ（推測・同じ名前のほかの版から写した値を入れない）。"""
+    fixes = {(c['card_id'], c['field']): c for c in ledger['corrections']}
+    for r in records:
+        p = r['pokemon']
+        if not p:
+            continue
+        if p['stage'] not in EVOLVES_TO_STAGES:
+            if 'evolves_to' in p:
+                raise SystemExit(f"pokemon.evolves_to は {'・'.join(EVOLVES_TO_STAGES)} の記録にだけ置く: {r['id']} {p['stage']}")
+            continue
+        v = p['evolves_to']
+        if v is None:
+            continue
+        if not isinstance(v, list) or not v:
+            raise SystemExit(f"pokemon.evolves_to は null か空でない名前の配列（[] は受け付けない）: {r['id']} {v!r}")
+        if len(set(v)) != len(v) or any(not isinstance(x, str) or not x or re.search(r'\s', x) for x in v):
+            raise SystemExit(f"pokemon.evolves_to の名前に重複・空・空白がある: {r['id']} {v!r}")
+        c = fixes.get((r['id'], 'pokemon.evolves_to'))
+        if not c or c['applied_by'] != 'card_corrections' or c['after'] != v:
+            raise SystemExit(f"pokemon.evolves_to の値が訂正の記録から入っていない: {r['id']}")
+        if c['basis'] != 'card_image_check' or not c.get('image_check'):
+            raise SystemExit(f"pokemon.evolves_to の訂正の根拠はカードの画像の照合の記録（basis: card_image_check・image_check）: {c['id']} {c['basis']}")
+
+
+IMAGE_SITES = ('pcg-search.com [N3]', 'なぞのばしょ [N1]')
+
+
+def check_image_checks(records, doc, ledger):
+    """data/curation/card_image_checks.json（カードの画像の照合の記録 IMG-）と、訂正の記録・生成した値が同じ内容を指すかを確かめる。
+    - id の重複がなく、カードがあり、名前が合う。画像ごとにサイト・ページと画像の URL・形式・sha256・取得した日がある。
+    - print_values（画像に写っている値）が、生成した data/cards.json の値（訂正のあと）と同じ。
+    - corrections に書いた訂正は、同じカード・print_values にある欄で、after が画像の値と同じ。basis は card_image_check で、
+      image_check にこの記録の id を書いている。照合の記録 CC- を変える訂正ではない（card_checks_affected が空）。
+    - 訂正の記録の image_check は、あるこの記録を指し、この記録の corrections にその訂正がある。"""
+    by_id = {r['id']: r for r in records}
+    fixes = {c['id']: c for c in ledger['corrections']}
+    ids = [x['id'] for x in doc['checks']]
+    if len(ids) != len(set(ids)):
+        raise SystemExit('card_image_checks.json の id が重複している')
+    date = re.compile(r'^\d{4}-\d{2}-\d{2}$')
+    for x in doc['checks']:
+        w = x['id']
+        r = by_id.get(x['card_id'])
+        if r is None or x['id'] != f"IMG-{x['card_id']}" or r['name']['ja'] != x['card_name_ja']:
+            raise SystemExit(f'card_image_checks.json のカード・id・名前が合わない: {w}')
+        if x['kind'] != 'card_image_check' or not date.match(x['checked_on']) or not x['images']:
+            raise SystemExit(f'card_image_checks.json の kind・checked_on・images: {w}')
+        for im in x['images']:
+            if (im['site'] not in IMAGE_SITES or not im['page_url'].startswith('https://') or not im['image_url'].startswith('https://')
+                    or not re.match(r'^[0-9a-f]{64}$', im['image_sha256']) or not im['image_format'] or not date.match(im['accessed_on'])):
+                raise SystemExit(f'card_image_checks.json の画像の記録が足りない: {w} {im.get("image_url")}')
+        if not x['print_values']:
+            raise SystemExit(f'card_image_checks.json の print_values が空: {w}')
+        for field, value in x['print_values'].items():
+            cur = get_field(r, field)
+            if cur != value:
+                raise SystemExit(f'card_image_checks.json の画像の値と生成した値が違う（訂正の記録を書くか、照合を見直す）: {w} {field} {cur!r}')
+        for fid in x['corrections']:
+            c = fixes.get(fid)
+            if (c is None or c['card_id'] != x['card_id'] or c['field'] not in x['print_values'] or c['after'] != x['print_values'][c['field']]
+                    or c['basis'] != 'card_image_check' or c.get('image_check') != w or c['card_checks_affected']):
+                raise SystemExit(f'card_image_checks.json の訂正 {fid} が照合の記録 {w} と合わない')
+    known = {x['id']: x for x in doc['checks']}
+    for c in ledger['corrections']:
+        if 'image_check' in c and (c['image_check'] not in known or c['id'] not in known[c['image_check']]['corrections']):
+            raise SystemExit(f"訂正 {c['id']} の image_check {c['image_check']} が照合の記録にない（または記録の corrections にない）")
+        if c['basis'] == 'card_image_check' and not (c.get('image_check') or c.get('evidence')):
+            raise SystemExit(f"basis が card_image_check の訂正に画像の記録（image_check・evidence）がない: {c['id']}")
 
 
 def pack_dates():
@@ -827,7 +920,12 @@ def finish_records(records, en, namer):
     np_ = non_pack.NonPack(ROOT, en, namer)
     np_records, items, non_game = np_.build()
     records = records + np_records
-    apply_corrections(records, load_json(ROOT / 'data' / 'curation' / 'card_corrections.json'))
+    for r in records:
+        add_evolves_to(r)
+    ledger = load_json(ROOT / 'data' / 'curation' / 'card_corrections.json')
+    apply_corrections(records, ledger)
+    check_evolves_to(records, ledger)
+    check_image_checks(records, load_json(ROOT / 'data' / 'curation' / 'card_image_checks.json'), ledger)
     cur = np_.cur
     code_of = {title: v['code'] for title, v in np_.np['products'].items()}
     product_dates = {code_of[p['pcg_title']]: p.get('release_date') for p in cur['products']}
@@ -929,13 +1027,24 @@ def write_json(records):
         f.write('\n')
 
 
+def evolves_to_status(p):
+    """CSV の evolves_to_status: 空（ポケモンでない）・not_applicable（欄のない段階）・unconfirmed（null）・printed（名前がある）。
+    printed_none（[]。印刷に進化先がないと明示）は形式の上の値で、今は check_evolves_to が受け付けない。"""
+    if not p:
+        return ''
+    if 'evolves_to' not in p:
+        return 'not_applicable'
+    v = p['evolves_to']
+    return 'unconfirmed' if v is None else 'printed' if v else 'printed_none'
+
+
 def write_csvs(records):
     d = ROOT / 'data'
     with open(d / 'cards.csv', 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f)
         w.writerow(['id', 'jp_set', 'seq', 'category', 'name_ja', 'name_en', 'name_ja_confidence',
                     'rarity_jp', 'holo', 'en_set', 'en_numbers', 'stage', 'evolves_from_ja', 'evolves_from_en',
-                    'hp', 'types', 'weaknesses', 'resistances', 'retreat_cost', 'trainer_kinds',
+                    'evolves_to_status', 'evolves_to_ja', 'hp', 'types', 'weaknesses', 'resistances', 'retreat_cost', 'trainer_kinds',
                     'energy_kind', 'text_ja', 'text_en', 'jp_en_differences', 'notes',
                     'product_group', 'play_scope', 'same_card_group', 'source_pages', 'data_gaps', 'corrections'])
         for r in records:
@@ -947,6 +1056,7 @@ def write_csvs(records):
                         (p or {}).get('stage') or '',
                         ((p or {}).get('evolves_from') or {}).get('ja') or '',
                         ((p or {}).get('evolves_from') or {}).get('en') or '',
+                        evolves_to_status(p), ' '.join((p or {}).get('evolves_to') or []),
                         (p or {}).get('hp') or '', ' '.join((p or {}).get('types', [])),
                         ' '.join(f"{x['type']}{x['operator']}{x['value']}" for x in (p or {}).get('weaknesses', [])),
                         ' '.join(f"{x['type']}{x['operator']}{x['value']}" for x in (p or {}).get('resistances', [])),
@@ -987,6 +1097,8 @@ def card_detail(r):
     p = r['pokemon']
     if p:
         evo = f"（{both(p['evolves_from'])} から進化）" if p['evolves_from'] else ''
+        if 'evolves_to' in p:  # 印刷の進化先の欄（ベイビィ）
+            evo += f"（{'・'.join(p['evolves_to'])}へ進化）" if p['evolves_to'] else '（進化先は未確認）'
         lv = (r['jp_print'] or {}).get('level')  # 英語版データのレベルには誤りがあるため使わない
         head = [f"{STAGE_JA.get(p['stage'], '')}{evo}"] + ([f"LV.{lv}"] if lv else []) + [types_ja(p['types']), f"HP {p['hp']}",
                 f"弱点 {wr_ja(p['weaknesses'])}", f"抵抗力 {wr_ja(p['resistances'])}",

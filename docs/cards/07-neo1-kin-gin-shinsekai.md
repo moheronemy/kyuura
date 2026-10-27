@@ -31,7 +31,7 @@
 | 19 | ブーバー | ポケモン | 炎 | たね | 70 | ◆ | Magmar<br>Neo Genesis 40 |  |
 | 20 | マグマラシ | ポケモン | 炎 | 1進化 | 70 | ◆ | Quilava<br>Neo Genesis 47 |  |
 | 21 | バクフーン | ポケモン | 炎 | 2進化 | 100 | ★キラ | Typhlosion<br>Neo Genesis 17 |  |
-| 22 | ブビィ | ポケモン | 炎 | ベイビィ | 30 | ★ | Magby<br>Neo Genesis 23 | 日英の違い: ワザ Sputter でポケモンパワーを止める範囲 |
+| 22 | ブビィ | ポケモン | 炎 | ベイビィ | 30 | ★ | Magby<br>Neo Genesis 23 | 日英の違い: ワザ Sputter でポケモンパワーを止める範囲<br>訂正（FIX-neo1-022-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のブビィ）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo1-022、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない<br>訂正（FIX-neo1-022-EVOLVES-TO）: 空だった pokemon.evolves_to に「ブーバー」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のブビィ）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「ブーバーへ進化」「「ブーバー」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo1-022）。同じ名前のほかの版の記録から写していない |
 | 23 | タッツー | ポケモン | 水 | たね | 50 | ● | Horsea<br>Neo Genesis 62 |  |
 | 24 | ワニノコ | ポケモン | 水 | たね | 50 | ● | Totodile<br>Neo Genesis 81 |  |
 | 25 | マリル | ポケモン | 水 | たね | 40 | ● | Marill<br>Neo Genesis 66 |  |
@@ -51,9 +51,9 @@
 | 39 | エレブー | ポケモン | 雷 | たね | 70 | ◆ | Electabuzz<br>Neo Genesis 33 |  |
 | 40 | ランターン | ポケモン | 雷 | 1進化 | 70 | ◆ | Lanturn<br>Neo Genesis 38 |  |
 | 41 | モココ | ポケモン | 雷 | 1進化 | 60 | ◆ | Flaaffy<br>Neo Genesis 34 |  |
-| 42 | ピチュー | ポケモン | 雷 | ベイビィ | 30 | ★キラ | Pichu<br>Neo Genesis 12 |  |
+| 42 | ピチュー | ポケモン | 雷 | ベイビィ | 30 | ★キラ | Pichu<br>Neo Genesis 12 | 訂正（FIX-neo1-042-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のピチュー）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo1-042、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない<br>訂正（FIX-neo1-042-EVOLVES-TO）: 空だった pokemon.evolves_to に「ピカチュウ」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のピチュー）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「ピカチュウへ進化」「「ピカチュウ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo1-042）。同じ名前のほかの版の記録から写していない |
 | 43 | デンリュウ | ポケモン | 雷 | 2進化 | 80 | ★キラ | Ampharos<br>Neo Genesis 1 |  |
-| 44 | エレキッド | ポケモン | 雷 | ベイビィ | 30 | ★ | Elekid<br>Neo Genesis 22 |  |
+| 44 | エレキッド | ポケモン | 雷 | ベイビィ | 30 | ★ | Elekid<br>Neo Genesis 22 | 訂正（FIX-neo1-044-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のエレキッド）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo1-044、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない<br>訂正（FIX-neo1-044-EVOLVES-TO）: 空だった pokemon.evolves_to に「エレブー」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のエレキッド）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「エレブーへ進化」「「エレブー」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo1-044）。同じ名前のほかの版の記録から写していない |
 | 45 | ヤドン | ポケモン | 超 | たね | 50 | ● | Slowpoke<br>Neo Genesis 73 | TCGdex の日本版データでは HP 40（英語版は 50） |
 | 46 | ネイティ | ポケモン | 超 | たね | 30 | ● | Natu<br>Neo Genesis 67 |  |
 | 47 | キリンリキ | ポケモン | 超 | たね | 60 | ● | Girafarig<br>Neo Genesis 58 |  |
@@ -79,7 +79,7 @@
 | 67 | エイパム | ポケモン | 無色 | たね | 40 | ◆ | Aipom<br>Neo Genesis 26 |  |
 | 68 | グランブル | ポケモン | 無色 | 1進化 | 70 | ◆ | Granbull<br>Neo Genesis 37 |  |
 | 69 | ミルタンク | ポケモン | 無色 | たね | 70 | ◆ | Miltank<br>Neo Genesis 41 |  |
-| 70 | ピィ | ポケモン | 無色 | ベイビィ | 30 | ★ | Cleffa<br>Neo Genesis 20 |  |
+| 70 | ピィ | ポケモン | 無色 | ベイビィ | 30 | ★ | Cleffa<br>Neo Genesis 20 | 訂正（FIX-neo1-070-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のピィ）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo1-070、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない<br>訂正（FIX-neo1-070-EVOLVES-TO）: 空だった pokemon.evolves_to に「ピッピ」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のピィ）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「ピッピへ進化」「「ピッピ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo1-070）。同じ名前のほかの版の記録から写していない |
 | 71 | トゲチック | ポケモン | 無色 | 1進化 | 60 | ★キラ | Togetic<br>Neo Genesis 16 |  |
 | 72 | ルギア | ポケモン | 無色 | たね | 90 | ★キラ | Lugia<br>Neo Genesis 9 |  |
 | 73 | きのみ | トレーナー（ポケモンのどうぐ） |  |  |  | ● | Berry<br>Neo Genesis 99 |  |
@@ -439,11 +439,11 @@ Neo Genesis にあって、日本版の本弾に収録されていないカー�
 
 ### 22. ブビィ / Magby
 
-ベイビィ／LV.5／炎／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ★
+ベイビィ（ブーバーへ進化）／LV.5／炎／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ★
 
 英語版: Neo Genesis 23
 
-- ルール: If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack.
+- ルール: 「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。 / If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack.
 
 | ワザ | エネルギー | ダメージ | 効果 |
 |---|---|---:|---|
@@ -451,6 +451,8 @@ Neo Genesis にあって、日本版の本弾に収録されていないカー�
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo01-022-buby/)
 - **日英の違い（ワザ Sputter でポケモンパワーを止める範囲、確度: 有力）** 日本版: 「次の自分の番の終わりまで、おたがいの場にいるすべてのポケモンは『特殊能力』を使うことができず、その力も消える。」。二次資料は、使った時点で場に出ているポケモンだけを止める意味だと説明 ／ 英語版: 「All Pokémon Powers stop working …」とあり、後から出たポケモンも止まるかがあいまい
+- 備考: 訂正（FIX-neo1-022-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のブビィ）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo1-022、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない
+- 備考: 訂正（FIX-neo1-022-EVOLVES-TO）: 空だった pokemon.evolves_to に「ブーバー」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のブビィ）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「ブーバーへ進化」「「ブーバー」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo1-022）。同じ名前のほかの版の記録から写していない
 - 日本版の収録商品: 金、銀、新世界へ...、スターターパック
 
 ### 23. タッツー / Horsea
@@ -724,17 +726,19 @@ Neo Genesis にあって、日本版の本弾に収録されていないカー�
 
 ### 42. ピチュー / Pichu
 
-ベイビィ／LV.5／雷／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ★キラ
+ベイビィ（ピカチュウへ進化）／LV.5／雷／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ★キラ
 
 英語版: Neo Genesis 12
 
-- ルール: If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack.
+- ルール: 「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。 / If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack.
 
 | ワザ | エネルギー | ダメージ | 効果 |
 |---|---|---:|---|
 | パチパチ / Zzzap | 無 |  | 日本語: おたがいの場にいる、「特殊能力」を持っているポケモン全員に、「弱点・抵抗力」に関係なく、それぞれ20ダメージ。 英語: Does 20 damage to each Pokémon in play that has a Pokémon Power. Don't apply Weakness and Resistance. |
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo01-042-pichu/)
+- 備考: 訂正（FIX-neo1-042-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のピチュー）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo1-042、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない
+- 備考: 訂正（FIX-neo1-042-EVOLVES-TO）: 空だった pokemon.evolves_to に「ピカチュウ」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のピチュー）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「ピカチュウへ進化」「「ピカチュウ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo1-042）。同じ名前のほかの版の記録から写していない
 - 日本版の収録商品: 金、銀、新世界へ...、スターターパック
 - 日本版の印刷について: 修正版は「パチパチ」の説明文の一部が変更されている
 - 日本版の印刷について: 修正前：おたがいの場にいる、「特殊能力」を持っているポケモン全員に、
@@ -758,16 +762,18 @@ Neo Genesis にあって、日本版の本弾に収録されていないカー�
 
 ### 44. エレキッド / Elekid
 
-ベイビィ／LV.6／雷／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ★
+ベイビィ（エレブーへ進化）／LV.6／雷／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ★
 
 英語版: Neo Genesis 22
 
-- ルール: If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack.
+- ルール: 「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。 / If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack.
 - ポケモンパワー「わんぱくパンチ / Playful Punch」
   - 日本語: この力は、自分の番ごとに1回使え、使ったら自分の番は終わる。コインを投げて「おもて」なら、相手の対戦ポケモンに20のダメージ。このカードが「ねむり・マヒ・こんらん」状態のとき、この力は使えない。
   - 英語: Once during your turn (before your attack), you may flip a coin. If heads, do 20 damage to your opponent's Active Pokémon. (Apply Weakness and Resistance.) Either way, this ends your turn. This power can't be used if Elekid is Asleep, Confused, or Paralyzed.
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo01-044-elekid/)
+- 備考: 訂正（FIX-neo1-044-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のエレキッド）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo1-044、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない
+- 備考: 訂正（FIX-neo1-044-EVOLVES-TO）: 空だった pokemon.evolves_to に「エレブー」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のエレキッド）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「エレブーへ進化」「「エレブー」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo1-044）。同じ名前のほかの版の記録から写していない
 - 日本版の収録商品: 金、銀、新世界へ...、スターターパック
 
 ### 45. ヤドン / Slowpoke
@@ -1132,17 +1138,19 @@ Neo Genesis にあって、日本版の本弾に収録されていないカー�
 
 ### 70. ピィ / Cleffa
 
-ベイビィ／LV.6／無色／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ★
+ベイビィ（ピッピへ進化）／LV.6／無色／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ★
 
 英語版: Neo Genesis 20
 
-- ルール: If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack.
+- ルール: 「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。 / If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack.
 
 | ワザ | エネルギー | ダメージ | 効果 |
 |---|---|---:|---|
 | ピピピ / Eeeeeeek | 無 |  | 日本語: 自分の手札をすべて山札にもどし、その山札をよく切る。その後、山札からカードを7枚引いて、手札にする。 英語: Shuffle your hand into your deck, then draw 7 cards. |
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo01-070-py/)
+- 備考: 訂正（FIX-neo1-070-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のピィ）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo1-070、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない
+- 備考: 訂正（FIX-neo1-070-EVOLVES-TO）: 空だった pokemon.evolves_to に「ピッピ」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のピィ）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「ピッピへ進化」「「ピッピ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo1-070）。同じ名前のほかの版の記録から写していない
 - 日本版の収録商品: 金、銀、新世界へ...、スターターパック
 
 ### 71. トゲチック / Togetic

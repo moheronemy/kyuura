@@ -122,6 +122,12 @@ ENGINE_POSITION_KINDS = {
     'simplification': 'エンジンが簡略化した仕様（印刷の文面の処理を簡単にした。エラッタ・最新の説明ではない）',
     'implementation_matter': 'エンジンの実装の事項（不具合・未対応・制限。公式の未解決の裁定ではない）',
 }
+# 実装の事項（implementation_matter）の、その版の時点のエンジンの状態（エンジンの報告。裁定の status・conclusion ではない）
+ENGINE_FIX_STATES = {
+    'fixed': 'この版で直した（エンジンの報告。kyuura は再現していない）',
+    'not_fixed': 'この版の時点で直していない（エンジンの残件）',
+    'document_corrected': '文書の訂正（エンジンの処理は変えていない）',
+}
 
 
 def basis_pages(rec):
@@ -159,6 +165,25 @@ def source_codes(root):
     return set(re.findall(r'^\| ([A-Z]\d+) \|', text, re.M))
 
 
+TRANSCRIPTION_FILE = 'data/Silver_Bible_structured.md'  # 『オフィシャルブック2000』の既存の転記（利用者が加えた OCR・校正。PDF の番号 = ページ + 2）
+
+
+def transcription_pages(root=ROOT):
+    """既存の転記の PDF のページ番号 → そのページの文（行をつないだもの。画像・見出しの印は除く）。"""
+    path = root / TRANSCRIPTION_FILE
+    if not path.exists():
+        return {}
+    pages, cur = {}, None
+    for line in path.read_text(encoding='utf-8').split('\n'):
+        m = re.fullmatch(r'<a id="pdf-page-(\d+)"></a>', line.strip())
+        if m:
+            cur = int(m.group(1))
+            pages[cur] = ''
+        elif cur is not None and line.strip() and not line.startswith('<') and not line.startswith('!['):
+            pages[cur] += line.strip()
+    return pages
+
+
 def load(root=ROOT):
     """検査と生成に使うものをまとめて読む。"""
     side = root / 'data' / 'sidecar'
@@ -169,7 +194,19 @@ def load(root=ROOT):
     ctx['codes'] = source_codes(root)
     ledger = root / 'data' / 'curation' / 'card_corrections.json'
     ctx['corrections'] = json.loads(ledger.read_text(encoding='utf-8'))['corrections'] if ledger.exists() else []
+    ctx['transcription'] = transcription_pages(root)
     return ctx
+
+
+def check_transcription(errors, where, ctx, t):
+    """既存の転記（existing_transcription）の引用が、転記のそのページにそのままあるか（kyuura は原典の画像で確かめていない）。"""
+    if not isinstance(t, dict) or t.get('file') != TRANSCRIPTION_FILE or not isinstance(t.get('pdf_page'), int) or not t.get('quote'):
+        errors.append(f'{where}: 転記の引用（transcription: file・pdf_page・quote）がない')
+        return
+    if str(t['pdf_page'] - 2) != str(t.get('page')):
+        errors.append(f"{where}: 転記の pdf_page（{t['pdf_page']}）と page（{t.get('page')}）が合わない（PDF の番号 = ページ + 2）")
+    if t['quote'] not in ctx['transcription'].get(t['pdf_page'], ''):
+        errors.append(f"{where}: 転記の PDF p.{t['pdf_page']} に引用がない: {t['quote'][:40]}")
 
 
 def resolve(obj, path):
@@ -185,6 +222,11 @@ def resolve(obj, path):
         else:
             raise KeyError(path)
     return cur
+
+
+def later_note_texts(x):
+    """照合の記録の追記（later_notes）を、照合した日の findings と分けて読める文にする。"""
+    return [f"追記（{n['recorded_on']}。原典は読み直していない）: {n['note']}" for n in x.get('later_notes', [])]
 
 
 def target_path(target):
@@ -572,6 +614,17 @@ def validate(ctx):
             cid = s.split('（')[0]
             if cid not in cards:
                 errors.append(f'{w}: not_confused_with のカード id がない: {cid}')
+        for n in x.get('later_notes', []):
+            # 照合のあとの追記（照合した日の findings・checked_fields・verification は書きかえない）。原典は読み直していない
+            if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', n.get('recorded_on') or '') or n.get('by') != 'kyuura' or not n.get('note'):
+                errors.append(f'{w}: later_notes に recorded_on・by（kyuura）・note がない')
+            if n.get('source_rechecked') is not False:
+                errors.append(f'{w}: later_notes は原典を読み直した記録ではない（source_rechecked: false。読み直したら verification に書く）')
+            if n.get('finding') not in x['findings']:
+                errors.append(f'{w}: later_notes の finding（追記が指す findings の文）が findings にない')
+            for cid in n.get('card_ids', []):
+                if cid not in cards:
+                    errors.append(f'{w}: later_notes のカード id がない: {cid}')
         for v in x.get('verification', []):
             if v.get('by') == 'kyuura-engine' and v.get('import') not in imports:
                 errors.append(f"{w}: verification の import がない: {v.get('import')}")
@@ -584,6 +637,12 @@ def validate(ctx):
         w = x['id']
         for p in x['pages']:
             check_source(errors, w, ctx, x['source'], p)
+        if (x.get('checked') or '').split('（')[0] not in r['checked_values']:
+            errors.append(f"{w}: checked の値が不正（{'・'.join(r['checked_values'])} で始める）: {x.get('checked')}")
+        for t in x.get('transcription_quotes', []):
+            check_transcription(errors, w, ctx, t)
+        if x.get('checked', '').startswith('existing_transcription') and not x.get('transcription_quotes'):
+            errors.append(f'{w}: 既存の転記の条項に transcription_quotes（転記の引用）がない')
         for ref in x.get('rule_history_refs', []):
             if ref not in rh_ids:
                 errors.append(f'{w}: rule_history の記録がない: {ref}')
@@ -629,6 +688,8 @@ def validate(ctx):
                 check_source(errors, w, ctx, b.get('source'), b.get('page'))
             if b['kind'] != 'derived' and b.get('checked') not in r['checked_values']:
                 errors.append(f"{w}: 根拠の checked の値が不正: {b.get('checked')}")
+            if b.get('checked') == 'existing_transcription':
+                check_transcription(errors, w, ctx, b.get('transcription'))
         if x.get('status') == 'CONFIRMED' and x.get('inference'):
             errors.append(f'{w}: CONFIRMED に推論（inference）がある。推論を含むなら SUPPORTED にするか、記録を分ける')
         if x.get('status') == 'SUPPORTED' and not x.get('inference'):
@@ -683,7 +744,7 @@ def validate(ctx):
                 errors.append(f'{w}: 条項がない: {ref}')
         eng = {e['ruling_id'] for e in x.get('engine_refs', [])}
         for c in x.get('cases', []):
-            check_target(errors, w, cards, c['card_id'], c['target'])
+            check_target(errors, w, cards, c['card_id'], c['target'], allow_card=True)
             if c.get('engine_ruling') and c['engine_ruling'] not in eng:
                 errors.append(f"{w}: 事例のエンジンの裁定 {c['engine_ruling']} が engine_refs にない")
         for e in x.get('engine_refs', []):
@@ -746,6 +807,13 @@ def validate(ctx):
                 errors.append(f'{w}: no_ruling_tables の取り込みに、裁定の表がないことと読んだ内容の注記（notes）がない')
         elif not imp.get('ruling_sets'):
             errors.append(f'{w}: ruling_sets がない（裁定の表のない版なら no_ruling_tables: true と注記を書く）')
+        rep = imp.get('engine_reported_totals')
+        if rep is not None:
+            # エンジンの文書が報告した数（kyuura の engine_unresolved_index と照らしていない。照らした版だけ engine_unresolved_total を書く）
+            if 'engine_unresolved_total' in imp:
+                errors.append(f'{w}: engine_reported_totals（照らしていない報告の数）と engine_unresolved_total（照らした数）を同じ取り込みに書かない')
+            if not all(isinstance(rep.get(k), int) for k in ('stop_codes', 'unresolved_rulings')) or not rep.get('note'):
+                errors.append(f'{w}: engine_reported_totals に stop_codes・unresolved_rulings（整数）と note がない')
         for rs in imp.get('ruling_sets', []):
             if rs['document'] not in imp['documents']:
                 errors.append(f"{w}: ruling_sets の文書 {rs['document']} が documents にない")
@@ -850,6 +918,14 @@ def validate(ctx):
                 errors.append(f'{w}: {k} がない')
         if 'status' in x or 'conclusion' in x:
             errors.append(f'{w}: エンジンの採用・簡略化・実装の事項に、裁定の status・conclusion を書かない（公式の裁定ではない）')
+        fx = x.get('engine_fix')
+        if fx is not None:
+            if x.get('kind') != 'implementation_matter':
+                errors.append(f'{w}: engine_fix（実装の状態）は実装の事項（implementation_matter）だけに書く')
+            if fx.get('state') not in ENGINE_FIX_STATES:
+                errors.append(f"{w}: engine_fix の state の値が不正: {fx.get('state')}（{'・'.join(ENGINE_FIX_STATES)}）")
+            if imp is not None and fx.get('as_of') != imp['engine_version']:
+                errors.append(f"{w}: engine_fix の as_of は取り込みの版（{imp['engine_version']}）")
         if imp is not None:
             skipped = {n['ruling_id']: n for n in imp.get('not_imported', []) if n.get('document') == x.get('document')}
             for rid in x.get('engine_rulings', []):
@@ -967,7 +1043,9 @@ def unresolved_counts(ctx, as_of=None):
     - issues_not_in_index: エンジンの一覧の項目と結んでいない論点
     """
     r = ctx['rulings']
-    latest = as_of or max((imp['engine_version'] for imp in r['engine_imports']), key=version_key)
+    # 今の数は、エンジンの一覧（engine_unresolved_index）と照らした最後の取り込み（engine_unresolved_total のある版）までで数える。
+    # そのあとの取り込みでエンジンが報告した数（engine_reported_totals）は照らしていないので、この数の代わりにしない
+    latest = as_of or max((imp['engine_version'] for imp in r['engine_imports'] if 'engine_unresolved_total' in imp), key=version_key)
     lk = version_key(latest)
     within = lambda v: version_key(v) <= lk
     idx = []
@@ -1002,6 +1080,8 @@ def unresolved_counts(ctx, as_of=None):
         'engine_stop_codes': sum(1 for u in counted if u.get('stop_code')),
         'by_import': [(imp['engine_version'], imp['engine_unresolved_total']) for imp in r['engine_imports']
                       if 'engine_unresolved_total' in imp and within(imp['engine_version'])],
+        'engine_reported': [(imp['engine_version'], imp['engine_reported_totals']) for imp in r['engine_imports']
+                            if 'engine_reported_totals' in imp and (as_of is None or version_key(imp['engine_version']) <= version_key(as_of))],
         'v013_items': [u['engine_key'] for u in counted if version_key(u['engine_version']) <= version_key('v0.13')],
         'v017_additions': [u['engine_key'] for u in counted if u['engine_version'] == 'v0.17' and not u.get('counted_from_version')],
         'v026_v068_additions': [u['engine_key'] for u in counted if version_key('v0.26') <= version_key(u['engine_version']) <= version_key('v0.68')],
@@ -1098,6 +1178,8 @@ def basis_line(b, r):
         where = f"{b['card_ref']} の {b['field']}（{r['checked_values'][b['checked']]}）"
     else:
         where = f"[{b['source']}] p.{b['page']} {b['location']}（{r['checked_values'][b['checked']].split('（')[0]}）"
+        if b.get('transcription'):
+            where += f"（転記 PDF p.{b['transcription']['pdf_page']}）"
     q = f"「{b['quote']}」" if b.get('quote') else ''
     return f"{kind}: {where}{(' ' + q) if q else ''}"
 
@@ -1170,7 +1252,7 @@ def build(ctx):
             de += '。値の欠け（調査課題）: ' + '、'.join(g['field'] for g in x['data_gaps'])
         out.append(f"| {x['id']} | {md(card_label(cards, x['card_id']))} | [{x['source']}] p.{x['page']}（{md(x['location'])}） | "
                    f"{md('、'.join(x['checked_fields']))} | {md(C['results'][x['result']])} | {md(de)} | "
-                   f"{md(' '.join(([provenance_text(x)] if provenance_text(x) else []) + x['findings']))} |")
+                   f"{md(' '.join(([provenance_text(x)] if provenance_text(x) else []) + x['findings'] + later_note_texts(x)))} |")
     out.append('')
     errs = [x for x in C['records'] if x['data_error']]
     if errs:
@@ -1200,10 +1282,13 @@ def build(ctx):
     # 3. 条項
     out += ['## 3. 公式ルールの条項', '',
             '裁定が参照する公式ルールの箇所です。規則の本体の記録は `data/rule_history.json`（`NEO-2000-OFFICIAL-RULES` など）と `data/rule_differences.json` にあり、ここは参照する位置の索引です。', '',
-            '| id | 資料・ページ | 箇所 | 要旨 | 本体の記録 |', '|---|---|---|---|---|']
+            '確かめ方の `existing_transcription` は、既存の転記（' + TRANSCRIPTION_FILE + '）の文で、kyuura は原典の画像で確かめていません（引用は検査が転記の文と照らします）。', '',
+            '| id | 資料・ページ | 箇所 | 要旨 | 本体の記録 | 確かめ方 |', '|---|---|---|---|---|---|']
     for x in r['rule_clauses']:
         refs = '・'.join(x['rule_history_refs'] + [f"rule_differences の {i}" for i in x['rule_differences_refs']])
-        out.append(f"| {x['id']} | [{x['source']}] p.{'・p.'.join(x['pages'])} | {md(x['section'])} | {md(x['summary'])} | {md(refs)} |")
+        how = x['checked'] + (f"。転記の引用 {len(x['transcription_quotes'])}（PDF p." + '・'.join(
+            dict.fromkeys(str(t['pdf_page']) for t in x['transcription_quotes'])) + '）' if x.get('transcription_quotes') else '')
+        out.append(f"| {x['id']} | [{x['source']}] p.{'・p.'.join(x['pages'])} | {md(x['section'])} | {md(x['summary'])} | {md(refs)} | {md(how)} |")
     out.append('')
 
     # 4. 裁定
@@ -1326,7 +1411,11 @@ def build(ctx):
             out.append(f"| 文書を読んだコミット | `{imp['documents_read_at'][:7]}` |")
         out += [f"| エンジンが参照した kyuura のコミット | `{imp['kyuura_commit_used_by_engine']}` |",
                 f"| 取り込んだ日 | {imp['imported_on']} |",
-                f"| 読んだ文書 | {md('、'.join(imp['documents']))} |", '']
+                f"| 読んだ文書 | {md('、'.join(imp['documents']))} |"]
+        if imp.get('engine_reported_totals'):
+            rc = imp['engine_reported_totals']
+            out.append(f"| エンジンが報告した数（kyuura の一覧と照らしていない） | 停止コード {rc['stop_codes']}・未解決の裁定 {rc['unresolved_rulings']}。{md(rc['note'])} |")
+        out.append('')
         out += [f'- {md(n)}' for n in imp.get('notes', [])]
         out.append('')
         for rs in imp.get('ruling_sets', []):
@@ -1402,6 +1491,10 @@ def build(ctx):
                         f"- エンジン: {x['engine_import']}・{x['document']} {x.get('section', '')}" + (f"（裁定 {'・'.join(x['engine_rulings'])}）" if x.get('engine_rulings') else ''),
                         f"- カード: {cards_txt}",
                         f"- 内容: {md(x['summary'])}"]
+        if x.get('engine_fix'):
+            fx = x['engine_fix']
+            pos_section.append(f"- 実装の状態（{fx['as_of']}）: {ENGINE_FIX_STATES[fx['state']]}" +
+                               (f"。テスト: {'、'.join('`' + t + '`' for t in fx['tests'])}" if fx.get('tests') else ''))
         if x.get('engine_basis'):
             pos_section.append('- エンジンが挙げた根拠: ' + '；'.join(md(b) for b in x['engine_basis']))
         if x.get('kyuura_records'):
@@ -1411,8 +1504,10 @@ def build(ctx):
             'kyuura の調査の未解決（論点の数）と、エンジンの数え方（未解決の裁定・停止コード）は別の数です。どれも、ほかの数の代わりにしません。', '',
             f"- kyuura の未解決の論点: {uc['research_issues']} 件（5 章。結果への影響: " +
             '、'.join(f"{r['game_effect_values'][k].split('（')[0]} {v}" for k, v in uc['game_effect'].most_common()) + '）',
-            f"- エンジンが数える未解決の裁定（{uc['latest_version']} まで）: {uc['engine_total']} 件。そのうち停止コードのあるもの {uc['engine_stop_codes']} 件。"
+            f"- エンジンが数える未解決の裁定（kyuura の一覧で照らした {uc['latest_version']} まで）: {uc['engine_total']} 件。そのうち停止コードのあるもの {uc['engine_stop_codes']} 件。"
             '取り込みごとの数: ' + '、'.join(f'{v} {n} 件' for v, n in uc['by_import']),
+            *[f"- エンジンが報告した数（{v}。kyuura の一覧と照らしていない。上の数の代わりにしない）: 停止コード {c['stop_codes']}・未解決の裁定 {c['unresolved_rulings']}。{md(c['note'])}"
+              for v, c in uc['engine_reported']],
             f"  - v0.13 までの項目: {len(uc['v013_items'])} 件（{'・'.join(uc['v013_items'])}）",
             f"  - v0.17 で加わった項目: {len(uc['v017_additions'])} 件（{'・'.join(uc['v017_additions'])}）",
             f"  - v0.26〜v0.68 で加わった項目: {len(uc['v026_v068_additions'])} 件",
