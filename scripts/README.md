@@ -116,7 +116,7 @@ python3 scripts/research_stats.py
 | `sets.json` | 各弾の名前・発売日・収録数。資料によって発売日が違う弾は `release_note` に別の日付とその資料を書く（各弾のページの発売日の後ろに表示） |
 | `non_pack.json` | 拡張パック以外の商品の記号（id の規則）、番号違いのまとめ、対戦のカードでない項目、補足欄の役割、使える範囲（`play_scope`）、収録していない商品・範囲（`uncovered_products`） |
 | `card_corrections.json` | カードデータの訂正の記録（生成のたびに当てはめる。当てはめる前の値が違えば止まる）と、訂正しなかった候補とその理由 |
-| `card_image_checks.json` | kyuura がカードの画像で印刷の欄を読んだ記録（`IMG-`。2026-10-27 のベイビィ 13 枚、2026-10-30 の 18 枚）。`build_cardlist.py` が、進化ラインを結んだ（link）あとで、画像の値・訂正の記録・生成した値が同じかを確かめる（違えば止まる）。拡張パック以外の商品の段階の食い違い（サイトの種類の欄と進化ライン）を画像が確かめたら、`field_sources` をその照合の記録にする（値は変えない） |
+| `card_image_checks.json` | kyuura がカードの画像で印刷の欄を読んだ記録（`IMG-`。2026-10-27 のベイビィ 13 枚、2026-10-30 の 18 枚と neo2 の化石 4 枚）。`build_cardlist.py` が、進化ラインを結んだ（link）あとで、画像の値・訂正の記録・生成した値が同じかを確かめる（違えば止まる）。拡張パック以外の商品の段階の食い違い（サイトの種類の欄と進化ライン）を画像が確かめたら、`field_sources` をその照合の記録にする（値は変えない） |
 | `engine_registered_cards.json` | kyuura-engine の固定した版の登録表の写し（生成物。`snapshot_engine_registry.py`） |
 
 最後に生成したときの出典データ:

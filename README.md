@@ -30,6 +30,7 @@
 - [アンノーンI・D・F・[N]・[J] の調査](docs/unown-research-v0.97.md) — kyuura-engine v0.97 の前の研究（2026-10-24）。カードの画像で確かめたルール文、デッキの 4 枚の数え方、DARK df・NORMAL df の対象・重なり・計算の段階、効果を除くワザとの関係、未解決の論点とエンジンへの引き継ぎ
 - [ベイビィ 13 枚の準備と v0.113 の報告事項](docs/baby-preparation-engine-v0.113.md) — 2026-10-27。カードの画像で確かめたルール文・進化先（`pokemon.evolves_to`）、ベイビィの一般の条項・裁定・論点、登録表の写しの v0.113 への更新、ESP・ゆうでんの実装の記録。[エンジンへの引き継ぎ（v0.113）](docs/engine-handover-baby-v0.113.md)
 - [次の便のカードの文面と進化データの調査](docs/next-engine-text-evolution-research.md) — 2026-10-30。『ポケモンカードオフィシャルブック2000』p.127・p.156 とカードの画像で調べた、ピカチュウのなきごえ・ヤドランのおおいびき・ボロのつりざおの最新の説明・裁定・訂正と、アンノーン M・U・A のルール文・9 枚の段階と進化元の欠けの訂正。[エンジンへの引き継ぎ（v0.120 のあと）](docs/engine-handover-after-v0.120.md)
+- [neo2 の化石 4 枚のタイプと必要なエネルギーの確認](docs/neo2-fossil-type-cost-checks.md) — 2026-10-30。kyuura-engine v0.120 が入れ違いの候補として報告したカブト・カブトプス・オムナイト・オムスターを、カードの画像で確かめた（4 枚とも今までの値と同じ。訂正なし）
 - [エンジン開発の準備状況](docs/engine-readiness.md) — 対戦エンジン（別のリポジトリ [kyuura-engine](https://github.com/moheronemy/kyuura-engine)）の基準にしたルールと調査データ。エンジンを作り始める前の計画も記録として残している
 
 ### カード

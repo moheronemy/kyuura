@@ -261,7 +261,7 @@ kyuura がウェブに公開されたカードの画像で印刷の欄を読ん�
 | `print_text` | 欄の印刷の文（進化先の欄の見出しと文など） |
 | `site_transcriptions` | サイトの転記・解説の値（画像の値と分ける。照合の数に入れない）。`values` の `null` はその転記にその欄の文がないこと |
 | `not_checked`・`print_version`・`existing_value` | 確かめていない欄、刷・版の注記（修正前・修正版など）、今までの値が画像と同じだったこと |
-| `corrections` | この記録から書いた訂正の id。訂正は同じカード・`print_values` の欄・同じ値で、`basis` は `card_image_check`、`image_check` はこの記録、`card_checks_affected` は空（違えば止まる） |
+| `corrections` | この記録から書いた訂正の id。訂正は同じカード・`print_values` の欄・同じ値で、`basis` は `card_image_check`、`image_check` はこの記録、`card_checks_affected` は空（違えば止まる）。画像が今までの値と同じなら空で、`before` と `after` が同じ訂正は作らない（2026-10-30 の neo2 の化石 4 枚の `pokemon.types`・`pokemon.attacks[i].cost`・`cost_total`） |
 
 - `candidates`: `status`（`held_print_version` 印刷の版が決まらない・`held_transcription_difference` 別の転記との違い・`held_likely_transcription_error` 誤りの可能性が高いが印刷で確かめていない・`version_difference` 版の違い（誤りではない）・`gap_open` 値の欠け）と `reason`。
 
