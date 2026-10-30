@@ -152,21 +152,30 @@ class NonPackCatalogTest(Data):
 
     def test_evolves_from_has_a_source_or_a_gap(self):
         # 名前の接頭辞・英語版の進化元から推測しない（英語版は照らし合わせだけ）
+        fixes = {c['id']: c for c in load('data/curation/card_corrections.json')['corrections']}
         for c in self.non_pack:
             p = c['pokemon']
             if not p or p['stage'] not in ('stage1', 'stage2'):
                 continue
             src = c['field_sources'].get('pokemon.evolves_from')
             if p['evolves_from']:
-                self.assertTrue(src == 'pcg_search_evolution_line' or src.startswith('same_card:PMCG') or src.startswith('same_card:neo'), (c['id'], src))
+                if src and src.startswith('card_corrections:'):
+                    # 2026-10-30 から: カードの画像で確かめた訂正（推測ではない。tests/test_next_engine_text_evolution.py）
+                    fix = fixes[src.split(':', 1)[1]]
+                    self.assertEqual((fix['card_id'], fix['field'], fix['basis']), (c['id'], 'pokemon.evolves_from', 'card_image_check'), c['id'])
+                    self.assertTrue(fix['image_check'])
+                else:
+                    self.assertTrue(src == 'pcg_search_evolution_line' or src.startswith('same_card:PMCG') or src.startswith('same_card:neo'), (c['id'], src))
             else:
                 self.assertIn('pokemon.evolves_from', c['data_gaps'], c['id'])
-        # サイトの種類の欄と進化ラインの段階が違うカードは、段階を値の欠けにして進化元を入れない
+        # この取り込みの時点（v0.68 の写しを入れたコミット）の生成: サイトの種類の欄と進化ラインの段階が違うカードは、段階を値の欠けにして
+        # 進化元を入れない。進化ラインの名前が「わるい」のない名前のページからは入れない（2026-10-30 に、どちらもカードの画像で確かめた訂正・照合で埋めた）
+        then = {c['id']: c for c in json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{V068_SNAPSHOT_AT}:data/cards.json'],
+                                                                capture_output=True, text=True, check=True).stdout)['cards']}
         for cid in ('GD3-003', 'PRN-030'):
-            self.assertIn('pokemon.stage', self.by_id[cid]['data_gaps'])
-            self.assertIsNone(self.by_id[cid]['pokemon']['evolves_from'])
-        # 進化ラインの名前が「わるい」のない名前のページからは入れない
-        self.assertIsNone(self.by_id['PRN-040']['pokemon']['evolves_from'])
+            self.assertIn('pokemon.stage', then[cid]['data_gaps'])
+            self.assertIsNone(then[cid]['pokemon']['evolves_from'])
+        self.assertIsNone(then['PRN-040']['pokemon']['evolves_from'])
 
     def test_null_retreat_reading(self):
         checks = self.page_checks['pages']

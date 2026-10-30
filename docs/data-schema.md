@@ -40,7 +40,7 @@
 | `data_gaps` | 文字列の配列 | 値のない欄（調査・転記の不足。形式 3）。例 `pokemon.evolves_from`・`pokemon.evolves_to`（ベイビィの進化先が未確認）・`jp_print.level`・`energy.text.ja`・`pokemon.stage`（サイトの種類の欄と進化ラインの段階が違う）。英語版がないことは数えない |
 | `source_ids.pcg_search` | 文字列の配列 | pcg-search.com のカードページ名（形式 3）。拡張パックの記録は空（拡張パックのページとは結んでいない） |
 | `copies` | 配列 | 拡張パック以外の商品の記録だけ。同じ商品の中で番号だけが違うページ（イントロパックのデッキ）をまとめた元のページ `[{page, list_number}]`。1 ページなら 1 件 |
-| `field_sources` | オブジェクト | 拡張パック以外の商品の記録だけ。欄の出どころ（`pcg_search`・`pcg_search_page_dash`（読み直したページで「-」）・`pcg_search_null_read_as_zero`・`pcg_search_evolution_line`・`same_card:<拡張パックの id>`・`other_products.en_prints`・`pokemontcg:<id>`・`pcg_search_kind_conflicts_with_evolution_line`） |
+| `field_sources` | オブジェクト | 拡張パック以外の商品の記録だけ。欄の出どころ（`pcg_search`・`pcg_search_page_dash`（読み直したページで「-」）・`pcg_search_null_read_as_zero`・`pcg_search_evolution_line`・`same_card:<拡張パックの id>`・`other_products.en_prints`・`pokemontcg:<id>`・`pcg_search_kind_conflicts_with_evolution_line`・`card_corrections:<訂正の id>`（段階・進化元を訂正の記録で埋めた・直した。2026-10-30 から）・`card_image_check:<照合の記録の id>`（サイトの中で食い違っていた段階を、カードの画像の照合で同じ値と確かめた。値は変えない）） |
 | `corrections` | 配列 | 訂正の記録（`data/curation/card_corrections.json`）で直した欄があるときだけ `[{id, field, before, after, basis, decided_on}]` |
 
 ### 日英の値

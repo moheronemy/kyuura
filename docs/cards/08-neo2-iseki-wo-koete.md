@@ -36,10 +36,10 @@
 | 24 | ネイティオ | ポケモン | 超 | 1進化 | 70 | ◆ | Xatu<br>Neo Discovery 52 |  |
 | 25 | アンノーンD | ポケモン | 超 | たね | 40 | ◆ | Unown [D]<br>Neo Discovery 47 | 日英の違い: ポケモンパワー DARK df（[Darkness]）で「-30」するダメージの対象と、2 匹以上のときの条件<br>訂正（FIX-neo2-025-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「D」）の日本語版のカードの画像を 2 つのサイトで読み、カード名の上（右上）の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-24）。転記（なぞのばしょ）はこの欄を載せていなかった（なぞのばしょのページの欄にルール文がない。印刷されていないのではない）。英語版の文面・ほかの文字のアンノーンの文面からは写していない |
 | 26 | アンノーンF | ポケモン | 超 | たね | 40 | ◆ | Unown [F]<br>Neo Discovery 48 | 訂正（FIX-neo2-026-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「F」）の日本語版のカードの画像を 2 つのサイトで読み、カード名の上（右上）の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-24）。転記（なぞのばしょ）はこの欄を載せていなかった（なぞのばしょのページの欄にルール文がない。印刷されていないのではない）。英語版の文面・ほかの文字のアンノーンの文面からは写していない |
-| 27 | アンノーンM | ポケモン | 超 | たね | 40 | ◆ | Unown [M]<br>Neo Discovery 49 |  |
-| 28 | アンノーンU | ポケモン | 超 | たね | 40 | ◆ | Unown [U]<br>Neo Discovery 51 |  |
+| 27 | アンノーンM | ポケモン | 超 | たね | 40 | ◆ | Unown [M]<br>Neo Discovery 49 | 訂正（FIX-neo2-027-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「M」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-027）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない |
+| 28 | アンノーンU | ポケモン | 超 | たね | 40 | ◆ | Unown [U]<br>Neo Discovery 51 | 訂正（FIX-neo2-028-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「U」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-028）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない |
 | 29 | エーフィ | ポケモン | 超 | 1進化 | 80 | ★キラ | Espeon<br>Neo Discovery 1 |  |
-| 30 | アンノーンA | ポケモン | 超 | たね | 40 | ★キラ | Unown [A]<br>Neo Discovery 14・33 |  |
+| 30 | アンノーンA | ポケモン | 超 | たね | 40 | ★キラ | Unown [A]<br>Neo Discovery 14・33 | 訂正（FIX-neo2-030-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「A」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-030）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない |
 | 31 | ソーナンス | ポケモン | 超 | たね | 90 | ★キラ | Wobbuffet<br>Neo Discovery 16・35 |  |
 | 32 | オムナイト | ポケモン | 闘 | 1進化 | 50 | ● | Omanyte<br>Neo Discovery 60 |  |
 | 33 | バルキー | ポケモン | 闘 | ベイビィ | 30 | ● | Tyrogue<br>Neo Discovery 66 | 訂正（FIX-neo2-033-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のバルキー）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo2-033、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない<br>訂正（FIX-neo2-033-EVOLVES-TO）: 空だった pokemon.evolves_to に「エビワラー・サワムラー・カポエラー」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のバルキー）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「エビワラーへ進化」「サワムラーへ進化」「カポエラーへ進化」「「エビワラー」「サワムラー」「カポエラー」のいずれかを上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo2-033）。同じ名前のほかの版の記録から写していない |
@@ -472,7 +472,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 
 英語版: Neo Discovery 49
 
-- ルール: You may have up to 4 Basic Pokémon cards in your deck with Unown in their names.
+- ルール: 「アンノーン」はデッキに4枚までしか入れることができません。 / You may have up to 4 Basic Pokémon cards in your deck with Unown in their names.
 - ポケモンパワー「METAL df[メタル ディーエフ] / [Metal]」
   - 日本語: 自分の場の「アンノーン」が「鋼」ポケモンからダメージを受けるとき、そのダメージは「-30」される。自分の場のほかのアンノーン「M」の「METAL df」がはたらいているとき、この力は、はたらかない。
   - 英語: Whenever a Metal Pokémon damages 1 of your Pokémon, reduce that damage by 30 (after applying Weakness and Resistance). This power stops working if you have more than 1 Unown [M] in play. (This power works even if Unown [M] is Asleep, Confused, or Paralyzed.)
@@ -482,6 +482,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 | めざめるパワー / Hidden Power | 超 | 10 |  |
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo2-027-unknown-m/)
+- 備考: 訂正（FIX-neo2-027-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「M」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-027）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない
 - 日本版の収録商品: 遺跡をこえて...
 
 ### 28. アンノーンU / Unown [U]
@@ -490,7 +491,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 
 英語版: Neo Discovery 51
 
-- ルール: You may have up to 4 Basic Pokémon cards in your deck with Unown in their names.
+- ルール: 「アンノーン」はデッキに4枚までしか入れることができません。 / You may have up to 4 Basic Pokémon cards in your deck with Unown in their names.
 - ポケモンパワー「UNDO[アンドゥ] / [Undo]」
   - 日本語: この力は、自分のベンチに、このカードとアンノーン「N」「D」「O」がいるとき、自分の番ごとに1回使える。自分のバトル場のポケモンと、そのポケモンについているすべてのカードを、自分の手札にもどす。
   - 英語: Once during your turn (before your attack), if you have Unown [U], Unown [N], Unown [D], and Unown [O] on your Bench, you may return your Active Pokémon and all cards attached to it to your hand.
@@ -500,6 +501,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 | めざめるパワー / Hidden Power | 超 | 10 |  |
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo2-028-unknown-u/)
+- 備考: 訂正（FIX-neo2-028-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「U」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-028）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない
 - 日本版の収録商品: 遺跡をこえて...
 
 ### 29. エーフィ / Espeon
@@ -522,7 +524,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 
 英語版: Neo Discovery 14・33
 
-- ルール: You may have up to 4 Basic Pokémon cards in your deck with Unown in their names.
+- ルール: 「アンノーン」はデッキに4枚までしか入れることができません。 / You may have up to 4 Basic Pokémon cards in your deck with Unown in their names.
 - ポケモンパワー「ANGER[アンガー] / [Anger]」
   - 日本語: この力は、自分の場の「アンノーン」が「めざめるパワー」を使うとき、使える。その「めざめるパワー」のダメージに、このカードにのっているダメージカウンターの数×10のダメージを追加する。このカード以外のアンノーン「A」が「ANGER」を使っているとき、この力は使えない。
   - 英語: Whenever 1 of your Pokémon with Unown in its name uses its Hidden Power attack, that attack does 10 more damage for each damage counter on Unown [A]. If you have more than 1 Unown [A] in play, use only 1 [Anger] for each attack.
@@ -532,6 +534,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 | めざめるパワー / Hidden Power | 超 | 10 |  |
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo2-030-unknown-a/)
+- 備考: 訂正（FIX-neo2-030-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「A」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-030）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない
 - 日本版の収録商品: 遺跡をこえて...
 
 ### 31. ソーナンス / Wobbuffet

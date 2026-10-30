@@ -75,13 +75,22 @@ class EvolvesToTest(Data):
 
     def test_evolution_targets_keep_their_printed_stage(self):
         # ベイビィから進化できることを理由に、進化先のカードの stage・evolves_from を変えていない
+        # この作業のコミット（e519b99）と基準（73a1690）で比べる。あとの作業で、進化先のカードの段階を画像で確かめて直したもの
+        # （2026-10-30 の PRN-030 カポエラー。印刷はたねポケモン）は、画像の照合の記録を持つ訂正だけ
         names = {n for v in EVOLVES_TO.values() for n in v}
         old = {c['id']: c for c in base_json('data/cards.json')['cards']}
-        targets = [c for c in self.cards if c['pokemon'] and c['name']['ja'] in names]
+        then = {c['id']: c for c in json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{AT_COMMIT}:data/cards.json'],
+                                                                capture_output=True, text=True, check=True).stdout)['cards']}
+        targets = [c for c in then.values() if c['pokemon'] and c['name']['ja'] in names]
         self.assertTrue(targets)
+        fixes = {(c['card_id'], c['field']): c for c in self.ledger['corrections']}
         for c in targets:
             for k in ('stage', 'evolves_from'):
                 self.assertEqual(c['pokemon'][k], old[c['id']]['pokemon'][k], c['id'])
+                if self.by_id[c['id']]['pokemon'][k] != c['pokemon'][k]:
+                    fix = fixes[(c['id'], f'pokemon.{k}')]
+                    self.assertEqual((fix['basis'], fix['decided_on'] > '2026-10-27'), ('card_image_check', True), c['id'])
+                    self.assertTrue(fix['image_check'])
 
     def test_unconfirmed_stays_null_and_is_a_gap(self):
         rec = copy.deepcopy(self.by_id['neo2-033'])

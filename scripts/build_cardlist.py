@@ -79,6 +79,8 @@ STAGE_JA = {'basic': 'たね', 'stage1': '1進化', 'stage2': '2進化', 'baby':
 # 印刷に進化先の欄（「○○へ進化」）がある段階。pokemon.evolves_to はこの段階の記録にだけ置く（ほかの段階は欄がない = 適用外）。
 # 生成は未確認の null で作り、印刷で確かめた値は訂正の記録（data/curation/card_corrections.json）で入れる
 EVOLVES_TO_STAGES = ('baby',)
+# 拡張パック以外の商品の記録で、field_sources に出どころを書く欄のうち、訂正・画像の照合で出どころが変わるもの
+SOURCED_FIELDS = ('pokemon.stage', 'pokemon.evolves_from')
 TRAINER_KIND_ID = {'Stadium': 'stadium', 'Pokémon Tool': 'pokemon_tool',
                    "Rocket's Secret Machine": 'rockets_secret_machine',
                    'Goldenrod Game Corner': 'goldenrod_game_corner'}
@@ -795,6 +797,9 @@ def apply_corrections(records, ledger):
             if cur != c['before']:
                 raise SystemExit(f"card_corrections.json の訂正の before が今の値と違う（出典が変わったか、すでに直っている）: {c['id']} {cur!r}")
             set_field(r, c['field'], c['after'])
+            if 'field_sources' in r and c['field'] in SOURCED_FIELDS:
+                # 拡張パック以外の商品の記録の欄の出どころ（段階・進化元）を、この訂正にする
+                r['field_sources'][c['field']] = f"card_corrections:{c['id']}"
             if c['before'] is None:  # 転記の欠け・未確認の欄（値が空の欄）を埋めた
                 after = '・'.join(c['after']) if isinstance(c['after'], list) else c['after']
                 r['notes'].append(f"訂正（{c['id']}）: 空だった {c['field']} に「{after}」を入れた。根拠: {c['basis_detail']}")
@@ -891,7 +896,7 @@ def check_image_checks(records, doc, ledger):
                 raise SystemExit(f'card_image_checks.json の画像の値と生成した値が違う（訂正の記録を書くか、照合を見直す）: {w} {field} {cur!r}')
         for fid in x['corrections']:
             c = fixes.get(fid)
-            if (c is None or c['card_id'] != x['card_id'] or c['field'] not in x['print_values'] or c['after'] != x['print_values'][c['field']]
+            if (c is None or c['card_id'] != x['card_id'] or not printed_matches(x['print_values'], c['field'], c['after'])
                     or c['basis'] != 'card_image_check' or c.get('image_check') != w or c['card_checks_affected']):
                 raise SystemExit(f'card_image_checks.json の訂正 {fid} が照合の記録 {w} と合わない')
     known = {x['id']: x for x in doc['checks']}
@@ -900,6 +905,23 @@ def check_image_checks(records, doc, ledger):
             raise SystemExit(f"訂正 {c['id']} の image_check {c['image_check']} が照合の記録にない（または記録の corrections にない）")
         if c['basis'] == 'card_image_check' and not (c.get('image_check') or c.get('evidence')):
             raise SystemExit(f"basis が card_image_check の訂正に画像の記録（image_check・evidence）がない: {c['id']}")
+
+
+def printed_matches(print_values, field, value):
+    """訂正の値が、画像に写っている値（欄そのもの、または日英の値の日本語 field.ja）と同じか。"""
+    if field in print_values:
+        return print_values[field] == value
+    return isinstance(value, dict) and f'{field}.ja' in print_values and print_values[f'{field}.ja'] == value.get('ja')
+
+
+def confirm_stage_by_image_checks(records, doc):
+    """拡張パック以外の商品の記録で、サイトの種類の欄と進化ラインの段階が違う（non_pack.STAGE_CONFLICT）段階を、カードの画像の照合の記録が
+    同じ値と確かめたなら、出どころをその照合の記録にする（値は変えない。値が違えば check_image_checks が止める）。"""
+    by_id = {r['id']: r for r in records}
+    for x in doc['checks']:
+        r = by_id[x['card_id']]
+        if 'pokemon.stage' in x['print_values'] and r.get('field_sources', {}).get('pokemon.stage') == non_pack.STAGE_CONFLICT:
+            r['field_sources']['pokemon.stage'] = f"card_image_check:{x['id']}"
 
 
 def pack_dates():
@@ -925,13 +947,15 @@ def finish_records(records, en, namer):
     ledger = load_json(ROOT / 'data' / 'curation' / 'card_corrections.json')
     apply_corrections(records, ledger)
     check_evolves_to(records, ledger)
-    check_image_checks(records, load_json(ROOT / 'data' / 'curation' / 'card_image_checks.json'), ledger)
     cur = np_.cur
     code_of = {title: v['code'] for title, v in np_.np['products'].items()}
     product_dates = {code_of[p['pcg_title']]: p.get('release_date') for p in cur['products']}
     reprint_text = {k: v for k, v in cur.get('reprint_text', {}).items() if not k.startswith('_')}
     reprint_checks = {k: v for k, v in cur.get('reprint_checks', {}).items() if not k.startswith('_')}
     groups, checks = non_pack.link(records, np_, pack_dates(), product_dates, reprint_text, reprint_checks, namer)
+    image_checks = load_json(ROOT / 'data' / 'curation' / 'card_image_checks.json')
+    check_image_checks(records, image_checks, ledger)
+    confirm_stage_by_image_checks(records, image_checks)
     for r in records:
         r['data_gaps'] = non_pack.data_gaps(r)
     return records, (np_, items, non_game, groups, checks, code_of)

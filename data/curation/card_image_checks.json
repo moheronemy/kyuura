@@ -1121,6 +1121,630 @@
    "corrections": [
     "FIX-neo3-053-TRAINER-TEXT-JA"
    ]
+  },
+  {
+   "id": "IMG-neo2-027",
+   "card_id": "neo2-027",
+   "card_name_ja": "アンノーンM",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo2027.php",
+     "page_title": "アンノーン[M] | ポケモンカードneo 第2弾 遺跡をこえて...",
+     "image_url": "https://pcg-search.com/img/neo/neo2027.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "7f6a9d692aee235aa764709ba86347b022523c71629668c8a4a89ec7d46e45d3",
+     "accessed_on": "2026-10-30"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo2-027-unknown-m/",
+     "page_title": "アンノーン[M] | ポケモンカード★neo | 拡張パック第2弾 遺跡をこえて…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2021/05/neo2_B_027_unknown-m_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "ee3ecccca3a17a43074458815e2944b61239128d2ac2dabf622274aee1ad6d47",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "2 つの画像とも、大きい「アンノーン」・文字の形の図・小さい「M［エム］」、LV.14、HP40、超、たねポケモン、【特殊能力】METAL df［メタル ディーエフ］、めざめるパワー（超・10）、No.201。kyuura の data/cards.json の名前の英字・jp_print.level（14）・HP・特殊能力名と合う。pcg-search の番号（neo2027）と kyuura の id の番号は、この文字では同じ（同じ弾の D・F は違う）。名前だけで決めていない",
+   "independence": "画像は 2 つのサイトに 1 枚ずつ。同じ撮影・スキャンに由来するかは分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記は画像の値と分ける",
+   "print_values": {
+    "pokemon.rules_text.ja": "「アンノーン」はデッキに4枚までしか入れることができません。"
+   },
+   "print_text": {
+    "pokemon.rules_text.ja": [
+     "「アンノーン」はデッキに4枚までしか入れることができません。（カード名の上・右上の小さい文字）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得）",
+     "page_url": "https://pcg-search.com/card/neo/neo2027.php",
+     "values": {
+      "pokemon.rules_text.ja": "「アンノーン」はデッキに4枚までしか入れることができません。"
+     },
+     "note": "ページの文字にもこの文がある"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-30 に取得したページの「ルール」の欄）",
+     "page_url": "https://nazonobasho.com/neo2-027-unknown-m/",
+     "values": {
+      "pokemon.rules_text.ja": "「アンノーン」はデッキに4枚までしか入れることができません。"
+     },
+     "note": "「ルール」の欄にこの文がある。kyuura の取り込み（scripts/nazonobasho.py の KEEP_FIELDS）がこの欄を残さないので、data/ja_text_nazonobasho.json にはない"
+    }
+   ],
+   "not_checked": [
+    "特殊能力・ワザの説明の全文の読み比べ（特定に使った名前のほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・刷の記号",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-neo2-027-RULES-TEXT-JA"
+   ]
+  },
+  {
+   "id": "IMG-neo2-028",
+   "card_id": "neo2-028",
+   "card_name_ja": "アンノーンU",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo2028.php",
+     "page_title": "アンノーン[U] | ポケモンカードneo 第2弾 遺跡をこえて...",
+     "image_url": "https://pcg-search.com/img/neo/neo2028.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "b69ab1e9926932b8a6417ea8196b8e9ac05b51d234c447d25f537b221d357ea3",
+     "accessed_on": "2026-10-30"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo2-028-unknown-u/",
+     "page_title": "アンノーン[U] | ポケモンカード★neo | 拡張パック第2弾 遺跡をこえて…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2021/05/neo2_B_028_unknown-u_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "72fe980906fa00cd4acb9d618939d4c74a147c59a8322b574e85360cba0f9c36",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "2 つの画像とも、大きい「アンノーン」・文字の形の図・小さい「U［ユー］」、LV.16、HP40、超、たねポケモン、【特殊能力】UNDO［アンドゥ］、めざめるパワー（超・10）、No.201。kyuura の data/cards.json の名前の英字・jp_print.level（16）・HP・特殊能力名と合う。pcg-search の番号（neo2028）と kyuura の id の番号は、この文字では同じ（同じ弾の D・F は違う）。名前だけで決めていない",
+   "independence": "画像は 2 つのサイトに 1 枚ずつ。同じ撮影・スキャンに由来するかは分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記は画像の値と分ける",
+   "print_values": {
+    "pokemon.rules_text.ja": "「アンノーン」はデッキに4枚までしか入れることができません。"
+   },
+   "print_text": {
+    "pokemon.rules_text.ja": [
+     "「アンノーン」はデッキに4枚までしか入れることができません。（カード名の上・右上の小さい文字）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得）",
+     "page_url": "https://pcg-search.com/card/neo/neo2028.php",
+     "values": {
+      "pokemon.rules_text.ja": "「アンノーン」はデッキに4枚までしか入れることができません。"
+     },
+     "note": "ページの文字にもこの文がある"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-30 に取得したページの「ルール」の欄）",
+     "page_url": "https://nazonobasho.com/neo2-028-unknown-u/",
+     "values": {
+      "pokemon.rules_text.ja": "「アンノーン」はデッキに4枚までしか入れることができません。"
+     },
+     "note": "「ルール」の欄にこの文がある。kyuura の取り込み（scripts/nazonobasho.py の KEEP_FIELDS）がこの欄を残さないので、data/ja_text_nazonobasho.json にはない"
+    }
+   ],
+   "not_checked": [
+    "特殊能力・ワザの説明の全文の読み比べ（特定に使った名前のほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・刷の記号",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-neo2-028-RULES-TEXT-JA"
+   ]
+  },
+  {
+   "id": "IMG-neo2-030",
+   "card_id": "neo2-030",
+   "card_name_ja": "アンノーンA",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo2030.php",
+     "page_title": "アンノーン[A] | ポケモンカードneo 第2弾 遺跡をこえて...",
+     "image_url": "https://pcg-search.com/img/neo/neo2030.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "a88894524ce40c453c2f112e11caf3bdbb5e9b7c96e9c97c6c9403de3e5a5aa5",
+     "accessed_on": "2026-10-30"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo2-030-unknown-a/",
+     "page_title": "アンノーン[A] | ポケモンカード★neo | 拡張パック第2弾 遺跡をこえて…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2021/05/neo2_B_030_unknown-a_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "4e3dc1894b77bf295b83d0ef58fa8e3aa86106e06d9fd2f11ee6cde838969619",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "2 つの画像とも、大きい「アンノーン」・文字の形の図・小さい「A［エー］」、LV.15、HP40、超、たねポケモン、【特殊能力】ANGER［アンガー］、めざめるパワー（超・10）、No.201。kyuura の data/cards.json の名前の英字・jp_print.level（15）・HP・特殊能力名と合う。pcg-search の番号（neo2030）と kyuura の id の番号は、この文字では同じ（同じ弾の D・F は違う）。名前だけで決めていない",
+   "independence": "画像は 2 つのサイトに 1 枚ずつ。同じ撮影・スキャンに由来するかは分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記は画像の値と分ける",
+   "print_values": {
+    "pokemon.rules_text.ja": "「アンノーン」はデッキに4枚までしか入れることができません。"
+   },
+   "print_text": {
+    "pokemon.rules_text.ja": [
+     "「アンノーン」はデッキに4枚までしか入れることができません。（カード名の上・右上の小さい文字）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得）",
+     "page_url": "https://pcg-search.com/card/neo/neo2030.php",
+     "values": {
+      "pokemon.rules_text.ja": "「アンノーン」はデッキに4枚までしか入れることができません。"
+     },
+     "note": "ページの文字にもこの文がある"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-30 に取得したページの「ルール」の欄）",
+     "page_url": "https://nazonobasho.com/neo2-030-unknown-a/",
+     "values": {
+      "pokemon.rules_text.ja": "「アンノーン」はデッキに4枚までしか入れることができません。"
+     },
+     "note": "「ルール」の欄にこの文がある。kyuura の取り込み（scripts/nazonobasho.py の KEEP_FIELDS）がこの欄を残さないので、data/ja_text_nazonobasho.json にはない"
+    }
+   ],
+   "not_checked": [
+    "特殊能力・ワザの説明の全文の読み比べ（特定に使った名前のほかは、転記と比べて直す作業をしていない）",
+    "図鑑の説明・イラストレーター・刷の記号",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "corrections": [
+    "FIX-neo2-030-RULES-TEXT-JA"
+   ]
+  },
+  {
+   "id": "IMG-GD3-003",
+   "card_id": "GD3-003",
+   "card_name_ja": "マチスのライチュウ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stgymd3003.php",
+     "page_title": "マチスのライチュウ | ポケモンカード(PMCG) ポケモンジム第2弾「クチバシティジム マチス」",
+     "image_url": "https://pcg-search.com/img/1st/1stgymd3003.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "6e3d16e3bf86fa31ca22d4f75ed78eb4f822aaba7446386cb635bc9cb94e05e4",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「マチスのライチュウ」LV.32、HP70、雷、1進化。pcg-search のページはポケモンジム第2弾「クチバシティジム マチス」。kyuura の data/cards.json の名前・HP と合う（レベルは特定の手がかりにだけ使った）",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（種類の欄・進化ライン）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "マチスのピカチュウ"
+   },
+   "print_text": {
+    "pokemon.stage": [
+     "1進化",
+     "マチスのピカチュウから進化",
+     "モンスターカードに重ねて使います。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得）",
+     "page_url": "https://pcg-search.com/card/1st/1stgymd3003.php",
+     "values": {},
+     "note": "ページの種類の欄は「１進化ポケモン」。進化元の文はページにない（進化ライン検索はサイトの一覧で、カードの印刷の文ではない）"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない）",
+    "ワザ・特殊能力の文面の読み比べ",
+    "カードの実物・公式の書籍のページ"
+   ],
+   "corrections": [
+    "FIX-GD3-003-EVOLVES-FROM"
+   ],
+   "existing_value": "段階は今までの値（stage1）と同じ。サイトの種類の欄と進化ラインの食い違いで値の欠けとしていた段階を、この照合で確かめた（値は変えない。field_sources を照合の記録にする）"
+  },
+  {
+   "id": "IMG-ES2-011",
+   "card_id": "ES2-011",
+   "card_name_ja": "オムナイト",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stex2011.php",
+     "page_title": "オムナイト | ポケモンカード(PMCG) 拡張シート 第2弾(赤版)",
+     "image_url": "https://pcg-search.com/img/1st/1stex2011.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "dde1cf9e1e87493f74b1c069f28815797e86e8ffa7bdca1503508565b7e806e7",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「オムナイト」LV.20、HP50、水、1進化、【特殊能力】げんしのゆめ・ころがりタックル。pcg-search のページは拡張シート第2弾（赤版）。kyuura の data/cards.json の名前・HP と合う（レベルは特定の手がかりにだけ使った）",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（種類の欄・進化ライン）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "なにかの化石"
+   },
+   "print_text": {
+    "pokemon.stage": [
+     "1進化",
+     "なにかの化石から進化",
+     "モンスターカードに重ねて使います。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得）",
+     "page_url": "https://pcg-search.com/card/1st/1stex2011.php",
+     "values": {},
+     "note": "ページの種類の欄は「１進化ポケモン」。進化元の文はページにない（進化ライン検索はサイトの一覧で、カードの印刷の文ではない）"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない）",
+    "ワザ・特殊能力の文面の読み比べ",
+    "カードの実物・公式の書籍のページ"
+   ],
+   "corrections": [
+    "FIX-ES2-011-EVOLVES-FROM"
+   ]
+  },
+  {
+   "id": "IMG-ES2-028",
+   "card_id": "ES2-028",
+   "card_name_ja": "カブト",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stex2028.php",
+     "page_title": "カブト | ポケモンカード(PMCG) 拡張シート 第2弾(赤版)",
+     "image_url": "https://pcg-search.com/img/1st/1stex2028.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "9d83353d02fcda3e5bae1b84c7a4b51f8e8729a8a4f8f63c82477f0ddb6aaf05",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「カブト」LV.22、HP50、闘、1進化。pcg-search のページは拡張シート第2弾（赤版）。kyuura の data/cards.json の名前・HP と合う（レベルは特定の手がかりにだけ使った）",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（種類の欄・進化ライン）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "なにかの化石"
+   },
+   "print_text": {
+    "pokemon.stage": [
+     "1進化",
+     "なにかの化石から進化",
+     "モンスターカードに重ねて使います。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得）",
+     "page_url": "https://pcg-search.com/card/1st/1stex2028.php",
+     "values": {},
+     "note": "ページの種類の欄は「１進化ポケモン」。進化元の文はページにない（進化ライン検索はサイトの一覧で、カードの印刷の文ではない）"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない）",
+    "ワザ・特殊能力の文面の読み比べ",
+    "カードの実物・公式の書籍のページ"
+   ],
+   "corrections": [
+    "FIX-ES2-028-EVOLVES-FROM"
+   ]
+  },
+  {
+   "id": "IMG-ES2-029",
+   "card_id": "ES2-029",
+   "card_name_ja": "プテラ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stex2029.php",
+     "page_title": "プテラ | ポケモンカード(PMCG) 拡張シート 第2弾(赤版)",
+     "image_url": "https://pcg-search.com/img/1st/1stex2029.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "7ac3bc1a2a3b661f97c9eb196e06662bf8c2c685c6aeb88086ffd7e0698fbd79",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「プテラ」LV.30、HP70、闘、1進化。pcg-search のページは拡張シート第2弾（赤版）。kyuura の data/cards.json の名前・HP と合う（レベルは特定の手がかりにだけ使った）",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（種類の欄・進化ライン）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "なにかの化石"
+   },
+   "print_text": {
+    "pokemon.stage": [
+     "1進化",
+     "なにかの化石から進化",
+     "モンスターカードに重ねて使います。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得）",
+     "page_url": "https://pcg-search.com/card/1st/1stex2029.php",
+     "values": {},
+     "note": "ページの種類の欄は「１進化ポケモン」。進化元の文はページにない（進化ライン検索はサイトの一覧で、カードの印刷の文ではない）"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない）",
+    "ワザ・特殊能力の文面の読み比べ",
+    "カードの実物・公式の書籍のページ"
+   ],
+   "corrections": [
+    "FIX-ES2-029-EVOLVES-FROM"
+   ]
+  },
+  {
+   "id": "IMG-ES3-018",
+   "card_id": "ES3-018",
+   "card_name_ja": "オムナイト",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stex3018.php",
+     "page_title": "オムナイト | ポケモンカード(PMCG) 拡張シート 第3弾(緑版)",
+     "image_url": "https://pcg-search.com/img/1st/1stex3018.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "df0b964841de479c3aeeb99c10ba37f2b1bc66177acdebd4f3a34af2ed122369",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「オムナイト」LV.22、HP50、水、1進化。pcg-search のページは拡張シート第3弾（緑版）（ES2-011 の LV.20 とは別のカード）。kyuura の data/cards.json の名前・HP と合う（レベルは特定の手がかりにだけ使った）",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（種類の欄・進化ライン）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "なにかの化石"
+   },
+   "print_text": {
+    "pokemon.stage": [
+     "1進化",
+     "なにかの化石から進化",
+     "モンスターカードに重ねて使います。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得）",
+     "page_url": "https://pcg-search.com/card/1st/1stex3018.php",
+     "values": {},
+     "note": "ページの種類の欄は「１進化ポケモン」。進化元の文はページにない（進化ライン検索はサイトの一覧で、カードの印刷の文ではない）"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない）",
+    "ワザ・特殊能力の文面の読み比べ",
+    "カードの実物・公式の書籍のページ"
+   ],
+   "corrections": [
+    "FIX-ES3-018-EVOLVES-FROM"
+   ]
+  },
+  {
+   "id": "IMG-PRN-030",
+   "card_id": "PRN-030",
+   "card_name_ja": "カポエラー",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neop030.php",
+     "page_title": "カポエラー | ポケモンカードneo プロモ",
+     "image_url": "https://pcg-search.com/img/neo/neop030.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "e4862218025bad95ce68c8c766c782188155596b7ed4dd5690b99d7cd56cb28a",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「カポエラー」LV.29、HP60、闘、たねポケモン、れんぞくキック・こうそくスピン、下端に「PIKACHU the MOVIE 2000 入場者プレゼントカード」。pcg-search のページはプロモ（neo）。kyuura の data/cards.json の名前・HP と合う（レベルは特定の手がかりにだけ使った）",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（種類の欄・進化ライン）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.stage": "basic",
+    "pokemon.evolves_from": null
+   },
+   "print_text": {
+    "pokemon.stage": [
+     "（左上に進化の印・「〇〇から進化」の欄はない）",
+     "HP の下の帯に「たねポケモン」"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得）",
+     "page_url": "https://pcg-search.com/card/neo/neop030.php",
+     "values": {},
+     "note": "ページの種類の欄は「１進化ポケモン」。進化元の文はページにない（進化ライン検索はサイトの一覧で、カードの印刷の文ではない）。種類の欄は印刷（たねポケモン）と違う"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない）",
+    "ワザ・特殊能力の文面の読み比べ",
+    "カードの実物・公式の書籍のページ"
+   ],
+   "corrections": [
+    "FIX-PRN-030-STAGE"
+   ]
+  },
+  {
+   "id": "IMG-PRN-039",
+   "card_id": "PRN-039",
+   "card_name_ja": "わるいフシギソウ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neop039.php",
+     "page_title": "わるいフシギソウ | ポケモンカードneo プロモ",
+     "image_url": "https://pcg-search.com/img/neo/neop039.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "8474da72d848a1b103d13f604d6d632544c743b01468c4870f56e2e5e06f82ab",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「わるいフシギソウ」LV.16、HP50、草、1進化。pcg-search のページはプロモ（neo）。kyuura の data/cards.json の名前・HP と合う（レベルは特定の手がかりにだけ使った）",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（種類の欄・進化ライン）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "フシギダネ"
+   },
+   "print_text": {
+    "pokemon.stage": [
+     "1進化",
+     "フシギダネから進化",
+     "「たねポケモン」の上に重ねて進化させます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得）",
+     "page_url": "https://pcg-search.com/card/neo/neop039.php",
+     "values": {},
+     "note": "ページの種類の欄は「１進化ポケモン」。進化元の文はページにない（進化ライン検索はサイトの一覧で、カードの印刷の文ではない）"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない）",
+    "ワザ・特殊能力の文面の読み比べ",
+    "カードの実物・公式の書籍のページ"
+   ],
+   "corrections": [
+    "FIX-PRN-039-EVOLVES-FROM"
+   ]
+  },
+  {
+   "id": "IMG-PRN-040",
+   "card_id": "PRN-040",
+   "card_name_ja": "わるいフシギバナ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neop040.php",
+     "page_title": "わるいフシギバナ | ポケモンカードneo プロモ",
+     "image_url": "https://pcg-search.com/img/neo/neop040.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "1617b4d51431297c13247821c6abfbd4a3355844e4f9daa14a7daae5c3207f29",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「わるいフシギバナ」LV.37、HP70、草、2進化。pcg-search のページはプロモ（neo）。kyuura の data/cards.json の名前・HP と合う（レベルは特定の手がかりにだけ使った）",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（種類の欄・進化ライン）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.stage": "stage2",
+    "pokemon.evolves_from.ja": "わるいフシギソウ"
+   },
+   "print_text": {
+    "pokemon.stage": [
+     "2進化",
+     "わるいフシギソウから進化",
+     "「1進化ポケモン」の上に重ねて進化させます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得）",
+     "page_url": "https://pcg-search.com/card/neo/neop040.php",
+     "values": {},
+     "note": "ページの種類の欄は「２進化ポケモン」。進化元の文はページにない（進化ライン検索はサイトの一覧で、カードの印刷の文ではない）"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない）",
+    "ワザ・特殊能力の文面の読み比べ",
+    "カードの実物・公式の書籍のページ"
+   ],
+   "corrections": [
+    "FIX-PRN-040-EVOLVES-FROM"
+   ]
+  },
+  {
+   "id": "IMG-PRN-045",
+   "card_id": "PRN-045",
+   "card_name_ja": "わるいオニドリル",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neop045.php",
+     "page_title": "わるいオニドリル | ポケモンカードneo プロモ",
+     "image_url": "https://pcg-search.com/img/neo/neop045.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "e12b32883a363bcd3258e8b7d007df4e7689d6e0c8faa0cadefdd110f7d629f5",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「わるいオニドリル」LV.25、HP60、無色、1進化。pcg-search のページはプロモ（neo）。kyuura の data/cards.json の名前・HP と合う（レベルは特定の手がかりにだけ使った）",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（種類の欄・進化ライン）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from.ja": "オニスズメ"
+   },
+   "print_text": {
+    "pokemon.stage": [
+     "1進化",
+     "オニスズメから進化",
+     "「たねポケモン」の上に重ねて進化させます。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得）",
+     "page_url": "https://pcg-search.com/card/neo/neop045.php",
+     "values": {},
+     "note": "ページの種類の欄は「１進化ポケモン」。進化元の文はページにない（進化ライン検索はサイトの一覧で、カードの印刷の文ではない）"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない）",
+    "ワザ・特殊能力の文面の読み比べ",
+    "カードの実物・公式の書籍のページ"
+   ],
+   "corrections": [
+    "FIX-PRN-045-EVOLVES-FROM"
+   ]
   }
  ]
 }

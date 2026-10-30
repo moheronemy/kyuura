@@ -38,15 +38,15 @@ kyuura の記録（`data/cards.json`）ごとに、エンジンの実装の対�
 
 | 商品の種類 | 記録 | `registered` | `mechanically_equivalent` | `reuse_candidate` | `new_effect_needed` | `candidate` | `data_missing` | `special_rule_design` |
 |---|---|---|---|---|---|---|---|---|
-| 拡張パック | 780 | 723 | 0 | 0 | 57 | 776 | 4 | 0 |
-| 拡張シート | 108 | 91 | 0 | 0 | 17 | 104 | 4 | 0 |
-| ポケモンジムのデッキ | 153 | 147 | 0 | 1 | 5 | 146 | 7 | 0 |
+| 拡張パック | 780 | 723 | 0 | 0 | 57 | 779 | 1 | 0 |
+| 拡張シート | 108 | 91 | 0 | 0 | 17 | 108 | 0 | 0 |
+| ポケモンジムのデッキ | 153 | 147 | 0 | 1 | 5 | 147 | 6 | 0 |
 | イントロパック | 96 | 92 | 0 | 1 | 3 | 94 | 2 | 0 |
 | プレミアムファイル | 27 | 20 | 0 | 0 | 7 | 27 | 0 | 0 |
-| プロモ | 137 | 105 | 0 | 4 | 28 | 129 | 4 | 4 |
+| プロモ | 137 | 105 | 0 | 4 | 28 | 133 | 0 | 4 |
 | クイックスターターギフト | 58 | 56 | 0 | 0 | 2 | 58 | 0 | 0 |
 | サザンアイランド | 18 | 16 | 0 | 0 | 2 | 18 | 0 | 0 |
-| 計 | 1377 | 1250 | 0 | 6 | 121 | 1352 | 21 | 4 |
+| 計 | 1377 | 1250 | 0 | 6 | 121 | 1364 | 9 | 4 |
 
 ## 登録されたカードと処理に使う欄が同じ記録（mechanically_equivalent）
 
@@ -76,21 +76,21 @@ kyuura の記録（`data/cards.json`）ごとに、エンジンの実装の対�
 |---|---|---|---|
 | `GD1-010` | タケシのイワーク | attack1「ちていいどう」 | `candidate` |
 | `GD2-007` | カスミのパルシェン | power0「シェルアーマー」 | `candidate` |
-| `GD3-003` | マチスのライチュウ | attack1「10まんボルト」 | `data_missing` |
+| `GD3-003` | マチスのライチュウ | attack1「10まんボルト」 | `candidate` |
 | `GD5-016` | カツラのクイズ その1 | trainer「カツラのクイズ その1」 | `candidate` |
 | `GD6-005` | ナツメのゴース | attack1「ぱっときえる」 | `candidate` |
 | `ES1-027` | プクリン | power0「てだすけ」、attack0「ふくらむ」 | `candidate` |
 | `ES2-005` | ファイヤー | attack0「ドライアップ」 | `candidate` |
-| `ES2-011` | オムナイト | power0「げんしのゆめ」 | `data_missing` |
-| `ES2-028` | カブト | power0「かせきか」 | `data_missing` |
-| `ES2-029` | プテラ | attack1「きりもみアタック」 | `data_missing` |
+| `ES2-011` | オムナイト | power0「げんしのゆめ」 | `candidate` |
+| `ES2-028` | カブト | power0「かせきか」 | `candidate` |
+| `ES2-029` | プテラ | attack1「きりもみアタック」 | `candidate` |
 | `ES2-032` | メタモン | power0「すごいへんしん」 | `candidate` |
 | `ES2-035` | フラッシュ | trainer「フラッシュ」 | `candidate` |
 | `ES3-006` | ウツドン | attack0「さいせい」 | `candidate` |
 | `ES3-007` | マタドガス | power0「ポイズンミスト」、attack0「ガスばくはつ」 | `candidate` |
 | `ES3-016` | シードラ | attack0「ウォーターボム」 | `candidate` |
 | `ES3-017` | ヒトデマン | attack0「なぞのこうせん」 | `candidate` |
-| `ES3-018` | オムナイト | power0「かせきのみちびき」 | `data_missing` |
+| `ES3-018` | オムナイト | power0「かせきのみちびき」 | `candidate` |
 | `ES3-020` | ユンゲラー | attack0「エナジーさいせい」、attack1「エナジーショック」 | `candidate` |
 | `ES3-021` | ヤドラン | attack0「おおあくび」、attack1「おおいびき」 | `candidate` |
 | `ES3-025` | スリーパー | power0「にんぎょうつかい」 | `candidate` |
@@ -133,10 +133,10 @@ kyuura の記録（`data/cards.json`）ごとに、エンジンの実装の対�
 | `PRN-031` | ププリン | rules_text「」 | `candidate` |
 | `PRN-036` | ムウマ | attack0「いたみわけ」 | `candidate` |
 | `PRN-037` | ムチュール | rules_text「」、attack0「なげキッス」 | `candidate` |
-| `PRN-039` | わるいフシギソウ | power0「つるでひっぱる」、attack0「みだれうち」 | `data_missing` |
-| `PRN-040` | わるいフシギバナ | attack0「いやなかふん」 | `data_missing` |
+| `PRN-039` | わるいフシギソウ | power0「つるでひっぱる」、attack0「みだれうち」 | `candidate` |
+| `PRN-040` | わるいフシギバナ | attack0「いやなかふん」 | `candidate` |
 | `PRN-041` | GR団のミュウツー | power0「わるいはどう」、attack0「わるいぞうふく」 | `candidate` |
-| `PRN-045` | わるいオニドリル | attack0「たかくとぶ」、attack1「ドリルダイブ」 | `data_missing` |
+| `PRN-045` | わるいオニドリル | attack0「たかくとぶ」、attack1「ドリルダイブ」 | `candidate` |
 | `PRN-048` | タッチ世代交代！ | trainer「タッチ世代交代！」 | `special_rule_design` |
 
 ## 値の欠け・特別なルールの記録（拡張パック以外の商品）
@@ -145,24 +145,15 @@ kyuura の記録（`data/cards.json`）ごとに、エンジンの実装の対�
 |---|---|---|---|
 | `GD1-025` | 無色2個エネルギー | `data_missing` | energy.text.ja |
 | `GD2-024` | 無色2個エネルギー | `data_missing` | energy.text.ja |
-| `GD3-003` | マチスのライチュウ | `data_missing` | pokemon.stage, pokemon.evolves_from |
 | `GD3-025` | 無色2個エネルギー | `data_missing` | energy.text.ja |
 | `GD4-028` | 無色2個エネルギー | `data_missing` | energy.text.ja |
 | `GD5-025` | 無色2個エネルギー | `data_missing` | energy.text.ja |
 | `GD6-026` | 無色2個エネルギー | `data_missing` | energy.text.ja |
-| `ES2-011` | オムナイト | `data_missing` | pokemon.evolves_from |
-| `ES2-028` | カブト | `data_missing` | pokemon.evolves_from |
-| `ES2-029` | プテラ | `data_missing` | pokemon.evolves_from |
-| `ES3-018` | オムナイト | `data_missing` | pokemon.evolves_from |
 | `IP1-023` | 無色2個エネルギー | `data_missing` | energy.text.ja |
 | `IP2-025` | 無色2個エネルギー | `data_missing` | energy.text.ja |
 | `PR1-027` | とりかえっこプリーズ | `special_rule_design` | play_scope: not_for_official_tournaments |
 | `PR1-038` | タッチ交代！ | `special_rule_design` | play_scope: kangaskhan_rule |
 | `PR1-073` | カスミのてあて | `special_rule_design` | play_scope: not_for_official_tournaments |
-| `PRN-030` | カポエラー | `data_missing` | pokemon.stage, pokemon.evolves_from |
-| `PRN-039` | わるいフシギソウ | `data_missing` | pokemon.evolves_from |
-| `PRN-040` | わるいフシギバナ | `data_missing` | pokemon.evolves_from |
-| `PRN-045` | わるいオニドリル | `data_missing` | pokemon.evolves_from |
 | `PRN-048` | タッチ世代交代！ | `special_rule_design` | play_scope: kangaskhan_rule |
 
 ## 登録のあとで kyuura の値が変わったカード

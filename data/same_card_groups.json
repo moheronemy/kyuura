@@ -6029,6 +6029,13 @@
    ]
   ],
   [
+   "evolves_from_english_agrees",
+   "GD3-003",
+   "マチスのピカチュウ",
+   "Lt. Surge's Pikachu",
+   "マチスのピカチュウ"
+  ],
+  [
    "evolves_from_line_agrees",
    "GD3-006",
    "マチスのコイル"
@@ -6198,32 +6205,36 @@
    "ナツメのスリープ"
   ],
   [
-   "evolves_from_line_ambiguous",
+   "evolves_from_line_differs",
    "ES2-011",
+   "なにかの化石",
    [
     "ちていのかせき",
     "なにかの化石"
    ]
   ],
   [
-   "evolves_from_line_ambiguous",
+   "evolves_from_line_differs",
    "ES2-028",
+   "なにかの化石",
    [
     "ちていのかせき",
     "なにかの化石"
    ]
   ],
   [
-   "evolves_from_line_ambiguous",
+   "evolves_from_line_differs",
    "ES2-029",
+   "なにかの化石",
    [
     "ちていのかせき",
     "なにかの化石"
    ]
   ],
   [
-   "evolves_from_line_ambiguous",
+   "evolves_from_line_differs",
    "ES3-018",
+   "なにかの化石",
    [
     "ちていのかせき",
     "なにかの化石"
@@ -6453,14 +6464,6 @@
    "ストライク",
    "Scyther",
    "ストライク"
-  ],
-  [
-   "stage_differs_from_line",
-   "PRN-030",
-   "stage1",
-   [
-    "evoBasic"
-   ]
   ],
   [
    "evolution_line_name_differs",

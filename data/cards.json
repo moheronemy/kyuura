@@ -59538,7 +59538,7 @@
     "resistances": [],
     "retreat_cost": 1,
     "rules_text": {
-     "ja": null,
+     "ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
      "en": "You may have up to 4 Basic Pokémon cards in your deck with Unown in their names."
     },
     "powers": [
@@ -59579,7 +59579,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo2-027-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「M」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-027）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo2-027",
     "pokemontcg": [
@@ -59597,10 +59599,18 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo2-027-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo2-028",
@@ -59647,7 +59657,7 @@
     "resistances": [],
     "retreat_cost": 1,
     "rules_text": {
-     "ja": null,
+     "ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
      "en": "You may have up to 4 Basic Pokémon cards in your deck with Unown in their names."
     },
     "powers": [
@@ -59688,7 +59698,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo2-028-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「U」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-028）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo2-028",
     "pokemontcg": [
@@ -59706,10 +59718,18 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo2-028-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo2-029",
@@ -59874,7 +59894,7 @@
     "resistances": [],
     "retreat_cost": 1,
     "rules_text": {
-     "ja": null,
+     "ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
      "en": "You may have up to 4 Basic Pokémon cards in your deck with Unown in their names."
     },
     "powers": [
@@ -59915,7 +59935,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo2-030-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「A」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-030）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo2-030",
     "pokemontcg": [
@@ -59934,10 +59956,18 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo2-030-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo2-031",
@@ -85369,7 +85399,10 @@
      26
     ],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "マチスのピカチュウ",
+     "en": "Lt. Surge's Pikachu"
+    },
     "hp": 70,
     "types": [
      "lightning"
@@ -85433,7 +85466,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-GD3-003-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'マチスのピカチュウ', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) ポケモンジム第2弾「クチバシティジム マチス」のマチスのライチュウ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「マチスのピカチュウから進化」を読んだ（2026-10-30。照合の記録 IMG-GD3-003）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [
@@ -85465,12 +85500,24 @@
     "en_print": "other_products.en_prints",
     "english_text": "pokemontcg:gym1-28",
     "pokemon.dex": "pokemontcg:gym1-28",
-    "pokemon.stage": "pcg_search_kind_conflicts_with_evolution_line"
+    "pokemon.evolves_from": "card_corrections:FIX-GD3-003-EVOLVES-FROM",
+    "pokemon.stage": "card_image_check:IMG-GD3-003"
    },
+   "corrections": [
+    {
+     "id": "FIX-GD3-003-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "マチスのピカチュウ",
+      "en": "Lt. Surge's Pikachu"
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.stage",
-    "pokemon.evolves_from",
     "jp_print.level"
    ]
   },
@@ -100209,7 +100256,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "なにかの化石",
+     "en": null
+    },
     "hp": 50,
     "types": [
      "water"
@@ -100263,7 +100313,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-ES2-011-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'なにかの化石', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第2弾(赤版)のオムナイト）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES2-011）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -100289,11 +100341,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search"
+    "pokemon.retreat_cost": "pcg_search",
+    "pokemon.evolves_from": "card_corrections:FIX-ES2-011-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-ES2-011-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "なにかの化石",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]
@@ -102181,7 +102246,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "なにかの化石",
+     "en": null
+    },
     "hp": 50,
     "types": [
      "fighting"
@@ -102235,7 +102303,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-ES2-028-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'なにかの化石', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第2弾(赤版)のカブト）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES2-028）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -102261,11 +102331,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search"
+    "pokemon.retreat_cost": "pcg_search",
+    "pokemon.evolves_from": "card_corrections:FIX-ES2-028-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-ES2-028-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "なにかの化石",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]
@@ -102291,7 +102374,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "なにかの化石",
+     "en": null
+    },
     "hp": 70,
     "types": [
      "fighting"
@@ -102355,7 +102441,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-ES2-029-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'なにかの化石', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第2弾(赤版)のプテラ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES2-029）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -102381,11 +102469,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search"
+    "pokemon.retreat_cost": "pcg_search",
+    "pokemon.evolves_from": "card_corrections:FIX-ES2-029-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-ES2-029-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "なにかの化石",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]
@@ -104923,7 +105024,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "なにかの化石",
+     "en": null
+    },
     "hp": 50,
     "types": [
      "water"
@@ -104977,7 +105081,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-ES3-018-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'なにかの化石', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第3弾(緑版)のオムナイト）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES3-018）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -105003,11 +105109,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search"
+    "pokemon.retreat_cost": "pcg_search",
+    "pokemon.evolves_from": "card_corrections:FIX-ES3-018-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-ES3-018-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "なにかの化石",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]
@@ -141175,7 +141294,7 @@
     "dex": [
      237
     ],
-    "stage": "stage1",
+    "stage": "basic",
     "evolves_from": null,
     "hp": 60,
     "types": [
@@ -141239,7 +141358,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PRN-030-STAGE）: pokemon.stage を「stage1」から「basic」に直した。根拠: kyuura が、同じカード（プロモ（neo）のカポエラー）の日本語版のカードの画像（pcg-search.com [N3]）で、HP の下の帯の「たねポケモン」と、左上に進化の印・「〇〇から進化」の欄がないことを確かめた（2026-10-30。照合の記録 IMG-PRN-030）。ベイビィ（バルキー）から進化できることは印刷の段階を決めない（印刷はたねポケモン）"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [
@@ -141271,12 +141392,20 @@
     "en_print": "other_products.en_prints",
     "english_text": "pokemontcg:basep-37",
     "pokemon.dex": "pokemontcg:basep-37",
-    "pokemon.stage": "pcg_search_kind_conflicts_with_evolution_line"
+    "pokemon.stage": "card_corrections:FIX-PRN-030-STAGE"
    },
+   "corrections": [
+    {
+     "id": "FIX-PRN-030-STAGE",
+     "field": "pokemon.stage",
+     "before": "stage1",
+     "after": "basic",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.stage",
-    "pokemon.evolves_from",
     "jp_print.level"
    ]
   },
@@ -142231,7 +142360,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "フシギダネ",
+     "en": null
+    },
     "hp": 50,
     "types": [
      "grass"
@@ -142281,7 +142413,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PRN-039-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'フシギダネ', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカードneo プロモのわるいフシギソウ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「フシギダネから進化」を読んだ（2026-10-30。照合の記録 IMG-PRN-039）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -142307,11 +142441,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search"
+    "pokemon.retreat_cost": "pcg_search",
+    "pokemon.evolves_from": "card_corrections:FIX-PRN-039-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-PRN-039-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "フシギダネ",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]
@@ -142337,7 +142484,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage2",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "わるいフシギソウ",
+     "en": null
+    },
     "hp": 70,
     "types": [
      "grass"
@@ -142380,7 +142530,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PRN-040-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'わるいフシギソウ', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカードneo プロモのわるいフシギバナ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「2進化」と「わるいフシギソウから進化」を読んだ（2026-10-30。照合の記録 IMG-PRN-040）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -142406,11 +142558,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search"
+    "pokemon.retreat_cost": "pcg_search",
+    "pokemon.evolves_from": "card_corrections:FIX-PRN-040-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-PRN-040-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "わるいフシギソウ",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]
@@ -142867,7 +143032,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "オニスズメ",
+     "en": null
+    },
     "hp": 60,
     "types": [
      "colorless"
@@ -142930,7 +143098,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PRN-045-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'オニスズメ', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカードneo プロモのわるいオニドリル）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「オニスズメから進化」を読んだ（2026-10-30。照合の記録 IMG-PRN-045）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -142956,11 +143126,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search_page_dash"
+    "pokemon.retreat_cost": "pcg_search_page_dash",
+    "pokemon.evolves_from": "card_corrections:FIX-PRN-045-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-PRN-045-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "オニスズメ",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]

@@ -45,8 +45,8 @@
  "counts": {
   "records": 1377,
   "by_category": {
-   "candidate": 1352,
-   "data_missing": 21,
+   "candidate": 1364,
+   "data_missing": 9,
    "special_rule_design": 4
   },
   "non_game_items": 18,
@@ -66,8 +66,8 @@
      "new_effect_needed": 57
     },
     "by_category": {
-     "candidate": 776,
-     "data_missing": 4
+     "candidate": 779,
+     "data_missing": 1
     }
    },
    "expansion_sheet": {
@@ -79,8 +79,7 @@
      "new_effect_needed": 17
     },
     "by_category": {
-     "candidate": 104,
-     "data_missing": 4
+     "candidate": 108
     }
    },
    "gym_deck": {
@@ -92,8 +91,8 @@
      "new_effect_needed": 5
     },
     "by_category": {
-     "candidate": 146,
-     "data_missing": 7
+     "candidate": 147,
+     "data_missing": 6
     }
    },
    "intro_pack": {
@@ -130,8 +129,7 @@
      "new_effect_needed": 28
     },
     "by_category": {
-     "candidate": 129,
-     "data_missing": 4,
+     "candidate": 133,
      "special_rule_design": 4
     }
    },
@@ -7952,12 +7950,17 @@
    "same_card_group": null,
    "release_date": "2000-07-07",
    "released_after_rule_base": true,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.rules_text.ja"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_without_registered_text": [
+    {
+     "part": "rules_text",
+     "index": null,
+     "name_ja": null,
+     "text_ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "reason": "rules_text_not_registered"
+    },
     {
      "part": "power",
      "index": 0,
@@ -7976,12 +7979,17 @@
    "same_card_group": null,
    "release_date": "2000-07-07",
    "released_after_rule_base": true,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.rules_text.ja"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_without_registered_text": [
+    {
+     "part": "rules_text",
+     "index": null,
+     "name_ja": null,
+     "text_ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "reason": "rules_text_not_registered"
+    },
     {
      "part": "power",
      "index": 0,
@@ -8013,12 +8021,17 @@
    "same_card_group": null,
    "release_date": "2000-07-07",
    "released_after_rule_base": true,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.rules_text.ja"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_without_registered_text": [
+    {
+     "part": "rules_text",
+     "index": null,
+     "name_ja": null,
+     "text_ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "reason": "rules_text_not_registered"
+    },
     {
      "part": "power",
      "index": 0,
@@ -11890,11 +11903,8 @@
    "same_card_group": null,
    "release_date": "1998-07-25",
    "released_after_rule_base": false,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.stage",
-    "pokemon.evolves_from"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_without_registered_text": [
     {
@@ -13915,10 +13925,8 @@
    "same_card_group": null,
    "release_date": "1998-06-17",
    "released_after_rule_base": false,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.evolves_from"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_without_registered_text": [
     {
@@ -14147,10 +14155,8 @@
    "same_card_group": null,
    "release_date": "1998-06-17",
    "released_after_rule_base": false,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.evolves_from"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_with_registered_text": [
     {
@@ -14181,10 +14187,8 @@
    "same_card_group": null,
    "release_date": "1998-06-17",
    "released_after_rule_base": false,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.evolves_from"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_with_registered_text": [
     {
@@ -14599,10 +14603,8 @@
    "same_card_group": null,
    "release_date": "1998-11-24",
    "released_after_rule_base": false,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.evolves_from"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_without_registered_text": [
     {
@@ -19598,11 +19600,8 @@
    "same_card_group": null,
    "release_date": "2000-07-08",
    "released_after_rule_base": true,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.stage",
-    "pokemon.evolves_from"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "reuse_candidate",
    "reuse_basis": "registered_effect_texts",
    "effects_with_registered_text": [
@@ -19793,10 +19792,8 @@
    "same_card_group": null,
    "release_date": "2001-03-01",
    "released_after_rule_base": true,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.evolves_from"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_without_registered_text": [
     {
@@ -19824,10 +19821,8 @@
    "same_card_group": null,
    "release_date": "2001-03-01",
    "released_after_rule_base": true,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.evolves_from"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_without_registered_text": [
     {
@@ -19916,10 +19911,8 @@
    "same_card_group": null,
    "release_date": "2001-04-12",
    "released_after_rule_base": true,
-   "category": "data_missing",
-   "category_reasons": [
-    "pokemon.evolves_from"
-   ],
+   "category": "candidate",
+   "category_reasons": [],
    "engine_status": "new_effect_needed",
    "effects_without_registered_text": [
     {
