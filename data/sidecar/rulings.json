@@ -20825,6 +20825,507 @@
     "neo の退化スプレーHYPER（neo2-056）・わるいオムスターのげんしのしずく（neo4-038）の「進化カード」は UQ-NEO-TEXT-BABY-CATEGORIES。",
     "p.313・p.325 の文は既存の転記（existing_transcription）で、kyuura は原典の画像で確かめていない。"
    ]
+  },
+  {
+   "id": "CR-PIKACHU-GROWL-LATEST",
+   "topic": "なきごえ（ピカチュウ LV.16）",
+   "cards": [
+    {
+     "card_id": "PR1-001",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "なきごえ"
+     }
+    },
+    {
+     "card_id": "PR1-003",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "なきごえ"
+     }
+    },
+    {
+     "card_id": "IP1-040",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "なきごえ"
+     }
+    }
+   ],
+   "related_cards": [
+    "PR1-017"
+   ],
+   "question": "ピカチュウ（LV.16／HP60）のなきごえで、次の相手の番に減るのはどのダメージか。減らすかを選べるか",
+   "conclusion": "『オフィシャルブック2000』の最新の説明にしたがう: このワザを受けた相手のポケモンが、次の相手の番にこのカードに与えるダメージだけが「-10」される。減らすかは選ばない（印刷の「へらすことができる」の、選べる読み方はとらない）。ほかの相手のポケモン（入れ替えで出てきたポケモンなど）がこのカードに与えるダメージは減らない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "127",
+     "location": "p.127 のピカチュウ（LV.16／HP60）の 2 つの欄の「ワザ」欄（最新の説明）",
+     "checked": "kyuura_image",
+     "quote": "次の相手の番、このワザを受けた相手は、このカードにダメージを与えるとき、そのダメージが「-10」される。"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "6",
+     "location": "p.6「この本の使いかた」（GR-P43-P6-LATEST-DESCRIPTION）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "derived",
+     "statement": "最新の説明は、減るのを「このワザを受けた相手は、このカードにダメージを与えるとき」のダメージとし、「「-10」される」と選択を書かない。わからない内容は最新の説明にしたがう（p.6）。ほかのポケモンが与えるダメージを変える効果はこのワザにない"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-P43-P6-LATEST-DESCRIPTION"
+   ],
+   "latest_description_refs": [
+    "LD-PR1-001-ATK0",
+    "LD-PR1-003-ATK0",
+    "LD-IP1-040-ATK0",
+    "LD-PR1-017-ATK0"
+   ],
+   "related_rulings": [
+    "CR-PIKACHU-GROWL-OPPONENT-EFFECT",
+    "UQ-GROWL-NON-ATTACK-DAMAGE"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-30 に kyuura が p.127 を画像で読んだ（原典の確認）。2 つの欄の「ワザ」欄の文面は同じ。図版で照合した印刷は PR1-003（2 つ目の欄）と IP1-040（1 つ目の欄）で、PR1-001 は 2 つ目の欄の見出しに配布が挙がる印刷（図版は照合していない）。",
+    "PR1-017 は、1 つ目の欄の見出しの「トヨタオートキャンペーン」プレゼントカードに当たるとみる（特定は推論。LD-PR1-017-ATK0）。当たるなら同じく最新の説明にしたがう（related_cards）。",
+    "印刷の文面（古い書き方）で処理を決めると、入れ替えて出てきたポケモンのダメージも減り、減らさないことも選べる。p.6 の規定で最新の説明にしたがうので、そう処理しない。"
+   ]
+  },
+  {
+   "id": "CR-PIKACHU-GROWL-OPPONENT-EFFECT",
+   "topic": "なきごえ（ピカチュウ LV.16）",
+   "cards": [
+    {
+     "card_id": "PR1-001",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "なきごえ"
+     }
+    },
+    {
+     "card_id": "PR1-003",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "なきごえ"
+     }
+    },
+    {
+     "card_id": "IP1-040",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "なきごえ"
+     }
+    }
+   ],
+   "related_cards": [
+    "PR1-017"
+   ],
+   "question": "なきごえ（最新の説明）の「-10」は、だれが持つ効果で、ワザによるダメージ計算（p.321）のどの段階で引き、いつ消えるか",
+   "conclusion": "このワザを受けた相手のポケモンが持つ「持続する効果」で、そのポケモンが次の相手の番にこのカードへワザでダメージを与えるとき、p.321 の 2（ワザを使うポケモンの持っている「ダメージを変更する効果」）で 10 を引く（弱点・抵抗力はそのあと）。そのポケモンがベンチにもどる・場をはなれる・進化すると消え、次の相手の番が終わると消える。例: 弱点が闘 ×2 のこのカードに、受けた相手が闘の 30 ダメージのワザを使うと、(30−10)×2 = 40",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "127",
+     "location": "p.127 のピカチュウ（LV.16／HP60）の「ワザ」欄（最新の説明）",
+     "checked": "kyuura_image",
+     "quote": "次の相手の番、このワザを受けた相手は、このカードにダメージを与えるとき、そのダメージが「-10」される。"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "127",
+     "location": "p.127 の 1 つ目の欄の解説",
+     "checked": "kyuura_image",
+     "quote": "相手の対戦ポケモンからのダメージを10減らせる「なきごえ」は"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9 ワザによるダメージ計算の順番」（GR-2000-P321-DAMAGE-ORDER）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.322〜p.323「持続する効果」（GR-2000-P322-PERSISTENT-EFFECTS）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": "最新の説明は「このワザを受けた相手は、…そのダメージが「-10」される」と、ワザを受けた相手を主語にする。公式ルール p.322 は「すなかけ」のようなワザは受けたポケモンに持続する効果を与えるとし、持続する効果はベンチにもどる・場をはなれる・進化で消える。p.321 の 2 は、ワザを使うポケモンの持っている「ダメージを変更する効果」で、受けた相手が持つ効果がその相手のワザのダメージを変えるので 2 に当たると読める。印刷の文面（このカードが受けるダメージを減らす）なら、このカードの効果として 8（ワザを受けるポケモンの持っている効果）になり、弱点・抵抗力との順番で結果が変わる。p.127 の解説は「相手の対戦ポケモンからのダメージを10減らせる」と書くだけで段階を書かない。段階をこの例で示した公式の文は見つけていない",
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER",
+    "GR-2000-P322-PERSISTENT-EFFECTS",
+    "GR-P43-P6-LATEST-DESCRIPTION"
+   ],
+   "latest_description_refs": [
+    "LD-PR1-001-ATK0",
+    "LD-PR1-003-ATK0",
+    "LD-IP1-040-ATK0",
+    "LD-PR1-017-ATK0"
+   ],
+   "related_rulings": [
+    "CR-PIKACHU-GROWL-LATEST",
+    "UQ-GROWL-NON-ATTACK-DAMAGE"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "このカードは、なきごえを使った番に進化しない（進化は自分の番に、ワザを使う前にする）ので、次の相手の番のあいだに「このカード」が別のポケモンになる場面は、相手の効果で場をはなれるときだけ。",
+    "ほかのポケモンの同じ形の説明（「このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される」。ES1-013 ヒトカゲ・ES1-028 ドードーなど）には、この記録を当てはめていない（カードごとに確かめる）。"
+   ]
+  },
+  {
+   "id": "CR-SLOWBRO-SNORE-WHILE-ASLEEP",
+   "topic": "おおいびき（ヤドラン ES3）",
+   "cards": [
+    {
+     "card_id": "ES3-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "おおいびき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ヤドラン（拡張シート第3弾。LV.35／HP90）がねむり状態のとき、おおいびきを使えるか",
+   "conclusion": "使える（宣言でき、30 ダメージを与える）。ねむり状態のポケモンはワザの使用を宣言できない（p.309）が、このワザの印刷の文面は「このカードが「ねむり」状態の時だけ、使える」と書き、カードの記述はルールより優先する（p.307）。『オフィシャルブック2000』p.156 の解説も、ねむり状態のこのヤドランが「おおいびき」で攻撃でき、30ダメージを与えると書く。ねむり状態のまま使えるのはこのワザだけ（CR-SLOWBRO-SNORE-ONLY-THIS-ATTACK）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "ES3-021",
+     "field": "pokemon.attacks[1].text.ja",
+     "quote": "このワザは、このカードが「ねむり」状態の時だけ、使える。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "156",
+     "location": "p.156 の 2 つ目の欄（ヤドラン LV.35／HP90）の解説",
+     "checked": "kyuura_image",
+     "quote": "裏なら、この「ヤドラン」は「おおいびき」で攻撃できますし"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "156",
+     "location": "p.156 の 2 つ目の欄（ヤドラン LV.35／HP90）の解説",
+     "checked": "kyuura_image",
+     "quote": "上手に自分がねむって、30ダメージを与えていきたいですね。"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.307「プレイルールとカードの記述」（GR-2000-P307-CARD-OVER-RULE）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309「バトル場にいるポケモンのワザを使う」（ねむり・マヒでは宣言できない。GR-2000-P309-ATTACK-PROCEDURE）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P307-CARD-OVER-RULE",
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [
+    "LD-ES3-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SLOWBRO-SNORE-AWAKE-FAILS",
+    "CR-SLOWBRO-SNORE-ONLY-THIS-ATTACK"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "解説の文の「えんかくさいみん」の「裏」は、スリープ（ロケット団）の特殊能力で自分の対戦ポケモンがねむり状態になる場合（解説の文脈）。2026-10-30 に kyuura が p.156 を画像で読んだ（原典の確認）。",
+    "カードの印刷の文面は 2026-10-30 にカードの画像（IMG-ES3-021）と書籍の図版（CC-ES3-021-P156）で確かめた。"
+   ]
+  },
+  {
+   "id": "CR-SLOWBRO-SNORE-AWAKE-FAILS",
+   "topic": "おおいびき（ヤドラン ES3）",
+   "cards": [
+    {
+     "card_id": "ES3-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "おおいびき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ヤドラン（拡張シート第3弾）がねむり状態でないとき、おおいびきは宣言できないのか、使って失敗するのか",
+   "conclusion": "最新の説明（p.156）にしたがい、使って失敗する: ワザの使用を宣言でき（必要なエネルギーはいる）、失敗する。失敗してもワザを使ったことになり（p.323）、その番は終わる。印刷の文面（ねむり状態の時だけ使える）だけなら「宣言できない」と読めるが、最新の説明はこれを「失敗する」と書き直した（LD-ES3-021-ATK1）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "156",
+     "location": "p.156 の 2 つ目の欄（ヤドラン LV.35／HP90）の「ワザ」欄（最新の説明）",
+     "checked": "kyuura_image",
+     "quote": "このカードが「ねむり」状態ではないとき、このワザは失敗する。"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "6",
+     "location": "p.6「この本の使いかた」（GR-P43-P6-LATEST-DESCRIPTION）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「12 ワザの失敗」",
+     "quote": "ワザが失敗した場合でも、そのポケモンは、そのワザを使ったことになります。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 325,
+      "page": "323",
+      "quote": "ワザが失敗した場合でも、そのポケモンは、そのワザを使ったことになります。"
+     }
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309「バトル場にいるポケモンのワザを使う」（ワザを使うと番が終わる。GR-2000-P309-ATTACK-PROCEDURE）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "derived",
+     "statement": "最新の説明は、ねむり状態でないときにこのワザが「失敗する」と書く。ワザが失敗しても、そのワザを使ったことになり（p.323）、ワザを使うと番が終わる（p.309）。わからない内容は最新の説明にしたがう（p.6）"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-P43-P6-LATEST-DESCRIPTION",
+    "GR-2000-P323-ATTACK-FAILURE",
+    "GR-2000-P309-ATTACK-PROCEDURE"
+   ],
+   "latest_description_refs": [
+    "LD-ES3-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SLOWBRO-SNORE-WHILE-ASLEEP",
+    "CR-SLOWBRO-SNORE-ONLY-THIS-ATTACK"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "p.323 の文は既存の転記（existing_transcription）で、kyuura は原典の画像で確かめていない（p.323 の「12 ワザの失敗」は今回の 2 ページの範囲の外）。",
+    "起きているのに 30 ダメージを与える読み方はとらない（どの資料もそう書かない）。"
+   ]
+  },
+  {
+   "id": "CR-SLOWBRO-SNORE-ONLY-THIS-ATTACK",
+   "topic": "おおいびき（ヤドラン ES3）",
+   "cards": [
+    {
+     "card_id": "ES3-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "おおいびき"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "おおいびきの扱いは、ねむり状態のこのヤドランのほかのワザ・にげる・ポケモンチェックに及ぶか。ねむり状態でないときの失敗は、ワザの手順のどこで決まるか",
+   "conclusion": "及ばない。ねむり状態のこのヤドランは、おおあくびを宣言できず、にげることもできず（p.309・p.311）、ポケモンチェックでねむりのコインを投げる（p.323）。ねむり状態でないときの失敗はワザの説明の処理（p.309 の手順 6）で決まるので、こんらん状態ならその前に手順 5 のこんらんのコインを投げる（「うら」なら自分に 20 ダメージで、ワザの説明は処理しない。「おもて」なら手順 6 で失敗する）",
+   "status": "SUPPORTED",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.307「プレイルールとカードの記述」（GR-2000-P307-CARD-OVER-RULE）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.309「バトル場にいるポケモンのワザを使う」・p.311「にげる」（GR-2000-P309-ATTACK-PROCEDURE・GR-2000-P311-RETREAT）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.323「ポケモンチェック」（GR-2000-P323-POKEMON-CHECK）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "156",
+     "location": "p.156 の 2 つ目の欄（ヤドラン LV.35／HP90）の「ワザ」欄（最新の説明）",
+     "checked": "kyuura_image",
+     "quote": "このカードが「ねむり」状態ではないとき、このワザは失敗する。"
+    }
+   ],
+   "inference": "カードの記述がルールより優先するのは、記述とむじゅんする範囲だけ（p.307）。おおいびきの文面はこのワザだけを書き、ほかのワザ・にげる・ねむりの回復を書かない。失敗の条件はワザの説明（最新の説明）の一部なので、説明を処理する手順 6 で確かめると読める（手順 4 は、ワザを使うポケモンが受けている効果の確かめで、ワザ自身の説明ではない）。ねむりとこんらんは重ならない（p.322）ので、こんらん状態のこのヤドランはいつもねむり状態でない",
+   "rule_clause_refs": [
+    "GR-2000-P307-CARD-OVER-RULE",
+    "GR-2000-P309-ATTACK-PROCEDURE",
+    "GR-2000-P311-RETREAT",
+    "GR-2000-P323-POKEMON-CHECK",
+    "GR-2000-P322-SPECIAL-CONDITIONS"
+   ],
+   "latest_description_refs": [
+    "LD-ES3-021-ATK1"
+   ],
+   "related_rulings": [
+    "CR-SLOWBRO-SNORE-WHILE-ASLEEP",
+    "CR-SLOWBRO-SNORE-AWAKE-FAILS",
+    "UQ-COPIED-ATTACK"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "ほかのカードのワザとしておおいびきを使うとき（ゆびをふる・ちょうのうりょくなど）の「このカード」と、使い手のねむり状態の扱いは決めていない（UQ-COPIED-ATTACK の事例に加えた）。"
+   ]
+  },
+  {
+   "id": "CR-BORO-ROD-COIN-RESULTS",
+   "topic": "ボロのつりざお",
+   "cards": [
+    {
+     "card_id": "neo3-053",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ボロのつりざお"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ボロのつりざおは、コインの結果ごとに、どのカードを何枚手札に加えるか",
+   "conclusion": "コインを 2 枚投げ、2 枚とも「おもて」なら「ポケモンのカード」を、2 枚とも「うら」なら「トレーナーカード」を、自分のトラッシュから 1 枚選び、相手に見せてから手札に加える。「おもて」と「うら」が 1 枚ずつなら、どちらの条件にも当たらないので、手札に加えるカードはない（このカードは使ったので、トラッシュする）。トラッシュに選べるカードがないときに使えるか・コインを投げるかは決めていない（UQ-CARD-USE-WITHOUT-TARGET）",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "neo3-053",
+     "field": "trainer.text.ja",
+     "quote": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "310",
+     "location": "p.310「トレーナーカードを使う」（使いすてのカードは使ったらトラッシュする。GR-2000-P310-TRAINERS）",
+     "checked": "engine_report"
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P310-TRAINERS"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-BORO-ROD-POKEMON-CARDS",
+    "UQ-CARD-USE-WITHOUT-TARGET"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "カードの文面は、2026-10-30 に kyuura がカードの画像で確かめて直した値（FIX-neo3-053-TRAINER-TEXT-JA。「1枚」は印刷にある。英語版の文面からは補っていない）。",
+    "このカードは第3弾「めざめる伝説」（2000-11）で、公式ルール 2000.02.14 版より後に出た。カードの記述は、その版の対戦でもカードとともにはたらく（p.307）。『オフィシャルブック2000』には載っていない。"
+   ]
+  },
+  {
+   "id": "CR-BORO-ROD-POKEMON-CARDS",
+   "topic": "ボロのつりざお",
+   "cards": [
+    {
+     "card_id": "neo3-053",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ボロのつりざお"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ボロのつりざおの「ポケモンのカード」に、ベイビィポケモンカード・たねポケモンカード・進化カードがふくまれるか",
+   "conclusion": "ふくまれる。公式ルール p.313 は、ポケモンのカードをベイビィポケモンカード・たねポケモンカード・進化カードの 3 つに分ける。トラッシュのカードは場のポケモンではないので、ベイビィに重ねていたたねポケモンのカードも、たねポケモンカードとしてふくまれる（p.313）。ポケモンとして場に出せるトレーナーカード（なにかの化石など）がトラッシュにあるときの扱いは、この記録で決めていない",
+   "status": "CONFIRMED",
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "neo3-053",
+     "field": "trainer.text.ja",
+     "quote": "「ポケモンのカード」",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.313「ポケモンのカード」の分類",
+     "quote": "ポケモンのカードは、ベイビィポケモンカード、たねポケモンカード、進化カ一ドの3つに分類することができます。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 315,
+      "page": "313",
+      "quote": "ポケモンのカードは、ベイビィポケモンカード、たねポケモンカード、進化カ一ドの3つに分類することができます。"
+     }
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.313「ポケモンが場をはなれる」",
+     "quote": "「ポケモン」がいったん場をはなれたら、その「ポケモン」は、それを構成していたベイビィポケモンカード、たねポケモンカード、進化カード、それぞれにもどります。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 315,
+      "page": "313",
+      "quote": "「ポケモン」がいったん場をはなれたら、その「ポケモン」は、それを構成していたベイビィポケモンカード、たねポケモンカード、進化カード、それぞれにもどります。"
+     }
+    }
+   ],
+   "inference": null,
+   "rule_clause_refs": [
+    "GR-2000-P313-POKEMON-COMPOSITION"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-BORO-ROD-COIN-RESULTS"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "p.313 の文は既存の転記（existing_transcription）で、kyuura は原典の画像で確かめていない（転記の「進化カ一ド」の「一」は転記のまま引いた）。",
+    "英語版の文面（Baby Pokémon, Basic Pokémon, or Evolution card）は根拠にしていない。"
+   ]
   }
  ],
  "issues": [
@@ -23185,6 +23686,14 @@
       "name_ja": "JOIN[ジョイン]"
      },
      "note": "山札に「ベイビィポケモン」「たねポケモン」「進化カード」がない（山札 0 枚を含む）"
+    },
+    {
+     "card_id": "neo3-053",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ボロのつりざお"
+     },
+     "note": "トラッシュに「ポケモンのカード」も「トレーナーカード」もないとき、使えるか（コインを投げるか）。kyuura が 2026-10-30 に加えた事例。エンジンの裁定はない"
     }
    ],
    "related_engine_rulings": [],
@@ -23319,7 +23828,8 @@
    "notes": [
     "エンジンの記録（停止コードで止める未解決の問い）を取り込んだ。kyuura による原典の再読・新しい裁定はない。",
     "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。",
-    "2026-10-24: アンノーンI・F・[J] の山札から選ぶ特殊能力の事例を加えた（論点の問い・分類は変えていない）。"
+    "2026-10-24: アンノーンI・F・[J] の山札から選ぶ特殊能力の事例を加えた（論点の問い・分類は変えていない）。",
+    "2026-10-30: ボロのつりざお（neo3-053）の事例を加えた（論点の問い・分類は変えていない）。"
    ],
    "audit": {
     "audited_on": "2026-10-19",
@@ -25106,6 +25616,15 @@
      },
      "engine_ruling": "ED1",
      "note": "ほかのワザで「あながくれ」を使った記録が「使っていた」に当たるか"
+    },
+    {
+     "card_id": "ES3-021",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "おおいびき"
+     },
+     "note": "ゆびをふる・ちょうのうりょくなどで相手のおおいびきを使うとき、「このカード」がワザを使うポケモンか元のヤドランか。使い手がねむり状態でないなら失敗するのか（kyuura が 2026-10-30 に加えた事例。エンジンの裁定はない）"
     }
    ],
    "related_engine_rulings": [],
@@ -25162,7 +25681,8 @@
    ],
    "notes": [
     "エンジンの記録（停止コードで止める未解決の問い）を取り込んだ。kyuura による原典の再読・新しい裁定はない。",
-    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。"
+    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。",
+    "2026-10-30: ヤドラン（ES3-021）のおおいびきの事例を加えた（論点の問い・分類は変えていない）。"
    ],
    "audit": {
     "audited_on": "2026-10-19",
@@ -27712,6 +28232,81 @@
     "resolution_needs": "当時の日本語の公式の Q&A・『トレーナーズ』のプレイルールQ&A（Vol.5 pp.58〜62 のベイビィポケモン Q1〜Q6 の全文）・neo のカードの解説で、neo の説明の「たねポケモン」「進化カード」とベイビィの関係を書いたもの。P38 p.60 の文の範囲は、原典の画像で確かめる（今回は読み直していない）",
     "searched": "kyuura の記録（data/rule_history.json の NEO-2000-OFFICIAL-RULES・NEO-2000-PLAYRULE、data/rule_differences.json の baby、data/sidecar/）と、既存の転記data/Silver_Bible_structured.md の pp.308〜325（2026-10-27）。neo のカードの文面は data/cards.json で探した。原典の画像は読み直していない",
     "new_sources": []
+   }
+  },
+  {
+   "id": "UQ-GROWL-NON-ATTACK-DAMAGE",
+   "status": "UNRESOLVED",
+   "question": "ピカチュウ（LV.16）のなきごえの最新の説明「このワザを受けた相手は、このカードにダメージを与えるとき、そのダメージが「-10」される」は、受けた相手がワザ以外（特殊能力など）でこのカードに与えるダメージや、ベンチにいるこのカードに与えるダメージにも当てはまるか",
+   "why_unresolved": "最新の説明は「ダメージを与えるとき」と書き、ワザによるダメージ・バトル場のこのカードに限らない。公式ルール p.321 の計算の順番は「ワザによるダメージ」の計算で、ワザ以外のダメージをどう変えるかを書かない。ほかの最新の説明には「ワザによって受けるダメージ」と限るもの（p.47 のベトベターのちいさくなる）があるが、限らない書き方が広い範囲を意味するとは書かれていない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "127",
+     "location": "p.127 のピカチュウ（LV.16／HP60）の「ワザ」欄（最新の説明）"
+    },
+    {
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9 ワザによるダメージ計算の順番」"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER",
+    "GR-P43-P6-LATEST-DESCRIPTION"
+   ],
+   "cases": [
+    {
+     "card_id": "PR1-003",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "なきごえ"
+     },
+     "note": "ワザを受けた相手が、次の相手の番に特殊能力などでこのカードにダメージを与える"
+    },
+    {
+     "card_id": "IP1-040",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "なきごえ"
+     },
+     "note": "同じ（印刷の文面も新しい書き方）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "kyuura の登録表の写しは v0.113（v0.119・v0.120 は取り込んでいない）。v0.113 では IP1-040 が登録され、PR1-001・PR1-003・PR1-017 は登録されていない",
+    "all_cards": "受けた相手が次の相手の番にワザ以外でダメージを与える・ベンチのこのカードにダメージを与えるカードは調べていない"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-2D113B5",
+    "date": "2026-10-30"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-30 の『オフィシャルブック2000』p.127 の確認で立てた）。エンジンの記録に結ぶ裁定はない。",
+    "ワザによるダメージを、ワザを使うポケモンの効果として p.321 の 2 で引くことは CR-PIKACHU-GROWL-OPPONENT-EFFECT（SUPPORTED）。",
+    "ほかのポケモンの同じ形の説明（ヒトカゲ ES1-013・ドードー ES1-028 など）は事例に加えていない。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-30",
+    "game_effect": "not_analyzed",
+    "game_effect_note": "受けた相手が次の相手の番にワザ以外でこのカードにダメージを与える場面・ベンチのこのカードにダメージを与える場面がどれだけあるかは調べていない（あれば最終ダメージが 10 変わる）",
+    "resolution_needs": "当時の日本語の公式の Q&A・大会の裁定で、「このワザを受けた相手は、このカードにダメージを与えるとき」の効果がワザ以外のダメージ・ベンチへのダメージに当てはまるかを書いたもの",
+    "searched": "kyuura の記録（data/sidecar/・data/rule_history.json）と『オフィシャルブック2000』p.127・p.156（2026-10-30 に画像で読んだ）。当時の Q&A・雑誌は今回探していない",
+    "new_sources": [
+     {
+      "source": "P43",
+      "page": "127",
+      "what": "なきごえの最新の説明（2 つの欄で同じ文面）と解説（「相手の対戦ポケモンからのダメージを10減らせる」）。ワザ以外のダメージについては書かない",
+      "resolves": false
+     }
+    ]
    }
   }
  ],

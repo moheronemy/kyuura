@@ -648,6 +648,26 @@
    "source_of_error": "データの形に進化先の欄がなかった（pokemon.evolves_to は 2026-10-27 に加えた欄で、生成は未確認の null で作る）。転記の誤り・欠けではない。pcg-search.com のページの文字には進化先の欄の文がない（「進化ライン検索」はサイトの一覧で、使っていない）",
    "not_errata": "公式エラッタ・再録による変更ではない。最新の説明（LD-）・照合の記録（CC-）はない",
    "card_checks_affected": []
+  },
+  {
+   "id": "FIX-neo3-053-TRAINER-TEXT-JA",
+   "card_id": "neo3-053",
+   "card_name_ja": "ボロのつりざお",
+   "field": "trainer.text.ja",
+   "before": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」をあなたのトラッシュから選び出し、相手プレイヤーに見せてから、手札に加える。",
+   "after": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。",
+   "kind": "transcription_error",
+   "applied_by": "card_corrections",
+   "decided_on": "2026-10-30",
+   "basis": "card_image_check",
+   "image_check": "IMG-neo3-053",
+   "basis_detail": "kyuura が、同じカード（第3弾「めざめる伝説」のボロのつりざお）の日本語版のカードの画像（pcg-search.com [N3]）で、説明の全文「コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。」を読んだ（2026-10-30。照合の記録 IMG-neo3-053）。転記（ポケモンWiki）は「を、」の読点と「1枚」を落としていた。英語版の文面からは補っていない",
+   "confirmed_by": "kyuura（ウェブに公開されたカードの画像。公式の書籍のページとの照合 CC-・最新の説明 LD- ではない。neo のカードは『オフィシャルブック2000』に載っていない）",
+   "kyuura_saw_image": true,
+   "scope": "確かめた欄は trainer.text.ja（全文）。画像は 1 サイトの 1 枚で、カードの実物・公式の書籍では確かめていない。数字の全角・半角は画像で読み分けられないので、kyuura の書き方（半角）にした。「ポケモンのカード」の範囲・コインが「おもて」と「うら」になったとき・トラッシュに選べるカードがないときの扱いは、文面の訂正ではなく裁定・論点（CR-BORO-ROD-COIN-RESULTS・CR-BORO-ROD-POKEMON-CARDS・UQ-CARD-USE-WITHOUT-TARGET）",
+   "source_of_error": "ポケモンWiki の保存データ（data/raw/めざめる伝説.json）の「説明文2(neo)」の転記が「を、」の読点と「1枚」を落としている（同じデータの「説明文(PCG)」・pcg-search の転記には「1枚」がある）",
+   "not_errata": "公式エラッタ・再録による文面の変更ではない（転記の誤り）。最新の説明（LD-）・照合の記録（CC-）はない",
+   "card_checks_affected": []
   }
  ],
  "candidates": [
@@ -2016,6 +2036,72 @@
    "affects_behavior": false,
    "status": "gap_open",
    "reason": "既存の kyuura の読み取りが記録したのは名前・LV・HP・「プロモーションカード」だけで、ワザ（だいぎゃくてん？）・タイプ・図版を記録していない。同じ日本語版の同じカードと決める手がかりが、kyuura のカードの一覧に同じ名前のカードがほかにないこと（記録の外の事実）だけになるので、既存の読取記録の再利用としては足りない。新しい原典の読み直しはしていない。確かめるなら、P43 p.229 の真ん中の図版のワザ・タイプ、または 1stp078 のカードの画像のレベル（docs/engine-handover-baby-v0.113.md）"
+  },
+  {
+   "card_id": "PR1-001",
+   "card_name_ja": "ピカチュウ",
+   "field": "jp_print.level",
+   "kyuura_value": null,
+   "other_value": 16,
+   "other_source": "カードの画像（IMG-PR1-001。LV.16）と『オフィシャルブック2000』p.127 の 2 つ目の欄の見出し（LV.16／HP60。見出しにこのカードの配布が挙がる。図版は PR1-003 の印刷）",
+   "records": [],
+   "affects_behavior": false,
+   "status": "gap_open",
+   "reason": "この調査の対象外の欄（なきごえの文面を調べた。レベルは埋めない）。拡張パック以外の商品のレベルはどれも空で、まとめて扱う"
+  },
+  {
+   "card_id": "PR1-003",
+   "card_name_ja": "ピカチュウ",
+   "field": "jp_print.level",
+   "kyuura_value": null,
+   "other_value": 16,
+   "other_source": "カードの画像（IMG-PR1-003）と『オフィシャルブック2000』p.127 の 2 つ目の欄の見出し・図版（LV.16／HP60。kyuura の照合 CC-PR1-003-P127）",
+   "records": [
+    "CC-PR1-003-P127"
+   ],
+   "affects_behavior": false,
+   "status": "gap_open",
+   "reason": "この調査の対象外の欄（なきごえの文面を調べた。レベルは埋めない）。拡張パック以外の商品のレベルはどれも空で、まとめて扱う"
+  },
+  {
+   "card_id": "PR1-017",
+   "card_name_ja": "ピカチュウ",
+   "field": "jp_print.level",
+   "kyuura_value": null,
+   "other_value": 16,
+   "other_source": "カードの画像（IMG-PR1-017。LV.16）。『オフィシャルブック2000』p.127 の 1 つ目の欄（LV.16／HP60）に当たるとみるが、特定は推論",
+   "records": [],
+   "affects_behavior": false,
+   "status": "gap_open",
+   "reason": "この調査の対象外の欄（なきごえの文面を調べた。レベルは埋めない）。拡張パック以外の商品のレベルはどれも空で、まとめて扱う"
+  },
+  {
+   "card_id": "IP1-040",
+   "card_name_ja": "ピカチュウ",
+   "field": "jp_print.level",
+   "kyuura_value": null,
+   "other_value": 16,
+   "other_source": "カードの画像（IMG-IP1-040）と『オフィシャルブック2000』p.127 の 1 つ目の欄の見出し・図版（LV.16／HP60。kyuura の照合 CC-IP1-040-P127）",
+   "records": [
+    "CC-IP1-040-P127"
+   ],
+   "affects_behavior": false,
+   "status": "gap_open",
+   "reason": "この調査の対象外の欄（なきごえの文面を調べた。レベルは埋めない）。拡張パック以外の商品のレベルはどれも空で、まとめて扱う"
+  },
+  {
+   "card_id": "ES3-021",
+   "card_name_ja": "ヤドラン",
+   "field": "jp_print.level",
+   "kyuura_value": null,
+   "other_value": 35,
+   "other_source": "カードの画像（IMG-ES3-021）と『オフィシャルブック2000』p.156 の 2 つ目の欄の見出し・図版（LV.35／HP90。kyuura の照合 CC-ES3-021-P156）",
+   "records": [
+    "CC-ES3-021-P156"
+   ],
+   "affects_behavior": false,
+   "status": "gap_open",
+   "reason": "この調査の対象外の欄（おおいびきを調べた。レベルは埋めない）。拡張パック以外の商品のレベルはどれも空で、まとめて扱う"
   }
  ]
 }

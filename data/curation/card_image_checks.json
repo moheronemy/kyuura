@@ -841,6 +841,286 @@
     "FIX-PRN-037-EVOLVES-TO"
    ],
    "existing_value": "ルール文は今までの生成の値（pcg-search.com の転記）と画像が一字一句同じ（かぎかっこを含む）。訂正はない"
+  },
+  {
+   "id": "IMG-PR1-001",
+   "card_id": "PR1-001",
+   "card_name_ja": "ピカチュウ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stp001.php",
+     "page_title": "ピカチュウ | ポケモンカード(PMCG) プロモ",
+     "image_url": "https://pcg-search.com/img/1st/1stp001.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "1e364698c2654a9ec0b24adad9864c72713fb5d3898ed2a6f7b1beaee408da5e",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「ピカチュウ」LV.16、HP60、雷、たねポケモン、なきごえ（無色 1 個）・でんきショック（雷 2 個・20）、弱点 闘、にげる 1、No.025。イラストは葉の模様の背景で、クレジットは「Illus.Ken Sugimori」、右下に記号なし。kyuura の記録（pcg-search の備考「小学館「月刊コロコロコミック96年11月号」おまけ」）と名前・HP・ワザが合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（site_transcriptions）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.attacks[0].text.ja": "次の相手の番でうけるダメージを10へらすことができる。",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+   },
+   "print_text": {},
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stp001.php",
+     "values": {
+      "pokemon.attacks[0].text.ja": "次の相手の番でうけるダメージを10へらすことができる。",
+      "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     },
+     "note": "ページの文字も画像と同じ文面。ページは配布（商品）を「収録 プロモ」としか書かない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない。訂正の候補に記録した）",
+    "図鑑の説明・レアリティ・刷の記号",
+    "カードの実物（画像は 1 サイトの 1 枚）"
+   ],
+   "corrections": [],
+   "existing_value": "なきごえの文面は今までの値（pcg-search の転記）と一字一句同じ（古い書き方「次の相手の番でうけるダメージを10へらすことができる。」）。訂正はない。pcg-search のページの文字はイラストレーターを「Keiji Kinebuchi」と書くが、画像のクレジットは「Ken Sugimori」（kyuura の data/cards.json はイラストレーターの欄を持たない）"
+  },
+  {
+   "id": "IMG-PR1-003",
+   "card_id": "PR1-003",
+   "card_name_ja": "ピカチュウ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stp003.php",
+     "page_title": "ピカチュウ | ポケモンカード(PMCG) プロモ",
+     "image_url": "https://pcg-search.com/img/1st/1stp003.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "0892a4c65bfa853b1b06129d1029b279942ef7bc24f533311fbcc3758be70f18",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「ピカチュウ」LV.16、HP60、雷、なきごえ・でんきショック、弱点 闘、にげる 1、No.025。イラストは PR1-001 と同じ葉の模様の背景で、クレジットは「Illus.Keiji Kinebuchi」、右下に記号なし。kyuura の記録（pcg-search の備考「「すぐわかるポケモンカードの遊びかた」おまけ」）と名前・HP・ワザが合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（site_transcriptions）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.attacks[0].text.ja": "次の相手の番でうけるダメージを10へらすことができる。",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+   },
+   "print_text": {},
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stp003.php",
+     "values": {
+      "pokemon.attacks[0].text.ja": "次の相手の番でうけるダメージを10へらすことができる。",
+      "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     },
+     "note": "ページの文字も画像と同じ文面。ページは配布（商品）を「収録 プロモ」としか書かない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない。訂正の候補に記録した）",
+    "図鑑の説明・レアリティ・刷の記号",
+    "カードの実物（画像は 1 サイトの 1 枚）"
+   ],
+   "corrections": [],
+   "existing_value": "なきごえの文面は今までの値（pcg-search の転記）と一字一句同じ（古い書き方）。訂正はない"
+  },
+  {
+   "id": "IMG-PR1-017",
+   "card_id": "PR1-017",
+   "card_name_ja": "ピカチュウ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stp017.php",
+     "page_title": "ピカチュウ | ポケモンカード(PMCG) プロモ",
+     "image_url": "https://pcg-search.com/img/1st/1stp017.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "7ecf56f9dc1f8c7037392ca26f1e9253d2a1f6e2f1df9fc2053e33771c6f047c",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「ピカチュウ」LV.16、HP60、雷、なきごえ・でんきショック、弱点 闘、にげる 1、No.025。イラストは稲妻の背景（PR1-001・PR1-003 とは別のイラスト）で、クレジットは「Illus.Ken Sugimori」、右下に記号なし。pcg-search のページ・kyuura の記録はこのカードの配布を書かない（kyuura の商品の記録 data/curation/other_products.json の promos の 1stp017 は、Bulbapedia の「Pikachu [Toyota]」（1997-10）による）",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（site_transcriptions）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.attacks[0].text.ja": "次の相手の番でうけるダメージを10へらすことができる。",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+   },
+   "print_text": {},
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stp017.php",
+     "values": {
+      "pokemon.attacks[0].text.ja": "次の相手の番でうけるダメージを10へらすことができる。",
+      "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     },
+     "note": "ページの文字も画像と同じ文面。ページは配布（商品）を「収録 プロモ」としか書かない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない。訂正の候補に記録した）",
+    "図鑑の説明・レアリティ・刷の記号",
+    "カードの実物（画像は 1 サイトの 1 枚）"
+   ],
+   "corrections": [],
+   "existing_value": "なきごえの文面は今までの値（pcg-search の転記）と一字一句同じ（古い書き方）。訂正はない",
+   "print_version": "『オフィシャルブック2000』p.127 の 1 つ目の欄（見出し「プロモーションカード「トヨタオートキャンペーン」プレゼントカード／イントロパック」）は同じイラストで、図版はイントロパックの印刷（右下に「40」の記号、新しい書き方）。このカードはその欄の見出しの「トヨタオートキャンペーン」プレゼントカードに当たるとみるが、画像のカードに配布の表示はなく、特定は推論（イラストの一致・記号がない・kyuura の記録でこのイラストの LV.16 は PR1-017 と IP1-040 だけ・二次資料の商品の記録）"
+  },
+  {
+   "id": "IMG-IP1-040",
+   "card_id": "IP1-040",
+   "card_name_ja": "ピカチュウ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stintro1040.php",
+     "page_title": "ピカチュウ | ポケモンカード(PMCG) イントロパック(フシギダネデッキ)",
+     "image_url": "https://pcg-search.com/img/1st/1stintro1040.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "8f5c71b8a307d6625aa88c9e1716dad5e44cd094f019f4323dd6df93b4f8bcfb",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「ピカチュウ」LV.16、HP60、雷、なきごえ・でんきショック、弱点 闘、にげる 1、No.025。イラストは稲妻の背景、クレジットは「Illus.Ken Sugimori」、右下に「40」の記号（イントロパックの番号）。pcg-search のページはイントロパック（フシギダネデッキ）",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（site_transcriptions）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.attacks[0].text.ja": "このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される。",
+    "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+   },
+   "print_text": {},
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stintro1040.php",
+     "values": {
+      "pokemon.attacks[0].text.ja": "このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される。",
+      "pokemon.attacks[1].text.ja": "コインを投げて「おもて」なら、相手を「マヒ」状態にする。"
+     },
+     "note": "ページの文字も画像と同じ文面。ページは配布（商品）を「収録 プロモ」としか書かない"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない。訂正の候補に記録した）",
+    "図鑑の説明・レアリティ・刷の記号",
+    "カードの実物（画像は 1 サイトの 1 枚）"
+   ],
+   "corrections": [],
+   "existing_value": "なきごえの文面は今までの値と一字一句同じ（新しい書き方「このワザを受けた相手は、次の相手の番でこのカードにダメージを与える時、そのダメージが「-10」される。」）。訂正はない。優先Aの 3 枚と同じカードの組（SC-PR1-001）で、書籍の 1 つ目の欄の図版の印刷なので、版の対応を確かめるために読んだ"
+  },
+  {
+   "id": "IMG-ES3-021",
+   "card_id": "ES3-021",
+   "card_name_ja": "ヤドラン",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stex3021.php",
+     "page_title": "ヤドラン | ポケモンカード(PMCG) 拡張シート 第3弾(緑版)",
+     "image_url": "https://pcg-search.com/img/1st/1stex3021.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "72e9d5b71afbb85b746fd49d750ce0179b85a8dc9626d39609b393d0c2e0e052",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「ヤドラン」1進化（ヤドンから進化）、LV.35、HP90、超、おおあくび（超 1 個）・おおいびき（超 2 個・30）、弱点 超、にげる 3、Illus.Atsuko Nishida、No.080。pcg-search のページは拡張シート第3弾（緑版）。『オフィシャルブック2000』p.156 の 2 つ目の欄（LV.35／HP90、拡張シート第3弾緑版）の図版と同じカード",
+   "independence": "画像は pcg-search.com の 1 枚だけ。書籍の図版（CC-ES3-021-P156）とは別の資料だが、同じ印刷を写したもので、独立した 2 枚の実物の照合とは数えない",
+   "print_values": {
+    "pokemon.attacks[0].text.ja": "自分と相手を、それぞれ「ねむり」状態にする。",
+    "pokemon.attacks[1].text.ja": "このワザは、このカードが「ねむり」状態の時だけ、使える。"
+   },
+   "print_text": {},
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stex3021.php",
+     "values": {
+      "pokemon.attacks[0].text.ja": "自分と相手を、それぞれ「ねむり」状態にする。",
+      "pokemon.attacks[1].text.ja": "このワザは、このカードが「ねむり」状態の時だけ、使える。"
+     },
+     "note": "ページの文字も画像と同じ"
+    }
+   ],
+   "not_checked": [
+    "jp_print.level・pokemon.dex の値の照合と補完（レベルは特定の手がかりにだけ使った。欠けは埋めない。訂正の候補に記録した）",
+    "図鑑の説明・レアリティ・刷の記号",
+    "カードの実物（画像は 1 サイトの 1 枚）"
+   ],
+   "existing_value": "おおいびきの印刷の文面は今までの値と一字一句同じ（「このワザは、このカードが「ねむり」状態の時だけ、使える。」）。訂正はない。書籍の「ワザ」欄の文面（最新の説明）は別の記録（LD-ES3-021-ATK1）",
+   "corrections": []
+  },
+  {
+   "id": "IMG-neo3-053",
+   "card_id": "neo3-053",
+   "card_name_ja": "ボロのつりざお",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo3053.php",
+     "page_title": "ボロのつりざお | ポケモンカードneo 第3弾 めざめる伝説",
+     "image_url": "https://pcg-search.com/img/neo/neo3053.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "6f191d61a0d8113c6b07adffa934b87b34b305e0435fc8e3207cb4c2ff737c85",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「TRAINER」の「ボロのつりざお」、Illus.Keiji Kinebuchi、右下にシリーズの記号。pcg-search のページは第3弾「めざめる伝説」。kyuura の記録で「ボロのつりざお」はneo3-053 だけ。名前だけで別の版と決めていない（ほかの商品の同じ名前のカードは kyuura にない）",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記・ポケモンWiki の転記（kyuura の今までの値の出典）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "trainer.text.ja": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。"
+   },
+   "print_text": {
+    "trainer.text.ja": [
+     "コインを2枚投げ、すべて「おもて」",
+     "なら「ポケモンのカード」を、すべて",
+     "「うら」なら「トレーナーカード」を、",
+     "あなたのトラッシュから1枚選び出し、",
+     "相手プレイヤーに見せてから、手札に",
+     "加える。"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo3053.php",
+     "values": {
+      "trainer.text.ja": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。"
+     },
+     "note": "画像と同じ（「を、」の読点と「1枚」がある）"
+    },
+    {
+     "source": "ポケモンWiki の既存の保存データ（data/raw/めざめる伝説.json の「説明文2(neo)」。版 550776。今回は取り直していない）",
+     "page_url": "https://wiki.pokemonwiki.com/wiki/%E3%83%9C%E3%83%AD%E3%81%AE%E3%81%A4%E3%82%8A%E3%81%96%E3%81%8A_(%E3%82%AB%E3%83%BC%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0)",
+     "values": {
+      "trainer.text.ja": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」をあなたのトラッシュから選び出し、相手プレイヤーに見せてから、手札に加える。"
+     },
+     "note": "「を、」の読点と「1枚」がない（kyuura の今までの値の出典）。同じ保存データの「説明文(PCG)」（後の別の商品の書き方）には「1枚」がある"
+    }
+   ],
+   "not_checked": [
+    "数字の全角・半角（画像で読み分けられない。kyuura の文面の書き方「2枚」に合わせて半角にした）",
+    "カードの実物（画像は 1 サイトの 1 枚）"
+   ],
+   "corrections": [
+    "FIX-neo3-053-TRAINER-TEXT-JA"
+   ]
   }
  ]
 }

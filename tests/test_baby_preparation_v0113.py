@@ -26,6 +26,7 @@ import build_engine_targets as bet  # noqa: E402
 
 BASE = '73a169063463bbf7bcaa3137d70cbf9721d11534'  # この作業の基準（main）
 ENGINE = '2d113b5eeea0dbd4f7466e144f7a1345494405c0'  # kyuura-engine v0.113（固定した参照）
+AT_COMMIT = 'e519b99e2adcc6c2cd0998569ae5ee1101de6e89'  # この作業のコミット（あとの作業の数と分けるための固定した入力）
 RULE = '「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。'
 EVOLVES_TO = {
     'neo1-022': ['ブーバー'], 'neo1-042': ['ピカチュウ'], 'neo1-044': ['エレブー'], 'neo1-070': ['ピッピ'],
@@ -131,7 +132,9 @@ class ImageCheckTest(Data):
     """カードの画像の照合の記録・訂正の記録・生成した値が同じ内容を指す。照合の記録・最新の説明（CC-・LD-）ではない。"""
 
     def test_records_point_to_the_same_values(self):
-        checks = {x['card_id']: x for x in self.checks['checks']}
+        # この作業（2026-10-27）の照合の記録。あとの作業の記録（2026-10-30 のピカチュウ・ヤドラン・ボロのつりざおなど）は
+        # tests/test_next_engine_text_evolution.py が確かめる
+        checks = {x['card_id']: x for x in self.checks['checks'] if x['checked_on'] == '2026-10-27'}
         self.assertEqual(set(checks), set(EVOLVES_TO))
         fixes = {c['id']: c for c in self.ledger['corrections']}
         for cid, x in checks.items():
@@ -264,7 +267,11 @@ class SidecarTest(unittest.TestCase):
         self.assertTrue(any('transcription_quotes' in e for e in bcr.validate(ctx)))
 
     def test_counts(self):
-        self.assertEqual(bcr.unresolved_counts(self.ctx)['research_issues'], 73)
+        # この作業のコミット（e519b99）の論点で数える（あとの作業で論点が増えても、この時点の 73 を確かめる。今の数は
+        # tests/test_next_engine_text_evolution.py）
+        then = dict(self.ctx, rulings=json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{AT_COMMIT}:data/sidecar/rulings.json'],
+                                                                capture_output=True, text=True, check=True).stdout))
+        self.assertEqual(bcr.unresolved_counts(then)['research_issues'], 73)
         self.assertEqual(bcr.unresolved_counts(self.ctx, as_of='v0.113')['research_issues'], 72)
         self.assertEqual(bcr.unresolved_counts(self.ctx)['latest_version'], 'v0.68')  # 照らした最後の取り込み
 

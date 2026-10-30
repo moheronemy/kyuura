@@ -165,6 +165,11 @@ def source_codes(root):
     return set(re.findall(r'^\| ([A-Z]\d+) \|', text, re.M))
 
 
+# 最新の説明を、書籍のどの欄からこのカード id に当てはめたか（applies_to_print.by）。書籍の 1 つの欄の見出しが複数の配布・商品を挙げ、図版はそのうち 1 つの印刷だけのことがある
+APPLIES_BY = {
+    'figure': '欄の図版がこのカードの印刷（図版の文面・イラスト・記号を照合した）',
+    'heading_listing': '欄の見出しがこのカードの配布・商品を挙げるが、図版は別の印刷（このカードの印刷は図版で照合していない）',
+}
 TRANSCRIPTION_FILE = 'data/Silver_Bible_structured.md'  # 『オフィシャルブック2000』の既存の転記（利用者が加えた OCR・校正。PDF の番号 = ページ + 2）
 
 
@@ -466,6 +471,13 @@ def validate(ctx):
         if pt.get('image_check') == 'different_text':
             if not pt.get('image_text_ja') or pt['image_text_ja'] == pt['text_ja'] or not pt.get('image_check_note'):
                 errors.append(f'{w}: 図版の文面相違には、異なる image_text_ja と版を断定しない説明が必要')
+        ap = x.get('applies_to_print')
+        if ap is not None:
+            # 図版で照合した印刷か、見出しに挙がるだけの印刷かを分ける（見出しだけの印刷を、図版で照合したことにしない）
+            if ap.get('by') not in APPLIES_BY or not ap.get('heading') or not ap.get('basis'):
+                errors.append(f"{w}: applies_to_print に by（{'・'.join(APPLIES_BY)}）・heading・basis がない")
+            elif (ap['by'] == 'figure') == (pt.get('image_check') == 'not_checked'):
+                errors.append(f"{w}: applies_to_print の by が figure なら図版の照合（image_check）がいる。heading_listing なら image_check は not_checked")
         ld = x['latest_description']
         if not ld.get('text_ja'):
             errors.append(f'{w}: 最新の説明の文面がない')
@@ -1232,6 +1244,9 @@ def build(ctx):
     for x in L['records']:
         extra = [f"同じ文面の引用: " + '、'.join(f"[{q['source']}] p.{q['page']} {q['location']}" for q in x['also_quoted'])] if x['also_quoted'] else []
         extra += [f"分類: {L['classifications'][x['classification']].split('（')[0]}。公式エラッタの記録: {x['errata_ref'] or 'なし（訂正告知は見つかっていない）'}"]
+        if x.get('applies_to_print'):
+            ap = x['applies_to_print']
+            extra.append(f"当てはめた欄: 見出し「{ap['heading']}」。{APPLIES_BY[ap['by']]}。{ap['basis']}")
         extra += x['notes']
         if provenance_text(x):
             extra.append(provenance_text(x))

@@ -68530,13 +68530,15 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」をあなたのトラッシュから選び出し、相手プレイヤーに見せてから、手札に加える。",
+     "ja": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。",
      "en": "Flip 2 coins. If both are heads, put a Baby Pokémon, Basic Pokémon, or Evolution card from your discard pile into your hand. If both are tails, put a Trainer card from your discard pile into your hand."
     }
    },
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo3-053-TRAINER-TEXT-JA）: trainer.text.ja を「コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」をあなたのトラッシュから選び出し、相手プレイヤーに見せてから、手札に加える。」から「コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。」に直した。根拠: kyuura が、同じカード（第3弾「めざめる伝説」のボロのつりざお）の日本語版のカードの画像（pcg-search.com [N3]）で、説明の全文「コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。」を読んだ（2026-10-30。照合の記録 IMG-neo3-053）。転記（ポケモンWiki）は「を、」の読点と「1枚」を落としていた。英語版の文面からは補っていない"
+   ],
    "source_ids": {
     "tcgdex": "neo3-053",
     "pokemontcg": [
@@ -68554,6 +68556,16 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo3-053-TRAINER-TEXT-JA",
+     "field": "trainer.text.ja",
+     "before": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」をあなたのトラッシュから選び出し、相手プレイヤーに見せてから、手札に加える。",
+     "after": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
     "jp_print.series"

@@ -377,6 +377,7 @@ id は 3 つのファイルを通して重複しないこと、`data/rule_histor
 | `latest_description` | 最新の説明の文面（`text_ja`）、出典の記号（`source`）・スキャン（`scan`）・ページ（`page`。`data/rule_history.json` の `documents` にあるページ）・PDF のページ・位置 |
 | `also_quoted` | 同じ書籍の別のページに同じ文面が引かれている場所 |
 | `book_rule` | 最新の説明の扱いを決めた条項（`GR-P43-P6-LATEST-DESCRIPTION`） |
+| `applies_to_print` | 書籍のどの欄から、このカード id に当てはめたか（あるときだけ。2026-10-30 から）。`heading`（欄の見出しの配布・商品）・`by`（`figure`: 欄の図版がこのカードの印刷で、図版を照合した。`heading_listing`: 見出しがこのカードの配布を挙げるが、図版は別の印刷）・`basis`（そう決めた手がかり）。書籍の 1 つの欄が複数の配布をまとめ、図版がそのうち 1 つだけのことがある（p.127 のピカチュウ）。`heading_listing` なら `printed_text.image_check` は `not_checked`、`figure` なら照合の結果がいる（違えばエラー）。見出しだけで当てはめた印刷を、図版で照合したことにしない |
 | `classification`・`errata_ref` | 分類は `latest_description`（最新の説明）。公式エラッタ・印刷の変更の記録（`data/rule_history.json`）があるカードは、`errata_ref` で結ばないとエラー（最新の説明とエラッタを混同しない） |
 | `differences` | 違い（`printed`・`latest`・`kind`: `wording`・`clarification`・`meaning`）。文字列が印刷の文面・最新の説明の中にそのままないとエラー |
 | `meaning_change`・`meaning_note` | 処理が変わるか（`none_apparent`・`changed`・`ambiguous_in_print`（印刷の文面だけでは処理が決まらず、最新の説明がその読み方を決めた）・`unknown`）と、その読み方（推論であることを書く）。違いの種類に `meaning` があれば `changed` |
