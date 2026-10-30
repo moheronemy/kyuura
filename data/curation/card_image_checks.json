@@ -2108,6 +2108,363 @@
    ],
    "existing_value": "タイプ（闘）とワザの必要なエネルギー（水をふくむ並び）は今までの値と同じ。訂正はない。タイプと必要なエネルギーの記号が違うのは印刷のとおりで、データの入れ違いではない。今までの値は英語版のデータ（pokemon-tcg-data）から生成し、取り込みのときになぞのばしょの転記と記号で比べて違いがなかった（data/ja_text_nazonobasho_report.json に記録がない）。固定した入力の tcgdex の日本語の欄は英語版の機械翻訳で、独立した資料ではない",
    "corrections": []
+  },
+  {
+   "id": "IMG-GD5-007",
+   "card_id": "GD5-007",
+   "card_name_ja": "カツラのウィンディ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stgymd5007.php",
+     "page_title": "カツラのウィンディ | ポケモンカード(PMCG) ポケモンジム第3弾「グレンタウンジム カツラ」",
+     "image_url": "https://pcg-search.com/img/1st/1stgymd5007.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "2de737ec136096052d117e95a8d2e362a809481d33a3b6579bda75a6e36bb4ca",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「カツラのウィンディ」1進化（カツラのガーディから進化）、LV.42、HP90、炎、ヒートタックル（40）・ほのおのあらし（120）、弱点 水、にげる 3、Illus.Ken Sugimori、No.059、右下にレアリティの記号なし、右上の弾の記号（ジム）。pcg-search のページはポケモンジム第3弾「グレンタウンジム カツラ」。kyuura の data/cards.json の名前・HP・ワザ名・ダメージと合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（site_transcriptions）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "name.ja": "カツラのウィンディ"
+   },
+   "print_text": {
+    "name.ja": [
+     "カツラのウィンディ（「ウ」のすぐあとの「ィ」は小さい字（同じ名前の「ディ」の「ィ」と同じ大きさ。「ン」より小さい））"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stgymd5007.php",
+     "values": {
+      "name.ja": "カツラのウィンディ"
+     },
+     "note": "見出し・ページの文字は画像と同じ。同じページの進化ラインの欄も「カツラのウィンディ」"
+    }
+   ],
+   "not_checked": [
+    "ワザ・特殊能力の説明の全文の読み比べ（特定に使った名前・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "レベル・図鑑番号・弱点・抵抗力・にげるの値の照合（特定の手がかりにだけ使った。欠けは埋めない）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "existing_value": "名前は今までの値と同じ（「カツラのウィンディ」）。訂正はない。同じカードの組 SC-GD5-007 のジム拡張第2弾の印刷（IMG-PMCG6-034）も同じ名前",
+   "corrections": []
+  },
+  {
+   "id": "IMG-PMCG6-034",
+   "card_id": "PMCG6-034",
+   "card_name_ja": "カツラのウィンディ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stgym2031.php",
+     "page_title": "カツラのウィンディ | ポケモンカード(PMCG) ジム拡張第2弾「闇からの挑戦」",
+     "image_url": "https://pcg-search.com/img/1st/1stgym2031.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "784f1f7b6875c56a7be2070f0286d0c4fa26875177be659d01608d6965339220",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「カツラのウィンディ」1進化（カツラのガーディから進化）、LV.42、HP90、炎、ヒートタックル（40）・ほのおのあらし（120）、弱点 水、にげる 3、Illus.Ken Sugimori、No.059、右下にレアリティの記号 ★。pcg-search のページはジム拡張第2弾「闇からの挑戦」（pcg-search の番号は 1stgym2031 で、kyuura の id の番号 034 とは違う。名前・内容と商品で特定した）。kyuura の data/cards.json の HP・ワザ名・ダメージ・LV（42）・レアリティ（★）と合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記・ポケモンWiki の転記（site_transcriptions）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "name.ja": "カツラのウィンディ"
+   },
+   "print_text": {
+    "name.ja": [
+     "カツラのウィンディ（「ウ」のすぐあとの「ィ」は小さい字（同じ名前の「ディ」の「ィ」と同じ大きさ。「ン」より小さい））"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stgym2031.php",
+     "values": {
+      "name.ja": "カツラのウィンディ"
+     },
+     "note": "画像と同じ"
+    },
+    {
+     "source": "ポケモンWiki [N2] の既存の保存データ（kyuura の data/ja_text_pokemonwiki.json の「カード名称」。今回は取り直していない）",
+     "page_url": "https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%83%84%E3%83%A9%E3%81%AE%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%87%E3%82%A3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0)",
+     "values": {
+      "name.ja": "カツラのウィンディ"
+     },
+     "note": "画像と同じ。kyuura は取り込みのときにこの値を「サイトの誤記」と判定していた（data/curation/pokemonwiki_review.json の PMCG6-034|name。画像のない判定）"
+    }
+   ],
+   "not_checked": [
+    "ワザ・特殊能力の説明の全文の読み比べ（特定に使った名前・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "レベル・図鑑番号・弱点・抵抗力・にげるの値の照合（特定の手がかりにだけ使った。欠けは埋めない）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "existing_value": "今までの値「カツラのウインディ」は、生成（英語名と図鑑番号から作るポケモンの名前）が種の名前「ウインディ」で作った値で、印刷と違う。訂正 FIX-PMCG6-034-NAME-JA で直した",
+   "corrections": [
+    "FIX-PMCG6-034-NAME-JA"
+   ]
+  },
+  {
+   "id": "IMG-PMCG1-019",
+   "card_id": "PMCG1-019",
+   "card_name_ja": "ウィンディ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1st1020.php",
+     "page_title": "ウィンディ | ポケモンカード(PMCG) 第1弾 拡張パック",
+     "image_url": "https://pcg-search.com/img/1st/1st1020.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "b456d34b9eec7c77344f226b67fc704bdc1f63dbe049eb499249aaca5da4b592",
+     "accessed_on": "2026-10-30"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/pmcg01-020-windie/",
+     "page_title": "ウインディ | ポケットモンスターカードゲーム | 拡張パック第1弾 | なぞのばしょ",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2020/10/pmcg01-020-windie-copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "dba3840f6ced857e8fc81b5b8bcb5ab202e1fe2f9e63f982f8f3b4d290075de3",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "2 つの画像とも「ウィンディ」1進化（ガーディから進化）、LV.45、HP100、炎、かえんほうしゃ（50）・とっしん（80）、弱点 水、にげる 3、Illus.Ken Sugimori、No.059、右下にレアリティの記号 ◆。pcg-search のページは第1弾 拡張パック（pcg-search の番号は 1st1020 で、kyuura の id の番号 019 とは違う。名前・内容と商品で特定した）。kyuura の data/cards.json の HP・ワザ名・ダメージ・LV（45）・レアリティ（◆）と合う",
+   "independence": "画像は 2 つのサイトに 1 枚ずつ。同じ撮影・スキャンに由来するかが分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記は画像の値と分ける",
+   "print_values": {
+    "name.ja": "ウィンディ"
+   },
+   "print_text": {
+    "name.ja": [
+     "ウィンディ（2 つの画像とも、「ウ」のすぐあとの「ィ」は小さい字（同じ名前の「ディ」の「ィ」と同じ大きさ。「ン」より小さい））"
+    ]
+   },
+   "print_version": "2 つの画像とも、右下にレアリティの記号 ◆ のある刷。なぞのばしょの備考の「初版はレアリティマークなし」の刷の画像は見ていない",
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1st1020.php",
+     "values": {
+      "name.ja": "ウィンディ"
+     },
+     "note": "見出しは画像と同じ。同じページの進化ラインの欄は「ウインディ」（サイトの一覧の書き方）"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-30 に取得したページ。kyuura の data/ja_text_nazonobasho.json の値も同じ）",
+     "page_url": "https://nazonobasho.com/pmcg01-020-windie/",
+     "values": {
+      "name.ja": "ウインディ"
+     },
+     "note": "「カード名称」は「ウインディ」で、備考に「ウインディの小文字の最初の「ィ」は誤表記」と書く（印刷が小さい「ィ」であることを、サイトが種の名前の書き方に直して載せている）"
+    }
+   ],
+   "not_checked": [
+    "ワザ・特殊能力の説明の全文の読み比べ（特定に使った名前・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "レベル・図鑑番号・弱点・抵抗力・にげるの値の照合（特定の手がかりにだけ使った。欠けは埋めない）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）",
+    "初版（レアリティの記号なし）の刷の名前"
+   ],
+   "existing_value": "今までの値「ウインディ」は、生成（英語名と図鑑番号から作るポケモンの名前）が種の名前で作った値で、なぞのばしょの「カード名称」とも同じだったので取り込みのときに違いが出なかった。印刷は「ウィンディ」。訂正 FIX-PMCG1-019-NAME-JA で直した",
+   "corrections": [
+    "FIX-PMCG1-019-NAME-JA"
+   ]
+  },
+  {
+   "id": "IMG-IP2-032",
+   "card_id": "IP2-032",
+   "card_name_ja": "ウィンディ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stintro2032.php",
+     "page_title": "ウィンディ | ポケモンカード(PMCG) イントロパック(ゼニガメデッキ)",
+     "image_url": "https://pcg-search.com/img/1st/1stintro2032.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "f3349bdf94178c1aa8022fed2e2e7ecaf10db1b4059a23a3b69b2a2b279751e0",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「ウィンディ」1進化（ガーディから進化）、LV.35、HP70、炎、とっしん（50。自分にも20ダメージ）、弱点 水、にげる 2、Illus.Kagemaru Himeno、No.059、右下にゼニガメデッキの番号「32」。pcg-search のページはイントロパック（ゼニガメデッキ）。kyuura の data/cards.json の名前・HP・ワザ名・ダメージと合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（site_transcriptions）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "name.ja": "ウィンディ"
+   },
+   "print_text": {
+    "name.ja": [
+     "ウィンディ（「ウ」のすぐあとの「ィ」は小さい字（同じ名前の「ディ」の「ィ」と同じ大きさ。「ン」より小さい））"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stintro2032.php",
+     "values": {
+      "name.ja": "ウィンディ"
+     },
+     "note": "見出しは画像と同じ。同じページの進化ラインの欄は「ウインディ」（サイトの一覧の書き方）"
+    }
+   ],
+   "not_checked": [
+    "ワザ・特殊能力の説明の全文の読み比べ（特定に使った名前・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "レベル・図鑑番号・弱点・抵抗力・にげるの値の照合（特定の手がかりにだけ使った。欠けは埋めない）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "existing_value": "名前は今までの値と同じ（「ウィンディ」）。訂正はない",
+   "corrections": []
+  },
+  {
+   "id": "IMG-PR1-016",
+   "card_id": "PR1-016",
+   "card_name_ja": "ウィンディ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stp016.php",
+     "page_title": "ウィンディ | ポケモンカード(PMCG) プロモ",
+     "image_url": "https://pcg-search.com/img/1st/1stp016.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "493d70b49f8625842bcc4d9ac3e74ac3005602011288f4ab784d864067162737",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「ウィンディ」1進化（ガーディから進化）、LV.34、HP70、炎、でんこうせっか（10+）・いかりのほのお（40+）、弱点 水、にげる 1、Illus.Ken Sugimori、No.059、右下に記号なし。pcg-search のページはプロモ。kyuura の data/cards.json の名前・HP・ワザ名・ダメージと合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（site_transcriptions）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "name.ja": "ウィンディ"
+   },
+   "print_text": {
+    "name.ja": [
+     "ウィンディ（「ウ」のすぐあとの「ィ」は小さい字（同じ名前の「ディ」の「ィ」と同じ大きさ。「ン」より小さい））"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stp016.php",
+     "values": {
+      "name.ja": "ウィンディ"
+     },
+     "note": "見出しは画像と同じ。同じページの進化ラインの欄は「ウインディ」（サイトの一覧の書き方）"
+    }
+   ],
+   "not_checked": [
+    "ワザ・特殊能力の説明の全文の読み比べ（特定に使った名前・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "レベル・図鑑番号・弱点・抵抗力・にげるの値の照合（特定の手がかりにだけ使った。欠けは埋めない）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "existing_value": "名前は今までの値と同じ（「ウィンディ」）。訂正はない",
+   "corrections": []
+  },
+  {
+   "id": "IMG-PR1-077",
+   "card_id": "PR1-077",
+   "card_name_ja": "ナッシー［Exeggutor］",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stp077.php",
+     "page_title": "ナッシー［Exeggutor］ | ポケモンカード(PMCG) プロモ",
+     "image_url": "https://pcg-search.com/img/1st/1stp077.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "2c54d877aba2c46d27ef24210b25377ddda11b285f840a2ba0c3bda7255efcad",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「ナッシー[Exeggutor]」1進化（タマタマ[Exeggcute]から進化）、HP80、草、ふみつけ[Stomp]（20+）、にげる 2、弱点 炎、Illus.Dr.Ooyama、No.103、下端に「ポケモンカード公式マガジン「トレーナーズVol.3」おまけカード」。日本語と英語を併記したカード（すべての欄に英語の括弧書きがある）。pcg-search のページはプロモ。kyuura の商品の記録（data/curation/other_products.json の promos の 1stp077: Pokémon Card Trainers Vol. 3 insert）・名前・HP・ワザ名・ダメージと合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じサイトの転記（site_transcriptions）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "name.ja": "ナッシー［Exeggutor］"
+   },
+   "print_text": {
+    "name.ja": [
+     "ナッシー[Exeggutor]（「Exeggutor」の上に小さい字のルビ「エグゼグター」。括弧の全角・半角は印刷の書体で区別しないので、値の「［］」は転記の書き方のまま）",
+     "同じカードの欄の書き方: 「タマタマ[Exeggcute]から進化」「やしのみポケモン[Coconut Pokémon]」「ふみつけ[Stomp]」（ルビ「スタンプ」）「にげる[retreat cost]」「弱点[weakness]」、ワザの説明も日本語と英語の文を交互に書く"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stp077.php",
+     "values": {
+      "name.ja": "ナッシー［Exeggutor］"
+     },
+     "note": "見出しは画像と同じ（括弧は全角）。同じページの進化ラインの欄は「ナッシー」「タマタマ」（併記なし）"
+    }
+   ],
+   "not_checked": [
+    "ワザ・特殊能力の説明の全文の読み比べ（特定に使った名前・ダメージのほかは、転記と比べて直す作業をしていない）",
+    "レベル・図鑑番号・弱点・抵抗力・にげるの値の照合（特定の手がかりにだけ使った。欠けは埋めない）",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）",
+    "同じ組 SC-PR1-075 の PR1-075（トロピカルメガバトル）の印刷: pcg-search の 1stp075 の画像は「Dummy」と重ねた代わりの画像で、このカードの印刷の画像ではないので読んでいない"
+   ],
+   "existing_value": "名前は今までの値と同じ（日本語の名前と英語の名前の併記）。訂正はない。英語の併記を名前の一部としてあつかうかは UQ-BILINGUAL-NAME-GLOSS",
+   "corrections": []
+  },
+  {
+   "id": "IMG-ES1-027",
+   "card_id": "ES1-027",
+   "card_name_ja": "プクリン",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stex1027.php",
+     "page_title": "プクリン | ポケモンカード(PMCG) 拡張シート 第1弾(青版)",
+     "image_url": "https://pcg-search.com/img/1st/1stex1027.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "ef891e57efe5c8511f2af92159308aeb5d56e664e40aef19517e79177dcf0b3e",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "画像は「プクリン」1進化（プリンから進化）、LV.40、HP90、無色、【特殊能力】てだすけ、ふくらむ（無色 4 個・20）、弱点 闘、抵抗力 超 -30、にげる 3、Illus.Atsuko Nishida、No.040、右下にレアリティの記号 ◆。pcg-search のページは拡張シート第1弾（青版）。kyuura の data/cards.json の名前・HP・ワザ名・ダメージと合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ（593×834。説明の字は小さい）。同じサイトの転記（site_transcriptions）とは分けて書き、照合の数に入れない",
+   "print_values": {
+    "pokemon.attacks[0].name.ja": "ふくらむ"
+   },
+   "print_text": {
+    "pokemon.attacks[0].text.ja": [
+     "このカードが次の相手の■に受けるダメ",
+     "ージは「-10」される。",
+     "（■は「相手の」と「に」のあいだの漢字 1 字。画像の解像度では字の形が読めない。推測で埋めない。「の」「に」と句点は読める。今までの値「このカードが次の相手に受けるダメージは「-10」される。」は「の」と ■ の 2 字がない）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-30 に取得したページ。kyuura の今までの値の出典）",
+     "page_url": "https://pcg-search.com/card/1st/1stex1027.php",
+     "values": {
+      "pokemon.attacks[0].text.ja": "このカードが次の相手に受けるダメージは「-10」される。"
+     },
+     "note": "画像の「の」と判読できない 1 字がない（転記の欠け）"
+    }
+   ],
+   "not_checked": [
+    "ふくらむの説明の全文（■ の 1 字が読めない。訂正せず、候補にした）",
+    "［てだすけ］の文面（この作業の対象外。変えていない）",
+    "カードの実物・公式の書籍のページ（『オフィシャルブック2000』p.226 の最新の説明は既存の転記にあるが、今回は原典の画像を読んでいない）"
+   ],
+   "existing_value": "ワザ名は今までの値と同じ。説明は今までの値と違う（2 字の欠け）が、1 字が読めないので訂正していない（data/curation/card_corrections.json の候補）",
+   "corrections": []
   }
  ]
 }

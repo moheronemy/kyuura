@@ -20,6 +20,7 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 import build_cardlist  # noqa: E402
 
 BASE = 'c932625053f4cd4d784585f8b6144121499d85ed'  # この作業の基点（次の便のカードの文面と進化データの調査）
+AT_COMMIT = '2fe0bc042ce187d191843819262f8036abbb343d'  # この作業のコミット（あとの作業の訂正・記録と分けるため）
 # 画像で読んだ値: カード id → （タイプ, [各ワザのコスト]）
 PRINTED = {
     'neo2-014': (['water'], [['fighting', 'colorless']]),
@@ -34,8 +35,8 @@ def load(rel):
     return json.loads((ROOT / rel).read_text(encoding='utf-8'))
 
 
-def at_base(rel):
-    return subprocess.run(['git', '-C', str(ROOT), 'show', f'{BASE}:{rel}'], capture_output=True, text=True, check=True).stdout
+def at_base(rel, commit=BASE):
+    return subprocess.run(['git', '-C', str(ROOT), 'show', f'{commit}:{rel}'], capture_output=True, text=True, check=True).stdout
 
 
 class Fossils(unittest.TestCase):
@@ -82,14 +83,20 @@ class Fossils(unittest.TestCase):
         self.assertFalse([c['id'] for c in self.ledger['corrections'] if c['applied_by'] == 'card_corrections' and c['before'] == c['after']])
 
     def test_card_data_is_unchanged_from_base(self):
-        # 照合の記録を加えただけで、カードの値・CSV・訂正の記録は基点と同じ（1,377 件と id の集合も同じ）
+        # この作業（基点 c932625 → 2fe0bc0）は照合の記録を加えただけで、カードの値・CSV・訂正の記録は基点と同じ（1,377 件と id の集合も同じ）。
+        # あとの作業（2026-10-30 の名前の訂正など）の変更と分けるため、この作業のコミットの記録で比べる
         for rel in ('data/cards.json', 'data/cards.csv', 'data/attacks.csv', 'data/curation/card_corrections.json',
                     'data/engine_targets.json', 'data/curation/engine_registered_cards.json',
                     'data/sidecar/latest_descriptions.json', 'data/sidecar/card_checks.json', 'data/sidecar/rulings.json'):
-            self.assertEqual((ROOT / rel).read_text(encoding='utf-8'), at_base(rel), rel)
+            self.assertEqual(at_base(rel, AT_COMMIT), at_base(rel), rel)
         self.assertEqual(len(self.cards), 1377)
         old = {x['id'] for x in json.loads(at_base('data/curation/card_image_checks.json'))['checks']}
-        self.assertEqual({x['id'] for x in self.images['checks']} - old, {f'IMG-{c}' for c in PRINTED})
+        then = {x['id'] for x in json.loads(at_base('data/curation/card_image_checks.json', AT_COMMIT))['checks']}
+        self.assertEqual(then - old, {f'IMG-{c}' for c in PRINTED})
+        # 今の値でも、4 枚の記録は基点と同じ（あとの作業も、この 4 枚を変えていない）
+        base_cards = {c['id']: c for c in json.loads(at_base('data/cards.json'))['cards']}
+        for cid in PRINTED:
+            self.assertEqual(self.by_id[cid], base_cards[cid], cid)
 
     def test_json_and_csv_agree(self):
         rows = {r['id']: r for r in csv.DictReader(io.StringIO((ROOT / 'data' / 'cards.csv').read_text(encoding='utf-8')))}

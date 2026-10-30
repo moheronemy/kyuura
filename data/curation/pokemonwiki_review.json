@@ -2,7 +2,13 @@
  "_comment": "ポケモンWiki の記載と英語版データの食い違いの確認結果。キーは「カード id|項目」。verdict の意味は nazonobasho_review.json と同じ。",
  "PMCG6-034|name": {
   "verdict": "site_error",
-  "note": "「カツラのウィンディ」と表記（Scrydex 由来のデータは「カツラのウインディ」）"
+  "note": "「カツラのウィンディ」と表記（Scrydex 由来のデータは「カツラのウインディ」）",
+  "later_notes": [
+   {
+    "date": "2026-10-30",
+    "note": "カードの画像（data/curation/card_image_checks.json の IMG-PMCG6-034）で、印刷は「カツラのウィンディ」（小さい「ィ」）と確かめた。ポケモンWiki の表記は印刷と同じで、この判定（site_error）は画像のない判定の誤り。kyuura の生成の値（種の名前の書き方）を訂正 FIX-PMCG6-034-NAME-JA で直した（判定の値は書きかえていない。取り込みの比べは訂正の前の生成の値でおこなうので、この違いは報告に残る）"
+   }
+  ]
  },
  "neo4-052|cost": {
   "verdict": "site_error",

@@ -243,8 +243,9 @@ class CorrectionTest(Data):
 
     def test_every_candidate_has_a_status_and_reason(self):
         statuses = Counter(c['status'] for c in self.ledger['candidates'])
+        # held_illegible_print（2026-10-30 から）: 印刷で転記の誤りを確かめたが、正しい値の一部が画像で読めない（docs/data-schema.md）
         self.assertLessEqual(set(statuses), {'held_print_version', 'held_transcription_difference', 'held_likely_transcription_error',
-                                             'version_difference', 'gap_open'})
+                                             'version_difference', 'gap_open', 'held_illegible_print'})
         for c in self.ledger['candidates']:
             self.assertTrue(c['reason'], c['card_id'])
             self.assertIn(c['card_id'], self.by_id)

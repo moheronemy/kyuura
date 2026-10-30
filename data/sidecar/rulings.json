@@ -21328,6 +21328,139 @@
     "p.313 の文は既存の転記（existing_transcription）で、kyuura は原典の画像で確かめていない（転記の「進化カ一ド」の「一」は転記のまま引いた）。",
     "英語版の文面（Baby Pokémon, Basic Pokémon, or Evolution card）は根拠にしていない。"
    ]
+  },
+  {
+   "id": "CR-ARCANINE-PRINTED-NAMES",
+   "topic": "ウィンディ・カツラのウィンディの名前",
+   "cards": [
+    {
+     "card_id": "PMCG1-019",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "IP2-032",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PR1-016",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "GD5-007",
+     "target": {
+      "kind": "card"
+     }
+    },
+    {
+     "card_id": "PMCG6-034",
+     "target": {
+      "kind": "card"
+     }
+    }
+   ],
+   "related_cards": [
+    "neo4-021"
+   ],
+   "question": "印刷の名前が「ウィンディ」のカード（PMCG1-019・IP2-032・PR1-016）と「カツラのウィンディ」のカード（GD5-007・PMCG6-034）は、デッキの同じ名前のカード（4 枚まで）をどう数えるか",
+   "conclusion": "「ウィンディ」の 3 枚は、レベル・HP・ワザが違っても印刷の名前が同じなので、同じ名前のカードとして合わせて 4 枚まで。「カツラのウィンディ」の 2 枚（同じカードの組 SC-GD5-007）も同じ名前で、合わせて 4 枚まで。「カツラのウィンディ」は名前の前に「カツラの」がついているので、「ウィンディ」とは別の名前のカード（それぞれ 4 枚まで入れられる）。5 枚とも印刷の名前の書き方がそろっている（どれも小さい「ィ」）ので、書き方の違う名前（「ウインディ」）をまとめる読み替えはこの 5 枚には要らない",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "PMCG1-019",
+     "field": "name.ja",
+     "quote": "ウィンディ",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "IP2-032",
+     "field": "name.ja",
+     "quote": "ウィンディ",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PR1-016",
+     "field": "name.ja",
+     "quote": "ウィンディ",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "GD5-007",
+     "field": "name.ja",
+     "quote": "カツラのウィンディ",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PMCG6-034",
+     "field": "name.ja",
+     "quote": "カツラのウィンディ",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.308「同じ名前のカード」",
+     "quote": "カードに書かれたポケモンの名前がちがっていたら、それは別のカードとしてあつかいます。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 310,
+      "page": "308",
+      "quote": "カードに書かれたポケモンの名前がちがっていたら、それは別のカードとしてあつかいます。"
+     }
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.308「同じ名前のカード」",
+     "quote": "ポケモン自体の名前の前や後に「なみのり」のような別の言葉がついていたら、それはふつうの「ピカチュウ」とは別の名前のカードになります。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 310,
+      "page": "308",
+      "quote": "ポケモン自体の名前の前や後に「なみのり」のような別の言葉がついていたら、それはふつうの「ピカチュウ」とは別の名前のカードになります。"
+     }
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.308「同じ名前のカード」",
+     "quote": "レベルやヒットポイント(HP)、また、ワザの内容などがちがっていても、ポケモンの名前が同じなら、同じ名前のカードとしてあつかいます。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 310,
+      "page": "308",
+      "quote": "レベルやヒットポイント(HP)、また、ワザの内容などがちがっていても、ポケモンの名前が同じなら、同じ名前のカードとしてあつかいます。"
+     }
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P308-SAME-NAME"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-30 に kyuura が 5 枚のカードの画像（data/curation/card_image_checks.json の IMG-PMCG1-019・IMG-IP2-032・IMG-PR1-016・IMG-GD5-007・IMG-PMCG6-034）で名前を確かめた。PMCG1-019・PMCG6-034 は、生成の値（種の名前の書き方「ウインディ」）を印刷の書き方に直した（FIX-PMCG1-019-NAME-JA・FIX-PMCG6-034-NAME-JA）。",
+    "p.308 の 3 つの文は既存の転記（existing_transcription）で引いた。条項 GR-2000-P308-SAME-NAME（kyuura の 2026-10-12 の画像の読み取り）の範囲の文で、今回は原典の画像を読み直していない。",
+    "「ウインディ」（大きい「イ」）と印刷されたカードと「ウィンディ」が同じ名前かは、この記録で決めていない（5 枚にそのカードはない。やさしいウインディ neo4-021 は名前の前に「やさしい」がつく別の名前）。scripts/non_pack.py の NAME_FIX（ウィンディ→ウインディ）は、生成で同じカード・進化ラインを照らすためだけの読み替えで、対戦の名前の規定ではない。"
+   ]
   }
  ],
  "issues": [
@@ -28309,6 +28442,95 @@
       "resolves": false
      }
     ]
+   }
+  },
+  {
+   "id": "UQ-BILINGUAL-NAME-GLOSS",
+   "status": "UNRESOLVED",
+   "question": "日本語と英語を併記したカードの「ナッシー[Exeggutor]」（PR1-075・PR1-077）の英語の括弧書きは名前の一部か。デッキの同じ名前（ナッシーと合わせて 4 枚までか）・名前を指定する効果・進化（「タマタマ[Exeggcute]から進化」）・山札から名前で選ぶ効果・スロットゲームの「同じ名前のカード」・カツラのクイズ その3 で答える名前で、「ナッシー」と同じ名前としてあつかうか",
+   "why_unresolved": "公式ルール p.308 は、カードに書かれたポケモンの名前が違えば別のカードで、名前の前や後に「なみのり」のような別の言葉がついていれば別の名前とする。英語の名前の括弧書き（訳の併記）がその「別の言葉」に当たるかは書かれていない。このカードは、名前のほかに分類・ワザ・にげる・弱点などすべての欄に英語の括弧書きをつけ、進化元の欄も「タマタマ[Exeggcute]から進化」と書く（文字どおりに読むと、「タマタマ[Exeggcute]」という名前のポケモンからしか進化できない）。併記を訳と読めば「ナッシー」と同じ名前、名前の一部と読めば別の名前になるが、どちらかを書いた当時の資料は見つかっていない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.308「同じ名前のカード」（既存の転記。条項 GR-2000-P308-SAME-NAME）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P308-SAME-NAME",
+    "GR-2000-P309-EVOLUTION-BY-NAME"
+   ],
+   "cases": [
+    {
+     "card_id": "PR1-077",
+     "target": {
+      "kind": "card"
+     },
+     "note": "カードの画像で、名前「ナッシー[Exeggutor]」（ルビ「エグゼグター」）と、すべての欄の英語の括弧書きを確かめた（IMG-PR1-077）"
+    },
+    {
+     "card_id": "PR1-075",
+     "target": {
+      "kind": "card"
+     },
+     "note": "同じカードの組 SC-PR1-075（pcg-search の転記の値が同じ）。印刷の画像は読んでいない（pcg-search の画像は「Dummy」の代わりの画像）"
+    },
+    {
+     "card_id": "PMCG2-012",
+     "target": {
+      "kind": "card"
+     },
+     "note": "「ナッシー」（ジャングル）。同じ名前として合わせて 4 枚までか、別に 4 枚ずつか"
+    },
+    {
+     "card_id": "SI-013",
+     "target": {
+      "kind": "card"
+     },
+     "note": "「ナッシー」（サザンアイランド）。同上"
+    },
+    {
+     "card_id": "neo1-090",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "スロットゲーム"
+     },
+     "note": "山札の上の 3 枚に「ナッシー」と「ナッシー[Exeggutor]」があるとき、「同じ名前のカード」か"
+    },
+    {
+     "card_id": "PMCG6-082",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "カツラのクイズ その3"
+     },
+     "note": "置いたカードが「ナッシー[Exeggutor]」のとき、「ナッシー」と答えたら正解か"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "kyuura の登録表の写しは v0.113。固定した kyuura-engine v0.122（e080c9e）でも PR1-075・PR1-077 は登録されていない（比べるためだけに読んだ）",
+    "all_cards": "名前を指定する効果で「ナッシー」を挙げるカードは、kyuura のカードの文面（data/cards.json）に見つからなかった。山札から名前で選ぶ効果は、カードごとの文面を調べていない"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-2D113B5",
+    "date": "2026-10-30"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-30 のカードの画像の確認で立てた）。エンジンの記録に結ぶ裁定はない。",
+    "kyuura の値は、名前「ナッシー［Exeggutor］」・ワザ名「ふみつけ[Stomp]」を転記（pcg-search）の書き方のまま持ち、進化元は「タマタマ」（pcg-search の進化ライン）。この論点が決まるまで、名前から括弧書きを除く・ほかの名前とまとめる正規化はしない。",
+    "エリカのナッシー・わるいナッシーは、名前の前に別の言葉がつくので、この論点にかかわらず別の名前（p.308）。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-30",
+    "game_effect": "game_result",
+    "game_effect_note": "デッキに入れられる枚数（ナッシーと合わせて 4 枚か、別に 4 枚ずつか）、スロットゲームで手札に加えるか、カツラのクイズ その3 の正解と引く側が変わる",
+    "resolution_needs": "当時の日本語の公式の資料（『トレーナーズ』・大会の案内など）で、日本語と英語を併記したカードの名前の扱い（訳の併記を名前に含めるか）を書いたもの",
+    "searched": "kyuura の記録（data/sidecar/・data/rule_history.json）、公式ルール p.308 の既存の転記、カードの画像（PR1-077）。当時の Q&A・雑誌・大会の案内は今回探していない",
+    "new_sources": []
    }
   }
  ],

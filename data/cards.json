@@ -2183,7 +2183,7 @@
    "seq": 19,
    "category": "pokemon",
    "name": {
-    "ja": "ウインディ",
+    "ja": "ウィンディ",
     "en": "Arcanine"
    },
    "name_ja_confidence": "有力",
@@ -2290,7 +2290,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PMCG1-019-NAME-JA）: name.ja を「ウインディ」から「ウィンディ」に直した。根拠: kyuura が、同じカード（第1弾 拡張パックのウィンディ（LV.45・HP100））の日本語版のカードの画像で、名前の「ウ」のすぐあとの「ィ」が小さい字（「ウィンディ」）であることを確かめた（2026-10-30。照合の記録 IMG-PMCG1-019）。種の名前・ほかの版・英語版からは決めていない"
+   ],
    "source_ids": {
     "tcgdex": "PMCG1-019",
     "pokemontcg": [
@@ -2311,6 +2313,16 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-PMCG1-019-NAME-JA",
+     "field": "name.ja",
+     "before": "ウインディ",
+     "after": "ウィンディ",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": []
   },
@@ -41167,7 +41179,7 @@
    "seq": 34,
    "category": "pokemon",
    "name": {
-    "ja": "カツラのウインディ",
+    "ja": "カツラのウィンディ",
     "en": "Blaine's Arcanine"
    },
    "name_ja_confidence": "有力",
@@ -41259,7 +41271,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PMCG6-034-NAME-JA）: name.ja を「カツラのウインディ」から「カツラのウィンディ」に直した。根拠: kyuura が、同じカード（ジム拡張第2弾「闇からの挑戦」のカツラのウィンディ（LV.42・HP90））の日本語版のカードの画像で、名前の「ウ」のすぐあとの「ィ」が小さい字（「カツラのウィンディ」）であることを確かめた（2026-10-30。照合の記録 IMG-PMCG6-034）。種の名前・ほかの版・英語版からは決めていない"
+   ],
    "source_ids": {
     "tcgdex": "PMCG6-034",
     "pokemontcg": [
@@ -41277,6 +41291,16 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-PMCG6-034-NAME-JA",
+     "field": "name.ja",
+     "before": "カツラのウインディ",
+     "after": "カツラのウィンディ",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": "SC-GD5-007",
    "data_gaps": []
   },

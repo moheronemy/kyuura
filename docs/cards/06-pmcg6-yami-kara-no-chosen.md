@@ -43,7 +43,7 @@
 | 31 | カツラのブーバー | ポケモン | 炎 | たね | 60 | ◆ | Blaine's Magmar<br>Gym Heroes 37 ⚠ |  |
 | 32 | カツラのリザードン | ポケモン | 炎 | 2進化 | 100 | ★キラ | Blaine's Charizard<br>Gym Challenge 2 |  |
 | 33 | カツラのキュウコン | ポケモン | 炎 | 1進化 | 60 | ★ | Blaine's Ninetales<br>Gym Challenge 21 |  |
-| 34 | カツラのウインディ | ポケモン | 炎 | 1進化 | 90 | ★キラ | Blaine's Arcanine<br>Gym Challenge 1 |  |
+| 34 | カツラのウィンディ | ポケモン | 炎 | 1進化 | 90 | ★キラ | Blaine's Arcanine<br>Gym Challenge 1 | 訂正（FIX-PMCG6-034-NAME-JA）: name.ja を「カツラのウインディ」から「カツラのウィンディ」に直した。根拠: kyuura が、同じカード（ジム拡張第2弾「闇からの挑戦」のカツラのウィンディ（LV.42・HP90））の日本語版のカードの画像で、名前の「ウ」のすぐあとの「ィ」が小さい字（「カツラのウィンディ」）であることを確かめた（2026-10-30。照合の記録 IMG-PMCG6-034）。種の名前・ほかの版・英語版からは決めていない |
 | 35 | カツラのファイヤー | ポケモン | 炎 | たね | 90 | ★キラ | Blaine's Moltres<br>Gym Heroes 1 ⚠ |  |
 | 36 | ナツメのコダック | ポケモン | 水 | たね | 50 | ● | Sabrina's Psyduck<br>Gym Challenge 99 |  |
 | 37 | サカキのコイキング | ポケモン | 水 | たね | 30 | ● | Giovanni's Magikarp<br>Gym Challenge 73 |  |
@@ -641,7 +641,7 @@ Gym Challenge にあって、日本版の本弾に収録されていないカー
 - 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%83%84%E3%83%A9%E3%81%AE%E3%82%AD%E3%83%A5%E3%82%A6%E3%82%B3%E3%83%B3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0))
 - 日本版の収録商品: グレンタウンジム カツラ・闇からの挑戦
 
-### 34. カツラのウインディ / Blaine's Arcanine
+### 34. カツラのウィンディ / Blaine's Arcanine
 
 1進化（カツラのガーディ / Blaine's Growlithe から進化）／LV.42／炎／HP 90／弱点 水×2／抵抗力 なし／にげる 3／レア ★キラ
 
@@ -653,6 +653,7 @@ Gym Challenge にあって、日本版の本弾に収録されていないカー
 | ほのおのあらし / Firestorm | 炎炎炎炎 | 120 | 日本語: 自分についている「炎」エネルギーカードを3枚トラッシュしなければ、このワザは使えない。 英語: Discard 3 Fire Energy cards attached to Blaine's Arcanine in order to use this attack. |
 
 - 日本語テキストの出典: [ポケモンWiki](https://wiki.pokemonwiki.com/wiki/%E3%82%AB%E3%83%84%E3%83%A9%E3%81%AE%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%87%E3%82%A3_(%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%82%B8%E3%83%A0))
+- 備考: 訂正（FIX-PMCG6-034-NAME-JA）: name.ja を「カツラのウインディ」から「カツラのウィンディ」に直した。根拠: kyuura が、同じカード（ジム拡張第2弾「闇からの挑戦」のカツラのウィンディ（LV.42・HP90））の日本語版のカードの画像で、名前の「ウ」のすぐあとの「ィ」が小さい字（「カツラのウィンディ」）であることを確かめた（2026-10-30。照合の記録 IMG-PMCG6-034）。種の名前・ほかの版・英語版からは決めていない
 - 日本版の収録商品: グレンタウンジム カツラ・闇からの挑戦
 
 ### 35. カツラのファイヤー / Blaine's Moltres

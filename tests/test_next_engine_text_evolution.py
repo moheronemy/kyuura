@@ -60,6 +60,11 @@ def at_base(rel):
     return json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{BASE}:{rel}'], capture_output=True, text=True, check=True).stdout)
 
 
+def at_commit(rel):
+    """この作業のコミット（AT_COMMIT）の記録。あとの作業（2026-10-30 の v0.122 のあとの調査など）が値・記録を加えても、この作業の差を確かめる。"""
+    return json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{AT_COMMIT}:{rel}'], capture_output=True, text=True, check=True).stdout)
+
+
 def changed_paths(a, b, path=''):
     """2 つの記録の違う欄（辞書と、同じ長さの辞書の配列は中まで見る）。"""
     if isinstance(a, dict) and isinstance(b, dict):
@@ -89,13 +94,16 @@ class CardValueTest(Data):
     """カードの値の変更は、画像で確かめた 13 件の訂正だけ（基準 e519b99 との差）。印刷の値・ほかのカードは変えていない。"""
 
     def test_only_the_corrected_fields_changed(self):
+        # 基点（e519b99）とこの作業のコミット（c932625）の差。あとの作業の訂正（PMCG1-019・PMCG6-034 の名前など）はここに入れない
         old = {c['id']: c for c in at_base('data/cards.json')['cards']}
-        self.assertEqual(set(old), set(self.by_id))  # 総数 1,377 件と id の集合
+        then = {c['id']: c for c in at_commit('data/cards.json')['cards']}
+        self.assertEqual(set(old), set(then))  # 総数 1,377 件と id の集合
+        self.assertEqual(set(then), set(self.by_id))
         self.assertEqual(len(self.cards), 1377)
         allowed = {}
         for cid, field, _ in FIXES.values():
             allowed.setdefault(cid, set(BOOKKEEPING)).add(field)
-        changed = {i: set(changed_paths(old[i], self.by_id[i])) for i in old}
+        changed = {i: set(changed_paths(old[i], then[i])) for i in old}
         changed = {i: p for i, p in changed.items() if p}
         self.assertEqual(set(changed), set(allowed))
         for cid, paths in changed.items():
@@ -108,7 +116,7 @@ class CardValueTest(Data):
             self.assertIn('existing_value', self.new_images[cid])
 
     def test_corrections_and_values(self):
-        new = {c['id'] for c in self.ledger['corrections']} - {c['id'] for c in at_base('data/curation/card_corrections.json')['corrections']}
+        new = {c['id'] for c in at_commit('data/curation/card_corrections.json')['corrections']} - {c['id'] for c in at_base('data/curation/card_corrections.json')['corrections']}
         self.assertEqual(new, set(FIXES))
         for fid, (cid, field, after) in FIXES.items():
             c = self.fixes[fid]
@@ -291,7 +299,9 @@ class RulingTest(unittest.TestCase):
 
     def test_statuses_and_cards(self):
         base = at_base('data/sidecar/rulings.json')
-        new = set(self.rulings) - {x['id'] for x in base['rulings']}
+        then = at_commit('data/sidecar/rulings.json')  # この作業のコミットの記録（あとの作業の裁定・論点・事例を含めない）
+        then_issues = {x['id']: x for x in then['issues']}
+        new = {x['id'] for x in then['rulings']} - {x['id'] for x in base['rulings']}
         self.assertEqual({i: self.rulings[i]['status'] for i in new},
                          {'CR-PIKACHU-GROWL-LATEST': 'CONFIRMED', 'CR-PIKACHU-GROWL-OPPONENT-EFFECT': 'SUPPORTED',
                           'CR-SLOWBRO-SNORE-WHILE-ASLEEP': 'CONFIRMED', 'CR-SLOWBRO-SNORE-AWAKE-FAILS': 'CONFIRMED',
@@ -301,18 +311,18 @@ class RulingTest(unittest.TestCase):
             # 3 枚とも独立に確かめたとは書かない: 図版・配布の見出しで当てはめた 3 枚と、推論で特定した PR1-017 を分ける
             self.assertEqual([c['card_id'] for c in self.rulings[i]['cards']], ['PR1-001', 'PR1-003', 'IP1-040'])
             self.assertEqual(self.rulings[i]['related_cards'], ['PR1-017'])
-        self.assertEqual(set(self.issues) - {x['id'] for x in base['issues']}, {'UQ-GROWL-NON-ATTACK-DAMAGE'})
+        self.assertEqual(set(then_issues) - {x['id'] for x in base['issues']}, {'UQ-GROWL-NON-ATTACK-DAMAGE'})
         q = self.issues['UQ-GROWL-NON-ATTACK-DAMAGE']
         self.assertEqual((q['status'], q['engine_refs'], q['recorded_after']), ('UNRESOLVED', [], {'import': 'ENGINE-2D113B5', 'date': '2026-10-30'}))
         # 既存の論点には事例と注記を追記しただけ（問い・状態・監査の日は変えない）
         for i, cid in (('UQ-COPIED-ATTACK', 'ES3-021'), ('UQ-CARD-USE-WITHOUT-TARGET', 'neo3-053')):
             old = next(x for x in base['issues'] if x['id'] == i)
-            self.assertEqual({k: v for k, v in self.issues[i].items() if k not in ('cases', 'notes')}, {k: v for k, v in old.items() if k not in ('cases', 'notes')})
+            self.assertEqual({k: v for k, v in then_issues[i].items() if k not in ('cases', 'notes')}, {k: v for k, v in old.items() if k not in ('cases', 'notes')})
             for k in ('cases', 'notes'):
-                self.assertEqual(self.issues[i][k][:len(old[k])], old[k], i)
-            self.assertTrue(self.issues[i]['notes'][len(old['notes']):][0].startswith('2026-10-30: '), i)
-            self.assertIn(cid, [c['card_id'] for c in self.issues[i]['cases'][len(old['cases']):]])
-        self.assertEqual(self.issues['UQ-STATED-COUNT-SHORT'], next(x for x in base['issues'] if x['id'] == 'UQ-STATED-COUNT-SHORT'))
+                self.assertEqual(then_issues[i][k][:len(old[k])], old[k], i)
+            self.assertTrue(then_issues[i]['notes'][len(old['notes']):][0].startswith('2026-10-30: '), i)
+            self.assertIn(cid, [c['card_id'] for c in then_issues[i]['cases'][len(old['cases']):]])
+        self.assertEqual(then_issues['UQ-STATED-COUNT-SHORT'], next(x for x in base['issues'] if x['id'] == 'UQ-STATED-COUNT-SHORT'))
 
     def test_transcription_is_not_raised_to_image(self):
         for i in ('CR-BORO-ROD-POKEMON-CARDS', 'CR-SLOWBRO-SNORE-AWAKE-FAILS', 'CR-BORO-ROD-COIN-RESULTS'):
@@ -328,9 +338,12 @@ class RulingTest(unittest.TestCase):
         self.assertTrue(any('CR-PIKACHU-GROWL-OPPONENT-EFFECT' in e and 'inference' in e for e in bcr.validate(ctx)))
 
     def test_counts(self):
-        r, latest, checks = self.ctx['rulings'], self.ctx['latest']['records'], self.ctx['checks']['records']
+        # この作業のコミットの数（あとの作業の数は、その作業の検査が数える）
+        then = dict(self.ctx, rulings=at_commit('data/sidecar/rulings.json'), latest=at_commit('data/sidecar/latest_descriptions.json'),
+                    checks=at_commit('data/sidecar/card_checks.json'))
+        r, latest, checks = then['rulings'], then['latest']['records'], then['checks']['records']
         self.assertEqual((len(latest), len(checks), len(r['rule_clauses']), len(r['rulings']), len(r['issues'])), (47, 84, 35, 315, 74))
-        self.assertEqual(bcr.unresolved_counts(self.ctx)['research_issues'], 74)
+        self.assertEqual(bcr.unresolved_counts(then)['research_issues'], 74)
         self.assertEqual(bcr.unresolved_counts(self.ctx, as_of='v0.113')['research_issues'], 72)  # 取り込んだ版の時点の数は変わらない
 
 
@@ -342,7 +355,7 @@ class RegistryTest(Data):
                          subprocess.run(['git', '-C', str(ROOT), 'show', f'{BASE}:data/curation/engine_registered_cards.json'],
                                         capture_output=True, check=True).stdout)
         snapshot = load('data/curation/engine_registered_cards.json')
-        rows = {r['id']: r for r in load('data/engine_targets.json')['cards']}
+        rows = {r['id']: r for r in at_commit('data/engine_targets.json')['cards']}  # この作業のコミットの一覧（あとの作業の名前の訂正の差を含めない）
         old = {r['id']: r for r in at_base('data/engine_targets.json')['cards']}
         registered = {i for i, r in rows.items() if r['engine_status'] == 'registered'}
         self.assertEqual(registered, set(snapshot['playable']))

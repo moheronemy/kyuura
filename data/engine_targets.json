@@ -52,8 +52,8 @@
   "non_game_items": 18,
   "by_engine_status": {
    "registered": 1250,
-   "mechanically_equivalent": 0,
-   "reuse_candidate": 6,
+   "mechanically_equivalent": 1,
+   "reuse_candidate": 5,
    "new_effect_needed": 121
   },
   "by_product_group": {
@@ -86,8 +86,8 @@
     "records": 153,
     "by_engine_status": {
      "registered": 147,
-     "mechanically_equivalent": 0,
-     "reuse_candidate": 1,
+     "mechanically_equivalent": 1,
+     "reuse_candidate": 0,
      "new_effect_needed": 5
     },
     "by_category": {
@@ -396,7 +396,7 @@
   },
   {
    "id": "PMCG1-019",
-   "name_ja": "ウインディ",
+   "name_ja": "ウィンディ",
    "product_group": "expansion_pack",
    "jp_set": "PMCG1",
    "play_scope": "standard",
@@ -5260,7 +5260,7 @@
   },
   {
    "id": "PMCG6-034",
-   "name_ja": "カツラのウインディ",
+   "name_ja": "カツラのウィンディ",
    "product_group": "expansion_pack",
    "jp_set": "PMCG6",
    "play_scope": "standard",
@@ -12659,33 +12659,9 @@
    "released_after_rule_base": false,
    "category": "candidate",
    "category_reasons": [],
-   "engine_status": "reuse_candidate",
-   "reuse_basis": "same_card_group",
-   "nearest_registered": [
-    {
-     "id": "PMCG6-034",
-     "differences": [
-      "name.ja"
-     ]
-    }
-   ],
-   "effects_with_registered_text": [
-    {
-     "part": "attack",
-     "index": 0,
-     "name_ja": "ヒートタックル",
-     "implementations": [
-      "DamageAndSelfDamage"
-     ]
-    },
-    {
-     "part": "attack",
-     "index": 1,
-     "name_ja": "ほのおのあらし",
-     "implementations": [
-      "DiscardEnergyBeforeDamage"
-     ]
-    }
+   "engine_status": "mechanically_equivalent",
+   "equivalent_to": [
+    "PMCG6-034"
    ]
   },
   {
