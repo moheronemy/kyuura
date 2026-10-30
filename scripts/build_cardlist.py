@@ -801,7 +801,8 @@ def apply_corrections(records, ledger):
                 # 拡張パック以外の商品の記録の欄の出どころ（段階・進化元）を、この訂正にする
                 r['field_sources'][c['field']] = f"card_corrections:{c['id']}"
             if c['before'] is None:  # 転記の欠け・未確認の欄（値が空の欄）を埋めた
-                after = '・'.join(c['after']) if isinstance(c['after'], list) else c['after']
+                after = ('・'.join(c['after']) if isinstance(c['after'], list)
+                         else c['after']['ja'] if isinstance(c['after'], dict) and set(c['after']) == {'ja', 'en'} else c['after'])  # 名前は日本語名で書く
                 r['notes'].append(f"訂正（{c['id']}）: 空だった {c['field']} に「{after}」を入れた。根拠: {c['basis_detail']}")
             else:
                 r['notes'].append(f"訂正（{c['id']}）: {c['field']} を「{c['before']}」から「{c['after']}」に直した。根拠: {c['basis_detail']}"

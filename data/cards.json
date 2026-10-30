@@ -85467,7 +85467,7 @@
    "energy": null,
    "jp_en_differences": [],
    "notes": [
-    "訂正（FIX-GD3-003-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'マチスのピカチュウ', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) ポケモンジム第2弾「クチバシティジム マチス」のマチスのライチュウ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「マチスのピカチュウから進化」を読んだ（2026-10-30。照合の記録 IMG-GD3-003）。ポケモンの系統・英語版から決めていない"
+    "訂正（FIX-GD3-003-EVOLVES-FROM）: 空だった pokemon.evolves_from に「マチスのピカチュウ」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) ポケモンジム第2弾「クチバシティジム マチス」のマチスのライチュウ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「マチスのピカチュウから進化」を読んだ（2026-10-30。照合の記録 IMG-GD3-003）。ポケモンの系統・英語版から決めていない"
    ],
    "source_ids": {
     "tcgdex": null,
@@ -100314,7 +100314,7 @@
    "energy": null,
    "jp_en_differences": [],
    "notes": [
-    "訂正（FIX-ES2-011-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'なにかの化石', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第2弾(赤版)のオムナイト）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES2-011）。ポケモンの系統・英語版から決めていない"
+    "訂正（FIX-ES2-011-EVOLVES-FROM）: 空だった pokemon.evolves_from に「なにかの化石」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第2弾(赤版)のオムナイト）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES2-011）。ポケモンの系統・英語版から決めていない"
    ],
    "source_ids": {
     "tcgdex": null,
@@ -102304,7 +102304,7 @@
    "energy": null,
    "jp_en_differences": [],
    "notes": [
-    "訂正（FIX-ES2-028-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'なにかの化石', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第2弾(赤版)のカブト）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES2-028）。ポケモンの系統・英語版から決めていない"
+    "訂正（FIX-ES2-028-EVOLVES-FROM）: 空だった pokemon.evolves_from に「なにかの化石」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第2弾(赤版)のカブト）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES2-028）。ポケモンの系統・英語版から決めていない"
    ],
    "source_ids": {
     "tcgdex": null,
@@ -102442,7 +102442,7 @@
    "energy": null,
    "jp_en_differences": [],
    "notes": [
-    "訂正（FIX-ES2-029-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'なにかの化石', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第2弾(赤版)のプテラ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES2-029）。ポケモンの系統・英語版から決めていない"
+    "訂正（FIX-ES2-029-EVOLVES-FROM）: 空だった pokemon.evolves_from に「なにかの化石」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第2弾(赤版)のプテラ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES2-029）。ポケモンの系統・英語版から決めていない"
    ],
    "source_ids": {
     "tcgdex": null,
@@ -105082,7 +105082,7 @@
    "energy": null,
    "jp_en_differences": [],
    "notes": [
-    "訂正（FIX-ES3-018-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'なにかの化石', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第3弾(緑版)のオムナイト）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES3-018）。ポケモンの系統・英語版から決めていない"
+    "訂正（FIX-ES3-018-EVOLVES-FROM）: 空だった pokemon.evolves_from に「なにかの化石」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第3弾(緑版)のオムナイト）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES3-018）。ポケモンの系統・英語版から決めていない"
    ],
    "source_ids": {
     "tcgdex": null,
@@ -142414,7 +142414,7 @@
    "energy": null,
    "jp_en_differences": [],
    "notes": [
-    "訂正（FIX-PRN-039-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'フシギダネ', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカードneo プロモのわるいフシギソウ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「フシギダネから進化」を読んだ（2026-10-30。照合の記録 IMG-PRN-039）。ポケモンの系統・英語版から決めていない"
+    "訂正（FIX-PRN-039-EVOLVES-FROM）: 空だった pokemon.evolves_from に「フシギダネ」を入れた。根拠: kyuura が、同じカード（ポケモンカードneo プロモのわるいフシギソウ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「フシギダネから進化」を読んだ（2026-10-30。照合の記録 IMG-PRN-039）。ポケモンの系統・英語版から決めていない"
    ],
    "source_ids": {
     "tcgdex": null,
@@ -142531,7 +142531,7 @@
    "energy": null,
    "jp_en_differences": [],
    "notes": [
-    "訂正（FIX-PRN-040-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'わるいフシギソウ', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカードneo プロモのわるいフシギバナ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「2進化」と「わるいフシギソウから進化」を読んだ（2026-10-30。照合の記録 IMG-PRN-040）。ポケモンの系統・英語版から決めていない"
+    "訂正（FIX-PRN-040-EVOLVES-FROM）: 空だった pokemon.evolves_from に「わるいフシギソウ」を入れた。根拠: kyuura が、同じカード（ポケモンカードneo プロモのわるいフシギバナ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「2進化」と「わるいフシギソウから進化」を読んだ（2026-10-30。照合の記録 IMG-PRN-040）。ポケモンの系統・英語版から決めていない"
    ],
    "source_ids": {
     "tcgdex": null,
@@ -143099,7 +143099,7 @@
    "energy": null,
    "jp_en_differences": [],
    "notes": [
-    "訂正（FIX-PRN-045-EVOLVES-FROM）: 空だった pokemon.evolves_from に「{'ja': 'オニスズメ', 'en': None}」を入れた。根拠: kyuura が、同じカード（ポケモンカードneo プロモのわるいオニドリル）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「オニスズメから進化」を読んだ（2026-10-30。照合の記録 IMG-PRN-045）。ポケモンの系統・英語版から決めていない"
+    "訂正（FIX-PRN-045-EVOLVES-FROM）: 空だった pokemon.evolves_from に「オニスズメ」を入れた。根拠: kyuura が、同じカード（ポケモンカードneo プロモのわるいオニドリル）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「オニスズメから進化」を読んだ（2026-10-30。照合の記録 IMG-PRN-045）。ポケモンの系統・英語版から決めていない"
    ],
    "source_ids": {
     "tcgdex": null,
