@@ -1745,6 +1745,369 @@
    "corrections": [
     "FIX-PRN-045-EVOLVES-FROM"
    ]
+  },
+  {
+   "id": "IMG-neo2-014",
+   "card_id": "neo2-014",
+   "card_name_ja": "カブト",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo2014.php",
+     "page_title": "カブト | ポケモンカードneo 第2弾 遺跡をこえて...",
+     "image_url": "https://pcg-search.com/img/neo/neo2014.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "a675da44a72b7a379e22b047785c970cffba5cb144d3a783ff9bc9a804f09c93",
+     "accessed_on": "2026-10-30"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo2-014-kabuto/",
+     "page_title": "カブト | ポケモンカード★neo | 拡張パック第2弾 遺跡をこえて…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2021/05/neo2_B_014_kabuto_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "201a88181fe5d1f03d1bf5aee7d8bd78925195286a44358f97694831882d7049",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "2 つの画像とも「カブト」1進化（なにかの化石から進化）、LV.21、HP50、【特殊能力】なかまのふっかつ、ちからをあわせる（10+）、弱点 草、にげる 1、Illus.Yuka Morii、No.140、レアリティの記号 ●、右下の弾の記号（遺跡をこえて...）。kyuura の data/cards.json の名前・LV（21）・HP・特殊能力名・ワザ名・ダメージ・レアリティと合う。pcg-search の番号（neo2014）とkyuura の id の番号は同じ（名前・内容でも確かめた）",
+   "independence": "画像は pcg-search.com となぞのばしょに 1 枚ずつ。同じ撮影・スキャンに由来するかが分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記（pcg-search のページの記号の画像・なぞのばしょのページの文字）は画像の読み取りと分け、照合の数に入れない",
+   "print_values": {
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.attacks[0].cost": [
+     "fighting",
+     "colorless"
+    ],
+    "pokemon.attacks[0].cost_total": 2
+   },
+   "print_text": {
+    "pokemon.types": [
+     "HP の右の丸い記号: 水のしずく（水）（カードの地の色ではなく、記号の形で読んだ）"
+    ],
+    "pokemon.attacks[0].cost": [
+     "ちからをあわせる の左の記号（左から）: こぶし（闘）・星（無色）（2 個）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの記号の画像（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo2014.php",
+     "values": {
+      "pokemon.types": [
+       "water"
+      ],
+      "pokemon.attacks[0].cost": [
+       "fighting",
+       "colorless"
+      ]
+     },
+     "note": "ページはタイプ・コストを記号の画像で示す: タイプ en003、弱点 en001、にげる en000、ちからをあわせる en006・en000（pcg-search の記号の画像 en000 = 無色の星・en001 = 草の葉・en003 = 水のしずく・en006 = 闘のこぶし。記号の画像を取得して確かめた）。画像の読み取りと同じ"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-30 に取得したページ。kyuura の data/ja_text_nazonobasho.json の値も同じ）",
+     "page_url": "https://nazonobasho.com/neo2-014-kabuto/",
+     "values": {
+      "pokemon.types": [
+       "water"
+      ],
+      "pokemon.attacks[0].cost": [
+       "fighting",
+       "colorless"
+      ]
+     },
+     "note": "「タイプ 水」・「ちからをあわせる 闘無」。画像の読み取りと同じ"
+    }
+   ],
+   "not_checked": [
+    "弱点・抵抗力・HP・にげる・進化元・LV・図鑑番号（特定の手がかりに使った。今回の対象の欄ではないので、照合した欄にしていない）",
+    "ワザ・特殊能力の説明の全文の読み比べ・図鑑の説明・刷の記号",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "existing_value": "タイプ（水）とワザの必要なエネルギー（闘・無色をふくむ並び）は今までの値と同じ。訂正はない。タイプと必要なエネルギーの記号が違うのは印刷のとおりで、データの入れ違いではない。今までの値は英語版のデータ（pokemon-tcg-data）から生成し、取り込みのときになぞのばしょの転記と記号で比べて違いがなかった（data/ja_text_nazonobasho_report.json に記録がない）。固定した入力の tcgdex の日本語の欄は英語版の機械翻訳で、独立した資料ではない",
+   "corrections": []
+  },
+  {
+   "id": "IMG-neo2-018",
+   "card_id": "neo2-018",
+   "card_name_ja": "カブトプス",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo2018.php",
+     "page_title": "カブトプス | ポケモンカードneo 第2弾 遺跡をこえて...",
+     "image_url": "https://pcg-search.com/img/neo/neo2018.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "d6ac3005ea1b3d429c0b3283846f2ec26ee5334fed63c495a43c099fc44a9dec",
+     "accessed_on": "2026-10-30"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo2-018-kabutops/",
+     "page_title": "カブトプス | ポケモンカード★neo | 拡張パック第2弾 遺跡をこえて…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2021/05/neo2_B_018_kabutops_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "1cf7ddf9ebaf1dd5a650c8ef76440f1e531bb24c2b9f95362fa34e53bf095187",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "2 つの画像とも「カブトプス」2進化（カブトから進化）、LV.42、HP90、きりさく（20）・ハイドロカッター（40×）、弱点 草、にげる 2、Illus.Kimiya Masago、No.141、レアリティの記号 ★、右下の弾の記号（遺跡をこえて...）。kyuura の data/cards.json の名前・LV（42）・HP・ワザ名・ダメージ・レアリティと合う。pcg-search の番号（neo2018）とkyuura の id の番号は同じ（名前・内容でも確かめた）",
+   "independence": "画像は pcg-search.com となぞのばしょに 1 枚ずつ。同じ撮影・スキャンに由来するかが分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記（pcg-search のページの記号の画像・なぞのばしょのページの文字）は画像の読み取りと分け、照合の数に入れない",
+   "print_values": {
+    "pokemon.types": [
+     "water"
+    ],
+    "pokemon.attacks[0].cost": [
+     "colorless"
+    ],
+    "pokemon.attacks[0].cost_total": 1,
+    "pokemon.attacks[1].cost": [
+     "fighting"
+    ],
+    "pokemon.attacks[1].cost_total": 1
+   },
+   "print_text": {
+    "pokemon.types": [
+     "HP の右の丸い記号: 水のしずく（水）（カードの地の色ではなく、記号の形で読んだ）"
+    ],
+    "pokemon.attacks[0].cost": [
+     "きりさく の左の記号（左から）: 星（無色）（1 個）"
+    ],
+    "pokemon.attacks[1].cost": [
+     "ハイドロカッター の左の記号（左から）: こぶし（闘）（1 個）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの記号の画像（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo2018.php",
+     "values": {
+      "pokemon.types": [
+       "water"
+      ],
+      "pokemon.attacks[0].cost": [
+       "colorless"
+      ],
+      "pokemon.attacks[1].cost": [
+       "fighting"
+      ]
+     },
+     "note": "ページはタイプ・コストを記号の画像で示す: タイプ en003、きりさく en000、ハイドロカッター en006、弱点 en001、にげる en000・en000（ページの記号の並びの順）（pcg-search の記号の画像 en000 = 無色の星・en001 = 草の葉・en003 = 水のしずく・en006 = 闘のこぶし。記号の画像を取得して確かめた）。画像の読み取りと同じ"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-30 に取得したページ。kyuura の data/ja_text_nazonobasho.json の値も同じ）",
+     "page_url": "https://nazonobasho.com/neo2-018-kabutops/",
+     "values": {
+      "pokemon.types": [
+       "water"
+      ],
+      "pokemon.attacks[0].cost": [
+       "colorless"
+      ],
+      "pokemon.attacks[1].cost": [
+       "fighting"
+      ]
+     },
+     "note": "「タイプ 水」・「きりさく 無」・「ハイドロカッター 闘」。画像の読み取りと同じ"
+    }
+   ],
+   "not_checked": [
+    "弱点・抵抗力・HP・にげる・進化元・LV・図鑑番号（特定の手がかりに使った。今回の対象の欄ではないので、照合した欄にしていない）",
+    "ワザ・特殊能力の説明の全文の読み比べ・図鑑の説明・刷の記号",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "existing_value": "タイプ（水）とワザの必要なエネルギー（闘をふくむ並び）は今までの値と同じ。訂正はない。タイプと必要なエネルギーの記号が違うのは印刷のとおりで、データの入れ違いではない。今までの値は英語版のデータ（pokemon-tcg-data）から生成し、取り込みのときになぞのばしょの転記と記号で比べて違いがなかった（data/ja_text_nazonobasho_report.json に記録がない）。固定した入力の tcgdex の日本語の欄は英語版の機械翻訳で、独立した資料ではない",
+   "corrections": []
+  },
+  {
+   "id": "IMG-neo2-032",
+   "card_id": "neo2-032",
+   "card_name_ja": "オムナイト",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo2032.php",
+     "page_title": "オムナイト | ポケモンカードneo 第2弾 遺跡をこえて...",
+     "image_url": "https://pcg-search.com/img/neo/neo2032.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "70e02b35c4759c893141eb6ca19f0eaf53dac04d933be89ff57cf1f50405e774",
+     "accessed_on": "2026-10-30"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo2-032-omnite/",
+     "page_title": "オムナイト | ポケモンカード★neo | 拡張パック第2弾 遺跡をこえて…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2021/05/neo2_B_032_omnite_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "53e42cc1da9a7ba8c1661eea5a1f232b0e03c80ebeff8e2a531a12a85f6fd967",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "2 つの画像とも「オムナイト」1進化（なにかの化石から進化）、LV.21、HP50、【特殊能力】かせきのふっかつ、しめつける（10）、弱点 草、にげる 1、Illus.Yuka Morii、No.138、レアリティの記号 ●、右下の弾の記号（遺跡をこえて...）。kyuura の data/cards.json の名前・LV（21）・HP・特殊能力名・ワザ名・ダメージ・レアリティと合う。pcg-search の番号（neo2032）とkyuura の id の番号は同じ（名前・内容でも確かめた）",
+   "independence": "画像は pcg-search.com となぞのばしょに 1 枚ずつ。同じ撮影・スキャンに由来するかが分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記（pcg-search のページの記号の画像・なぞのばしょのページの文字）は画像の読み取りと分け、照合の数に入れない",
+   "print_values": {
+    "pokemon.types": [
+     "fighting"
+    ],
+    "pokemon.attacks[0].cost": [
+     "water"
+    ],
+    "pokemon.attacks[0].cost_total": 1
+   },
+   "print_text": {
+    "pokemon.types": [
+     "HP の右の丸い記号: こぶし（闘）（カードの地の色ではなく、記号の形で読んだ）"
+    ],
+    "pokemon.attacks[0].cost": [
+     "しめつける の左の記号（左から）: 水のしずく（水）（1 個）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの記号の画像（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo2032.php",
+     "values": {
+      "pokemon.types": [
+       "fighting"
+      ],
+      "pokemon.attacks[0].cost": [
+       "water"
+      ]
+     },
+     "note": "ページはタイプ・コストを記号の画像で示す: タイプ en006、弱点 en001、にげる en000、しめつける en003（pcg-search の記号の画像 en000 = 無色の星・en001 = 草の葉・en003 = 水のしずく・en006 = 闘のこぶし。記号の画像を取得して確かめた）。画像の読み取りと同じ"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-30 に取得したページ。kyuura の data/ja_text_nazonobasho.json の値も同じ）",
+     "page_url": "https://nazonobasho.com/neo2-032-omnite/",
+     "values": {
+      "pokemon.types": [
+       "fighting"
+      ],
+      "pokemon.attacks[0].cost": [
+       "water"
+      ]
+     },
+     "note": "「タイプ 闘」・「しめつける 水」。画像の読み取りと同じ。なぞのばしょのページの「進化条件」は「なにかのか化石から進化」（サイトの誤記。画像は「なにかの化石から進化」。kyuura の pokemon.evolves_from は「なにかの化石」で、この調査の対象の欄ではない）"
+    }
+   ],
+   "not_checked": [
+    "弱点・抵抗力・HP・にげる・進化元・LV・図鑑番号（特定の手がかりに使った。今回の対象の欄ではないので、照合した欄にしていない）",
+    "ワザ・特殊能力の説明の全文の読み比べ・図鑑の説明・刷の記号",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "existing_value": "タイプ（闘）とワザの必要なエネルギー（水をふくむ並び）は今までの値と同じ。訂正はない。タイプと必要なエネルギーの記号が違うのは印刷のとおりで、データの入れ違いではない。今までの値は英語版のデータ（pokemon-tcg-data）から生成し、取り込みのときになぞのばしょの転記と記号で比べて違いがなかった（data/ja_text_nazonobasho_report.json に記録がない）。固定した入力の tcgdex の日本語の欄は英語版の機械翻訳で、独立した資料ではない",
+   "corrections": []
+  },
+  {
+   "id": "IMG-neo2-035",
+   "card_id": "neo2-035",
+   "card_name_ja": "オムスター",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-30",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo2035.php",
+     "page_title": "オムスター | ポケモンカードneo 第2弾 遺跡をこえて...",
+     "image_url": "https://pcg-search.com/img/neo/neo2035.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "355cef6fe0d2fdedcb9318369250ebd5571557492d7d289f95dfd8deed4d5e76",
+     "accessed_on": "2026-10-30"
+    },
+    {
+     "site": "なぞのばしょ [N1]",
+     "page_url": "https://nazonobasho.com/neo2-035-omstar/",
+     "page_title": "オムスター | ポケモンカード★neo | 拡張パック第2弾 遺跡をこえて…",
+     "image_url": "https://nazonobasho.com/wp-content/uploads/2021/05/neo2_B_035_omstar_copy.jpg",
+     "image_format": "JPEG 748×1044（「COPY」の透かし）",
+     "image_sha256": "399d80c955dd6b612aeee854e7219be527c6e902a0bda83e6745e6ef440af8ba",
+     "accessed_on": "2026-10-30"
+    }
+   ],
+   "identification": "2 つの画像とも「オムスター」2進化（オムナイトから進化）、LV.39、HP80、しめあげる（10+）・とげとげMAX（20+）、弱点 草、にげる 2、Illus.Shin-ichi Yoshida、No.139、レアリティの記号 ◆、右下の弾の記号（遺跡をこえて...）。kyuura の data/cards.json の名前・LV（39）・HP・ワザ名・ダメージ・レアリティと合う。pcg-search の番号（neo2035）とkyuura の id の番号は同じ（名前・内容でも確かめた）",
+   "independence": "画像は pcg-search.com となぞのばしょに 1 枚ずつ。同じ撮影・スキャンに由来するかが分からないので、独立した 2 枚の実物の照合とは数えない。サイトの転記（pcg-search のページの記号の画像・なぞのばしょのページの文字）は画像の読み取りと分け、照合の数に入れない",
+   "print_values": {
+    "pokemon.types": [
+     "fighting"
+    ],
+    "pokemon.attacks[0].cost": [
+     "water"
+    ],
+    "pokemon.attacks[0].cost_total": 1,
+    "pokemon.attacks[1].cost": [
+     "water",
+     "water",
+     "water"
+    ],
+    "pokemon.attacks[1].cost_total": 3
+   },
+   "print_text": {
+    "pokemon.types": [
+     "HP の右の丸い記号: こぶし（闘）（カードの地の色ではなく、記号の形で読んだ）"
+    ],
+    "pokemon.attacks[0].cost": [
+     "しめあげる の左の記号（左から）: 水のしずく（水）（1 個）"
+    ],
+    "pokemon.attacks[1].cost": [
+     "とげとげMAX の左の記号（左から）: 水のしずく（水）・水のしずく（水）・水のしずく（水）（3 個）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの記号の画像（2026-10-30 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo2035.php",
+     "values": {
+      "pokemon.types": [
+       "fighting"
+      ],
+      "pokemon.attacks[0].cost": [
+       "water"
+      ],
+      "pokemon.attacks[1].cost": [
+       "water",
+       "water",
+       "water"
+      ]
+     },
+     "note": "ページはタイプ・コストを記号の画像で示す: タイプ en006、弱点 en001、にげる en000・en000、しめあげる en003、とげとげMAX en003・en003・en003（ページの記号の並びの順）（pcg-search の記号の画像 en000 = 無色の星・en001 = 草の葉・en003 = 水のしずく・en006 = 闘のこぶし。記号の画像を取得して確かめた）。画像の読み取りと同じ"
+    },
+    {
+     "source": "なぞのばしょ [N1] のカードページの文字（2026-10-30 に取得したページ。kyuura の data/ja_text_nazonobasho.json の値も同じ）",
+     "page_url": "https://nazonobasho.com/neo2-035-omstar/",
+     "values": {
+      "pokemon.types": [
+       "fighting"
+      ],
+      "pokemon.attacks[0].cost": [
+       "water"
+      ],
+      "pokemon.attacks[1].cost": [
+       "water",
+       "water",
+       "water"
+      ]
+     },
+     "note": "「タイプ 闘」・「しめあげる 水」・「とげとげMAX 水水水」。画像の読み取りと同じ"
+    }
+   ],
+   "not_checked": [
+    "弱点・抵抗力・HP・にげる・進化元・LV・図鑑番号（特定の手がかりに使った。今回の対象の欄ではないので、照合した欄にしていない）",
+    "ワザ・特殊能力の説明の全文の読み比べ・図鑑の説明・刷の記号",
+    "カードの実物・公式の書籍のページ（CC-・LD- ではない）"
+   ],
+   "existing_value": "タイプ（闘）とワザの必要なエネルギー（水をふくむ並び）は今までの値と同じ。訂正はない。タイプと必要なエネルギーの記号が違うのは印刷のとおりで、データの入れ違いではない。今までの値は英語版のデータ（pokemon-tcg-data）から生成し、取り込みのときになぞのばしょの転記と記号で比べて違いがなかった（data/ja_text_nazonobasho_report.json に記録がない）。固定した入力の tcgdex の日本語の欄は英語版の機械翻訳で、独立した資料ではない",
+   "corrections": []
   }
  ]
 }

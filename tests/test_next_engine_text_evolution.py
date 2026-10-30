@@ -24,6 +24,9 @@ import build_card_rulings as bcr  # noqa: E402
 import build_cardlist  # noqa: E402
 
 BASE = 'e519b99e2adcc6c2cd0998569ae5ee1101de6e89'  # この作業の基準
+# この作業のコミット。同じ日（2026-10-30）のあとの作業の照合の記録（neo2 の化石 4 枚。tests/test_neo2_fossil_type_cost.py）と分けるため、
+# この作業の照合の記録は、このコミットにある id で選ぶ
+AT_COMMIT = 'c932625053f4cd4d784585f8b6144121499d85ed'
 UNOWN_RULE = '「アンノーン」はデッキに4枚までしか入れることができません。'
 ROD = 'コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。'
 # 訂正の id → （カード id, 欄, 訂正のあとの値。進化元は日本語名）
@@ -77,7 +80,9 @@ class Data(unittest.TestCase):
         cls.ledger = load('data/curation/card_corrections.json')
         cls.fixes = {c['id']: c for c in cls.ledger['corrections']}
         cls.images = load('data/curation/card_image_checks.json')
-        cls.new_images = {x['card_id']: x for x in cls.images['checks'] if x['checked_on'] == '2026-10-30'}
+        then = {x['id'] for x in json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{AT_COMMIT}:data/curation/card_image_checks.json'],
+                                                           capture_output=True, text=True, check=True).stdout)['checks']}
+        cls.new_images = {x['card_id']: x for x in cls.images['checks'] if x['checked_on'] == '2026-10-30' and x['id'] in then}
 
 
 class CardValueTest(Data):
