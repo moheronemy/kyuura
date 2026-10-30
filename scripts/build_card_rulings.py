@@ -327,6 +327,11 @@ def check_target(errors, where, cards, card_id, target, allow_card=False):
     return item
 
 
+def page_label(page):
+    """出典のページの表示（ページの記録のない既存の転記の引用は page が None。そのときはページを書かず、location に書く）。"""
+    return '' if page is None else f'p.{page} '
+
+
 def check_source(errors, where, ctx, code, page):
     if code not in ctx['codes']:
         errors.append(f'{where}: 出典の記号がない: {code}')
@@ -1189,7 +1194,7 @@ def basis_line(b, r):
     if 'card_ref' in b:
         where = f"{b['card_ref']} の {b['field']}（{r['checked_values'][b['checked']]}）"
     else:
-        where = f"[{b['source']}] p.{b['page']} {b['location']}（{r['checked_values'][b['checked']].split('（')[0]}）"
+        where = f"[{b['source']}] {page_label(b['page'])}{b['location']}（{r['checked_values'][b['checked']].split('（')[0]}）"
         if b.get('transcription'):
             where += f"（転記 PDF p.{b['transcription']['pdf_page']}）"
     q = f"「{b['quote']}」" if b.get('quote') else ''
@@ -1357,7 +1362,7 @@ def build(ctx):
         out += [f"### {x['id']}", '',
                 f"- 論点: {md(x['question'])}",
                 f"- 決められない理由: {md(x['why_unresolved'])}",
-                f"- 公式の資料: {OFFICIAL_MATERIAL[x['official_material']]}（" + '、'.join(f"[{s['source']}] p.{s['page']} {s['location']}" for s in x['sources']) + '）',
+                f"- 公式の資料: {OFFICIAL_MATERIAL[x['official_material']]}（" + '、'.join(f"[{s['source']}] {page_label(s['page'])}{s['location']}" for s in x['sources']) + '）',
                 f"- 参照する条項: {'・'.join(x['rule_clause_refs'])}"]
         for c in x['cases']:
             eng = f"エンジンの {c['engine_ruling']}" if c.get('engine_ruling') else 'エンジンの裁定はない'
