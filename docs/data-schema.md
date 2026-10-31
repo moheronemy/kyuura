@@ -263,7 +263,7 @@ kyuura がウェブに公開されたカードの画像で印刷の欄を読ん�
 | `not_checked`・`print_version`・`existing_value` | 確かめていない欄、刷・版の注記（修正前・修正版など）、今までの値が画像と同じだったこと |
 | `corrections` | この記録から書いた訂正の id。訂正は同じカード・`print_values` の欄・同じ値で、`basis` は `card_image_check`、`image_check` はこの記録、`card_checks_affected` は空（違えば止まる）。画像が今までの値と同じなら空で、`before` と `after` が同じ訂正は作らない（2026-10-30 の neo2 の化石 4 枚の `pokemon.types`・`pokemon.attacks[i].cost`・`cost_total`） |
 
-- `candidates`: `status`（`held_print_version` 印刷の版が決まらない・`held_transcription_difference` 別の転記との違い・`held_likely_transcription_error` 誤りの可能性が高いが印刷で確かめていない・`version_difference` 版の違い（誤りではない）・`gap_open` 値の欠け・`held_illegible_print` 印刷で転記の誤りを確かめたが、正しい値の一部が画像で読めない（推測で埋めず訂正しない。2026-10-30 のプクリン ES1-027 のふくらむ）。`image_check`（画像の照合の記録の id）・`searched`（探した範囲）を持つことがある）と `reason`。訂正にした候補は、訂正の `previous_candidate` に移す。
+- `candidates`: `status`（`held_print_version` 印刷の版が決まらない・`held_transcription_difference` 別の転記との違い・`held_likely_transcription_error` 誤りの可能性が高いが印刷で確かめていない・`version_difference` 版の違い（誤りではない）・`gap_open` 値の欠け・`held_illegible_print` 印刷で転記の誤りを確かめたが、正しい値の一部が画像で読めない（推測で埋めず訂正しない。2026-10-30 のプクリン ES1-027 のふくらむ）。`image_check`（画像の照合の記録の id）・`searched`（探した範囲）を持つことがある）と `reason`。候補を決めずに、あとで確かめたこと（読んだ原典・開けなかった資料など）は `later_notes`（`date`・`note`）に追記し、`reason`・`searched` の過去の文は書きかえない（2026-10-31 のプクリン ES1-027。p.226 の図版でも 1 字が読めず、候補のまま）。訂正にした候補は、訂正の `previous_candidate` に移す。
 - `data/curation/nazonobasho_review.json`・`pokemonwiki_review.json` の判定（`verdict`）は書きかえず、あとで分かったことは `later_notes`（`date`・`note`）に追記する（2026-10-30 の PMCG6-034|name）。
 
 ## エンジンの実装の対象（`data/engine_targets.json`）
