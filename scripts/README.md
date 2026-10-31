@@ -69,7 +69,7 @@ python3 scripts/build_engine_targets.py --check
 python3 scripts/catalog.py --check
 
 # 公式図鑑の種族の身長（data/species_heights.json）。手順は docs/species-heights.md の 3 章（利用条件の確認 → 試し取り → 全件）。
-# 取得は robots.txt を読んでから 5 秒間隔で、キャッシュ（リポジトリの外）を使う。2026-10-31 は公式の図鑑に接続できなかった
+# 取得は robots.txt を読んでから 5 秒間隔で、キャッシュ（リポジトリの外）を使う。2026-10-31 に全件を取得した（キャッシュはリポジトリに入れない）
 python3 scripts/species_heights.py fetch --cache "$WORK/zukan" --dex 1,25,201
 python3 scripts/species_heights.py extract --cache "$WORK/zukan" --dex 1,25,201 --retrieved-on YYYY-MM-DD
 python3 scripts/species_heights.py --check [--cache "$WORK/zukan"]
