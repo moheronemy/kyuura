@@ -1159,6 +1159,109 @@
     "2026-10-27 に既存の記録を再利用して条項にした（原典の画像は読み直していない）。転記の「べイビィ」（1 字目がひらがな）は転記のまま引いた。",
     "ネオより前のカードの説明の読み方を、neo のカードの説明に一律に当てはめない（UQ-NEO-TEXT-BABY-CATEGORIES）。"
    ]
+  },
+  {
+   "id": "GR-2000-P324-TRANSFORM-DEFINITION",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.324〜325「20 ポケモンの変身」（定義と、進化・退化との違い）",
+   "summary": "「メタモン」の特殊能力［へんしん］［すごいへんしん］や「タケシのキュウコン」の特殊能力［ばける］などによって、ポケモンが別のポケモンになることを「ポケモンの変身」と呼ぶ。「ポケモンの変身」は「ポケモンの進化」とは異なり、変身していたポケモンがもとのポケモンにもどることは「ポケモンの退化」とは異なる",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image（2026-10-31。PDF 326・327 を 300dpi で読んだ）",
+   "notes": [
+    "公式ルール 2000.02.14 版の「20 ポケモンの変身」（p.324〜325）。既存の転記（PDF 326・327）の文と同じことを画像で確かめた（転記は照らしただけ）。",
+    "この節は、［へんしん］（「…「草・炎・水・雷・超・闘」の、どの「色（タイプ）」のエネルギーとしても、あつかわれる。…：最新の説明」）と［ばける］の説明を引く。カードの説明の引用は条項にせず、［へんしん］の色の数の食い違いは UQ-TRANSFORM-ENERGY-COLOR-LIST に書いた。"
+   ]
+  },
+  {
+   "id": "GR-2000-P324-TRANSFORM-TOP-CARD",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.324「20 ポケモンの変身」（持つ内容と失う内容）",
+   "summary": "変身しているポケモンは、変身の対象となっているポケモンを構成しているカードのうち、いちばん上にあるカードに書かれている内容をすべて持ち、変身前のポケモンを構成しているカードのうち、いちばん上にあるカードに書かれている内容はすべて失われる",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image（2026-10-31。PDF 326・327 を 300dpi で読んだ）",
+   "notes": [
+    "公式ルール 2000.02.14 版の「20 ポケモンの変身」（p.324〜325）。既存の転記（PDF 326・327）の文と同じことを画像で確かめた（転記は照らしただけ）。"
+   ]
+  },
+  {
+   "id": "GR-2000-P324-TRANSFORM-NAME-AND-KIND",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.324〜325「20 ポケモンの変身」（名前と種類）",
+   "summary": "変身しているポケモンは、変身の対象となっているポケモンと同じ名前のポケモンとしてもあつかわれ、同時に、変身する前の名前（自分自身の名前）のポケモンとしてもあつかわれる。変身の対象となっているポケモンの種類（「ベイビィポケモン」「たねポケモン」「進化ポケモン」）と同じ種類のポケモンとしてあつかわれ、同時に、変身前の自分自身の種類のポケモンとしてもあつかわれる",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image（2026-10-31。PDF 326・327 を 300dpi で読んだ）",
+   "notes": [
+    "公式ルール 2000.02.14 版の「20 ポケモンの変身」（p.324〜325）。既存の転記（PDF 326・327）の文と同じことを画像で確かめた（転記は照らしただけ）。"
+   ]
+  },
+  {
+   "id": "GR-2000-P325-TRANSFORM-OWN-STATE",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.325「20 ポケモンの変身」（ダメージ・特殊状態・持続する効果・ついているカード）",
+   "summary": "変身しているポケモンは、変身の対象となっているポケモンが受けているダメージ・特殊状態・持続する効果のいずれも持たず、変身の対象についているエネルギーカード・トレーナーカードもついていない。ダメージ・特殊状態・持続する効果は変身前の自分が受けていたものをそのまま受けつぎ、エネルギーカード・トレーナーカードも変身前の自分についていたものがそのまま受けつがれる",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image（2026-10-31。PDF 326・327 を 300dpi で読んだ）",
+   "notes": [
+    "公式ルール 2000.02.14 版の「20 ポケモンの変身」（p.324〜325）。既存の転記（PDF 326・327）の文と同じことを画像で確かめた（転記は照らしただけ）。"
+   ]
+  },
+  {
+   "id": "GR-2000-P325-TRANSFORM-NOT-NEW",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.325「20 ポケモンの変身」（新しく場に出たポケモンではない）",
+   "summary": "ポケモンが変身したり、もとにもどったりしても、「新しく場に出たポケモン」としてはあつかわれない。同じポケモンとしてあつかわれる",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image（2026-10-31。PDF 326・327 を 300dpi で読んだ）",
+   "notes": [
+    "公式ルール 2000.02.14 版の「20 ポケモンの変身」（p.324〜325）。既存の転記（PDF 326・327）の文と同じことを画像で確かめた（転記は照らしただけ）。"
+   ]
+  },
+  {
+   "id": "GR-2000-P325-TRANSFORM-DURING-ACTION",
+   "source": "P43",
+   "pages": [
+    "321〜325"
+   ],
+   "section": "公式ルール p.325「20 ポケモンの変身」（ワザ・特殊能力・トレーナーカードの最中）",
+   "summary": "ワザや、使用を宣言するタイプの特殊能力や、トレーナーカードが使われたとき、それを使ったことによって起こるすべてのことがらが終了するまで、変身の状態は変化しない",
+   "rule_history_refs": [
+    "NEO-2000-OFFICIAL-RULES"
+   ],
+   "rule_differences_refs": [],
+   "checked": "kyuura_image（2026-10-31。PDF 326・327 を 300dpi で読んだ）",
+   "notes": [
+    "公式ルール 2000.02.14 版の「20 ポケモンの変身」（p.324〜325）。既存の転記（PDF 326・327）の文と同じことを画像で確かめた（転記は照らしただけ）。"
+   ]
   }
  ],
  "rulings": [
@@ -21681,6 +21784,1108 @@
    "notes": [
     "使うための条件に使っているカードを含めない読み方は、ポケモン交換おじさんの記録（CR-POKEMON-TRADER-PT2。エンジンの記録の取り込み）と同じ。"
    ]
+  },
+  {
+   "id": "CR-TRANSFORM-COPIES-TOP-CARD",
+   "topic": "ポケモンの変身（へんしん・すごいへんしん）",
+   "cards": [
+    {
+     "card_id": "PMCG3-042",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "へんしん"
+     }
+    },
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "［へんしん］［すごいへんしん］で変身しているメタモンは、変身の対象のポケモンの何を持ち、自分のカード（メタモン）の何を失うか。写したカードの特殊能力を持つか",
+   "conclusion": "変身の対象となっているポケモンを構成しているカードのうち、いちばん上にあるカードに書かれている内容をすべて持ち（ワザ・特殊能力・HP・タイプ・弱点・抵抗力・にげるなど、そのカードに書かれていること）、変身前の自分のいちばん上のカード（メタモン）に書かれている内容はすべて失う。名前と種類は両方としてあつかう（CR-TRANSFORM-NAME-AND-KIND）。ただし、変身させた力の説明はその力を持ち続けるとする（［へんしん］は「引き続き、この「へんしん」の力を持っている」、［すごいへんしん］は「引き続き、この「すごいへんしん」の力は使うことができる」）。写したカードの特殊能力は、そのカードに書かれている内容なので持つ。持った特殊能力を、いつ使える・はたらくか（回数の制限、ほかの効果との関係）は、この規定だけでは決まらない（UQ-TRANSFORM-SCOPE・UQ-SUPER-TRANSFORM-COPIED-POWERS）",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（GR-2000-P324-TRANSFORM-TOP-CARD）",
+     "checked": "kyuura_image",
+     "quote": "変身しているポケモンは、変身の対象となっているポケモンを構成しているカードのうち、いちばん上にあるカードに書かれている内容を、すべて持っており、変身前のポケモンを構成しているカードのうちのいちばん上にあるカードに書かれている内容は、すべて失われます。"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "321〜325",
+     "checked": "kyuura_image",
+     "quote": "引き続き、この「へんしん」の力を持っている。",
+     "location": "p.324「20 ポケモンの変身」が引く［へんしん］の説明（「：最新の説明」と書く）"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "引き続き、この「すごいへんしん」の力は使うことができる。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P324-TRANSFORM-TOP-CARD",
+    "GR-2000-P324-TRANSFORM-DEFINITION"
+   ],
+   "latest_description_refs": [
+    "LD-ES2-032-PWR0"
+   ],
+   "related_rulings": [
+    "CR-TRANSFORM-NAME-AND-KIND",
+    "CR-TRANSFORM-NOT-NEWLY-PLAYED",
+    "UQ-TRANSFORM-SCOPE",
+    "UQ-SUPER-TRANSFORM-COPIED-POWERS"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。",
+    "エンジン v0.49 の TF1（写したカードの特殊能力を持つか）は、kyuura の記録がなかったため未解決にされた（docs/virtual-attacks-transformation-v0.49.md 14 章）。持つことはこの規定で決まる。どう使えるか・はたらくかは残る（UQ-TRANSFORM-SCOPE の notes）。",
+    "［ばける］（タケシのキュウコン PMCG5-019）も「ポケモンの変身」に入る（p.324）。『トレーナーズ』Vol.6（2000年5月）の変更で、のせた進化カードの特殊能力ははたらかないとされた（ERR-BROCK-NINETALES）。この変更は［ばける］だけのもので、この裁定は［へんしん］［すごいへんしん］の記録（2000.02.14 版の規定と、それぞれのカードの説明による）。",
+    "英語版の文面・ゲームの処理は根拠にしていない。"
+   ]
+  },
+  {
+   "id": "CR-TRANSFORM-NAME-AND-KIND",
+   "topic": "ポケモンの変身（へんしん・すごいへんしん）",
+   "cards": [
+    {
+     "card_id": "PMCG3-042",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "へんしん"
+     }
+    },
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "変身しているメタモンは、名前と種類（ベイビィポケモン・たねポケモン・進化ポケモン）をどうあつかうか",
+   "conclusion": "変身の対象のポケモンと同じ名前のポケモンとしてあつかい、同時に、自分自身の名前（メタモン）のポケモンとしてもあつかう。種類も、変身の対象と同じ種類（ベイビィポケモン・たねポケモン・進化ポケモン）としてあつかい、同時に自分自身の種類（たねポケモン）としてもあつかう。名前を指定する効果は、変身の対象の名前でも、メタモンの名前でも当たる。1 つの効果が 2 つの名前・種類で別々の処理を指示するとき、どちらにしたがうかはこの規定では決まらない（UQ-TRANSFORM-BABY-AND-BASIC）",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（GR-2000-P324-TRANSFORM-NAME-AND-KIND）",
+     "checked": "kyuura_image",
+     "quote": "ただし、変身しているポケモンは、変身の対象となっているポケモンと同じ名前のポケモンとしてもあつかわれますが、同時に、変身する前の名前（自分自身の名前）のポケモンとしてもあつかわれます。"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（GR-2000-P324-TRANSFORM-NAME-AND-KIND）",
+     "checked": "kyuura_image",
+     "quote": "また、変身しているポケモンは、変身の対象となっているポケモンの種類（「ベイビィポケモン」「たねポケモン」「進化ポケモン」）と同じ種類のポケモンとしてあつかわれますが、同時に、変身前の自分自身の種類のポケモンとしてもあつかわれます。"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P324-TRANSFORM-NAME-AND-KIND"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-TRANSFORM-COPIES-TOP-CARD",
+    "CR-TRANSFORM-BABY-RULE",
+    "UQ-TRANSFORM-BABY-AND-BASIC"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。",
+    "例: GR団のミュウツーに変身したメタモンは「GR団のミュウツー」としてもあつかわれる（［わるいはどう］の「自分の場のほかの「GR団のミュウツー」」に入る。UQ-SELF-EXCLUDING-POWER-COPIES）。「わるい」ポケモンに変身したメタモンは、そのポケモンの名前としてもあつかわれる（「わるい」ポケモンの範囲は CR-DARK-POKEMON-CATEGORY）。"
+   ]
+  },
+  {
+   "id": "CR-TRANSFORM-BABY-RULE",
+   "topic": "ポケモンの変身とベイビィポケモン",
+   "cards": [
+    {
+     "card_id": "PMCG3-042",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "へんしん"
+     }
+    },
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "［へんしん］［すごいへんしん］でベイビィポケモンに変身したメタモンがバトル場にいるとき、ベイビィポケモンのルール（相手はワザを使うときにコインを投げ、「うら」なら失敗）は当てはまるか",
+   "conclusion": "当てはまる。変身しているメタモンは、変身の対象と同じ種類（ベイビィポケモン）としてあつかわれる（同時にたねポケモンでもある）ので、バトル場にいるかぎり、相手プレイヤーはワザを使うときにコインを投げ、「うら」ならそのワザは失敗する。変身の対象のカードに書かれているルール文・弱点・抵抗力も、いちばん上のカードの内容として持つ。ベイビィとたねで別の処理をする効果は UQ-TRANSFORM-BABY-AND-BASIC",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（GR-2000-P324-TRANSFORM-NAME-AND-KIND）",
+     "checked": "kyuura_image",
+     "quote": "また、変身しているポケモンは、変身の対象となっているポケモンの種類（「ベイビィポケモン」「たねポケモン」「進化ポケモン」）と同じ種類のポケモンとしてあつかわれますが、同時に、変身前の自分自身の種類のポケモンとしてもあつかわれます。"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（GR-2000-P324-TRANSFORM-TOP-CARD）",
+     "checked": "kyuura_image",
+     "quote": "変身しているポケモンは、変身の対象となっているポケモンを構成しているカードのうち、いちばん上にあるカードに書かれている内容を、すべて持っており、変身前のポケモンを構成しているカードのうちのいちばん上にあるカードに書かれている内容は、すべて失われます。"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.314「ベイビィポケモンカード」（ベイビィポケモンのルール。GR-2000-P314-BABY-RULE）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "derived",
+     "statement": "ベイビィポケモンのルールは「ベイビィポケモン」がバトル場にいるかぎり当てはまる（p.314）。変身しているメタモンはベイビィポケモンとしてあつかわれる（p.325）。同時にたねポケモンとしてもあつかわれることは、ベイビィポケモンとしてあつかうことを打ち消さない"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P324-TRANSFORM-NAME-AND-KIND",
+    "GR-2000-P324-TRANSFORM-TOP-CARD",
+    "GR-2000-P314-BABY-RULE"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-TRANSFORM-NAME-AND-KIND",
+    "UQ-TRANSFORM-BABY-AND-BASIC"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。",
+    "エンジン v0.114 の BX1（［へんしん］で相手のベイビィポケモンと同じカードとしてあつかわれるメタモンが、ベイビィポケモンのルールを持つか）は、kyuura は取り込んでいない（v0.113 の報告事項だけ）。ルールを持つかはこの記録で答えられ、ベイビィとたねで結果が変わる処理は残る（UQ-TRANSFORM-BABY-AND-BASIC）。"
+   ]
+  },
+  {
+   "id": "CR-TRANSFORM-KEEPS-OWN-STATE",
+   "topic": "ポケモンの変身（へんしん・すごいへんしん）",
+   "cards": [
+    {
+     "card_id": "PMCG3-042",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "へんしん"
+     }
+    },
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "変身したメタモンは、変身の対象のポケモンが受けているダメージ・特殊状態・持続する効果や、ついているカードを持つか。自分が受けていたもの・ついていたカードはどうなるか",
+   "conclusion": "変身の対象のポケモンが受けているダメージ・特殊状態・持続する効果は持たず、変身の対象についているエネルギーカード・トレーナーカードもついていない。メタモン自身が受けていたダメージ・特殊状態・持続する効果と、ついていたエネルギーカード・トレーナーカードは、変身してもそのまま受けつぐ",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（GR-2000-P325-TRANSFORM-OWN-STATE）",
+     "checked": "kyuura_image",
+     "quote": "変身しているポケモンは、変身の対象となっているポケモンが受けているダメージ、特殊状態、持続する効果のいずれも持っていません。また、変身の対象となっているポケモンについているエネルギーカードやトレーナーカードも、変身しているポケモンにはついていません。ダメージ、特殊状態、持続する効果は、変身前の自分が受けていたものをそのまま受けつぎ、エネルギーカードやトレーナーカードも、変身前の自分についていたものがそのまま受けつがれます。"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P325-TRANSFORM-OWN-STATE"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-TRANSFORM-COPIES-TOP-CARD"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。"
+   ]
+  },
+  {
+   "id": "CR-TRANSFORM-NOT-NEWLY-PLAYED",
+   "topic": "ポケモンの変身（へんしん・すごいへんしん）",
+   "cards": [
+    {
+     "card_id": "PMCG3-042",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "へんしん"
+     }
+    },
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "メタモンが変身したり、もとにもどったりしたとき、「新しく場に出たポケモン」としてあつかうか。場に出たときにはたらく・使える特殊能力の条件になるか",
+   "conclusion": "あつかわない。変身しても、もとにもどっても、同じポケモンとしてあつかう。変身は進化ではなく、もとにもどることは退化ではない。このため、変身・もとにもどることは、手札から場に出したとき・新しく場に出たときにはたらく・使える特殊能力の条件に当たらない",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（GR-2000-P325-TRANSFORM-NOT-NEW）",
+     "checked": "kyuura_image",
+     "quote": "ポケモンが変身したり、もとにもどったりしても、「新しく場に出たポケモン」としてはあつかわれません。同じポケモンとしてあつかわれます。"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（GR-2000-P324-TRANSFORM-DEFINITION）",
+     "checked": "kyuura_image",
+     "quote": "「ポケモンの変身」は、「ポケモンの進化」とは異なります。"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（GR-2000-P324-TRANSFORM-DEFINITION）",
+     "checked": "kyuura_image",
+     "quote": "変身していたポケモンがもとのポケモンにもどることは、「ポケモンの退化」とは異なります。"
+    },
+    {
+     "kind": "derived",
+     "statement": "場に出したとき・新しく場に出たときの条件は、新しく場に出たポケモンに当たる。変身・もとにもどることは新しく場に出たポケモンとしてあつかわない（p.325）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P325-TRANSFORM-NOT-NEW",
+    "GR-2000-P324-TRANSFORM-DEFINITION"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-SUPER-TRANSFORM-ONCE-PER-TURN",
+    "CR-SUPER-TRANSFORM-RETRY-AFTER-SCOOP-UP"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。",
+    "［ばける］については、p.69 の特殊能力解説（既存の読み取り。ERR-BROCK-NINETALES の notes）が「手札から場に出したときに使える能力は、[ばける]で場に出したときには使えません。」と書く（同じ考え方の例）。"
+   ]
+  },
+  {
+   "id": "CR-TRANSFORM-FROZEN-DURING-ACTION",
+   "topic": "ポケモンの変身（へんしん・すごいへんしん）",
+   "cards": [
+    {
+     "card_id": "PMCG3-042",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "へんしん"
+     }
+    },
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "ワザ・宣言して使う特殊能力・トレーナーカードを使っている途中で、変身の対象のポケモンが入れかわる・場をはなれる・きぜつするとき、変身しているメタモンの状態はいつ変わるか",
+   "conclusion": "それを使ったことによって起こるすべてのことがらが終了するまで、変身の状態は変化しない（どちらのプレイヤーが使ったものでも）。たとえば、［へんしん］のメタモンがワザを使っている途中で相手の対戦ポケモンが入れかわっても、そのワザが終わるまでメタモンは使い始めたときの姿のまま。［すごいへんしん］のメタモンのワザで変身のもとのポケモンがきぜつしても、そのワザによって起こることがすべて終わるまでは変身したまま。終わったあとに、それぞれの説明にしたがってもとにもどる（HP が変わったときにきぜつを判定する時点は UQ-TRANSFORM-REVERT-KNOCKOUT-TIMING）",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（GR-2000-P325-TRANSFORM-DURING-ACTION）",
+     "checked": "kyuura_image",
+     "quote": "ワザや、使用を宣言するタイプの特殊能力や、トレーナーカードが使われたとき、それを使ったことによって起こるすべてのことがらが終了するまで、変身の状態は変化しません。"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P325-TRANSFORM-DURING-ACTION"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-SUPER-TRANSFORM-REVERT-CONDITIONS",
+    "UQ-TRANSFORM-REVERT-KNOCKOUT-TIMING",
+    "UQ-REACTIVE-SWITCH-DURING-ATTACK"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。",
+    "エンジン v0.65 の RX1（ワザの途中の入れ替えで、ワザを使っている［へんしん］のメタモンの姿が変わる）は、この規定でワザが終わるまで姿が変わらないと決まる（UQ-REACTIVE-SWITCH-DURING-ATTACK の notes）。"
+   ]
+  },
+  {
+   "id": "CR-TRANSFORM-REVERT-KNOCKOUT",
+   "topic": "へんしん（メタモン 化石の秘密）",
+   "cards": [
+    {
+     "card_id": "PMCG3-042",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "へんしん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "［へんしん］のメタモンが、ベンチにもどる・相手の対戦ポケモンが入れかわることで HP が少なくなり、のっているダメージが HP 以上になったとき、きぜつするか",
+   "conclusion": "きぜつする。ベンチではメタモン（HP50）にもどるので、ダメージが 50 以上のままベンチにもどると、メタモンはきぜつする。相手の対戦ポケモンが、メタモンにのっているダメージ以下の HP のポケモンに入れかわったときも、メタモンはきぜつする",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "ベンチでは「メタモン」にもどるのでHPは50になります。したがってHPの高いポケモンと戦っていて、ダメージが50をこえた状態になってからベンチにもどると、「メタモン」はきぜつしてしまいます。",
+     "location": "p.239 の 2 つ目の欄（メタモン LV.20／HP50 ●ポケモンカード第3弾化石の秘密）の解説"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "同じように、相手の対戦ポケモンがこの「メタモン」にのっているダメージ以下のHPであるポケモンに入れ替わると、「メタモン」はきぜつしてしまいます。",
+     "location": "p.239 の 2 つ目の欄（メタモン LV.20／HP50 ●ポケモンカード第3弾化石の秘密）の解説"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.319「HP とダメージ」（GR-2000-P319-HP-AND-DAMAGE）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P319-HP-AND-DAMAGE"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-SUPER-TRANSFORM-REVERT-KNOCKOUT",
+    "UQ-TRANSFORM-REVERT-KNOCKOUT-TIMING"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。",
+    "解説は「50をこえた」と書く。ダメージがちょうど HP と同じでもきぜつする（p.319）。きぜつを判定する時点は UQ-TRANSFORM-REVERT-KNOCKOUT-TIMING。"
+   ]
+  },
+  {
+   "id": "CR-SUPER-TRANSFORM-REVERT-KNOCKOUT",
+   "topic": "すごいへんしん（メタモン 拡張シート第2弾赤版）",
+   "cards": [
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "［すごいへんしん］のメタモンがもとのメタモン（HP40）にもどったとき、のっているダメージが 40 以上ならきぜつするか",
+   "conclusion": "きぜつする（もとにもどった理由が「うら」・バトル場をはなれた・特殊状態・変身のもとのポケモンが場をはなれた、のどれでも）",
+   "status": "SUPPORTED",
+   "inference": "［すごいへんしん］の説明・解説は、もとにもどったときのきぜつを書かない。同じページの［へんしん］の解説（もどって HP が下がればきぜつする）と、ダメージが HP 以上ならきぜつする規定（p.319）を、もとにもどる理由にかかわらず当てはめた。もとにもどることは退化ではない（p.325）ので、退化のときの HP の規定（p.324）をそのまま当てはめてはいない",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "へんしんのもとになっていたポケモンが場をはなれたときも、このカードはメタモンにもどる。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "ベンチでは「メタモン」にもどるのでHPは50になります。したがってHPの高いポケモンと戦っていて、ダメージが50をこえた状態になってからベンチにもどると、「メタモン」はきぜつしてしまいます。",
+     "location": "p.239 の 2 つ目の欄（メタモン LV.20／HP50 ●ポケモンカード第3弾化石の秘密）の解説"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.319「HP とダメージ」（GR-2000-P319-HP-AND-DAMAGE）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P319-HP-AND-DAMAGE"
+   ],
+   "latest_description_refs": [
+    "LD-ES2-032-PWR0"
+   ],
+   "related_rulings": [
+    "CR-TRANSFORM-REVERT-KNOCKOUT",
+    "UQ-TRANSFORM-REVERT-KNOCKOUT-TIMING"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。"
+   ]
+  },
+  {
+   "id": "CR-SUPER-TRANSFORM-CHOICE",
+   "topic": "すごいへんしん（メタモン 拡張シート第2弾赤版）",
+   "cards": [
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "［すごいへんしん］は、どこにいるときに何回使え、「おもて」のときにどのポケモンを選べ、「うら」のときにどうなるか",
+   "conclusion": "このカードがバトル場にいるとき（ねむり・マヒ・こんらんでないとき）、自分の番ごとに 1 回使える。コインを投げて「おもて」なら、おたがいの場にいるポケモン（自分と相手のバトル場・ベンチ）の中から 1 匹を選び、以後、このカードをその選んだポケモンと同じカードとしてあつかう。「うら」なら、このカードはメタモンにもどる（変身していなければメタモンのまま）。変身したあとも「進化・退化」はできず、この力は引き続き使える（次の自分の番に、もう一度使って選びなおせる）。選べるかが書かれていないポケモン・選んだときにどのカードと同じになるかが決まらない場合は UQ-SUPER-TRANSFORM-TARGETS",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "この力は、このカードがバトル場にいるとき、自分の番ごとに1回使える。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "コインを投げて「おもて」なら、おたがいの場にいるポケモンの中から1匹を選び、以後、このカードを、その選んだポケモンと同じカードとしてあつかう。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "ただし「進化・退化」はできず、引き続き、この「すごいへんしん」の力は使うことができる。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "「うら」なら、このカードはメタモンにもどる。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "このカードがバトル場をはなれたときや、「ねむり・マヒ・こんらん」状態のとき、この力は使えず、このカードはメタモンにもどる。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "特殊能力［すごいへんしん］は自分の番で1回だけ、バトル場でしか使えません。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の解説"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "もう一匹の「メタモン（化石）」の使う［へんしん］とのちがいは、相手のベンチにいるポケモンにも、自分の場にいるポケモンにも変身できるということです。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の解説"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-P43-P6-LATEST-DESCRIPTION"
+   ],
+   "latest_description_refs": [
+    "LD-ES2-032-PWR0"
+   ],
+   "related_rulings": [
+    "CR-SUPER-TRANSFORM-REVERT-CONDITIONS",
+    "CR-SUPER-TRANSFORM-ONCE-PER-TURN",
+    "UQ-SUPER-TRANSFORM-TARGETS"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。",
+    "印刷の文面（「場にいるポケモンから」）はだれの場かを書かない。最新の説明（p.6 で、わからない内容はこれにしたがう）と解説が、おたがいの場のポケモンとする。"
+   ]
+  },
+  {
+   "id": "CR-SUPER-TRANSFORM-REVERT-CONDITIONS",
+   "topic": "すごいへんしん（メタモン 拡張シート第2弾赤版）",
+   "cards": [
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "［すごいへんしん］で変身したメタモンは、どのときにメタモンにもどるか。変身のもとのポケモンがバトル場とベンチのあいだを動いたときはもどるか",
+   "conclusion": "(1) このカードがバトル場をはなれたとき（ベンチにもどる・場をはなれる）、(2) このカードがねむり・マヒ・こんらん状態のとき、(3) 変身のもとになっていたポケモンが場をはなれたとき（きぜつしたときをふくむ）、(4) この力をもう一度使って「うら」のとき、メタモンにもどる。(1)(2) のあいだ、この力は使えない。変身のもとのポケモンがバトル場とベンチのあいだを動く（にげる・入れかえ）のは、場（バトル場とベンチ）をはなれることではないので、もどらない。変身のもとのポケモンが進化・退化する・エネルギーになるなど、場にいたまま変わるときは UQ-SUPER-TRANSFORM-SOURCE-CHANGES。ワザ・特殊能力・トレーナーカードの途中なら、もどるのはそれによって起こることがすべて終わったあと（CR-TRANSFORM-FROZEN-DURING-ACTION）",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "このカードがバトル場をはなれたときや、「ねむり・マヒ・こんらん」状態のとき、この力は使えず、このカードはメタモンにもどる。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "へんしんのもとになっていたポケモンが場をはなれたときも、このカードはメタモンにもどる。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "「うら」なら、このカードはメタモンにもどる。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "注意しておく必要があるのは、［すごいへんしん］で変身した元のポケモンがきぜつしたり場を離れると、［すごいへんしん］の効果が消えてしまうということです。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の解説"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "相手の強いポケモンを倒そうとしてそのポケモンに変身していても、そのポケモンを倒してしまえば、もとの「メタモン」にもどるということです。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の解説"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "312〜320",
+     "location": "p.312「場」（GR-2000-P312-FIELD）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-P43-P6-LATEST-DESCRIPTION",
+    "GR-2000-P312-FIELD"
+   ],
+   "latest_description_refs": [
+    "LD-ES2-032-PWR0"
+   ],
+   "related_rulings": [
+    "CR-SUPER-TRANSFORM-CHOICE",
+    "CR-TRANSFORM-FROZEN-DURING-ACTION",
+    "UQ-SUPER-TRANSFORM-SOURCE-CHANGES",
+    "UQ-SUPER-TRANSFORM-SUPPRESSED-FORM"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。",
+    "解説はベンチで変身が残るとは書かない。p.72 のデッキ紹介（既存の転記 PDF 74。読者の投稿のデッキ）の「[すごいへんしん]の「メタモン」もドガースにしてベンチ全員ドガースなら、120ダメージ!」は、盤面（メタモンがどこにいるか）を省いた例で、ベンチでも変身が残るとは読まない（バトル場をはなれたらもどる。この例を根拠にしていない）。",
+    "かがくへんかガス・いあつなど、ほかの効果で力が使えないときにもどるかは UQ-SUPER-TRANSFORM-SUPPRESSED-FORM（ねむり・マヒ・こんらんでもどる説明をそのまま当てはめない）。"
+   ]
+  },
+  {
+   "id": "CR-SUPER-TRANSFORM-ONCE-PER-TURN",
+   "topic": "すごいへんしん（メタモン 拡張シート第2弾赤版）",
+   "cards": [
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "［すごいへんしん］を使った番に、変身した・もとにもどったあとで、同じメタモンがもう一度［すごいへんしん］を使えるか",
+   "conclusion": "使えない（「自分の番ごとに1回」）。変身しても、もとにもどっても同じポケモンとしてあつかうので、その番に使った回数はそのまま。コインが「うら」でも、使ったことになる",
+   "status": "SUPPORTED",
+   "inference": "「1回使える」の数え方（ポケモンごとか、カードごとか）を書いた文はない。変身・もとにもどることで新しく場に出たポケモンにならない（p.325）ので、同じポケモンの同じ力を 1 回使ったと読んだ。「うら」のときも使ったことになるとは説明に書かれていないが、p.239 の解説は失敗したらメタモンのまま何もできないとし、ポケモン回収の解説（既存の転記）は、自分の番で一度しか使えない力のコイントスに失敗した場合の取り返し方を書くので、使った回数に数えると読んだ。写したカードに同じ力があるとき（もう 1 枚の拡張シート第2弾赤版のメタモンに変身したとき）は UQ-SUPER-TRANSFORM-COPIED-POWERS",
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "この力は、このカードがバトル場にいるとき、自分の番ごとに1回使える。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "特殊能力［すごいへんしん］は自分の番で1回だけ、バトル場でしか使えません。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の解説"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "コイントスに失敗したら、この「メタモン」のまま、バトル場で何もできずにいることになります。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の解説"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（GR-2000-P325-TRANSFORM-NOT-NEW）",
+     "checked": "kyuura_image",
+     "quote": "ポケモンが変身したり、もとにもどったりしても、「新しく場に出たポケモン」としてはあつかわれません。同じポケモンとしてあつかわれます。"
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "260",
+     "location": "p.260 のポケモン回収（第1弾）の解説",
+     "quote": "自分の番で一度しか使うことのできない特殊能力のコイントスに失敗した場合にも効果的に使うことができます。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 262,
+      "page": "260",
+      "quote": "自分の番で一度しか使うことのできない特殊能力のコイントスに失敗した場合にも効果的に使うことができます。"
+     }
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P325-TRANSFORM-NOT-NEW",
+    "GR-P43-P6-LATEST-DESCRIPTION"
+   ],
+   "latest_description_refs": [
+    "LD-ES2-032-PWR0"
+   ],
+   "related_rulings": [
+    "CR-TRANSFORM-NOT-NEWLY-PLAYED",
+    "CR-SUPER-TRANSFORM-RETRY-AFTER-SCOOP-UP",
+    "UQ-SUPER-TRANSFORM-COPIED-POWERS"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。"
+   ]
+  },
+  {
+   "id": "CR-SUPER-TRANSFORM-RETRY-AFTER-SCOOP-UP",
+   "topic": "すごいへんしん（メタモン 拡張シート第2弾赤版）",
+   "cards": [
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG1-092"
+   ],
+   "question": "［すごいへんしん］のコインが「うら」だった番に、ポケモン回収でメタモンを手札にもどして場に出しなおすと、その番にもう一度使えるか",
+   "conclusion": "使える（場に出しなおしたメタモンがバトル場にいるとき）。手札にもどして出しなおしたメタモンは、新しく場に出たポケモンなので、前に使った回数は数えない",
+   "status": "SUPPORTED",
+   "inference": "ポケモン回収の解説（既存の転記。kyuura はこのページの画像を読んでいない）は、すごいへんしんのコイントスに失敗した場合に、ポケモン回収で「メタモン」をもう一度場に出せば、またコイントスにチャレンジできると書く。同じ番かは明記しないが、「自分の番で一度しか使うことのできない特殊能力」の失敗を取り返す使い方として書いているので、同じ番と読んだ。出しなおしたメタモンがベンチにいるときは使えない（説明）ので、バトル場に出ている必要がある",
+   "basis": [
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "260",
+     "location": "p.260 のポケモン回収（第1弾）の解説",
+     "quote": "「ポケモン回収」を使うことによって、「メタモン」をもう一度場に出すことができるので、また[すごいへんしん]のコイントスにチャレンジすることができるようになります。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 262,
+      "page": "260",
+      "quote": "「ポケモン回収」を使うことによって、「メタモン」をもう一度場に出すことができるので、また[すごいへんしん]のコイントスにチャレンジすることができるようになります。"
+     }
+    },
+    {
+     "kind": "card_commentary",
+     "source": "P43",
+     "page": "260",
+     "location": "p.260 のポケモン回収（第1弾）の解説",
+     "quote": "自分の番で一度しか使うことのできない特殊能力のコイントスに失敗した場合にも効果的に使うことができます。",
+     "checked": "existing_transcription",
+     "transcription": {
+      "file": "data/Silver_Bible_structured.md",
+      "pdf_page": 262,
+      "page": "260",
+      "quote": "自分の番で一度しか使うことのできない特殊能力のコイントスに失敗した場合にも効果的に使うことができます。"
+     }
+    },
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "この力は、このカードがバトル場にいるとき、自分の番ごとに1回使える。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-P43-P6-LATEST-DESCRIPTION"
+   ],
+   "latest_description_refs": [
+    "LD-ES2-032-PWR0"
+   ],
+   "related_rulings": [
+    "CR-SUPER-TRANSFORM-ONCE-PER-TURN"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。"
+   ]
+  },
+  {
+   "id": "CR-SUPER-TRANSFORM-ENERGY-PAYMENT",
+   "topic": "すごいへんしん（メタモン 拡張シート第2弾赤版）",
+   "cards": [
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "［すごいへんしん］で変身したメタモンは、写したワザの必要なエネルギー（悪・鋼の記号をふくむ）を、ついている基本エネルギーカードで払えるか",
+   "conclusion": "払える。このカードについているエネルギーカードは、「草・炎・水・雷・超・闘・悪・鋼」のどの色のエネルギーとしてもあつかわれる（最新の説明）ので、たとえば草の基本エネルギーカードを悪・鋼の記号の支払いに使える。この説明が変えるのは色で、1 枚のカードが出すエネルギーの個数については書かない。色のエネルギーを数える・選ぶ効果、変身していないとき・ベンチ・特殊状態のとき、特殊エネルギーの扱いは UQ-SUPER-TRANSFORM-ENERGY-COLORS",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "card_text",
+     "source": "P43",
+     "page": "239",
+     "checked": "kyuura_image",
+     "quote": "「エネルギーカード」は、このカードについているかぎり、「草・炎・水・雷・超・闘・悪・鋼」の、どの「色（タイプ）」のエネルギーとしても、あつかわれる。",
+     "location": "p.239 の 1 つ目の欄（メタモン LV.15／HP40 ●拡張シート第2弾赤版）の「特殊能力」欄（最新の説明 LD-ES2-032-PWR0）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-P43-P6-LATEST-DESCRIPTION"
+   ],
+   "latest_description_refs": [
+    "LD-ES2-032-PWR0"
+   ],
+   "related_rulings": [
+    "UQ-SUPER-TRANSFORM-ENERGY-COLORS",
+    "UQ-TRANSFORM-ENERGY-COLOR-LIST"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "2026-10-31 に kyuura が『オフィシャルブック2000』p.239・p.324・p.325（PDF 241・326・327）を画像で読んだ（原典の確認）。引用は画像の文で、既存の転記 data/Silver_Bible_structured.md と同じ（括弧の全角・半角のほか）。",
+    "印刷の文面は「どの色のエネルギーとしても使える」で、色を挙げない。最新の説明は 8 つの色を挙げる。化石のメタモンの［へんしん］の色の数（6 か 8 か）は別の論点（UQ-TRANSFORM-ENERGY-COLOR-LIST）。"
+   ]
+  },
+  {
+   "id": "CR-DARK-PULSE-SCOPE",
+   "topic": "わるいはどう（GR団のミュウツー）",
+   "cards": [
+    {
+     "card_id": "PRN-041",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいはどう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "GR団のミュウツーの［わるいはどう］は宣言して使う力か。どのポケモンがどのダメージを与えるときにはたらき、どのときにはたらかないか",
+   "conclusion": "宣言しない、決められたときに自動的にはたらく特殊能力（「…とき、はたらく」）で、持ち主が使うかを選ぶことはない。持ち主の場（自分の場）の「わるい」ポケモンが、ワザによるダメージを与えるときにはたらく（相手の「わるい」ポケモンのワザ、ワザ以外のダメージには当たらない）。このカードの場所の制限は書かれていない（自分の場のバトル場でもベンチでもはたらく）。このカードがねむり・マヒ・こんらん状態のとき（バトル場にいるときだけ起こる）と、自分の場のほかの「GR団のミュウツー」の［わるいはどう］がはたらいているときは、はたらかない。はたらくと、コインを投げて「おもて」なら、もう 1 枚コインを投げ、2 枚目が「おもて」なら与えるダメージそれぞれに 20、「うら」なら 10 を追加する（ベンチへのダメージにも追加する）。1 枚目が「うら」なら追加しない。コインを投げる時点・ダメージが複数のときの扱いは UQ-DARK-PULSE-TIMING、2 匹以上のときは UQ-SELF-EXCLUDING-POWER-COPIES",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "PRN-041",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "この力は、自分の場の「わるい」ポケモンがワザによるダメージを与えるとき、はたらく。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PRN-041",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "コインを投げて「おもて」なら、もう1枚コインを投げる。2枚目のコインが「おもて」なら、与えるダメージそれぞれに、20ダメージを追加する。2枚目のコインが「うら」なら、与えるダメージそれぞれに、10ダメージを追加する。(ベンチへのダメージも追加される。)",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PRN-041",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "自分の場のほかの「GR団のミュウツー」の「わるいはどう」がはたらいているときや、このカードが、「ねむり・マヒ・こんらん」状態のとき、この力は、はたらかない。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.311「ポケモンの特殊能力を使う」（自動的にはたらく特殊能力は宣言しない。GR-2000-P311-POKEMON-POWERS）",
+     "checked": "kyuura_image"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-DARK-POKEMON-CATEGORY",
+    "CR-DARK-PULSE-DAMAGE-STEP",
+    "UQ-DARK-PULSE-TIMING",
+    "UQ-SELF-EXCLUDING-POWER-COPIES"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "カードの文面は kyuura のデータで、2026-10-31 にカードの画像（IMG-PRN-041）で全文が同じことを確かめた。『オフィシャルブック2000』（2000-02-29）はこのカード（GB2 のプロモ）より前の本で、このカードの解説はない。",
+    "公式サイトの Q&A（2002-05-24）の「ポケボディー」の一覧に「わるいはどう」がある（MIX-POWER-ERRATA）。後年の分類で、コインの時点・共有の範囲はこの分類から決めていない。ポケモンカードGB2 のゲームの中の処理も根拠にしていない。"
+   ]
+  },
+  {
+   "id": "CR-DARK-POKEMON-CATEGORY",
+   "topic": "「わるい」ポケモン（わるいはどう・わるいぞうふく）",
+   "cards": [
+    {
+     "card_id": "PRN-041",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいはどう"
+     }
+    },
+    {
+     "card_id": "PRN-041",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "わるいぞうふく"
+     }
+    }
+   ],
+   "related_cards": [
+    "neo1-094",
+    "neo4-077",
+    "neo4-105"
+   ],
+   "question": "［わるいはどう］・わるいぞうふくの「「わるい」ポケモン」はどのポケモンか。「悪」タイプのポケモン、GR団のミュウツー自身、「わるい」ポケモンに変身しているメタモンは入るか",
+   "conclusion": "カードの名前が「わるい」で始まるポケモン（わるいラッタ・わるいゲンガーなど。名前がちょうど「わるい」のポケモンのことではない）。「悪」タイプのポケモンとは別の分類で、「悪」タイプでも名前が「わるい」で始まらなければ入らない。GR団のミュウツー自身は名前が「わるい」で始まらないので入らない（このカードのわるいぞうふくのダメージに［わるいはどう］は追加しない）。「わるい」ポケモンに変身しているメタモンは、そのポケモンと同じ名前としてもあつかわれる（CR-TRANSFORM-NAME-AND-KIND）ので入る",
+   "status": "SUPPORTED",
+   "inference": "「「わるい」ポケモン」を定義した公式の文は見つけていない（docs/rules/japanese.md で未確認）。悪エネルギー（neo1-094）・やさしいカイリキー（neo4-077）の説明は「悪」と「わるい」を並べて書くので、別の分類と読んだ。kyuura のデータで名前が「わるい」で始まるカードは 61 枚で、どれも「悪」タイプではない。ポケモン性格判定（neo4-105）は「わるい」ポケモン・「やさしい」ポケモンを並べ、カードの名前の分類として読める。そこで名前の先頭の「わるい」で分類すると読んだ。名前の一部による分類を書いた規定はない",
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "neo1-094",
+     "field": "energy.text.ja",
+     "quote": "「悪」または「わるい」ポケモンでないなら",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo4-077",
+     "field": "pokemon.attacks[0].text.ja",
+     "quote": "相手が「わるい」ポケモンまたは「悪」ポケモンなら",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "neo4-105",
+     "field": "trainer.text.ja",
+     "quote": "「わるい」ポケモン、「やさしい」ポケモン、それ以外の「進化カード」",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（GR-2000-P324-TRANSFORM-NAME-AND-KIND）",
+     "checked": "kyuura_image",
+     "quote": "ただし、変身しているポケモンは、変身の対象となっているポケモンと同じ名前のポケモンとしてもあつかわれますが、同時に、変身する前の名前（自分自身の名前）のポケモンとしてもあつかわれます。"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P324-TRANSFORM-NAME-AND-KIND"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-DARK-PULSE-SCOPE",
+    "CR-DARK-COSTUME-COINS",
+    "CR-TRANSFORM-NAME-AND-KIND"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "カードの名前をちょうど「わるい」と比べる処理（特定の名前を完全一致で数える形）は、「わるいラッタ」などを数えず、この分類にならない。"
+   ]
+  },
+  {
+   "id": "CR-DARK-PULSE-DAMAGE-STEP",
+   "topic": "わるいはどう（GR団のミュウツー）",
+   "cards": [
+    {
+     "card_id": "PRN-041",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいはどう"
+     }
+    }
+   ],
+   "related_cards": [],
+   "question": "［わるいはどう］の追加は、ワザによるダメージ計算の順番（p.321）のどの段階か",
+   "conclusion": "［わるいはどう］がはたらく場面では、GR団のミュウツーはベンチにいる（ワザを使うのはバトル場の「わるい」ポケモンで、GR団のミュウツー自身は「わるい」ポケモンではないため）。追加は 6（それ以外の「ダメージを変更する効果」）。2 までで 0 以下なら計算はそこで終わり（「ダメージを与えなかった」）、追加はない。3〜5 で途中が 0 以下になっても、6 の追加で最終的に正になれば、ダメージを与える。同じ 6 段階に重なる効果との順番は、ワザを使うプレイヤーが決める（コインの結果を知ってから決めるかは UQ-DARK-PULSE-TIMING）",
+   "status": "SUPPORTED",
+   "inference": "わるいはどうの「ダメージを追加する」を「ダメージを変更する効果」と読み、ベンチの GR団のミュウツーの力を 6 の例（控えポケモンの特殊能力）に当てはめた。ワザを使うポケモン自身の効果（2）でも、ワザを受けるポケモン・ついているカードの効果（5・7・8）でもない。ほかのポケモンの力でワザを使うポケモンが変わる場合（バトル場にいないポケモンがワザを使う効果）は調べていない。アンノーンの［DARK df］の段階（CR-UNOWN-DF-DAMAGE-STEP）と同じ読み方",
+   "basis": [
+    {
+     "kind": "general_rule",
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9 ワザによるダメージ計算の順番」（GR-2000-P321-DAMAGE-ORDER）",
+     "checked": "kyuura_image"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PRN-041",
+     "field": "pokemon.powers[0].text.ja",
+     "quote": "この力は、自分の場の「わるい」ポケモンがワザによるダメージを与えるとき、はたらく。",
+     "checked": "kyuura_data"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER"
+   ],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-DARK-PULSE-SCOPE",
+    "CR-UNOWN-DF-DAMAGE-STEP",
+    "UQ-DARK-PULSE-TIMING"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "『オフィシャルブック2000』はこのカードを載せていない。カードの文面と既存の一般の規定による。"
+   ]
+  },
+  {
+   "id": "CR-DARK-COSTUME-COINS",
+   "topic": "わるいぞうふく（GR団のミュウツー）",
+   "cards": [
+    {
+     "card_id": "PRN-041",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "わるいぞうふく"
+     }
+    }
+   ],
+   "related_cards": [
+    "PMCG6-087"
+   ],
+   "question": "わるいぞうふくは、何枚コインを投げ、どれだけダメージを追加するか。［わるいはどう］のコインや、ワザのコインをやり直す効果との関係は",
+   "conclusion": "ワザを使うときに、自分のベンチにいる「わるい」ポケモンの数だけコインを投げ、「おもて」の数×20 を 20 に追加する（ベンチに「わるい」ポケモンがいなければコインは投げず、20）。数えるのは自分のベンチだけで、バトル場・相手の場のポケモンは数えない。これはワザの説明のコインで、［わるいはどう］の特殊能力の説明のコインとは別のもの。ナツメのESP（PMCG6-087）のやり直しは「そのワザの説明文に書かれているすべてのコイントス」なので、特殊能力のコインはふくまない。「わるい」ポケモンの範囲は CR-DARK-POKEMON-CATEGORY",
+   "status": "CONFIRMED",
+   "inference": null,
+   "basis": [
+    {
+     "kind": "card_text",
+     "card_ref": "PRN-041",
+     "field": "pokemon.attacks[0].text.ja",
+     "quote": "自分のベンチの「わるい」ポケモンの数ぶんコインを投げ、「おもて」の数×20のダメージを追加する。",
+     "checked": "kyuura_data"
+    },
+    {
+     "kind": "card_text",
+     "card_ref": "PMCG6-087",
+     "field": "trainer.text.ja",
+     "quote": "そのワザの説明文に書かれているすべてのコイントスを、もう1度やり直してよい。",
+     "checked": "kyuura_data"
+    }
+   ],
+   "rule_clause_refs": [],
+   "latest_description_refs": [],
+   "related_rulings": [
+    "CR-DARK-POKEMON-CATEGORY",
+    "CR-DARK-PULSE-SCOPE"
+   ],
+   "engine_refs": [],
+   "notes": [
+    "カードの文面は kyuura のデータで、2026-10-31 にカードの画像（IMG-PRN-041）で全文が同じことを確かめた。",
+    "ナツメのESP は「ナツメのポケモン」につけるので、GR団のミュウツー・「わるい」ポケモンにはつかない。カードの文面の範囲を書いただけで、同時に起こる場面は kyuura のデータで見つけていない。"
+   ]
   }
  ],
  "issues": [
@@ -25522,7 +26727,8 @@
    ],
    "notes": [
     "エンジンの記録（停止コードで止める未解決の問い）を取り込んだ。kyuura による原典の再読・新しい裁定はない。",
-    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。"
+    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。",
+    "2026-10-31: 『オフィシャルブック2000』p.324〜325「20 ポケモンの変身」を原典の画像で読んだ（条項 GR-2000-P324-TRANSFORM-TOP-CARD など）。TF1 の中心（写したカードの特殊能力を持つか）は、「いちばん上にあるカードに書かれている内容を、すべて持っており」で持つ（CR-TRANSFORM-COPIES-TOP-CARD）。持った特殊能力がいつ使える・はたらくか（回数の制限、ほかの効果との関係）は残る。TF2 は、ばけているタケシのキュウコンなら、いちばん上ののせた進化カードの内容を持つと読めるが、名前・種類の扱いと、ポケモンとして出したトレーナーカードは残る（UQ-SUPER-TRANSFORM-TARGETS と同じ形）。TE1 は、p.239 の［へんしん］の解説が「「レインボーエネルギーカード」がついている状態と同じ」とする（画像で読んだ）が、レインボーエネルギーの数え方も決まっていない（UQ-SPECIAL-ENERGY-AS-TYPED-ENERGY）ので残る。色の数（6 か 8 か）は UQ-TRANSFORM-ENERGY-COLOR-LIST。この論点の status・cases・engine_refs は変えていない。"
    ],
    "audit": {
     "audited_on": "2026-10-19",
@@ -26238,7 +27444,8 @@
    ],
    "notes": [
     "エンジンの記録（停止コードで止める未解決の問い）を取り込んだ。kyuura による原典の再読・新しい裁定はない。",
-    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。"
+    "エンジンが停止コードを分けている問いを、同じ形の問い・同じカードの効果の問いとしてまとめた（cases にエンジンの id）。カードごとの答えは同じとは限らない。",
+    "2026-10-31: 事例 RX1（ワザの途中の入れ替えで、ワザを使っている［へんしん］のメタモンの姿が変わる）は、p.325 の「ワザ…が使われたとき、それを使ったことによって起こるすべてのことがらが終了するまで、変身の状態は変化しません」で、そのワザが終わるまで姿が変わらないと決まる（CR-TRANSFORM-FROZEN-DURING-ACTION。2026-10-31 に原典の画像で読んだ）。この論点のほかの事例（使える時点・計算し直し）は残る。status・cases・engine_refs は変えていない。"
    ],
    "audit": {
     "audited_on": "2026-10-19",
@@ -28491,7 +29698,8 @@
     "kyuura の論点（2026-10-24 のアンノーンI・D・F・[N]・[J] の調査で、カードの文面から立てた）。kyuura の engine_unresolved_index は取り込んだ版（v0.68 まで）の項目だけで、この問いに結ぶ項目はない。エンジン v0.86 の CV1（わるいデンリュウ）は同じ形の問いだが、kyuura は v0.86 を取り込んでいないので engine_refs に結んでいない。",
     "重ならないこと（多くても 1 つ）は CR-UNOWN-DF-AT-MOST-ONE（カードの文面）。",
     "同じ形でも、アンノーンA の［ANGER］・サカキのニドキングの［めいれい］は「…が使っているとき、この力は使えない」（使う順番の書き方）で、この論点に入れていない。",
-    "どれがはたらくかは、効果を除くワザの読み方と組み合わさると結果を変える: ブラッキーの「だましうち」・スピードスターで、受けるアンノーンが D の 1 匹で、ベンチにも D がいるとき、受けるポケモン自身の効果だけを除く読み方なら、はたらくのが受ける D 自身なら除かれ（30）、ベンチの D なら減る（0）。uid・場の並び・場に出た順で代表を選ぶ処理は、公式の裁定ではない。"
+    "どれがはたらくかは、効果を除くワザの読み方と組み合わさると結果を変える: ブラッキーの「だましうち」・スピードスターで、受けるアンノーンが D の 1 匹で、ベンチにも D がいるとき、受けるポケモン自身の効果だけを除く読み方なら、はたらくのが受ける D 自身なら除かれ（30）、ベンチの D なら減る（0）。uid・場の並び・場に出た順で代表を選ぶ処理は、公式の裁定ではない。",
+    "2026-10-31: GR団のミュウツーの読み方の比べ。2 匹以上がはたらきうるとき、(a) たがいに止めて 1 つもはたらかない読み方では、コインを投げず追加 0。(b) 1 匹だけがはたらく読み方では、1 回コイン（1〜2 枚）を投げて 0・10・20 を追加する。(b) の中では、どれがはたらいても説明は同じなので、コインの枚数・追加の量・処理は変わらない。違いが出るのは、はたらいているものが途中で場をはなれる・ねむり・マヒ・こんらんになる（バトル場の GR団のミュウツーだけ）・メタモンの変身が終わる場面だけ。場の並び・カードの番号・場に出た順で 1 つを選ぶ処理は公式の裁定ではない。 GR団のミュウツーに変身した拡張シート第2弾赤版のメタモンも「GR団のミュウツー」としてあつかわれ、写した［わるいはどう］を持つ（CR-TRANSFORM-NAME-AND-KIND。事例は UQ-SUPER-TRANSFORM-COPIED-POWERS）。この論点の status・cases・監査は変えていない。"
    ],
    "audit": {
     "audited_on": "2026-10-24",
@@ -29105,6 +30313,868 @@
     "game_effect_note": "トラッシュ・山札の行き先（どちらのプレイヤーのカードの数が変わるか）と、きぜつしたときにサイドを取るかが変わる",
     "resolution_needs": "当時の日本語の公式の資料で、とりかえっこプリーズで交換したカードの持ち主と、トラッシュ・山札・サイドのあつかいを書いたもの",
     "searched": "kyuura の記録（data/sidecar/・data/rule_history.json の RUL-SLOWKING など）、公式ルールの既存の読み取り（条項）と既存の転記 data/Silver_Bible_structured.md。当時の Q&A・雑誌・大会の裁定は今回探していない。新しい原典の読み取りはしていない",
+    "new_sources": []
+   }
+  },
+  {
+   "id": "UQ-TRANSFORM-ENERGY-COLOR-LIST",
+   "status": "UNRESOLVED",
+   "question": "メタモン（化石の秘密。PMCG3-042）の［へんしん］で、ついているエネルギーカードは「悪」「鋼」のエネルギーとしてもあつかわれるか（『オフィシャルブック2000』の 2 か所の説明で、挙げる色の数が違う）",
+   "why_unresolved": "p.239 のこのカードの欄（見出し「ポケモンカード第3弾化石の秘密」）の［へんしん］の説明は「草・炎・水・雷・超・闘・悪・鋼」の 8 つの色を挙げ、同じ本の公式ルール p.324 の「ポケモンの変身」が引く［へんしん］の説明（「：最新の説明」と書く）は「草・炎・水・雷・超・闘」の 6 つを挙げる。どちらも原典の印刷（2026-10-31 に画像で確かめた）で、転記の誤りではない。どちらにしたがうかを書いた文はない（p.6 はカードの記述を最新の説明とし、p.307 はカードの記述がルールより優先するとするが、p.324 の引用も「最新の説明」と書き、公式ルールの中の文である）。印刷の文面は「どの色のエネルギーとしても使うことができる」で色を挙げない。p.239 の解説は「何色のエネルギーとしてもあつかわれます」「「レインボーエネルギーカード」がついている状態と同じ」とし、『トレーナーズ』Vol.5（2000-03-01）の要約（既存の読み取り。文の引用は記録していない）は、へんしんを悪・鋼をふくむ 8 タイプを並べた「最新の説明」で扱うとする",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "239",
+     "location": "p.239 のメタモン（拡張シート第2弾赤版・化石の秘密）の欄の最新の説明と解説（2026-10-31 に読んだ）"
+    },
+    {
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（2026-10-31 に読んだ）"
+    },
+    {
+     "source": "P38",
+     "page": "58〜62",
+     "location": "「ポケモンカード★ネオ プレイルールQ&A」（既存の読み取りの要約。NEO-2000-PLAYRULE の notes。kyuura は今回読み直していない）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-P43-P6-LATEST-DESCRIPTION",
+    "GR-2000-P307-CARD-OVER-RULE",
+    "GR-2000-P324-TRANSFORM-DEFINITION"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG3-042",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "へんしん"
+     },
+     "note": "写したワザの必要なエネルギーに悪・鋼の記号があるとき、基本エネルギーカードで払えるか（8 色なら払える、6 色なら払えない）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "kyuura の登録表の写し（kyuura-engine v0.113）でこのカードは登録済み。kyuura-engine v0.123 は比べるためだけに読んだ",
+    "all_cards": "［へんしん］のほかに、同じ本で 2 か所に違う説明がある例は調べていない"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [
+    "UQ-TRANSFORM-SCOPE",
+    "UQ-SUPER-TRANSFORM-ENERGY-COLORS"
+   ],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-2D113B5",
+    "date": "2026-10-31"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-31 に原典の画像を読んで立てた）。エンジンの記録に結ぶ裁定はない。",
+    "2 か所の説明がどちらも「最新の説明」なので、この記録では最新の説明（LD-）として 1 つを登録していない。拡張シート第2弾赤版のメタモン（ES2-032）の［すごいへんしん］は p.239 だけにあり（8 色）、p.324 は引いていないので、この食い違いはない（LD-ES2-032-PWR0）。",
+    "悪・鋼のエネルギーは、2000.02.14 版のルールでは特殊エネルギー（基本エネルギーカードは 6 種類）。印刷の「どの色」が、印刷のあとに加わった悪・鋼をふくむかは、この記録では決めていない。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-31",
+    "game_effect": "game_result",
+    "game_effect_note": "写したワザの悪・鋼の記号を、ついているエネルギーで払えるか（ワザを使えるか）が変わる",
+    "resolution_needs": "当時の日本語の公式の資料で、化石のメタモンの［へんしん］の色の範囲（悪・鋼をふくむか）を書いたもの（『トレーナーズ』Vol.5 pp.58〜62 の該当の文の引用をふくむ）",
+    "searched": "kyuura の記録（data/rule_history.json の NEO-2000-PLAYRULE・P43 のページの記録）、『オフィシャルブック2000』p.239・p.324 の原典の画像（2026-10-31）。『トレーナーズ』Vol.5 の誌面は今回読み直していない",
+    "new_sources": [
+     {
+      "source": "P43",
+      "page": "239",
+      "what": "化石のメタモンの［へんしん］の欄の説明は 8 色。解説は「何色のエネルギーとしてもあつかわれます」",
+      "resolves": false
+     },
+     {
+      "source": "P43",
+      "page": "321〜325",
+      "what": "p.324 が引く［へんしん］の説明は 6 色（「：最新の説明」）",
+      "resolves": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "UQ-SUPER-TRANSFORM-TARGETS",
+   "status": "UNRESOLVED",
+   "question": "［すごいへんしん］で選べるポケモンと、選んだときに「同じカード」になるカードはどれか（自分自身、変身・ばけているポケモン、ポケモンとして出したトレーナーカードを選んだとき）",
+   "why_unresolved": "最新の説明は「おたがいの場にいるポケモンの中から1匹を選び、…その選んだポケモンと同じカードとしてあつかう」とし、選べないポケモンを書かない。公式ルール p.324 は、変身しているポケモンは変身の対象を構成するカードのうち、いちばん上のカードの内容を持つとする。ばけているタケシのキュウコンを選べば、いちばん上ののせた進化カードの内容を持つと読めるが、そのポケモンが「のせた進化カードのポケモン」と「タケシのキュウコン」の2 つの名前・種類としてあつかわれるとき、メタモンがどの名前を持つかは書かれていない。変身しているメタモン（いちばん上のカードはメタモン）を選んだときに、メタモンのカードと同じになるのか、そのメタモンが今あつかわれているカードと同じになるのかも書かれていない。自分自身を選べるか、選んだら何と同じになるか、トレーナーカードをポケモンとして出したもの（いちばん上のカードはトレーナーカード）を選べるかも書かれていない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "239",
+     "location": "p.239 のメタモン（拡張シート第2弾赤版・化石の秘密）の欄の最新の説明と解説（2026-10-31 に読んだ）"
+    },
+    {
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（2026-10-31 に読んだ）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P324-TRANSFORM-TOP-CARD",
+    "GR-2000-P324-TRANSFORM-NAME-AND-KIND"
+   ],
+   "cases": [
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     },
+     "note": "自分自身を選ぶ（変身していないとき・ほかのポケモンに変身しているとき）"
+    },
+    {
+     "card_id": "PMCG5-019",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ばける"
+     },
+     "note": "ばけているタケシのキュウコンを選ぶ。のせた進化カードと同じになるか、名前は何か"
+    },
+    {
+     "card_id": "PMCG3-042",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "へんしん"
+     },
+     "note": "［へんしん］で相手の対戦ポケモンと同じカードになっているメタモン（いちばん上のカードはメタモン）を選ぶ"
+    },
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     },
+     "note": "ほかの［すごいへんしん］のメタモン（拡張シート第2弾赤版）で、変身しているものを選ぶ"
+    },
+    {
+     "card_id": "PMCG3-046",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "なにかの化石"
+     },
+     "note": "ポケモンとしてベンチに出したなにかの化石を選べるか。選んだら何と同じになるか"
+    },
+    {
+     "card_id": "PMCG1-091",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "ピッピ人形"
+     },
+     "note": "同じ"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "kyuura の登録表の写し（kyuura-engine v0.113）でメタモン（拡張シート第2弾赤版）は登録されていない。kyuura-engine v0.123（25552b8）は比べるためだけに読んだ（このカードは未対応）",
+    "all_cards": "場のポケモンを指す・変える効果をすべては調べていない"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [
+    "UQ-TRANSFORM-SCOPE",
+    "UQ-PLAY-AS-POKEMON",
+    "UQ-SUPER-TRANSFORM-COPIED-POWERS"
+   ],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-2D113B5",
+    "date": "2026-10-31"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-31 に原典の画像を読んで立てた）。エンジンの記録に結ぶ裁定はない。",
+    "対戦準備のあとに場のポケモンが裏向きになる効果は、kyuura のカードの文面に見つけていない（探した範囲）ので、裏向きのカードは事例にしていない。",
+    "［へんしん］の相手のポケモンが「ばける」でほかのポケモンになっているとき・ポケモンとして出したトレーナーカードのとき（エンジン v0.49 の TF2）も同じ形の問い。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-31",
+    "game_effect": "game_result",
+    "game_effect_note": "選べるか、何と同じになるか（ワザ・HP・特殊能力・名前）が変わる",
+    "resolution_needs": "当時の日本語の公式の資料で、すごいへんしんで選べるポケモンと、変身・ばけているポケモン・ポケモンとして出したトレーナーカードを選んだときの扱いを書いたもの",
+    "searched": "kyuura の記録（data/sidecar/・data/rule_history.json）、『オフィシャルブック2000』p.239・p.324・p.325 の原典の画像（2026-10-31）、既存の転記 data/Silver_Bible_structured.md の「すごいへんしん」「へんしん」の記述（p.47・p.72・p.136・p.161・p.260 など。kyuura は画像を読んでいない）、カードの画像（IMG-ES2-032）、日本語のウェブ検索（「すごいへんしん」の裁定。カードの販売・紹介のページだけで、裁定は見つからない）。当時の Q&A・『トレーナーズ』・大会の裁定のこのカードの記述は、kyuura のスキャンの記録には見つけていない",
+    "new_sources": [
+     {
+      "source": "P43",
+      "page": "239",
+      "what": "すごいへんしんの最新の説明（8 色・おたがいの場）と解説（もとのポケモンがきぜつしたり場を離れるともどる）。この問いを決める文はない",
+      "resolves": false
+     },
+     {
+      "source": "P43",
+      "page": "321〜325",
+      "what": "「20 ポケモンの変身」の規定（いちばん上のカードの内容・名前と種類・新しく場に出たのではない・最中は変化しない）。この問いを決める文はない",
+      "resolves": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "UQ-SUPER-TRANSFORM-SOURCE-CHANGES",
+   "status": "UNRESOLVED",
+   "question": "［すごいへんしん］で変身したあとに、変身のもとのポケモンが場にいたまま変わったとき（進化・退化・ばける・変身・エネエネでエネルギーになる）、メタモンは選んだときのカードと同じままか、変わったあとのいちばん上のカードにしたがうか。どれが「へんしんのもとになっていたポケモンが場をはなれた」に当たるか",
+   "why_unresolved": "最新の説明は「その選んだポケモンと同じカードとしてあつかう」「へんしんのもとになっていたポケモンが場をはなれたときも…もどる」とだけ書く。公式ルール p.324 は「変身の対象となっているポケモン」のいちばん上のカードの内容を持つとし、今のいちばん上のカードとも読めるが、選んだときのカードを保つかは書かない。進化したポケモン（p.310）・退化したポケモン（p.324）は前のポケモンとは別のポケモンとしてあつかうが、カードは場に残る。［エネエネ］（PMCG1-040）は、マルマインがみずから「きぜつ」してエネルギーとして場のポケモンにつく（カードは場に残るが、ポケモンではなくなる）。解説はもとのポケモンが「きぜつしたり場を離れると」もどるとするが、エネエネのきぜつがこれに当たるか、場に残る変化がどれに当たるかは書かれていない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "239",
+     "location": "p.239 のメタモン（拡張シート第2弾赤版・化石の秘密）の欄の最新の説明と解説（2026-10-31 に読んだ）"
+    },
+    {
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（2026-10-31 に読んだ）"
+    },
+    {
+     "source": "P43",
+     "page": "306〜311",
+     "location": "p.310「進化」（進化前とは別のポケモン。GR-2000-P310-EVOLUTION）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P324-TRANSFORM-TOP-CARD",
+    "GR-2000-P310-EVOLUTION",
+    "GR-2000-P324-DEVOLUTION",
+    "GR-2000-P312-FIELD"
+   ],
+   "cases": [
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     },
+     "note": "変身のもとのポケモンが進化した（別のポケモンになる。カードは場に残る）"
+    },
+    {
+     "card_id": "PMCG1-086",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "退化スプレー"
+     },
+     "note": "変身のもとのポケモンが退化した（取りのぞいた進化カードは手札にもどる）"
+    },
+    {
+     "card_id": "PMCG5-019",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "ばける"
+     },
+     "note": "変身のもとのタケシのキュウコンがばける・もとにもどる"
+    },
+    {
+     "card_id": "PMCG3-042",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "へんしん"
+     },
+     "note": "変身のもとが［へんしん］のメタモンで、相手の対戦ポケモンが入れかわってその姿が変わる"
+    },
+    {
+     "card_id": "PMCG1-040",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "エネエネ"
+     },
+     "note": "変身のもとのマルマインが［エネエネ］できぜつしてエネルギーとしてつく"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "kyuura の登録表の写し（kyuura-engine v0.113）でメタモン（拡張シート第2弾赤版）は登録されていない。kyuura-engine v0.123（25552b8）は比べるためだけに読んだ（このカードは未対応）",
+    "all_cards": "場のポケモンを指す・変える効果をすべては調べていない"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [
+    "UQ-SUPER-TRANSFORM-TARGETS",
+    "UQ-SHAPESHIFT-SCOPE"
+   ],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-2D113B5",
+    "date": "2026-10-31"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-31 に原典の画像を読んで立てた）。エンジンの記録に結ぶ裁定はない。",
+    "バトル場とベンチのあいだを動くのは場をはなれることではない（CR-SUPER-TRANSFORM-REVERT-CONDITIONS）。手札・山札・トラッシュに移るのは場をはなれる。",
+    "エンジンの［へんしん］の今の姿の決め方（問い合わせのたびに相手の対戦ポケモンのいちばん上のカードを読む）は実装で、この問いの根拠にしていない。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-31",
+    "game_effect": "game_result",
+    "game_effect_note": "メタモンのワザ・HP・特殊能力と、もとにもどってきぜつするかが変わる",
+    "resolution_needs": "当時の日本語の公式の資料で、すごいへんしんの変身のもとが進化・退化・ばける・エネエネなどで変わったときの扱いを書いたもの",
+    "searched": "kyuura の記録（data/sidecar/・data/rule_history.json）、『オフィシャルブック2000』p.239・p.324・p.325 の原典の画像（2026-10-31）、既存の転記 data/Silver_Bible_structured.md の「すごいへんしん」「へんしん」の記述（p.47・p.72・p.136・p.161・p.260 など。kyuura は画像を読んでいない）、カードの画像（IMG-ES2-032）、日本語のウェブ検索（「すごいへんしん」の裁定。カードの販売・紹介のページだけで、裁定は見つからない）。当時の Q&A・『トレーナーズ』・大会の裁定のこのカードの記述は、kyuura のスキャンの記録には見つけていない",
+    "new_sources": [
+     {
+      "source": "P43",
+      "page": "239",
+      "what": "すごいへんしんの最新の説明（8 色・おたがいの場）と解説（もとのポケモンがきぜつしたり場を離れるともどる）。この問いを決める文はない",
+      "resolves": false
+     },
+     {
+      "source": "P43",
+      "page": "321〜325",
+      "what": "「20 ポケモンの変身」の規定（いちばん上のカードの内容・名前と種類・新しく場に出たのではない・最中は変化しない）。この問いを決める文はない",
+      "resolves": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "UQ-SUPER-TRANSFORM-COPIED-POWERS",
+   "status": "UNRESOLVED",
+   "question": "［すごいへんしん］で特殊能力を持つポケモンに変身したメタモンは、写した特殊能力をどう使う・はたらかせるか（回数の制限のある力、「自分の場のほかの〇〇」を参照する力、もう 1 枚の拡張シート第2弾赤版のメタモンの［すごいへんしん］を写したとき）",
+   "why_unresolved": "写したカードの特殊能力を持つことは p.324 で決まる（CR-TRANSFORM-COPIES-TOP-CARD）。しかし、「自分の番ごとに1回」の力を、変身のもとのポケモン・変身する前のメタモンがその番にすでに使っていたときに使えるか、メタモンが変身のもとと同じ名前としてもあつかわれるときに「自分の場のほかの「GR団のミュウツー」」の数え方に入るか、もう 1 枚のメタモンの［すごいへんしん］を写したとき、引き続き持つ自分の［すごいへんしん］と2 つの同じ力を持つことになるか（1 つの番に 2 回使えるか）は書かれていない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "239",
+     "location": "p.239 のメタモン（拡張シート第2弾赤版・化石の秘密）の欄の最新の説明と解説（2026-10-31 に読んだ）"
+    },
+    {
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（2026-10-31 に読んだ）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P324-TRANSFORM-TOP-CARD",
+    "GR-2000-P324-TRANSFORM-NAME-AND-KIND",
+    "GR-2000-P325-TRANSFORM-NOT-NEW"
+   ],
+   "cases": [
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     },
+     "note": "自分の番ごとに 1 回の力を持つポケモンに変身し、その番に変身のもとがその力をすでに使っていた"
+    },
+    {
+     "card_id": "PRN-041",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいはどう"
+     },
+     "note": "GR団のミュウツーに変身したメタモンは「GR団のミュウツー」としてもあつかわれ、［わるいはどう］を持つ。本物の GR団のミュウツーと 2 匹になる（UQ-SELF-EXCLUDING-POWER-COPIES）"
+    },
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     },
+     "note": "もう 1 枚の拡張シート第2弾赤版のメタモン（変身していない）を選んで、［すごいへんしん］を 2 つ持つことになるか"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "kyuura の登録表の写し（kyuura-engine v0.113）でメタモン（拡張シート第2弾赤版）は登録されていない。kyuura-engine v0.123（25552b8）は比べるためだけに読んだ（このカードは未対応）",
+    "all_cards": "場のポケモンを指す・変える効果をすべては調べていない"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [
+    "UQ-TRANSFORM-SCOPE",
+    "UQ-SELF-EXCLUDING-POWER-COPIES",
+    "UQ-SUPER-TRANSFORM-TARGETS"
+   ],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-2D113B5",
+    "date": "2026-10-31"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-31 に原典の画像を読んで立てた）。エンジンの記録に結ぶ裁定はない。",
+    "場に出たときにはたらく・使える力は、変身しても新しく場に出たことにならないので、その時点にならない（CR-TRANSFORM-NOT-NEWLY-PLAYED）。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-31",
+    "game_effect": "game_result",
+    "game_effect_note": "1 つの番に使える特殊能力の回数と、ダメージに加える量が変わる",
+    "resolution_needs": "当時の日本語の公式の資料で、変身したポケモンが写した特殊能力の回数の制限・名前を参照する力をどう扱うかを書いたもの",
+    "searched": "kyuura の記録（data/sidecar/・data/rule_history.json）、『オフィシャルブック2000』p.239・p.324・p.325 の原典の画像（2026-10-31）、既存の転記 data/Silver_Bible_structured.md の「すごいへんしん」「へんしん」の記述（p.47・p.72・p.136・p.161・p.260 など。kyuura は画像を読んでいない）、カードの画像（IMG-ES2-032）、日本語のウェブ検索（「すごいへんしん」の裁定。カードの販売・紹介のページだけで、裁定は見つからない）。当時の Q&A・『トレーナーズ』・大会の裁定のこのカードの記述は、kyuura のスキャンの記録には見つけていない",
+    "new_sources": [
+     {
+      "source": "P43",
+      "page": "321〜325",
+      "what": "「20 ポケモンの変身」の規定（いちばん上のカードの内容・名前と種類・新しく場に出たのではない・最中は変化しない）。この問いを決める文はない",
+      "resolves": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "UQ-SUPER-TRANSFORM-SUPPRESSED-FORM",
+   "status": "UNRESOLVED",
+   "question": "かがくへんかガス（ベトベトン PMCG3-007）・いあつ（わるいオーダイル neo4-039）で特殊能力が使えない・はたらかないとき、［すごいへんしん］ですでに変身しているメタモンはそのままか、メタモンにもどるか。メタモンがかがくへんかガス・いあつを持つポケモンに変身したときはどうなるか",
+   "why_unresolved": "［すごいへんしん］の説明が書くもどる場面は、バトル場をはなれたとき・ねむり・マヒ・こんらんのとき・もとのポケモンが場をはなれたとき・「うら」のときだけで、ほかの効果で力が使えないときを書かない。かがくへんかガスは「特殊能力は使えず、その力も消える」とし、いあつは「ワザ・特殊能力」を使うことができず、「それらの効果もすべて消える」とするので、使うことだけでなく、すでに起こった変身（「以後…あつかう」）も消えるかが決まらない。ねむり・マヒ・こんらんのときにもどるという説明を、ガスのときにそのまま当てはめる根拠はない。メタモンがベトベトンに変身すると、写したかがくへんかガス（自分自身の「かがくへんかガス」は除く）が自分の［すごいへんしん］を消すか（消えて変身が終われば、ガスもなくなる）も書かれていない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "239",
+     "location": "p.239 のメタモン（拡張シート第2弾赤版・化石の秘密）の欄の最新の説明と解説（2026-10-31 に読んだ）"
+    },
+    {
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（2026-10-31 に読んだ）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P311-POKEMON-POWERS",
+    "GR-2000-P324-TRANSFORM-TOP-CARD"
+   ],
+   "cases": [
+    {
+     "card_id": "PMCG3-007",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "かがくへんかガス"
+     },
+     "note": "場にベトベトンがいるあいだ、変身しているメタモンはそのままか、もどるか。メタモンがベトベトンに変身したとき"
+    },
+    {
+     "card_id": "neo4-039",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "いあつ"
+     },
+     "note": "相手の場のベイビィポケモンに変身しているメタモン（ベイビィポケモンとしてもあつかわれる）に、相手のわるいオーダイルのいあつがはたらくとき"
+    },
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     },
+     "note": "ガスで使えないあいだに、変身のもとのポケモンが場をはなれたとき（説明のもどる場面）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "kyuura の登録表の写し（kyuura-engine v0.113）でメタモン（拡張シート第2弾赤版）は登録されていない。kyuura-engine v0.123（25552b8）は比べるためだけに読んだ（このカードは未対応）",
+    "all_cards": "場のポケモンを指す・変える効果をすべては調べていない"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [
+    "UQ-SHAPESHIFT-SCOPE",
+    "UQ-SUPER-TRANSFORM-COPIED-POWERS"
+   ],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-2D113B5",
+    "date": "2026-10-31"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-31 に原典の画像を読んで立てた）。エンジンの記録に結ぶ裁定はない。",
+    "使えなくなること（新しく使う宣言ができない）と、すでに得た姿が消えることは分けて扱う。［へんしん］（常にはたらく力）はガスで力が消えれば姿も消えると読めるが、［すごいへんしん］は使ったあとに「以後…あつかう」とする力で、同じとは決めていない。",
+    "タケシのキュウコンの［ばける］がガスで消えるとき（エンジン v0.49 の DG1。UQ-SHAPESHIFT-SCOPE）も同じ形の問い。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-31",
+    "game_effect": "game_result",
+    "game_effect_note": "メタモンの姿（ワザ・HP・特殊能力）と、もどってきぜつするかが変わる",
+    "resolution_needs": "当時の日本語の公式の資料で、かがくへんかガス・いあつのある場で、すごいへんしんの変身がどうなるかを書いたもの",
+    "searched": "kyuura の記録（data/sidecar/・data/rule_history.json）、『オフィシャルブック2000』p.239・p.324・p.325 の原典の画像（2026-10-31）、既存の転記 data/Silver_Bible_structured.md の「すごいへんしん」「へんしん」の記述（p.47・p.72・p.136・p.161・p.260 など。kyuura は画像を読んでいない）、カードの画像（IMG-ES2-032）、日本語のウェブ検索（「すごいへんしん」の裁定。カードの販売・紹介のページだけで、裁定は見つからない）。当時の Q&A・『トレーナーズ』・大会の裁定のこのカードの記述は、kyuura のスキャンの記録には見つけていない",
+    "new_sources": [
+     {
+      "source": "P43",
+      "page": "239",
+      "what": "すごいへんしんの最新の説明（8 色・おたがいの場）と解説（もとのポケモンがきぜつしたり場を離れるともどる）。この問いを決める文はない",
+      "resolves": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "UQ-SUPER-TRANSFORM-ENERGY-COLORS",
+   "status": "UNRESOLVED",
+   "question": "［すごいへんしん］の「「エネルギーカード」は、このカードについているかぎり、…どの「色（タイプ）」のエネルギーとしても、あつかわれる」は、(1) 変身していないとき・ベンチにいるとき・ねむり・マヒ・こんらんのとき（「この力は使えず」）にも当てはまるか、(2) ワザ・トレーナーカードが色のエネルギーを数える・選ぶ・トラッシュするとき、どう数えるか（同時にすべての色か、1 つの色か。「○エネルギーカード」に当たるか）、(3) 特殊エネルギー（無色2個エネルギーなど）にも当てはまるか（1 枚で違う 2 つの色を払えるか）",
+   "why_unresolved": "最新の説明は、エネルギーカードがどの色のエネルギーとしても「あつかわれる」と書き（印刷は「使える」）、条件を書かない。この文は力の説明の中にあり、ベンチ・特殊状態のときは「この力は使えず」とする（［へんしん］の「力は消え」とは書き方が違う）。数える・選ぶ効果に当てはめたとき、1 枚のエネルギーカードを同時にすべての色と数えるか、1 つの色を選ぶかは書かれていない。説明は「エネルギーとして」とし、「○エネルギーカード」として選べるかは書かない。無色2個エネルギーの説明は kyuura のデータにない（値の欠け）。p.239 の［へんしん］の解説は「レインボーエネルギーカード」がついている状態と同じとするが、レインボーエネルギーの数え方も決まっていない（UQ-SPECIAL-ENERGY-AS-TYPED-ENERGY）",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "239",
+     "location": "p.239 のメタモン（拡張シート第2弾赤版・化石の秘密）の欄の最新の説明と解説（2026-10-31 に読んだ）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-P43-P6-LATEST-DESCRIPTION"
+   ],
+   "cases": [
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     },
+     "note": "(1) 変身していないとき・ベンチ・特殊状態のとき。変身していないメタモンはワザがなく、にげるのエネルギーは無色なので、支払いでは違いが出ない。違いが出るのは、ほかのワザ・トレーナーカードがこのメタモンについている色のエネルギーを数える・選ぶとき"
+    },
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     },
+     "note": "(2) 写したワザが「○エネルギーの数」を数える・「○エネルギーカード」をトラッシュする。草の基本エネルギーカードを炎として数えるか、炎エネルギーカードとしてトラッシュできるか"
+    },
+    {
+     "card_id": "PMCG1-096",
+     "target": {
+      "kind": "card"
+     },
+     "note": "(3) 無色2個エネルギー 1 枚で、写したワザの違う 2 つの色の記号を払えるか（無色2個エネルギーの説明は kyuura のデータにない）"
+    },
+    {
+     "card_id": "PMCG4-065",
+     "target": {
+      "kind": "card"
+     },
+     "note": "(3) レインボーエネルギー（どの色の基本エネルギーカードとしても使える）はもとからどの色でも払える。数える・選ぶときの扱いは UQ-SPECIAL-ENERGY-AS-TYPED-ENERGY"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "kyuura の登録表の写し（kyuura-engine v0.113）でメタモン（拡張シート第2弾赤版）は登録されていない。kyuura-engine v0.123（25552b8）は比べるためだけに読んだ（このカードは未対応）",
+    "all_cards": "場のポケモンを指す・変える効果をすべては調べていない"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [
+    "UQ-SPECIAL-ENERGY-AS-TYPED-ENERGY",
+    "UQ-TRANSFORM-SCOPE",
+    "UQ-TRANSFORM-ENERGY-COLOR-LIST"
+   ],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-2D113B5",
+    "date": "2026-10-31"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-31 に原典の画像を読んで立てた）。エンジンの記録に結ぶ裁定はない。",
+    "支払いで基本エネルギーカードを悪・鋼をふくむどの色としても使えることは CR-SUPER-TRANSFORM-ENERGY-PAYMENT（変身しているとき）。",
+    "［へんしん］の同じ形の問いはエンジン v0.49 の TE1（タイプのエネルギーを数える・選ぶ）・v0.58 の TE2（無色の特殊エネルギー）。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-31",
+    "game_effect": "game_result",
+    "game_effect_note": "色のエネルギーを数える・選ぶ効果の結果と、特殊エネルギーで払えるワザが変わる",
+    "resolution_needs": "当時の日本語の公式の資料で、すごいへんしん（またはへんしん）の「どの色のエネルギーとしても」を、数える・選ぶ効果や特殊エネルギーにどう当てはめるかを書いたもの",
+    "searched": "kyuura の記録（data/sidecar/・data/rule_history.json）、『オフィシャルブック2000』p.239・p.324・p.325 の原典の画像（2026-10-31）、既存の転記 data/Silver_Bible_structured.md の「すごいへんしん」「へんしん」の記述（p.47・p.72・p.136・p.161・p.260 など。kyuura は画像を読んでいない）、カードの画像（IMG-ES2-032）、日本語のウェブ検索（「すごいへんしん」の裁定。カードの販売・紹介のページだけで、裁定は見つからない）。当時の Q&A・『トレーナーズ』・大会の裁定のこのカードの記述は、kyuura のスキャンの記録には見つけていない",
+    "new_sources": [
+     {
+      "source": "P43",
+      "page": "239",
+      "what": "すごいへんしんの最新の説明（8 色・おたがいの場）と解説（もとのポケモンがきぜつしたり場を離れるともどる）。この問いを決める文はない",
+      "resolves": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "UQ-TRANSFORM-REVERT-KNOCKOUT-TIMING",
+   "status": "UNRESOLVED",
+   "question": "変身しているメタモンがもとにもどって、のっているダメージが HP 以上になるとき、どの時点できぜつを判定するか（ワザの途中に変身のもとのポケモン・相手の対戦ポケモンがきぜつしたとき、そのきぜつと同時か、そのワザによって起こることが終わったあとの別のきぜつか）",
+   "why_unresolved": "p.325 は、ワザなどが使われたときは、それによって起こるすべてのことがらが終了するまで変身の状態は変化しないとする。もとのポケモンのきぜつ（トラッシュ・サイド・新しい対戦ポケモンを出す）がそのワザによって起こることがらに入るなら、メタモンがもどるのはそのあとで、メタモンのきぜつは 1 つのワザによる同時のきぜつ（p.324）ではないとも読める。p.239 の［へんしん］の解説はもどったときにきぜつすると書くが、時点を書かない。退化の HP の規定（p.324）は退化のときのもので、もとにもどることは退化ではない（p.325）",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "239",
+     "location": "p.239 のメタモン（拡張シート第2弾赤版・化石の秘密）の欄の最新の説明と解説（2026-10-31 に読んだ）"
+    },
+    {
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（2026-10-31 に読んだ）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P325-TRANSFORM-DURING-ACTION",
+    "GR-2000-P323-KNOCKOUT",
+    "GR-2000-P319-HP-AND-DAMAGE"
+   ],
+   "cases": [
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     },
+     "note": "メタモンが写したワザで変身のもとのポケモン（相手の対戦ポケモン）をきぜつさせ、メタモン自身に 40 以上のダメージがのっている。2 匹のきぜつは同時か（サイドを取る順番・最後のサイド・サドン・デス）"
+    },
+    {
+     "card_id": "PMCG3-042",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "へんしん"
+     },
+     "note": "［へんしん］のメタモンのワザで相手の対戦ポケモンがきぜつし、相手のバトル場が空いているあいだメタモンにもどる（HP50）。ダメージが 50 以上なら、そのときにきぜつするか、相手が新しい対戦ポケモンを出してからか"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "メタモン（化石の秘密）は kyuura の登録表の写し（v0.113）で登録済み、メタモン（拡張シート第2弾赤版）は未登録。kyuura-engine v0.123 は比べるためだけに読んだ",
+    "all_cards": "変身するカードはこの 2 枚とタケシのキュウコン（ばける）"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [
+    "UQ-RETALIATION-DOUBLE-KO"
+   ],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-2D113B5",
+    "date": "2026-10-31"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-31 に原典の画像を読んで立てた）。エンジンの記録に結ぶ裁定はない。",
+    "もとにもどれば、ダメージが HP 以上のときにきぜつすることは CR-TRANSFORM-REVERT-KNOCKOUT（へんしん）・CR-SUPER-TRANSFORM-REVERT-KNOCKOUT（すごいへんしん。推論）。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-31",
+    "game_effect": "game_result",
+    "game_effect_note": "きぜつが同時か別かで、サイドを取る順番・勝ち負け（最後のサイド・サドン・デス）が変わる",
+    "resolution_needs": "当時の日本語の公式の資料で、変身がもどるときのきぜつの時点を書いたもの",
+    "searched": "kyuura の記録（data/sidecar/・data/rule_history.json）、『オフィシャルブック2000』p.239・p.324・p.325 の原典の画像（2026-10-31）、既存の転記 data/Silver_Bible_structured.md の「すごいへんしん」「へんしん」の記述（p.47・p.72・p.136・p.161・p.260 など。kyuura は画像を読んでいない）、カードの画像（IMG-ES2-032）、日本語のウェブ検索（「すごいへんしん」の裁定。カードの販売・紹介のページだけで、裁定は見つからない）。当時の Q&A・『トレーナーズ』・大会の裁定のこのカードの記述は、kyuura のスキャンの記録には見つけていない",
+    "new_sources": [
+     {
+      "source": "P43",
+      "page": "239",
+      "what": "すごいへんしんの最新の説明（8 色・おたがいの場）と解説（もとのポケモンがきぜつしたり場を離れるともどる）。この問いを決める文はない",
+      "resolves": false
+     },
+     {
+      "source": "P43",
+      "page": "321〜325",
+      "what": "「20 ポケモンの変身」の規定（いちばん上のカードの内容・名前と種類・新しく場に出たのではない・最中は変化しない）。この問いを決める文はない",
+      "resolves": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "UQ-TRANSFORM-BABY-AND-BASIC",
+   "status": "UNRESOLVED",
+   "question": "ベイビィポケモンに変身して、ベイビィポケモンとたねポケモンの両方としてあつかわれるメタモンに、ベイビィとたねで別の処理を指示する効果がはたらくとき、どちらにしたがうか",
+   "why_unresolved": "p.325 は、変身しているポケモンは変身の対象と同じ種類としてあつかわれ、同時に変身前の自分の種類としてもあつかわれるとする。やさしいウインディ（neo4-021）のやさしいほのおは相手が「ベイビィポケモン」なら 10、「たねポケモン」なら 30 とし、両方に当たるときを書かない。でこぼこジム（neo4-110）は「ベイビィポケモン」と「たねポケモン」のにげるのエネルギーを 1 個ぶん多くするが、両方に当たるときに 1 個か 2 個かを書かない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.324〜325「20 ポケモンの変身」（2026-10-31 に読んだ）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P324-TRANSFORM-NAME-AND-KIND"
+   ],
+   "cases": [
+    {
+     "card_id": "neo4-021",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "やさしいほのお"
+     },
+     "note": "相手がベイビィポケモンに変身しているメタモンのとき、10 か 30 か"
+    },
+    {
+     "card_id": "neo4-110",
+     "target": {
+      "kind": "trainer",
+      "name_ja": "でこぼこジム"
+     },
+     "note": "ベイビィポケモンに変身しているメタモンのにげるのエネルギーが 1 個ぶん多いか 2 個ぶん多いか"
+    },
+    {
+     "card_id": "PMCG3-042",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "へんしん"
+     },
+     "note": "相手の対戦ポケモンがベイビィポケモンのとき（［へんしん］）"
+    },
+    {
+     "card_id": "ES2-032",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "すごいへんしん"
+     },
+     "note": "場のベイビィポケモンを選んだとき（［すごいへんしん］）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "メタモン（化石の秘密）は kyuura の登録表の写し（v0.113）で登録済み。kyuura-engine v0.123 は比べるためだけに読んだ",
+    "all_cards": "ベイビィポケモンとたねポケモンを分けて書く効果は、事例に挙げたほかに、選ぶ・出す効果（ポケモンマーチなど）があるが、場の変身しているポケモンに当てはまるものは事例だけ"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [
+    "UQ-NEO-TEXT-BABY-CATEGORIES"
+   ],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-2D113B5",
+    "date": "2026-10-31"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-31 に原典の画像を読んで立てた）。エンジンの記録に結ぶ裁定はない。",
+    "ベイビィポケモンのルールが当てはまることは CR-TRANSFORM-BABY-RULE。エンジン v0.114 の BX1 のうち、ベイビィとたねで結果が変わる処理はこの問い（kyuura は v0.114 を取り込んでいない）。",
+    "進化ポケモンに変身したメタモンも、進化ポケモンとたねポケモンの両方としてあつかわれる。進化ポケモンとたねポケモンで別の処理をする効果は調べていない。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-31",
+    "game_effect": "game_result",
+    "game_effect_note": "ダメージ（10 か 30）・にげるのエネルギーの数が変わる",
+    "resolution_needs": "当時の日本語の公式の資料で、2 つの種類としてあつかわれるポケモンに、種類ごとに別の処理を指示する効果がはたらくときの扱いを書いたもの",
+    "searched": "kyuura の記録（data/sidecar/・data/rule_history.json）、『オフィシャルブック2000』p.239・p.324・p.325 の原典の画像（2026-10-31）、既存の転記 data/Silver_Bible_structured.md の「すごいへんしん」「へんしん」の記述（p.47・p.72・p.136・p.161・p.260 など。kyuura は画像を読んでいない）、カードの画像（IMG-ES2-032）、日本語のウェブ検索（「すごいへんしん」の裁定。カードの販売・紹介のページだけで、裁定は見つからない）。当時の Q&A・『トレーナーズ』・大会の裁定のこのカードの記述は、kyuura のスキャンの記録には見つけていない",
+    "new_sources": [
+     {
+      "source": "P43",
+      "page": "321〜325",
+      "what": "「20 ポケモンの変身」の規定（いちばん上のカードの内容・名前と種類・新しく場に出たのではない・最中は変化しない）。この問いを決める文はない",
+      "resolves": false
+     }
+    ]
+   }
+  },
+  {
+   "id": "UQ-DARK-PULSE-TIMING",
+   "status": "UNRESOLVED",
+   "question": "［わるいはどう］のコインは、ワザのどの時点で投げるか（ワザの宣言・ダメージを計算するとき・ダメージごと）。1 つのワザで複数のダメージを与えるとき、コインの結果を共有するか。どのダメージに追加するか（相手のベンチのほか、自分のベンチ・ワザを使ったポケモン自身へのダメージ）。ダメージを与えないとき（2 までに 0 以下・ダメージを受けない相手）にコインを投げるか。同じ 6 段階のほかの効果との順番を、コインの結果を知ってから決めるか。GR団のミュウツーが途中で場をはなれる・状態が変わるとき",
+   "why_unresolved": "説明は「ワザによるダメージを与えるとき、はたらく」「与えるダメージそれぞれに…追加する」「(ベンチへのダメージも追加される。)」とだけ書く。「それぞれに」は 1 回の結果を各ダメージに追加すると読めるが、投げる時点・回数は書かれていない。単一の相手に正のダメージを与えるふつうの場面では、どの時点で投げても 1 回の結果（0・10・20）が追加され、盤面の結果は同じで、ほかのコインとの順番だけが変わる。複数のダメージでは、1 回の結果を共有するか、ダメージごとに投げるかで結果が変わる。「ベンチへのダメージ」が相手のベンチだけか、自分のベンチ・ワザを使ったポケモン自身へのダメージをふくむかは書かれていない。p.321 は 2 までで 0 以下なら計算を終える（「ダメージを与えなかった」）ので追加はないが、そのときにコインを投げるかは書かれていない。同じ 6 段階に足すだけでない効果（半分にするなど）があるとき、順番はワザを使うプレイヤーが決める（p.321）が、コインの結果を知ってから決めるかは書かれていない（10 か 20 かで、どちらの順番が有利かが変わる）。きぜつは、ワザの効果をすべて処理したあとで判定する（p.309・p.323）ので、ワザのダメージでベンチの GR団のミュウツーがきぜつしても、そのワザのあいだは場にいる。途中で場をはなれる・特殊状態になる場面は、kyuura のデータで確かめていない",
+   "official_material": "insufficient",
+   "sources": [
+    {
+     "source": "P43",
+     "page": "321〜325",
+     "location": "p.321「9 ワザによるダメージ計算の順番」（GR-2000-P321-DAMAGE-ORDER）"
+    }
+   ],
+   "rule_clause_refs": [
+    "GR-2000-P321-DAMAGE-ORDER",
+    "GR-2000-P309-ATTACK-PROCEDURE",
+    "GR-2000-P323-KNOCKOUT",
+    "GR-2000-P321-PREVENTED-ELEMENTS"
+   ],
+   "cases": [
+    {
+     "card_id": "PRN-041",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいはどう"
+     },
+     "note": "単一の相手に正のダメージ（ふつうの場面）: 盤面の結果は同じ。ワザの説明のコインがあるワザ（わるいライチュウのびっくりサンダー neo2-021 など）では、ワザのコインとわるいはどうのコインの順番だけが変わる"
+    },
+    {
+     "card_id": "PMCG4-008",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "どくのきり"
+     },
+     "note": "わるいアーボック: 相手の対戦ポケモンと控えポケモン全員にダメージ。1 回のコインの結果をすべてに追加するか、ダメージごとに投げるか"
+    },
+    {
+     "card_id": "PMCG4-011",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "みんなでばくはつ"
+     },
+     "note": "わるいマタドガス: 自分の場の「ドガース」「マタドガス」「わるいマタドガス」（自分自身をふくむ）にもダメージ。自分の場へのダメージにも追加するか"
+    },
+    {
+     "card_id": "neo4-008",
+     "target": {
+      "kind": "attack",
+      "index": 1,
+      "name_ja": "だいばくはつ"
+     },
+     "note": "わるいフォレトス: 「自分にも60ダメージ」。ワザを使ったポケモン自身へのダメージに追加するか"
+    },
+    {
+     "card_id": "neo4-012",
+     "target": {
+      "kind": "attack",
+      "index": 0,
+      "name_ja": "ダークドレイン"
+     },
+     "note": "わるいクロバット: ポケモンごとのコインのあとダメージを与え、与えたダメージの合計ぶんとりのぞく。追加の量と、とりのぞく量"
+    },
+    {
+     "card_id": "PMCG6-010",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "くつろぐかおり"
+     },
+     "note": "エリカのフシギソウ: 控えへのダメージも半分（切り上げ）。同じ 6 段階で、追加と半分の順番をコインの結果を知ってから決めるか"
+    },
+    {
+     "card_id": "PRN-041",
+     "target": {
+      "kind": "power",
+      "index": 0,
+      "name_ja": "わるいはどう"
+     },
+     "note": "ダメージが 2 までに 0 以下・ダメージを受けない相手のとき、コインを投げるか（盤面は変わらず、コインを投げるかだけが変わる）"
+    }
+   ],
+   "reachability": {
+    "engine_card_pool": "kyuura の登録表の写し（kyuura-engine v0.113）で GR団のミュウツーは登録されていない。kyuura-engine v0.123（25552b8）は比べるためだけに読んだ（このカードは未対応）",
+    "all_cards": "「わるい」ポケモンのワザで、ダメージを複数与える・自分にもダメージを与えるものは事例に挙げた範囲だけ調べた"
+   },
+   "related_engine_rulings": [],
+   "related_issues": [
+    "UQ-SELF-EXCLUDING-POWER-COPIES"
+   ],
+   "engine_refs": [],
+   "not_in_engine_index": true,
+   "recorded_after": {
+    "import": "ENGINE-2D113B5",
+    "date": "2026-10-31"
+   },
+   "notes": [
+    "kyuura の論点（2026-10-31 にカードの文面と既存の規定から立てた）。エンジンの記録に結ぶ裁定はない。",
+    "ワザを使うときに選ぶ力（アンノーンの［XXXXX］・［ANGER］など）とは違い、わるいはどうは決められたときに自動的にはたらく（CR-DARK-PULSE-SCOPE）。",
+    "エンジンがダメージのないときにコインを省く処理は実装で、この問いの根拠にしていない。"
+   ],
+   "audit": {
+    "audited_on": "2026-10-31",
+    "game_effect": "game_result",
+    "game_effect_note": "複数のダメージで 1 回の結果を共有するか・どのダメージに追加するか・6 段階の順番で、最終ダメージ（ダークドレインではとりのぞく量）が変わる。単一の相手のふつうの場面と、ダメージを与えない場面では、コインの順番・有無だけが変わる",
+    "resolution_needs": "当時の日本語の公式の資料で、わるいはどうのコインを投げる時点・共有の範囲・追加するダメージを書いたもの",
+    "searched": "kyuura の記録（data/sidecar/・data/rule_history.json の MIX-POWER-ERRATA など）、既存の転記 data/Silver_Bible_structured.md（『オフィシャルブック2000』はこのカードより前の本で、載せていない）、カードの画像（IMG-PRN-041）、日本語のウェブ検索（「わるいはどう」「GR団のミュウツー」の裁定。カードの販売ページ、仏語の Poképédia の文面、ポケモンWiki のゲームボーイのソフトの中のカードの記事だけで、紙のカードの裁定は見つからない）。当時の Q&A・『トレーナーズ』の記述は、kyuura のスキャンの記録には見つけていない",
     "new_sources": []
    }
   }

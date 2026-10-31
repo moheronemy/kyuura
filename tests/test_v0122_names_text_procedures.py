@@ -178,18 +178,21 @@ class RulingTest(unittest.TestCase):
         cls.rulings = {x['id']: x for x in r['rulings']}
         cls.issues = {x['id']: x for x in r['issues']}
         cls.base = at_base('data/sidecar/rulings.json')
+        cls.then = at_commit('data/sidecar/rulings.json')  # この作業のコミットの記録（あとの作業の裁定・論点・追記を混ぜない）
 
     def test_new_records(self):
         self.assertEqual(bcr.validate(self.ctx), [])
-        new_r = set(self.rulings) - {x['id'] for x in self.base['rulings']}
-        self.assertEqual({i: self.rulings[i]['status'] for i in new_r},
+        then_r = {x['id']: x for x in self.then['rulings']}
+        then_i = {x['id']: x for x in self.then['issues']}
+        new_r = set(then_r) - {x['id'] for x in self.base['rulings']}
+        self.assertEqual({i: then_r[i]['status'] for i in new_r},
                          {'CR-ARCANINE-PRINTED-NAMES': 'CONFIRMED', 'CR-MIND-GAMES-SCOPE': 'CONFIRMED', 'CR-FLASH-PROCEDURE': 'CONFIRMED',
                           'CR-SWAP-PLEASE-PROCEDURE': 'CONFIRMED', 'CR-SWAP-PLEASE-USE-CONDITION': 'SUPPORTED'})
-        new_i = set(self.issues) - {x['id'] for x in self.base['issues']}
+        new_i = set(then_i) - {x['id'] for x in self.base['issues']}
         self.assertEqual(new_i, {'UQ-BILINGUAL-NAME-GLOSS', 'UQ-MIND-GAMES-OPTIONAL', 'UQ-MIND-GAMES-TRAINER-STEP', 'UQ-FLASH-FACE-UP-DECK',
                                  'UQ-SWAP-PLEASE-OWNERSHIP'})
         for i in new_i:
-            q = self.issues[i]
+            q = then_i[i]
             self.assertEqual((q['status'], q['engine_refs'], q['recorded_after']), ('UNRESOLVED', [], {'import': 'ENGINE-2D113B5', 'date': '2026-10-30'}), i)
         # 印刷の名前がそろう 5 枚: ウィンディ 3 枚・カツラのウィンディ 2 枚
         cards = {c['card_id'] for c in self.rulings['CR-ARCANINE-PRINTED-NAMES']['cards']}
@@ -198,11 +201,11 @@ class RulingTest(unittest.TestCase):
         # 既存の論点には事例と注記を追記しただけ（問い・分類・監査は変えない）
         for i, cid in (('UQ-STATED-COUNT-SHORT', 'ES2-035'), ('UQ-CHAOS-GYM-BORROWED-TURN', 'PR1-027')):
             old = next(x for x in self.base['issues'] if x['id'] == i)
-            self.assertEqual({k: v for k, v in self.issues[i].items() if k not in ('cases', 'notes')}, {k: v for k, v in old.items() if k not in ('cases', 'notes')})
+            self.assertEqual({k: v for k, v in then_i[i].items() if k not in ('cases', 'notes')}, {k: v for k, v in old.items() if k not in ('cases', 'notes')})
             for k in ('cases', 'notes'):
-                self.assertEqual(self.issues[i][k][:len(old[k])], old[k], i)
-            self.assertEqual([c['card_id'] for c in self.issues[i]['cases'][len(old['cases']):]], [cid])
-        now = {x['id']: x for k in ('issues', 'rulings', 'rule_clauses') for x in self.ctx['rulings'][k]}
+                self.assertEqual(then_i[i][k][:len(old[k])], old[k], i)
+            self.assertEqual([c['card_id'] for c in then_i[i]['cases'][len(old['cases']):]], [cid])
+        now = {x['id']: x for k in ('issues', 'rulings', 'rule_clauses') for x in self.then[k]}
         changed = [x['id'] for k in ('issues', 'rulings', 'rule_clauses') for x in self.base[k] if x != now[x['id']]]
         self.assertEqual(sorted(changed), ['UQ-CHAOS-GYM-BORROWED-TURN', 'UQ-STATED-COUNT-SHORT'])  # ほかの既存の記録は書きかえていない
 

@@ -7596,7 +7596,20 @@
       "GR-2000-P322-PERSISTENT-EFFECTS",
       "GR-2000-P323-KNOCKOUT",
       "GR-2000-P324-DEVOLUTION",
-      "UQ-RETALIATION-DOUBLE-KO"
+      "UQ-RETALIATION-DOUBLE-KO",
+      "GR-2000-P324-TRANSFORM-DEFINITION",
+      "GR-2000-P324-TRANSFORM-TOP-CARD",
+      "GR-2000-P324-TRANSFORM-NAME-AND-KIND",
+      "GR-2000-P325-TRANSFORM-OWN-STATE",
+      "GR-2000-P325-TRANSFORM-NOT-NEW",
+      "GR-2000-P325-TRANSFORM-DURING-ACTION",
+      "CR-TRANSFORM-NAME-AND-KIND",
+      "CR-TRANSFORM-BABY-RULE",
+      "CR-TRANSFORM-KEEPS-OWN-STATE",
+      "CR-TRANSFORM-NOT-NEWLY-PLAYED",
+      "CR-TRANSFORM-FROZEN-DURING-ACTION",
+      "UQ-TRANSFORM-REVERT-KNOCKOUT-TIMING",
+      "UQ-TRANSFORM-BABY-AND-BASIC"
      ]
     },
     {
@@ -7812,10 +7825,22 @@
     {
      "printed": "239",
      "pdf": 241,
-     "content": "メタモン（拡張シート第2弾赤版。LV.15／HP40）・メタモン（第3弾化石の秘密。LV.20／HP50）・キョウのメタモン（LV.12／HP40）。すごいへんしんの最新の説明（8 つの色を挙げる）と解説。化石のメタモンの［へんしん］の欄も 8 つの色を挙げ、解説はベンチにもどると HP50 のメタモンにもどり、のっているダメージが 50 以上ならきぜつするとする（2026-10-31 に kyuura が画像で読んだ）",
+     "content": "メタモン（拡張シート第2弾赤版。LV.15／HP40）・メタモン（第3弾化石の秘密。LV.20／HP50）・キョウのメタモン（LV.12／HP40）。すごいへんしんの最新の説明（8 つの色を挙げる）と解説。化石のメタモンの［へんしん］の欄も 8 つの色を挙げ、解説はベンチでは HP50 のメタモンにもどり、ダメージが 50 をこえた状態でベンチにもどるときぜつする、相手が入れ替わったときも同じとする（2026-10-31 に kyuura が画像で読んだ）",
      "refs": [
       "LD-ES2-032-PWR0",
-      "CC-ES2-032-P239"
+      "CC-ES2-032-P239",
+      "CR-TRANSFORM-COPIES-TOP-CARD",
+      "CR-TRANSFORM-REVERT-KNOCKOUT",
+      "CR-SUPER-TRANSFORM-REVERT-KNOCKOUT",
+      "CR-SUPER-TRANSFORM-CHOICE",
+      "CR-SUPER-TRANSFORM-REVERT-CONDITIONS",
+      "CR-SUPER-TRANSFORM-ONCE-PER-TURN",
+      "CR-SUPER-TRANSFORM-ENERGY-PAYMENT",
+      "UQ-TRANSFORM-ENERGY-COLOR-LIST",
+      "UQ-SUPER-TRANSFORM-TARGETS",
+      "UQ-SUPER-TRANSFORM-SOURCE-CHANGES",
+      "UQ-SUPER-TRANSFORM-SUPPRESSED-FORM",
+      "UQ-SUPER-TRANSFORM-ENERGY-COLORS"
      ]
     }
    ],
