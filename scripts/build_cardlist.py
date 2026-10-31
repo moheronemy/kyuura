@@ -12,10 +12,12 @@
   - data/ja_text_pcgsearch.json・data/pcgsearch_page_checks.json（拡張パック以外の商品。scripts/non_pack.py で正規化）
   - data/curation/card_corrections.json（カードのデータの訂正の記録。生成のたびに当てはめる）
   - data/curation/card_image_checks.json（kyuura がカードの画像で印刷の欄を読んだ記録。生成した値と同じかを確かめる）
+  - data/curation/catalog_items.json（pcg-search の転記にない目録の項目。data/cards.csv の行にだけなる）
 
 出力:
   - data/cards.json（構造化データ。スキーマは docs/data-schema.md。拡張パック 10 弾と、拡張パック以外の商品）
-  - data/cards.csv, data/attacks.csv, data/powers.csv（表形式の写し。data/cards.json と同じ記録から作る）
+  - data/cards.csv（目録の一覧。data/cards.json の記録に、対戦のカードでない項目（non_game_items）と data/curation/catalog_items.json の
+    項目を加えたもの。scripts/catalog.py が作る）、data/attacks.csv, data/powers.csv（data/cards.json の記録の表形式の写し）
   - data/product_items.json（拡張パック以外の商品の元の項目と、記録・まとめ・対戦のカードでない項目の対応）
   - data/same_card_groups.json（商品をまたいだ同じカードの組と、比べた欄・違い）
   - docs/cards/*.md
@@ -37,6 +39,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import catalog  # noqa: E402
 import non_pack  # noqa: E402
 
 SCHEMA_VERSION = 3
@@ -959,6 +962,7 @@ def finish_records(records, en, namer):
     confirm_stage_by_image_checks(records, image_checks)
     for r in records:
         r['data_gaps'] = non_pack.data_gaps(r)
+    catalog.apply_catalog_scope(records, np_.np)  # 目録の分類と、通常対戦のエンジンの対象か（明示の指定。scripts/catalog.py）
     return records, (np_, items, non_game, groups, checks, code_of)
 
 
@@ -981,7 +985,7 @@ def write_product_items(np_, items, non_game, records, code_of):
                  'counts': {'source_items': len(mine), 'card_records': len(cards),
                             'merged_copies': sum(1 for it in mine if it['disposition'] == 'copy'),
                             'non_game_items': sum(1 for it in mine if it['disposition'] == 'non_game'),
-                            'standard_play_cards': sum(1 for r in cards if r['play_scope'] == 'standard')}}
+                            'standard_play_cards': sum(1 for r in cards if r['play_scope'] == 'standard' and r['catalog_class'] == 'battle')}}
         if p.get('release_note'):
             entry['release_note'] = p['release_note']
         comp = None
@@ -1052,47 +1056,13 @@ def write_json(records):
         f.write('\n')
 
 
-def evolves_to_status(p):
-    """CSV の evolves_to_status: 空（ポケモンでない）・not_applicable（欄のない段階）・unconfirmed（null）・printed（名前がある）。
-    printed_none（[]。印刷に進化先がないと明示）は形式の上の値で、今は check_evolves_to が受け付けない。"""
-    if not p:
-        return ''
-    if 'evolves_to' not in p:
-        return 'not_applicable'
-    v = p['evolves_to']
-    return 'unconfirmed' if v is None else 'printed' if v else 'printed_none'
+evolves_to_status = catalog.evolves_to_status  # CSV の evolves_to_status（2026-10-31 に scripts/catalog.py へ移した。前の名前でも呼べる）
 
 
-def write_csvs(records):
+def write_csvs(records, non_game, product_groups):
     d = ROOT / 'data'
-    with open(d / 'cards.csv', 'w', encoding='utf-8', newline='') as f:
-        w = csv.writer(f)
-        w.writerow(['id', 'jp_set', 'seq', 'category', 'name_ja', 'name_en', 'name_ja_confidence',
-                    'rarity_jp', 'holo', 'en_set', 'en_numbers', 'stage', 'evolves_from_ja', 'evolves_from_en',
-                    'evolves_to_status', 'evolves_to_ja', 'hp', 'types', 'weaknesses', 'resistances', 'retreat_cost', 'trainer_kinds',
-                    'energy_kind', 'text_ja', 'text_en', 'jp_en_differences', 'notes',
-                    'product_group', 'play_scope', 'same_card_group', 'source_pages', 'data_gaps', 'corrections'])
-        for r in records:
-            p, t, e = r['pokemon'], r['trainer'], r['energy']
-            text = (t or {}).get('text') or (e or {}).get('text') or (p or {}).get('rules_text') or {}
-            w.writerow([r['id'], r['jp_set'], r['seq'], r['category'], r['name']['ja'] or '', r['name']['en'] or '',
-                        r['name_ja_confidence'] or '', r['rarity_jp']['code'], r['rarity_jp']['holo'],
-                        (r['en_print'] or {}).get('set_id', ''), ' '.join((r['en_print'] or {}).get('numbers', [])),
-                        (p or {}).get('stage') or '',
-                        ((p or {}).get('evolves_from') or {}).get('ja') or '',
-                        ((p or {}).get('evolves_from') or {}).get('en') or '',
-                        evolves_to_status(p), ' '.join((p or {}).get('evolves_to') or []),
-                        (p or {}).get('hp') or '', ' '.join((p or {}).get('types', [])),
-                        ' '.join(f"{x['type']}{x['operator']}{x['value']}" for x in (p or {}).get('weaknesses', [])),
-                        ' '.join(f"{x['type']}{x['operator']}{x['value']}" for x in (p or {}).get('resistances', [])),
-                        '' if p is None or p['retreat_cost'] is None else p['retreat_cost'],
-                        ' '.join((t or {}).get('kinds', [])), (e or {}).get('kind', ''),
-                        text.get('ja') or '', text.get('en') or '',
-                        ' / '.join(f"[{x['kind']}] {x['summary']}" for x in r['jp_en_differences']),
-                        ' / '.join(r['notes']),
-                        r['product_group'], r['play_scope'], r['same_card_group'] or '',
-                        ' '.join(r['source_ids']['pcg_search']), ' '.join(r['data_gaps']),
-                        ' '.join(c['id'] for c in r.get('corrections', []))])
+    # data/cards.csv は目録の一覧（対戦のカードの記録・non_game_items・data/curation/catalog_items.json）。scripts/catalog.py が作る
+    catalog.write_cards_csv(records, non_game, product_groups)
     with open(d / 'attacks.csv', 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f)
         w.writerow(['card_id', 'index', 'name_ja', 'name_en', 'cost', 'cost_total',
@@ -1371,7 +1341,7 @@ def build(args):
     records, en_only, en, namer = build_records(args)
     records, (np_, items, non_game, groups, checks, code_of) = finish_records(records, en, namer)
     write_json(records)
-    write_csvs(records)
+    write_csvs(records, non_game, {code_of[p['pcg_title']]: p['group'] for p in np_.cur['products']})
     write_product_items(np_, items, non_game, records, code_of)
     write_same_card_groups(groups, checks)
     write_set_docs([r for r in records if r['product_group'] == 'expansion_pack'], en_only)

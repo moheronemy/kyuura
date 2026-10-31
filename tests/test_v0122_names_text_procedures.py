@@ -51,6 +51,15 @@ def at_commit(rel):
     """この作業のコミット（AT_COMMIT）の記録。あとの作業（2026-10-31 のすごいへんしん・わるいはどうの調査など）が値・記録を加えても、この作業の差を確かめる。"""
     return at_base(rel, AT_COMMIT)
 
+def card_rows_of_csv(by_id):
+    """data/cards.csv の行のうち、data/cards.json の記録の行（{id: 行}）。2026-10-31 から cards.csv は目録の一覧で、
+    記録のほかに目録だけの行（non_game_items・data/curation/catalog_items.json の KC-）がある。それらの行は対戦用（battle）でない。"""
+    rows = {r['id']: r for r in csv.DictReader(io.StringIO((ROOT / 'data' / 'cards.csv').read_text(encoding='utf-8')))}
+    extra = {k: r for k, r in rows.items() if k not in by_id}
+    assert all(r['catalog_class'] != 'battle' and r['engine_scope'] != 'target' for r in extra.values()), sorted(extra)
+    return {k: r for k, r in rows.items() if k in by_id}
+
+
 
 class Data(unittest.TestCase):
     @classmethod
@@ -92,7 +101,7 @@ class CardValueTest(Data):
         self.assertEqual(self.by_id['ES1-027']['pokemon']['attacks'][0]['text']['ja'], INFLATE)  # 読めない字を補っていない
 
     def test_json_and_csv_agree(self):
-        rows = {r['id']: r for r in csv.DictReader(io.StringIO((ROOT / 'data' / 'cards.csv').read_text(encoding='utf-8')))}
+        rows = card_rows_of_csv(self.by_id)
         self.assertEqual(set(rows), set(self.by_id))
         for cid in ('PMCG1-019', 'PMCG6-034', 'GD5-007', 'IP2-032', 'PR1-016', 'PR1-075', 'PR1-077'):
             self.assertEqual(rows[cid]['name_ja'], self.by_id[cid]['name']['ja'], cid)

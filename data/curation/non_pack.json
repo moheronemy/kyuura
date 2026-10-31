@@ -226,8 +226,32 @@
   },
   {
    "target": "pcg-search のカードリストにない旧裏期の商品・配布物",
-   "basis": "なし（調べていない）",
-   "status": "23 の商品で旧裏期の商品をすべて収録できたとは言えない。プロモの一覧は pcg-search の「プロモ」の欄の範囲で、配布物の網羅は確かめていない（docs/cards/products/promos.md の「まだ確認できていないこと」）"
+   "basis": "Bulbapedia の番号なしプロモの一覧 [X48]（1996〜2005年の 272 項目）と『ポケモンカードオフィシャルブック2000』[P43] p.122・p.251・pp.300〜301 との比較（2026-10-31。data/curation/promo_survey.json）",
+   "status": "比べた範囲で、公式の書籍に載る 24 項目（入賞賞品カード 15・スペシャルジャンボカード 8・トロピカルプレゼント 1）を目録に加えた（data/curation/catalog_items.json。cards.csv の KC- の行）。追加の候補 28・別版の候補 4・未確認 30 が残る（docs/catalog-promo-survey.md）。ほかの独立した一覧・当時の公式資料（会報・雑誌の付録の告知など）は調べていないので、網羅したとは言えない"
   }
- ]
+ ],
+ "catalog_scope": {
+  "_comment": "data/cards.json の記録の目録の分類（catalog_class）と、通常対戦のエンジンの実装の対象か（engine_scope）の明示の指定（カード id ごと）。ここにない記録は catalog_class battle・engine_scope target。play_scope が standard・not_for_official_tournaments 以外の記録（kangaskhan_rule）は、ここに指定がないと生成が止まる（暗黙に対戦用にしない）。値の意味は docs/data-schema.md",
+  "PR1-038": {
+   "page": "1stp038",
+   "catalog_class": "special_rule",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "ガルーラルール専用のカード（専用ルールで使う。通常の対戦のカードではない）。通常対戦のエンジンの実装の対象から外す",
+   "basis": "利用者の指定（2026-10-31）。目録の分類と通常対戦のエンジンの実装範囲の指定で、公式の裁定・エラッタ・印刷の訂正ではない。カードの記録・印刷の文面・出典・id は変えない"
+  },
+  "PRN-048": {
+   "page": "neop048",
+   "catalog_class": "special_rule",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "新ガルーラルール専用のカード（専用ルールで使う。通常の対戦のカードではない）。通常対戦のエンジンの実装の対象から外す",
+   "basis": "利用者の指定（2026-10-31）。目録の分類と通常対戦のエンジンの実装範囲の指定で、公式の裁定・エラッタ・印刷の訂正ではない。カードの記録・印刷の文面・出典・id は変えない"
+  },
+  "PR1-079": {
+   "page": "1stp079",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定証のカード（本文はチャレンジパスポートの記録による公式カードトレーナーの認定で、対戦の手順を書いていない）。通常対戦のエンジンの実装の対象から外す",
+   "basis": "利用者の指定（2026-10-31）。目録の分類と通常対戦のエンジンの実装範囲の指定で、公式の裁定・エラッタ・印刷の訂正ではない。カードの記録・印刷の文面・出典・id は変えない"
+  }
+ }
 }

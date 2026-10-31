@@ -76,6 +76,15 @@ def changed_paths(a, b, path=''):
     elif a != b:
         yield path
 
+def card_rows_of_csv(by_id):
+    """data/cards.csv の行のうち、data/cards.json の記録の行（{id: 行}）。2026-10-31 から cards.csv は目録の一覧で、
+    記録のほかに目録だけの行（non_game_items・data/curation/catalog_items.json の KC-）がある。それらの行は対戦用（battle）でない。"""
+    rows = {r['id']: r for r in csv.DictReader(io.StringIO((ROOT / 'data' / 'cards.csv').read_text(encoding='utf-8')))}
+    extra = {k: r for k, r in rows.items() if k not in by_id}
+    assert all(r['catalog_class'] != 'battle' and r['engine_scope'] != 'target' for r in extra.values()), sorted(extra)
+    return {k: r for k, r in rows.items() if k in by_id}
+
+
 
 class Data(unittest.TestCase):
     @classmethod
@@ -150,7 +159,7 @@ class CardValueTest(Data):
             self.assertIsNone(self.by_id[cid]['jp_print']['level'])
 
     def test_json_and_csv_agree(self):
-        rows = {r['id']: r for r in csv.DictReader(io.StringIO((ROOT / 'data' / 'cards.csv').read_text(encoding='utf-8')))}
+        rows = card_rows_of_csv(self.by_id)
         self.assertEqual(set(rows), set(self.by_id))
         for cid in A_CARDS + B_CARDS:
             c, row = self.by_id[cid], rows[cid]

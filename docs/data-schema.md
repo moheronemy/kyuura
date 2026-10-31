@@ -1,6 +1,8 @@
 # データの構造（`data/cards.json`）
 
-`data/cards.json` は、旧裏の日本版のカードを 1 枚 1 レコードで収録した構造化データです。拡張パック 10 弾の全 780 枚と、拡張パック以外の商品（拡張シート・サザンアイランド・ポケモンジムのデッキ・クイックスターターギフト・イントロパック・neo プレミアムファイル・プロモ）の対戦に使うカード 597 枚の、計 1,377 件です（形式 3。2026-10-19 から）。`scripts/build_cardlist.py` で生成しています（拡張パック以外の商品の正規化は `scripts/non_pack.py`）。拡張パックの 780 件の id・欄は形式 2 のままで、形式 3 で加えた欄を全記録に持ちます。
+`data/cards.json` は、旧裏の日本版のカードを 1 枚 1 レコードで収録した構造化データです。拡張パック 10 弾の全 780 枚と、拡張パック以外の商品（拡張シート・サザンアイランド・ポケモンジムのデッキ・クイックスターターギフト・イントロパック・neo プレミアムファイル・プロモ）の対戦に使うカード 597 枚の、計 1,377 件です（形式 3。2026-10-19 から）。`scripts/build_cardlist.py` で生成しています（拡張パック以外の商品の正規化は `scripts/non_pack.py`）。拡張パックの 780 件の id・欄は形式 2 のままで、形式 3 で加えた欄を全記録に持ちます。2026-10-31 に、目録の分類と通常対戦のエンジンの対象を表す欄（`catalog_class`・`engine_scope`・`engine_scope_reason`）を全記録に加えました（欄を足しただけで、形式の番号・ほかの欄は変えていない）。
+
+対戦のカードでない公式のカード類（おすすめルールのカード・入賞賞品カード・ジャンボカードなど）は `data/cards.json` に入れず、目録の一覧 [`data/cards.csv`](#cardscsv目録の一覧) の行にします。
 
 ## 全体
 
@@ -17,7 +19,7 @@
 
 | フィールド | 型 | 内容 |
 |---|---|---|
-| `id` | 文字列 | カード id。拡張パックは TCGdex の日本版 id（例 `PMCG1-011`、`neo4-113`）。拡張パック以外の商品は「商品の記号-カードページ名の末尾 3 桁」（例 `GD1-009` = pcg-search の `1stgymd1009`。下の「拡張パック以外の商品の記録」） |
+| `id` | 文字列 | kyuura の目録の内部識別子（便宜的な id で、**公式のカード番号ではない**。出典サイトの掲載番号とも別）。拡張パックは TCGdex の日本版 id の形（例 `PMCG1-011`、`neo4-113`）。拡張パック以外の商品は「商品の記号-カードページ名の末尾 3 桁」（例 `GD1-009` = pcg-search の `1stgymd1009`。下の「拡張パック以外の商品の記録」。`PR1-038`・`PRN-048` の数字も pcg-search のページ名の番号で、公式の番号ではない）。一度付けた id は、分類を変えても変えない |
 | `jp_set` | 文字列 | 日本版の弾。`PMCG1`〜`PMCG6`（第1〜6弾）、`neo1`〜`neo4`。拡張パック以外の商品の記録は商品の記号（`GD1`・`ES1`・`PR1` など） |
 | `seq` | 整数 | 弾の中の通し番号。カードに印刷された番号ではない |
 | `category` | 文字列 | `pokemon`／`trainer`／`energy` |
@@ -42,6 +44,9 @@
 | `copies` | 配列 | 拡張パック以外の商品の記録だけ。同じ商品の中で番号だけが違うページ（イントロパックのデッキ）をまとめた元のページ `[{page, list_number}]`。1 ページなら 1 件 |
 | `field_sources` | オブジェクト | 拡張パック以外の商品の記録だけ。欄の出どころ（`pcg_search`・`pcg_search_page_dash`（読み直したページで「-」）・`pcg_search_null_read_as_zero`・`pcg_search_evolution_line`・`same_card:<拡張パックの id>`・`other_products.en_prints`・`pokemontcg:<id>`・`pcg_search_kind_conflicts_with_evolution_line`・`card_corrections:<訂正の id>`（段階・進化元を訂正の記録で埋めた・直した。2026-10-30 から）・`card_image_check:<照合の記録の id>`（サイトの中で食い違っていた段階を、カードの画像の照合で同じ値と確かめた。値は変えない）） |
 | `corrections` | 配列 | 訂正の記録（`data/curation/card_corrections.json`）で直した欄があるときだけ `[{id, field, before, after, basis, decided_on}]` |
+| `catalog_class` | 文字列 | 目録の分類（2026-10-31）。`battle`（対戦用）・`special_rule`（専用ルール用。ガルーラルールなど）・`award`（認定・賞品）。値の一覧は下の「目録の分類」。`data/curation/non_pack.json` の `catalog_scope` の明示の指定から決め、指定のない記録は `battle`（`play_scope` が `kangaskhan_rule` の記録に指定がなければ生成が止まる） |
+| `engine_scope` | 文字列 | 通常対戦のエンジンの実装の対象か（2026-10-31）。`target`（対象）・`excluded`（対象外）・`undecided`（未判断）。`play_scope`（使用範囲）とは別の欄 |
+| `engine_scope_reason` | 文字列／null | `engine_scope` が `target` でない理由。`target` なら `null` |
 
 ### 日英の値
 
@@ -207,11 +212,57 @@
 
 | ファイル | 1 行の単位 | 主な列 |
 |---|---|---|
-| `data/cards.csv` | カード 1 枚 | `id`、名前（日英）、レア、英語版、進化、HP、タイプ、弱点、抵抗力、にげる、トレーナー・エネルギーの区分と本文（日英）、日英の違い、`product_group`・`play_scope`・`same_card_group`・`source_pages`（pcg-search のページ名を空白区切り）・`data_gaps`（空白区切り）・`corrections`（訂正の id を空白区切り）・`evolves_to_status`・`evolves_to_ja`（ベイビィの進化先。上の「進化先」） |
+| `data/cards.csv` | 目録の項目 1 つ（下の「cards.csv（目録の一覧）」） | `id`、名前（日英）、レア、英語版、進化、HP、タイプ、弱点、抵抗力、にげる、トレーナー・エネルギーの区分と本文（日英）、日英の違い、`product_group`・`play_scope`・`same_card_group`・`source_pages`（pcg-search のページ名を空白区切り）・`data_gaps`（空白区切り）・`corrections`（訂正の id を空白区切り）・`evolves_to_status`・`evolves_to_ja`（ベイビィの進化先。上の「進化先」）、2026-10-31 からは後ろに `official_number`・`catalog_class`・`engine_scope`・`engine_scope_reason`・`research_status`・`sources` |
 | `data/attacks.csv` | ワザ 1 つ | `card_id`、`index`、名前（日英）、`cost`（列挙値を空白区切り）、`cost_total`、`damage_base`、`damage_modifier`、`damage_display`、効果文（日英） |
 | `data/powers.csv` | ポケモンパワー 1 つ | `card_id`、`index`、`kind`、名前（日英）、本文（日英） |
 
-`data/cards.json` と 3 つの CSV は、同じ記録から同じ生成で作ります（`tests/test_non_pack_engine_v068.py` が件数・主な欄の一致を確かめる）。
+`data/attacks.csv`・`data/powers.csv` は `data/cards.json` の記録の写しで、同じ生成で作ります（`tests/test_non_pack_engine_v068.py` が件数・主な欄の一致を確かめる）。
+
+## cards.csv（目録の一覧）
+
+`data/cards.csv` は、対戦用のカードだけでなく、目録に収録する公式のカード類を横断して検索できる一覧です（2026-10-31 から）。行は次の 3 つの元データから `scripts/catalog.py` が作ります（`scripts/build_cardlist.py` も同じ関数で書く）。CSV に手で行を足さず、元データを直して作り直します。
+
+| 行 | 元データ | id | 数（2026-10-31） |
+|---|---|---|---|
+| 対戦のカードの記録 | `data/cards.json` | 記録の id（上の `id`） | 1,377（うち 3 は対戦用の分類から外した記録） |
+| 対戦のカードでない項目（pcg-search の転記） | `data/product_items.json` の `non_game_items`（`data/curation/non_pack.json` の `non_game_items` で決める） | 「商品の記号-ページ名の末尾 3 桁」（例 `ES3-037`・`PR1-015`） | 18 |
+| pcg-search の転記にない項目 | `data/curation/catalog_items.json`（手で記録する調査の記録） | `KC-` と 4 桁の連番（例 `KC-0001`） | 24 |
+
+- **id はすべて kyuura の目録の内部識別子**です。公式のカード番号でも、出典サイトの掲載番号でもありません。旧裏のカードには原則としてカードの番号が印刷されていないので、`official_number` は、公式の番号を資料で確かめたものだけに入れます（2026-10-31 は確かめた番号がなく、全行が空）。
+- `KC-` の id は、登録したときに `data/curation/catalog_items.json` に書いて割り当てます。並び順・分類・名前から計算しないので、分類や掲載順が変わっても変わりません。削除した id は使い回しません。既存の id（`PMCG1-001`・`PR1-038` など）とは形が違い、衝突しません（`scripts/catalog.py` が重複と形を検査する）。既存の id を一括で改名しません。
+- 対戦のカードでない行には、HP・ワザ・進化の段階などの欄を入れません（空）。`category` も空です。
+- 既存の 33 の欄の位置と、既存の行の値は変えていません。後ろに 6 つの欄を足しました。
+
+| 欄 | 内容 |
+|---|---|
+| `official_number` | 資料で確かめた公式の番号（ないときは空） |
+| `catalog_class` | 目録の分類（下の表） |
+| `engine_scope` | 通常対戦のエンジンの実装の対象か（`target`・`excluded`・`undecided`） |
+| `engine_scope_reason` | 対象外・未判断の理由 |
+| `research_status` | 調査状態。`transcribed`（出典サイトの転記）・`card_image_checked`（kyuura がカードの画像で読んだ照合の記録 `data/curation/card_image_checks.json` がある）・`book_image_read`（公式の書籍の図版で名前・本文を読んだ）・`book_listed`（公式の書籍の掲載で名前・配布を確かめた。本文は転記していない） |
+| `sources` | 出典の記号（[出典と確認状況](sources.md)）とページ。対戦のカードの記録の出典は `source_pages` と `data/cards.json` の `ja_text_source`・`source_ids` にあり、この欄は空 |
+
+### 目録の分類（`catalog_class`）
+
+| 値 | 意味 | 例 |
+|---|---|---|
+| `battle` | 対戦用（通常の対戦のデッキに入れるカード） | 拡張パックのカード、`play_scope` が `standard`・`not_for_official_tournaments` の記録 |
+| `special_rule` | 専用ルール用（決まったルールの対戦で使うカード） | タッチ交代！ `PR1-038`・タッチ世代交代！ `PRN-048`（ガルーラルール・新ガルーラルール専用） |
+| `award` | 認定・賞品（認定証・入賞賞品・特典のカード。対戦に使う効果がない） | ポケモンイラストレーター `PR1-015`、カードトレーナー認定証 `PR1-079`、入賞賞品カード `KC-0001`〜`KC-0015`、トロピカルプレゼント `KC-0024` |
+| `jumbo` | ジャンボカード（通常のカードより大きい印刷物） | スペシャルジャンボカード `KC-0016`〜`KC-0023` |
+| `extra_rule`・`deck_recipe`・`joke_card`・`pass_card`・`other` | `non_game_items` の `kind` をそのまま使う | 拡張シート第3弾の番号のないおまけのカード |
+
+- 目録への収録（行があること）、通常対戦での使用範囲（`play_scope`。`data/cards.json` の記録だけ）、エンジンの実装の対象（`engine_scope`）は別の情報です。行を加えても、通常対戦の候補・エンジンの未実装の件数には入りません。
+- **通常対戦の対象を取り出すときは、行の数・`product_group`・`category` ではなく、`catalog_class` が `battle` で `engine_scope` が `target` の行を選びます**（`scripts/catalog.py` の `battle_records`・`battle_rows`）。kyuura の中で CSV を読む処理（テスト）は、2026-10-31 にこの前提に合わせました。`scripts/build_engine_targets.py` も同じ分類で選びます。
+- 2026-10-31 の利用者の指定で、`PR1-038`・`PRN-048`（`special_rule`）と `PR1-079`（`award`）をエンジンの対象から外しました（`engine_scope` は `excluded`）。目録・実装範囲の指定で、公式の裁定・エラッタ・印刷の訂正ではありません。記録・文面・出典・id は `data/cards.json` に残しています。タッチ系の 2 枚の `play_scope` は `kangaskhan_rule` のままです（専用ルールで使うカード）。
+
+### `data/curation/catalog_items.json`
+
+pcg-search の転記にない目録の項目の調査記録（手で編集する元データ）。`items` の要素は `id`・`name_ja`・`catalog_class`・`engine_scope`・`engine_scope_reason`・`product_group`・`official_number`・`printed_header`（カードの上部の表示。TRAINER・SPECIAL CARD など。読んでいなければ `null`）・`printed_text_ja`（読んだ本文。転記していなければ `null`）・`group_ja`（掲載の群）・`distribution_ja`・`date`・`size`・`research_status`・`sources`（`[{code, pages, detail}]`）・`related_ids`（関係のある別の項目。まとめない）・`unconfirmed`（確かめていないこと）・`notes`。HP・ワザ・進化の段階などの対戦のカードの欄は持たせません（`scripts/catalog.py` が検査する）。
+
+### `data/curation/promo_survey.json`
+
+プロモの収録範囲の比較の記録（手で編集する調査の記録。読み方は [プロモの収録範囲の調査](catalog-promo-survey.md)）。`scope`（旧裏期の範囲の決め方と、`status`・`relation` の値の意味）と `comparisons`（比べた一覧ごとに `source`・取得した版・方法・`entries`）。`entries` の要素は、比べた一覧の項目と、`status`（`existing` 既存収録・`existing_other_product` 別の商品として既存収録・`added` この調査で追加・`variant_candidate` 別版の候補・`addition_candidate` 追加の候補・`out_of_scope` 範囲外・`unconfirmed` 未確認）・`relation`（同じ項目・別の印刷物・同じ印刷物の別の配布経路かもしれない・わからない・外国語版の印刷物・カードではない・別のシリーズ）・`catalog_ids`（目録の id）・`note`（理由）。
 
 ## 拡張パック以外の商品の記録
 
@@ -268,7 +319,7 @@ kyuura がウェブに公開されたカードの画像で印刷の欄を読ん�
 
 ## エンジンの実装の対象（`data/engine_targets.json`）
 
-`scripts/build_engine_targets.py` の出力で、読み方は [エンジンの実装の対象](engine-targets.md) です。エンジンの登録表の写しは `data/curation/engine_registered_cards.json`（`scripts/snapshot_engine_registry.py`。エンジンの版を上げるときに作り直す）。記録ごとに `category`（`candidate`・`data_missing`・`special_rule_design`・`non_game`）と `engine_status`（`registered`・`mechanically_equivalent`・`reuse_candidate`・`new_effect_needed`）を分けて持ちます。写しを新しい版で作り直すと、前の写しの参照（版・コミット・取得日・件数）を `previous_snapshots` に残します（`engine_reference` にも写す。前の版の時点の取得日・件数を新しい値で書きかえない）。写しの `registry_id` は登録表の名前で、版の番号ではありません。同じかの比べ（`mechanically_equivalent`）と値の欠け（`data_missing`）には、エンジンの写しがまだ取り出さないベイビィの進化先（`pokemon.evolves_to`）も含めます。
+`scripts/build_engine_targets.py` の出力で、読み方は [エンジンの実装の対象](engine-targets.md) です。エンジンの登録表の写しは `data/curation/engine_registered_cards.json`（`scripts/snapshot_engine_registry.py`。エンジンの版を上げるときに作り直す）。`catalog_class` が `battle` で `engine_scope` が `target` の記録だけを `cards` に入れ、ほかの記録は `excluded_records`（理由つき）に分けます（2026-10-31 から。件数 `counts.excluded_records`）。`cards` の記録ごとに `category`（`candidate`・`data_missing`・`special_rule_design`・`non_game`）と `engine_status`（`registered`・`mechanically_equivalent`・`reuse_candidate`・`new_effect_needed`）を分けて持ちます。写しを新しい版で作り直すと、前の写しの参照（版・コミット・取得日・件数）を `previous_snapshots` に残します（`engine_reference` にも写す。前の版の時点の取得日・件数を新しい値で書きかえない）。写しの `registry_id` は登録表の名前で、版の番号ではありません。同じかの比べ（`mechanically_equivalent`）と値の欠け（`data_missing`）には、エンジンの写しがまだ取り出さないベイビィの進化先（`pokemon.evolves_to`）も含めます。
 
 ## `data/rule_differences.json`
 

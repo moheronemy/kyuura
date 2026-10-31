@@ -26,7 +26,7 @@ kyuura の記録（`data/cards.json`）ごとに、エンジンの実装の対�
 | engine_status | `new_effect_needed` | 新しい効果の実装が要る |
 
 - `data_missing` の理由（category_reasons）は、記録の `data_gaps` のうちエンジンが使う欄（名前・段階・進化元・ベイビィの進化先・HP・タイプ・ルールの文・特殊能力・ワザの名前と説明・トレーナーと特殊エネルギーの説明）の欠けです。ベイビィの進化先（`pokemon.evolves_to`）はエンジンの写しがまだ取り出さない欄ですが、進化できるカードを決めるので、欠け（未確認）と、登録されたカードと同じかの比べに含めます。図鑑番号・レベル・シリーズの欠けは数えません。
-- `special_rule_design` は `play_scope` が `standard` でない記録（ガルーラルール専用・公式大会で使えないと書かれたカード）。
+- `special_rule_design` は `play_scope` が `standard` でない記録（公式大会で使えないと書かれたカード。ガルーラルール専用のカードは 2026-10-31 から対象外の記録）。
 - `mechanically_equivalent` は、エンジンが使う欄がすべて登録されたカードと同じで、ワザ・特殊能力・トレーナー・特殊エネルギーの名前と説明が、エンジンが登録のときに照合した文面（`text_ja`）とも同じもの（`equivalent_to` に登録されたカード）。
 - `reuse_candidate` は、同じカードの組（`same_card_group`。名前・HP・特殊能力名・ワザ名が同じ）に登録されたカードがあって欄の一部が違うもの（`reuse_basis: same_card_group`。`nearest_registered` の `differences`）か、効果の文面がどれも登録された実装の文面と同じもの（`reuse_basis: registered_effect_texts`。`effects_with_registered_text`）。名前が同じでも別のカード（HP・ワザが違う）は組にならない。
 - `new_effect_needed` は、登録された実装と同じ文面のない効果（`effects_without_registered_text`）があるもの。文面が違っても既存の実装で処理できる場合はある（エンジンが文面の形を確かめて決める）。
@@ -34,7 +34,7 @@ kyuura の記録（`data/cards.json`）ごとに、エンジンの実装の対�
 
 ## 数
 
-記録 1377 件（このほか、対戦のカードでない項目 18 件。`non_game_items`）。
+記録 1374 件（通常対戦のエンジンの対象。このほか、対象から外した記録 3 件（`excluded_records`）と、対戦のカードでない項目 18 件（`non_game_items`））。`data/cards.csv` の目録だけの行（`data/curation/catalog_items.json` の `KC-` の項目）は、この一覧に入れていません。
 
 | 商品の種類 | 記録 | `registered` | `mechanically_equivalent` | `reuse_candidate` | `new_effect_needed` | `candidate` | `data_missing` | `special_rule_design` |
 |---|---|---|---|---|---|---|---|---|
@@ -43,10 +43,10 @@ kyuura の記録（`data/cards.json`）ごとに、エンジンの実装の対�
 | ポケモンジムのデッキ | 153 | 147 | 1 | 0 | 5 | 147 | 6 | 0 |
 | イントロパック | 96 | 92 | 0 | 1 | 3 | 94 | 2 | 0 |
 | プレミアムファイル | 27 | 20 | 0 | 0 | 7 | 27 | 0 | 0 |
-| プロモ | 137 | 105 | 0 | 4 | 28 | 133 | 0 | 4 |
+| プロモ | 134 | 105 | 0 | 4 | 25 | 132 | 0 | 2 |
 | クイックスターターギフト | 58 | 56 | 0 | 0 | 2 | 58 | 0 | 0 |
 | サザンアイランド | 18 | 16 | 0 | 0 | 2 | 18 | 0 | 0 |
-| 計 | 1377 | 1250 | 1 | 5 | 121 | 1364 | 9 | 4 |
+| 計 | 1374 | 1250 | 1 | 5 | 118 | 1363 | 9 | 2 |
 
 ## 登録されたカードと処理に使う欄が同じ記録（mechanically_equivalent）
 
@@ -70,7 +70,7 @@ kyuura の記録（`data/cards.json`）ごとに、エンジンの実装の対�
 
 ## 新しい効果の実装が要る記録（new_effect_needed。拡張パック以外の商品）
 
-64 件。拡張パック（neo）の記録は `data/engine_targets.json` にあります。
+61 件。拡張パック（neo）の記録は `data/engine_targets.json` にあります。
 
 | id | 名前 | 登録された文面のない効果 | category |
 |---|---|---|---|
@@ -105,7 +105,6 @@ kyuura の記録（`data/cards.json`）ごとに、エンジンの実装の対�
 | `PR1-022` | ミュウツー | attack0「エナジーコントロール」、attack1「テレキネシス」 | `candidate` |
 | `PR1-025` | ニャース | attack1「まるもうけ」 | `candidate` |
 | `PR1-027` | とりかえっこプリーズ | trainer「とりかえっこプリーズ」 | `special_rule_design` |
-| `PR1-038` | タッチ交代！ | trainer「タッチ交代！」 | `special_rule_design` |
 | `PR1-043` | カイリュー | power0「トランスポート」、attack0「マッハひこう」 | `candidate` |
 | `PR1-044` | _のピカチュウ | attack0「おたんじょうび」 | `candidate` |
 | `PR1-054` | ゴローニャ | attack1「ロックブラスト」 | `candidate` |
@@ -116,7 +115,6 @@ kyuura の記録（`data/cards.json`）ごとに、エンジンの実装の対�
 | `PR1-073` | カスミのてあて | trainer「カスミのてあて」 | `special_rule_design` |
 | `PR1-075` | ナッシー［Exeggutor］ | attack0「ふみつけ[Stomp]」 | `candidate` |
 | `PR1-077` | ナッシー［Exeggutor］ | attack0「ふみつけ[Stomp]」 | `candidate` |
-| `PR1-079` | カードトレーナー認定証 | trainer「カードトレーナー認定証」 | `candidate` |
 | `PR1-090` | _のピカチュウ | attack0「おたんじょうび」 | `candidate` |
 | `PF2-006` | ブラッキー | attack1「おいうち」 | `candidate` |
 | `PF2-007` | ピチュー | rules_text「」、attack0「いっしょにあそぼ」 | `candidate` |
@@ -137,7 +135,6 @@ kyuura の記録（`data/cards.json`）ごとに、エンジンの実装の対�
 | `PRN-040` | わるいフシギバナ | attack0「いやなかふん」 | `candidate` |
 | `PRN-041` | GR団のミュウツー | power0「わるいはどう」、attack0「わるいぞうふく」 | `candidate` |
 | `PRN-045` | わるいオニドリル | attack0「たかくとぶ」、attack1「ドリルダイブ」 | `candidate` |
-| `PRN-048` | タッチ世代交代！ | trainer「タッチ世代交代！」 | `special_rule_design` |
 
 ## 値の欠け・特別なルールの記録（拡張パック以外の商品）
 
@@ -152,15 +149,23 @@ kyuura の記録（`data/cards.json`）ごとに、エンジンの実装の対�
 | `IP1-023` | 無色2個エネルギー | `data_missing` | energy.text.ja |
 | `IP2-025` | 無色2個エネルギー | `data_missing` | energy.text.ja |
 | `PR1-027` | とりかえっこプリーズ | `special_rule_design` | play_scope: not_for_official_tournaments |
-| `PR1-038` | タッチ交代！ | `special_rule_design` | play_scope: kangaskhan_rule |
 | `PR1-073` | カスミのてあて | `special_rule_design` | play_scope: not_for_official_tournaments |
-| `PRN-048` | タッチ世代交代！ | `special_rule_design` | play_scope: kangaskhan_rule |
 
 ## 登録のあとで kyuura の値が変わったカード
 
 エンジンが登録のときに照合した値（写しの元のコミットの値にエンジンの補正を当てはめたもの）と、今の kyuura の値が違う欄です。エンジンが写しのコミットを上げるときに確かめます。
 
 ありません。
+
+## 通常対戦のエンジンの対象から外した記録（excluded_records）
+
+`data/cards.json` の記録のうち、`catalog_class` が `battle` でないか `engine_scope` が `target` でないもの（`data/curation/non_pack.json` の `catalog_scope` の明示の指定）。目録の分類と実装範囲の指定で、公式の裁定・エラッタ・印刷の訂正ではありません。カードの記録・文面・id は `data/cards.json` に残っています。エンジンの登録表の写しは変えていません（エンジンの取り込みは [引き継ぎ](engine-handover-catalog-scope.md)）。
+
+| id | 名前 | catalog_class | play_scope | 理由 |
+|---|---|---|---|---|
+| `PR1-038` | タッチ交代！ | `special_rule` | `kangaskhan_rule` | ガルーラルール専用のカード（専用ルールで使う。通常の対戦のカードではない）。通常対戦のエンジンの実装の対象から外す |
+| `PR1-079` | カードトレーナー認定証 | `award` | `standard` | 認定証のカード（本文はチャレンジパスポートの記録による公式カードトレーナーの認定で、対戦の手順を書いていない）。通常対戦のエンジンの実装の対象から外す |
+| `PRN-048` | タッチ世代交代！ | `special_rule` | `kangaskhan_rule` | 新ガルーラルール専用のカード（専用ルールで使う。通常の対戦のカードではない）。通常対戦のエンジンの実装の対象から外す |
 
 ## 対戦のカードでない項目（non_game）
 

@@ -43,18 +43,19 @@
  },
  "rule_base_date": "2000-02-14",
  "counts": {
-  "records": 1377,
+  "records": 1374,
+  "excluded_records": 3,
   "by_category": {
-   "candidate": 1364,
+   "candidate": 1363,
    "data_missing": 9,
-   "special_rule_design": 4
+   "special_rule_design": 2
   },
   "non_game_items": 18,
   "by_engine_status": {
    "registered": 1250,
    "mechanically_equivalent": 1,
    "reuse_candidate": 5,
-   "new_effect_needed": 121
+   "new_effect_needed": 118
   },
   "by_product_group": {
    "expansion_pack": {
@@ -121,16 +122,16 @@
     }
    },
    "promo": {
-    "records": 137,
+    "records": 134,
     "by_engine_status": {
      "registered": 105,
      "mechanically_equivalent": 0,
      "reuse_candidate": 4,
-     "new_effect_needed": 28
+     "new_effect_needed": 25
     },
     "by_category": {
-     "candidate": 133,
-     "special_rule_design": 4
+     "candidate": 132,
+     "special_rule_design": 2
     }
    },
    "quick_starter_gift": {
@@ -17147,30 +17148,6 @@
    "engine_status": "registered"
   },
   {
-   "id": "PR1-038",
-   "name_ja": "タッチ交代！",
-   "product_group": "promo",
-   "jp_set": "PR1",
-   "play_scope": "kangaskhan_rule",
-   "same_card_group": null,
-   "release_date": "1998-06-10",
-   "released_after_rule_base": false,
-   "category": "special_rule_design",
-   "category_reasons": [
-    "play_scope: kangaskhan_rule"
-   ],
-   "engine_status": "new_effect_needed",
-   "effects_without_registered_text": [
-    {
-     "part": "trainer",
-     "index": null,
-     "name_ja": "タッチ交代！",
-     "text_ja": "あなたは、あなたのパートナーとタッチ交代する。相手プレイヤーも、相手プレイヤーのパートナーとタッチ交代する。",
-     "reason": "no_registered_text"
-    }
-   ]
-  },
-  {
    "id": "PR1-039",
    "name_ja": "エリカのミニリュウ",
    "product_group": "promo",
@@ -17822,28 +17799,6 @@
    "category": "candidate",
    "category_reasons": [],
    "engine_status": "registered"
-  },
-  {
-   "id": "PR1-079",
-   "name_ja": "カードトレーナー認定証",
-   "product_group": "promo",
-   "jp_set": "PR1",
-   "play_scope": "standard",
-   "same_card_group": null,
-   "release_date": "1999",
-   "released_after_rule_base": false,
-   "category": "candidate",
-   "category_reasons": [],
-   "engine_status": "new_effect_needed",
-   "effects_without_registered_text": [
-    {
-     "part": "trainer",
-     "index": null,
-     "name_ja": "カードトレーナー認定証",
-     "text_ja": "チャレンジパスポートの記録により、あなたが50人のライバルと対戦したことが証明されました。そこで、あなたをポケモンカード公式カードトレーナーとして認定します。",
-     "reason": "no_registered_text"
-    }
-   ]
   },
   {
    "id": "PR1-080",
@@ -19932,6 +19887,28 @@
    "category": "candidate",
    "category_reasons": [],
    "engine_status": "registered"
+  }
+ ],
+ "excluded_records": [
+  {
+   "id": "PR1-038",
+   "name_ja": "タッチ交代！",
+   "product_group": "promo",
+   "jp_set": "PR1",
+   "play_scope": "kangaskhan_rule",
+   "catalog_class": "special_rule",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "ガルーラルール専用のカード（専用ルールで使う。通常の対戦のカードではない）。通常対戦のエンジンの実装の対象から外す"
+  },
+  {
+   "id": "PR1-079",
+   "name_ja": "カードトレーナー認定証",
+   "product_group": "promo",
+   "jp_set": "PR1",
+   "play_scope": "standard",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定証のカード（本文はチャレンジパスポートの記録による公式カードトレーナーの認定で、対戦の手順を書いていない）。通常対戦のエンジンの実装の対象から外す"
   },
   {
    "id": "PRN-048",
@@ -19939,23 +19916,9 @@
    "product_group": "promo",
    "jp_set": "PRN",
    "play_scope": "kangaskhan_rule",
-   "same_card_group": null,
-   "release_date": "2002-02",
-   "released_after_rule_base": true,
-   "category": "special_rule_design",
-   "category_reasons": [
-    "play_scope: kangaskhan_rule"
-   ],
-   "engine_status": "new_effect_needed",
-   "effects_without_registered_text": [
-    {
-     "part": "trainer",
-     "index": null,
-     "name_ja": "タッチ世代交代！",
-     "text_ja": "おたがいのプレイヤーは、それぞれ、自分の手札をすべて、もとの山札にもどし、よく切る。その後、それぞれのパートナーは、別の山札からカードを5枚まで引き、タッチ交代して対戦を続ける。(山札にカードをもどすときは、そのカードのウラ面と同じウラ面の山札にもどす。)",
-     "reason": "no_registered_text"
-    }
-   ]
+   "catalog_class": "special_rule",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "新ガルーラルール専用のカード（専用ルールで使う。通常の対戦のカードではない）。通常対戦のエンジンの実装の対象から外す"
   }
  ],
  "non_game_items": [

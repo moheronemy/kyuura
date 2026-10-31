@@ -377,6 +377,8 @@ class ProtectedDataTest(Base):
         'neo2-025': {'.jp_en_differences'},
     }
     FORMAT3_FIELDS = ('.product_group', '.play_scope', '.same_card_group', '.data_gaps', '.source_ids.pcg_search')
+    # 2026-10-31 に加えた目録の分類の欄（scripts/catalog.py。値は記録ごとに決まり、ほかの欄は変えていない）
+    CATALOG_FIELDS = ('.catalog_class', '.engine_scope', '.engine_scope_reason')
     HEADER_CHANGED = {'schema_version', 'description', 'text_availability'}  # 形式 3 の説明（拡張パック以外の商品を収録）
 
     def ledger(self):
@@ -384,7 +386,7 @@ class ProtectedDataTest(Base):
 
     def expected_changes(self, cid, after):
         exp = set(self.CORRECTED.get(cid, set()))
-        for f in self.FORMAT3_FIELDS:
+        for f in self.FORMAT3_FIELDS + self.CATALOG_FIELDS:
             cur = after
             for part in f.strip('.').split('.'):
                 cur = (cur or {}).get(part)
@@ -427,7 +429,7 @@ class ProtectedDataTest(Base):
         # CSV: bcf38c7 の列の値は、上の欄の違うカードの行だけが違う。加わった行は拡張パック以外の商品の記録だけ
         import csv
         import io
-        allowed = {cid for cid in before if self.expected_changes(cid, after[cid]) - set(self.FORMAT3_FIELDS)}
+        allowed = {cid for cid in before if self.expected_changes(cid, after[cid]) - set(self.FORMAT3_FIELDS) - set(self.CATALOG_FIELDS)}
         for path, key in (('data/cards.csv', ('id',)), ('data/attacks.csv', ('card_id', 'index')), ('data/powers.csv', ('card_id', 'index'))):
             old_rows = list(csv.DictReader(io.StringIO(subprocess.run(['git', '-C', str(ROOT), 'show', f'bcf38c7:{path}'],
                                                                       capture_output=True, text=True, check=True).stdout)))
