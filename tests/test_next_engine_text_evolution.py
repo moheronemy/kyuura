@@ -253,11 +253,14 @@ class ImageEvidenceTest(Data):
 
     def test_book_checks_are_only_the_figures(self):
         ctx = bcr.load()
-        new_cc = {x['id'] for x in ctx['checks']['records']} - {x['id'] for x in at_base('data/sidecar/card_checks.json')['records']}
+        # この作業のコミット（AT_COMMIT）にある記録で選ぶ（あとの作業の照合・最新の説明を混ぜない）
+        then_cc = {x['id'] for x in at_commit('data/sidecar/card_checks.json')['records']}
+        then_ld = {x['id'] for x in at_commit('data/sidecar/latest_descriptions.json')['records']}
+        new_cc = ({x['id'] for x in ctx['checks']['records']} & then_cc) - {x['id'] for x in at_base('data/sidecar/card_checks.json')['records']}
         # 図版がそのカードの印刷のもの（figure）だけを照合（CC-）にする。見出しだけで当てはめたカード・カードの画像だけのカードは CC- にしない
         self.assertEqual(new_cc, {'CC-PR1-003-P127', 'CC-IP1-040-P127', 'CC-ES3-021-P156'})
         latest = {x['id']: x for x in ctx['latest']['records']}
-        new_ld = set(latest) - {x['id'] for x in at_base('data/sidecar/latest_descriptions.json')['records']}
+        new_ld = (set(latest) & then_ld) - {x['id'] for x in at_base('data/sidecar/latest_descriptions.json')['records']}
         self.assertEqual(new_ld, {'LD-PR1-001-ATK0', 'LD-PR1-003-ATK0', 'LD-PR1-017-ATK0', 'LD-IP1-040-ATK0', 'LD-ES3-021-ATK1'})
         by = {i: (latest[i]['applies_to_print']['by'], latest[i]['printed_text']['image_check']) for i in new_ld}
         self.assertEqual(by, {'LD-PR1-003-ATK0': ('figure', 'consistent_where_legible'), 'LD-IP1-040-ATK0': ('figure', 'consistent_where_legible'),

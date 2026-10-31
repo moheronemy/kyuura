@@ -23,6 +23,7 @@ import build_card_rulings as bcr  # noqa: E402
 import build_cardlist  # noqa: E402
 
 BASE = '2fe0bc042ce187d191843819262f8036abbb343d'  # この作業の基点
+AT_COMMIT = '74b3ceb883dd815495d13b9987433fb14b36e44d'  # この作業の最後のコミット（あとの作業の訂正・記録と分けるため、この作業の差はこの時点で比べる）
 # 画像の照合の記録 → （読んだ欄と値, 訂正）
 IMAGES = {
     'IMG-GD5-007': ({'name.ja': 'カツラのウィンディ'}, []),
@@ -42,8 +43,13 @@ def load(rel):
     return json.loads((ROOT / rel).read_text(encoding='utf-8'))
 
 
-def at_base(rel):
-    return json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{BASE}:{rel}'], capture_output=True, text=True, check=True).stdout)
+def at_base(rel, commit=BASE):
+    return json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{commit}:{rel}'], capture_output=True, text=True, check=True).stdout)
+
+
+def at_commit(rel):
+    """この作業のコミット（AT_COMMIT）の記録。あとの作業（2026-10-31 のすごいへんしん・わるいはどうの調査など）が値・記録を加えても、この作業の差を確かめる。"""
+    return at_base(rel, AT_COMMIT)
 
 
 class Data(unittest.TestCase):
@@ -62,12 +68,14 @@ class CardValueTest(Data):
 
     def test_only_two_names_changed(self):
         old = {c['id']: c for c in at_base('data/cards.json')['cards']}
+        then = {c['id']: c for c in at_commit('data/cards.json')['cards']}  # この作業のコミットの値（あとの作業の訂正を混ぜない）
         self.assertEqual(set(old), set(self.by_id))
+        self.assertEqual(set(then), set(self.by_id))
         self.assertEqual(len(self.cards), 1377)
-        changed = {i for i in old if old[i] != self.by_id[i]}
+        changed = {i for i in old if old[i] != then[i]}
         self.assertEqual(changed, {'PMCG1-019', 'PMCG6-034'})
         for fid, (cid, before, after) in FIXES.items():
-            a, b = copy.deepcopy(old[cid]), copy.deepcopy(self.by_id[cid])
+            a, b = copy.deepcopy(old[cid]), copy.deepcopy(then[cid])
             self.assertEqual((a['name']['ja'], b['name']['ja']), (before, after))
             for r in (a, b):  # 名前・注記・訂正の記録のほかは同じ
                 r['name']['ja'] = None
@@ -95,8 +103,10 @@ class ImageAndCorrectionTest(Data):
     """画像の照合の記録・訂正・生成した値が同じ内容を指す。訂正は生成のたびにかかり、before が今の値と違えば止まる。"""
 
     def test_records(self):
-        new = set(self.checks) - {x['id'] for x in at_base('data/curation/card_image_checks.json')['checks']}
+        then = {x['id'] for x in at_commit('data/curation/card_image_checks.json')['checks']}
+        new = then - {x['id'] for x in at_base('data/curation/card_image_checks.json')['checks']}
         self.assertEqual(new, set(IMAGES))
+        self.assertLessEqual(then, set(self.checks))  # あとの作業は記録を加えるだけ
         self.assertNotIn('IMG-PR1-075', self.checks)  # pcg-search の画像は「Dummy」の代わりの画像なので、印刷の確認にしない
         for iid, (values, fixes) in IMAGES.items():
             x = self.checks[iid]
@@ -216,10 +226,14 @@ class RulingTest(unittest.TestCase):
         self.assertTrue(any('p.293' in e for e in bcr.validate(ctx)))
 
     def test_counts(self):
-        r, latest, checks = self.ctx['rulings'], self.ctx['latest']['records'], self.ctx['checks']['records']
+        # この作業のコミットの時点の数（あとの作業の記録を数えない。期待値は変えていない）
+        then = dict(self.ctx, rulings=at_commit('data/sidecar/rulings.json'), latest=at_commit('data/sidecar/latest_descriptions.json'),
+                    checks=at_commit('data/sidecar/card_checks.json'))
+        r, latest, checks = then['rulings'], then['latest']['records'], then['checks']['records']
         self.assertEqual((len(latest), len(checks), len(r['rule_clauses']), len(r['rulings']), len(r['issues'])), (47, 84, 35, 320, 79))
-        self.assertEqual(bcr.unresolved_counts(self.ctx)['research_issues'], 79)
-        self.assertEqual(bcr.unresolved_counts(self.ctx, as_of='v0.113')['research_issues'], 72)  # 取り込んだ版の時点の数は変わらない
+        self.assertEqual(bcr.unresolved_counts(then)['research_issues'], 79)
+        self.assertEqual(bcr.unresolved_counts(then, as_of='v0.113')['research_issues'], 72)  # 取り込んだ版の時点の数は変わらない
+        self.assertEqual(bcr.unresolved_counts(self.ctx, as_of='v0.113')['research_issues'], 72)  # 今の記録でも、取り込んだ版の時点の数は同じ
         self.assertNotIn('v0.122', {i['engine_version'] for i in r['engine_imports']})  # v0.122 は取り込んでいない
 
 
@@ -228,7 +242,7 @@ class RegistryTest(Data):
 
     def test_snapshot_and_targets(self):
         self.assertEqual(load('data/curation/engine_registered_cards.json'), at_base('data/curation/engine_registered_cards.json'))
-        rows = {r['id']: r for r in load('data/engine_targets.json')['cards']}
+        rows = {r['id']: r for r in at_commit('data/engine_targets.json')['cards']}  # この作業のコミットの一覧（あとの作業の文面の訂正を混ぜない）
         old = {r['id']: r for r in at_base('data/engine_targets.json')['cards']}
         self.assertEqual({i for i in rows if rows[i] != old[i]}, {'PMCG1-019', 'PMCG6-034', 'GD5-007'})
         self.assertEqual(sum(r['engine_status'] == 'registered' for r in rows.values()), 1250)

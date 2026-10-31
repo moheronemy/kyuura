@@ -6599,6 +6599,90 @@
     }
    ],
    "engine_refs": []
+  },
+  {
+   "id": "CC-ES2-032-P239",
+   "card_id": "ES2-032",
+   "card_name_ja": "メタモン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "239",
+   "pdf_page": 241,
+   "location": "p.239 の 1 つ目の欄「たねポケモン メタモン LV.15／HP40 ●拡張シート第2弾赤版」",
+   "checked_fields": {
+    "name.ja": "メタモン",
+    "pokemon.stage": "basic",
+    "pokemon.hp": 40,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "psychic",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 1,
+    "pokemon.powers[0].name.ja": "すごいへんしん",
+    "pokemon.powers[0].text.ja": "この力は、このカードがバトル場にいる時だけ、自分の番ごとに1回使える。コインを投げて「おもて」なら、場にいるポケモンから1匹を選び、それ以後このカードを、選んだポケモンと同じカードとしてあつかう。(ただし「進化・退化」はできず、この「すごいへんしん」の力は使うことができる)。「うら」なら、このカードはメタモンにもどる。エネルギーカードは、このカードについている限り、どの色のエネルギーとしても使える。このカードがバトル場をはなれた時や、「ねむり・マヒ・こんらん」状態の時、この「すごいへんしん」の力は使えず、このカードはメタモンにもどる。へんしんの元になっていたポケモンが場をはなれた時も、このカードはメタモンにもどる。",
+    "pokemon.attacks": []
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp",
+    "name.en と英語の文面"
+   ],
+   "result": "printed_vs_latest_only",
+   "data_error": false,
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-ES2-032-PWR0",
+     "note": "kyuura の文面は印刷の文面（2026-10-31 に「力」1 字を印刷どおりに直したあと）。最新の説明とは書き方と範囲の書き方が違う。データの誤りではない"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-ES2-032-PWR0"
+   ],
+   "data_gaps": [
+    {
+     "field": "jp_print.level",
+     "kyuura_value": null,
+     "source_value": 15,
+     "evidence": "p.239 の欄の見出しと図版（300dpi）",
+     "cause": "拡張パック以外の商品の転記（pcg-search）にレベルの欄がない（拡張パック以外の商品のレベルはどれも空）",
+     "status": "open",
+     "note": "埋めていない（この調査の対象外）。訂正の候補にも加えていない"
+    }
+   ],
+   "findings": [
+    "図版: 無色、LV.15、HP40、［特殊能力］すごいへんしん（ワザなし）、図鑑の欄「へんしんポケモン：身長0.3m、体重4kg」、弱点 闘、抵抗力 超 -30、にげる 1。図版の特殊能力の文字は小さく、読める範囲で kyuura の文面と同じ。",
+    "「特殊能力」欄の最新の説明: 印刷の文面と違う（LD-ES2-032-PWR0。8 つの色を挙げる）。",
+    "解説: すごいへんしんは自分の番で 1 回だけ、バトル場でしか使えず、コインで表を出さないといけない（失敗したら、このメタモンのまま何もできない）。相手の場の手ごわいポケモンに変身してその力を利用できる。化石のメタモンの［へんしん］とのちがいは、相手のベンチにいるポケモンにも、自分の場にいるポケモンにも変身できること。変身した元のポケモンがきぜつしたり場を離れると効果が消え、もとのメタモンにもどる（そのポケモンを倒してしまえばもどる）。",
+    "ページの下の番号は「239」（PDF 241）。"
+   ],
+   "not_confused_with": [
+    "PMCG3-042（メタモン LV.20／HP50。p.239 の 2 つ目の欄）",
+    "PMCG6-072（キョウのメタモン LV.12／HP40。p.239 の 3 つ目の欄）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-31",
+     "method": "Internet Archive のスキャン [J38] の PDF（2026-10-12 に取得した 372 ページの PDF。sha256 e8ae8255c7b5c2ba7a662704fde62a65629c5ab8085235dd2c98b4e9a9318515）の PDF 241・326・327 を、スキャンの画像の解像度（300dpi）で画像にして読んだ（ページ全体は 110dpi で位置とページ番号を確かめた）。OCR の文字・既存の転記 data/Silver_Bible_structured.md は引用に使っていない",
+     "result": "照合した欄はすべて同じ（文面の違いは印刷の文面と最新の説明の違いだけ）"
+    }
+   ],
+   "engine_refs": []
   }
  ],
  "difference_kinds": {
