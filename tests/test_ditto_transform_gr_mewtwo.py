@@ -21,6 +21,7 @@ import build_card_rulings as bcr  # noqa: E402
 import build_cardlist  # noqa: E402
 
 BASE = '74b3ceb883dd815495d13b9987433fb14b36e44d'  # この作業の基点
+AT_COMMIT = '9731354f7e5c6bca08c88bbe98f9449ae96ea7a7'  # この作業の最後のコミット（あとの作業の記録と分けるため、この作業の差はこの時点で比べる）
 FIX = 'FIX-ES2-032-POWER0-TEXT-JA'
 NEW_CLAUSES = {'GR-2000-P324-TRANSFORM-DEFINITION', 'GR-2000-P324-TRANSFORM-TOP-CARD', 'GR-2000-P324-TRANSFORM-NAME-AND-KIND',
                'GR-2000-P325-TRANSFORM-OWN-STATE', 'GR-2000-P325-TRANSFORM-NOT-NEW', 'GR-2000-P325-TRANSFORM-DURING-ACTION'}
@@ -44,8 +45,13 @@ def load(rel):
     return json.loads((ROOT / rel).read_text(encoding='utf-8'))
 
 
-def at_base(rel):
-    return json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{BASE}:{rel}'], capture_output=True, text=True, check=True).stdout)
+def at_base(rel, commit=BASE):
+    return json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{commit}:{rel}'], capture_output=True, text=True, check=True).stdout)
+
+
+def at_commit(rel):
+    """この作業のコミット（AT_COMMIT）の記録。あとの作業（2026-10-31 のプクリン・コインで決まる枚数の不足の調査など）が同じ日の記録を加えても、この作業の差を確かめる。"""
+    return at_base(rel, AT_COMMIT)
 
 
 class Data(unittest.TestCase):
@@ -70,10 +76,12 @@ class CardValueTest(Data):
 
     def test_only_one_character_changed(self):
         old = {c['id']: c for c in at_base('data/cards.json')['cards']}
+        then = {c['id']: c for c in at_commit('data/cards.json')['cards']}  # この作業のコミットの値（あとの作業の PR1-027 の訂正を混ぜない）
         self.assertEqual(set(old), set(self.by_id))
+        self.assertEqual(set(then), set(self.by_id))
         self.assertEqual(len(self.cards), 1377)
-        self.assertEqual({i for i in old if old[i] != self.by_id[i]}, {'ES2-032'})
-        a, b = old['ES2-032'], self.by_id['ES2-032']
+        self.assertEqual({i for i in old if old[i] != then[i]}, {'ES2-032'})
+        a, b = old['ES2-032'], then['ES2-032']
         before, after = a['pokemon']['powers'][0]['text']['ja'], b['pokemon']['powers'][0]['text']['ja']
         self.assertEqual(len(before), len(after))
         diff = [(x, y) for x, y in zip(before, after) if x != y]
@@ -84,7 +92,7 @@ class CardValueTest(Data):
             r['notes'] = []
             r.pop('corrections', None)
         self.assertEqual(a, b)
-        self.assertEqual(self.by_id['PRN-041'], old['PRN-041'])  # GR団のミュウツーは訂正なし
+        self.assertEqual(then['PRN-041'], old['PRN-041'])  # GR団のミュウツーは訂正なし
 
     def test_out_of_scope_values_are_not_filled(self):
         # 画像・書籍にレベル（LV.15・LV.35）・図鑑番号が見えても埋めない。公式大会の補足の文で play_scope を変えない
@@ -106,8 +114,10 @@ class ImageAndCorrectionTest(Data):
     """カードの画像の照合の記録と訂正。訂正は生成のたびにかかり、before が今の値と違えば止まる。"""
 
     def test_records(self):
-        new = set(self.checks) - {x['id'] for x in at_base('data/curation/card_image_checks.json')['checks']}
+        then = {x['id'] for x in at_commit('data/curation/card_image_checks.json')['checks']}  # あとの作業の記録を数えない
+        new = then - {x['id'] for x in at_base('data/curation/card_image_checks.json')['checks']}
         self.assertEqual(new, {'IMG-ES2-032', 'IMG-PRN-041'})
+        self.assertLessEqual(then, set(self.checks))  # あとの作業は記録を加えるだけ
         for iid in new:
             x = self.checks[iid]
             self.assertEqual((x['checked_on'], [i['site'] for i in x['images']]), ('2026-10-31', ['pcg-search.com [N3]']), iid)
@@ -209,26 +219,32 @@ class RulingTest(Data):
     def test_new_records(self):
         self.assertEqual(bcr.validate(self.ctx), [])
         base = at_base('data/sidecar/rulings.json')
-        new_r = set(self.rulings) - {x['id'] for x in base['rulings']}
-        self.assertEqual({i: self.rulings[i]['status'] for i in new_r}, NEW_RULINGS)
+        then = at_commit('data/sidecar/rulings.json')  # この作業のコミットの記録（あとの作業の裁定・論点・事例を混ぜない）
+        rulings = {x['id']: x for x in then['rulings']}
+        issues = {x['id']: x for x in then['issues']}
+        self.assertLessEqual(set(rulings), set(self.rulings))  # あとの作業は記録を加えるだけ
+        self.assertLessEqual(set(issues), set(self.issues))
+        new_r = set(rulings) - {x['id'] for x in base['rulings']}
+        self.assertEqual({i: rulings[i]['status'] for i in new_r}, NEW_RULINGS)
         for i, st in NEW_RULINGS.items():
-            self.assertEqual(bool(self.rulings[i]['inference']), st == 'SUPPORTED', i)
-            self.assertEqual(self.rulings[i]['engine_refs'], [], i)  # エンジンの裁定を kyuura の裁定に結んでいない
-        new_i = set(self.issues) - {x['id'] for x in base['issues']}
+            self.assertEqual(bool(rulings[i]['inference']), st == 'SUPPORTED', i)
+            self.assertEqual(rulings[i]['engine_refs'], [], i)  # エンジンの裁定を kyuura の裁定に結んでいない
+            self.assertEqual(self.rulings[i], rulings[i], i)  # あとの作業はこの作業の裁定を変えていない
+        new_i = set(issues) - {x['id'] for x in base['issues']}
         self.assertEqual(new_i, NEW_ISSUES)
         for i in new_i:
-            q = self.issues[i]
+            q = issues[i]
             self.assertEqual((q['status'], q['engine_refs'], q['recorded_after']), ('UNRESOLVED', [], {'import': 'ENGINE-2D113B5', 'date': '2026-10-31'}), i)
         # 既存の記録は、3 つの論点に注記を加えただけ（問い・事例・エンジンの記録・監査は変えない）
-        now = {x['id']: x for k in ('issues', 'rulings', 'rule_clauses') for x in self.ctx['rulings'][k]}
+        now = {x['id']: x for k in ('issues', 'rulings', 'rule_clauses') for x in then[k]}
         changed = sorted(x['id'] for k in ('issues', 'rulings', 'rule_clauses') for x in base[k] if x != now[x['id']])
         self.assertEqual(changed, sorted(NOTED_ISSUES))
         for i in NOTED_ISSUES:
             old = next(x for x in base['issues'] if x['id'] == i)
-            self.assertEqual({k: v for k, v in self.issues[i].items() if k != 'notes'}, {k: v for k, v in old.items() if k != 'notes'}, i)
-            self.assertEqual(self.issues[i]['notes'][:len(old['notes'])], old['notes'], i)
-            self.assertEqual(len(self.issues[i]['notes']), len(old['notes']) + 1, i)
-            self.assertTrue(self.issues[i]['notes'][-1].startswith('2026-10-31'), i)
+            self.assertEqual({k: v for k, v in issues[i].items() if k != 'notes'}, {k: v for k, v in old.items() if k != 'notes'}, i)
+            self.assertEqual(issues[i]['notes'][:len(old['notes'])], old['notes'], i)
+            self.assertEqual(len(issues[i]['notes']), len(old['notes']) + 1, i)
+            self.assertTrue(issues[i]['notes'][-1].startswith('2026-10-31'), i)
 
     def test_engine_derived_questions_are_not_closed(self):
         # TF1・TF2・TE1・TE2・RX1・DF1 などの論点は UNRESOLVED のまま（答えられた部分は注記と別の裁定）
@@ -258,10 +274,13 @@ class RulingTest(Data):
         self.assertTrue(any('転記の PDF' in e for e in bcr.validate(ctx)))
 
     def test_counts(self):
-        r, latest, checks = self.ctx['rulings'], self.ctx['latest']['records'], self.ctx['checks']['records']
+        # この作業のコミットの時点の数（あとの作業の記録を数えない。期待値は変えていない）
+        then = dict(self.ctx, rulings=at_commit('data/sidecar/rulings.json'), latest=at_commit('data/sidecar/latest_descriptions.json'),
+                    checks=at_commit('data/sidecar/card_checks.json'))
+        r, latest, checks = then['rulings'], then['latest']['records'], then['checks']['records']
         self.assertEqual((len(latest), len(checks), len(r['rule_clauses']), len(r['rulings']), len(r['issues'])), (48, 85, 41, 337, 88))
-        self.assertEqual(bcr.unresolved_counts(self.ctx)['research_issues'], 88)
-        self.assertEqual(bcr.unresolved_counts(self.ctx, as_of='v0.113')['research_issues'], 72)  # 取り込んだ版の時点の数は変わらない
+        self.assertEqual(bcr.unresolved_counts(then)['research_issues'], 88)
+        self.assertEqual(bcr.unresolved_counts(then, as_of='v0.113')['research_issues'], 72)  # 取り込んだ版の時点の数は変わらない
         self.assertFalse({'v0.122', 'v0.123'} & {i['engine_version'] for i in r['engine_imports']})  # 取り込んでいない
 
 
@@ -272,7 +291,8 @@ class RegistryTest(Data):
         self.assertEqual(load('data/curation/engine_registered_cards.json'), at_base('data/curation/engine_registered_cards.json'))
         rows = {r['id']: r for r in load('data/engine_targets.json')['cards']}
         old = {r['id']: r for r in at_base('data/engine_targets.json')['cards']}
-        self.assertEqual({i for i in rows if rows[i] != old[i]}, {'ES2-032'})
+        then = {r['id']: r for r in at_commit('data/engine_targets.json')['cards']}  # この作業のコミットの一覧（あとの作業の PR1-027 の文面の写しを混ぜない）
+        self.assertEqual({i for i in then if then[i] != old[i]}, {'ES2-032'})
         self.assertEqual({k for k in rows['ES2-032'] if rows['ES2-032'][k] != old['ES2-032'][k]}, {'effects_without_registered_text'})  # 文面の写しだけ
         for cid in ('ES2-032', 'PRN-041'):
             self.assertEqual(rows[cid]['engine_status'], old[cid]['engine_status'], cid)

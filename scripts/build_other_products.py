@@ -982,7 +982,12 @@ def page_index(cat):
     tot = {k: sum(e['counts'][k] for e in cat.product_entries.values()) for k in next(iter(cat.product_entries.values()))['counts']}
     L.append(f"| 計 | | {tot['source_items']} | {tot['card_records']} | {tot['merged_copies']} | {tot['non_game_items']} | {tot['standard_play_cards']} |")
     L += ['', '- 元の項目の数は pcg-search のカードページの数で、カードの種類の数ではありません（イントロパックのデッキは番号ごとにページがある）。構築済みデッキの封入枚数は各商品のページの「枚数」です。',
-          '- 「通常の対戦のカード」は記録のうち `play_scope` が `standard` のもの（ガルーラルール専用・公式大会で使えないと書かれたカードを除く）。']
+          '- 「通常の対戦のカード」は記録のうち `play_scope` が `standard` で、目録の分類（`catalog_class`）が `battle` のもの'
+          '（ガルーラルール専用・公式大会で使えないと書かれたカードと、2026-10-31 に利用者の指定で認定・賞品に分類したカードトレーナー認定証 PR1-079 を除く）。',
+          '- [`data/cards.csv`](../../data/cards.csv) は目録の一覧で、記録のほかに「対象外の項目」と、pcg-search の転記にない項目'
+          '（[`data/curation/catalog_items.json`](../../data/curation/catalog_items.json) の `KC-` の id。入賞賞品カード・スペシャルジャンボカードなど）の行があります。'
+          '通常の対戦のカードを選ぶときは `catalog_class`・`engine_scope` の欄で選びます（[データの構造](../data-schema.md#cardscsv目録の一覧)、'
+          '[プロモの収録範囲の調査](../catalog-promo-survey.md)）。']
     unc = cat.np.get('uncovered_products', [])
     if unc:
         L += ['', '## 収録していない商品・範囲（わかっているもの）', '',

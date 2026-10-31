@@ -1,0 +1,3207 @@
+{
+ "_comment": "プロモの収録範囲の比較の記録（手で編集する調査の記録。2026-10-31）。独立したプロモの一覧（Bulbapedia [X48]）の項目ごとに、kyuura の目録との対応を記録する。生成物ではない。scripts/catalog.py が参照（catalog_ids）と値を検査する。読み方は docs/catalog-promo-survey.md。",
+ "checked_on": "2026-10-31",
+ "scope": {
+  "definition": "旧裏期 = カードの裏面が「ポケットモンスターカードゲーム」の旧デザインの印刷物。裏面は 2001年7月の「ポケモンカード★VS」から新しいデザインに変わった [X35] が、2002年の「タッチ世代交代！」（PRN-048）のように、その後に旧裏の裏面で作られたカードもあるので、年や大会賞品かどうかだけでは除外しない。判断は裏面・シリーズ・配布時期の組み合わせで、決められないものは unconfirmed にする",
+  "statuses": {
+   "existing": "既存の目録の項目（pcg-search のプロモの項目）と同じ",
+   "existing_other_product": "プロモ以外の商品として既存収録",
+   "added": "この調査で目録に加えた（data/curation/catalog_items.json）",
+   "variant_candidate": "既存の項目・加えた項目の別版の候補（未収録）",
+   "addition_candidate": "旧裏期の追加の候補（未収録。公式の資料・画像での確認が要る）",
+   "out_of_scope": "範囲外（理由つき）",
+   "unconfirmed": "未確認（範囲・印刷の違いを決められない）"
+  },
+  "relations": {
+   "same_entry": "同じ項目",
+   "different_print": "別の印刷物",
+   "same_print_other_route_unconfirmed": "同じ印刷物の別の配布経路かもしれない（未確認）",
+   "unknown": "印刷の違いか配布経路の違いかわからない",
+   "other_language_print": "外国語版の印刷物",
+   "not_a_card": "カードゲームのカードではない",
+   "other_series": "別のシリーズ"
+  }
+ },
+ "comparisons": [
+  {
+   "source": "X48",
+   "title": "Bulbapedia「Unnumbered Promotional cards (TCG)/1996-2005」",
+   "revision": 4433654,
+   "revision_timestamp": "2025-11-30T12:10:02Z",
+   "retrieved_on": "2026-10-31",
+   "method": "MediaWiki の API（action=parse&prop=wikitext）で原文を取得し、Setlist/nmentry の行を順に番号づけた（n）。項目名は「カード名 [配布の区分] [補足]」の形に直し、other_products.json の promos の bulbapedia と比べた。一致しない項目は、各カードのページ（[X53][X57][X58]）を読んで分類した",
+   "entries": [
+    {
+     "n": 1,
+     "year": "1996",
+     "bulbapedia": "Pikachu [CoroCoro] [Glossy, Ken Sugimori]",
+     "distribution_en": "CoroCoro Comic November 1996 issue insert (October 15, 1996)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-001"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 2,
+     "year": "1996",
+     "bulbapedia": "Jigglypuff [CoroCoro] [Glossy]",
+     "distribution_en": "CoroCoro Comic November 1996 issue insert (October 15, 1996)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-002"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 3,
+     "year": "1996",
+     "bulbapedia": "Pikachu [Asobikata] [Non-glossy, Keiji Kinebuchi]",
+     "distribution_en": "Easily Understand How to Play Pokémon Cards (November 30, 1996)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-003"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 4,
+     "year": "1996",
+     "bulbapedia": "Jigglypuff [Asobikata] [Non-glossy]",
+     "distribution_en": "Easily Understand How to Play Pokémon Cards (November 30, 1996)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-004"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 5,
+     "year": "1997",
+     "bulbapedia": "Mew [CoroCoro] [Glossy]",
+     "distribution_en": "CoroCoro Comic February 1997 issue insert (January 15, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-005"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 6,
+     "year": "1997",
+     "bulbapedia": "Slowpoke [Playmat]",
+     "distribution_en": "Red, Green & Black Playmats insert (May 2, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-006"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 7,
+     "year": "1997",
+     "bulbapedia": "Mewtwo [CoroCoro]",
+     "distribution_en": "CoroCoro Comic June 1997 issue insert (May 15, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-007"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 8,
+     "year": "1997",
+     "bulbapedia": "Mewtwo [Fan Book]",
+     "distribution_en": "Pocket Monsters Fan Book insert (May 20, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-008"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 9,
+     "year": "1997",
+     "bulbapedia": "Super Energy Retrieval [Fan Book]",
+     "distribution_en": "Pocket Monsters Fan Book insert (May 20, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-009"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 10,
+     "year": "1997",
+     "bulbapedia": "Electabuzz [Card File]",
+     "distribution_en": "Official Card File insert (June 13, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-010"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 11,
+     "year": "1997",
+     "bulbapedia": "No.1 Trainer [Pokémon Card Game Official Tournament]",
+     "distribution_en": "Pokémon Card Game Official Tournament final qualification prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0001"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 12,
+     "year": "1997",
+     "bulbapedia": "No.2 Trainer [Pokémon Card Game Official Tournament]",
+     "distribution_en": "Pokémon Card Game Official Tournament final qualification prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0002"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 13,
+     "year": "1997",
+     "bulbapedia": "No.3 Trainer [Pokémon Card Game Official Tournament]",
+     "distribution_en": "Pokémon Card Game Official Tournament final qualification prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0003"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 14,
+     "year": "1997",
+     "bulbapedia": "Pikachu, Jigglypuff, and Clefairy [CoroCoro] [Jumbo]",
+     "distribution_en": "CoroCoro Comic July 1997 issue insert (June 15, 1997)",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0016"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 15,
+     "year": "1997",
+     "bulbapedia": "Surfing Pikachu [JR] [Non-glossy]",
+     "distribution_en": "JR East Pokémon Stamp Rally (August 9-17, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-011"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 16,
+     "year": "1997",
+     "bulbapedia": "Mew [CoroCoro] [Non-glossy]",
+     "distribution_en": "JR East Pokémon Stamp Rally (August 9-17, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-012"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 17,
+     "year": "1997",
+     "bulbapedia": "Surfing Pikachu [CoroCoro] [Glossy]",
+     "distribution_en": "CoroCoro Comic September 1997 issue insert (August 15, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-014"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 18,
+     "year": "1997",
+     "bulbapedia": "Imakuni? [CoroCoro] [Glossy]",
+     "distribution_en": "CoroCoro Comic September 1997 issue insert (August 15, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-013"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 19,
+     "year": "1997",
+     "bulbapedia": "Articuno [Phone Card] [Phone card]",
+     "distribution_en": "Pokémon Card Strategy For Adults Lottery Prize Card (March 30-August 30, 1997)",
+     "status": "out_of_scope",
+     "relation": "not_a_card",
+     "catalog_ids": [],
+     "note": "テレホンカード（Bulbapedia の [Phone card]）。カードゲームのカードの印刷物ではないので目録の対象外（現物・画像は見ていない）"
+    },
+    {
+     "n": 20,
+     "year": "1997",
+     "bulbapedia": "Articuno, Moltres, and Zapdos [CoroCoro] [Jumbo]",
+     "distribution_en": "CoroCoro Comic October 1997 issue insert (September 15, 1997)",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0017"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 21,
+     "year": "1997",
+     "bulbapedia": "Arcanine [Toyota]",
+     "distribution_en": "Toyota campaign (October-December 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-016"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 22,
+     "year": "1997",
+     "bulbapedia": "Pikachu [Toyota]",
+     "distribution_en": "Toyota campaign (October-December 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-017"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 23,
+     "year": "1997",
+     "bulbapedia": "Flying Pikachu [CoroCoro]",
+     "distribution_en": "CoroCoro Comic November 1997 issue insert (October 15, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-018"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 24,
+     "year": "1997",
+     "bulbapedia": "No.1 Trainer [Lizardon Mega Battle]",
+     "distribution_en": "Charizard Mega Battle regional first place prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0004"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 25,
+     "year": "1997",
+     "bulbapedia": "No.2 Trainer [Lizardon Mega Battle]",
+     "distribution_en": "Lizardon Mega Battle regional second place prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0005"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 26,
+     "year": "1997",
+     "bulbapedia": "No.3 Trainer [Lizardon Mega Battle]",
+     "distribution_en": "Lizardon Mega Battle regional third place prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0006"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 27,
+     "year": "1997",
+     "bulbapedia": "Dark Persian [Pokémon Card Fan Club]",
+     "distribution_en": "Pokémon Card Fan Club Vol. 3 (November 18, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-019"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 28,
+     "year": "1997",
+     "bulbapedia": "Pikachu [WHF Special Sheet]",
+     "distribution_en": "World Hobby Fair Special Limited Expansion Sheet",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-020"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 29,
+     "year": "1997",
+     "bulbapedia": "Mew [WHF Special Sheet]",
+     "distribution_en": "World Hobby Fair Special Limited Expansion Sheet",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-021"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 30,
+     "year": "1997",
+     "bulbapedia": "Mewtwo [WHF Special Sheet]",
+     "distribution_en": "World Hobby Fair Special Limited Expansion Sheet",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-022"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 31,
+     "year": "1997",
+     "bulbapedia": "Cool Porygon [Nintendo 64]",
+     "distribution_en": "Nintendo 64 Double Get Campaign (December 10, 1997-January 31, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-023"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 32,
+     "year": "1997",
+     "bulbapedia": "Hungry Snorlax [Nintendo 64]",
+     "distribution_en": "Nintendo 64 Double Get Campaign (December 10, 1997-January 31, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-024"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 33,
+     "year": "1997",
+     "bulbapedia": "Meowth [CoroCoro]",
+     "distribution_en": "CoroCoro Comic January 1998 issue insert (December 15, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-025"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 34,
+     "year": "1997",
+     "bulbapedia": "Computer Error [CoroCoro] [Glossy]",
+     "distribution_en": "CoroCoro Comic January 1998 issue insert (December 15, 1997)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-026"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 35,
+     "year": "1997",
+     "bulbapedia": "Pokémon Illustrator [CoroCoro]",
+     "distribution_en": "{{DL|Illustration contests|Pokémon Card Game Illust Artist Contest}}<br>{{DL|Illustration contests|Mewtwo's Counterattack Commemoration Illust Artist Contest}}<br>{{DL|Illustration contests|Pikachu's Summer Vacation Commemoration Illust Artist Contest",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-015"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 36,
+     "year": "1998",
+     "bulbapedia": "Venusaur [Trade Please]",
+     "distribution_en": "Trade Please campaign (February 10-July 31, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-029"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 37,
+     "year": "1998",
+     "bulbapedia": "Charizard [Trade Please]",
+     "distribution_en": "Trade Please campaign (February 10-July 31, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-030"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 38,
+     "year": "1998",
+     "bulbapedia": "Blastoise [Trade Please]",
+     "distribution_en": "Trade Please campaign (February 10-July 31, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-028"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 39,
+     "year": "1998",
+     "bulbapedia": "Trade Please! [Trade Please]",
+     "distribution_en": "Trade Please campaign (February 10-July 31, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-027"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 40,
+     "year": "1998",
+     "bulbapedia": "Brock's Onix [CoroCoro]",
+     "distribution_en": "CoroCoro Comic March 1998 issue insert (February 15, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-032"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 41,
+     "year": "1998",
+     "bulbapedia": "Misty's Staryu [CoroCoro]",
+     "distribution_en": "CoroCoro Comic March 1998 issue insert (February 15, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-031"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 42,
+     "year": "1998",
+     "bulbapedia": "Jynx [CoroCoro]",
+     "distribution_en": "CoroCoro Comic April 1998 issue insert (March 15, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-035"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 43,
+     "year": "1998",
+     "bulbapedia": "Cubone [CoroCoro]",
+     "distribution_en": "CoroCoro Comic April 1998 issue insert (March 15, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-034"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 44,
+     "year": "1998",
+     "bulbapedia": "Farfetch'd [CoroCoro]",
+     "distribution_en": "CoroCoro Comic April 1998 issue insert (March 15, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-033"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 45,
+     "year": "1998",
+     "bulbapedia": "Mewtwo Strikes Back [CoroCoro] [Jumbo]",
+     "distribution_en": "CoroCoro Comic May 1998 issue insert (April 15, 1998)",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0018"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 46,
+     "year": "1998",
+     "bulbapedia": "Touch Change! [Garura Parent/Child]",
+     "distribution_en": "Kangaskhan Parent/Child Tournament participation prize",
+     "status": "unconfirmed",
+     "relation": "same_print_other_route_unconfirmed",
+     "catalog_ids": [
+      "PR1-038"
+     ],
+     "note": "ガルーラ親子大会（1998-05）の参加賞。Bulbapedia [X53] は、のちにファンクラブ会報 Vol.5（PR1-038 の配布）に「再録」されたとする。同じ印刷物の別の配布経路か、別の印刷かを確かめていない"
+    },
+    {
+     "n": 47,
+     "year": "1998",
+     "bulbapedia": "Kangaskhan [Garura Parent/Child]",
+     "distribution_en": "Garura Parent/Child Tournament winner's prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-037"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 48,
+     "year": "1998",
+     "bulbapedia": "Pikachu's Summer Vacation [CoroCoro] [Jumbo]",
+     "distribution_en": "CoroCoro Comic June 1998 issue insert (May 15, 1998)",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0019"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 49,
+     "year": "1998",
+     "bulbapedia": "Touch Change! [Pokémon Card Fan Club]",
+     "distribution_en": "Pokémon Card Fan Club Vol. 5 insert (June 10, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-038"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 50,
+     "year": "1998",
+     "bulbapedia": "Computer Error [Kamex Mega Battle] [Non-glossy]",
+     "distribution_en": "Blastoise Mega Battle participation prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-041"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 51,
+     "year": "1998",
+     "bulbapedia": "No.1 Trainer [Kamex Mega Battle]",
+     "distribution_en": "Kamex Mega Battle regional first place prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0007"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 52,
+     "year": "1998",
+     "bulbapedia": "No.2 Trainer [Kamex Mega Battle]",
+     "distribution_en": "Kamex Mega Battle regional second place prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0008"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 53,
+     "year": "1998",
+     "bulbapedia": "No.3 Trainer [Kamex Mega Battle]",
+     "distribution_en": "Kamex Mega Battle regional third place prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0009"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 54,
+     "year": "1998",
+     "bulbapedia": "Lt. Surge's Electabuzz [CoroCoro]",
+     "distribution_en": "CoroCoro Comic August 1998 issue insert (July 15, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-040"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 55,
+     "year": "1998",
+     "bulbapedia": "Erika's Dratini [CoroCoro]",
+     "distribution_en": "CoroCoro Comic August 1998 issue insert (July 15, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-039"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 56,
+     "year": "1998",
+     "bulbapedia": "Pokémon Plaza [CoroCoro] [Jumbo]",
+     "distribution_en": "CoroCoro Comic October 1998 issue insert (September 15, 1998)",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0020"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 57,
+     "year": "1998",
+     "bulbapedia": "Pikachu [CoroCoro] [Glossy, Keiji Kinebuchi]",
+     "distribution_en": "Gekkan CoroCoro Comic October 1998 issue insert (September 15, 1998)",
+     "status": "variant_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "1998年のコロコロコミックの応募の賞品で、イラストレーターの表記を直した光沢の版（Bulbapedia「Pikachu (Wizards Promo 1)」）。PR1-001（杉森建の表記の版）の別版の候補。画像で確かめていない"
+    },
+    {
+     "n": 58,
+     "year": "1998",
+     "bulbapedia": "Flying Pikachu [ANA promo]",
+     "distribution_en": "All Nippon Airlines \"Get in a Jet! Double Chance Campaign\" (November 1-31, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-042",
+      "PR1-063"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 59,
+     "year": "1998",
+     "bulbapedia": "Dragonite [ANA]",
+     "distribution_en": "All Nippon Airlines \"Get in a Jet! Double Chance Campaign\" (November 1-31, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-043"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 60,
+     "year": "1998",
+     "bulbapedia": "_____'s Pikachu [All Card Calendar]",
+     "distribution_en": "All Card Calendar (November 5, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-044"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 61,
+     "year": "1998",
+     "bulbapedia": "Diglett [Asobikata]",
+     "distribution_en": "Easily Understand How to Play Pokémon Cards: Latest Edition (November 13, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-045"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 62,
+     "year": "1998",
+     "bulbapedia": "Dugtrio [Asobikata]",
+     "distribution_en": "Easily Understand How to Play Pokémon Cards: Latest Edition (November 13, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-046"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 63,
+     "year": "1998",
+     "bulbapedia": "Brock's Mankey [CoroCoro]",
+     "distribution_en": "CoroCoro Comic December 1998 issue insert (November 15, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-049"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 64,
+     "year": "1998",
+     "bulbapedia": "Erika's Bulbasaur [CoroCoro]",
+     "distribution_en": "CoroCoro Comic December 1998 issue insert (November 15, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-047"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 65,
+     "year": "1998",
+     "bulbapedia": "Misty's Tentacool [CoroCoro]",
+     "distribution_en": "CoroCoro Comic December 1998 issue insert (November 15, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-048"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 66,
+     "year": "1998",
+     "bulbapedia": "Lt. Surge's Jolteon [CoroCoro]",
+     "distribution_en": "CoroCoro Comic December 1998 issue insert (November 15, 1998)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-050"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 67,
+     "year": "1998",
+     "bulbapedia": "Dragonite [Pokémon Card GB]",
+     "distribution_en": "{{vg|Pokémon Trading Card Game}} insert",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-056"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 68,
+     "year": "1999",
+     "bulbapedia": "Venusaur [Pokémon Song Best Collection]",
+     "distribution_en": "Pokémon Song Best Collection CD insert (January 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "unknown",
+     "catalog_ids": [],
+     "note": "CD『ポケモンソング ベストコレクション』の封入（1999-01-01）。Bulbapedia はページを既存の版へ転送しており、既存のプロモと同じ印刷物の別の配布経路か、別の印刷か（光沢・マークの違いなど）を確かめていない"
+    },
+    {
+     "n": 69,
+     "year": "1999",
+     "bulbapedia": "Arcanine [Pokémon Song Best Collection]",
+     "distribution_en": "Pokémon Song Best Collection CD insert (January 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "unknown",
+     "catalog_ids": [],
+     "note": "CD『ポケモンソング ベストコレクション』の封入（1999-01-01）。Bulbapedia はページを既存の版へ転送しており、既存のプロモと同じ印刷物の別の配布経路か、別の印刷か（光沢・マークの違いなど）を確かめていない"
+    },
+    {
+     "n": 70,
+     "year": "1999",
+     "bulbapedia": "Charizard [Pokémon Song Best Collection]",
+     "distribution_en": "Pokémon Song Best Collection CD insert (January 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "unknown",
+     "catalog_ids": [],
+     "note": "CD『ポケモンソング ベストコレクション』の封入（1999-01-01）。Bulbapedia はページを既存の版へ転送しており、既存のプロモと同じ印刷物の別の配布経路か、別の印刷か（光沢・マークの違いなど）を確かめていない"
+    },
+    {
+     "n": 71,
+     "year": "1999",
+     "bulbapedia": "Blastoise [Pokémon Song Best Collection]",
+     "distribution_en": "Pokémon Song Best Collection CD insert (January 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "unknown",
+     "catalog_ids": [],
+     "note": "CD『ポケモンソング ベストコレクション』の封入（1999-01-01）。Bulbapedia はページを既存の版へ転送しており、既存のプロモと同じ印刷物の別の配布経路か、別の印刷か（光沢・マークの違いなど）を確かめていない"
+    },
+    {
+     "n": 72,
+     "year": "1999",
+     "bulbapedia": "Mew [Pokémon Song Best Collection]",
+     "distribution_en": "Pokémon Song Best Collection CD insert (January 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "unknown",
+     "catalog_ids": [],
+     "note": "CD『ポケモンソング ベストコレクション』の封入（1999-01-01）。Bulbapedia はページを既存の版へ転送しており、既存のプロモと同じ印刷物の別の配布経路か、別の印刷か（光沢・マークの違いなど）を確かめていない"
+    },
+    {
+     "n": 73,
+     "year": "1999",
+     "bulbapedia": "Mewtwo [Pokémon Song Best Collection]",
+     "distribution_en": "Pokémon Song Best Collection CD insert (January 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "unknown",
+     "catalog_ids": [],
+     "note": "CD『ポケモンソング ベストコレクション』の封入（1999-01-01）。Bulbapedia はページを既存の版へ転送しており、既存のプロモと同じ印刷物の別の配布経路か、別の印刷か（光沢・マークの違いなど）を確かめていない"
+    },
+    {
+     "n": 74,
+     "year": "1999",
+     "bulbapedia": "Cool Porygon [Pokémon Song Best Collection]",
+     "distribution_en": "Pokémon Song Best Collection CD insert (January 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "unknown",
+     "catalog_ids": [],
+     "note": "CD『ポケモンソング ベストコレクション』の封入（1999-01-01）。Bulbapedia はページを既存の版へ転送しており、既存のプロモと同じ印刷物の別の配布経路か、別の印刷か（光沢・マークの違いなど）を確かめていない"
+    },
+    {
+     "n": 75,
+     "year": "1999",
+     "bulbapedia": "Hungry Snorlax [Pokémon Song Best Collection]",
+     "distribution_en": "Pokémon Song Best Collection CD insert (January 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "unknown",
+     "catalog_ids": [],
+     "note": "CD『ポケモンソング ベストコレクション』の封入（1999-01-01）。Bulbapedia はページを既存の版へ転送しており、既存のプロモと同じ印刷物の別の配布経路か、別の印刷か（光沢・マークの違いなど）を確かめていない"
+    },
+    {
+     "n": 76,
+     "year": "1999",
+     "bulbapedia": "Computer Error [Pokémon Song Best Collection] [Glossy]",
+     "distribution_en": "Pokémon Song Best Collection CD insert (January 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "unknown",
+     "catalog_ids": [],
+     "note": "CD『ポケモンソング ベストコレクション』の封入（1999-01-01）。Bulbapedia はページを既存の版へ転送しており、既存のプロモと同じ印刷物の別の配布経路か、別の印刷か（光沢・マークの違いなど）を確かめていない"
+    },
+    {
+     "n": 77,
+     "year": "1999",
+     "bulbapedia": "Super Energy Retrieval [Pokémon Song Best Collection] [Glossy]",
+     "distribution_en": "Pokémon Song Best Collection CD insert (January 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "unknown",
+     "catalog_ids": [],
+     "note": "CD『ポケモンソング ベストコレクション』の封入（1999-01-01）。Bulbapedia はページを既存の版へ転送しており、既存のプロモと同じ印刷物の別の配布経路か、別の印刷か（光沢・マークの違いなど）を確かめていない"
+    },
+    {
+     "n": 78,
+     "year": "1999",
+     "bulbapedia": "Pikachu [Base Set] [English]",
+     "distribution_en": "Pokémon Song Best Collection CD insert (January 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "other_language_print",
+     "catalog_ids": [],
+     "note": "日本で配られた英語版（またはフランス語版）の印刷物。目録は日本版の印刷物を単位にしていて、外国語版の印刷物を日本の配布物として載せるかを決めていない（英語の文面のスペシャルジャンボカード KC-0023 は、公式の書籍が日本のジャンボカードとして載せているので例外として加えた）"
+    },
+    {
+     "n": 79,
+     "year": "1999",
+     "bulbapedia": "Tropical Present [Fan Club] [Postcard]",
+     "distribution_en": "Pokémon Card Fan Club (January 1999)",
+     "status": "variant_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "トロピカルプレゼントの別の版（Bulbapedia [X58] は 1999年1〜6月の版・1999年夏の版・2001年夏の版の 3 つとする）。書籍で確かめたのは 1999年夏の版（KC-0024）だけで、この版は Bulbapedia だけの情報。旧裏の裏面かは未確認（2001年夏の版は e カードの形とされる）"
+    },
+    {
+     "n": 80,
+     "year": "1999",
+     "bulbapedia": "Magikarp [University]",
+     "distribution_en": "Celadon University Hyper Professor Test certification prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-036"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 81,
+     "year": "1999",
+     "bulbapedia": "Meowth [CoroCoro promo]",
+     "distribution_en": "CoroCoro Comic February 1999 issue insert (January 15, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-057"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 82,
+     "year": "1999",
+     "bulbapedia": "Venusaur [Pokémon Card GB]",
+     "distribution_en": "Pokémon Card GB Official Guidebook insert (January 28, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-058"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 83,
+     "year": "1999",
+     "bulbapedia": "Mewtwo [Wizards Promo] [English]",
+     "distribution_en": "Mewtwo Strikes Back VHS insert (February 12, 1999)",
+     "status": "unconfirmed",
+     "relation": "other_language_print",
+     "catalog_ids": [],
+     "note": "日本で配られた英語版（またはフランス語版）の印刷物。目録は日本版の印刷物を単位にしていて、外国語版の印刷物を日本の配布物として載せるかを決めていない（英語の文面のスペシャルジャンボカード KC-0023 は、公式の書籍が日本のジャンボカードとして載せているので例外として加えた）"
+    },
+    {
+     "n": 84,
+     "year": "1999",
+     "bulbapedia": "Blaine's Growlithe [CoroCoro]",
+     "distribution_en": "CoroCoro Comic March 1999 issue insert (February 15, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-059"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 85,
+     "year": "1999",
+     "bulbapedia": "Sabrina's Abra [CoroCoro]",
+     "distribution_en": "CoroCoro Comic March 1999 issue insert (February 15, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-060"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 86,
+     "year": "1999",
+     "bulbapedia": "Pikachu [Wizards Promo] [English w/Gray Star]",
+     "distribution_en": "Hyper CoroCoro Spring 1999 issue insert (March 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "other_language_print",
+     "catalog_ids": [],
+     "note": "日本で配られた英語版（またはフランス語版）の印刷物。目録は日本版の印刷物を単位にしていて、外国語版の印刷物を日本の配布物として載せるかを決めていない（英語の文面のスペシャルジャンボカード KC-0023 は、公式の書籍が日本のジャンボカードとして載せているので例外として加えた）"
+    },
+    {
+     "n": 87,
+     "year": "1999",
+     "bulbapedia": "Jigglypuff [Wizards Promo] [English w/Gray Star]",
+     "distribution_en": "Hyper CoroCoro Spring 1999 issue insert (March 1, 1999)",
+     "status": "unconfirmed",
+     "relation": "other_language_print",
+     "catalog_ids": [],
+     "note": "日本で配られた英語版（またはフランス語版）の印刷物。目録は日本版の印刷物を単位にしていて、外国語版の印刷物を日本の配布物として載せるかを決めていない（英語の文面のスペシャルジャンボカード KC-0023 は、公式の書籍が日本のジャンボカードとして載せているので例外として加えた）"
+    },
+    {
+     "n": 88,
+     "year": "1999",
+     "bulbapedia": "Omastar [Communication Evolution Campaign]",
+     "distribution_en": "Communication Evolution Campaign",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-051"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 89,
+     "year": "1999",
+     "bulbapedia": "Alakazam [Communication Evolution Campaign]",
+     "distribution_en": "Communication Evolution Campaign",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-055"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 90,
+     "year": "1999",
+     "bulbapedia": "Gengar [Communication Evolution Campaign]",
+     "distribution_en": "Communication Evolution Campaign",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-053"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 91,
+     "year": "1999",
+     "bulbapedia": "Golem [Communication Evolution Campaign]",
+     "distribution_en": "Communication Evolution Campaign",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-054"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 92,
+     "year": "1999",
+     "bulbapedia": "Machamp [Communication Evolution Campaign]",
+     "distribution_en": "Communication Evolution Campaign",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-052"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 93,
+     "year": "1999",
+     "bulbapedia": "Togepi [CoroCoro]",
+     "distribution_en": "CoroCoro Comic June 1999 issue insert (May 15, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-065"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 94,
+     "year": "1999",
+     "bulbapedia": "Pikachu [Pokémon Card Trainers]",
+     "distribution_en": "Pokémon Card Trainers Vol. 1 insert (May 28, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-062"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 95,
+     "year": "1999",
+     "bulbapedia": "Mankey [How I Became a Pokémon Card]",
+     "distribution_en": "How I Became a Pokémon Card Vol. 1 insert (May 22, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-061"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 96,
+     "year": "1999",
+     "bulbapedia": "Bulbasaur [Base Set]",
+     "distribution_en": "{{DL|Illustration contests|CoroCoro Best Photo Contest|CoroCoro Best Photo Contest",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-083"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 97,
+     "year": "1999",
+     "bulbapedia": "Gyarados [Base Set]",
+     "distribution_en": "CoroCoro Best Photo Contest",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-080"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 98,
+     "year": "1999",
+     "bulbapedia": "Magikarp [Base Set]",
+     "distribution_en": "CoroCoro Best Photo Contest",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-084"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 99,
+     "year": "1999",
+     "bulbapedia": "Poliwag [Base Set]",
+     "distribution_en": "CoroCoro Best Photo Contest",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-082"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 100,
+     "year": "1999",
+     "bulbapedia": "Pikachu [Base Set]",
+     "distribution_en": "CoroCoro Best Photo Contest",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-081"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 101,
+     "year": "1999",
+     "bulbapedia": "Koffing [Base Set]",
+     "distribution_en": "{{DL|Illustration contests|64 Mario Stadium Best Photo Contest|64 Mario Stadium Best Photo Contest",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-086"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 102,
+     "year": "1999",
+     "bulbapedia": "Charmander [Base Set]",
+     "distribution_en": "64 Mario Stadium Best Photo Contest",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-089"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 103,
+     "year": "1999",
+     "bulbapedia": "Articuno [Fossil]",
+     "distribution_en": "64 Mario Stadium Best Photo Contest",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-088"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 104,
+     "year": "1999",
+     "bulbapedia": "Squirtle [Base Set]",
+     "distribution_en": "64 Mario Stadium Best Photo Contest",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-085"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 105,
+     "year": "1999",
+     "bulbapedia": "Chansey [Base Set]",
+     "distribution_en": "64 Mario Stadium Best Photo Contest",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-087"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 106,
+     "year": "1999",
+     "bulbapedia": "Articuno [ANA]",
+     "distribution_en": "All Nippon Airlines \"Everyone's Happy Campaign\" phase 1 (June 1-July 31, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-064"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 107,
+     "year": "1999",
+     "bulbapedia": "Flying Pikachu [ANA promo]",
+     "distribution_en": "All Nippon Airlines \"Everyone's Happy Campaign\" phase 1 (June 1-July 31, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-042",
+      "PR1-063"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 108,
+     "year": "1999",
+     "bulbapedia": "Marill [CoroCoro]",
+     "distribution_en": "CoroCoro Comic July 1999 issue insert (June 15, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-066"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 109,
+     "year": "1999",
+     "bulbapedia": "Pokémon Valley [CoroCoro] [Jumbo]",
+     "distribution_en": "Bessatsu CoroCoro Comic Special August 1999 issue insert (June 30, 1999)",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0022"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 110,
+     "year": "1999",
+     "bulbapedia": "No.1 Trainer [Tropical Mega Battle]",
+     "distribution_en": "Part of Challenge Road '99 SUMMER regional first place prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0010"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 111,
+     "year": "1999",
+     "bulbapedia": "No.2 Trainer [Tropical Mega Battle]",
+     "distribution_en": "Part of Challenge Road '99 SUMMER regional second place prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0011"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 112,
+     "year": "1999",
+     "bulbapedia": "No.3 Trainer [Tropical Mega Battle]",
+     "distribution_en": "Part of Challenge Road '99 SUMMER regional third place prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0012"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 113,
+     "year": "1999",
+     "bulbapedia": "No.1 Trainer [Secret Super Battle]",
+     "distribution_en": "Part of Challenge Road '99 SUMMER regional first place prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0013"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 114,
+     "year": "1999",
+     "bulbapedia": "No.2 Trainer [Secret Super Battle]",
+     "distribution_en": "Part of Challenge Road '99 SUMMER regional second place prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0014"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 115,
+     "year": "1999",
+     "bulbapedia": "No.3 Trainer [Secret Super Battle]",
+     "distribution_en": "Part of Challenge Road '99 SUMMER regional third place prize",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0015"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 116,
+     "year": "1999",
+     "bulbapedia": "Ancient Mew [The Power of One]",
+     "distribution_en": "Mirage Pokémon: Lugia's Explosive Birth movie pamphlet",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-069"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 117,
+     "year": "1999",
+     "bulbapedia": "Tropical Present [Fan Club] [Postcard]",
+     "distribution_en": "Pokémon Card Fan Club (July 1999)",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0024"
+     ],
+     "note": "1999年夏の版。書籍 p.122 の図版と説明で確かめて目録に加えた（KC-0024）。Bulbapedia [X48] の区分は Postcard"
+    },
+    {
+     "n": 118,
+     "year": "1999",
+     "bulbapedia": "Giovanni's Nidoking [CoroCoro]",
+     "distribution_en": "CoroCoro Comic August 1999 issue insert (July 15, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-068"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 119,
+     "year": "1999",
+     "bulbapedia": "Koga's Ninja Gym [CoroCoro]",
+     "distribution_en": "CoroCoro Comic August 1999 issue insert (July 15, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-067"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 120,
+     "year": "1999",
+     "bulbapedia": "Lawrence III [CoroCoro] [Jumbo]",
+     "distribution_en": "CoroCoro Comic August 1999 issue insert (July 15, 1999)",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0021"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 121,
+     "year": "1999",
+     "bulbapedia": "Moltres [ANA]",
+     "distribution_en": "All Nippon Airlines \"Everyone's Happy Campaign\" phase 2 (August 1-September 30, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-071"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 122,
+     "year": "1999",
+     "bulbapedia": "Zapdos [ANA]",
+     "distribution_en": "All Nippon Airlines \"Everyone's Happy Campaign\" phase 2 (August 1-September 30, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-070"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 123,
+     "year": "1999",
+     "bulbapedia": "Moltres [Phone Card] [Phone card]",
+     "distribution_en": "Tropical Mega Battle: Dugtrio Team Battle",
+     "status": "out_of_scope",
+     "relation": "not_a_card",
+     "catalog_ids": [],
+     "note": "テレホンカード（Bulbapedia の [Phone card]）。カードゲームのカードの印刷物ではないので目録の対象外（現物・画像は見ていない）"
+    },
+    {
+     "n": 124,
+     "year": "1999",
+     "bulbapedia": "Articuno [Phone Card] [Phone card]",
+     "distribution_en": "Tropical Mega Battle: Dugtrio Team Battle",
+     "status": "out_of_scope",
+     "relation": "not_a_card",
+     "catalog_ids": [],
+     "note": "テレホンカード（Bulbapedia の [Phone card]）。カードゲームのカードの印刷物ではないので目録の対象外（現物・画像は見ていない）"
+    },
+    {
+     "n": 125,
+     "year": "1999",
+     "bulbapedia": "Zapdos [Phone Card] [Phone card]",
+     "distribution_en": "Tropical Mega Battle: Dugtrio Team Battle",
+     "status": "out_of_scope",
+     "relation": "not_a_card",
+     "catalog_ids": [],
+     "note": "テレホンカード（Bulbapedia の [Phone card]）。カードゲームのカードの印刷物ではないので目録の対象外（現物・画像は見ていない）"
+    },
+    {
+     "n": 126,
+     "year": "1999",
+     "bulbapedia": "Exeggutor [Tropical Mega Battle] [Bilingual] [Non-glossy]",
+     "distribution_en": "Tropical Mega Battle finals participation prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-075"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 127,
+     "year": "1999",
+     "bulbapedia": "Tropical Wind [Tropical Mega Battle]",
+     "distribution_en": "Tropical Mega Battle finals participation prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-074"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 128,
+     "year": "1999",
+     "bulbapedia": "Hama-chan's Slowking [CoroCoro]",
+     "distribution_en": "CoroCoro Comic September 1999 issue insert (August 15, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-072"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 129,
+     "year": "1999",
+     "bulbapedia": "Misty's Treatment [CD]",
+     "distribution_en": "{{single|Riding on Lapras}} CD insert (August 21, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-073"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 130,
+     "year": "1999",
+     "bulbapedia": "Imakuni? [CoroCoro] [Non-Glossy]",
+     "distribution_en": "Tropical Mega Battle Hawaii Games participation prize (August 25, 1999)",
+     "status": "variant_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "トロピカルメガバトル ハワイ大会（1999-08）で配られた光沢のない版（Bulbapedia [X48]）。PR1-013（光沢の版）の別版の候補。画像で確かめていない"
+    },
+    {
+     "n": 131,
+     "year": "1999",
+     "bulbapedia": "Psyduck [How I Became a Pokémon Card]",
+     "distribution_en": "How I Became a Pokémon Card Vol. 2 insert (September 22, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-076"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 132,
+     "year": "1999",
+     "bulbapedia": "Exeggutor [Pokémon Card Trainers] [Bilingual] [Glossy]",
+     "distribution_en": "Pokémon Card Trainers Vol. 3 insert (October 1, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-077"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 133,
+     "year": "1999",
+     "bulbapedia": "Team Rocket's Meowth [CD]",
+     "distribution_en": "{{single|Meowth's Party}} CD insert (October 27, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-078"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 134,
+     "year": "1999",
+     "bulbapedia": "Trainer Certification Card [Fan Club]",
+     "distribution_en": "Grand Party 1999-2000 campaign",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-079"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 135,
+     "year": "1999",
+     "bulbapedia": "Murkrow [Pokémon Card Trainers]",
+     "distribution_en": "Pokémon Card Trainers Vol. 4 insert (December 1, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-001"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 136,
+     "year": "1999",
+     "bulbapedia": "Darkness Energy [Pokémon Card Trainers]",
+     "distribution_en": "Pokémon Card Trainers Vol. 4 insert (December 1, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-002"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 137,
+     "year": "1999",
+     "bulbapedia": "Chikorita [Premium File]",
+     "distribution_en": "Premium File",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF1-001"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 138,
+     "year": "1999",
+     "bulbapedia": "Bayleef [Premium File]",
+     "distribution_en": "Premium File",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF1-002"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 139,
+     "year": "1999",
+     "bulbapedia": "Meganium [Premium File]",
+     "distribution_en": "Premium File",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF1-003"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 140,
+     "year": "1999",
+     "bulbapedia": "Cyndaquil [Premium File]",
+     "distribution_en": "Premium File",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF1-004"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 141,
+     "year": "1999",
+     "bulbapedia": "Quilava [Premium File]",
+     "distribution_en": "Premium File",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF1-005"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 142,
+     "year": "1999",
+     "bulbapedia": "Typhlosion [Premium File]",
+     "distribution_en": "Premium File",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF1-006"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 143,
+     "year": "1999",
+     "bulbapedia": "Totodile [Premium File]",
+     "distribution_en": "Premium File",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF1-007"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 144,
+     "year": "1999",
+     "bulbapedia": "Croconaw [Premium File]",
+     "distribution_en": "Premium File",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF1-008"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 145,
+     "year": "1999",
+     "bulbapedia": "Feraligatr [Premium File]",
+     "distribution_en": "Premium File",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF1-009"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 146,
+     "year": "1999",
+     "bulbapedia": "Wooper [CoroCoro]",
+     "distribution_en": "CoroCoro Comic January 2000 issue insert (December 15, 1999)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-003"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 147,
+     "year": "2000",
+     "bulbapedia": "New Year Present [Fan Club] [Postcard]",
+     "distribution_en": "Pokémon Card Fan Club (January 2000)",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "ファンクラブのポイントの特典のカード（Bulbapedia [X58]。ジャンボカードとされる）。Bulbapedia だけの情報で、公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 148,
+     "year": "2000",
+     "bulbapedia": "Chikorita [WHF]",
+     "distribution_en": "World Hobby Fair 2000 commemoration card",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-006"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 149,
+     "year": "2000",
+     "bulbapedia": "Cyndaquil [WHF]",
+     "distribution_en": "World Hobby Fair 2000 commemoration card",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-007"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 150,
+     "year": "2000",
+     "bulbapedia": "Totodile [WHF]",
+     "distribution_en": "World Hobby Fair 2000 commemoration card",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-008"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 151,
+     "year": "2000",
+     "bulbapedia": "Chikorita [Champion Road]",
+     "distribution_en": "Champion Road 2000 participation prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-009"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 152,
+     "year": "2000",
+     "bulbapedia": "Cyndaquil [Champion Road]",
+     "distribution_en": "Champion Road 2000 participation prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-010"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 153,
+     "year": "2000",
+     "bulbapedia": "Totodile [Champion Road]",
+     "distribution_en": "Champion Road 2000 participation prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-011"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 154,
+     "year": "2000",
+     "bulbapedia": "Berry [Champion Road]",
+     "distribution_en": "Champion Road 2000: 3-Man Tournament Corner",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-004"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 155,
+     "year": "2000",
+     "bulbapedia": "Miracle Berry [Champion Road]",
+     "distribution_en": "Champion Road 2000: 3-Man Tournament Corner",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-005"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 156,
+     "year": "2000",
+     "bulbapedia": "Cleffa [CoroCoro]",
+     "distribution_en": "CoroCoro Comic February 2000 issue insert (January 15, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-012"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 157,
+     "year": "2000",
+     "bulbapedia": "Jynx [How I Became a Pokémon Card]",
+     "distribution_en": "How I Became a Pokémon Card Vol. 3 insert (January 22, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-013"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 158,
+     "year": "2000",
+     "bulbapedia": "Steelix [Pokémon Card Trainers]",
+     "distribution_en": "Pokémon Card Trainers Vol. 5 insert (March 1, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-014"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 159,
+     "year": "2000",
+     "bulbapedia": "Charizard [Base Set] [English Jumbo]",
+     "distribution_en": "CoroCoro Comic April 2000 issue insert (March 15, 2000)",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0023"
+     ],
+     "note": "2026-10-31 に目録に加えた（data/curation/catalog_items.json）。『オフィシャルブック2000』[P43] の掲載で確かめた"
+    },
+    {
+     "n": 160,
+     "year": "2000",
+     "bulbapedia": "Eevee [Fan Club]",
+     "distribution_en": "Pokémon Card Fan Club 500 GET point prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-024"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 161,
+     "year": "2000",
+     "bulbapedia": "Porygon [Fan Club]",
+     "distribution_en": "Pokémon Card Fan Club 700 GET point prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-023"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 162,
+     "year": "2000",
+     "bulbapedia": "Mew [Wizards Promo] [English]",
+     "distribution_en": "Gotta Comic May 2000 issue insert (May 1, 2000)",
+     "status": "unconfirmed",
+     "relation": "other_language_print",
+     "catalog_ids": [],
+     "note": "日本で配られた英語版（またはフランス語版）の印刷物。目録は日本版の印刷物を単位にしていて、外国語版の印刷物を日本の配布物として載せるかを決めていない（英語の文面のスペシャルジャンボカード KC-0023 は、公式の書籍が日本のジャンボカードとして載せているので例外として加えた）"
+    },
+    {
+     "n": 163,
+     "year": "2000",
+     "bulbapedia": "Scizor [CoroCoro]",
+     "distribution_en": "CoroCoro Comic July 2000 issue insert (June 15, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-025"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 164,
+     "year": "2000",
+     "bulbapedia": "Dance! Neo Imakuni? [CD]",
+     "distribution_en": "{{single|Can You Name All the Pokémon Neo?}} CD insert (June 28, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-026"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 165,
+     "year": "2000",
+     "bulbapedia": "Pikachu [Wizards Promo] [French]",
+     "distribution_en": "Gotta Comic August 2000 issue insert (June 30, 2000)",
+     "status": "unconfirmed",
+     "relation": "other_language_print",
+     "catalog_ids": [],
+     "note": "日本で配られた英語版（またはフランス語版）の印刷物。目録は日本版の印刷物を単位にしていて、外国語版の印刷物を日本の配布物として載せるかを決めていない（英語の文面のスペシャルジャンボカード KC-0023 は、公式の書籍が日本のジャンボカードとして載せているので例外として加えた）"
+    },
+    {
+     "n": 166,
+     "year": "2000",
+     "bulbapedia": "Lucky Stadium [World Challenge Summer] [Onix]",
+     "distribution_en": "World Challenge Summer participation prize (Kyūshū conference)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-015"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 167,
+     "year": "2000",
+     "bulbapedia": "Lucky Stadium [World Challenge Summer] [Lugia]",
+     "distribution_en": "World Challenge Summer participation prize (Kantō conference)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-016"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 168,
+     "year": "2000",
+     "bulbapedia": "Lucky Stadium [World Challenge Summer] [Ho-Oh]",
+     "distribution_en": "World Challenge Summer participation prize (Kansai conference)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-017"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 169,
+     "year": "2000",
+     "bulbapedia": "Lucky Stadium [World Challenge Summer] [Gyarados]",
+     "distribution_en": "World Challenge Summer participation prize (Chūgoku/Shikoku conference)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-018"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 170,
+     "year": "2000",
+     "bulbapedia": "Lucky Stadium [World Challenge Summer] [Zapdos]",
+     "distribution_en": "World Challenge Summer participation prize (Chūbu conference)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-019"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 171,
+     "year": "2000",
+     "bulbapedia": "Lucky Stadium [World Challenge Summer] [Diglett]",
+     "distribution_en": "World Challenge Summer participation prize (Tōhoku conference)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-020"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 172,
+     "year": "2000",
+     "bulbapedia": "Lucky Stadium [World Challenge Summer] [Mew]",
+     "distribution_en": "World Challenge Summer participation prize (Hokushin'etsu conference)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-021"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 173,
+     "year": "2000",
+     "bulbapedia": "Lucky Stadium [World Challenge Summer] [Pikachu]",
+     "distribution_en": "World Challenge Summer participation prize (Hokkaidō conference)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-022"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 174,
+     "year": "2000",
+     "bulbapedia": "No.1 Trainer [World Challenge Tropical Mega Battle]",
+     "distribution_en": "Part of World Challenge Summer regional first place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 175,
+     "year": "2000",
+     "bulbapedia": "No.2 Trainer [World Challenge Tropical Mega Battle]",
+     "distribution_en": "Part of World Challenge Summer regional second place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 176,
+     "year": "2000",
+     "bulbapedia": "No.3 Trainer [World Challenge Tropical Mega Battle]",
+     "distribution_en": "Part of World Challenge Summer regional third place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 177,
+     "year": "2000",
+     "bulbapedia": "No.1 Trainer [World Challenge Secret Super Battle]",
+     "distribution_en": "Part of World Challenge Summer regional first place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 178,
+     "year": "2000",
+     "bulbapedia": "No.2 Trainer [World Challenge Secret Super Battle]",
+     "distribution_en": "Part of World Challenge Summer regional second place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 179,
+     "year": "2000",
+     "bulbapedia": "No.3 Trainer [World Challenge Secret Super Battle]",
+     "distribution_en": "Part of World Challenge Summer regional third place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 180,
+     "year": "2000",
+     "bulbapedia": "Smeargle [Pokémon Card Trainers]",
+     "distribution_en": "Pokémon Card Trainers Vol. 7 insert (July 1, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-029"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 181,
+     "year": "2000",
+     "bulbapedia": "Pikachu & Pichu [CoroCoro] [Jumbo]",
+     "distribution_en": "Bessatsu CoroCoro Comic Special August 2000 issue insert (July 6, 2000)",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000年のスペシャルジャンボカード（Bulbapedia [X58]）。『オフィシャルブック2000』（2000年2月）より後の配布で、書籍に載っていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 182,
+     "year": "2000",
+     "bulbapedia": "Hitmontop [Emperor of the Crystal Tower: Entei]",
+     "distribution_en": "Emperor of the Crystal Tower: Entei theatrical release",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-030"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 183,
+     "year": "2000",
+     "bulbapedia": "Igglybuff [Emperor of the Crystal Tower: Entei]",
+     "distribution_en": "Emperor of the Crystal Tower: Entei theatrical release",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-031"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 184,
+     "year": "2000",
+     "bulbapedia": "Charizard [Premium File 2]",
+     "distribution_en": "Premium File 2",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF2-009"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 185,
+     "year": "2000",
+     "bulbapedia": "Entei [Premium File 2]",
+     "distribution_en": "Premium File 2",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF2-008"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 186,
+     "year": "2000",
+     "bulbapedia": "Pichu [Premium File 2]",
+     "distribution_en": "Premium File 2",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF2-007"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 187,
+     "year": "2000",
+     "bulbapedia": "Espeon [Premium File 2]",
+     "distribution_en": "Premium File 2",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF2-004"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 188,
+     "year": "2000",
+     "bulbapedia": "Unown E [Premium File 2]",
+     "distribution_en": "Premium File 2",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF2-002"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 189,
+     "year": "2000",
+     "bulbapedia": "Unown N [Premium File 2]",
+     "distribution_en": "Premium File 2",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF2-001"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 190,
+     "year": "2000",
+     "bulbapedia": "Unown O [Premium File 2]",
+     "distribution_en": "Premium File 2",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF2-003"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 191,
+     "year": "2000",
+     "bulbapedia": "Umbreon [Premium File 2]",
+     "distribution_en": "Premium File 2",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF2-006"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 192,
+     "year": "2000",
+     "bulbapedia": "Eevee [Premium File 2]",
+     "distribution_en": "Premium File 2",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF2-005"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 193,
+     "year": "2000",
+     "bulbapedia": "Crystal Tower's Entei [CoroCoro] [Jumbo]",
+     "distribution_en": "CoroCoro Comic August 2000 issue insert (July 15, 2000)",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000年のスペシャルジャンボカード（Bulbapedia [X58]）。『オフィシャルブック2000』（2000年2月）より後の配布で、書籍に載っていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 194,
+     "year": "2000",
+     "bulbapedia": "New Century Present [Fan Club] [Postcard]",
+     "distribution_en": "Pokémon Card Fan Club (Summer 2000)",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "ファンクラブのポイントの特典のカード（Bulbapedia [X58]。ジャンボカードとされる）。Bulbapedia だけの情報で、公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 195,
+     "year": "2000",
+     "bulbapedia": "Marill [ANA]",
+     "distribution_en": "All Nippon Airlines \"Get in a Jet! 2000\" campaign phase 1 (July 1-August 31, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-028"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 196,
+     "year": "2000",
+     "bulbapedia": "Meowth [Wizards Promo] [English]",
+     "distribution_en": "JR West Pokémon Stamp Rally 2000 prize",
+     "status": "unconfirmed",
+     "relation": "other_language_print",
+     "catalog_ids": [],
+     "note": "日本で配られた英語版（またはフランス語版）の印刷物。目録は日本版の印刷物を単位にしていて、外国語版の印刷物を日本の配布物として載せるかを決めていない（英語の文面のスペシャルジャンボカード KC-0023 は、公式の書籍が日本のジャンボカードとして載せているので例外として加えた）"
+    },
+    {
+     "n": 197,
+     "year": "2000",
+     "bulbapedia": "Mewtwo [Wizards Promo] [English]",
+     "distribution_en": "JR East Pokémon Stamp Rally 2000 silver course prize",
+     "status": "unconfirmed",
+     "relation": "other_language_print",
+     "catalog_ids": [],
+     "note": "日本で配られた英語版（またはフランス語版）の印刷物。目録は日本版の印刷物を単位にしていて、外国語版の印刷物を日本の配布物として載せるかを決めていない（英語の文面のスペシャルジャンボカード KC-0023 は、公式の書籍が日本のジャンボカードとして載せているので例外として加えた）"
+    },
+    {
+     "n": 198,
+     "year": "2000",
+     "bulbapedia": "Eevee [Wizards Promo] [English]",
+     "distribution_en": "JR East Pokémon Stamp Rally 2000 gold course prize",
+     "status": "unconfirmed",
+     "relation": "other_language_print",
+     "catalog_ids": [],
+     "note": "日本で配られた英語版（またはフランス語版）の印刷物。目録は日本版の印刷物を単位にしていて、外国語版の印刷物を日本の配布物として載せるかを決めていない（英語の文面のスペシャルジャンボカード KC-0023 は、公式の書籍が日本のジャンボカードとして載せているので例外として加えた）"
+    },
+    {
+     "n": 199,
+     "year": "2000",
+     "bulbapedia": "No.1 Trainer [World Challenge Secret Super Battle finals]",
+     "distribution_en": "World Challenge Secret Super Battle Best in Japan first place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 200,
+     "year": "2000",
+     "bulbapedia": "No.2 Trainer [World Challenge Secret Super Battle finals]",
+     "distribution_en": "World Challenge Secret Super Battle Best in Japan second place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 201,
+     "year": "2000",
+     "bulbapedia": "No.3 Trainer [World Challenge Secret Super Battle finals]",
+     "distribution_en": "World Challenge Secret Super Battle Best in Japan third place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 202,
+     "year": "2000",
+     "bulbapedia": "Lucky Stadium [Tropical Mega Battle] [Bilingual]",
+     "distribution_en": "Tropical Mega Battle finals participation prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-027"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 203,
+     "year": "2000",
+     "bulbapedia": "No.1 Trainer [World Challenge Tropical Mega Battle finals]",
+     "distribution_en": "World Challenge Tropical Mega Battle Best in Japan first place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 204,
+     "year": "2000",
+     "bulbapedia": "No.2 Trainer [World Challenge Tropical Mega Battle finals]",
+     "distribution_en": "World Challenge Tropical Mega Battle Best in Japan second place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 205,
+     "year": "2000",
+     "bulbapedia": "No.3 Trainer [World Challenge Tropical Mega Battle finals]",
+     "distribution_en": "World Challenge Tropical Mega Battle Best in Japan third place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 206,
+     "year": "2000",
+     "bulbapedia": "Sunkern [How I Became a Pokémon Card]",
+     "distribution_en": "How I Became a Pokémon Card Vol. 4 insert (August 23, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-032"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 207,
+     "year": "2000",
+     "bulbapedia": "Togepi [ANA]",
+     "distribution_en": "All Nippon Airlines \"Get in a Jet! 2000\" campaign phase 2 (September 1-October 31, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-033"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 208,
+     "year": "2000",
+     "bulbapedia": "Unown J [Pokémon Card Trainers]",
+     "distribution_en": "Pokémon Card Trainers Vol. 8 insert (September 1, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-034"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 209,
+     "year": "2000",
+     "bulbapedia": "Unown R [CoroCoro]",
+     "distribution_en": "CoroCoro Comic November 2000 issue insert (October 15, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-035"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 210,
+     "year": "2000",
+     "bulbapedia": "Celebi [Premium File 3]",
+     "distribution_en": "Premium File 3",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF3-002"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 211,
+     "year": "2000",
+     "bulbapedia": "Entei [Premium File 3]",
+     "distribution_en": "Premium File 3",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF3-005"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 212,
+     "year": "2000",
+     "bulbapedia": "Suicune [Premium File 3]",
+     "distribution_en": "Premium File 3",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF3-006"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 213,
+     "year": "2000",
+     "bulbapedia": "Raikou [Premium File 3]",
+     "distribution_en": "Premium File 3",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF3-004"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 214,
+     "year": "2000",
+     "bulbapedia": "Lugia [Premium File 3]",
+     "distribution_en": "Premium File 3",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF3-008"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 215,
+     "year": "2000",
+     "bulbapedia": "Sudowoodo [Premium File 3]",
+     "distribution_en": "Premium File 3",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF3-001"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 216,
+     "year": "2000",
+     "bulbapedia": "Skarmory [Premium File 3]",
+     "distribution_en": "Premium File 3",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF3-009"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 217,
+     "year": "2000",
+     "bulbapedia": "Sneasel [Premium File 3]",
+     "distribution_en": "Premium File 3",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF3-003"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 218,
+     "year": "2000",
+     "bulbapedia": "Ho-Oh [Premium File 3]",
+     "distribution_en": "Premium File 3",
+     "status": "existing_other_product",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PF3-007"
+     ],
+     "note": "プロモの一覧ではなく、neo プレミアムファイルの商品（PF1〜PF3）として収録済み"
+    },
+    {
+     "n": 219,
+     "year": "2000",
+     "bulbapedia": "Misdreavus [Pokémon Card Trainers]",
+     "distribution_en": "Pokémon Card Trainers Vol. 9 insert (December 1, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-036"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 220,
+     "year": "2000",
+     "bulbapedia": "Smoochum [CoroCoro]",
+     "distribution_en": "CoroCoro Comic January 2001 issue insert (December 15, 2000)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-037"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 221,
+     "year": "2001",
+     "bulbapedia": "Dunsparce [Information Pack]",
+     "distribution_en": "Pokémon Card Information Vol. 1 insert (January 1, 2001)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-038"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 222,
+     "year": "2001",
+     "bulbapedia": "No.1 Trainer [Neo Spring Road]",
+     "distribution_en": "Neo Spring Road regional first place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 223,
+     "year": "2001",
+     "bulbapedia": "No.2 Trainer [Neo Spring Road]",
+     "distribution_en": "Neo Spring Road regional second place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 224,
+     "year": "2001",
+     "bulbapedia": "No.3 Trainer [Neo Spring Road]",
+     "distribution_en": "Neo Spring Road regional third place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 225,
+     "year": "2001",
+     "bulbapedia": "Dark Ivysaur [Pokémon Card Trainers]",
+     "distribution_en": "Pokémon Card Trainers Vol. 10 insert (March 1, 2001)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-039"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 226,
+     "year": "2001",
+     "bulbapedia": "Dark Venusaur [Pokémon Card Trainers]",
+     "distribution_en": "Pokémon Card Trainers Vol. 10 insert (March 1, 2001)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-040"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 227,
+     "year": "2001",
+     "bulbapedia": "Team GR's Mewtwo [Pokémon Card GB2]",
+     "distribution_en": "Pokémon Trading Card Game 2: The Invasion of Team GR! insert",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-041"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 228,
+     "year": "2001",
+     "bulbapedia": "Lugia [Pokémon Card GB2]",
+     "distribution_en": "Pokémon Card GB2: Here Comes Team GR! insert",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-042"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 229,
+     "year": "2001",
+     "bulbapedia": "Dark Fearow [Pokémon Card GB2]",
+     "distribution_en": "Pokémon Card GB2: Here Comes Team GR! Official Guidebook insert (April 12, 2001)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-045"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 230,
+     "year": "2001",
+     "bulbapedia": "No.1 Trainer [Neo Spring Road finals]",
+     "distribution_en": "Neo Spring Road Best in Japan first place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 231,
+     "year": "2001",
+     "bulbapedia": "No.2 Trainer [Neo Spring Road finals]",
+     "distribution_en": "Neo Spring Road Best in Japan second place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 232,
+     "year": "2001",
+     "bulbapedia": "No.3 Trainer [Neo Spring Road finals]",
+     "distribution_en": "Neo Spring Road Best in Japan third place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 233,
+     "year": "2001",
+     "bulbapedia": "Bellossom [Information Pack]",
+     "distribution_en": "Pokémon Card Information Vol. 2 insert (April 1, 2001)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-043"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 234,
+     "year": "2001",
+     "bulbapedia": "Shining Mew [CoroCoro]",
+     "distribution_en": "CoroCoro Comic May 2001 issue insert (April 15, 2001)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-044"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 235,
+     "year": "2001",
+     "bulbapedia": "Shining Magikarp [Fan Club]",
+     "distribution_en": "Pokémon Card Fan Club 600 GET point prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-046"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 236,
+     "year": "2001",
+     "bulbapedia": "Tropical Present [Fan Club] [Postcard]",
+     "distribution_en": "Pokémon Card Fan Club (Summer 2001)",
+     "status": "variant_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "トロピカルプレゼントの別の版（Bulbapedia [X58] は 1999年1〜6月の版・1999年夏の版・2001年夏の版の 3 つとする）。書籍で確かめたのは 1999年夏の版（KC-0024）だけで、この版は Bulbapedia だけの情報。旧裏の裏面かは未確認（2001年夏の版は e カードの形とされる）"
+    },
+    {
+     "n": 237,
+     "year": "2001",
+     "bulbapedia": "Pryce's Lapras [Information Pack]",
+     "distribution_en": "Pokémon Card Information Vol. 3 insert (July 19, 2001)",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "Bulbapedia はポケモンカード★VS の 41 番（Pryce's Lapras (VS 41)）へ転送する。新裏のシリーズのカードとして対象外（裏面は画像で確かめていない）"
+    },
+    {
+     "n": 238,
+     "year": "2001",
+     "bulbapedia": "No.1 Trainer [Neo Summer Road]",
+     "distribution_en": "Neo Summer Road regional first place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 239,
+     "year": "2001",
+     "bulbapedia": "No.2 Trainer [Neo Summer Road]",
+     "distribution_en": "Neo Summer Road regional second place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 240,
+     "year": "2001",
+     "bulbapedia": "No.3 Trainer [Neo Summer Road]",
+     "distribution_en": "Neo Summer Road regional third place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 241,
+     "year": "2001",
+     "bulbapedia": "Hoppip [How I Became a Pokémon Card]",
+     "distribution_en": "How I Became a Pokémon Card Vol. 5 insert (July 23, 2001)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-047"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 242,
+     "year": "2001",
+     "bulbapedia": "No.1 Trainer [Neo Summer Road finals]",
+     "distribution_en": "Neo Summer Road Best in Japan first place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 243,
+     "year": "2001",
+     "bulbapedia": "No.2 Trainer [Neo Summer Road finals]",
+     "distribution_en": "Neo Summer Road Best in Japan second place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 244,
+     "year": "2001",
+     "bulbapedia": "No.3 Trainer [Neo Summer Road finals]",
+     "distribution_en": "Neo Summer Road Best in Japan third place prize",
+     "status": "addition_candidate",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "2000〜2001年の大会の入賞の賞品（Bulbapedia [X57]）。旧裏の時期の配布だが、入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）を決めていない。公式の資料・画像で確かめていないので加えていない"
+    },
+    {
+     "n": 245,
+     "year": "2001",
+     "bulbapedia": "_____'s Pikachu [How I Became a Pokémon Card]",
+     "distribution_en": "How I Became a Pokémon Card Vol. 6 insert (September 23, 2001)",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PR1-090"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 246,
+     "year": "2002",
+     "bulbapedia": "Touch Generation Change! [New Garura Parent/Child]",
+     "distribution_en": "New Garura Parent/Child Tournament participation prize",
+     "status": "existing",
+     "relation": "same_entry",
+     "catalog_ids": [
+      "PRN-048"
+     ],
+     "note": "pcg-search のプロモの項目（other_products.json の promos の bulbapedia）と同じ項目"
+    },
+    {
+     "n": 247,
+     "year": "2002",
+     "bulbapedia": "No.1 Trainer [Battle Road Spring 2002]",
+     "distribution_en": "Battle Road Spring 2002 regional first place prize",
+     "status": "unconfirmed",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "大会の入賞の賞品（Bulbapedia [X57]）。2002年の版の裏面（旧裏か新裏か）を確かめていない。入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）も決めていない"
+    },
+    {
+     "n": 248,
+     "year": "2002",
+     "bulbapedia": "No.2 Trainer [Battle Road Spring 2002]",
+     "distribution_en": "Battle Road Spring 2002 regional second place prize",
+     "status": "unconfirmed",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "大会の入賞の賞品（Bulbapedia [X57]）。2002年の版の裏面（旧裏か新裏か）を確かめていない。入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）も決めていない"
+    },
+    {
+     "n": 249,
+     "year": "2002",
+     "bulbapedia": "No.3 Trainer [Battle Road Spring 2002]",
+     "distribution_en": "Battle Road Spring 2002 regional third place prize",
+     "status": "unconfirmed",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "大会の入賞の賞品（Bulbapedia [X57]）。2002年の版の裏面（旧裏か新裏か）を確かめていない。入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）も決めていない"
+    },
+    {
+     "n": 250,
+     "year": "2002",
+     "bulbapedia": "No.1 Trainer [Battle Road Summer 2002]",
+     "distribution_en": "Battle Road Summer 2002 regional first place prize",
+     "status": "unconfirmed",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "大会の入賞の賞品（Bulbapedia [X57]）。2002年の版の裏面（旧裏か新裏か）を確かめていない。入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）も決めていない"
+    },
+    {
+     "n": 251,
+     "year": "2002",
+     "bulbapedia": "No.2 Trainer [Battle Road Summer 2002]",
+     "distribution_en": "Battle Road Summer 2002 regional second place prize",
+     "status": "unconfirmed",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "大会の入賞の賞品（Bulbapedia [X57]）。2002年の版の裏面（旧裏か新裏か）を確かめていない。入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）も決めていない"
+    },
+    {
+     "n": 252,
+     "year": "2002",
+     "bulbapedia": "No.3 Trainer [Battle Road Summer 2002]",
+     "distribution_en": "Battle Road Summer 2002 regional third place prize",
+     "status": "unconfirmed",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "大会の入賞の賞品（Bulbapedia [X57]）。2002年の版の裏面（旧裏か新裏か）を確かめていない。入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）も決めていない"
+    },
+    {
+     "n": 253,
+     "year": "2002",
+     "bulbapedia": "No.1 Trainer [Battle Road Summer 2002 finals]",
+     "distribution_en": "Battle Road Summer 2002 Best in Japan first place prize",
+     "status": "unconfirmed",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "大会の入賞の賞品（Bulbapedia [X57]）。2002年の版の裏面（旧裏か新裏か）を確かめていない。入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）も決めていない"
+    },
+    {
+     "n": 254,
+     "year": "2002",
+     "bulbapedia": "No.2 Trainer [Battle Road Summer 2002 finals]",
+     "distribution_en": "Battle Road Summer 2002 Best in Japan second place prize",
+     "status": "unconfirmed",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "大会の入賞の賞品（Bulbapedia [X57]）。2002年の版の裏面（旧裏か新裏か）を確かめていない。入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）も決めていない"
+    },
+    {
+     "n": 255,
+     "year": "2002",
+     "bulbapedia": "No.3 Trainer [Battle Road Summer 2002 finals]",
+     "distribution_en": "Battle Road Summer 2002 Best in Japan third place prize",
+     "status": "unconfirmed",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "大会の入賞の賞品（Bulbapedia [X57]）。2002年の版の裏面（旧裏か新裏か）を確かめていない。入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）も決めていない"
+    },
+    {
+     "n": 256,
+     "year": "2002",
+     "bulbapedia": "Elite Four Trainer [Battle Road Summer 2002 finals]",
+     "distribution_en": "Battle Road Summer 2002 Best in Japan top 4 prize",
+     "status": "unconfirmed",
+     "relation": "different_print",
+     "catalog_ids": [],
+     "note": "大会の入賞の賞品（Bulbapedia [X57]）。2002年の版の裏面（旧裏か新裏か）を確かめていない。入賞者の名前などを印刷した 1 枚ずつ違うカードとされ、目録の単位（1 枚ずつか、版ごとか）も決めていない"
+    },
+    {
+     "n": 257,
+     "year": "2003",
+     "bulbapedia": "Victory Ring [Battle Road]",
+     "distribution_en": "Battle Road Spring 2003 winner prize",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 258,
+     "year": "2003",
+     "bulbapedia": "Victory Orb [Battle Road]",
+     "distribution_en": "Battle Road Summer 2003 winner prize",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 259,
+     "year": "2003",
+     "bulbapedia": "Victory Ring [Battle Road]",
+     "distribution_en": "Battle Road Autumn 2003 winner prize",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 260,
+     "year": "2004",
+     "bulbapedia": "Victory Ring [Battle Road]",
+     "distribution_en": "Battle Road Spring 2004 winner prize",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 261,
+     "year": "2004",
+     "bulbapedia": "Victory Orb [Battle Road]",
+     "distribution_en": "Battle Road Summer 2004 winner prize",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 262,
+     "year": "2004",
+     "bulbapedia": "Sky-Splitting Deoxys [Movie VS Pack] [Lenticular]",
+     "distribution_en": "Movie Commemoration VS Pack: Sky-Splitting Deoxys",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 263,
+     "year": "2004",
+     "bulbapedia": "Poké Dude [Pokémon Daisuki Club]",
+     "distribution_en": "Pokémon Festa 2004: Pokémon Daisuki Club Stage event participation prize",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 264,
+     "year": "2004",
+     "bulbapedia": "Tropical Wind [Nintendo Promo]",
+     "distribution_en": "2004 World Championships participation card",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 265,
+     "year": "2004",
+     "bulbapedia": "Victory Ring [Battle Road]",
+     "distribution_en": "Battle Road Autumn 2004 winner prize",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 266,
+     "year": "2005",
+     "bulbapedia": "Victory Medal [Battle Road] [Silver]",
+     "distribution_en": "Gym☆Challenge winner prize (March 2005-May 2005)",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 267,
+     "year": "2005",
+     "bulbapedia": "Victory Ring [Battle Road]",
+     "distribution_en": "Battle Road Spring 2005 winner prize",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 268,
+     "year": "2005",
+     "bulbapedia": "Victory Medal [Battle Road] [Gold]",
+     "distribution_en": "Gym☆Final winner prize (May 2005)",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 269,
+     "year": "2005",
+     "bulbapedia": "Victory Orb [Battle Road]",
+     "distribution_en": "Battle Road Summer 2005 winner prize",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 270,
+     "year": "2005",
+     "bulbapedia": "Tropical Tidal Wave [Nintendo Promo]",
+     "distribution_en": "2005 World Championships participation card",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 271,
+     "year": "2005",
+     "bulbapedia": "Champion's League [Champion's League]",
+     "distribution_en": "Champion's League 2005 winner prize",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    },
+    {
+     "n": 272,
+     "year": "2005",
+     "bulbapedia": "None",
+     "distribution_en": "Summer 2005 Pokémon Scoop Special Edition insert",
+     "status": "out_of_scope",
+     "relation": "other_series",
+     "catalog_ids": [],
+     "note": "2003年以降の配布物。Bulbapedia の説明に旧裏の裏面で印刷したという記載がなく、新裏の時期のシリーズ・大会の賞品として対象外（裏面は画像で確かめていない。年だけで除外したのではない）"
+    }
+   ]
+  },
+  {
+   "source": "P43",
+   "title": "『ポケモンカードオフィシャルブック2000』p.122・p.251・pp.300〜301（スキャン [J38]）",
+   "retrieved_on": "2026-10-31",
+   "method": "書籍の図版を 150〜600dpi で読んだ（kyuura）",
+   "entries": [
+    {
+     "page": "122",
+     "name_ja": "トロピカルプレゼント",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0024"
+     ],
+     "note": "'99年夏の暑中見舞い。ゲットGETポイント10点。トロピカルウインド（PR1-074）とは別のカード"
+    },
+    {
+     "page": "251",
+     "name_ja": "スペシャルジャンボカード 8 掲載",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0016",
+      "KC-0017",
+      "KC-0018",
+      "KC-0019",
+      "KC-0020",
+      "KC-0021",
+      "KC-0022",
+      "KC-0023"
+     ],
+     "note": "8 掲載で全件とは書かれていない。Bulbapedia には 2000年の 2 枚（ピチューとピカチュウ・結晶塔のエンテイ）がある（addition_candidate）"
+    },
+    {
+     "page": "300",
+     "name_ja": "第1回公式トーナメント・第2回公式トーナメント・カメックスメガバトル 入賞賞品カード（各 No.1〜No.3）",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0001",
+      "KC-0002",
+      "KC-0003",
+      "KC-0004",
+      "KC-0005",
+      "KC-0006",
+      "KC-0007",
+      "KC-0008",
+      "KC-0009"
+     ],
+     "note": "9 掲載。本文（参加権の文）が群ごとに違う"
+    },
+    {
+     "page": "301",
+     "name_ja": "トロピカルメガバトル・シークレットスーパーバトル 入賞賞品カード（各 No.1〜No.3）",
+     "status": "added",
+     "relation": "different_print",
+     "catalog_ids": [
+      "KC-0010",
+      "KC-0011",
+      "KC-0012",
+      "KC-0013",
+      "KC-0014",
+      "KC-0015"
+     ],
+     "note": "6 掲載。トロピカルメガバトルの No.2・No.3 は参加権の文がない"
+    }
+   ]
+  }
+ ]
+}

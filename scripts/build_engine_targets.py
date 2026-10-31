@@ -7,6 +7,11 @@
   - data/curation/sets.json・data/curation/other_products.json: 発売日（ルールの基準の日付との前後を見るため）
   - data/curation/engine_registered_cards.json: kyuura-engine の固定した版の登録表の写し（scripts/snapshot_engine_registry.py）
 
+対象にする記録は、記録の明示の分類（catalog_class が battle で engine_scope が target。scripts/catalog.py・data/curation/non_pack.json の
+catalog_scope）で選ぶ。engine_scope が target でない記録（2026-10-31 の利用者の指定で外したタッチ交代！ PR1-038・タッチ世代交代！ PRN-048・
+カードトレーナー認定証 PR1-079）は cards に入れず、excluded_records に理由とともに残す（実装の件数・未実装の件数に数えない）。
+data/cards.csv の目録だけの行（non_game_items・data/curation/catalog_items.json）は、エンジンの対象の一覧に入れない。
+
 記録ごとに 2 つのことを分けて書く。
   - category（実装の対象にできるか。データから決める）:
       candidate（対象にできる）・data_missing（エンジンが使う欄に値の欠けがある）・
@@ -202,8 +207,13 @@ def build():
         if r['same_card_group']:
             group_members[r['same_card_group']].append(r['id'])
 
-    rows = []
+    rows, excluded = [], []
     for r in cards:
+        if (r['catalog_class'], r['engine_scope']) != ('battle', 'target'):
+            excluded.append({'id': r['id'], 'name_ja': r['name']['ja'], 'product_group': r['product_group'], 'jp_set': r['jp_set'],
+                             'play_scope': r['play_scope'], 'catalog_class': r['catalog_class'], 'engine_scope': r['engine_scope'],
+                             'engine_scope_reason': r['engine_scope_reason']})
+            continue
         row = {'id': r['id'], 'name_ja': r['name']['ja'], 'product_group': r['product_group'], 'jp_set': r['jp_set'],
                'play_scope': r['play_scope'], 'same_card_group': r['same_card_group']}
         date = release_date(r, products, pack_dates, promos)
@@ -250,6 +260,7 @@ def build():
                  'category': 'non_game', 'reason': x['reason']} for x in items['non_game_items']]
     counts = {
         'records': len(rows),
+        'excluded_records': len(excluded),
         'by_category': dict(sorted(Counter(r['category'] for r in rows).items())),
         'non_game_items': len(non_game),
         'by_engine_status': {k: sum(1 for r in rows if r['engine_status'] == k) for k in STATUS_ORDER},
@@ -272,6 +283,7 @@ def build():
         'rule_base_date': RULE_BASE_DATE,
         'counts': counts,
         'cards': rows,
+        'excluded_records': excluded,
         'non_game_items': non_game,
     }
     return doc, render(doc)
@@ -322,7 +334,7 @@ def render(doc):
           '- `data_missing` の理由（category_reasons）は、記録の `data_gaps` のうちエンジンが使う欄（名前・段階・進化元・ベイビィの進化先・HP・タイプ・ルールの文・特殊能力・ワザの名前と説明・'
           'トレーナーと特殊エネルギーの説明）の欠けです。ベイビィの進化先（`pokemon.evolves_to`）はエンジンの写しがまだ取り出さない欄ですが、'
           '進化できるカードを決めるので、欠け（未確認）と、登録されたカードと同じかの比べに含めます。図鑑番号・レベル・シリーズの欠けは数えません。',
-          '- `special_rule_design` は `play_scope` が `standard` でない記録（ガルーラルール専用・公式大会で使えないと書かれたカード）。',
+          '- `special_rule_design` は `play_scope` が `standard` でない記録（公式大会で使えないと書かれたカード。ガルーラルール専用のカードは 2026-10-31 から対象外の記録）。',
           '- `mechanically_equivalent` は、エンジンが使う欄がすべて登録されたカードと同じで、ワザ・特殊能力・トレーナー・特殊エネルギーの名前と説明が、'
           'エンジンが登録のときに照合した文面（`text_ja`）とも同じもの（`equivalent_to` に登録されたカード）。',
           '- `reuse_candidate` は、同じカードの組（`same_card_group`。名前・HP・特殊能力名・ワザ名が同じ）に登録されたカードがあって欄の一部が違うもの'
@@ -333,7 +345,9 @@ def render(doc):
           f"- `released_after_rule_base` は、発売日が公式ルール 2000.02.14版の日付（{doc['rule_base_date']}）より後か。後に出たカードは、"
           'その時点の公式ルールで処理が決まっているとは限りません（実装の対象から外すものではない。ルールの版の判断に使う）。日付が分からなければ null。', '',
           '## 数', '',
-          f"記録 {c['records']} 件（このほか、対戦のカードでない項目 {c['non_game_items']} 件。`non_game_items`）。", '',
+          f"記録 {c['records']} 件（通常対戦のエンジンの対象。このほか、対象から外した記録 {c['excluded_records']} 件（`excluded_records`）と、"
+          f"対戦のカードでない項目 {c['non_game_items']} 件（`non_game_items`））。`data/cards.csv` の目録だけの行"
+          '（`data/curation/catalog_items.json` の `KC-` の項目）は、この一覧に入れていません。', '',
           '| 商品の種類 | 記録 | ' + ' | '.join(f'`{k}`' for k in STATUS_ORDER) + ' | ' + ' | '.join(f'`{k}`' for k in CATEGORY_ORDER[:3]) + ' |',
           '|---|---|' + '---|' * (len(STATUS_ORDER) + 3)]
     for g, x in c['by_product_group'].items():
@@ -380,6 +394,13 @@ def render(doc):
             L.append(f"| `{r['id']}` | {md(r['name_ja'])} | {md(', '.join(r['changed_since_registration']))} |")
     else:
         L.append('ありません。')
+    L += ['', '## 通常対戦のエンジンの対象から外した記録（excluded_records）', '',
+          '`data/cards.json` の記録のうち、`catalog_class` が `battle` でないか `engine_scope` が `target` でないもの（`data/curation/non_pack.json` の '
+          '`catalog_scope` の明示の指定）。目録の分類と実装範囲の指定で、公式の裁定・エラッタ・印刷の訂正ではありません。カードの記録・文面・id は '
+          '`data/cards.json` に残っています。エンジンの登録表の写しは変えていません（エンジンの取り込みは [引き継ぎ](engine-handover-catalog-scope.md)）。', '',
+          '| id | 名前 | catalog_class | play_scope | 理由 |', '|---|---|---|---|---|']
+    for x in doc['excluded_records']:
+        L.append(f"| `{x['id']}` | {md(x['name_ja'])} | `{x['catalog_class']}` | `{x['play_scope']}` | {md(x['engine_scope_reason'])} |")
     L += ['', '## 対戦のカードでない項目（non_game）', '',
           '`data/cards.json` に入れず、`data/product_items.json` の `non_game_items` に元の項目から追えるように残しています。', '',
           '| 項目の id | 元のページ | 名前 | 種類 |', '|---|---|---|---|']

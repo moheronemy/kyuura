@@ -33,6 +33,11 @@
 - [neo2 の化石 4 枚のタイプと必要なエネルギーの確認](docs/neo2-fossil-type-cost-checks.md) — 2026-10-30。kyuura-engine v0.120 が入れ違いの候補として報告したカブト・カブトプス・オムナイト・オムスターを、カードの画像で確かめた（4 枚とも今までの値と同じ。訂正なし）
 - [v0.122 のあとの名前・文面・トレーナーの手順の調査](docs/v0122-names-text-procedures-research.md) — 2026-10-30。カードの画像で確かめたウィンディ 5 枚の印刷の名前（登録済みの 2 枚の名前を小さい「ィ」に直した）・ナッシー[Exeggutor]・プクリンのふくらむと、既存の資料で整理したちえくらべ・フラッシュ・とりかえっこプリーズの手順と未解決の論点。[エンジンへの引き継ぎ（v0.122 のあと）](docs/engine-handover-after-v0.122.md)
 - [すごいへんしん・わるいはどうの調査](docs/ditto-transform-gr-mewtwo-research.md) — 2026-10-31。『ポケモンカードオフィシャルブック2000』p.239・p.324〜325 の原典の画像で読んだ、すごいへんしんの最新の説明と「ポケモンの変身」の規定、メタモン ES2-032・GR団のミュウツー PRN-041 のカードの画像、変身・すごいへんしん・わるいはどう・わるいぞうふくの裁定と未解決の論点。[エンジンへの引き継ぎ（v0.123 のあと）](docs/engine-handover-after-v0.123.md)
+- [プクリンの最新の説明・コインで決まる枚数の不足の調査](docs/wigglytuff-unbounded-shortage-research.md) — 2026-10-31。『ポケモンカードオフィシャルブック2000』p.226・p.82 の原典の画像で読んだ、プクリン ES1-027 の［てだすけ］・ふくらむとファイヤーのドライアップの最新の説明、ファイヤー 2 枚・ひかるバンギラス・怪電波マシーンのカードの画像、「うら」が出るまでのコインで決まる枚数が足りないときの未解決の論点。[エンジンへの引き継ぎ（v0.124 のあと）](docs/engine-handover-after-v0.124.md)
+- [ちえくらべ・フラッシュ・とりかえっこプリーズの調査](docs/trainer-reaction-faceup-ownership-research.md) — 2026-10-31。ヤドキング neo1-049 の［ちえくらべ］（使うかを選べるか・トレーナーカードを使う手順のどこで投げるか）、フラッシュ ES2-035 のおもての山札の見える範囲、とりかえっこプリーズ PR1-027 で交換したカードの持ち主を、カードの画像と『ポケモンカードオフィシャルブック2000』p.270・p.293・p.228・p.291・p.310・p.311・p.317 の原典の画像で調べた記録（決まった範囲と未解決の論点を分けた。PR1-027 の文面の読点 1 つを訂正）。[エンジンへの引き継ぎ](docs/engine-handover-trainer-procedures.md)
+- [利用者が指定したプロモ 3 枚の簡略化](docs/engine-user-promo-simplifications.md) — 2026-10-31。_のピカチュウ PR1-044・PR1-090 の「おたんじょうび」（誕生日の条件を省き、毎回コイン 1 回）と、ハマちゃんのヤドキング PR1-072 の「こまったなあ」・「どつく」（発話の条件を省く）を、利用者の指定によるエンジン固有の簡略化として記録（公式の裁定・エラッタではない。原典の追加調査はしていない。エンジンの実装は計画だけで未確認。カードデータは変えていない）
+- [利用者が採用したとりかえっこプリーズの所有者の簡略仕様](docs/engine-user-swap-ownership.md) — 2026-10-31。とりかえっこプリーズ PR1-027 で交換が成立したら、交換した 2 枚の対戦中の所有者をそれぞれ受け取ったプレイヤーにし、その対戦の中のトラッシュ・山札・サイドなどすべての処理に使う、という利用者が採用したエンジン固有の簡略化の記録（実物の交換とは無関係。公式の裁定ではなく、UQ-SWAP-PLEASE-OWNERSHIP は未解決のまま。錯乱ジムでかわりに使う場合は決めていない。エンジンの実装は採用済み・実装確認前。カードデータは変えていない）
+- [プロモの収録範囲の調査と目録の整備](docs/catalog-promo-survey.md) — 2026-10-31。`data/cards.csv` を、対戦用のカードだけでなく非対戦のカード・専用ルール用のカード・ジャンボカードも検索できる目録の一覧にした記録。目録の分類（`catalog_class`）・使用範囲（`play_scope`）・エンジンの対象（`engine_scope`）を分け、利用者の指定でタッチ交代！ PR1-038・タッチ世代交代！ PRN-048・カードトレーナー認定証 PR1-079 をエンジンの対象から外した（公式の裁定・エラッタではない）。『オフィシャルブック2000』で確かめた入賞賞品カード 15・スペシャルジャンボカード 8・トロピカルプレゼントを `KC-` の id で加え、Bulbapedia の番号なしプロモの一覧と比べた。[エンジンへの引き継ぎ](docs/engine-handover-catalog-scope.md)
 - [エンジン開発の準備状況](docs/engine-readiness.md) — 対戦エンジン（別のリポジトリ [kyuura-engine](https://github.com/moheronemy/kyuura-engine)）の基準にしたルールと調査データ。エンジンを作り始める前の計画も記録として残している
 
 ### カード
@@ -49,7 +54,8 @@
 - [`data/cards.json`](data/cards.json) — 構造化データ（スキーマ: [docs/data-schema.md](docs/data-schema.md)）。拡張パック 10 弾の 780 件と、拡張パック以外の商品の 597 件（形式 3。`product_group` で分ける。id は「商品の記号-ページ名の末尾 3 桁」）
 - [`data/product_items.json`](data/product_items.json)・[`data/same_card_groups.json`](data/same_card_groups.json) — 拡張パック以外の商品の元の項目（pcg-search のページ）の行き先と、商品をまたいだ同じカードの組
 - [`data/curation/card_corrections.json`](data/curation/card_corrections.json) — カードデータの訂正の記録（生成のたびに当てはめる）と、訂正しなかった候補
-- [`data/cards.csv`](data/cards.csv)、[`data/attacks.csv`](data/attacks.csv)、[`data/powers.csv`](data/powers.csv) — 表形式の写し
+- [`data/cards.csv`](data/cards.csv) — 目録の一覧（対戦のカードの記録に、対戦のカードでない項目と、pcg-search にない `KC-` の項目を加えたもの。id はどれも kyuura の内部識別子で、公式のカード番号ではない。通常対戦のカードは `catalog_class` が `battle`・`engine_scope` が `target` の行。[データの構造](docs/data-schema.md#cardscsv目録の一覧)）。元データは `data/cards.json`・`data/product_items.json` の `non_game_items`・[`data/curation/catalog_items.json`](data/curation/catalog_items.json)（比較の記録は [`data/curation/promo_survey.json`](data/curation/promo_survey.json)）
+- [`data/attacks.csv`](data/attacks.csv)、[`data/powers.csv`](data/powers.csv) — `data/cards.json` の表形式の写し
 - [`data/rule_differences.json`](data/rule_differences.json) — 日米のルールの違い
 - [`data/rule_history.json`](data/rule_history.json) — 旧裏期のルール・大会レギュレーション・エラッタの記録（日付・地域・対象カード・根拠の種類・確度）、日本版のルールの版ごとの比較、スキャンで確認した印刷物の巻号・ページ
 - [`data/sidecar/`](data/sidecar/) — `data/cards.json` を変えずにカード・ワザに加える出典つきの情報（公式の最新の説明、カードの照合、裁定と未解決の論点）。形式は [docs/data-schema.md の「サイドカー」](docs/data-schema.md#サイドカーdatasidecar)

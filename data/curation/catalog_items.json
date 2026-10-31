@@ -1,0 +1,1025 @@
+{
+ "_comment": "目録（data/cards.csv）に加える、pcg-search.com の転記にない旧裏期の公式のカード類の調査記録（手で編集する元データ）。scripts/catalog.py が検査し、data/cards.csv の行にする。data/cards.json（対戦のカードの記録）には入れない。",
+ "id_rule": "id は「KC-」と 4 桁の連番で、kyuura の目録の内部識別子（公式のカード番号・出典サイトの掲載番号ではない）。登録したときに割り当て、分類・掲載順・名前が変わっても変えない。削除した id は再利用しない。既存の id（PMCG1-001・PR1-038・PRN-048 など。商品の記号-ページ名の末尾 3 桁）とは別の形で、衝突しない。",
+ "checked_on": "2026-10-31",
+ "vocabulary": {
+  "catalog_class": "data/cards.json の catalog_class と同じ値（docs/data-schema.md）",
+  "research_status": "book_image_read（公式の書籍の図版で名前・本文を読んだ）・book_listed（公式の書籍の掲載で名前・配布を確かめた。本文は転記していない）",
+  "printed_header": "カードの上部の表示（TRAINER・SPECIAL CARD など）。読んでいないものは null"
+ },
+ "items": [
+  {
+   "id": "KC-0001",
+   "name_ja": "No.1トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの優勝者であることをここに認定し、その栄誉をたたえる。このカードを提示することによって、ポケモンカードゲーム公式大会へ、優先的にエントリーできる。",
+   "group_ja": "第1回公式トーナメント入賞賞品カード",
+   "distribution_ja": "第1回公式トーナメントの入賞の賞品（書籍の見出しは「第1回公式トーナメント入賞賞品カード」）",
+   "date": "1997-06（Bulbapedia [X57]。1997-06-14・15 の公式トーナメントの予選の優勝者など）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "300"
+     ],
+     "detail": "p.300「認定カード」の「プロモーションカード 第1回公式トーナメント入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.1 Trainer (Pokémon Card Game Official Tournament print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.1 Trainer [Pokémon Card Game Official Tournament]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": [
+    "No.1〜No.3 の図版は、第1回・第2回・カメックスメガバトルの 3 群で同じ絵柄（ピカチュウ）に見える。本文が違うので、別の印刷物として記録した"
+   ]
+  },
+  {
+   "id": "KC-0002",
+   "name_ja": "No.2トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの準優勝者であることをここに認定し、その栄誉をたたえる。このカードを提示することによって、ポケモンカードゲーム公式大会へ、優先的にエントリーできる。",
+   "group_ja": "第1回公式トーナメント入賞賞品カード",
+   "distribution_ja": "第1回公式トーナメントの入賞の賞品（書籍の見出しは「第1回公式トーナメント入賞賞品カード」）",
+   "date": "1997-06（Bulbapedia [X57]。1997-06-14・15 の公式トーナメントの予選の優勝者など）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "300"
+     ],
+     "detail": "p.300「認定カード」の「プロモーションカード 第1回公式トーナメント入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.2 Trainer (Pokémon Card Game Official Tournament print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.2 Trainer [Pokémon Card Game Official Tournament]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": [
+    "No.1〜No.3 の図版は、第1回・第2回・カメックスメガバトルの 3 群で同じ絵柄（ピカチュウ）に見える。本文が違うので、別の印刷物として記録した"
+   ]
+  },
+  {
+   "id": "KC-0003",
+   "name_ja": "No.3トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの3位入賞者であることをここに認定し、その栄誉をたたえる。このカードを提示することによって、ポケモンカードゲーム公式大会へ、優先的にエントリーできる。",
+   "group_ja": "第1回公式トーナメント入賞賞品カード",
+   "distribution_ja": "第1回公式トーナメントの入賞の賞品（書籍の見出しは「第1回公式トーナメント入賞賞品カード」）",
+   "date": "1997-06（Bulbapedia [X57]。1997-06-14・15 の公式トーナメントの予選の優勝者など）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "300"
+     ],
+     "detail": "p.300「認定カード」の「プロモーションカード 第1回公式トーナメント入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.3 Trainer (Pokémon Card Game Official Tournament print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.3 Trainer [Pokémon Card Game Official Tournament]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": [
+    "No.1〜No.3 の図版は、第1回・第2回・カメックスメガバトルの 3 群で同じ絵柄（ピカチュウ）に見える。本文が違うので、別の印刷物として記録した"
+   ]
+  },
+  {
+   "id": "KC-0004",
+   "name_ja": "No.1トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの優勝者であることをここに認定し、その栄誉をたたえる。このカードを所持する者は、第1回ポケモンカードゲーム日本一決定戦への参加権があることを証明する。",
+   "group_ja": "第2回公式トーナメント入賞賞品カード",
+   "distribution_ja": "第2回公式トーナメントの入賞の賞品（書籍の見出しは「第2回公式トーナメント入賞賞品カード」）",
+   "date": "1997-11〜1998-02（Bulbapedia [X57] の「Lizardon Mega Battle」の版。本文の「第1回ポケモンカードゲーム日本一決定戦」で対応させた）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "300"
+     ],
+     "detail": "p.300「認定カード」の「プロモーションカード 第2回公式トーナメント入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.1 Trainer (Lizardon Mega Battle print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.1 Trainer [Lizardon Mega Battle]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": [
+    "書籍の見出しは「第2回公式トーナメント」で、Bulbapedia [X48][X57] の大会名は「Lizardon Mega Battle」（リザードンメガバトル）。名前ではなく本文（第1回日本一決定戦への参加権）で対応させた。同じ大会の別の呼び方かは未確認",
+    "No.1〜No.3 の図版は、第1回・第2回・カメックスメガバトルの 3 群で同じ絵柄（ピカチュウ）に見える。本文が違うので、別の印刷物として記録した"
+   ]
+  },
+  {
+   "id": "KC-0005",
+   "name_ja": "No.2トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの準優勝者であることをここに認定し、その栄誉をたたえる。このカードを所持する者は、第1回ポケモンカードゲーム日本一決定戦への参加権があることを証明する。",
+   "group_ja": "第2回公式トーナメント入賞賞品カード",
+   "distribution_ja": "第2回公式トーナメントの入賞の賞品（書籍の見出しは「第2回公式トーナメント入賞賞品カード」）",
+   "date": "1997-11〜1998-02（Bulbapedia [X57] の「Lizardon Mega Battle」の版。本文の「第1回ポケモンカードゲーム日本一決定戦」で対応させた）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "300"
+     ],
+     "detail": "p.300「認定カード」の「プロモーションカード 第2回公式トーナメント入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.2 Trainer (Lizardon Mega Battle print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.2 Trainer [Lizardon Mega Battle]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": [
+    "書籍の見出しは「第2回公式トーナメント」で、Bulbapedia [X48][X57] の大会名は「Lizardon Mega Battle」（リザードンメガバトル）。名前ではなく本文（第1回日本一決定戦への参加権）で対応させた。同じ大会の別の呼び方かは未確認",
+    "No.1〜No.3 の図版は、第1回・第2回・カメックスメガバトルの 3 群で同じ絵柄（ピカチュウ）に見える。本文が違うので、別の印刷物として記録した"
+   ]
+  },
+  {
+   "id": "KC-0006",
+   "name_ja": "No.3トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの3位入賞者であることをここに認定し、その栄誉をたたえる。このカードを所持する者は、第1回ポケモンカードゲーム日本一決定戦への参加権があることを証明する。",
+   "group_ja": "第2回公式トーナメント入賞賞品カード",
+   "distribution_ja": "第2回公式トーナメントの入賞の賞品（書籍の見出しは「第2回公式トーナメント入賞賞品カード」）",
+   "date": "1997-11〜1998-02（Bulbapedia [X57] の「Lizardon Mega Battle」の版。本文の「第1回ポケモンカードゲーム日本一決定戦」で対応させた）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "300"
+     ],
+     "detail": "p.300「認定カード」の「プロモーションカード 第2回公式トーナメント入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.3 Trainer (Lizardon Mega Battle print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.3 Trainer [Lizardon Mega Battle]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": [
+    "書籍の見出しは「第2回公式トーナメント」で、Bulbapedia [X48][X57] の大会名は「Lizardon Mega Battle」（リザードンメガバトル）。名前ではなく本文（第1回日本一決定戦への参加権）で対応させた。同じ大会の別の呼び方かは未確認",
+    "No.1〜No.3 の図版は、第1回・第2回・カメックスメガバトルの 3 群で同じ絵柄（ピカチュウ）に見える。本文が違うので、別の印刷物として記録した"
+   ]
+  },
+  {
+   "id": "KC-0007",
+   "name_ja": "No.1トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの優勝者であることをここに認定し、その栄誉をたたえる。このカードを所持する者は、第2回ポケモンカードゲーム日本一決定戦への参加権があることを証明する。",
+   "group_ja": "カメックスメガバトル入賞賞品カード",
+   "distribution_ja": "カメックスメガバトルの入賞の賞品（書籍の見出しは「カメックスメガバトル入賞賞品カード」）",
+   "date": "1998-07〜1998-08（Bulbapedia [X57]）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "300"
+     ],
+     "detail": "p.300「認定カード」の「プロモーションカード カメックスメガバトル入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.1 Trainer (Kamex Mega Battle print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.1 Trainer [Kamex Mega Battle]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": [
+    "No.1〜No.3 の図版は、第1回・第2回・カメックスメガバトルの 3 群で同じ絵柄（ピカチュウ）に見える。本文が違うので、別の印刷物として記録した"
+   ]
+  },
+  {
+   "id": "KC-0008",
+   "name_ja": "No.2トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの準優勝者であることをここに認定し、その栄誉をたたえるこのカードを所持する者は、第2回ポケモンカードゲーム日本一決定戦への参加権があることを証明する。",
+   "group_ja": "カメックスメガバトル入賞賞品カード",
+   "distribution_ja": "カメックスメガバトルの入賞の賞品（書籍の見出しは「カメックスメガバトル入賞賞品カード」）",
+   "date": "1998-07〜1998-08（Bulbapedia [X57]）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "300"
+     ],
+     "detail": "p.300「認定カード」の「プロモーションカード カメックスメガバトル入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.2 Trainer (Kamex Mega Battle print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.2 Trainer [Kamex Mega Battle]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": [
+    "書籍の図版では「たたえる」のあとに句点がなく、そのまま「このカードを」に続く（2026-10-31 に 300dpi で確かめた。図版の印刷のとおりに写した）",
+    "No.1〜No.3 の図版は、第1回・第2回・カメックスメガバトルの 3 群で同じ絵柄（ピカチュウ）に見える。本文が違うので、別の印刷物として記録した"
+   ]
+  },
+  {
+   "id": "KC-0009",
+   "name_ja": "No.3トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの3位入賞者であることをここに認定し、その栄誉をたたえる。このカードを所持する者は、第2回ポケモンカードゲーム日本一決定戦への参加権があることを証明する。",
+   "group_ja": "カメックスメガバトル入賞賞品カード",
+   "distribution_ja": "カメックスメガバトルの入賞の賞品（書籍の見出しは「カメックスメガバトル入賞賞品カード」）",
+   "date": "1998-07〜1998-08（Bulbapedia [X57]）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "300"
+     ],
+     "detail": "p.300「認定カード」の「プロモーションカード カメックスメガバトル入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.3 Trainer (Kamex Mega Battle print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.3 Trainer [Kamex Mega Battle]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": [
+    "No.1〜No.3 の図版は、第1回・第2回・カメックスメガバトルの 3 群で同じ絵柄（ピカチュウ）に見える。本文が違うので、別の印刷物として記録した"
+   ]
+  },
+  {
+   "id": "KC-0010",
+   "name_ja": "No.1トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの優勝者であることをここに認定し、その栄誉をたたえる。このカードを所持する者は、トロピカルメガバトル日本一決定戦への参加権があることを証明する。",
+   "group_ja": "トロピカルメガバトル入賞賞品カード",
+   "distribution_ja": "トロピカルメガバトルの入賞の賞品（書籍の見出しは「トロピカルメガバトル入賞賞品カード」）",
+   "date": "1999-07〜1999-08（Bulbapedia [X57]。チャレンジロード'99 SUMMER）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "301"
+     ],
+     "detail": "p.301「認定カード」の「プロモーションカード トロピカルメガバトル入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.1 Trainer (Tropical Mega Battle print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.1 Trainer [Tropical Mega Battle]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": []
+  },
+  {
+   "id": "KC-0011",
+   "name_ja": "No.2トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの準優勝者であることをここに認定し、その栄誉をたたえる。",
+   "group_ja": "トロピカルメガバトル入賞賞品カード",
+   "distribution_ja": "トロピカルメガバトルの入賞の賞品（書籍の見出しは「トロピカルメガバトル入賞賞品カード」）",
+   "date": "1999-07〜1999-08（Bulbapedia [X57]。チャレンジロード'99 SUMMER）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "301"
+     ],
+     "detail": "p.301「認定カード」の「プロモーションカード トロピカルメガバトル入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.2 Trainer (Tropical Mega Battle print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.2 Trainer [Tropical Mega Battle]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": [
+    "No.2・No.3 の本文には、No.1 にある「日本一決定戦への参加権」の文がない（書籍の図版）"
+   ]
+  },
+  {
+   "id": "KC-0012",
+   "name_ja": "No.3トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの3位入賞者であることをここに認定し、その栄誉をたたえる。",
+   "group_ja": "トロピカルメガバトル入賞賞品カード",
+   "distribution_ja": "トロピカルメガバトルの入賞の賞品（書籍の見出しは「トロピカルメガバトル入賞賞品カード」）",
+   "date": "1999-07〜1999-08（Bulbapedia [X57]。チャレンジロード'99 SUMMER）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "301"
+     ],
+     "detail": "p.301「認定カード」の「プロモーションカード トロピカルメガバトル入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.3 Trainer (Tropical Mega Battle print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.3 Trainer [Tropical Mega Battle]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": [
+    "No.2・No.3 の本文には、No.1 にある「日本一決定戦への参加権」の文がない（書籍の図版）"
+   ]
+  },
+  {
+   "id": "KC-0013",
+   "name_ja": "No.1トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの優勝者であることをここに認定し、その栄誉をたたえる。このカードを所持する者は、シークレットスーパーバトル日本一決定戦への参加権があることを証明する。",
+   "group_ja": "シークレットスーパーバトル入賞賞品カード",
+   "distribution_ja": "シークレットスーパーバトルの入賞の賞品（書籍の見出しは「シークレットスーパーバトル入賞賞品カード」）",
+   "date": "1999-07〜1999-08（Bulbapedia [X57]。チャレンジロード'99 SUMMER）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "301"
+     ],
+     "detail": "p.301「認定カード」の「プロモーションカード シークレットスーパーバトル入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.1 Trainer (Secret Super Battle print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.1 Trainer [Secret Super Battle]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": []
+  },
+  {
+   "id": "KC-0014",
+   "name_ja": "No.2トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの準優勝者であることをここに認定し、その栄誉をたたえる。このカードを所持する者は、シークレットスーパーバトル日本一決定戦への参加権があることを証明する。",
+   "group_ja": "シークレットスーパーバトル入賞賞品カード",
+   "distribution_ja": "シークレットスーパーバトルの入賞の賞品（書籍の見出しは「シークレットスーパーバトル入賞賞品カード」）",
+   "date": "1999-07〜1999-08（Bulbapedia [X57]。チャレンジロード'99 SUMMER）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "301"
+     ],
+     "detail": "p.301「認定カード」の「プロモーションカード シークレットスーパーバトル入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.2 Trainer (Secret Super Battle print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.2 Trainer [Secret Super Battle]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": []
+  },
+  {
+   "id": "KC-0015",
+   "name_ja": "No.3トレーナー",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "認定・入賞賞品のカード。本文は大会の入賞の認定と大会への参加の資格で、対戦に使う効果がない（上部の表示は TRAINER）",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "TRAINER",
+   "printed_text_ja": "ポケモンカードゲーム公式トーナメントの3位入賞者であることをここに認定し、その栄誉をたたえる。このカードを所持する者は、シークレットスーパーバトル日本一決定戦への参加権があることを証明する。",
+   "group_ja": "シークレットスーパーバトル入賞賞品カード",
+   "distribution_ja": "シークレットスーパーバトルの入賞の賞品（書籍の見出しは「シークレットスーパーバトル入賞賞品カード」）",
+   "date": "1999-07〜1999-08（Bulbapedia [X57]。チャレンジロード'99 SUMMER）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "301"
+     ],
+     "detail": "p.301「認定カード」の「プロモーションカード シークレットスーパーバトル入賞賞品カード」の図版（左から No.1・No.2・No.3）。本文は図版を読んだ（2026-10-31。kyuura）"
+    },
+    {
+     "code": "X57",
+     "detail": "No.3 Trainer (Secret Super Battle print)"
+    },
+    {
+     "code": "X48",
+     "detail": "No.3 Trainer [Secret Super Battle]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "寸法（通常のカードと同じ大きさか）は書籍に書かれていない",
+    "配布の日付・対象・枚数は書籍に書かれておらず、Bulbapedia [X57] によるもの（未確認）"
+   ],
+   "notes": []
+  },
+  {
+   "id": "KC-0016",
+   "name_ja": "ピカチュウとプリンとピッピ",
+   "catalog_class": "jumbo",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "ジャンボカード（高さ21cm・幅14.5cm。通常のカードの約2倍）。通常の対戦の山札に入れられる大きさではなく、通常対戦のエンジンの対象にしない",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": null,
+   "printed_text_ja": null,
+   "group_ja": "スペシャルジャンボカード",
+   "distribution_ja": "小学館コロコロコミック '97年7月号",
+   "date": "1997-06-15（Bulbapedia [X58]）",
+   "size": "高さ21cm、幅14.5cm（書籍 p.251 のスペシャルジャンボカード全体の説明。1 枚ずつの寸法は測っていない）",
+   "research_status": "book_listed",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "251"
+     ],
+     "detail": "p.251「スペシャルジャンボカード」の図版と掲載誌（2026-10-31。kyuura が画像で読んだ）"
+    },
+    {
+     "code": "X58",
+     "detail": "Pikachu, Jigglypuff, and Clefairy (CoroCoro promo)"
+    },
+    {
+     "code": "X48",
+     "detail": "1996-2005 の一覧の [Jumbo]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "ワザ・HP・本文などの図版の文字は小さく、転記していない（printed_text_ja は null）",
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "p.251 の 8 掲載で全件とは限らない（Bulbapedia [X48] には 2000年のジャンボカードがほかにある。docs/catalog-promo-survey.md）"
+   ],
+   "notes": [
+    "同じ名前の通常サイズのカードがあっても、別の印刷物として記録する（まとめない）"
+   ]
+  },
+  {
+   "id": "KC-0017",
+   "name_ja": "サンダーとフリーザーとファイヤー",
+   "catalog_class": "jumbo",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "ジャンボカード（高さ21cm・幅14.5cm。通常のカードの約2倍）。通常の対戦の山札に入れられる大きさではなく、通常対戦のエンジンの対象にしない",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": null,
+   "printed_text_ja": null,
+   "group_ja": "スペシャルジャンボカード",
+   "distribution_ja": "小学館コロコロコミック '97年10月号",
+   "date": "1997-09-15（Bulbapedia [X58]）",
+   "size": "高さ21cm、幅14.5cm（書籍 p.251 のスペシャルジャンボカード全体の説明。1 枚ずつの寸法は測っていない）",
+   "research_status": "book_listed",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "251"
+     ],
+     "detail": "p.251「スペシャルジャンボカード」の図版と掲載誌（2026-10-31。kyuura が画像で読んだ）"
+    },
+    {
+     "code": "X58",
+     "detail": "Articuno, Moltres, and Zapdos (Warner Bros. promo)"
+    },
+    {
+     "code": "X48",
+     "detail": "1996-2005 の一覧の [Jumbo]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "ワザ・HP・本文などの図版の文字は小さく、転記していない（printed_text_ja は null）",
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "p.251 の 8 掲載で全件とは限らない（Bulbapedia [X48] には 2000年のジャンボカードがほかにある。docs/catalog-promo-survey.md）"
+   ],
+   "notes": [
+    "同じ名前の通常サイズのカードがあっても、別の印刷物として記録する（まとめない）",
+    "Bulbapedia [X58] は、カードの下の文を「9月号付録」と訳している（書籍の掲載は「'97年10月号」）。カードの印刷の文字は見ていない"
+   ]
+  },
+  {
+   "id": "KC-0018",
+   "name_ja": "ミュウツーの逆襲",
+   "catalog_class": "jumbo",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "ジャンボカード（高さ21cm・幅14.5cm。通常のカードの約2倍）。通常の対戦の山札に入れられる大きさではなく、通常対戦のエンジンの対象にしない",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": null,
+   "printed_text_ja": null,
+   "group_ja": "スペシャルジャンボカード",
+   "distribution_ja": "小学館コロコロコミック '98年5月号",
+   "date": "1998-04-15（Bulbapedia [X58]）",
+   "size": "高さ21cm、幅14.5cm（書籍 p.251 のスペシャルジャンボカード全体の説明。1 枚ずつの寸法は測っていない）",
+   "research_status": "book_listed",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "251"
+     ],
+     "detail": "p.251「スペシャルジャンボカード」の図版と掲載誌（2026-10-31。kyuura が画像で読んだ）"
+    },
+    {
+     "code": "X58",
+     "detail": "Mewtwo Strikes Back (CoroCoro promo)"
+    },
+    {
+     "code": "X48",
+     "detail": "1996-2005 の一覧の [Jumbo]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "ワザ・HP・本文などの図版の文字は小さく、転記していない（printed_text_ja は null）",
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "p.251 の 8 掲載で全件とは限らない（Bulbapedia [X48] には 2000年のジャンボカードがほかにある。docs/catalog-promo-survey.md）"
+   ],
+   "notes": [
+    "同じ名前の通常サイズのカードがあっても、別の印刷物として記録する（まとめない）"
+   ]
+  },
+  {
+   "id": "KC-0019",
+   "name_ja": "ピカチュウのなつやすみ",
+   "catalog_class": "jumbo",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "ジャンボカード（高さ21cm・幅14.5cm。通常のカードの約2倍）。通常の対戦の山札に入れられる大きさではなく、通常対戦のエンジンの対象にしない",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": null,
+   "printed_text_ja": null,
+   "group_ja": "スペシャルジャンボカード",
+   "distribution_ja": "小学館コロコロコミック '98年6月号",
+   "date": "1998-05-15（Bulbapedia [X58]）",
+   "size": "高さ21cm、幅14.5cm（書籍 p.251 のスペシャルジャンボカード全体の説明。1 枚ずつの寸法は測っていない）",
+   "research_status": "book_listed",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "251"
+     ],
+     "detail": "p.251「スペシャルジャンボカード」の図版と掲載誌（2026-10-31。kyuura が画像で読んだ）"
+    },
+    {
+     "code": "X58",
+     "detail": "Pikachu's Summer Vacation (CoroCoro promo)"
+    },
+    {
+     "code": "X48",
+     "detail": "1996-2005 の一覧の [Jumbo]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "ワザ・HP・本文などの図版の文字は小さく、転記していない（printed_text_ja は null）",
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "p.251 の 8 掲載で全件とは限らない（Bulbapedia [X48] には 2000年のジャンボカードがほかにある。docs/catalog-promo-survey.md）"
+   ],
+   "notes": [
+    "同じ名前の通常サイズのカードがあっても、別の印刷物として記録する（まとめない）"
+   ]
+  },
+  {
+   "id": "KC-0020",
+   "name_ja": "ポケモン広場",
+   "catalog_class": "jumbo",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "ジャンボカード（高さ21cm・幅14.5cm。通常のカードの約2倍）。通常の対戦の山札に入れられる大きさではなく、通常対戦のエンジンの対象にしない",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": null,
+   "printed_text_ja": null,
+   "group_ja": "スペシャルジャンボカード",
+   "distribution_ja": "小学館コロコロコミック '98年10月号",
+   "date": "1998-09-15（Bulbapedia [X58]）",
+   "size": "高さ21cm、幅14.5cm（書籍 p.251 のスペシャルジャンボカード全体の説明。1 枚ずつの寸法は測っていない）",
+   "research_status": "book_listed",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "251"
+     ],
+     "detail": "p.251「スペシャルジャンボカード」の図版と掲載誌（2026-10-31。kyuura が画像で読んだ）"
+    },
+    {
+     "code": "X58",
+     "detail": "Pokémon Plaza (CoroCoro promo)"
+    },
+    {
+     "code": "X48",
+     "detail": "1996-2005 の一覧の [Jumbo]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "ワザ・HP・本文などの図版の文字は小さく、転記していない（printed_text_ja は null）",
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "p.251 の 8 掲載で全件とは限らない（Bulbapedia [X48] には 2000年のジャンボカードがほかにある。docs/catalog-promo-survey.md）"
+   ],
+   "notes": [
+    "同じ名前の通常サイズのカードがあっても、別の印刷物として記録する（まとめない）",
+    "図版の上部の表示は TRAINER、スタジアムカードの形（図版）"
+   ]
+  },
+  {
+   "id": "KC-0021",
+   "name_ja": "ジラルダン",
+   "catalog_class": "jumbo",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "ジャンボカード（高さ21cm・幅14.5cm。通常のカードの約2倍）。通常の対戦の山札に入れられる大きさではなく、通常対戦のエンジンの対象にしない",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": null,
+   "printed_text_ja": null,
+   "group_ja": "スペシャルジャンボカード",
+   "distribution_ja": "小学館コロコロコミック '99年8月号",
+   "date": "1999-07-15（Bulbapedia [X58]）",
+   "size": "高さ21cm、幅14.5cm（書籍 p.251 のスペシャルジャンボカード全体の説明。1 枚ずつの寸法は測っていない）",
+   "research_status": "book_listed",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "251"
+     ],
+     "detail": "p.251「スペシャルジャンボカード」の図版と掲載誌（2026-10-31。kyuura が画像で読んだ）"
+    },
+    {
+     "code": "X58",
+     "detail": "Lawrence III (CoroCoro promo)"
+    },
+    {
+     "code": "X48",
+     "detail": "1996-2005 の一覧の [Jumbo]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "ワザ・HP・本文などの図版の文字は小さく、転記していない（printed_text_ja は null）",
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "p.251 の 8 掲載で全件とは限らない（Bulbapedia [X48] には 2000年のジャンボカードがほかにある。docs/catalog-promo-survey.md）"
+   ],
+   "notes": [
+    "同じ名前の通常サイズのカードがあっても、別の印刷物として記録する（まとめない）",
+    "図版の上部の表示は TRAINER（図版）"
+   ]
+  },
+  {
+   "id": "KC-0022",
+   "name_ja": "ポケモン谷",
+   "catalog_class": "jumbo",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "ジャンボカード（高さ21cm・幅14.5cm。通常のカードの約2倍）。通常の対戦の山札に入れられる大きさではなく、通常対戦のエンジンの対象にしない",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": null,
+   "printed_text_ja": null,
+   "group_ja": "スペシャルジャンボカード",
+   "distribution_ja": "小学館別冊コロコロコミック '99年8月号",
+   "date": "1999-06-30（Bulbapedia [X58]）",
+   "size": "高さ21cm、幅14.5cm（書籍 p.251 のスペシャルジャンボカード全体の説明。1 枚ずつの寸法は測っていない）",
+   "research_status": "book_listed",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "251"
+     ],
+     "detail": "p.251「スペシャルジャンボカード」の図版と掲載誌（2026-10-31。kyuura が画像で読んだ）"
+    },
+    {
+     "code": "X58",
+     "detail": "Pokémon Valley (CoroCoro promo)"
+    },
+    {
+     "code": "X48",
+     "detail": "1996-2005 の一覧の [Jumbo]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "ワザ・HP・本文などの図版の文字は小さく、転記していない（printed_text_ja は null）",
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "p.251 の 8 掲載で全件とは限らない（Bulbapedia [X48] には 2000年のジャンボカードがほかにある。docs/catalog-promo-survey.md）"
+   ],
+   "notes": [
+    "同じ名前の通常サイズのカードがあっても、別の印刷物として記録する（まとめない）",
+    "図版の上部の表示は TRAINER、スタジアムカードの形（図版）"
+   ]
+  },
+  {
+   "id": "KC-0023",
+   "name_ja": "Charizard（リザードン）",
+   "catalog_class": "jumbo",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "ジャンボカード（高さ21cm・幅14.5cm。通常のカードの約2倍）。通常の対戦の山札に入れられる大きさではなく、通常対戦のエンジンの対象にしない",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": null,
+   "printed_text_ja": null,
+   "group_ja": "スペシャルジャンボカード",
+   "distribution_ja": "小学館コロコロコミック '99年4月号（書籍の掲載）",
+   "date": "食い違い: 書籍は「'99年4月号」、Bulbapedia [X58] は 2000年4月号（2000-03 発売）とする（CONFLICT。未解決）",
+   "size": "高さ21cm、幅14.5cm（書籍 p.251 のスペシャルジャンボカード全体の説明。1 枚ずつの寸法は測っていない）",
+   "research_status": "book_listed",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "251"
+     ],
+     "detail": "p.251「スペシャルジャンボカード」の図版と掲載誌（2026-10-31。kyuura が画像で読んだ）"
+    },
+    {
+     "code": "X58",
+     "detail": "Charizard (Base Set 4)"
+    },
+    {
+     "code": "X48",
+     "detail": "1996-2005 の一覧の [Jumbo]"
+    }
+   ],
+   "related_ids": [],
+   "unconfirmed": [
+    "ワザ・HP・本文などの図版の文字は小さく、転記していない（printed_text_ja は null）",
+    "カードの実物・カードの画像（書籍の図版以外）は見ていない",
+    "p.251 の 8 掲載で全件とは限らない（Bulbapedia [X48] には 2000年のジャンボカードがほかにある。docs/catalog-promo-survey.md）"
+   ],
+   "notes": [
+    "同じ名前の通常サイズのカードがあっても、別の印刷物として記録する（まとめない）",
+    "英語の文面の印刷（図版のカード名は「Charizard」）。日本版の印刷物ではないが、書籍が日本の「スペシャルジャンボカード」として載せているので収録した",
+    "通常サイズの英語版 Base Set の Charizard（kyuura の PMCG1-006 の英語版の対応）とは別の印刷物で、まとめない"
+   ]
+  },
+  {
+   "id": "KC-0024",
+   "name_ja": "トロピカルプレゼント",
+   "catalog_class": "award",
+   "engine_scope": "excluded",
+   "engine_scope_reason": "ファンクラブの会員に送られたポイントの特典のカード（上部の表示は SPECIAL CARD）。本文は「ゲットGETポイント」を得ることで、対戦に使う効果がない",
+   "product_group": "promo",
+   "official_number": null,
+   "printed_header": "SPECIAL CARD",
+   "printed_text_ja": "このトレーナーカードが送られたプレイヤーは、特別に「ゲットGETポイント」を「10」得ることができる。",
+   "group_ja": "ポケモンカード公式ファンクラブ",
+   "distribution_ja": "'99年夏、暑中見舞いとして会員に送られた。全員に10ポイントがプレゼントされた（書籍 p.122 の図版の説明）",
+   "date": "1999 夏（書籍 p.122）",
+   "size": null,
+   "research_status": "book_image_read",
+   "sources": [
+    {
+     "code": "P43",
+     "pages": [
+      "122"
+     ],
+     "detail": "p.122「ファンをサポートするメディア」の「公式ファンクラブ」の図版と説明（2026-10-31。kyuura が 600dpi で読んだ）"
+    },
+    {
+     "code": "X58",
+     "detail": "Tropical Present (Fan Club promo)。Summer 1999 print"
+    },
+    {
+     "code": "X48",
+     "detail": "Tropical Present [Fan Club] [Postcard]（July 1999）"
+    }
+   ],
+   "related_ids": [
+    "PR1-074"
+   ],
+   "unconfirmed": [
+    "本文の下の小さい文字（「(ポイントは自動的に…される)」）の一部が読めない。カード名の先頭の文字は図版で隠れていて、名前は図版の説明（「トロピカルプレゼント」）による",
+    "寸法: 書籍に書かれていない。Bulbapedia [X58] はジャンボカードとし、[X48] は Postcard とする（未確認。ジャンボカードの分類にしていない）",
+    "Bulbapedia [X58] は、1999年1〜6月の版（イラスト 西田敦子）と 2001年夏の版（e カードの形）もあるとする。書籍で確かめたのは 1999年夏の版だけ（ほかの版は docs/catalog-promo-survey.md の別版の候補）"
+   ],
+   "notes": [
+    "トロピカルウインド（PR1-074。トロピカルメガバトルの決勝の参加賞）とは別のカード。名前が似ているだけで、同じ記録にまとめない",
+    "図版はサザンアイランドの「海」の絵柄と Bulbapedia [X58] がいう版（1999年夏の版。イラスト 木村直代）に見える"
+   ]
+  }
+ ]
+}

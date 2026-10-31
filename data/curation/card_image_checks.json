@@ -2588,6 +2588,399 @@
    ],
    "existing_value": "今までの値は画像と同じ（訂正なし）",
    "corrections": []
+  },
+  {
+   "id": "IMG-ES2-005",
+   "card_id": "ES2-005",
+   "card_name_ja": "ファイヤー",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-31",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stex2005.php",
+     "page_title": "ファイヤー | ポケモンカード(PMCG) 拡張シート 第2弾(赤版)",
+     "image_url": "https://pcg-search.com/img/1st/1stex2005.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "d6f38f57694af9bac2538ebed1457730e8f4c5b22ce0258d7f94faf9a21e6b2c",
+     "accessed_on": "2026-10-31"
+    }
+   ],
+   "identification": "画像は「ファイヤー」たねポケモン、LV.37、HP80、炎、ドライアップ（炎 2 個）、ほのおのつばさ（炎 3 個・無色 1 個・50）、弱点なし、抵抗力 闘 -30、にげる 1、Illus.Mitsuhiro Arita、No.146、右下にレアリティの記号 ◆。pcg-search のページは ポケモンカード(PMCG) 拡張シート 第2弾(赤版)。kyuura の data/cards.json の HP・ワザ名・コスト・ダメージ・抵抗力・にげる・レアリティと合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じカードの組 SC-ES2-005 のもう一方（QSG-055）の画像（IMG-QSG-055）は別の画像（sha256 が違い、レアリティの記号・絵柄の光り方が違う）で、この記録はこのカード id の印刷だけを読んだ記録。『オフィシャルブック2000』p.82 の図版はどちらの印刷か特定していないので、この照合に数えない。サイトの転記は画像の値と分ける",
+   "print_values": {
+    "name.ja": "ファイヤー",
+    "pokemon.hp": 80,
+    "pokemon.attacks[0].name.ja": "ドライアップ",
+    "pokemon.attacks[0].text.ja": "相手の場のポケモンから1匹を選ぶ。その後、「うら」が出るまでコインを投げ続け、「おもて」の数ぶんの「水」エネルギーカードを、そのポケモンからはがしてトラッシュさせる。",
+    "pokemon.attacks[1].name.ja": "ほのおのつばさ",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "print_text": {
+    "pokemon.attacks[0].text.ja": [
+     "相手の場のポケモンから1匹を選ぶ。その後、「うら」が出るまで／コインを投げ続け、「おもて」の数ぶんの「水」エネルギーカード／を、そのポケモンからはがしてトラッシュさせる。（画像を 2 倍に拡大して読んだ。／は印刷の行の切れ目）",
+     "「おもて」の数より水エネルギーカードが少ないとき・0 枚のときの文はない"
+    ],
+    "pokemon.attacks[1].text.ja": [
+     "ほのおのつばさには説明の文がない（名前と 50 だけ）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-31 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stex2005.php",
+     "values": {
+      "pokemon.attacks[0].text.ja": "相手の場のポケモンから1匹を選ぶ。その後、「うら」が出るまでコインを投げ続け、「おもて」の数ぶんの「水」エネルギーカードを、そのポケモンからはがしてトラッシュさせる。"
+     },
+     "note": "画像の文面と同じ"
+    }
+   ],
+   "not_checked": [
+    "レベル（画像・書籍とも LV.37。拡張パック以外の商品のレベルの欄は空のまま。埋めない）・図鑑番号（No.146。埋めない）",
+    "カードの実物（ウェブの画像 1 枚）",
+    "同じカードの組のもう一方（QSG-055）の印刷はこの記録で読んでいない（IMG-QSG-055）",
+    "公式の書籍の最新の説明（LD-ES2-005-ATK0）と書籍の照合（CC-ES2-005-P82）はこの記録ではない"
+   ],
+   "existing_value": "今までの値（pcg-search の転記）は画像と同じ。訂正はない",
+   "corrections": []
+  },
+  {
+   "id": "IMG-QSG-055",
+   "card_id": "QSG-055",
+   "card_name_ja": "ファイヤー",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-31",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stqsg055.php",
+     "page_title": "ファイヤー | ポケモンカード(PMCG) クイックスターターギフト",
+     "image_url": "https://pcg-search.com/img/1st/1stqsg055.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "9aa6c2de23e37b93618eaf365b7604d08c9e893bd6c842036362bf6801a96e5c",
+     "accessed_on": "2026-10-31"
+    }
+   ],
+   "identification": "画像は「ファイヤー」たねポケモン、LV.37、HP80、炎、ドライアップ（炎 2 個）、ほのおのつばさ（炎 3 個・無色 1 個・50）、弱点なし、抵抗力 闘 -30、にげる 1、Illus.Mitsuhiro Arita、No.146、キラ（ホロ）の絵柄、右下にレアリティの記号なし。pcg-search のページは ポケモンカード(PMCG) クイックスターターギフト。kyuura の data/cards.json の HP・ワザ名・コスト・ダメージ・抵抗力・にげる・レアリティと合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。同じカードの組 SC-ES2-005 のもう一方（ES2-005）の画像（IMG-ES2-005）は別の画像（sha256 が違い、レアリティの記号・絵柄の光り方が違う）で、この記録はこのカード id の印刷だけを読んだ記録。『オフィシャルブック2000』p.82 の図版はどちらの印刷か特定していないので、この照合に数えない。サイトの転記は画像の値と分ける",
+   "print_values": {
+    "name.ja": "ファイヤー",
+    "pokemon.hp": 80,
+    "pokemon.attacks[0].name.ja": "ドライアップ",
+    "pokemon.attacks[0].text.ja": "相手の場のポケモンから1匹を選ぶ。その後、「うら」が出るまでコインを投げ続け、「おもて」の数ぶんの「水」エネルギーカードを、そのポケモンからはがしてトラッシュさせる。",
+    "pokemon.attacks[1].name.ja": "ほのおのつばさ",
+    "pokemon.attacks[1].text.ja": null
+   },
+   "print_text": {
+    "pokemon.attacks[0].text.ja": [
+     "相手の場のポケモンから1匹を選ぶ。その後、「うら」が出るまで／コインを投げ続け、「おもて」の数ぶんの「水」エネルギーカード／を、そのポケモンからはがしてトラッシュさせる。（画像を 2 倍に拡大して読んだ。／は印刷の行の切れ目）",
+     "「おもて」の数より水エネルギーカードが少ないとき・0 枚のときの文はない"
+    ],
+    "pokemon.attacks[1].text.ja": [
+     "ほのおのつばさには説明の文がない（名前と 50 だけ）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-31 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stqsg055.php",
+     "values": {
+      "pokemon.attacks[0].text.ja": "相手の場のポケモンから1匹を選ぶ。その後、「うら」が出るまでコインを投げ続け、「おもて」の数ぶんの「水」エネルギーカードを、そのポケモンからはがしてトラッシュさせる。"
+     },
+     "note": "画像の文面と同じ"
+    }
+   ],
+   "not_checked": [
+    "レベル（画像・書籍とも LV.37。拡張パック以外の商品のレベルの欄は空のまま。埋めない）・図鑑番号（No.146。埋めない）",
+    "カードの実物（ウェブの画像 1 枚）",
+    "同じカードの組のもう一方（ES2-005）の印刷はこの記録で読んでいない（IMG-ES2-005）",
+    "公式の書籍の最新の説明（LD-QSG-055-ATK0）と書籍の照合（CC-QSG-055-P82）はこの記録ではない"
+   ],
+   "existing_value": "今までの値（pcg-search の転記）は画像と同じ。訂正はない",
+   "corrections": []
+  },
+  {
+   "id": "IMG-neo4-082",
+   "card_id": "neo4-082",
+   "card_name_ja": "ひかるバンギラス",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-31",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo4082.php",
+     "page_title": "ひかるバンギラス | ポケモンカードneo 第4弾 闇、そして光へ...",
+     "image_url": "https://pcg-search.com/img/neo/neo4082.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "cf90be337ae215a0e7e8624e89cd1c34ac4c410326964bf6c1c9826fe7b49907",
+     "accessed_on": "2026-10-31"
+    }
+   ],
+   "identification": "画像は「ひかるバンギラス」たねポケモン、LV.41、HP80、悪、ルール文「「ひかるバンギラス」はデッキに1枚までしか入れることができません。」、マウンテンクラッシュ（悪 1・闘 2・30）、はかいのほのお（悪 1・炎 3・50）、弱点なし、抵抗力 超 -30、にげる 3、Illus.Ken Sugimori、No.248、neo の拡張の記号。pcg-search のページは ポケモンカードneo 第4弾 闇、そして光へ... 。kyuura の data/cards.json の HP・ワザ名・コスト・ダメージ・抵抗力・にげる・レベル（41）と合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。kyuura の文面の出典はポケモンWiki の転記（ja_text_source）で、画像とは別。『オフィシャルブック2000』はこのカード（2001 年の neo 第4弾）より前の本で、載せていない。サイトの転記は画像の値と分ける",
+   "print_values": {
+    "name.ja": "ひかるバンギラス",
+    "pokemon.hp": 80,
+    "pokemon.rules_text.ja": "「ひかるバンギラス」はデッキに1枚までしか入れることができません。",
+    "pokemon.attacks[0].name.ja": "マウンテンクラッシュ",
+    "pokemon.attacks[0].text.ja": "「うら」が出るまでコインを投げつづけ、その間に出た「おもて」の数ぶんのカードを、相手の山札の上からトラッシュする。",
+    "pokemon.attacks[1].name.ja": "はかいのほのお",
+    "pokemon.attacks[1].text.ja": "自分についている「炎」エネルギーカードの枚数ぶんコインを投げ、「おもて」の数ぶんの「炎」エネルギーカードを、自分からトラッシュする。その後、「おもて」の数ぶんの「エネルギーカード」を、相手からトラッシュする。(自分についている「炎」エネルギーカードをトラッシュできないとき、このワザは失敗する。)"
+   },
+   "print_text": {
+    "pokemon.attacks[0].text.ja": [
+     "「うら」が出るまでコインを投げつづけ、その間に出た「おもて」の数ぶんの／カードを、相手の山札の上からトラッシュする。（画像を 2 倍に拡大して読んだ。／は印刷の行の切れ目）",
+     "山札の枚数より「おもて」が多いときの文はない"
+    ],
+    "pokemon.attacks[1].text.ja": [
+     "自分についている「炎」エネルギーカードの枚数ぶんコインを投げ、「おもて」の／数ぶんの「炎」エネルギーカードを、自分からトラッシュする。その後、「おもて」の／数ぶんの「エネルギーカード」を、相手からトラッシュする。（自分についている／「炎」エネルギーカードをトラッシュできないとき、このワザは失敗する。）",
+     "英語版の文面（kyuura の text.en）にある「相手のエネルギーカードがそれより少なければ全てトラッシュする」に当たる文は、日本語の印刷にない（転記の欠けではない）",
+     "括弧は全角・半角を印刷の書体で区別しないので、値の「(」「)」は転記の書き方のまま"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-31 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo4082.php",
+     "values": {
+      "pokemon.attacks[0].text.ja": "「うら」が出るまでコインを投げつづけ、その間に出た「おもて」の数ぶんのカードを、相手の山札の上からトラッシュする。",
+      "pokemon.attacks[1].text.ja": "自分についている「炎」エネルギーカードの枚数ぶんコインを投げ、「おもて」の数ぶんの「炎」エネルギーカードを、自分からトラッシュする。その後、「おもて」の数ぶんの「エネルギーカード」を、相手からトラッシュする。(自分についている「炎」エネルギーカードをトラッシュできないとき、このワザは失敗する。)"
+     },
+     "note": "画像の文面と同じ（kyuura の値の出典はポケモンWiki の転記で、pcg-search の転記とも同じ）"
+    }
+   ],
+   "not_checked": [
+    "図鑑番号（No.248。kyuura の値と同じ）・レアリティの記号（右下の記号は小さい）",
+    "カードの実物（ウェブの画像 1 枚）",
+    "英語版の印刷（kyuura の text.en は英語版データの値。英語版の画像は読んでいない）"
+   ],
+   "existing_value": "今までの値（ポケモンWiki の転記）は画像と同じ。訂正はない",
+   "corrections": []
+  },
+  {
+   "id": "IMG-neo4-108",
+   "card_id": "neo4-108",
+   "card_name_ja": "怪電波マシーン",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-31",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo4108.php",
+     "page_title": "怪電波マシーン | ポケモンカードneo 第4弾 闇、そして光へ...",
+     "image_url": "https://pcg-search.com/img/neo/neo4108.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "d5a087755eec739819fe60ed61eb277ac119f8c028b27d1beae78543c76721da",
+     "accessed_on": "2026-10-31"
+    }
+   ],
+   "identification": "画像は TRAINER「怪電波マシーン」、種類の表示「ロケット団秘密メカ」、Illus.Sumiyoshi Kizuki、右下にレアリティの記号 ★、neo の拡張の記号。pcg-search のページは ポケモンカードneo 第4弾 闇、そして光へ... 。kyuura の data/cards.json の名前・種類（rockets_secret_machine）・レアリティと合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。kyuura の文面の出典はポケモンWiki の転記（ja_text_source）で、画像とは別。『オフィシャルブック2000』はこのカードより前の本で、載せていない。サイトの転記は画像の値と分ける",
+   "print_values": {
+    "name.ja": "怪電波マシーン",
+    "trainer.text.ja": "「うら」が出るまでコインを投げつづけ、その間に出た「おもて」の数ぶんの「エネルギーカード」を、相手の対戦ポケモンからはがし、相手プレイヤーの手札にもどす。このカードを使ったら、あなたの番は終わりになる。"
+   },
+   "print_text": {
+    "trainer.text.ja": [
+     "「うら」が出るまでコインを投げつづけ、その／間に出た「おもて」の数ぶんの「エネルギー／カード」を、相手の対戦ポケモンからはがし、／相手プレイヤーの手札にもどす。",
+     "このカードを使ったら、あなたの番は終わり／になる。（2 つの段落。／は印刷の行の切れ目）",
+     "英語版の文面（kyuura の text.en）にある「ポケモンについているエネルギーカードがそれより少なければ全て手札にもどす」に当たる文は、日本語の印刷にない（転記の欠けではない）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-31 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo4108.php",
+     "values": {
+      "trainer.text.ja": "「うら」が出るまでコインを投げつづけ、その間に出た「おもて」の数ぶんの「エネルギーカード」を、相手の対戦ポケモンからはがし、相手プレイヤーの手札にもどす。このカードを使ったら、あなたの番は終わりになる。"
+     },
+     "note": "画像の文面と同じ（kyuura の値の出典はポケモンWiki の転記で、pcg-search の転記とも同じ）"
+    }
+   ],
+   "not_checked": [
+    "カードの実物（ウェブの画像 1 枚）",
+    "英語版の印刷（kyuura の text.en は英語版データの値。英語版の画像は読んでいない）"
+   ],
+   "existing_value": "今までの値（ポケモンWiki の転記）は画像と同じ。訂正はない",
+   "corrections": []
+  },
+  {
+   "id": "IMG-neo1-049",
+   "card_id": "neo1-049",
+   "card_name_ja": "ヤドキング",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-31",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/neo/neo1049.php",
+     "page_title": "ヤドキング | ポケモンカードneo 第1弾 金、銀、新世界へ...",
+     "image_url": "https://pcg-search.com/img/neo/neo1049.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "9259551d6a8e4a956b06aedd72b78e49c2066d5b509beaf01c5c7184b78f208b",
+     "accessed_on": "2026-10-31"
+    }
+   ],
+   "identification": "画像は 1進化「ヤドキング」（ヤドンから進化）LV.39、HP80、超、［特殊能力］ちえくらべ、ワザ マッドインパクト（超 3 個）20+、弱点 超、抵抗力なし、にげる 3、Illus.Ken Sugimori、No.199、neo の拡張の記号、キラ（★）。pcg-search のページは ポケモンカードneo 第1弾 金、銀、新世界へ... 。kyuura の data/cards.json の HP・タイプ・特殊能力とワザの名前・必要なエネルギー・ダメージ・弱点・にげると合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。kyuura の文面の出典はなぞのばしょの転記（ja_text_source）で、画像とは別。『オフィシャルブック2000』にこのカードの欄はない（OCR の文字で「ちえくらべ」を全ページ探して見つからない。p.176 などのヤドキングはサザンアイランド・ハマちゃんのヤドキング）。サイトの転記は画像の値と分ける",
+   "print_values": {
+    "name.ja": "ヤドキング",
+    "pokemon.hp": 80,
+    "pokemon.powers[0].name.ja": "ちえくらべ",
+    "pokemon.powers[0].text.ja": "この力は、このカードがバトル場にいるとき、使える。相手プレイヤーが「トレーナーカード」を手札から出して使うとき、このカードの持ち主は、コインを投げる。「おもて」なら、相手プレイヤーは、その「トレーナーカード」を使えず、その「トレーナーカード」を相手の山札の上におく。このカードが「ねむり・マヒ・こんらん」状態のとき、この力は使えない。",
+    "pokemon.attacks[0].name.ja": "マッドインパクト",
+    "pokemon.attacks[0].cost": [
+     "psychic",
+     "psychic",
+     "psychic"
+    ],
+    "pokemon.attacks[0].damage.display": "20+",
+    "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、10ダメージを追加して、相手を「こんらん」状態にする。"
+   },
+   "print_text": {
+    "pokemon.powers[0].text.ja": [
+     "この力は、このカードがバトル場にいるとき、使える。相手プレイヤーが「トレーナー／カード」を手札から出して使うとき、このカードの持ち主は、コインを投げる。「おもて」／なら、相手プレイヤーは、その「トレーナーカード」を使えず、その「トレーナーカード」／を相手の山札の上におく。このカードが「ねむり・マヒ・こんらん」状態のとき、この力は／使えない。（画像を 3 倍に拡大して読んだ。／は印刷の行の切れ目）",
+     "「手札から出して使う」「相手プレイヤー」「このカードの持ち主」「相手の山札の上」は kyuura の文面と同じ。全文が kyuura の文面（なぞのばしょの転記）と同じ",
+     "最後の「この力は」と「使えない。」は行の切れ目で、読点はない（pcg-search のページの文字は「この力は、使えない。」と読点がある。site_transcriptions）",
+     "番ごとの回数・ベンチからはたらくこと・「使ってもよい」に当たる文は印刷にない（英語版の文面「you may flip a coin」とは別）"
+    ],
+    "pokemon.attacks[0].text.ja": [
+     "コインを投げて「おもて」なら、10ダメージを追加／して、相手を「こんらん」状態にする。（kyuura の文面と同じ。「追加して」の書き方は印刷どおりで、転記の誤りではない）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-31 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/neo/neo1049.php",
+     "values": {
+      "pokemon.powers[0].text.ja": "この力は、このカードがバトル場にいるとき、使える。相手プレイヤーが「トレーナーカード」を手札から出して使うとき、このカードの持ち主は、コインを投げる。「おもて」なら、相手プレイヤーは、その「トレーナーカード」を使えず、その「トレーナーカード」を相手の山札の上におく。このカードが「ねむり・マヒ・こんらん」状態のとき、この力は、使えない。",
+      "pokemon.attacks[0].text.ja": "コインを投げて「おもて」なら、10ダメージを追加して、相手を「こんらん」状態にする。"
+     },
+     "note": "特殊能力の最後の「この力は、使えない。」の読点は画像にない（kyuura の値は画像と同じ。pcg-search の転記の書き方の違いで、kyuura の値は変えない）"
+    }
+   ],
+   "not_checked": [
+    "レベル（LV.39）・図鑑番号（No.199）は埋めていない（この調査の対象外）",
+    "カードの実物（ウェブの画像 1 枚）",
+    "英語版の印刷（kyuura の text.en は英語版データの値。英語版の画像は読んでいない）"
+   ],
+   "existing_value": "今までの値（なぞのばしょの転記）は画像と同じ。訂正はない",
+   "corrections": []
+  },
+  {
+   "id": "IMG-ES2-035",
+   "card_id": "ES2-035",
+   "card_name_ja": "フラッシュ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-31",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stex2035.php",
+     "page_title": "フラッシュ | ポケモンカード(PMCG) 拡張シート 第2弾(赤版)",
+     "image_url": "https://pcg-search.com/img/1st/1stex2035.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "3771da8085fdcdd52402e701b8ca666b88904c0d0c458013d33016cb6e6f5bda",
+     "accessed_on": "2026-10-31"
+    }
+   ],
+   "identification": "画像は TRAINER「フラッシュ」、種類の表示なし、Illus.Hikaru Koike、右下にレアリティの記号 ◆、説明の右下に拡張シートの記号。pcg-search のページは 拡張シート 第2弾(赤版)。kyuura の data/cards.json の名前・レアリティ（◆）と合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。kyuura の文面の出典も pcg-search の転記（ja_text_source）で、同じサイトの文字（画像とは別）。『オフィシャルブック2000』p.270 の図版（CC-ES2-035-P270）は書籍の図版で、このカードの画像とは別の照合として数える（同じスキャンを 2 つに数えていない）",
+   "print_values": {
+    "name.ja": "フラッシュ",
+    "trainer.text.ja": "お互いのプレイヤーは、それぞれ、自分の山札の上から5枚のカードを見て、好きな順番にならべ替えてから、おもてを上にして山札の上にもどす。(先に相手プレイヤーが、ならべ替えをする)山札を切る時には、おもてが上になっているカードをおもてが下になるようにもどしてから、切る。"
+   },
+   "print_text": {
+    "trainer.text.ja": [
+     "お互いのプレイヤーは、それぞれ、自分の／山札の上から5枚のカードを見て、好きな／順番にならべ替えてから、おもてを上にし／て山札の上にもどす。（先に相手プレイヤー／が、ならべ替えをする）（ここまで 1 つの段落。／は印刷の行の切れ目）",
+     "山札を切る時には、おもてが上になっているカードを／おもてが下になるようにもどしてから、切る。（小さい字の 2 つ目の段落）",
+     "kyuura の文面と同じ（括弧の全角・半角は印刷の書体で区別しないので、値の「(」「)」は転記の書き方のまま。段落の切れ目は値に入れていない）",
+     "おもてを上にしたカードをだれが確かめてよいか・何枚見えるかの文は印刷にない"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-31 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stex2035.php",
+     "values": {
+      "trainer.text.ja": "お互いのプレイヤーは、それぞれ、自分の山札の上から5枚のカードを見て、好きな順番にならべ替えてから、おもてを上にして山札の上にもどす。(先に相手プレイヤーが、ならべ替えをする)山札を切る時には、おもてが上になっているカードをおもてが下になるようにもどしてから、切る。"
+     },
+     "note": "画像と同じ（kyuura の値の出典）"
+    }
+   ],
+   "not_checked": [
+    "カードの実物（ウェブの画像 1 枚）",
+    "英語版（英語版はない）"
+   ],
+   "existing_value": "今までの値（pcg-search の転記）は画像と同じ。訂正はない",
+   "corrections": []
+  },
+  {
+   "id": "IMG-PR1-027",
+   "card_id": "PR1-027",
+   "card_name_ja": "とりかえっこプリーズ",
+   "kind": "card_image_check",
+   "checked_on": "2026-10-31",
+   "checked_by": "kyuura",
+   "images": [
+    {
+     "site": "pcg-search.com [N3]",
+     "page_url": "https://pcg-search.com/card/1st/1stp027.php",
+     "page_title": "とりかえっこプリーズ | ポケモンカード(PMCG) プロモ",
+     "image_url": "https://pcg-search.com/img/1st/1stp027.png",
+     "image_format": "PNG 593×834",
+     "image_sha256": "dba0b369a7a340ccd18ef7e429912555ef98dc7b5d8c826b3a2a52679ee7bd24",
+     "accessed_on": "2026-10-31"
+    }
+   ],
+   "identification": "画像は TRAINER「とりかえっこプリーズ！」、Illus.Imakuni?、レアリティの記号なし、説明の下に赤い字の補足「(このカードは、ポケモンカード公式大会では使えません。)」。pcg-search のページは プロモ。kyuura の data/cards.json の文面・補足（notes）と合う",
+   "independence": "画像は pcg-search.com の 1 枚だけ。kyuura の文面の出典も pcg-search の転記で、同じサイトの文字（画像とは別）。『オフィシャルブック2000』p.293 の図版（CC-PR1-027-P293）は書籍の図版で、このカードの画像とは別の照合",
+   "print_values": {
+    "trainer.text.ja": "相手プレイヤーの手札を見て、カードを1枚えらぶ。次に、相手プレイヤーにあなたの手札を見せ、カードを1枚えらばせる。そして、お互いがえらんだカードを交換してよいかどうか、相手にたずねる。オーケーなら、カードを交換して、それぞれの手札にくわえる。オーケーでないなら、交換はおこらず、あなたは山札からカードを2枚引く。(このカードは、お互いに手札が1枚以上ある時だけ、使える)"
+   },
+   "print_text": {
+    "trainer.text.ja": [
+     "相手プレイヤーの手札を見て、カードを1枚えらぶ。／次に、相手プレイヤーにあなたの手札を見せ、カード／を1枚えらばせる。そして、お互いがえらんだカード／を交換してよいかどうか、相手にたずねる。（1 つ目の段落）",
+     "オーケーなら、カードを交換して、それぞれの手札に／くわえる。（2 つ目の段落）",
+     "オーケーでないなら、交換はおこらず、あなたは山札／からカードを2枚引く。（このカードは、お互いに手／札が1枚以上ある時だけ、使える）（3 つ目の段落）",
+     "3 つ目の段落の最後は「ある時だけ、使える）」で、「だけ」と「使える」のあいだに読点がある（画像を 4 倍に拡大して読んだ。『オフィシャルブック2000』p.293 の図版も同じ。CC-PR1-027-P293）。kyuura の今までの文面（pcg-search の転記）は「ある時だけ使える)」で読点がない。訂正 FIX-PR1-027-TEXT-JA で直した",
+     "ほかの字は kyuura の文面と同じ（括弧の全角・半角は区別しない。段落の切れ目は値に入れていない）。「相手にたずねる」は印刷どおり（最新の説明は「相手プレイヤーにたずねる」）",
+     "交換したカードの持ち主・対戦のあとの扱いの文は印刷にない"
+    ],
+    "name.ja": [
+     "印刷の名前は「とりかえっこプリーズ！」で、末尾に「！」がある（『オフィシャルブック2000』p.293 の見出し・図版も「とりかえっこプリーズ!」）。kyuura の名前（pcg-search の転記・ページの題名）は「とりかえっこプリーズ」で「！」がない",
+     "この記録の print_values には名前を入れていない。名前の書き方（末尾の記号）の訂正は、この調査（交換したカードの持ち主）の範囲の外として扱わず、報告事項として残す（docs/trainer-reaction-faceup-ownership-research.md）。PR1-026 パソコン大暴走！・PR1-038 タッチ交代！ は kyuura の名前に「！」がある"
+    ],
+    "補足の欄（対戦の値ではない）": [
+     "説明の下に赤い字で「(このカードは、ポケモンカード公式大会では使えません。)」（kyuura の notes の補足と同じ）"
+    ]
+   },
+   "site_transcriptions": [
+    {
+     "source": "pcg-search.com [N3] のカードページの文字（2026-10-31 に取得したページ）",
+     "page_url": "https://pcg-search.com/card/1st/1stp027.php",
+     "values": {
+      "trainer.text.ja": "相手プレイヤーの手札を見て、カードを1枚えらぶ。次に、相手プレイヤーにあなたの手札を見せ、カードを1枚えらばせる。そして、お互いがえらんだカードを交換してよいかどうか、相手にたずねる。オーケーなら、カードを交換して、それぞれの手札にくわえる。オーケーでないなら、交換はおこらず、あなたは山札からカードを2枚引く。(このカードは、お互いに手札が1枚以上ある時だけ使える)",
+      "name.ja": "とりかえっこプリーズ"
+     },
+     "note": "文面は「ある時だけ使える」の読点のほかは画像と同じ（kyuura の今までの値の出典）。名前は「！」がない（ページの題名も同じ）"
+    }
+   ],
+   "not_checked": [
+    "カードの実物（ウェブの画像 1 枚）",
+    "英語版（英語版はない）",
+    "名前の末尾の「！」の訂正（報告事項。値は変えていない）"
+   ],
+   "existing_value": "今までの文面（pcg-search の転記）は「…ある時だけ使える)」で、印刷の読点 1 つがなかった。訂正 FIX-PR1-027-TEXT-JA で直した。名前の末尾の「！」は印刷にあり、kyuura の名前にない（訂正していない。報告事項）",
+   "corrections": [
+    "FIX-PR1-027-TEXT-JA"
+   ]
   }
  ]
 }

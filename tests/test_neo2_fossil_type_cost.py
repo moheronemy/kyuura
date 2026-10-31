@@ -93,10 +93,15 @@ class Fossils(unittest.TestCase):
         old = {x['id'] for x in json.loads(at_base('data/curation/card_image_checks.json'))['checks']}
         then = {x['id'] for x in json.loads(at_base('data/curation/card_image_checks.json', AT_COMMIT))['checks']}
         self.assertEqual(then - old, {f'IMG-{c}' for c in PRINTED})
-        # 今の値でも、4 枚の記録は基点と同じ（あとの作業も、この 4 枚を変えていない）
+        # この作業のコミットでも、4 枚の記録は基点と同じ（時点を固定して比べる。2026-10-31 の目録の分類の欄の追加など、あとの作業の変更と分ける）
         base_cards = {c['id']: c for c in json.loads(at_base('data/cards.json'))['cards']}
+        then_cards = {c['id']: c for c in json.loads(at_base('data/cards.json', AT_COMMIT))['cards']}
         for cid in PRINTED:
-            self.assertEqual(self.by_id[cid], base_cards[cid], cid)
+            self.assertEqual(then_cards[cid], base_cards[cid], cid)
+        # 今の値は、目録の分類の欄（catalog_class・engine_scope・engine_scope_reason）のほかは、この作業のときと同じ
+        for cid in PRINTED:
+            now = {k: v for k, v in self.by_id[cid].items() if k not in ('catalog_class', 'engine_scope', 'engine_scope_reason')}
+            self.assertEqual(now, then_cards[cid], cid)
 
     def test_json_and_csv_agree(self):
         rows = {r['id']: r for r in csv.DictReader(io.StringIO((ROOT / 'data' / 'cards.csv').read_text(encoding='utf-8')))}

@@ -40,6 +40,10 @@ python3 scripts/build_cardlist.py --jp "$WORK/jp.json" \
 python3 -I scripts/snapshot_engine_registry.py --engine "$WORK/kyuura-engine-2d113b5" --commit 2d113b5eeea0dbd4f7466e144f7a1345494405c0 \
   --branch claude/v0.113-variable-coins-search-attachments --version v0.113 --extracted-on 2026-10-27
 
+# 目録の一覧（data/cards.csv）だけを作り直す（data/cards.json・data/product_items.json・data/curation/catalog_items.json から。外部の入力は使わない。
+# build_cardlist.py も同じ関数で書く）。--check は書き換えずに、CSV と元データが同じか・id の重複と参照切れ・分類の値を検査する
+python3 scripts/catalog.py [--check]
+
 # エンジンの実装の対象の一覧を生成（data/curation/engine_registered_cards.json・data/cards.json → data/engine_targets.json、docs/engine-targets.md）
 python3 scripts/build_engine_targets.py
 
@@ -62,6 +66,7 @@ python3 scripts/build_rule_history.py --check
 python3 scripts/build_card_rulings.py --check
 python3 scripts/build_other_products.py --check
 python3 scripts/build_engine_targets.py --check
+python3 scripts/catalog.py --check
 
 # サイドカーの検査のテスト（破壊テストを含む。標準ライブラリだけ）
 python3 -m unittest discover -s tests
@@ -74,7 +79,8 @@ python3 scripts/research_stats.py
 
 | スクリプト | 出力 |
 |---|---|
-| `build_cardlist.py` | `data/cards.json`、`data/cards.csv`、`data/attacks.csv`、`data/powers.csv`、`data/product_items.json`（拡張パック以外の商品の元の項目の行き先）、`data/same_card_groups.json`（商品をまたいだ同じカードの組）、`docs/cards/` の各弾のページ・`card-differences.md`・`english-only.md`。`--check` で書き換えずに比べる（外部の入力は下の記録した版を使う） |
+| `build_cardlist.py` | `data/cards.json`、`data/cards.csv`（`catalog.py` の関数で書く）、`data/attacks.csv`、`data/powers.csv`、`data/product_items.json`（拡張パック以外の商品の元の項目の行き先）、`data/same_card_groups.json`（商品をまたいだ同じカードの組）、`docs/cards/` の各弾のページ・`card-differences.md`・`english-only.md`。`--check` で書き換えずに比べる（外部の入力は下の記録した版を使う） |
+| `catalog.py` | `data/cards.csv`（目録の一覧）。記録の目録の分類（`catalog_class`・`engine_scope`）を付ける関数（`build_cardlist.py` が使う）と、通常対戦の対象を取り出す関数（`battle_records`・`battle_rows`）。`--check` |
 | `non_pack.py` | `build_cardlist.py` が使う。拡張パック以外の商品の転記を `data/cards.json` の記録の形にする（id・欄・進化元・にげる・同じカードの組・値の欠け。規則は [データの構造](../docs/data-schema.md#拡張パック以外の商品の記録)） |
 | `pcg_search.py fetch-pages`・`extract-pages` | `data/pcgsearch_page_checks.json`（読み直したカードページの、転記にない欄・区別と、転記との違い） |
 | `snapshot_engine_registry.py` | `data/curation/engine_registered_cards.json`（kyuura-engine の決まったコミットの登録表と対戦用のカード id の写し。エンジンのコードを読み込むので信頼できる木だけに使う） |
@@ -114,9 +120,11 @@ python3 scripts/research_stats.py
 | `other_products.json` | 拡張パック以外の商品の発売日、デッキ・シートの構成、プロモの配布方法、英語版の対応、日英の違い、イントロパックのカードの Bulbapedia のページ、再録の文面の書き換えの分類 |
 | `en_fixes.json` | 英語版カードデータの誤りの補正（ワザのダメージ・効果文・名前・コスト） |
 | `sets.json` | 各弾の名前・発売日・収録数。資料によって発売日が違う弾は `release_note` に別の日付とその資料を書く（各弾のページの発売日の後ろに表示） |
-| `non_pack.json` | 拡張パック以外の商品の記号（id の規則）、番号違いのまとめ、対戦のカードでない項目、補足欄の役割、使える範囲（`play_scope`）、収録していない商品・範囲（`uncovered_products`） |
+| `non_pack.json` | 拡張パック以外の商品の記号（id の規則）、番号違いのまとめ、対戦のカードでない項目、補足欄の役割、使える範囲（`play_scope`）、目録の分類とエンジンの対象の明示の指定（`catalog_scope`。2026-10-31）、収録していない商品・範囲（`uncovered_products`） |
+| `catalog_items.json` | pcg-search の転記にない目録の項目（`KC-` の id。入賞賞品カード・スペシャルジャンボカードなど。2026-10-31）。`data/cards.csv` の行にだけなる（`data/cards.json` には入れない） |
+| `promo_survey.json` | プロモの収録範囲の比較の記録（Bulbapedia の番号なしプロモの一覧と公式の書籍。2026-10-31。生成の入力ではない。`catalog.py` が参照を検査する） |
 | `card_corrections.json` | カードデータの訂正の記録（生成のたびに当てはめる。当てはめる前の値が違えば止まる）と、訂正しなかった候補とその理由 |
-| `card_image_checks.json` | kyuura がカードの画像で印刷の欄を読んだ記録（`IMG-`。2026-10-27 のベイビィ 13 枚、2026-10-30 の 18 枚と neo2 の化石 4 枚と v0.122 のあとの 7 枚、2026-10-31 のメタモン ES2-032・GR団のミュウツー PRN-041）。`build_cardlist.py` が、進化ラインを結んだ（link）あとで、画像の値・訂正の記録・生成した値が同じかを確かめる（違えば止まる）。拡張パック以外の商品の段階の食い違い（サイトの種類の欄と進化ライン）を画像が確かめたら、`field_sources` をその照合の記録にする（値は変えない） |
+| `card_image_checks.json` | kyuura がカードの画像で印刷の欄を読んだ記録（`IMG-`。2026-10-27 のベイビィ 13 枚、2026-10-30 の 18 枚と neo2 の化石 4 枚と v0.122 のあとの 7 枚、2026-10-31 のメタモン ES2-032・GR団のミュウツー PRN-041 と、ファイヤー ES2-005・QSG-055・ひかるバンギラス neo4-082・怪電波マシーン neo4-108 と、ヤドキング neo1-049・フラッシュ ES2-035・とりかえっこプリーズ PR1-027）。`build_cardlist.py` が、進化ラインを結んだ（link）あとで、画像の値・訂正の記録・生成した値が同じかを確かめる（違えば止まる）。拡張パック以外の商品の段階の食い違い（サイトの種類の欄と進化ライン）を画像が確かめたら、`field_sources` をその照合の記録にする（値は変えない） |
 | `engine_registered_cards.json` | kyuura-engine の固定した版の登録表の写し（生成物。`snapshot_engine_registry.py`） |
 
 最後に生成したときの出典データ:
@@ -127,4 +135,5 @@ python3 scripts/research_stats.py
 - kyuura-engine `2d113b5eeea0dbd4f7466e144f7a1345494405c0`（v0.113。`data/curation/engine_registered_cards.json`。2026-10-27 に作り直した。その前は `24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1`（v0.68）で、`previous_snapshots` に残す）
 - カードの画像の照合の記録 `data/curation/card_image_checks.json`（2026-10-27・2026-10-30。生成の入力ではなく、生成した値と照らす記録）
 
-2026-10-19 に、この入力で `build_cardlist.py --check` が今のファイルと同じになることを確かめました（20 ファイル）。2026-10-27 にも同じ入力（tcgdex・pokemon-tcg-data は上のコミット）で確かめました（20 ファイル）。2026-10-30 にも、同じ入力で基点 `e519b99` と作業のあとの両方を確かめました（20 ファイル。`git archive` で展開した木には gitignore された `data/ja_text_*_report.json` がないので、比べるときは置く）。同じ日の v0.122 のあとの作業でも、同じ入力で基点 `2fe0bc0` と作業のあとの両方を確かめました（20 ファイル）。2026-10-31 にも、同じ入力で基点 `74b3ceb` と作業のあとの両方を確かめました（20 ファイル）。
+2026-10-19 に、この入力で `build_cardlist.py --check` が今のファイルと同じになることを確かめました（20 ファイル）。2026-10-27 にも同じ入力（tcgdex・pokemon-tcg-data は上のコミット）で確かめました（20 ファイル）。2026-10-30 にも、同じ入力で基点 `e519b99` と作業のあとの両方を確かめました（20 ファイル。`git archive` で展開した木には gitignore された `data/ja_text_*_report.json` がないので、比べるときは置く）。同じ日の v0.122 のあとの作業でも、同じ入力で基点 `2fe0bc0` と作業のあとの両方を確かめました（20 ファイル）。2026-10-31 にも、同じ入力で基点 `74b3ceb` と作業のあとの両方を確かめました（20 ファイル）。同じ日のプクリン・コインで決まる枚数の不足の調査でも、同じ入力で基点 `b9e7cff` と作業のあとの両方を確かめました（20 ファイル。カードの値は変わっていない）。同じ日のちえくらべ・フラッシュ・とりかえっこプリーズの調査でも、同じ入力で基点 `134a664` と作業のあとの両方を確かめました（20 ファイル。変わったのは PR1-027 の文面の読点 1 つ。species の CSV は記録した版がないので 2026-10-31 に PokeAPI の `master` から取り直した（sha256 `820cde17…`）。基点でも一致したので、比べる入力として使った）。
+2026-10-31 のプロモの収録範囲の調査と目録の整備でも、同じ入力で基点 `0dadab8` と作業のあとの両方を確かめました（20 ファイル。`data/cards.json` は全記録に 3 つの欄が加わり、ほかの値は同じ。`data/cards.csv` は行と欄が加わり、既存の行・欄の値は同じ）。

@@ -109,6 +109,6 @@
 - 日本語カード名・レアリティ・数値の照合: Scrydex 由来の日本版データ（第三者のリポジトリにある写し）。照合に使っただけで、データ自体は収録していません。
 - 日本語のポケモン名: [PokeAPI](https://github.com/PokeAPI/pokeapi) の `pokemon_species_names.csv`。
 - 日本版と英語版の対応付けは、図鑑番号・HP・ワザのエネルギーコストとダメージ・名前の接頭辞（ジムリーダー名など）を突き合わせて自動で行い、自動では決まらないものを `data/curation/pokemon_overrides.json` で補正しています。
-- ワザ・ポケモンパワー・弱点・抵抗力・にげるコスト・効果文（いずれも英語版の値）は `data/cards.json` に構造化して入っています。表形式の写しは `data/cards.csv`（カード 1 枚 1 行）、`data/attacks.csv`（ワザ 1 つ 1 行）、`data/powers.csv`（ポケモンパワー 1 つ 1 行）です。
+- ワザ・ポケモンパワー・弱点・抵抗力・にげるコスト・効果文（いずれも英語版の値）は `data/cards.json` に構造化して入っています。表形式の写しは `data/cards.csv`（目録の一覧。カードの記録 1 件 1 行に、対戦のカードでない項目と `KC-` の項目の行が加わる。通常対戦のカードは `catalog_class` が `battle` の行。[データの構造](../data-schema.md#cardscsv目録の一覧)）、`data/attacks.csv`（ワザ 1 つ 1 行）、`data/powers.csv`（ポケモンパワー 1 つ 1 行）です。
 
 生成手順は [scripts/README.md](../../scripts/README.md) を参照。

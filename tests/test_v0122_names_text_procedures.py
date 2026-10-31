@@ -51,6 +51,15 @@ def at_commit(rel):
     """この作業のコミット（AT_COMMIT）の記録。あとの作業（2026-10-31 のすごいへんしん・わるいはどうの調査など）が値・記録を加えても、この作業の差を確かめる。"""
     return at_base(rel, AT_COMMIT)
 
+def card_rows_of_csv(by_id):
+    """data/cards.csv の行のうち、data/cards.json の記録の行（{id: 行}）。2026-10-31 から cards.csv は目録の一覧で、
+    記録のほかに目録だけの行（non_game_items・data/curation/catalog_items.json の KC-）がある。それらの行は対戦用（battle）でない。"""
+    rows = {r['id']: r for r in csv.DictReader(io.StringIO((ROOT / 'data' / 'cards.csv').read_text(encoding='utf-8')))}
+    extra = {k: r for k, r in rows.items() if k not in by_id}
+    assert all(r['catalog_class'] != 'battle' and r['engine_scope'] != 'target' for r in extra.values()), sorted(extra)
+    return {k: r for k, r in rows.items() if k in by_id}
+
+
 
 class Data(unittest.TestCase):
     @classmethod
@@ -82,8 +91,8 @@ class CardValueTest(Data):
                 r['notes'] = []
                 r.pop('corrections', None)
             self.assertEqual(a, b, cid)
-        for cid in TARGETS:
-            self.assertEqual(self.by_id[cid], old[cid], cid)
+        for cid in TARGETS:  # この作業のコミットの値（あとの作業の PR1-027 の読点の訂正 FIX-PR1-027-TEXT-JA を混ぜない）
+            self.assertEqual(then[cid], old[cid], cid)
         # 英語の併記は名前・ワザ名・進化元のどれも、転記の書き方のまま（正規化していない）
         for cid in ('PR1-075', 'PR1-077'):
             p = self.by_id[cid]
@@ -92,7 +101,7 @@ class CardValueTest(Data):
         self.assertEqual(self.by_id['ES1-027']['pokemon']['attacks'][0]['text']['ja'], INFLATE)  # 読めない字を補っていない
 
     def test_json_and_csv_agree(self):
-        rows = {r['id']: r for r in csv.DictReader(io.StringIO((ROOT / 'data' / 'cards.csv').read_text(encoding='utf-8')))}
+        rows = card_rows_of_csv(self.by_id)
         self.assertEqual(set(rows), set(self.by_id))
         for cid in ('PMCG1-019', 'PMCG6-034', 'GD5-007', 'IP2-032', 'PR1-016', 'PR1-075', 'PR1-077'):
             self.assertEqual(rows[cid]['name_ja'], self.by_id[cid]['name']['ja'], cid)
@@ -224,7 +233,9 @@ class RulingTest(unittest.TestCase):
         ctx = copy.deepcopy(self.ctx)  # 推論を含む記録を CONFIRMED にしない
         next(x for x in ctx['rulings']['rulings'] if x['id'] == 'CR-SWAP-PLEASE-USE-CONDITION')['status'] = 'CONFIRMED'
         self.assertTrue(any('CR-SWAP-PLEASE-USE-CONDITION' in e and 'inference' in e for e in bcr.validate(ctx)))
-        ctx = copy.deepcopy(self.ctx)  # ページの記録のない原典のページを、読んだページとして書かない
+        # ページの記録のない原典のページを、読んだページとして書かない（この作業のコミットの記録とページの記録で確かめる。
+        # p.293 は 2026-10-31 のあとの作業で画像で読み、ページの記録を加えた）
+        ctx = dict(copy.deepcopy(self.ctx), rulings=at_commit('data/sidecar/rulings.json'), rule_history=at_commit('data/rule_history.json'))
         next(x for x in ctx['rulings']['issues'] if x['id'] == 'UQ-SWAP-PLEASE-OWNERSHIP')['sources'][0]['page'] = '293'
         self.assertTrue(any('p.293' in e for e in bcr.validate(ctx)))
 
