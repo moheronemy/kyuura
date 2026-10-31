@@ -7,10 +7,14 @@
   英語版の「少なければ全て」の文は日本語の印刷にない。プクリン ES1-027 の新しい画像は見つからない（同じ画像は新しい確認に数えない）。
 - 基点: b9e7cff。kyuura-engine v0.124（e165fe0）は比べるためだけに読み、取り込んでいない（登録表の写しは v0.113 のまま）。
 """
+import atexit
 import copy
+import io
 import json
 import subprocess
 import sys
+import tarfile
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -19,6 +23,9 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 import build_card_rulings as bcr  # noqa: E402
 
 BASE = 'b9e7cff6d2b2c6b4539ec45e61bf453879adab3a'  # この作業の基点
+# この作業の最後のコミット。同じ日のあとの作業（ちえくらべ・フラッシュ・とりかえっこプリーズの調査。PR1-027 の読点の訂正・新しい記録）を
+# 混ぜないよう、この作業の差はこの時点の木で比べる（期待値は変えていない）
+AT_COMMIT = '134a664c6adf67d5604148a31b58e1a7d26d4d6d'
 TARGETS = ('ES1-027', 'neo4-082', 'neo4-108', 'ES2-005', 'QSG-055')
 INFLATE_KYUURA = 'このカードが次の相手に受けるダメージは「-10」される。'  # 転記（「の」と漢字 1 字が欠けている。候補のまま）
 INFLATE_LD = '次の相手の番、このカードが受けるダメージは「-10」される。（ダメージ以外の効果はそのまま）'
@@ -40,7 +47,24 @@ NOTED_CLAUSES = {'GR-2000-P312-DECK-HAND-DISCARD', 'GR-2000-P323-ATTACK-FAILURE'
 
 
 def load(rel):
-    return json.loads((ROOT / rel).read_text(encoding='utf-8'))
+    """この作業のコミット（AT_COMMIT）の値。"""
+    return json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{AT_COMMIT}:{rel}'], capture_output=True, text=True, check=True).stdout)
+
+
+_TREE = None
+
+
+def commit_tree():
+    """AT_COMMIT の木を一時ディレクトリに展開する（build_card_rulings.load はファイルの木を読むため）。"""
+    global _TREE
+    if _TREE is None:
+        tmp = tempfile.TemporaryDirectory()
+        atexit.register(tmp.cleanup)
+        data = subprocess.run(['git', '-C', str(ROOT), 'archive', AT_COMMIT], capture_output=True, check=True).stdout
+        with tarfile.open(fileobj=io.BytesIO(data)) as tar:
+            tar.extractall(tmp.name, filter='data')
+        _TREE = (tmp, Path(tmp.name))
+    return _TREE[1]
 
 
 def at_base(rel):
@@ -54,7 +78,7 @@ class Data(unittest.TestCase):
         cls.by_id = {c['id']: c for c in cls.cards}
         cls.ledger = load('data/curation/card_corrections.json')
         cls.checks = {x['id']: x for x in load('data/curation/card_image_checks.json')['checks']}
-        cls.ctx = bcr.load()
+        cls.ctx = bcr.load(commit_tree())  # この作業のコミットの記録
         cls.latest = {x['id']: x for x in cls.ctx['latest']['records']}
         cls.cc = {x['id']: x for x in cls.ctx['checks']['records']}
         r = cls.ctx['rulings']

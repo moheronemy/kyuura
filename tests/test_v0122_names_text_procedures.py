@@ -82,8 +82,8 @@ class CardValueTest(Data):
                 r['notes'] = []
                 r.pop('corrections', None)
             self.assertEqual(a, b, cid)
-        for cid in TARGETS:
-            self.assertEqual(self.by_id[cid], old[cid], cid)
+        for cid in TARGETS:  # この作業のコミットの値（あとの作業の PR1-027 の読点の訂正 FIX-PR1-027-TEXT-JA を混ぜない）
+            self.assertEqual(then[cid], old[cid], cid)
         # 英語の併記は名前・ワザ名・進化元のどれも、転記の書き方のまま（正規化していない）
         for cid in ('PR1-075', 'PR1-077'):
             p = self.by_id[cid]
@@ -224,7 +224,9 @@ class RulingTest(unittest.TestCase):
         ctx = copy.deepcopy(self.ctx)  # 推論を含む記録を CONFIRMED にしない
         next(x for x in ctx['rulings']['rulings'] if x['id'] == 'CR-SWAP-PLEASE-USE-CONDITION')['status'] = 'CONFIRMED'
         self.assertTrue(any('CR-SWAP-PLEASE-USE-CONDITION' in e and 'inference' in e for e in bcr.validate(ctx)))
-        ctx = copy.deepcopy(self.ctx)  # ページの記録のない原典のページを、読んだページとして書かない
+        # ページの記録のない原典のページを、読んだページとして書かない（この作業のコミットの記録とページの記録で確かめる。
+        # p.293 は 2026-10-31 のあとの作業で画像で読み、ページの記録を加えた）
+        ctx = dict(copy.deepcopy(self.ctx), rulings=at_commit('data/sidecar/rulings.json'), rule_history=at_commit('data/rule_history.json'))
         next(x for x in ctx['rulings']['issues'] if x['id'] == 'UQ-SWAP-PLEASE-OWNERSHIP')['sources'][0]['page'] = '293'
         self.assertTrue(any('p.293' in e for e in bcr.validate(ctx)))
 

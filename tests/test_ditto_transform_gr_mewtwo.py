@@ -76,10 +76,12 @@ class CardValueTest(Data):
 
     def test_only_one_character_changed(self):
         old = {c['id']: c for c in at_base('data/cards.json')['cards']}
+        then = {c['id']: c for c in at_commit('data/cards.json')['cards']}  # この作業のコミットの値（あとの作業の PR1-027 の訂正を混ぜない）
         self.assertEqual(set(old), set(self.by_id))
+        self.assertEqual(set(then), set(self.by_id))
         self.assertEqual(len(self.cards), 1377)
-        self.assertEqual({i for i in old if old[i] != self.by_id[i]}, {'ES2-032'})
-        a, b = old['ES2-032'], self.by_id['ES2-032']
+        self.assertEqual({i for i in old if old[i] != then[i]}, {'ES2-032'})
+        a, b = old['ES2-032'], then['ES2-032']
         before, after = a['pokemon']['powers'][0]['text']['ja'], b['pokemon']['powers'][0]['text']['ja']
         self.assertEqual(len(before), len(after))
         diff = [(x, y) for x, y in zip(before, after) if x != y]
@@ -90,7 +92,7 @@ class CardValueTest(Data):
             r['notes'] = []
             r.pop('corrections', None)
         self.assertEqual(a, b)
-        self.assertEqual(self.by_id['PRN-041'], old['PRN-041'])  # GR団のミュウツーは訂正なし
+        self.assertEqual(then['PRN-041'], old['PRN-041'])  # GR団のミュウツーは訂正なし
 
     def test_out_of_scope_values_are_not_filled(self):
         # 画像・書籍にレベル（LV.15・LV.35）・図鑑番号が見えても埋めない。公式大会の補足の文で play_scope を変えない
@@ -289,7 +291,8 @@ class RegistryTest(Data):
         self.assertEqual(load('data/curation/engine_registered_cards.json'), at_base('data/curation/engine_registered_cards.json'))
         rows = {r['id']: r for r in load('data/engine_targets.json')['cards']}
         old = {r['id']: r for r in at_base('data/engine_targets.json')['cards']}
-        self.assertEqual({i for i in rows if rows[i] != old[i]}, {'ES2-032'})
+        then = {r['id']: r for r in at_commit('data/engine_targets.json')['cards']}  # この作業のコミットの一覧（あとの作業の PR1-027 の文面の写しを混ぜない）
+        self.assertEqual({i for i in then if then[i] != old[i]}, {'ES2-032'})
         self.assertEqual({k for k in rows['ES2-032'] if rows['ES2-032'][k] != old['ES2-032'][k]}, {'effects_without_registered_text'})  # 文面の写しだけ
         for cid in ('ES2-032', 'PRN-041'):
             self.assertEqual(rows[cid]['engine_status'], old[cid]['engine_status'], cid)
