@@ -58,6 +58,7 @@
 - [`data/attacks.csv`](data/attacks.csv)、[`data/powers.csv`](data/powers.csv) — `data/cards.json` の表形式の写し
 - [`data/rule_differences.json`](data/rule_differences.json) — 日米のルールの違い
 - [`data/rule_history.json`](data/rule_history.json) — 旧裏期のルール・大会レギュレーション・エラッタの記録（日付・地域・対象カード・根拠の種類・確度）、日本版のルールの版ごとの比較、スキャンで確認した印刷物の巻号・ページ
+- [`data/species_heights.json`](data/species_heights.json) — 公式図鑑の種族の身長（全国図鑑 No.001〜251・通常の姿）の参照データ。カードに印刷された身長ではなく、カードとは図鑑番号（`pokemon.dex`）で結ぶ。2026-10-31 に公式のポケモンずかんから **251 件すべて取得**（サイトの利用条件は未確認）。[収集の記録と手順](docs/species-heights.md)・[エンジンへの引き継ぎ](docs/engine-handover-species-heights.md)
 - [`data/sidecar/`](data/sidecar/) — `data/cards.json` を変えずにカード・ワザに加える出典つきの情報（公式の最新の説明、カードの照合、裁定と未解決の論点）。形式は [docs/data-schema.md の「サイドカー」](docs/data-schema.md#サイドカーdatasidecar)
 - 生成スクリプト: [`scripts/`](scripts/README.md)、テスト: `python3 -m unittest discover -s tests`
 

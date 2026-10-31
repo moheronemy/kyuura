@@ -68,6 +68,13 @@ python3 scripts/build_other_products.py --check
 python3 scripts/build_engine_targets.py --check
 python3 scripts/catalog.py --check
 
+# 公式図鑑の種族の身長（data/species_heights.json）。手順は docs/species-heights.md の 3 章（利用条件の確認 → 試し取り → 全件）。
+# 取得は robots.txt を読んでから 5 秒間隔で、キャッシュ（リポジトリの外）を使う。2026-10-31 に全件を取得した（キャッシュはリポジトリに入れない）
+python3 scripts/species_heights.py fetch --cache "$WORK/zukan" --dex 1,25,201
+python3 scripts/species_heights.py extract --cache "$WORK/zukan" --dex 1,25,201 --retrieved-on YYYY-MM-DD
+python3 scripts/species_heights.py --check [--cache "$WORK/zukan"]
+python3 scripts/species_heights.py report
+
 # サイドカーの検査のテスト（破壊テストを含む。標準ライブラリだけ）
 python3 -m unittest discover -s tests
 
@@ -92,6 +99,7 @@ python3 scripts/research_stats.py
 | `pcg_search.py extract` | `data/ja_text_pcgsearch.json`（拡張パック以外の商品の 681 枚） |
 | `build_other_products.py` | `docs/cards/other-products.md`（一覧）、`docs/cards/products/*.md`（商品ごと）、`docs/cards/reprints.md`（再録の対応付けと点検の結果）。`--check` |
 | `pokemonwiki.py` | `data/ja_text_pokemonwiki.json`（`data/raw/` のポケモンWiki のデータを、なぞのばしょと同じ形に変換したもの） |
+| `species_heights.py` | `data/species_heights.json`（公式図鑑の種族の身長。`init`・`fetch`・`extract`・`record-access`・`report`）。`--check` で番号の範囲・重複・欠け・状態と値・換算・観測と抜き出し・ハッシュ（`--cache` で保存した応答とも）を検査 |
 | `research_stats.py` | 出力なし（標準出力に表示するだけ）。出典の記号の区分（`docs/sources.md`）、ルールの記録の確度・根拠の種類・エラッタの段階・版の比較表のマス、カードの日本語テキストと数値の出典、日英の違い、再録の組を数える。`docs/research-status.md` の数はこの出力による |
 
 `build_cardlist.py` は、日本語テキストの出典ごとに、カードと英語版データの数値（HP・コスト・ダメージ・にげる・タイプ・弱点・抵抗力）やカード名の食い違いを `data/ja_text_<出典>_report.json`（`nazonobasho`・`pokemonwiki`）に書き出します。`data/curation/<出典>_review.json` に判定のない食い違いがあると、実行時に一覧を表示します。
