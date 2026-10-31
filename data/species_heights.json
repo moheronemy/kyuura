@@ -26,6 +26,11 @@
      "date": "2026-10-31",
      "result": "blocked",
      "detail": "この作業環境の外向きの接続の方針で zukan.pokemon.co.jp への接続が拒否された（プロキシが CONNECT に 403。scripts/species_heights.py fetch の robots.txt の取得で URLError: Tunnel connection failed: 403 Forbidden、ウェブ取得の道具でも getaddrinfo ENOTFOUND）。www.pokemon.co.jp・www.pokemon.jp・www.pokemon.com も同じく 403。サイトの利用条件・robots.txt は読めていない。値は 1 件も取得していない"
+    },
+    {
+     "date": "2026-10-31",
+     "result": "ok",
+     "detail": "利用者がネットワークの設定で zukan.pokemon.co.jp を許可したあと、robots.txt は 404（RFC 9309 により制限なしとして扱った）。サイトの利用条件のページは zukan.pokemon.co.jp になく、フッターのリンク先 www.pokemon.co.jp は接続できず読めていない。試し取り No.0001・0025・0201（5 秒間隔）と、姿の識別を確かめるために姿のページ 0026-1（アローラのすがた。データには入れない）を 1 回取得した。ページの形は埋めこみの JSON ではなく HTML（og:url・見出しの no・name・subname・js-height）だったので、抜き出しを書き直した"
     }
    ]
   }
@@ -55,20 +60,41 @@
  "species": [
   {
    "dex": 1,
-   "name_ja": null,
+   "name_ja": "フシギダネ",
    "form": {
     "kind": "default",
-    "source_form_id": null,
+    "source_form_id": 0,
     "form_name": null
    },
    "height": {
-    "raw": null,
-    "cm": null,
-    "source": null
+    "raw": "0.7m",
+    "cm": 70,
+    "source": "SRC-ZUKAN-JP"
    },
-   "status": "unverified",
-   "status_reason": "source_unreachable",
-   "observations": []
+   "status": "confirmed",
+   "status_reason": null,
+   "observations": [
+    {
+     "source": "SRC-ZUKAN-JP",
+     "url": "https://zukan.pokemon.co.jp/detail/0001",
+     "retrieved_on": "2026-10-31",
+     "name_ja": "フシギダネ",
+     "source_form_id": 0,
+     "form_name": null,
+     "raw_height": "0.7m",
+     "cm": 70,
+     "extract": {
+      "no": 1,
+      "sub": 0,
+      "name": "フシギダネ",
+      "form_name": "",
+      "takasa": "0.7m"
+     },
+     "extract_sha256": "cff7cf208331942f9114311583878e5b2ff9b4240313ea3889c523da344ac0c7",
+     "response_sha256": "1dfa87a326a4289a336a17974b20b8a8fed4f34632c2149aa1c4ba5b32a0b70c",
+     "response_bytes": 37943
+    }
+   ]
   },
   {
    "dex": 2,
@@ -84,7 +110,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -101,7 +127,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -118,7 +144,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -135,7 +161,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -152,7 +178,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -169,7 +195,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -186,7 +212,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -203,7 +229,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -220,7 +246,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -237,7 +263,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -254,7 +280,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -271,7 +297,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -288,7 +314,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -305,7 +331,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -322,7 +348,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -339,7 +365,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -356,7 +382,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -373,7 +399,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -390,7 +416,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -407,7 +433,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -424,7 +450,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -441,7 +467,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -458,25 +484,46 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
    "dex": 25,
-   "name_ja": null,
+   "name_ja": "ピカチュウ",
    "form": {
     "kind": "default",
-    "source_form_id": null,
+    "source_form_id": 0,
     "form_name": null
    },
    "height": {
-    "raw": null,
-    "cm": null,
-    "source": null
+    "raw": "0.4m",
+    "cm": 40,
+    "source": "SRC-ZUKAN-JP"
    },
-   "status": "unverified",
-   "status_reason": "source_unreachable",
-   "observations": []
+   "status": "confirmed",
+   "status_reason": null,
+   "observations": [
+    {
+     "source": "SRC-ZUKAN-JP",
+     "url": "https://zukan.pokemon.co.jp/detail/0025",
+     "retrieved_on": "2026-10-31",
+     "name_ja": "ピカチュウ",
+     "source_form_id": 0,
+     "form_name": null,
+     "raw_height": "0.4m",
+     "cm": 40,
+     "extract": {
+      "no": 25,
+      "sub": 0,
+      "name": "ピカチュウ",
+      "form_name": "",
+      "takasa": "0.4m"
+     },
+     "extract_sha256": "81d62edd472a7b6521fbdcae6cb4590f0840d42a79ee320e6e6c6d9be569b03b",
+     "response_sha256": "b7aa78455ccd50149e00f500319dd4750e202de5601252052e5970b009bbdf3a",
+     "response_bytes": 40530
+    }
+   ]
   },
   {
    "dex": 26,
@@ -492,7 +539,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -509,7 +556,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -526,7 +573,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -543,7 +590,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -560,7 +607,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -577,7 +624,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -594,7 +641,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -611,7 +658,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -628,7 +675,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -645,7 +692,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -662,7 +709,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -679,7 +726,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -696,7 +743,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -713,7 +760,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -730,7 +777,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -747,7 +794,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -764,7 +811,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -781,7 +828,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -798,7 +845,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -815,7 +862,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -832,7 +879,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -849,7 +896,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -866,7 +913,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -883,7 +930,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -900,7 +947,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -917,7 +964,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -934,7 +981,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -951,7 +998,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -968,7 +1015,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -985,7 +1032,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1002,7 +1049,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1019,7 +1066,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1036,7 +1083,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1053,7 +1100,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1070,7 +1117,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1087,7 +1134,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1104,7 +1151,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1121,7 +1168,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1138,7 +1185,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1155,7 +1202,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1172,7 +1219,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1189,7 +1236,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1206,7 +1253,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1223,7 +1270,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1240,7 +1287,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1257,7 +1304,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1274,7 +1321,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1291,7 +1338,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1308,7 +1355,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1325,7 +1372,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1342,7 +1389,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1359,7 +1406,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1376,7 +1423,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1393,7 +1440,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1410,7 +1457,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1427,7 +1474,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1444,7 +1491,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1461,7 +1508,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1478,7 +1525,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1495,7 +1542,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1512,7 +1559,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1529,7 +1576,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1546,7 +1593,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1563,7 +1610,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1580,7 +1627,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1597,7 +1644,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1614,7 +1661,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1631,7 +1678,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1648,7 +1695,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1665,7 +1712,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1682,7 +1729,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1699,7 +1746,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1716,7 +1763,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1733,7 +1780,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1750,7 +1797,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1767,7 +1814,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1784,7 +1831,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1801,7 +1848,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1818,7 +1865,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1835,7 +1882,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1852,7 +1899,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1869,7 +1916,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1886,7 +1933,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1903,7 +1950,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1920,7 +1967,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1937,7 +1984,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1954,7 +2001,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1971,7 +2018,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -1988,7 +2035,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2005,7 +2052,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2022,7 +2069,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2039,7 +2086,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2056,7 +2103,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2073,7 +2120,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2090,7 +2137,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2107,7 +2154,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2124,7 +2171,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2141,7 +2188,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2158,7 +2205,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2175,7 +2222,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2192,7 +2239,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2209,7 +2256,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2226,7 +2273,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2243,7 +2290,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2260,7 +2307,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2277,7 +2324,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2294,7 +2341,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2311,7 +2358,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2328,7 +2375,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2345,7 +2392,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2362,7 +2409,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2379,7 +2426,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2396,7 +2443,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2413,7 +2460,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2430,7 +2477,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2447,7 +2494,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2464,7 +2511,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2481,7 +2528,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2498,7 +2545,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2515,7 +2562,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2532,7 +2579,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2549,7 +2596,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2566,7 +2613,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2583,7 +2630,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2600,7 +2647,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2617,7 +2664,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2634,7 +2681,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2651,7 +2698,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2668,7 +2715,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2685,7 +2732,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2702,7 +2749,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2719,7 +2766,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2736,7 +2783,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2753,7 +2800,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2770,7 +2817,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2787,7 +2834,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2804,7 +2851,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2821,7 +2868,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2838,7 +2885,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2855,7 +2902,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2872,7 +2919,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2889,7 +2936,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2906,7 +2953,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2923,7 +2970,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2940,7 +2987,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2957,7 +3004,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2974,7 +3021,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -2991,7 +3038,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3008,7 +3055,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3025,7 +3072,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3042,7 +3089,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3059,7 +3106,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3076,7 +3123,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3093,7 +3140,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3110,7 +3157,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3127,7 +3174,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3144,7 +3191,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3161,7 +3208,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3178,7 +3225,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3195,7 +3242,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3212,7 +3259,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3229,7 +3276,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3246,7 +3293,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3263,7 +3310,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3280,7 +3327,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3297,7 +3344,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3314,7 +3361,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3331,7 +3378,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3348,7 +3395,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3365,7 +3412,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3382,7 +3429,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3399,7 +3446,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3416,7 +3463,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3433,7 +3480,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3450,25 +3497,46 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
    "dex": 201,
-   "name_ja": null,
+   "name_ja": "アンノーン",
    "form": {
     "kind": "default",
-    "source_form_id": null,
+    "source_form_id": 0,
     "form_name": null
    },
    "height": {
-    "raw": null,
-    "cm": null,
-    "source": null
+    "raw": "0.5m",
+    "cm": 50,
+    "source": "SRC-ZUKAN-JP"
    },
-   "status": "unverified",
-   "status_reason": "source_unreachable",
-   "observations": []
+   "status": "confirmed",
+   "status_reason": null,
+   "observations": [
+    {
+     "source": "SRC-ZUKAN-JP",
+     "url": "https://zukan.pokemon.co.jp/detail/0201",
+     "retrieved_on": "2026-10-31",
+     "name_ja": "アンノーン",
+     "source_form_id": 0,
+     "form_name": null,
+     "raw_height": "0.5m",
+     "cm": 50,
+     "extract": {
+      "no": 201,
+      "sub": 0,
+      "name": "アンノーン",
+      "form_name": "",
+      "takasa": "0.5m"
+     },
+     "extract_sha256": "c69047584bf8d4568c6aed47ac4507687a1066b9e9ba96ee73367ef1b866593d",
+     "response_sha256": "cb5b67c239e19faeb2e2a0456668a79bdc1bb97d9dec5abac6f8d7490d15fcdc",
+     "response_bytes": 33725
+    }
+   ]
   },
   {
    "dex": 202,
@@ -3484,7 +3552,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3501,7 +3569,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3518,7 +3586,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3535,7 +3603,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3552,7 +3620,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3569,7 +3637,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3586,7 +3654,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3603,7 +3671,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3620,7 +3688,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3637,7 +3705,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3654,7 +3722,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3671,7 +3739,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3688,7 +3756,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3705,7 +3773,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3722,7 +3790,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3739,7 +3807,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3756,7 +3824,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3773,7 +3841,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3790,7 +3858,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3807,7 +3875,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3824,7 +3892,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3841,7 +3909,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3858,7 +3926,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3875,7 +3943,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3892,7 +3960,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3909,7 +3977,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3926,7 +3994,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3943,7 +4011,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3960,7 +4028,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3977,7 +4045,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -3994,7 +4062,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4011,7 +4079,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4028,7 +4096,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4045,7 +4113,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4062,7 +4130,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4079,7 +4147,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4096,7 +4164,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4113,7 +4181,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4130,7 +4198,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4147,7 +4215,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4164,7 +4232,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4181,7 +4249,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4198,7 +4266,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4215,7 +4283,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4232,7 +4300,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4249,7 +4317,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4266,7 +4334,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4283,7 +4351,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4300,7 +4368,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   },
   {
@@ -4317,7 +4385,7 @@
     "source": null
    },
    "status": "unverified",
-   "status_reason": "source_unreachable",
+   "status_reason": "not_collected",
    "observations": []
   }
  ]

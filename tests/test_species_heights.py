@@ -22,10 +22,14 @@ BASE = '71d1728938fb4c8fefde9b82779cdef74beb612d'  # この作業の基点（mai
 
 
 def synthetic_page(no='0001', name='テストモン', takasa='1.5m', sub='0', extra=None):
-    p = {'no': no, 'sub': sub, 'name': name, 'takasa': takasa, 'omosa': '1.0kg'}
-    p.update(extra or {})
-    js = json.dumps({'pokemon': p}, ensure_ascii=False)
-    return f'<html><body><script id="json-data" type="application/json">{js}</script></body></html>'.encode('utf-8')
+    """架空の詳細ページ（2026-10-31 に確かめた公式ずかんのページの形だけをまねたもの。値は公式ではない）。"""
+    extra = extra or {}
+    page = f'{no}' if str(sub) in ('0', '') else f'{no}-{sub}'
+    subname = f'<span class="subname">{extra["sub_name"]}</span>' if extra.get('sub_name') else ''
+    return (f'<html><head><meta property="og:url" content="https://zukan.pokemon.co.jp/detail/{page}"></head><body>'
+            f'<h2 class="ttl__detail">\n<small class="no">No.{no}</small>\n<span class="name">{name}</span>\n{subname}</h2>'
+            f'<dl><dt class="header__detail-features">高さ：</dt><dd class="content__detail-features js-height">{takasa}</dd></dl>'
+            f'<dd class="content__detail-features js-weight">1.0kg</dd></body></html>').encode('utf-8')
 
 
 def load_cards():
@@ -54,13 +58,12 @@ class ParseTest(unittest.TestCase):
         self.assertEqual((ext['sub'], ext['form_name']), (1, 'べつのすがた'))
 
     def test_fails_closed(self):
-        for body in [b'<html></html>', b'<script id="json-data">{</script>', b'<script id="json-data">{"x":1}</script>',
-                     synthetic_page(takasa='')]:
+        good = synthetic_page()
+        for body in [b'<html></html>', good.replace(b'og:url', b'og:x'), good.replace(b'js-height', b'js-x'),
+                     good.replace(b'No.0001', b'No.0002'), good.replace(b'class="name"', b'class="x"'),
+                     good + good.split(b'<body>')[1], synthetic_page(takasa='')]:
             with self.assertRaises(sh.ParseError):
                 sh.parse_zukan_jp(body)
-        bad = synthetic_page().replace(b'"takasa"', b'"height"')
-        with self.assertRaises(sh.ParseError):
-            sh.parse_zukan_jp(bad)
 
     def test_number_mismatch(self):
         with self.assertRaises(ValueError):
@@ -80,16 +83,27 @@ class CurrentDataTest(unittest.TestCase):
     def test_check_passes(self):
         self.assertEqual(sh.check_data(self.data, self.cards), [])
 
-    def test_all_unverified_without_values(self):
-        """2026-10-31 は公式の資料に接続できなかった。未確認の 251 件に値・名前を入れない（0cm にしない）。"""
-        self.assertEqual(sh.counts(self.data), {'unverified': 251, 'confirmed': 0, 'conflict': 0, 'needs_review': 0,
-                                                'total': 251})
+    def test_values_only_when_confirmed(self):
+        """未確認・食い違い・要確認の項目に値・名前を入れない（0cm にしない）。確認済みは観測の値と同じ。"""
+        self.assertEqual(sh.counts(self.data)['total'], 251)
         for e in self.data['species']:
-            self.assertIsNone(e['height']['cm'])
-            self.assertIsNone(e['name_ja'])
-            self.assertEqual(e['status_reason'], 'source_unreachable')
+            if e['status'] == 'confirmed':
+                self.assertGreater(e['height']['cm'], 0)
+                self.assertEqual(e['height']['cm'], e['observations'][0]['cm'])
+                self.assertEqual(e['name_ja'], e['observations'][0]['name_ja'])
+            else:
+                self.assertIsNone(e['height']['cm'])
+                self.assertIsNone(e['name_ja'])
         log = self.data['sources']['SRC-ZUKAN-JP']['access_log']
-        self.assertEqual([(a['date'], a['result']) for a in log], [('2026-10-31', 'blocked')])
+        self.assertEqual((log[0]['date'], log[0]['result']), ('2026-10-31', 'blocked'))  # 最初は接続できなかった
+
+    def test_probe_values(self):
+        """試し取り（2026-10-31）の 3 件。公式ずかんの詳細ページの「高さ」の原表記と換算。"""
+        idx = sh.species_index(self.data)
+        for dex, name, raw, cm in [(1, 'フシギダネ', '0.7m', 70), (25, 'ピカチュウ', '0.4m', 40), (201, 'アンノーン', '0.5m', 50)]:
+            e = idx[dex]
+            self.assertEqual((e['status'], e['name_ja'], e['height']['raw'], e['height']['cm']), ('confirmed', name, raw, cm))
+            self.assertEqual(e['form'], {'kind': 'default', 'source_form_id': 0, 'form_name': None})
 
     def test_only_official_sources(self):
         self.assertEqual(set(self.data['sources']), {'SRC-ZUKAN-JP'})
@@ -195,8 +209,12 @@ class DestructiveTest(unittest.TestCase):
             f.parent.mkdir(parents=True)
             f.write_bytes(synthetic_page())
             self.assertEqual(sh.check_data(self.data, cache=Path(t)), [])
+            notes = []
+            f.write_bytes(synthetic_page() + b'<!-- changed on refetch -->')
+            self.assertEqual(sh.check_data(self.data, cache=Path(t), notes=notes), [])
+            self.assertEqual(len(notes), 1)
             f.write_bytes(synthetic_page(takasa='1.6m'))
-            self.assertTrue(any('sha256' in x for x in sh.check_data(self.data, cache=Path(t))))
+            self.assertTrue(any('抜き出し直した値' in x for x in sh.check_data(self.data, cache=Path(t))))
 
     def test_extract_records_parse_failure_without_value(self):
         with tempfile.TemporaryDirectory() as t:

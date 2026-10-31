@@ -32,6 +32,7 @@ import json
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import urllib.robotparser
@@ -60,7 +61,7 @@ SOURCES = {
         'detail_url': 'https://zukan.pokemon.co.jp/detail/{dex:04d}',
         'robots_url': 'https://zukan.pokemon.co.jp/robots.txt',
         'height_unit': 'm',
-        'parser': 'zukan_jp_json_data',
+        'parser': 'zukan_jp_detail_html',
     },
 }
 
@@ -126,49 +127,49 @@ class ParseError(ValueError):
     pass
 
 
-_JSON_DATA_RE = re.compile(r'<script[^>]*\bid=["\']json-data["\'][^>]*>(.*?)</script>', re.S | re.I)
+_OG_URL_RE = re.compile(r'<meta\s+property="og:url"\s+content="https://zukan\.pokemon\.co\.jp/detail/(\d{4})(?:-(\d+))?"\s*/?>')
+_H2_RE = re.compile(r'<h2 class="ttl__detail">(.*?)</h2>', re.S)
+_NO_RE = re.compile(r'<small class="no">No\.(\d{4})</small>')
+_NAME_RE = re.compile(r'<span class="name">([^<]*)</span>')
+_SUBNAME_RE = re.compile(r'<span class="subname">([^<]*)</span>')
+_HEIGHT_DD_RE = re.compile(r'<dd class="content__detail-features js-height">([^<]*)</dd>')
+
+
+def _one(regex, text, what):
+    found = regex.findall(text)
+    if len(found) != 1:
+        raise ParseError(f'{what} が 1 つでない（{len(found)} 個）')
+    return found[0]
 
 
 def parse_zukan_jp(body: bytes) -> dict:
-    """公式ポケモンずかんの詳細ページから、名前・姿・身長の原表記を抜き出す。
+    """公式ポケモンずかんの詳細ページ（HTML）から、番号・姿の番号・名前・姿の名前・身長の原表記を抜き出す。
 
-    ページに埋めこまれた JSON（<script id="json-data">）の pokemon の項目
-    （no・sub・name・takasa、姿の名前は sub_name か form_name）を読む。
-    この形は 2026-10-31 の時点で実際のページと照らしていない（接続できなかった）。
-    形が違えば ParseError で止まり、値を推測しない（試し取りで形を確かめてから全件に広げる）。
+    2026-10-31 に No.0001・0025・0201 と姿のページ 0026-1 で確かめた形（docs/species-heights.md 4 章）:
+    - og:url の detail/{番号4桁}[-{姿の番号}]（姿の番号がなければ 0）
+    - 見出し <h2 class="ttl__detail"> の <small class="no">No.{番号4桁}</small>・<span class="name">・
+      姿のページだけにある <span class="subname">
+    - <dd class="content__detail-features js-height">（例 "0.7m"）
+    形が違えば（どれかが 1 つでない・番号が合わない）ParseError で止まり、値を推測しない。
     """
     text = body.decode('utf-8')
-    m = _JSON_DATA_RE.search(text)
-    if not m:
-        raise ParseError('json-data の script がない')
-    try:
-        data = json.loads(html.unescape(m.group(1)).strip())
-    except json.JSONDecodeError as e:
-        raise ParseError(f'json-data が JSON でない: {e}') from e
-    p = data.get('pokemon') if isinstance(data, dict) else None
-    if not isinstance(p, dict):
-        raise ParseError('json-data に pokemon の項目がない')
-    missing = [k for k in ('no', 'name', 'takasa') if k not in p]
-    if missing:
-        raise ParseError(f'pokemon の項目が足りない: {missing}')
-    try:
-        no = int(str(p['no']))
-    except ValueError as e:
-        raise ParseError(f'no が数でない: {p["no"]!r}') from e
-    sub_raw = p.get('sub', 0)
-    try:
-        sub = int(str(sub_raw)) if sub_raw not in (None, '') else 0
-    except ValueError as e:
-        raise ParseError(f'sub が数でない: {sub_raw!r}') from e
-    form_name = p.get('sub_name', p.get('form_name')) or ''
-    name = str(p['name']).strip()
-    takasa = str(p['takasa']).strip()
+    og_no, og_sub = _one(_OG_URL_RE, text, 'og:url の詳細ページの URL')
+    h2 = _one(_H2_RE, text, '見出し（ttl__detail）')
+    no = _one(_NO_RE, h2, '見出しの番号')
+    if no != og_no:
+        raise ParseError(f'見出しの番号 {no} と URL の番号 {og_no} が違う')
+    name = html.unescape(_one(_NAME_RE, h2, '見出しの名前')).strip()
+    subs = _SUBNAME_RE.findall(h2)
+    if len(subs) > 1:
+        raise ParseError('見出しの姿の名前が 2 つ以上')
+    form_name = html.unescape(subs[0]).strip() if subs else ''
+    takasa = html.unescape(_one(_HEIGHT_DD_RE, text, '高さ（js-height）')).strip()
     if not name or not takasa:
-        raise ParseError('name か takasa が空')
-    return {'no': no, 'sub': sub, 'name': name, 'form_name': str(form_name).strip(), 'takasa': takasa}
+        raise ParseError('名前か高さが空')
+    return {'no': int(no), 'sub': int(og_sub or 0), 'name': name, 'form_name': form_name, 'takasa': takasa}
 
 
-PARSERS = {'zukan_jp_json_data': parse_zukan_jp}
+PARSERS = {'zukan_jp_detail_html': parse_zukan_jp}
 
 
 # ---------------------------------------------------------------- データ
@@ -322,7 +323,7 @@ def link_report(cards: list, data: dict) -> dict:
 
 # ---------------------------------------------------------------- 検査
 
-def check_data(data: dict, cards: list | None = None, cache: Path | None = None) -> list:
+def check_data(data: dict, cards: list | None = None, cache: Path | None = None, notes: list | None = None) -> list:
     """データの検査。問題の文のリストを返す（空なら合格）。"""
     errs = []
     if data.get('schema_version') != SCHEMA_VERSION:
@@ -399,14 +400,17 @@ def check_data(data: dict, cards: list | None = None, cache: Path | None = None)
                 f = cache_path(cache, src, d)
                 if f.exists():
                     body = f.read_bytes()
-                    if sha256_bytes(body) != o.get('response_sha256'):
-                        errs.append(f'{tag}: キャッシュの応答の sha256 が保存した値と違う（取り直した資料が変わった）')
-                    else:
-                        try:
-                            if PARSERS[SOURCES[src]['parser']](body) != ext:
-                                errs.append(f'{tag}: キャッシュの応答から抜き出し直した値が保存した抜き出しと違う')
-                        except ParseError as ex:
-                            errs.append(f'{tag}: キャッシュの応答を読めない: {ex}')
+                    try:
+                        again = PARSERS[SOURCES[src]['parser']](body)
+                    except ParseError as ex:
+                        errs.append(f'{tag}: キャッシュの応答を読めない: {ex}')
+                        again = None
+                    if again is not None and again != ext:
+                        errs.append(f'{tag}: キャッシュの応答から抜き出し直した値が保存した抜き出しと違う（{again} ≠ {ext}）')
+                    elif again is not None and sha256_bytes(body) != o.get('response_sha256') and notes is not None:
+                        # ページには取得のたびに変わる部分（読み込むファイルの版の番号など）があるので、
+                        # 取り直した応答のハッシュが違っても、抜き出しが同じなら食い違いにしない
+                        notes.append(f'{tag}: 応答の sha256 は保存した値と違う（取り直した資料）が、抜き出しは同じ')
         # 観測から決め直した結果と同じか
         probe = json.loads(json.dumps(e))
         resolve_status(probe, cn)
@@ -452,13 +456,21 @@ def fetch(source_id: str, dexes: list, cache: Path, interval: float) -> dict:
     src = SOURCES[source_id]
     rp = urllib.robotparser.RobotFileParser()
     rp.set_url(src['robots_url'])
+    robots = 'ok'
     try:
         req = urllib.request.Request(src['robots_url'], headers={'User-Agent': USER_AGENT})
         with urllib.request.urlopen(req, timeout=30) as r:
             rp.parse(r.read().decode('utf-8', 'replace').splitlines())
+    except urllib.error.HTTPError as e:
+        # RFC 9309: 4xx（401・403 を除く）は制限なし、401・403・5xx は取らない
+        if 400 <= e.code < 500 and e.code not in (401, 403):
+            rp.parse([])
+            robots = f'http_{e.code}_no_rules'
+        else:
+            return {'robots': f'http_{e.code}', 'fetched': [], 'cached': [], 'failed': dexes}
     except Exception as e:  # 接続できなければ何も取らない
         return {'robots': f'error: {type(e).__name__}: {e}', 'fetched': [], 'cached': [], 'failed': dexes}
-    result = {'robots': 'ok', 'fetched': [], 'cached': [], 'failed': [], 'disallowed': []}
+    result = {'robots': robots, 'fetched': [], 'cached': [], 'failed': [], 'disallowed': []}
     first = True
     for d in dexes:
         url = src['detail_url'].format(dex=d)
@@ -541,7 +553,10 @@ def main(argv=None) -> int:
     cards = json.loads(CARDS.read_text(encoding='utf-8'))['cards']
     if args.check:
         data = load_data()
-        errs = check_data(data, cards, args.cache)
+        notes = []
+        errs = check_data(data, cards, args.cache, notes)
+        for n in notes:
+            print('注記:', n)
         for e in errs:
             print('エラー:', e)
         print(json.dumps(counts(data), ensure_ascii=False))
