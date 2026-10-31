@@ -105,6 +105,26 @@ class CurrentDataTest(unittest.TestCase):
             self.assertEqual((e['status'], e['name_ja'], e['height']['raw'], e['height']['cm']), ('confirmed', name, raw, cm))
             self.assertEqual(e['form'], {'kind': 'default', 'source_form_id': 0, 'form_name': None})
 
+    def test_full_range_collected(self):
+        """2026-10-31 に No.001〜251 をすべて公式ずかんから取得した（未確認・食い違い・要確認 0）。"""
+        self.assertEqual(sh.counts(self.data), {'unverified': 0, 'confirmed': 251, 'conflict': 0, 'needs_review': 0,
+                                                'total': 251})
+        idx = sh.species_index(self.data)
+        for e in self.data['species']:
+            self.assertEqual(e['form']['source_form_id'], 0)
+            self.assertIsNone(e['form']['form_name'])
+            self.assertEqual(e['observations'][0]['retrieved_on'], '2026-10-31')
+        self.assertEqual(len({e['name_ja'] for e in self.data['species']}), 251)
+        self.assertEqual((idx[95]['height']['raw'], idx[95]['height']['cm']), ('8.8m', 880))  # イワーク（3 桁 cm）
+        # 公式の表記は全角数字。カード名「ポリゴン2」との照合だけ NFKC でそろえる（記録する名前は変えない）
+        self.assertEqual(idx[233]['name_ja'], 'ポリゴン２')
+
+    def test_name_check_uses_nfkc_only_for_matching(self):
+        e = sh.blank_entry(1)
+        e['observations'] = [observation(name='テストモン２')]
+        sh.resolve_status(e, {1: {'わるいテストモン2'}})
+        self.assertEqual((e['status'], e['name_ja']), ('confirmed', 'テストモン２'))
+
     def test_only_official_sources(self):
         self.assertEqual(set(self.data['sources']), {'SRC-ZUKAN-JP'})
         self.assertTrue(all(v['official'] for v in self.data['sources'].values()))

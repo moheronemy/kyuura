@@ -32,6 +32,7 @@ import json
 import re
 import sys
 import time
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -245,7 +246,9 @@ def resolve_status(entry: dict, card_names: dict | None = None) -> None:
     if card_names is not None:
         cn = card_names.get(entry['dex'], set())
         name = next(iter(names))
-        if cn and not any(name in n for n in cn):
+        # 名前の確認だけに使う。全角・半角の違い（公式の「ポリゴン２」とカードの「ポリゴン2」）は NFKC でそろえて比べる。
+        # 記録する名前は公式の表記のまま
+        if cn and not any(unicodedata.normalize('NFKC', name) in unicodedata.normalize('NFKC', n) for n in cn):
             reasons.append('name_not_in_kyuura_card_names')
     if reasons:
         entry['status'] = 'needs_review'
