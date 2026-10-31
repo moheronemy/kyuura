@@ -408,6 +408,33 @@ kyuura がウェブに公開されたカードの画像で印刷の欄を読ん�
 | `reprint_checks` | 同じカードの組の中で数値が食い違ったものの判定 |
 | `identified_cards` | pcg-search で名前が「-」のカードの、カードの画像などで確認した名前（転記データ自体は変えない） |
 
+## `data/species_heights.json`（公式図鑑の種族の身長）
+
+2026-10-31 から。公式図鑑の種族の身長（全国図鑑 No.001〜251・当時に対応する通常の姿）の参照データです。カードに印刷された身長ではなく、`data/cards.json` の欄を補完・訂正しません。カードとは `pokemon.dex` だけで結びます。作るのも検査するのも `scripts/species_heights.py`（手で編集しない）。記録と手順は [species-heights.md](species-heights.md)。
+
+| キー | 内容 |
+|---|---|
+| `schema_version` | 1 |
+| `scope` | 範囲（`dex_first` 1・`dex_last` 251）と姿の選び方（`form_policy`） |
+| `status_values` | 状態の意味（`unverified`・`confirmed`・`conflict`・`needs_review`） |
+| `sources` | 公式の出典（id `SRC-…`）。`name_ja`・`publisher`・`official`（true）・`base_url`・`detail_url`（`{dex:04d}` の書式）・`robots_url`・`height_unit`・`access_log`（`date`・`result`: `ok`・`blocked`・`error`・`terms_checked`・`detail`） |
+| `excluded_sources` | 公式情報として扱わない資料と理由（PokeAPI・ファンWiki など） |
+| `species` | 番号の順に 251 件 |
+
+`species` の 1 件:
+
+| キー | 内容 |
+|---|---|
+| `dex` | 全国図鑑番号（整数） |
+| `name_ja` | 日本語名（`confirmed` のときだけ。観測の名前） |
+| `form` | 姿の識別。`kind`（`default`）・`source_form_id`（出典の姿の番号。ポケモンずかんの `sub`）・`form_name` |
+| `height` | `raw`（身長の原表記）・`cm`（整数 cm）・`source`（出典の id）。`confirmed` のときだけ値があり、ほかは `null`（0 にしない） |
+| `status` | `unverified`（取得できていない）・`confirmed`・`conflict`（公式の資料どうしで違う）・`needs_review` |
+| `status_reason` | 未確認・要確認の理由（`not_collected`・`source_unreachable`・`parse_failed`・`conflicting_official_values`・`form_name_present`・`non_default_form_id`・`official_names_differ`・`name_not_in_kyuura_card_names`） |
+| `observations` | 公式の資料の観測（出典ごとに 1 件）。`source`・`url`・`retrieved_on`・`name_ja`・`source_form_id`・`form_name`・`raw_height`・`cm`・`extract`（ページから抜き出した最小限の値）・`extract_sha256`（抜き出しを `sort_keys`・区切りの空白なしの JSON にした sha256）・`response_sha256`・`response_bytes`（取得した応答全体。応答そのものは残さない） |
+
+`status`・`name_ja`・`form`・`height` は観測から決め直した結果と同じでないとエラーです（`--check`）。
+
 ## サイドカー（`data/sidecar/`）
 
 `data/cards.json` を変えずに、カード・ワザに出典つきの情報を加えるファイルです。カードの記録とは id（カード id、ワザ・特殊能力の位置）で結びます。検査と生成は `scripts/build_card_rulings.py`（生成するページは [カードの裁定と公式の最新の説明](rules/card-rulings.md)。手で編集しない）、テストは `tests/test_card_rulings.py`（v0.13 の取り込み）と `tests/test_engine_imports_v05_v12.py`（v0.5〜v0.12 の取り込み・破壊テスト）です。サイドカーの記録がないカードは、どの一覧も空として扱います（`annotations_for`）。
