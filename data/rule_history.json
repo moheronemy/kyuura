@@ -7609,7 +7609,8 @@
       "CR-TRANSFORM-NOT-NEWLY-PLAYED",
       "CR-TRANSFORM-FROZEN-DURING-ACTION",
       "UQ-TRANSFORM-REVERT-KNOCKOUT-TIMING",
-      "UQ-TRANSFORM-BABY-AND-BASIC"
+      "UQ-TRANSFORM-BABY-AND-BASIC",
+      "CR-INFLATE-DAMAGE-STEP"
      ]
     },
     {
@@ -7841,6 +7842,20 @@
       "UQ-SUPER-TRANSFORM-SOURCE-CHANGES",
       "UQ-SUPER-TRANSFORM-SUPPRESSED-FORM",
       "UQ-SUPER-TRANSFORM-ENERGY-COLORS"
+     ]
+    },
+    {
+     "printed": "226",
+     "pdf": 228,
+     "content": "エリカのプリン（LV.13／HP50）・プクリン（第2弾ジャングル。LV.36／HP80）・プクリン（拡張シート第1弾青版。LV.40／HP90）。3 つ目の欄の［てだすけ］の最新の説明（ベンチにいるとき、自分の番ごとに 1 回。「おもて」で 4 つの状態のうちの 1 つを回復）と、ふくらむの最新の説明「次の相手の番、このカードが受けるダメージは「-10」される。（ダメージ以外の効果はそのまま）」と解説。図版のふくらむの印刷は「相手の」と「に」のあいだの漢字 1 字が読めない（2026-10-31 に kyuura が画像で読んだ）",
+     "refs": [
+      "LD-ES1-027-PWR0",
+      "LD-ES1-027-ATK0",
+      "CC-ES1-027-P226",
+      "CR-HELPING-HAND-USE",
+      "CR-INFLATE-LATEST",
+      "CR-INFLATE-DAMAGE-STEP",
+      "UQ-HELPING-HAND-CHOICE"
      ]
     }
    ],

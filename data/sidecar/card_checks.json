@@ -6683,6 +6683,126 @@
     }
    ],
    "engine_refs": []
+  },
+  {
+   "id": "CC-ES1-027-P226",
+   "card_id": "ES1-027",
+   "card_name_ja": "プクリン",
+   "source": "P43",
+   "scan": "J38",
+   "page": "226",
+   "pdf_page": 228,
+   "location": "p.226 の 3 つ目の欄「プリンから進化 プクリン LV.40／HP90 ●拡張シート第1弾青版」",
+   "checked_fields": {
+    "name.ja": "プクリン",
+    "pokemon.stage": "stage1",
+    "pokemon.evolves_from": {
+     "ja": "プリン",
+     "en": null
+    },
+    "pokemon.hp": 90,
+    "pokemon.types": [
+     "colorless"
+    ],
+    "pokemon.weaknesses": [
+     {
+      "type": "fighting",
+      "operator": "×",
+      "value": 2
+     }
+    ],
+    "pokemon.resistances": [
+     {
+      "type": "psychic",
+      "operator": "-",
+      "value": 30
+     }
+    ],
+    "pokemon.retreat_cost": 3,
+    "pokemon.powers[0].name.ja": "てだすけ",
+    "pokemon.powers[0].text.ja": "この力は、自分の番ごとに1回、このカードがベンチにいる時にだけ使える。コインを投げて「おもて」なら、自分の対戦ポケモンの「どく・ねむり・マヒ・こんらん」状態のうちの1つを回復させる。",
+    "pokemon.attacks[0].name.ja": "ふくらむ",
+    "pokemon.attacks[0].cost": [
+     "colorless",
+     "colorless",
+     "colorless",
+     "colorless"
+    ],
+    "pokemon.attacks[0].damage.base": 20,
+    "pokemon.attacks[0].text.ja": "このカードが次の相手に受けるダメージは「-10」される。"
+   },
+   "fields_not_checked": [
+    "pokemon.dex",
+    "rarity_jp（図版の右下は読めない）",
+    "name.en と英語の文面（英語版はない）",
+    "pokemon.weaknesses の倍率（図版は弱点の記号だけ。×2 は kyuura の記録のまま）"
+   ],
+   "result": "data_error",
+   "data_error": [
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kyuura_value": "このカードが次の相手に受けるダメージは「-10」される。",
+     "source_value": "このカードが次の相手の■に受けるダメージは「-10」される。",
+     "evidence": "p.226 の 3 つ目の欄の図版（300dpi）。カードの画像 IMG-ES1-027 と同じく「相手の」と「に」のあいだに字がある",
+     "fix_status": "candidate",
+     "note": "■ は図版でも読めない漢字 1 字。訂正の候補 data/curation/card_corrections.json の ES1-027 の held_illegible_print（2026-10-30）と同じ欠けで、新しい訂正にはしない。推測で埋めない"
+    }
+   ],
+   "differences": [
+    {
+     "field": "pokemon.powers[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-ES1-027-PWR0",
+     "note": "kyuura の文面は印刷の文面（読める範囲で図版と同じ）。最新の説明とは書き方が違う。データの誤りではない"
+    },
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "printed_vs_latest",
+     "latest_description_ref": "LD-ES1-027-ATK0",
+     "note": "最新の説明は「次の相手の番、…（ダメージ以外の効果はそのまま）」"
+    },
+    {
+     "field": "pokemon.attacks[0].text.ja",
+     "kind": "data_error",
+     "note": "kyuura の文面に「の」と漢字 1 字がない（転記の欠け。候補のまま）"
+    }
+   ],
+   "latest_description_refs": [
+    "LD-ES1-027-PWR0",
+    "LD-ES1-027-ATK0"
+   ],
+   "data_gaps": [
+    {
+     "field": "jp_print.level",
+     "kyuura_value": null,
+     "source_value": 40,
+     "evidence": "p.226 の欄の見出し（LV.40／HP90）と図版（300dpi）",
+     "cause": "拡張パック以外の商品の転記（pcg-search）にレベルの欄がない（拡張パック以外の商品のレベルはどれも空）",
+     "status": "open",
+     "note": "埋めていない（この調査の対象外）。訂正の候補にも加えていない"
+    }
+   ],
+   "findings": [
+    "図版: 1進化（プリンから進化）、無色、HP90、［特殊能力］てだすけ、ふくらむ（無色 4 個・20）、弱点 闘、抵抗力 超 -30、にげる 3。特殊能力・ワザの文字は小さい。",
+    "図版のふくらむは「このカ ドが次の相手の■に受けるダメ／ージは「10」される。」と見え、■ は字の形が読めない（カードの画像 IMG-ES1-027 と同じ）。「-」も見分けられない。",
+    "「特殊能力」欄の最新の説明: 「この力は、自分の番ごとに1回、このカードがベンチにいるとき使える。…うちの1つを回復させる。」（LD-ES1-027-PWR0）。",
+    "「ワザ」欄の最新の説明: 「次の相手の番、このカードが受けるダメージは「-10」される。（ダメージ以外の効果はそのまま）」（LD-ES1-027-ATK0）。",
+    "解説: ふくらむで与えられるダメージは 20 だけで、受けるダメージを 10 減らせるとはいえ、使えるまでにエネルギーが 4 個必要。［てだすけ］はベンチにいるときしか使えない。自分の対戦ポケモンの特殊状態を回復できるが、コイントスで表を出さなければ効果はない。トレーナーカードの「なんでもなおし」などを入れていないときに役に立つ。",
+    "ページの下の番号は「226」（PDF 228）。"
+   ],
+   "not_confused_with": [
+    "PMCG2-045（プクリン LV.36／HP80。p.226 の 2 つ目の欄）",
+    "PMCG5-058（エリカのプリン LV.13／HP50。p.226 の 1 つ目の欄）"
+   ],
+   "verification": [
+    {
+     "by": "kyuura",
+     "date": "2026-10-31",
+     "method": "Internet Archive のスキャン [J38] の PDF（2026-10-12 に取得した 372 ページの PDF。sha256 e8ae8255c7b5c2ba7a662704fde62a65629c5ab8085235dd2c98b4e9a9318515）の PDF 228・84 を、スキャンの画像の解像度（300dpi）で画像にして読んだ（ページ全体は 100dpi で位置とページ番号を確かめた。PDF の画像は前景 300ppi・背景 100ppi の層で、600dpi にしても字の情報は増えない）。OCR の文字・既存の転記 data/Silver_Bible_structured.md は引用に使っていない",
+     "result": "照合した欄は、ふくらむの文面（転記の 2 字の欠け。候補のまま）のほかは同じ。文面のほかの違いは印刷の文面と最新の説明の違い"
+    }
+   ],
+   "engine_refs": []
   }
  ],
  "difference_kinds": {
