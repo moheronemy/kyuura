@@ -2183,7 +2183,7 @@
    "seq": 19,
    "category": "pokemon",
    "name": {
-    "ja": "ウインディ",
+    "ja": "ウィンディ",
     "en": "Arcanine"
    },
    "name_ja_confidence": "有力",
@@ -2290,7 +2290,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PMCG1-019-NAME-JA）: name.ja を「ウインディ」から「ウィンディ」に直した。根拠: kyuura が、同じカード（第1弾 拡張パックのウィンディ（LV.45・HP100））の日本語版のカードの画像で、名前の「ウ」のすぐあとの「ィ」が小さい字（「ウィンディ」）であることを確かめた（2026-10-30。照合の記録 IMG-PMCG1-019）。種の名前・ほかの版・英語版からは決めていない"
+   ],
    "source_ids": {
     "tcgdex": "PMCG1-019",
     "pokemontcg": [
@@ -2311,6 +2313,16 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-PMCG1-019-NAME-JA",
+     "field": "name.ja",
+     "before": "ウインディ",
+     "after": "ウィンディ",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": []
   },
@@ -41167,7 +41179,7 @@
    "seq": 34,
    "category": "pokemon",
    "name": {
-    "ja": "カツラのウインディ",
+    "ja": "カツラのウィンディ",
     "en": "Blaine's Arcanine"
    },
    "name_ja_confidence": "有力",
@@ -41259,7 +41271,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PMCG6-034-NAME-JA）: name.ja を「カツラのウインディ」から「カツラのウィンディ」に直した。根拠: kyuura が、同じカード（ジム拡張第2弾「闇からの挑戦」のカツラのウィンディ（LV.42・HP90））の日本語版のカードの画像で、名前の「ウ」のすぐあとの「ィ」が小さい字（「カツラのウィンディ」）であることを確かめた（2026-10-30。照合の記録 IMG-PMCG6-034）。種の名前・ほかの版・英語版からは決めていない"
+   ],
    "source_ids": {
     "tcgdex": "PMCG6-034",
     "pokemontcg": [
@@ -41277,6 +41291,16 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-PMCG6-034-NAME-JA",
+     "field": "name.ja",
+     "before": "カツラのウインディ",
+     "after": "カツラのウィンディ",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": "SC-GD5-007",
    "data_gaps": []
   },
@@ -49594,6 +49618,9 @@
     ],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "ブーバー"
+    ],
     "hp": 30,
     "types": [
      "fire"
@@ -49602,7 +49629,7 @@
     "resistances": [],
     "retreat_cost": 0,
     "rules_text": {
-     "ja": null,
+     "ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
      "en": "If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack."
     },
     "powers": [],
@@ -49644,7 +49671,10 @@
      ]
     }
    ],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo1-022-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のブビィ）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo1-022、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない",
+    "訂正（FIX-neo1-022-EVOLVES-TO）: 空だった pokemon.evolves_to に「ブーバー」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のブビィ）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「ブーバーへ進化」「「ブーバー」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo1-022）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo1-022",
     "pokemontcg": [
@@ -49662,10 +49692,28 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo1-022-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    },
+    {
+     "id": "FIX-neo1-022-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "ブーバー"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo1-023",
@@ -51796,6 +51844,9 @@
     ],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "ピカチュウ"
+    ],
     "hp": 30,
     "types": [
      "lightning"
@@ -51804,7 +51855,7 @@
     "resistances": [],
     "retreat_cost": 0,
     "rules_text": {
-     "ja": null,
+     "ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
      "en": "If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack."
     },
     "powers": [],
@@ -51829,7 +51880,10 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo1-042-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のピチュー）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo1-042、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない",
+    "訂正（FIX-neo1-042-EVOLVES-TO）: 空だった pokemon.evolves_to に「ピカチュウ」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のピチュー）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「ピカチュウへ進化」「「ピカチュウ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo1-042）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo1-042",
     "pokemontcg": [
@@ -51854,10 +51908,28 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo1-042-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    },
+    {
+     "id": "FIX-neo1-042-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "ピカチュウ"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo1-043",
@@ -51987,6 +52059,9 @@
     ],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "エレブー"
+    ],
     "hp": 30,
     "types": [
      "lightning"
@@ -51995,7 +52070,7 @@
     "resistances": [],
     "retreat_cost": 0,
     "rules_text": {
-     "ja": null,
+     "ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
      "en": "If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack."
     },
     "powers": [
@@ -52016,7 +52091,10 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo1-044-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のエレキッド）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo1-044、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない",
+    "訂正（FIX-neo1-044-EVOLVES-TO）: 空だった pokemon.evolves_to に「エレブー」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のエレキッド）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「エレブーへ進化」「「エレブー」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo1-044）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo1-044",
     "pokemontcg": [
@@ -52034,10 +52112,28 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo1-044-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    },
+    {
+     "id": "FIX-neo1-044-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "エレブー"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo1-045",
@@ -54927,6 +55023,9 @@
     ],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "ピッピ"
+    ],
     "hp": 30,
     "types": [
      "colorless"
@@ -54935,7 +55034,7 @@
     "resistances": [],
     "retreat_cost": 0,
     "rules_text": {
-     "ja": null,
+     "ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
      "en": "If this Baby Pokémon is your Active Pokémon and your opponent tries to attack, your opponent flips a coin (before doing anything required in order to use that attack). If tails, your opponent's turn ends without an attack."
     },
     "powers": [],
@@ -54960,7 +55059,10 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo1-070-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のピィ）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo1-070、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない",
+    "訂正（FIX-neo1-070-EVOLVES-TO）: 空だった pokemon.evolves_to に「ピッピ」を入れた。根拠: kyuura が、同じカード（拡張パック第1弾「金、銀、新世界へ...」のピィ）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「ピッピへ進化」「「ピッピ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo1-070）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo1-070",
     "pokemontcg": [
@@ -54978,10 +55080,28 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo1-070-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    },
+    {
+     "id": "FIX-neo1-070-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "ピッピ"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo1-071",
@@ -59442,7 +59562,7 @@
     "resistances": [],
     "retreat_cost": 1,
     "rules_text": {
-     "ja": null,
+     "ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
      "en": "You may have up to 4 Basic Pokémon cards in your deck with Unown in their names."
     },
     "powers": [
@@ -59483,7 +59603,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo2-027-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「M」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-027）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo2-027",
     "pokemontcg": [
@@ -59501,10 +59623,18 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo2-027-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo2-028",
@@ -59551,7 +59681,7 @@
     "resistances": [],
     "retreat_cost": 1,
     "rules_text": {
-     "ja": null,
+     "ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
      "en": "You may have up to 4 Basic Pokémon cards in your deck with Unown in their names."
     },
     "powers": [
@@ -59592,7 +59722,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo2-028-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「U」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-028）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo2-028",
     "pokemontcg": [
@@ -59610,10 +59742,18 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo2-028-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo2-029",
@@ -59778,7 +59918,7 @@
     "resistances": [],
     "retreat_cost": 1,
     "rules_text": {
-     "ja": null,
+     "ja": "「アンノーン」はデッキに4枚までしか入れることができません。",
      "en": "You may have up to 4 Basic Pokémon cards in your deck with Unown in their names."
     },
     "powers": [
@@ -59819,7 +59959,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo2-030-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「A」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-030）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo2-030",
     "pokemontcg": [
@@ -59838,10 +59980,18 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo2-030-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「アンノーン」はデッキに4枚までしか入れることができません。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo2-031",
@@ -60071,6 +60221,11 @@
     ],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "エビワラー",
+     "サワムラー",
+     "カポエラー"
+    ],
     "hp": 30,
     "types": [
      "fighting"
@@ -60079,7 +60234,7 @@
     "resistances": [],
     "retreat_cost": 0,
     "rules_text": {
-     "ja": null,
+     "ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
      "en": "If this Baby Pokémon is your Active Pokémon and your opponent announces an attack, your opponent flips a coin (before doing anything else). If tails, your opponent's turn ends."
     },
     "powers": [],
@@ -60108,7 +60263,10 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo2-033-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のバルキー）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo2-033、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない",
+    "訂正（FIX-neo2-033-EVOLVES-TO）: 空だった pokemon.evolves_to に「エビワラー・サワムラー・カポエラー」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のバルキー）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「エビワラーへ進化」「サワムラーへ進化」「カポエラーへ進化」「「エビワラー」「サワムラー」「カポエラー」のいずれかを上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo2-033）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo2-033",
     "pokemontcg": [
@@ -60126,10 +60284,30 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo2-033-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    },
+    {
+     "id": "FIX-neo2-033-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "エビワラー",
+      "サワムラー",
+      "カポエラー"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo2-034",
@@ -61984,6 +62162,9 @@
     ],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "プリン"
+    ],
     "hp": 30,
     "types": [
      "colorless"
@@ -61992,7 +62173,7 @@
     "resistances": [],
     "retreat_cost": 0,
     "rules_text": {
-     "ja": null,
+     "ja": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
      "en": "If this Baby Pokémon is your Active Pokémon and your opponent announces an attack, your opponent flips a coin (before doing anything else). If tails, your opponent's turn ends."
     },
     "powers": [
@@ -62013,7 +62194,10 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo2-050-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のププリン）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo2-050、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない",
+    "訂正（FIX-neo2-050-EVOLVES-TO）: 空だった pokemon.evolves_to に「プリン」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のププリン）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「プリンへ進化」「「プリン」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo2-050）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo2-050",
     "pokemontcg": [
@@ -62031,10 +62215,28 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo2-050-RULES-TEXT-JA",
+     "field": "pokemon.rules_text.ja",
+     "before": null,
+     "after": "「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    },
+    {
+     "id": "FIX-neo2-050-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "プリン"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
-   "data_gaps": [
-    "pokemon.rules_text.ja"
-   ]
+   "data_gaps": []
   },
   {
    "id": "neo2-051",
@@ -65957,6 +66159,9 @@
     ],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "ルージュラ"
+    ],
     "hp": 30,
     "types": [
      "psychic"
@@ -65990,7 +66195,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo3-031-EVOLVES-TO）: 空だった pokemon.evolves_to に「ルージュラ」を入れた。根拠: kyuura が、同じカード（拡張パック第3弾「めざめる伝説」のムチュール）の日本語版のカードの画像（pcg-search.com [N3]）で、進化先の欄「ルージュラへ進化」「「ルージュラ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo3-031）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": "neo3-031",
     "pokemontcg": [
@@ -66008,6 +66215,18 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo3-031-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "ルージュラ"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": []
   },
@@ -68365,13 +68584,15 @@
    "trainer": {
     "kinds": [],
     "text": {
-     "ja": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」をあなたのトラッシュから選び出し、相手プレイヤーに見せてから、手札に加える。",
+     "ja": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。",
      "en": "Flip 2 coins. If both are heads, put a Baby Pokémon, Basic Pokémon, or Evolution card from your discard pile into your hand. If both are tails, put a Trainer card from your discard pile into your hand."
     }
    },
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-neo3-053-TRAINER-TEXT-JA）: trainer.text.ja を「コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」をあなたのトラッシュから選び出し、相手プレイヤーに見せてから、手札に加える。」から「コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。」に直した。根拠: kyuura が、同じカード（第3弾「めざめる伝説」のボロのつりざお）の日本語版のカードの画像（pcg-search.com [N3]）で、説明の全文「コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。」を読んだ（2026-10-30。照合の記録 IMG-neo3-053）。転記（ポケモンWiki）は「を、」の読点と「1枚」を落としていた。英語版の文面からは補っていない"
+   ],
    "source_ids": {
     "tcgdex": "neo3-053",
     "pokemontcg": [
@@ -68389,6 +68610,16 @@
    },
    "product_group": "expansion_pack",
    "play_scope": "standard",
+   "corrections": [
+    {
+     "id": "FIX-neo3-053-TRAINER-TEXT-JA",
+     "field": "trainer.text.ja",
+     "before": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」をあなたのトラッシュから選び出し、相手プレイヤーに見せてから、手札に加える。",
+     "after": "コインを2枚投げ、すべて「おもて」なら「ポケモンのカード」を、すべて「うら」なら「トレーナーカード」を、あなたのトラッシュから1枚選び出し、相手プレイヤーに見せてから、手札に加える。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
     "jp_print.series"
@@ -85192,7 +85423,10 @@
      26
     ],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "マチスのピカチュウ",
+     "en": "Lt. Surge's Pikachu"
+    },
     "hp": 70,
     "types": [
      "lightning"
@@ -85256,7 +85490,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-GD3-003-EVOLVES-FROM）: 空だった pokemon.evolves_from に「マチスのピカチュウ」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) ポケモンジム第2弾「クチバシティジム マチス」のマチスのライチュウ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「マチスのピカチュウから進化」を読んだ（2026-10-30。照合の記録 IMG-GD3-003）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [
@@ -85288,12 +85524,24 @@
     "en_print": "other_products.en_prints",
     "english_text": "pokemontcg:gym1-28",
     "pokemon.dex": "pokemontcg:gym1-28",
-    "pokemon.stage": "pcg_search_kind_conflicts_with_evolution_line"
+    "pokemon.evolves_from": "card_corrections:FIX-GD3-003-EVOLVES-FROM",
+    "pokemon.stage": "card_image_check:IMG-GD3-003"
    },
+   "corrections": [
+    {
+     "id": "FIX-GD3-003-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "マチスのピカチュウ",
+      "en": "Lt. Surge's Pikachu"
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.stage",
-    "pokemon.evolves_from",
     "jp_print.level"
    ]
   },
@@ -100032,7 +100280,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "なにかの化石",
+     "en": null
+    },
     "hp": 50,
     "types": [
      "water"
@@ -100086,7 +100337,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-ES2-011-EVOLVES-FROM）: 空だった pokemon.evolves_from に「なにかの化石」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第2弾(赤版)のオムナイト）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES2-011）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -100112,11 +100365,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search"
+    "pokemon.retreat_cost": "pcg_search",
+    "pokemon.evolves_from": "card_corrections:FIX-ES2-011-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-ES2-011-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "なにかの化石",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]
@@ -102004,7 +102270,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "なにかの化石",
+     "en": null
+    },
     "hp": 50,
     "types": [
      "fighting"
@@ -102058,7 +102327,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-ES2-028-EVOLVES-FROM）: 空だった pokemon.evolves_from に「なにかの化石」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第2弾(赤版)のカブト）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES2-028）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -102084,11 +102355,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search"
+    "pokemon.retreat_cost": "pcg_search",
+    "pokemon.evolves_from": "card_corrections:FIX-ES2-028-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-ES2-028-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "なにかの化石",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]
@@ -102114,7 +102398,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "なにかの化石",
+     "en": null
+    },
     "hp": 70,
     "types": [
      "fighting"
@@ -102178,7 +102465,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-ES2-029-EVOLVES-FROM）: 空だった pokemon.evolves_from に「なにかの化石」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第2弾(赤版)のプテラ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES2-029）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -102204,11 +102493,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search"
+    "pokemon.retreat_cost": "pcg_search",
+    "pokemon.evolves_from": "card_corrections:FIX-ES2-029-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-ES2-029-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "なにかの化石",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]
@@ -102512,7 +102814,7 @@
        "en": null
       },
       "text": {
-       "ja": "この力は、このカードがバトル場にいる時だけ、自分の番ごとに1回使える。コインを投げて「おもて」なら、場にいるポケモンから1匹を選び、それ以後このカードを、選んだポケモンと同じカードとしてあつかう。(ただし「進化・退化」はできず、この「すごいへんしん」の力は使うことができる)。「うら」なら、このカードはメタモンにもどる。エネルギーカードは、このカードについている限り、どの色のエネルギーとしても使える。このカードがバトル場をはなれた時や、「ねむり・マヒ・こんらん」状態の時、この「すごいへんしん」のカは使えず、このカードはメタモンにもどる。へんしんの元になっていたポケモンが場をはなれた時も、このカードはメタモンにもどる。",
+       "ja": "この力は、このカードがバトル場にいる時だけ、自分の番ごとに1回使える。コインを投げて「おもて」なら、場にいるポケモンから1匹を選び、それ以後このカードを、選んだポケモンと同じカードとしてあつかう。(ただし「進化・退化」はできず、この「すごいへんしん」の力は使うことができる)。「うら」なら、このカードはメタモンにもどる。エネルギーカードは、このカードについている限り、どの色のエネルギーとしても使える。このカードがバトル場をはなれた時や、「ねむり・マヒ・こんらん」状態の時、この「すごいへんしん」の力は使えず、このカードはメタモンにもどる。へんしんの元になっていたポケモンが場をはなれた時も、このカードはメタモンにもどる。",
        "en": null
       }
      }
@@ -102522,7 +102824,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-ES2-032-POWER0-TEXT-JA）: pokemon.powers[0].text.ja を「この力は、このカードがバトル場にいる時だけ、自分の番ごとに1回使える。コインを投げて「おもて」なら、場にいるポケモンから1匹を選び、それ以後このカードを、選んだポケモンと同じカードとしてあつかう。(ただし「進化・退化」はできず、この「すごいへんしん」の力は使うことができる)。「うら」なら、このカードはメタモンにもどる。エネルギーカードは、このカードについている限り、どの色のエネルギーとしても使える。このカードがバトル場をはなれた時や、「ねむり・マヒ・こんらん」状態の時、この「すごいへんしん」のカは使えず、このカードはメタモンにもどる。へんしんの元になっていたポケモンが場をはなれた時も、このカードはメタモンにもどる。」から「この力は、このカードがバトル場にいる時だけ、自分の番ごとに1回使える。コインを投げて「おもて」なら、場にいるポケモンから1匹を選び、それ以後このカードを、選んだポケモンと同じカードとしてあつかう。(ただし「進化・退化」はできず、この「すごいへんしん」の力は使うことができる)。「うら」なら、このカードはメタモンにもどる。エネルギーカードは、このカードについている限り、どの色のエネルギーとしても使える。このカードがバトル場をはなれた時や、「ねむり・マヒ・こんらん」状態の時、この「すごいへんしん」の力は使えず、このカードはメタモンにもどる。へんしんの元になっていたポケモンが場をはなれた時も、このカードはメタモンにもどる。」に直した。根拠: kyuura が、同じカード（拡張シート第2弾赤版のメタモン（LV.15・HP40））の日本語版のカードの画像で、「この「すごいへんしん」の力は使えず」の字が、同じ説明の書き出し「この力は」の「力」と同じ形・大きさであることを確かめた（2026-10-31。照合の記録 IMG-ES2-032）。転記の片仮名「カ」を漢字「力」に直した。ほかの字・括弧は変えていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -102550,6 +102854,16 @@
     "name.ja": "pcg_search",
     "pokemon.retreat_cost": "pcg_search"
    },
+   "corrections": [
+    {
+     "id": "FIX-ES2-032-POWER0-TEXT-JA",
+     "field": "pokemon.powers[0].text.ja",
+     "before": "この力は、このカードがバトル場にいる時だけ、自分の番ごとに1回使える。コインを投げて「おもて」なら、場にいるポケモンから1匹を選び、それ以後このカードを、選んだポケモンと同じカードとしてあつかう。(ただし「進化・退化」はできず、この「すごいへんしん」の力は使うことができる)。「うら」なら、このカードはメタモンにもどる。エネルギーカードは、このカードについている限り、どの色のエネルギーとしても使える。このカードがバトル場をはなれた時や、「ねむり・マヒ・こんらん」状態の時、この「すごいへんしん」のカは使えず、このカードはメタモンにもどる。へんしんの元になっていたポケモンが場をはなれた時も、このカードはメタモンにもどる。",
+     "after": "この力は、このカードがバトル場にいる時だけ、自分の番ごとに1回使える。コインを投げて「おもて」なら、場にいるポケモンから1匹を選び、それ以後このカードを、選んだポケモンと同じカードとしてあつかう。(ただし「進化・退化」はできず、この「すごいへんしん」の力は使うことができる)。「うら」なら、このカードはメタモンにもどる。エネルギーカードは、このカードについている限り、どの色のエネルギーとしても使える。このカードがバトル場をはなれた時や、「ねむり・マヒ・こんらん」状態の時、この「すごいへんしん」の力は使えず、このカードはメタモンにもどる。へんしんの元になっていたポケモンが場をはなれた時も、このカードはメタモンにもどる。",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-31"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
     "pokemon.dex",
@@ -104746,7 +105060,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "なにかの化石",
+     "en": null
+    },
     "hp": 50,
     "types": [
      "water"
@@ -104800,7 +105117,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-ES3-018-EVOLVES-FROM）: 空だった pokemon.evolves_from に「なにかの化石」を入れた。根拠: kyuura が、同じカード（ポケモンカード(PMCG) 拡張シート 第3弾(緑版)のオムナイト）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「なにかの化石から進化」を読んだ（2026-10-30。照合の記録 IMG-ES3-018）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -104826,11 +105145,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search"
+    "pokemon.retreat_cost": "pcg_search",
+    "pokemon.evolves_from": "card_corrections:FIX-ES3-018-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-ES3-018-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "なにかの化石",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]
@@ -131771,6 +132103,9 @@
     ],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "ピカチュウ"
+    ],
     "hp": 30,
     "types": [
      "lightning"
@@ -131804,7 +132139,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PF2-007-EVOLVES-TO）: 空だった pokemon.evolves_to に「ピカチュウ」を入れた。根拠: kyuura が、同じカード（neo プレミアムファイル2のピチュー）の日本語版のカードの画像（pcg-search.com [N3]）で、進化先の欄「ピカチュウへ進化」「「ピカチュウ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-PF2-007）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [
@@ -131838,6 +132175,18 @@
     "english_text": "pokemontcg:basep-35",
     "pokemon.dex": "pokemontcg:basep-35"
    },
+   "corrections": [
+    {
+     "id": "FIX-PF2-007-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "ピカチュウ"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
     "jp_print.level"
@@ -134881,6 +135230,9 @@
     "dex": [],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "ブーバー"
+    ],
     "hp": 30,
     "types": [
      "fire"
@@ -134918,7 +135270,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-NIP1X-002-EVOLVES-TO）: 空だった pokemon.evolves_to に「ブーバー」を入れた。根拠: kyuura が、同じカード（イントロパック★neo（チコリータデッキ：拡張カード）のブビィ）の日本語版のカードの画像（pcg-search.com [N3]）で、進化先の欄「ブーバーへ進化」「「ブーバー」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-NIP1X-002）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -134947,6 +135301,18 @@
     "pokemon.retreat_cost": "pcg_search_page_dash",
     "pokemon.rules_text.ja": "pcg_search.note"
    },
+   "corrections": [
+    {
+     "id": "FIX-NIP1X-002-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "ブーバー"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
     "pokemon.dex",
@@ -137294,6 +137660,9 @@
     "dex": [],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "ピカチュウ"
+    ],
     "hp": 30,
     "types": [
      "lightning"
@@ -137331,7 +137700,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-NIP2X-002-EVOLVES-TO）: 空だった pokemon.evolves_to に「ピカチュウ」を入れた。根拠: kyuura が、同じカード（イントロパック★neo（ワニノコデッキ：拡張カード）のピチュー）の日本語版のカードの画像（pcg-search.com [N3]）で、進化先の欄「ピカチュウへ進化」「「ピカチュウ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-NIP2X-002）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -137360,6 +137731,18 @@
     "pokemon.retreat_cost": "pcg_search_page_dash",
     "pokemon.rules_text.ja": "pcg_search.note"
    },
+   "corrections": [
+    {
+     "id": "FIX-NIP2X-002-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "ピカチュウ"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
     "pokemon.dex",
@@ -139283,6 +139666,9 @@
     ],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "ピッピ"
+    ],
     "hp": 30,
     "types": [
      "colorless"
@@ -139316,7 +139702,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PRN-012-EVOLVES-TO）: 空だった pokemon.evolves_to に「ピッピ」を入れた。根拠: kyuura が、同じカード（プロモ（neo）のピィ）の日本語版のカードの画像（pcg-search.com [N3]）で、進化先の欄「ピッピへ進化」「「ピッピ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-PRN-012）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [
@@ -139350,6 +139738,18 @@
     "english_text": "pokemontcg:basep-31",
     "pokemon.dex": "pokemontcg:basep-31"
    },
+   "corrections": [
+    {
+     "id": "FIX-PRN-012-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "ピッピ"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
     "jp_print.level"
@@ -140930,7 +141330,7 @@
     "dex": [
      237
     ],
-    "stage": "stage1",
+    "stage": "basic",
     "evolves_from": null,
     "hp": 60,
     "types": [
@@ -140994,7 +141394,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PRN-030-STAGE）: pokemon.stage を「stage1」から「basic」に直した。根拠: kyuura が、同じカード（プロモ（neo）のカポエラー）の日本語版のカードの画像（pcg-search.com [N3]）で、HP の下の帯の「たねポケモン」と、左上に進化の印・「〇〇から進化」の欄がないことを確かめた（2026-10-30。照合の記録 IMG-PRN-030）。ベイビィ（バルキー）から進化できることは印刷の段階を決めない（印刷はたねポケモン）"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [
@@ -141026,12 +141428,20 @@
     "en_print": "other_products.en_prints",
     "english_text": "pokemontcg:basep-37",
     "pokemon.dex": "pokemontcg:basep-37",
-    "pokemon.stage": "pcg_search_kind_conflicts_with_evolution_line"
+    "pokemon.stage": "card_corrections:FIX-PRN-030-STAGE"
    },
+   "corrections": [
+    {
+     "id": "FIX-PRN-030-STAGE",
+     "field": "pokemon.stage",
+     "before": "stage1",
+     "after": "basic",
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.stage",
-    "pokemon.evolves_from",
     "jp_print.level"
    ]
   },
@@ -141066,6 +141476,9 @@
     ],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "プリン"
+    ],
     "hp": 30,
     "types": [
      "colorless"
@@ -141099,7 +141512,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PRN-031-EVOLVES-TO）: 空だった pokemon.evolves_to に「プリン」を入れた。根拠: kyuura が、同じカード（プロモ（neo）のププリン）の日本語版のカードの画像（pcg-search.com [N3]）で、進化先の欄「プリンへ進化」「「プリン」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-PRN-031）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [
@@ -141133,6 +141548,18 @@
     "english_text": "pokemontcg:basep-36",
     "pokemon.dex": "pokemontcg:basep-36"
    },
+   "corrections": [
+    {
+     "id": "FIX-PRN-031-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "プリン"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
     "jp_print.level"
@@ -141745,6 +142172,9 @@
     "dex": [],
     "stage": "baby",
     "evolves_from": null,
+    "evolves_to": [
+     "ルージュラ"
+    ],
     "hp": 30,
     "types": [
      "water"
@@ -141778,7 +142208,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PRN-037-EVOLVES-TO）: 空だった pokemon.evolves_to に「ルージュラ」を入れた。根拠: kyuura が、同じカード（プロモ（neo）のムチュール）の日本語版のカードの画像（pcg-search.com [N3]）で、進化先の欄「ルージュラへ進化」「「ルージュラ」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-PRN-037）。同じ名前のほかの版の記録から写していない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -141807,6 +142239,18 @@
     "pokemon.retreat_cost": "pcg_search_page_dash",
     "pokemon.rules_text.ja": "pcg_search.note"
    },
+   "corrections": [
+    {
+     "id": "FIX-PRN-037-EVOLVES-TO",
+     "field": "pokemon.evolves_to",
+     "before": null,
+     "after": [
+      "ルージュラ"
+     ],
+     "basis": "card_image_check",
+     "decided_on": "2026-10-27"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
     "pokemon.dex",
@@ -141952,7 +142396,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "フシギダネ",
+     "en": null
+    },
     "hp": 50,
     "types": [
      "grass"
@@ -142002,7 +142449,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PRN-039-EVOLVES-FROM）: 空だった pokemon.evolves_from に「フシギダネ」を入れた。根拠: kyuura が、同じカード（ポケモンカードneo プロモのわるいフシギソウ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「フシギダネから進化」を読んだ（2026-10-30。照合の記録 IMG-PRN-039）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -142028,11 +142477,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search"
+    "pokemon.retreat_cost": "pcg_search",
+    "pokemon.evolves_from": "card_corrections:FIX-PRN-039-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-PRN-039-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "フシギダネ",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]
@@ -142058,7 +142520,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage2",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "わるいフシギソウ",
+     "en": null
+    },
     "hp": 70,
     "types": [
      "grass"
@@ -142101,7 +142566,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PRN-040-EVOLVES-FROM）: 空だった pokemon.evolves_from に「わるいフシギソウ」を入れた。根拠: kyuura が、同じカード（ポケモンカードneo プロモのわるいフシギバナ）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「2進化」と「わるいフシギソウから進化」を読んだ（2026-10-30。照合の記録 IMG-PRN-040）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -142127,11 +142594,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search"
+    "pokemon.retreat_cost": "pcg_search",
+    "pokemon.evolves_from": "card_corrections:FIX-PRN-040-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-PRN-040-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "わるいフシギソウ",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]
@@ -142588,7 +143068,10 @@
    "pokemon": {
     "dex": [],
     "stage": "stage1",
-    "evolves_from": null,
+    "evolves_from": {
+     "ja": "オニスズメ",
+     "en": null
+    },
     "hp": 60,
     "types": [
      "colorless"
@@ -142651,7 +143134,9 @@
    "trainer": null,
    "energy": null,
    "jp_en_differences": [],
-   "notes": [],
+   "notes": [
+    "訂正（FIX-PRN-045-EVOLVES-FROM）: 空だった pokemon.evolves_from に「オニスズメ」を入れた。根拠: kyuura が、同じカード（ポケモンカードneo プロモのわるいオニドリル）の日本語版のカードの画像（pcg-search.com [N3]）で、左上の「1進化」と「オニスズメから進化」を読んだ（2026-10-30。照合の記録 IMG-PRN-045）。ポケモンの系統・英語版から決めていない"
+   ],
    "source_ids": {
     "tcgdex": null,
     "pokemontcg": [],
@@ -142677,11 +143162,24 @@
    "play_scope": "standard",
    "field_sources": {
     "name.ja": "pcg_search",
-    "pokemon.retreat_cost": "pcg_search_page_dash"
+    "pokemon.retreat_cost": "pcg_search_page_dash",
+    "pokemon.evolves_from": "card_corrections:FIX-PRN-045-EVOLVES-FROM"
    },
+   "corrections": [
+    {
+     "id": "FIX-PRN-045-EVOLVES-FROM",
+     "field": "pokemon.evolves_from",
+     "before": null,
+     "after": {
+      "ja": "オニスズメ",
+      "en": null
+     },
+     "basis": "card_image_check",
+     "decided_on": "2026-10-30"
+    }
+   ],
    "same_card_group": null,
    "data_gaps": [
-    "pokemon.evolves_from",
     "pokemon.dex",
     "jp_print.level"
    ]

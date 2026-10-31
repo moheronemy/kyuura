@@ -322,7 +322,9 @@ def sidecar_stats():
           f"エンジンが数える未解決の裁定（{uc['latest_version']} まで）{uc['engine_total']} 件・そのうち停止コード {uc['engine_stop_codes']} 件"
           f"（v0.13 まで {len(uc['v013_items'])}・v0.17 で加わった {len(uc['v017_additions'])}）。エンジンが数えていない項目 {len(uc['not_in_engine_count'])} 件、"
           f"あとの版の事例 {len(uc['instances'])} 件、取り込みの範囲の外 {len(uc['out_of_scope'])} 件。停止コードのない論点 {len(uc['issues_without_stop_code'])} 件、"
-          f"エンジンの一覧と結んでいない論点 {len(uc['issues_not_in_index'])} 件")
+          f"エンジンの一覧と結んでいない論点 {len(uc['issues_not_in_index'])} 件" +
+          ''.join(f"。エンジンが報告した数（{v}。kyuura の一覧と照らしていない）停止コード {c['stop_codes']}・未解決の裁定 {c['unresolved_rulings']}"
+                  for v, c in uc['engine_reported']))
 
 
 if __name__ == '__main__':

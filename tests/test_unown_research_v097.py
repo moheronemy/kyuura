@@ -9,6 +9,7 @@
 """
 import copy
 import json
+import subprocess
 import sys
 import unittest
 from pathlib import Path
@@ -21,6 +22,7 @@ import build_cardlist  # noqa: E402
 RULE = '「アンノーン」はデッキに4枚までしか入れることができません。'
 FILLED = ('neo2-023', 'neo2-025', 'neo2-026')
 NOT_READ = ('neo2-027', 'neo2-028', 'neo2-030')
+AT_COMMIT = '78d090c'  # この調査のコミット（あとの作業の値と分けるための固定した入力）
 NEW_RULINGS = {
     'CR-UNOWN-DECK-LIMIT-ALL-LETTERS': 'SUPPORTED',
     'CR-UNOWN-DF-PROTECTS-OWN-UNOWN': 'CONFIRMED',
@@ -57,7 +59,10 @@ class RulesTextTest(Base):
             self.assertEqual(self.by_id[cid]['pokemon']['rules_text']['ja'], RULE, cid)
 
     def test_corrections_record_the_image_check_and_not_a_book_check(self):
-        fixes = {c['card_id']: c for c in self.ledger['corrections'] if c['field'] == 'pokemon.rules_text.ja'}
+        # この調査の時点（2026-10-24）までのルール文の訂正。2026-10-27 のベイビィ 6 枚の訂正（FIX-neo1-022-RULES-TEXT-JA など）は
+        # tests/test_baby_preparation_v0113.py が確かめる
+        fixes = {c['card_id']: c for c in self.ledger['corrections']
+                 if c['field'] == 'pokemon.rules_text.ja' and c['decided_on'] <= '2026-10-24'}
         self.assertEqual(sorted(fixes), list(FILLED))
         for cid, c in fixes.items():
             self.assertEqual((c['before'], c['after'], c['applied_by'], c['basis'], c['kind']),
@@ -80,11 +85,20 @@ class RulesTextTest(Base):
         self.assertFalse([c for c in self.ledger['corrections'] if c['card_id'] == 'neo2-025' and c['field'] == 'name.ja'])
 
     def test_letters_not_read_stay_empty(self):
-        cands = {(c['card_id'], c['field']): c for c in self.ledger['candidates']}
+        # この調査のコミット（78d090c）では、画像を読んでいない M・U・A のルール文は空で、訂正の候補（gap_open）だった
+        def at(rel):
+            return json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{AT_COMMIT}:{rel}'], capture_output=True, text=True, check=True).stdout)
+        then = {c['id']: c for c in at('data/cards.json')['cards']}
+        cands = {(c['card_id'], c['field']): c for c in at('data/curation/card_corrections.json')['candidates']}
         for cid in NOT_READ:
-            self.assertIsNone(self.by_id[cid]['pokemon']['rules_text']['ja'], cid)
-            self.assertIn('pokemon.rules_text.ja', self.by_id[cid]['data_gaps'])
+            self.assertIsNone(then[cid]['pokemon']['rules_text']['ja'], cid)
+            self.assertIn('pokemon.rules_text.ja', then[cid]['data_gaps'])
             self.assertEqual(cands[(cid, 'pokemon.rules_text.ja')]['status'], 'gap_open')
+            # 2026-10-30 に、その文字のカードの画像で確かめて埋めた（ほかの文字の文面から写していない。候補は訂正に移した）
+            fix = next(c for c in self.ledger['corrections'] if c['card_id'] == cid and c['field'] == 'pokemon.rules_text.ja')
+            self.assertEqual((fix['basis'], fix['image_check'], fix['decided_on'], fix['previous_candidate']),
+                             ('card_image_check', f'IMG-{cid}', '2026-10-30', cands[(cid, 'pokemon.rules_text.ja')]))
+            self.assertNotIn((cid, 'pokemon.rules_text.ja'), {(c['card_id'], c['field']) for c in self.ledger['candidates']})
 
     def test_regeneration_fills_only_an_empty_value(self):
         fix = next(c for c in self.ledger['corrections'] if c['id'] == 'FIX-neo2-025-RULES-TEXT-JA')
@@ -186,7 +200,9 @@ class IssuesTest(Base):
     def test_counts_at_past_imports_do_not_include_the_new_issue(self):
         self.assertEqual(bcr.unresolved_counts(self.ctx, as_of='v0.68')['research_issues'], 71)
         self.assertEqual(bcr.unresolved_counts(self.ctx, as_of='v0.25')['research_issues'], 24)
-        self.assertEqual(bcr.unresolved_counts(self.ctx)['research_issues'], 72)
+        # アンノーンの論点を数える、次の取り込み（v0.113。2026-10-27）の時点の数。そのあとに記録したベイビィの論点
+        # （UQ-NEO-TEXT-BABY-CATEGORIES）は数えない（今の数は tests/test_baby_preparation_v0113.py）
+        self.assertEqual(bcr.unresolved_counts(self.ctx, as_of='v0.113')['research_issues'], 72)
 
     def test_validation_requires_recorded_after_and_index_flag(self):
         self.assertEqual(bcr.validate(self.ctx), [])

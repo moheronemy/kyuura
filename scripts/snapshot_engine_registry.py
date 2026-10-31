@@ -14,6 +14,8 @@
   - cards: kyuura_engine.effects.DEFAULT_EFFECTS の登録（ワザ・トレーナー・ポケモンパワー・特殊エネルギー）。implementation は実装のクラス名、
     text_ja は登録のときにエンジンが照合した kyuura の写しの文面、play_text_ja・source はエンジンが従う文面と出典（エンジンの採用で、kyuura の裁定ではない）
 エンジンの版を上げるときは、新しい版の木で作り直し、scripts/build_engine_targets.py で data/engine_targets.json を作り直す（自動では更新しない）。
+前の写しの参照（版・コミット・取得日・件数）は previous_snapshots に残す（前の写しの登録の中身は git の履歴にある。前の版の時点の取得日や件数を、
+新しい版の値で書きかえない）。同じコミットで作り直したときは previous_snapshots を変えない。
 """
 import argparse
 import json
@@ -61,6 +63,13 @@ def main():
     ap.add_argument('--out', type=Path, default=OUT)
     args = ap.parse_args()
     registry_id, counts, playable, cards, copied = snapshot(args.engine)
+    previous = []
+    if args.out.exists():
+        old = json.loads(args.out.read_text(encoding='utf-8'))
+        previous = old.get('previous_snapshots', [])
+        if old['engine']['commit'] != args.commit:
+            previous = [{'engine': old['engine'], 'extracted_on': old['extracted_on'], 'registry_id': old['registry_id'],
+                         'counts': old['counts'], 'replaced_on': args.extracted_on}] + previous
     doc = {
         '_comment': 'kyuura-engine の固定した版の、カードの効果の登録表（effects.py の DEFAULT_EFFECTS）と対戦用のカード id の写し。'
                     'scripts/build_engine_targets.py が、記録とエンジンの登録の対応を調べるのに使う。エンジンの実装の記録で、kyuura の裁定・原典の照合ではない'
@@ -74,6 +83,7 @@ def main():
                '（写しの元のコミットの値に、エンジンの補正 CONFIRMED_CORRECTIONS・USER_PROVIDED_CORRECTIONS を当てはめたもの）',
         'registry_id': registry_id,
         'counts': counts,
+        'previous_snapshots': previous,
         'playable': playable,
         'cards': cards,
     }

@@ -36,13 +36,13 @@
 | 24 | ネイティオ | ポケモン | 超 | 1進化 | 70 | ◆ | Xatu<br>Neo Discovery 52 |  |
 | 25 | アンノーンD | ポケモン | 超 | たね | 40 | ◆ | Unown [D]<br>Neo Discovery 47 | 日英の違い: ポケモンパワー DARK df（[Darkness]）で「-30」するダメージの対象と、2 匹以上のときの条件<br>訂正（FIX-neo2-025-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「D」）の日本語版のカードの画像を 2 つのサイトで読み、カード名の上（右上）の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-24）。転記（なぞのばしょ）はこの欄を載せていなかった（なぞのばしょのページの欄にルール文がない。印刷されていないのではない）。英語版の文面・ほかの文字のアンノーンの文面からは写していない |
 | 26 | アンノーンF | ポケモン | 超 | たね | 40 | ◆ | Unown [F]<br>Neo Discovery 48 | 訂正（FIX-neo2-026-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「F」）の日本語版のカードの画像を 2 つのサイトで読み、カード名の上（右上）の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-24）。転記（なぞのばしょ）はこの欄を載せていなかった（なぞのばしょのページの欄にルール文がない。印刷されていないのではない）。英語版の文面・ほかの文字のアンノーンの文面からは写していない |
-| 27 | アンノーンM | ポケモン | 超 | たね | 40 | ◆ | Unown [M]<br>Neo Discovery 49 |  |
-| 28 | アンノーンU | ポケモン | 超 | たね | 40 | ◆ | Unown [U]<br>Neo Discovery 51 |  |
+| 27 | アンノーンM | ポケモン | 超 | たね | 40 | ◆ | Unown [M]<br>Neo Discovery 49 | 訂正（FIX-neo2-027-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「M」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-027）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない |
+| 28 | アンノーンU | ポケモン | 超 | たね | 40 | ◆ | Unown [U]<br>Neo Discovery 51 | 訂正（FIX-neo2-028-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「U」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-028）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない |
 | 29 | エーフィ | ポケモン | 超 | 1進化 | 80 | ★キラ | Espeon<br>Neo Discovery 1 |  |
-| 30 | アンノーンA | ポケモン | 超 | たね | 40 | ★キラ | Unown [A]<br>Neo Discovery 14・33 |  |
+| 30 | アンノーンA | ポケモン | 超 | たね | 40 | ★キラ | Unown [A]<br>Neo Discovery 14・33 | 訂正（FIX-neo2-030-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「A」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-030）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない |
 | 31 | ソーナンス | ポケモン | 超 | たね | 90 | ★キラ | Wobbuffet<br>Neo Discovery 16・35 |  |
 | 32 | オムナイト | ポケモン | 闘 | 1進化 | 50 | ● | Omanyte<br>Neo Discovery 60 |  |
-| 33 | バルキー | ポケモン | 闘 | ベイビィ | 30 | ● | Tyrogue<br>Neo Discovery 66 |  |
+| 33 | バルキー | ポケモン | 闘 | ベイビィ | 30 | ● | Tyrogue<br>Neo Discovery 66 | 訂正（FIX-neo2-033-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のバルキー）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo2-033、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない<br>訂正（FIX-neo2-033-EVOLVES-TO）: 空だった pokemon.evolves_to に「エビワラー・サワムラー・カポエラー」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のバルキー）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「エビワラーへ進化」「サワムラーへ進化」「カポエラーへ進化」「「エビワラー」「サワムラー」「カポエラー」のいずれかを上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo2-033）。同じ名前のほかの版の記録から写していない |
 | 34 | ヨーギラス | ポケモン | 闘 | たね | 40 | ● | Larvitar<br>Neo Discovery 57 |  |
 | 35 | オムスター | ポケモン | 闘 | 2進化 | 80 | ◆ | Omastar<br>Neo Discovery 43 |  |
 | 36 | サナギラス | ポケモン | 闘 | 1進化 | 70 | ◆ | Pupitar<br>Neo Discovery 45 |  |
@@ -59,7 +59,7 @@
 | 47 | ノコッチ | ポケモン | 無色 | たね | 30 | ● | Dunsparce<br>Neo Discovery 54 |  |
 | 48 | ヒメグマ | ポケモン | 無色 | たね | 40 | ● | Teddiursa<br>Neo Discovery 65 |  |
 | 49 | イーブイ | ポケモン | 無色 | たね | 50 | ◆ | Eevee<br>Neo Discovery 38 |  |
-| 50 | ププリン | ポケモン | 無色 | ベイビィ | 30 | ◆ | Igglybuff<br>Neo Discovery 40 |  |
+| 50 | ププリン | ポケモン | 無色 | ベイビィ | 30 | ◆ | Igglybuff<br>Neo Discovery 40 | 訂正（FIX-neo2-050-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のププリン）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo2-050、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない<br>訂正（FIX-neo2-050-EVOLVES-TO）: 空だった pokemon.evolves_to に「プリン」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のププリン）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「プリンへ進化」「「プリン」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo2-050）。同じ名前のほかの版の記録から写していない |
 | 51 | リングマ | ポケモン | 無色 | 1進化 | 80 | ★キラ | Ursaring<br>Neo Discovery 15・34 |  |
 | 52 | ドーブル | ポケモン | 無色 | たね | 50 | ★キラ | Smeargle<br>Neo Discovery 11・30 | 日英の違い: ワザ スケッチ（Sketch）でコピーしたワザの条件 |
 | 53 | エネルギーアーク | トレーナー |  |  |  | ● | Energy Ark<br>Neo Discovery 75 |  |
@@ -472,7 +472,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 
 英語版: Neo Discovery 49
 
-- ルール: You may have up to 4 Basic Pokémon cards in your deck with Unown in their names.
+- ルール: 「アンノーン」はデッキに4枚までしか入れることができません。 / You may have up to 4 Basic Pokémon cards in your deck with Unown in their names.
 - ポケモンパワー「METAL df[メタル ディーエフ] / [Metal]」
   - 日本語: 自分の場の「アンノーン」が「鋼」ポケモンからダメージを受けるとき、そのダメージは「-30」される。自分の場のほかのアンノーン「M」の「METAL df」がはたらいているとき、この力は、はたらかない。
   - 英語: Whenever a Metal Pokémon damages 1 of your Pokémon, reduce that damage by 30 (after applying Weakness and Resistance). This power stops working if you have more than 1 Unown [M] in play. (This power works even if Unown [M] is Asleep, Confused, or Paralyzed.)
@@ -482,6 +482,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 | めざめるパワー / Hidden Power | 超 | 10 |  |
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo2-027-unknown-m/)
+- 備考: 訂正（FIX-neo2-027-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「M」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-027）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない
 - 日本版の収録商品: 遺跡をこえて...
 
 ### 28. アンノーンU / Unown [U]
@@ -490,7 +491,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 
 英語版: Neo Discovery 51
 
-- ルール: You may have up to 4 Basic Pokémon cards in your deck with Unown in their names.
+- ルール: 「アンノーン」はデッキに4枚までしか入れることができません。 / You may have up to 4 Basic Pokémon cards in your deck with Unown in their names.
 - ポケモンパワー「UNDO[アンドゥ] / [Undo]」
   - 日本語: この力は、自分のベンチに、このカードとアンノーン「N」「D」「O」がいるとき、自分の番ごとに1回使える。自分のバトル場のポケモンと、そのポケモンについているすべてのカードを、自分の手札にもどす。
   - 英語: Once during your turn (before your attack), if you have Unown [U], Unown [N], Unown [D], and Unown [O] on your Bench, you may return your Active Pokémon and all cards attached to it to your hand.
@@ -500,6 +501,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 | めざめるパワー / Hidden Power | 超 | 10 |  |
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo2-028-unknown-u/)
+- 備考: 訂正（FIX-neo2-028-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「U」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-028）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない
 - 日本版の収録商品: 遺跡をこえて...
 
 ### 29. エーフィ / Espeon
@@ -522,7 +524,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 
 英語版: Neo Discovery 14・33
 
-- ルール: You may have up to 4 Basic Pokémon cards in your deck with Unown in their names.
+- ルール: 「アンノーン」はデッキに4枚までしか入れることができません。 / You may have up to 4 Basic Pokémon cards in your deck with Unown in their names.
 - ポケモンパワー「ANGER[アンガー] / [Anger]」
   - 日本語: この力は、自分の場の「アンノーン」が「めざめるパワー」を使うとき、使える。その「めざめるパワー」のダメージに、このカードにのっているダメージカウンターの数×10のダメージを追加する。このカード以外のアンノーン「A」が「ANGER」を使っているとき、この力は使えない。
   - 英語: Whenever 1 of your Pokémon with Unown in its name uses its Hidden Power attack, that attack does 10 more damage for each damage counter on Unown [A]. If you have more than 1 Unown [A] in play, use only 1 [Anger] for each attack.
@@ -532,6 +534,7 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 | めざめるパワー / Hidden Power | 超 | 10 |  |
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo2-030-unknown-a/)
+- 備考: 訂正（FIX-neo2-030-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「アンノーン」はデッキに4枚までしか入れることができません。」を入れた。根拠: kyuura が、同じカード（第2弾「遺跡をこえて...」のアンノーン「A」）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、カード名の上の小さい文字のルール文「「アンノーン」はデッキに4枚までしか入れることができません。」を確かめた（2026-10-30。照合の記録 IMG-neo2-030）。ほかの文字のアンノーンの文面・英語版の文面・グループ全体の裁定（CR-UNOWN-DECK-LIMIT-ALL-LETTERS）からは写していない
 - 日本版の収録商品: 遺跡をこえて...
 
 ### 31. ソーナンス / Wobbuffet
@@ -566,17 +569,19 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 
 ### 33. バルキー / Tyrogue
 
-ベイビィ／LV.7／闘／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ●
+ベイビィ（エビワラー・サワムラー・カポエラーへ進化）／LV.7／闘／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ●
 
 英語版: Neo Discovery 66
 
-- ルール: If this Baby Pokémon is your Active Pokémon and your opponent announces an attack, your opponent flips a coin (before doing anything else). If tails, your opponent's turn ends.
+- ルール: 「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。 / If this Baby Pokémon is your Active Pokémon and your opponent announces an attack, your opponent flips a coin (before doing anything else). If tails, your opponent's turn ends.
 
 | ワザ | エネルギー | ダメージ | 効果 |
 |---|---|---:|---|
 | スマッシュパンチ / Smash Punch | 無 | 30 | 日本語: コインを投げて「うら」なら、このワザは失敗する。 英語: Flip a coin. If tails, this attack does nothing. |
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo2-033-balkie/)
+- 備考: 訂正（FIX-neo2-033-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のバルキー）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo2-033、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない
+- 備考: 訂正（FIX-neo2-033-EVOLVES-TO）: 空だった pokemon.evolves_to に「エビワラー・サワムラー・カポエラー」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のバルキー）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「エビワラーへ進化」「サワムラーへ進化」「カポエラーへ進化」「「エビワラー」「サワムラー」「カポエラー」のいずれかを上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo2-033）。同じ名前のほかの版の記録から写していない
 - 日本版の収録商品: 遺跡をこえて...
 
 ### 34. ヨーギラス / Larvitar
@@ -809,16 +814,18 @@ Neo Discovery にあって、日本版の本弾に収録されていないカー
 
 ### 50. ププリン / Igglybuff
 
-ベイビィ／LV.6／無色／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ◆
+ベイビィ（プリンへ進化）／LV.6／無色／HP 30／弱点 なし／抵抗力 なし／にげる 0／レア ◆
 
 英語版: Neo Discovery 40
 
-- ルール: If this Baby Pokémon is your Active Pokémon and your opponent announces an attack, your opponent flips a coin (before doing anything else). If tails, your opponent's turn ends.
+- ルール: 「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。 / If this Baby Pokémon is your Active Pokémon and your opponent announces an attack, your opponent flips a coin (before doing anything else). If tails, your opponent's turn ends.
 - ポケモンパワー「じっとみる / Gaze」
   - 日本語: この力は、自分の番ごとに1回使える。相手のベンチの「特殊能力」を持っているポケモンを1匹選ぶ。そのポケモンは、この番が終わるまで、「特殊能力」を使うことができず、その力も消える。（そのポケモンがバトル場に出てきたとき、この効果は消える。）
   - 英語: Once during your turn (before your attack), choose 1 of your opponent's Benched Pokémon that has a Pokémon Power. That power stops working until the end of this turn. This effect ends if that Pokémon leaves the Bench.
 
 - 日本語テキストの出典: [なぞのばしょ](https://nazonobasho.com/neo2-050-pupurin/)
+- 備考: 訂正（FIX-neo2-050-RULES-TEXT-JA）: 空だった pokemon.rules_text.ja に「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のププリン）の日本語版のカードの画像を pcg-search.com [N3]・なぞのばしょ [N1] で読み、ルール欄の全文「「ベイビィポケモン」がバトル場にいるかぎり、相手プレイヤーは、ワザを使うときにコインを投げて、「うら」なら、そのワザは失敗します。」を確かめた（2026-10-27。照合の記録 IMG-neo2-050、data/curation/card_image_checks.json）。ほかのベイビィの転記・英語版の文面からは写していない
+- 備考: 訂正（FIX-neo2-050-EVOLVES-TO）: 空だった pokemon.evolves_to に「プリン」を入れた。根拠: kyuura が、同じカード（拡張パック第2弾「遺跡をこえて...」のププリン）の日本語版のカードの画像（pcg-search.com [N3]・なぞのばしょ [N1]）で、進化先の欄「プリンへ進化」「「プリン」を上に重ねて進化させることができます。」を読んだ（2026-10-27。照合の記録 IMG-neo2-050）。同じ名前のほかの版の記録から写していない
 - 日本版の収録商品: 遺跡をこえて...
 
 ### 51. リングマ / Ursaring

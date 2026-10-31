@@ -7247,6 +7247,22 @@
      ]
     },
     {
+     "printed": "127",
+     "pdf": 129,
+     "content": "ピカチュウ（LV.16／HP60）2 つの欄（1 つ目は「トヨタオートキャンペーン」プレゼントカードとイントロパック、図版はイントロパックの印刷。2 つ目は「すぐわかるポケモンカードの遊びかた」とコロコロコミック96年11月号のおまけカード、図版は Kinebuchi のクレジットの印刷）。なきごえの最新の説明「次の相手の番、このワザを受けた相手は、このカードにダメージを与えるとき、そのダメージが「-10」される。」（2 つの欄で同じ）と解説。マチスのピカチュウ（2026-10-30 に kyuura が画像で読んだ）",
+     "refs": [
+      "LD-PR1-003-ATK0",
+      "LD-PR1-001-ATK0",
+      "LD-PR1-017-ATK0",
+      "LD-IP1-040-ATK0",
+      "CC-PR1-003-P127",
+      "CC-IP1-040-P127",
+      "CR-PIKACHU-GROWL-LATEST",
+      "CR-PIKACHU-GROWL-OPPONENT-EFFECT",
+      "UQ-GROWL-NON-ATTACK-DAMAGE"
+     ]
+    },
+    {
      "printed": 136,
      "pdf": 138,
      "content": "ビリリダマ（ポケモンカード第1弾。LV.10／HP40）。たいあたり（説明文なし）（kyuura-engine の照合の記録の取り込み。kyuura は画像を読み直していない）",
@@ -7296,6 +7312,18 @@
      "refs": [
       "UQ-EFFECT-AFTER-NO-DAMAGE",
       "CC-PMCG6-044-P155"
+     ]
+    },
+    {
+     "printed": "156",
+     "pdf": 158,
+     "content": "ヤドラン（LV.26／HP60。第3弾）、ヤドラン（LV.35／HP90。拡張シート第3弾緑版）、わるいヤドラン。LV.35 のおおいびきの最新の説明「このカードが「ねむり」状態ではないとき、このワザは失敗する。」（印刷は「このワザは、このカードが「ねむり」状態の時だけ使える。」）と解説（ねむり状態のヤドランが「おおいびき」で攻撃できる）（2026-10-30 に kyuura が画像で読んだ）",
+     "refs": [
+      "LD-ES3-021-ATK1",
+      "CC-ES3-021-P156",
+      "CR-SLOWBRO-SNORE-WHILE-ASLEEP",
+      "CR-SLOWBRO-SNORE-AWAKE-FAILS",
+      "CR-SLOWBRO-SNORE-ONLY-THIS-ATTACK"
      ]
     },
     {
@@ -7557,7 +7585,7 @@
     {
      "printed": "321〜325",
      "pdf": "323〜327",
-     "content": "ワザによるダメージと効果、ダメージ計算の順番（プラスパワーの最新の説明を引く）、特殊状態、持続する効果、ポケモンチェック、きぜつ、サドン・デス、進化・退化・変身（ばける）、ポケモンカード★ネオ（ベイビィポケモン）",
+     "content": "ワザによるダメージと効果、ダメージ計算の順番（プラスパワーの最新の説明を引く）、特殊状態、持続する効果、ポケモンチェック、きぜつ、サドン・デス、進化・退化・変身（ばける）、ポケモンカード★ネオ（ベイビィポケモン）。p.324〜325 の「20 ポケモンの変身」（［へんしん］［ばける］の最新の説明の引用をふくむ）は 2026-10-31 に kyuura が画像で読み直した（PDF 326・327）",
      "refs": [
       "NEO-2000-OFFICIAL-RULES",
       "NEO-2000-PLAYRULE",
@@ -7568,7 +7596,20 @@
       "GR-2000-P322-PERSISTENT-EFFECTS",
       "GR-2000-P323-KNOCKOUT",
       "GR-2000-P324-DEVOLUTION",
-      "UQ-RETALIATION-DOUBLE-KO"
+      "UQ-RETALIATION-DOUBLE-KO",
+      "GR-2000-P324-TRANSFORM-DEFINITION",
+      "GR-2000-P324-TRANSFORM-TOP-CARD",
+      "GR-2000-P324-TRANSFORM-NAME-AND-KIND",
+      "GR-2000-P325-TRANSFORM-OWN-STATE",
+      "GR-2000-P325-TRANSFORM-NOT-NEW",
+      "GR-2000-P325-TRANSFORM-DURING-ACTION",
+      "CR-TRANSFORM-NAME-AND-KIND",
+      "CR-TRANSFORM-BABY-RULE",
+      "CR-TRANSFORM-KEEPS-OWN-STATE",
+      "CR-TRANSFORM-NOT-NEWLY-PLAYED",
+      "CR-TRANSFORM-FROZEN-DURING-ACTION",
+      "UQ-TRANSFORM-REVERT-KNOCKOUT-TIMING",
+      "UQ-TRANSFORM-BABY-AND-BASIC"
      ]
     },
     {
@@ -7779,6 +7820,27 @@
      "refs": [
       "LD-PMCG3-022-ATK0",
       "CC-PMCG3-022-P116"
+     ]
+    },
+    {
+     "printed": "239",
+     "pdf": 241,
+     "content": "メタモン（拡張シート第2弾赤版。LV.15／HP40）・メタモン（第3弾化石の秘密。LV.20／HP50）・キョウのメタモン（LV.12／HP40）。すごいへんしんの最新の説明（8 つの色を挙げる）と解説。化石のメタモンの［へんしん］の欄も 8 つの色を挙げ、解説はベンチでは HP50 のメタモンにもどり、ダメージが 50 をこえた状態でベンチにもどるときぜつする、相手が入れ替わったときも同じとする（2026-10-31 に kyuura が画像で読んだ）",
+     "refs": [
+      "LD-ES2-032-PWR0",
+      "CC-ES2-032-P239",
+      "CR-TRANSFORM-COPIES-TOP-CARD",
+      "CR-TRANSFORM-REVERT-KNOCKOUT",
+      "CR-SUPER-TRANSFORM-REVERT-KNOCKOUT",
+      "CR-SUPER-TRANSFORM-CHOICE",
+      "CR-SUPER-TRANSFORM-REVERT-CONDITIONS",
+      "CR-SUPER-TRANSFORM-ONCE-PER-TURN",
+      "CR-SUPER-TRANSFORM-ENERGY-PAYMENT",
+      "UQ-TRANSFORM-ENERGY-COLOR-LIST",
+      "UQ-SUPER-TRANSFORM-TARGETS",
+      "UQ-SUPER-TRANSFORM-SOURCE-CHANGES",
+      "UQ-SUPER-TRANSFORM-SUPPRESSED-FORM",
+      "UQ-SUPER-TRANSFORM-ENERGY-COLORS"
      ]
     }
    ],

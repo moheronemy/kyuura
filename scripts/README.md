@@ -36,8 +36,9 @@ python3 scripts/build_cardlist.py --jp "$WORK/jp.json" \
   --en "$WORK/pokemon-tcg-data" --species "$WORK/pokemon_species_names.csv" [--check]
 
 # kyuura-engine の登録表の写しを作り直す（エンジンの版を上げるときだけ。決まったコミットの木を git archive で展開して使う）
-python3 -I scripts/snapshot_engine_registry.py --engine "$WORK/kyuura-engine-24bfbe2" --commit 24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1 \
-  --branch claude/v0.68-final-pmcg-cards --version v0.68 --extracted-on 2026-10-19
+# 前の写しの参照（版・コミット・取得日・件数）は previous_snapshots に残る（2026-10-27 に v0.68 から v0.113 に上げた）
+python3 -I scripts/snapshot_engine_registry.py --engine "$WORK/kyuura-engine-2d113b5" --commit 2d113b5eeea0dbd4f7466e144f7a1345494405c0 \
+  --branch claude/v0.113-variable-coins-search-attachments --version v0.113 --extracted-on 2026-10-27
 
 # エンジンの実装の対象の一覧を生成（data/curation/engine_registered_cards.json・data/cards.json → data/engine_targets.json、docs/engine-targets.md）
 python3 scripts/build_engine_targets.py
@@ -115,6 +116,7 @@ python3 scripts/research_stats.py
 | `sets.json` | 各弾の名前・発売日・収録数。資料によって発売日が違う弾は `release_note` に別の日付とその資料を書く（各弾のページの発売日の後ろに表示） |
 | `non_pack.json` | 拡張パック以外の商品の記号（id の規則）、番号違いのまとめ、対戦のカードでない項目、補足欄の役割、使える範囲（`play_scope`）、収録していない商品・範囲（`uncovered_products`） |
 | `card_corrections.json` | カードデータの訂正の記録（生成のたびに当てはめる。当てはめる前の値が違えば止まる）と、訂正しなかった候補とその理由 |
+| `card_image_checks.json` | kyuura がカードの画像で印刷の欄を読んだ記録（`IMG-`。2026-10-27 のベイビィ 13 枚、2026-10-30 の 18 枚と neo2 の化石 4 枚と v0.122 のあとの 7 枚、2026-10-31 のメタモン ES2-032・GR団のミュウツー PRN-041）。`build_cardlist.py` が、進化ラインを結んだ（link）あとで、画像の値・訂正の記録・生成した値が同じかを確かめる（違えば止まる）。拡張パック以外の商品の段階の食い違い（サイトの種類の欄と進化ライン）を画像が確かめたら、`field_sources` をその照合の記録にする（値は変えない） |
 | `engine_registered_cards.json` | kyuura-engine の固定した版の登録表の写し（生成物。`snapshot_engine_registry.py`） |
 
 最後に生成したときの出典データ:
@@ -122,6 +124,7 @@ python3 scripts/research_stats.py
 - tcgdex/cards-database `4199850a6af49665db0080fa2bb9ef751750a406`
 - PokemonTCG/pokemon-tcg-data `39a26a144c8b6ef6c2fb17b2c29d0bb7121e3a11`
 - pcg-search.com のカードページの読み直し 2026-10-19（`data/pcgsearch_page_checks.json`）
-- kyuura-engine `24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1`（v0.68。`data/curation/engine_registered_cards.json`）
+- kyuura-engine `2d113b5eeea0dbd4f7466e144f7a1345494405c0`（v0.113。`data/curation/engine_registered_cards.json`。2026-10-27 に作り直した。その前は `24bfbe2c1bf3b5fb0521e229ac92cf2fa4a154a1`（v0.68）で、`previous_snapshots` に残す）
+- カードの画像の照合の記録 `data/curation/card_image_checks.json`（2026-10-27・2026-10-30。生成の入力ではなく、生成した値と照らす記録）
 
-2026-10-19 に、この入力で `build_cardlist.py --check` が今のファイルと同じになることを確かめました（20 ファイル）。
+2026-10-19 に、この入力で `build_cardlist.py --check` が今のファイルと同じになることを確かめました（20 ファイル）。2026-10-27 にも同じ入力（tcgdex・pokemon-tcg-data は上のコミット）で確かめました（20 ファイル）。2026-10-30 にも、同じ入力で基点 `e519b99` と作業のあとの両方を確かめました（20 ファイル。`git archive` で展開した木には gitignore された `data/ja_text_*_report.json` がないので、比べるときは置く）。同じ日の v0.122 のあとの作業でも、同じ入力で基点 `2fe0bc0` と作業のあとの両方を確かめました（20 ファイル）。2026-10-31 にも、同じ入力で基点 `74b3ceb` と作業のあとの両方を確かめました（20 ファイル）。

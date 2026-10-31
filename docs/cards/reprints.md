@@ -107,7 +107,7 @@
 | PMCG1-011 フシギバナ | Base Set 15（Venusaur） | Legendary Collection 18 | 文面 |
 | PMCG1-014 ヒトカゲ | Base Set 46（Charmander） | Legendary Collection 70 | 文面 |
 | PMCG1-017 リザード | Base Set 24（Charmeleon） | Legendary Collection 37 | 文面 |
-| PMCG1-019 ウインディ | Base Set 23（Arcanine） | Legendary Collection 36 | 文面 |
+| PMCG1-019 ウィンディ | Base Set 23（Arcanine） | Legendary Collection 36 | 文面 |
 | PMCG1-021 リザードン | Base Set 4（Charizard） | Legendary Collection 3 | 文面 |
 | PMCG1-022 キュウコン | Base Set 12（Ninetales） | Base Set 2 13 | 文面 |
 | PMCG1-022 キュウコン | Base Set 12（Ninetales） | Legendary Collection 17 | 文面 |

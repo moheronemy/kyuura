@@ -509,6 +509,8 @@ def data_gaps(r):
             g.append('pokemon.stage')
         if p['stage'] in STAGE_BEFORE and not p['evolves_from']:
             g.append('pokemon.evolves_from')
+        if 'evolves_to' in p and p['evolves_to'] is None:  # 進化先の欄のある段階（ベイビィ）で未確認
+            g.append('pokemon.evolves_to')
         if p['hp'] is None:
             g.append('pokemon.hp')
         if not p['types']:
