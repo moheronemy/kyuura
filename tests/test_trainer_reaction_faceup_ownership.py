@@ -22,6 +22,8 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 import build_card_rulings as bcr  # noqa: E402
 
 BASE = '134a664c6adf67d5604148a31b58e1a7d26d4d6d'  # この作業の基点
+# この作業の終わりのコミット。カードの値の比べはこの時点に固定する（あとの作業の変更、たとえば 2026-10-31 の目録の分類の欄の追加と分ける）
+AT_COMMIT = '57d01f45cfb8b086d03dc0525b329cf6adeff69b'
 SWAP_BEFORE = '(このカードは、お互いに手札が1枚以上ある時だけ使える)'
 SWAP_AFTER = '(このカードは、お互いに手札が1枚以上ある時だけ、使える)'
 NEW_IMAGES = {'IMG-neo1-049', 'IMG-ES2-035', 'IMG-PR1-027'}
@@ -40,8 +42,8 @@ def load(rel):
     return json.loads((ROOT / rel).read_text(encoding='utf-8'))
 
 
-def at_base(rel):
-    return json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{BASE}:{rel}'], capture_output=True, text=True, check=True).stdout)
+def at_base(rel, commit=BASE):
+    return json.loads(subprocess.run(['git', '-C', str(ROOT), 'show', f'{commit}:{rel}'], capture_output=True, text=True, check=True).stdout)
 
 
 class Data(unittest.TestCase):
@@ -66,13 +68,16 @@ class CardValueTest(Data):
 
     def test_only_one_comma_changed(self):
         old = {c['id']: c for c in at_base('data/cards.json')['cards']}
-        self.assertEqual(len(self.cards), 1377)
+        then = {c['id']: c for c in at_base('data/cards.json', AT_COMMIT)['cards']}
+        self.assertEqual(len(then), 1377)
+        self.assertEqual(set(old), set(then))
         self.assertEqual(set(old), set(self.by_id))
-        self.assertEqual({i for i in old if old[i] != self.by_id[i]}, {'PR1-027'})
-        before, after = old['PR1-027']['trainer']['text']['ja'], self.by_id['PR1-027']['trainer']['text']['ja']
+        self.assertEqual({i for i in old if old[i] != then[i]}, {'PR1-027'})
+        before, after = old['PR1-027']['trainer']['text']['ja'], then['PR1-027']['trainer']['text']['ja']
+        self.assertEqual(self.by_id['PR1-027']['trainer']['text']['ja'], after)  # 今の値も同じ
         self.assertEqual(before.replace(SWAP_BEFORE, SWAP_AFTER), after)
         self.assertEqual(len(after), len(before) + 1)
-        a, b = copy.deepcopy(old['PR1-027']), copy.deepcopy(self.by_id['PR1-027'])
+        a, b = copy.deepcopy(old['PR1-027']), copy.deepcopy(then['PR1-027'])
         for r in (a, b):  # 文面・注記・訂正の記録のほかは同じ
             r['trainer']['text']['ja'] = None
             r['notes'] = r['notes'][:1]
@@ -95,8 +100,9 @@ class CardValueTest(Data):
         # 名前の末尾の「！」は報告事項で直さない。レベル・図鑑番号は埋めない。英語版の文を日本語に加えない
         self.assertEqual(self.by_id['PR1-027']['name']['ja'], 'とりかえっこプリーズ')
         old = {c['id']: c for c in at_base('data/cards.json')['cards']}
+        then = {c['id']: c for c in at_base('data/cards.json', AT_COMMIT)['cards']}
         for cid in ('neo1-049', 'ES2-035'):
-            self.assertEqual(self.by_id[cid], old[cid], cid)
+            self.assertEqual(then[cid], old[cid], cid)
         self.assertEqual(self.by_id['neo1-049']['jp_print']['level'], 39)  # 拡張パックの値（画像の LV.39 と同じ）。変えていない
         self.assertIsNone(self.by_id['PR1-027']['jp_print']['level'])
         self.assertNotIn('のぞむなら', self.by_id['neo1-049']['pokemon']['powers'][0]['text']['ja'])
@@ -146,10 +152,13 @@ class SourceReadingTest(Data):
         self.assertNotIn('name.ja', self.cc['CC-PR1-027-P293']['checked_fields'])
 
     def test_page_records(self):
-        doc = next(d for d in self.ctx['rule_history']['documents'] if d['code'] == 'P43')
+        # この作業のコミットの時点で比べる（あとの作業がページの記録を加えても、この作業で加えたページは同じ）
+        doc = next(d for d in at_base('data/rule_history.json', AT_COMMIT)['documents'] if d['code'] == 'P43')
         pages = {str(p['printed']): p for p in doc['pages']}
         old = {str(p['printed']) for p in next(d for d in at_base('data/rule_history.json')['documents'] if d['code'] == 'P43')['pages']}
         self.assertEqual(set(pages) - old, set(NEW_PAGES))
+        now = next(d for d in self.ctx['rule_history']['documents'] if d['code'] == 'P43')
+        self.assertTrue(all(pg in now['pages'] for pg in doc['pages']))  # この作業のページの記録は今も同じ値で残っている
         for page, pdf in NEW_PAGES.items():
             self.assertEqual(pages[page]['pdf'], pdf)
             self.assertIn('2026-10-31 に kyuura が画像で読んだ', pages[page]['content'])

@@ -16,7 +16,7 @@
   - Drive の PDF は、drive.google.com のビューアーがページごとに返す画像で読みました。ファイルの直接のダウンロード（drive.usercontent.google.com）とビューアーのスクリプト（www.gstatic.com）は、作成環境のネットワーク制限で開けませんでした（回避はしていません）。
   - スキャンは個人が自分の所有する冊子を取り込んで公開したもので、号数・ページは誌面の表示（表紙・ノンブル・奥付）で確かめました。
 - 公式サイトの当時のページ（P10、P15〜P23、P28）: Internet Archive に保存された写しで原文を読みました。画像で書かれた部分は、保存された写しをブラウザで表示して確かめました。
-- Bulbapedia（X10、X11、X30、X31、X37、X38、X41〜X56）: MediaWiki の API でページの原文（ウィキテキスト）を取得しました。記事ページは Cloudflare の確認画面になるため API を使っています（確認画面の回避はしていません）。
+- Bulbapedia（X10、X11、X30、X31、X37、X38、X41〜X58）: MediaWiki の API でページの原文（ウィキテキスト）を取得しました。記事ページは Cloudflare の確認画面になるため API を使っています（確認画面の回避はしていません）。
 - なぞのばしょ（J22、J23、J25〜J28、N1）と pcg-search（N3。カードの画像を含む）: ページを直接取得しました。
 - 旧裏 wiki（J1、J6、J36）: サイトは Cloudflare の確認画面（HTTP 403）で開けないため、Internet Archive に保存された写しで本文を読みました（J1 は 2026-03-20、J6 は 2026-01-28、J36 は 2026-02-06 の保存）。
 - note（J30、J31、J32）とポケブーン（J33、J34）: 直接取得しました。J32 の記事の中の画像（新ガルーラルールの説明の誌面の写真）も確認しました。記事の説明は『トレーナーズ』Vol.14 p.21 としていますが、スキャン [J37] で照合すると Vol.15 p.21 のページでした。
@@ -156,6 +156,8 @@
 | X54 | Bulbapedia「Pokémon VS (TCG)」「Pokémon Web (TCG)」「Supporter card (TCG)」「Pokémon Power (TCG)」「Special Condition (TCG)」 | https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_VS_(TCG) ほか |
 | X55 | Bulbapedia「P Promotional cards (TCG)」、「Unnumbered Promotional cards (TCG)/1996-2005」の 2002年の項、「No.1 Trainer (Pokémon Card Game Official Tournament promo)」「Elite Four Trainer (Battle Road Summer 2002 finals promo)」（大会の日程・会場・部門） | https://bulbapedia.bulbagarden.net/wiki/No.1_Trainer_(Pok%C3%A9mon_Card_Game_Official_Tournament_promo) ほか |
 | X56 | Bulbapedia「Energy Removal (Base Set 92)」「Energy Removal 2 (Expedition 140)」「Super Energy Removal (Base Set 79)」「Super Energy Removal 2 (Aquapolis 134)」「Charizard (Base Set 4)」「Slowking (Neo Genesis 14)」 | https://bulbapedia.bulbagarden.net/wiki/Energy_Removal_2_(Expedition_140) ほか |
+| X57 | Bulbapedia「No.1 Trainer (Pokémon Card Game Official Tournament promo)」「No.2 Trainer (…)」「No.3 Trainer (…)」（大会の入賞の賞品のカードの版ごとの本文の英訳・配布の大会と時期。2026-10-31 に MediaWiki の API で取得。No.1 の版は revision 4589167） | https://bulbapedia.bulbagarden.net/wiki/No.1_Trainer_(Pok%C3%A9mon_Card_Game_Official_Tournament_promo) ほか |
+| X58 | Bulbapedia のジャンボカード・ファンクラブの特典のカードのページ（「Pikachu, Jigglypuff, and Clefairy (CoroCoro promo)」「Articuno, Moltres, and Zapdos (Warner Bros. promo)」「Mewtwo Strikes Back」「Pikachu's Summer Vacation」「Pokémon Plaza」「Lawrence III」「Pokémon Valley」「Pichu and Pikachu」「Crystal Tower's Entei」（以上 CoroCoro promo）、「Charizard (Base Set 4)」、「Tropical Present」「New Year Present」「New Century Present」（Fan Club promo。Tropical Present は revision 4464780）。2026-10-31 に MediaWiki の API で取得） | https://bulbapedia.bulbagarden.net/wiki/Tropical_Present_(Fan_Club_promo) ほか |
 
 ## 当時の公式資料（ウェブアーカイブで原文を確認）
 
