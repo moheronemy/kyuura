@@ -168,12 +168,16 @@ class QuotedTextTest(Data):
 
 class PlanVersusImplementationTest(Data):
     def test_tyranitar_is_plan_only(self):
-        """v0.133 は計画で、完成・動作の確認を記録しない。コミットのハッシュを書かない。"""
-        status = section(self.tyranitar, '## 6. エンジンの実装の状態（2026-11-01 の時点）')
+        """2026-11-01 の記録の時点（AT_COMMIT）では、v0.133 は計画で、完成・動作の確認を記録しない。コミットのハッシュを書かない。
+        2026-11-02 の完成後の経過（7 章）のあとも、この時点の記録は git の固定コミットで確かめる（期待は変えていない。今の記録は
+        tests/test_shining_tyranitar_v0_133_record.py）。"""
+        tyranitar = git('show', f'{AT_COMMIT}:{TYRANITAR}')
+        hub = git('show', f'{AT_COMMIT}:{HUB}')
+        status = section(tyranitar, '## 6. エンジンの実装の状態（2026-11-01 の時点）')
         self.assertIn('計画だけで、実装は確かめていません', status)
         self.assertIn('v0.133 のブランチ・コミットはありませんでした', status)
-        self.assertNotRegex(self.tyranitar, r'v0\.133[^\n]{0,40}`[0-9a-f]{7,40}`')
-        row = [line for line in section(self.hub, '## 1. 一覧').splitlines() if 'ひかるバンギラス' in line]
+        self.assertNotRegex(tyranitar, r'v0\.133[^\n]{0,40}`[0-9a-f]{7,40}`')
+        row = [line for line in section(hub, '## 1. 一覧').splitlines() if 'ひかるバンギラス' in line]
         self.assertEqual(len(row), 1)
         self.assertIn('計画', row[0])
         self.assertIn('未確認', row[0])
