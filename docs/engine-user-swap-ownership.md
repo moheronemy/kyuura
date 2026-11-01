@@ -89,3 +89,19 @@ kyuura の値は `data/cards.json`（基点 `2a7791f` の値。この作業で�
 5. この記録の仕様（3 章）とエンジンの実装が同じか。違えば、利用者の指定とエンジンの実装を分けて書く。
 
 取り込むときは、`cards`（PR1-027 の trainer）・`summary`・`kyuura_handling`（「エンジンの簡略化した仕様で、公式のエラッタ・最新の説明・裁定ではない。UQ-SWAP-PLEASE-OWNERSHIP は未解決のまま。kyuura のカードデータは印刷の文面のまま」）を書き、`engine_basis` には利用者の指定であることを書きます。そのあとで `python3 scripts/build_card_rulings.py --check` などの関連の検査を実行します。
+
+## 8. 実装の経過（2026-11-01 の追記）
+
+1〜7 章（2026-10-31 の記録。7 章は「採用済み・実装確認前」）は変えていません。この章は、そのあとの経過です。
+
+- 2026-11-01 に利用者が改めて指定した内容（交換が成立した 2 枚は対戦終了まで受け取った側の所有、以後の領域の移動も新しい所有者が基準、元の出所は追跡用に保持して実物の所有権と区別、拒否なら所有者を変えず通常の 2 枚引き、錯乱ジムでの「あなた」「相手」はこの指定で決めない）は、3 章・5 章と同じです。新しく決めたことはありません。
+- 利用者からの完成報告: v0.130・`f9a66acee37948ffdc764a44c3c66b369fc2001a`・`docs/trade-please-ownership-v0.130.md`。
+- **固定コミットで確かめた範囲**（2026-11-01。公開済みのブランチ `claude/v0.130-trade-please` の先頭で、`main` の `9f00943` の祖先。`git show`・`git grep` で読んだだけで、コードは実行していない）:
+  - 文書 `docs/trade-please-ownership-v0.130.md` の 3 章「利用者が指定した所有者の簡略化（USER-SWAP-OWNERSHIP-RECEIVER）」。kyuura のこの記録（コミット `0dadab8`）を読んだと書く。
+  - 記録・登録: `kyuura_engine/effects.py` の `USER_SPECIFIED_RULES["PR1-027/trainer"]`（種類 `USER-SWAP-OWNERSHIP-RECEIVER`）・`SwapPleaseTrainer`・`V0_130_TRAINERS`・登録 `"PR1-027": TrainerEntry(...)`（処理に使う文面は最新の説明 LD-PR1-027-TRAINER）。
+  - 所有者と出所: `kyuura_engine/state.py` の `CardInstance.origin`・`GameState.ownership_changes`、`kyuura_engine/zones.py` の `exchange_hand_cards`（2 枚の移動と所有者の変更を一体で行う）、不変条件 `kyuura_engine/engine.py` の `_ownership_problems`。
+  - 検査: `scripts/check_card_sources.py` の `user_specified_rule_problems`・`scripts/check_research_links.py`（`latest_descriptions.user_specified_rules`）・`tests/log_audit.py` の `v130_problems`。
+  - テスト: `tests/test_trade_please_v0_130.py`（`FlowTest`・`ReExchangeTest`・`AfterExchangeTest`・`ChaosGymTest` など）・`tests/test_ownership_exchange_v0_130.py`（`ExchangeTest`・`MovementAfterExchangeTest` など）。
+  - 錯乱ジムでかわりに使うことを選ぶと、既存の `UNRESOLVED_CHAOS_GYM_BORROWED_TURN` で止める（エンジンの文書 6 章）。5 章の「決めていないこと」と合う。
+- テストと対戦の結果（全体のテスト 244 モジュール・7,122 件・失敗 0、正式な対戦 20 局で交換の成立 20・オーケーでない 23）は**エンジンの報告**で、kyuura は再実行していません。
+- `engine_positions`・`engine_imports` にはまだ加えていません（7 章の取り込みの 1〜5 は、1 の固定コミットと 2・3 の場所がわかったが、版の取り込みは今回の範囲の外。[利用者がエンジン用に指定した仕様の一覧](engine-user-specifications.md) の 7 章）。UQ-SWAP-PLEASE-OWNERSHIP・UQ-CHAOS-GYM-BORROWED-TURN は未解決のままです。
