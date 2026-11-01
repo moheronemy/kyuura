@@ -20,6 +20,8 @@ BASE = '5dc08e8c66f79f8bbd6f8d908ed995cbdf82f63b'  # この作業の基点（202
 TYRANITAR = 'docs/engine-user-shining-tyranitar.md'
 HUB = 'docs/engine-user-specifications.md'
 HANDOVER = 'docs/engine-handover-after-v0.124.md'
+# この作業でデータを変えていないことは、この作業の記録のコミットで比べる（あとの作業のデータの変更と分ける）
+AT_COMMIT = '5e7940a618f8543bd5e4a6a3e5ec14ff3a04f759'
 ENGINE_COMMIT = '298f08d603c1f763fc45a97fc306291d8b95abb0'
 ENGINE_BRANCH = 'claude/v0.133-shining-tyranitar'
 ENGINE_DOC = 'docs/shining-tyranitar-v0.133.md'
@@ -130,8 +132,8 @@ class ResearchUnchangedTest(unittest.TestCase):
     def test_data_files_equal_base(self):
         for rel in UNCHANGED:
             with self.subTest(rel=rel):
-                self.assertEqual((ROOT / rel).read_bytes(),
-                                 subprocess.run(['git', '-C', str(ROOT), 'show', f'{BASE}:{rel}'], capture_output=True, check=True).stdout)
+                at = [subprocess.run(['git', '-C', str(ROOT), 'show', f'{c}:{rel}'], capture_output=True, check=True).stdout for c in (BASE, AT_COMMIT)]
+                self.assertEqual(at[0], at[1])
 
     def test_issues_unresolved_and_no_import(self):
         r = json.loads(read('data/sidecar/rulings.json'))
