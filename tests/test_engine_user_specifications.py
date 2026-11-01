@@ -17,6 +17,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = '9242b9be89be0f747279f39c11875d1ed61763ec'  # この作業の基点
+# この作業でデータを変えていないことは、この作業の記録のコミットで比べる（あとの作業のデータの変更と分ける）
+AT_COMMIT = 'cc0526f994cd1e8f7c98e9526a7d4d8381f25b8c'
 HUB = 'docs/engine-user-specifications.md'
 TYRANITAR = 'docs/engine-user-shining-tyranitar.md'
 SWAP = 'docs/engine-user-swap-ownership.md'
@@ -89,11 +91,12 @@ class UnchangedDataTest(Data):
         """カード本体・CSV の印刷値・sidecar・目録・エンジンの対象集合・参照データは基点と同じ（利用者の指定のために書き換えない）。"""
         for rel in UNCHANGED:
             with self.subTest(rel=rel):
-                self.assertEqual((ROOT / rel).read_bytes(), subprocess.run(
-                    ['git', '-C', str(ROOT), 'show', f'{BASE}:{rel}'], capture_output=True, check=True).stdout)
+                at = [subprocess.run(['git', '-C', str(ROOT), 'show', f'{c}:{rel}'], capture_output=True, check=True).stdout
+                      for c in (BASE, AT_COMMIT)]
+                self.assertEqual(at[0], at[1])
 
     def test_cards_keep_original_names(self):
-        """カード名の原表記は残る（ナッシー［Exeggutor］・ワザ名の併記）。"""
+        """カード名の原表記は残る（ナッシー［Exeggutor］・ワザ名の併記）。今のデータで確かめる。"""
         for cid in ('PR1-075', 'PR1-077'):
             c = self.cards[cid]
             self.assertEqual(c['name']['ja'], 'ナッシー［Exeggutor］')
